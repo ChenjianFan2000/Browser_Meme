@@ -1,0 +1,15 @@
+{
+  "parent_run": "anchor-initial-001",
+  "classification": "infrastructure_contract_mismatch",
+  "evidence": "anchor-initial-001/cases/01-invalid_login/result.json",
+  "error": "KeyError: steps before any UI dispatch",
+  "cause": "The generic worker passed only the canonical public goal to the author script, omitting its own frozen step plan.",
+  "repair": "Pass a deep copy of the full frozen public plan case to scripts; continue passing only canonical fixed goals to independent evaluators.",
+  "target_rules_changed": false,
+  "target_scripts_changed": false,
+  "first_run_measurement_status": "not_started",
+  "retained_denominator": {"cases": 8, "steps": 44},
+  "regression": "test_script_gets_detached_public_plan",
+  "next_run": "anchor-initial-002",
+  "note": "Original worker categorization is preserved. This separate diagnosis attributes the shared pre-dispatch failure to infrastructure; it is not a website-model repair or task score."
+}

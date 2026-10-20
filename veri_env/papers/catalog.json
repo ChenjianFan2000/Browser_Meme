@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-10-20",
+  "scope": "Executable or predictive world models learned from interaction, with validation, planning, or repair; direct web work and explicitly labeled adjacent work are distinguished.",
+  "sources_policy": "Official papers (arXiv/proceedings), author project pages, and author repositories only.",
+  "papers": [
+    {
+      "id": "verienv-2603.10505",
+      "title": "Safe and Scalable Web Agent Learning via Recreated Websites",
+      "year": 2026,
+      "role": "direct_web_background",
+      "paper": "https://arxiv.org/abs/2603.10505",
+      "repository": "https://github.com/kyle8581/VeriEnv",
+      "problem": "Clone target websites into safe synthetic full-stack environments; generate tasks with executable validators to train self-evolving web agents.",
+      "input_access": "Coding agent uses screenshots/site descriptions to build synthetic front end, back end and database; learner observes browser interface and acts in clones; validator has privileged Python SDK/database access.",
+      "representation": "Executable synthetic website plus task-specific Python validator; agent policy is fine-tuned trajectories, not an executable learned transition model.",
+      "learning": "Offline rejection-based supervised fine-tuning from successful agent trajectories, followed by iterative self-evolving task/trajectory generation; not online induction of a website dynamics program.",
+      "inference_use": "Train web-agent policy and evaluate task outcomes in recreated sites; tasks receive deterministic programmatic reward.",
+      "correction": "Environment construction uses coding-agent debugging; task validators can be rerun. No explicit learned rulebook/code-model correction loop.",
+      "evaluation": "WebArena-Lite five sites, Mind2Web-Online (220 usable tasks), site-specific cloned WebArena settings; 149 constructed sites, 7,400 tasks.",
+      "measured_results": [
+        "Paper Table 3: 30 independent human-evaluation instances, double annotated (60 annotation judgments); task executability 90%, judge correctness 76%, mean functional correctness 90.3%, visual rating 4.7/5, mean Cohen kappa 0.61.",
+        "Paper Table 4 WebArena-Lite total: Qwen3-4B 7.88% to +VERIENV 13.94% (+6.06 percentage points); LLaMA-3.2-3B-Instruct 3.03% to 12.73% (table delta +9.70). Body text says +9.09 for the latter, an internal inconsistency; report table arithmetic and flag discrepancy.",
+        "Paper Table 1: 149 websites, average 49.5 tasks/site, total 7,400 tasks."
+      ],
+      "code_and_weights": "Author repository public as checked 2026-10-20. Training uses GPT-5.2/Cursor cloning and rejection fine-tuning on Qwen3-4B or LLaMA-3.2-3B-Instruct; Luna inference adaptation is not reproduction of the original training results.",
+      "limits_for_local_study": "Website cloning and verifiable reward are relevant infrastructure; this is not online code world-model learning. The current self-built miniweb is not GitLab or WebArena, and WebArena is not a dependency."
+    },
+    {
+      "id": "worldcoder-2402.12275",
+      "title": "WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment",
+      "year": 2024,
+      "role": "core_executable_model",
+      "paper": "https://arxiv.org/abs/2402.12275",
+      "repository": "https://github.com/haotang1995/WorldCoder",
+      "problem": "Learn a transferable symbolic dynamics model from few environment interactions and use it for goal-directed planning.",
+      "input_access": "Structured object states and action/reward/termination transitions; natural-language goal. Assumes deterministic fixed dynamics across goals.",
+      "representation": "Python transition function and separate goal-conditioned reward/termination function over object-oriented MDP state.",
+      "learning": "Online interaction buffer; GPT-4 program synthesis/refinement against replay constraints plus optimistic reachability constraint.",
+      "inference_use": "Depth-limited value iteration or MCTS; after model learning, new goals mainly require reward-function extension.",
+      "correction": "Counterexample-guided LLM code refinement; can refine old model for new dynamics.",
+      "evaluation": "Sokoban, MiniGrid, ALFWorld; not browser environments.",
+      "measured_results": [
+        "Sokoban model built over first 50 actions; reported ReAct success on basic levels 15% +/- 8%.",
+        "Paper Figure 3 reports deep RL needs >1 million steps to learn 2-box Sokoban; apples-to-apples scope is the paper's particular basic level setup.",
+        "After front-loading about 400k LLM tokens (~$15 in paper setup), actions can be issued without further LLM queries."
+      ],
+      "code_and_weights": "Author code is public; README notes legacy NumPy/Gymnasium/MiniGrid compatibility. Original experiments use GPT-4, so same-model Luna port is not a results reproduction.",
+      "limits_for_local_study": "Structured states and deterministic MDP assumptions differ from asynchronous, partially observed web pages and backend side effects."
+    },
+    {
+      "id": "gif-mcts-2405.15383",
+      "title": "Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search",
+      "year": 2024,
+      "role": "core_executable_model",
+      "paper": "https://arxiv.org/abs/2405.15383",
+      "repository": "https://github.com/nicoladainese96/code-world-models",
+      "problem": "Improve success and search efficiency for LLM-generated Python environment/world models.",
+      "input_access": "Replayable transitions and environment/task descriptions; structured state/action interfaces.",
+      "representation": "Python Environment.step(s,a) returning next state, reward and done.",
+      "learning": "Mostly offline/inference-time program generation and refinement; GIF-MCTS explores candidates and requests feedback from execution/replay tests.",
+      "inference_use": "Run learned code as simulator for planning/model-based RL; program prediction avoids calling an LLM for each simulated step.",
+      "correction": "Generate/Improve/Fix candidate program edits guided by MCTS and test feedback.",
+      "evaluation": "APPS, Code World Models Benchmark, Gym-style environments; no web benchmark.",
+      "measured_results": [
+        "Paper Table 1, APPS competition split strict accuracy, Llama 3 70B, pass@20: GIF-MCTS 28.3% +/- 1.4; reimplemented WorldCoder 25.1% +/- 1.4; reimplemented zero-shot CoT 23.2% +/- 1.3.",
+        "Strict accuracy means all unit tests for a problem pass; it is not next-state prediction accuracy or web task success.",
+        "Paper Table 2 (arXiv v2), CWMB 18 environments, Llama 3 70B, 50 calls, 3 seeds: discrete accuracy/normalized return 0.84 +/- 0.03 / 0.76 +/- 0.03; continuous 0.35 +/- 0.03 / 0.22 +/- 0.01. Reimplemented WorldCoder: discrete 0.79 +/- 0.04 / 0.60 +/- 0.04; continuous 0.32 +/- 0.03 / 0.19 +/- 0.01. Planning return is also averaged over 10 episodes; normalization sets random-policy return to zero and true-model same-planner return to one."
+      ],
+      "code_and_weights": "Author code and replay buffers are public; README documents model and LLM call budget requirements. Original result is not a Luna replication.",
+      "limits_for_local_study": "Testing/program synthesis framework is relevant; benchmark domains and state representations are not browser tasks."
+    },
+    {
+      "id": "wma-2410.13232",
+      "title": "Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation",
+      "year": 2025,
+      "role": "direct_web_background",
+      "paper": "https://arxiv.org/abs/2410.13232",
+      "repository": "https://github.com/kyle8581/WMA-Agents",
+      "problem": "Predict web action outcomes to improve action selection and avoid costly mistakes.",
+      "input_access": "Instruction, current web observation/accessibility structure, and candidate action; training transitions drawn from WebArena/Mind2Web trajectories.",
+      "representation": "Fine-tuned Llama-3.1-8B-Instruct predicts free-form natural-language transition-focused differences; value model ranks candidates.",
+      "learning": "Offline supervised model fine-tuning on web trajectory differences; frozen policy at inference.",
+      "inference_use": "Sample candidate actions, predict each outcome, use value model to select one; no policy fine-tuning required for deployment.",
+      "correction": "Can use simulated outcomes for action self-refinement; world model itself is not an explicit online rule repair system.",
+      "evaluation": "WebArena (five domains including GitLab) and Mind2Web; separate ablations/preliminary analyses.",
+      "measured_results": [
+        "Paper Table 1, WebArena, GPT-4o, max actions=5: 12.8% without action selection vs 16.6% with WMA selection (+29.7% relative). GPT-4o-mini: 9.4% vs 13.5% (+43.6% relative).",
+        "Paper Table 2, GPT-4o-mini GitLab: Vanilla CoT 3.1%, WMA 8.7%; this is the original WebArena GitLab split, not the current self-built miniweb.",
+        "Paper error analysis uses 100 samples and GPT-4o judging; 42% of categorized prediction errors are counterfactual imagined elements."
+      ],
+      "code_and_weights": "Official repo and Llama adapters/datasets are public. Original training requires Llama fine-tuning; prompting Luna is only inference adaptation.",
+      "limits_for_local_study": "Strong same-domain baseline for lookahead, but language predictions are not executable rules and model correction is not the paper's contribution."
+    },
+    {
+      "id": "poe-world-2505.10819",
+      "title": "PoE-World: Compositional World Modeling with Products of Programmatic Experts",
+      "year": 2025,
+      "role": "core_executable_model",
+      "paper": "https://arxiv.org/abs/2505.10819",
+      "repository": "https://github.com/topwasu/poe-world",
+      "problem": "Learn stochastic non-grid world dynamics compositionally from sparse observations rather than synthesizing one monolithic program.",
+      "input_access": "Object-centric Atari frame descriptions/actions and brief demonstrations; not web DOM or backend state.",
+      "representation": "Exponentially weighted product of many LLM-synthesized programmatic experts, each encoding causal laws.",
+      "learning": "Program synthesis/refinement from few observations; replay/prediction scoring evaluates candidates.",
+      "inference_use": "Hierarchical lookahead planner or simulator for policy pretraining and subsequent environment fine-tuning.",
+      "correction": "Expert acquisition and refinement from observed transitions; no web-specific ongoing correction mechanism.",
+      "evaluation": "Atari Pong, Pong-Alt, Montezuma's Revenge and MR-Alt.",
+      "measured_results": [
+        "Paper Table 1: PoE-World + Planner Pong -12.33 +/- 0.88, Pong-Alt -13.67 +/- 0.67, MR 100 +/- 0, MR-Alt 100 +/- 0.",
+        "For these model-based rows, brief demonstrations initialize models, followed by at most 3k training steps; scores differ by game and are not comparable with web task success.",
+        "PPO pretraining in the model reaches better-than-random performance after 200k real training steps versus 1M for vanilla PPO, per paper text."
+      ],
+      "code_and_weights": "Author project/code available; experiments use OpenAI LLM calls and substantial planner compute, not a frozen Luna-only run.",
+      "limits_for_local_study": "Useful modular-rule alternative; stochastic visual game dynamics differ from web business state."
+    },
+    {
+      "id": "webdreamer-2411.06559",
+      "title": "Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents",
+      "year": 2025,
+      "role": "direct_web_background",
+      "paper": "https://arxiv.org/abs/2411.06559",
+      "repository": "https://github.com/OSU-NLP-Group/WebDreamer",
+      "problem": "Use pretrained LLM simulation to improve inference-time web planning without relying on expensive live tree search.",
+      "input_access": "Web observation, candidate action, and task; experiments include screenshots and accessibility/DOM-style inputs.",
+      "representation": "LLM-generated textual hypothetical next observation and progress score; not a persistent executable site model.",
+      "learning": "Primarily inference-time prompting; author also releases Dreamer-7B and web world-model training resources.",
+      "inference_use": "Generate candidate actions, simulate outcomes, score, execute best action; generally single-step lookahead.",
+      "correction": "No explicit counterexample-based model repair; reactive observation can ground later turns.",
+      "evaluation": "VisualWebArena, Online-Mind2Web and Mind2Web-Live.",
+      "measured_results": [
+        "Paper Table 1: GPT-4o WebDreamer success rates 23.6% VisualWebArena, 37.0% Online-Mind2Web, 25.0% Mind2Web-Live; reactive baseline 17.6%, 26.0%, 20.2%, respectively.",
+        "Table 2 reports WebDreamer wall time 183.6–233.7 seconds versus reactive 68.3–87.7 seconds across three VWA domains; successful lookahead has compute cost."
+      ],
+      "code_and_weights": "Author repository and Dreamer-7B/HF resources public; versioned repo lists model/data release. Original GPT-4o setting is distinct from a Luna prompt adaptation.",
+      "limits_for_local_study": "Same-domain non-code baseline; susceptible to plausible but false imagined page content."
+    },
+    {
+      "id": "webevolver-2504.21024",
+      "title": "WebEvolver: Enhancing Web Agent Self-Improvement with Co-evolving World Model",
+      "year": 2025,
+      "role": "direct_web_background",
+      "paper": "https://arxiv.org/abs/2504.21024",
+      "repository": "https://github.com/Tencent/SelfEvolvingAgent",
+      "problem": "Reduce stagnation in self-improving web agents by co-evolving a world model with the policy.",
+      "input_access": "Current page/accessibility tree and attempted browser action from web trajectories.",
+      "representation": "World-model LLM predicts next observation; acts as a virtual web server and an inference-time lookahead simulator.",
+      "learning": "Co-evolving model/policy and self-sampled trajectory training; requires model fine-tuning.",
+      "inference_use": "Generate synthetic training trajectories and simulate candidate action outcomes at test time.",
+      "correction": "World-model weights evolve through training; no explicit inspectable rulebook or rule/code diagnosis.",
+      "evaluation": "Text WebVoyager (473-query test split), filtered Mind2Web-Live (53-query test split), and other real-web tasks including GAIA-Web.",
+      "measured_results": [
+        "Paper Table 1 denominators: WebVoyager 473 queries and Mind2Web-Live-filtered 53 queries. Llama-3.3-70B initial self-improve scores are 32.98%/18.86% (WV/M2W-Live); WebEvolver 42.49%/22.64%; WebEvolver + depth-2 WMLA 51.37%/24.53%. Two time-window runs are averaged and trajectories are GPT-4o-evaluated.",
+        "Paper Table 2 intrinsic judge for world-model iteration 2 at lookahead depth 1: structural correctness/similarity/overall assessment 75.96/63.56/72.86%; depths greater than 2 fall below 50% on these measures.",
+        "Abstract claims about 10% improvement are not a universal percentage-point gain; exact interpretation is comparison-specific."
+      ],
+      "code_and_weights": "Author code is public; full method depends on learned world model and agent training resources, so Luna prompting is not a reproduction.",
+      "limits_for_local_study": "Relevant continual web training concept, but much less transparent rule correction than an executable model."
+    },
+    {
+      "id": "patchworld-2605.30880",
+      "title": "PatchWorld: Gradient-Free Optimization of Executable World Models for Agent Environments",
+      "year": 2026,
+      "role": "core_executable_model",
+      "paper": "https://arxiv.org/abs/2605.30880",
+      "repository": "https://github.com/HKBU-KnowComp/PatchWorld",
+      "dataset": "https://huggingface.co/datasets/HKBU-KnowComp/patchworld-trajectories",
+      "problem": "Induce interpretable persistent belief-state programs from sparse offline trajectories and repair them using execution-grounded counterexamples.",
+      "input_access": "Offline text observation/action/next-observation trajectories only; no live exploration during induction.",
+      "representation": "Python BaseWorldModel with parser, explicit belief, belief correction, transition prediction and observation readout.",
+      "learning": "Offline candidate synthesis plus replay validation and gradient-free local repair; held-out test split reserved for evaluation.",
+      "inference_use": "One-step lookahead/action reranking; agent still uses LLM to propose/select candidate actions in the paper's live protocol.",
+      "correction": "Typed execution validator exposes replay errors; LLM synthesizes/repairs model and accepts only replay improvements.",
+      "evaluation": "Seven AgentGym text environments: AlfWorld, BabyAI, Maze, SciWorld, TextCraft, WebShop, Wordle.",
+      "measured_results": [
+        "Abstract: PatchWorld-Simple 76.4% macro success in live one-step lookahead across seven environments.",
+        "Paper Table 2: PatchWorld-Residual with Qwen3-Coder-480B reaches 0.69 Token-F1 / 0.50 BLEU-4 on held-out next-observation prediction; up to 0.70 Token-F1 with Mimo-v2.5 or DeepSeek-V4-Flash.",
+        "Paper Table 3 rollout Token-F1 at horizons 1/2/3/5: LLM-Direct .64/.63/.60/.59; WorldCoder .63/.60/.58/.57; PoE-World .63/.57/.53/.51; PatchWorld-Simple .56/.50/.43/.40.",
+        "Paper reports about 17–28 LLM calls and 300k–503k tokens per environment for offline induction; zero world-model LLM calls during prediction."
+      ],
+      "code_and_weights": "Author code public, MIT; trajectory dataset separately on Hugging Face. LLM backbones include Qwen3-Coder-480B, Mimo-v2.5 and DeepSeek-V4-Flash. No LLM calls in the model prediction module does not mean the complete agent has no LLM.",
+      "limits_for_local_study": "Closest executable correction baseline, but offline trajectories and AgentGym are not online interaction with the current self-built miniweb; requires a local adaptation and honest label."
+    },
+    {
+      "id": "memento3-2610.11794",
+      "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
+      "year": 2026,
+      "role": "core_executable_model",
+      "paper": "https://arxiv.org/abs/2610.11794",
+      "repository": null,
+      "problem": "Maintain and revise explicit environment hypotheses when observations are sparse and several models fit past evidence.",
+      "input_access": "Interactive action interface and observation/trajectory history; no source inspection in ARC-AGI-3 setup.",
+      "representation": "Markdown rulebook for objects, action semantics, dynamics, goals and unresolved alternatives; Python executable for internal states, prediction, rendering and goals.",
+      "learning": "Online continual reflection from interaction history with frozen Claude Opus 5; persistent rulebook/program workspace.",
+      "inference_use": "Replay-validated model reconstructs state, then planner searches model dynamics and executes actions.",
+      "correction": "LLM chooses retain, revise rulebook or repair code; compiler emits implementation; exact replay verifier gates use.",
+      "evaluation": "25 public ARC-AGI-3 games and Atari Pong case study, not web.",
+      "measured_results": [
+        "Paper Table 1: RHAE 100 on all 25 public ARC-AGI-3 games; 7,518 actions, reported as 44% of human action count.",
+        "Pong: 21:0 in three evaluated episodes with different openings, no LLM calls during execution.",
+        "Table 3 rulebook ablation samples only one game per difficulty band: with rulebook uses 75/341/201 actions on ft09/ka59/cn04 vs without 79/382/216."
+      ],
+      "code_and_weights": "Paper uses Claude Opus 5 extra-high and coding-agent harness; no author repository or downloadable weights found in checked official materials. Memento PDF is the parent-directory 2610.11794v1.pdf; VeriEnv paper is the local chae26a.pdf.",
+      "limits_for_local_study": "Directly reviewed from parent-directory local PDF and arXiv HTML. Exact historical replay does not establish unseen-state prediction; ARC actions and benchmark scoring differ from business web tasks.",
+      "local_pdf": "../2610.11794v1.pdf"
+    },
+    {
+      "id": "webworld-2602.14721",
+      "title": "WebWorld: A Large-Scale World Model for Web Agent Training",
+      "year": 2026,
+      "role": "adjacent_background",
+      "paper": "https://arxiv.org/abs/2602.14721",
+      "repository": "https://github.com/QwenLM/WebWorld",
+      "problem": "Train a scalable simulator of the open web from large-scale interactions for agent data and inference-time search.",
+      "input_access": "More than one million open-web interaction trajectories; simulator supports reasoning, multi-format observations and 30+ step rollouts.",
+      "representation": "Learned web simulator/world model, not an inspectable Python site transition model.",
+      "learning": "Large-scale offline data/model training.",
+      "inference_use": "Generate synthetic agent trajectories and support inference-time search.",
+      "correction": "No explicit local rulebook/code repair loop described in abstract/checked source.",
+      "evaluation": "WebWorld-Bench intrinsic simulator metrics and extrinsic WebArena agent training.",
+      "measured_results": [
+        "Paper Table 5: Qwen3-14B WebArena success 15.1% before and 24.3% after training on 8,000 synthesized trajectories (+9.2 percentage points); table does not state denominator.",
+        "Paper Table 6: MiniWoB greedy 64.3%; WebWorld with GPT-5 pairwise scoring and BoN(3) 67.5%. Table denominator not reported here; distinct benchmark/protocol."
+      ],
+      "code_and_weights": "Author repository public; README lists WebWorld-32B and open model/data resources.",
+      "limits_for_local_study": "Direct web simulation background but does not test active local-site rule induction or executable rule correction."
+    },
+    {
+      "id": "code2world-2602.09856",
+      "title": "Code2World: A GUI World Model via Renderable Code Generation",
+      "year": 2026,
+      "role": "adjacent_background",
+      "paper": "https://arxiv.org/abs/2602.09856",
+      "repository": "https://github.com/AMAP-ML/Code2World",
+      "problem": "Predict action-conditioned next GUI appearance with controllable structure and visual fidelity.",
+      "input_access": "Android screenshot, action and goal; AndroidWorld navigation evaluation comprises 116 tasks.",
+      "representation": "Vision-language model generates renderable HTML for the next screenshot.",
+      "learning": "SFT followed by render-aware reinforcement learning; visual feedback revises synthesized data.",
+      "inference_use": "Render candidate next states to support propose-simulate-select GUI navigation.",
+      "correction": "Visual feedback loop refines data/code generation; no persistent web business rule update demonstrated.",
+      "evaluation": "Next UI prediction and AndroidWorld navigation.",
+      "measured_results": [
+        "Paper Figure 6: AndroidWorld, Gemini-2.5-Flash baseline 41.4% and Code2World-assisted 50.9% (+9.5 percentage points); 116-task benchmark. This is Android navigation, not web success.",
+        "Paper Table 2 AndroidControl-High: Mobile-Agent-v3-7B success 67.20%?68.41%; Qwen2.5-VL-7B 65.16%?66.47% with Code2World. Separate benchmark and protocol."
+      ],
+      "code_and_weights": "Author repository, data, and model are linked from project materials; full use requires released model resources and is not a Luna reproduction.",
+      "limits_for_local_study": "GUI rendering and next screenshot fidelity are distinct from semantic business state transition and multi-step rule repair."
+    },
+    {
+      "id": "agent2world-2512.22336",
+      "title": "Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback",
+      "year": 2025,
+      "role": "adjacent_background",
+      "paper": "https://arxiv.org/abs/2512.22336",
+      "repository": "https://github.com/DeepExperience/agent2world",
+      "problem": "Improve generation of PDDL and executable symbolic world models using adaptive feedback, and create SFT data.",
+      "input_access": "World-model specifications, web-researched knowledge and generated models tested in unit tests/simulation; not browser interaction.",
+      "representation": "Generated PDDL domain or executable simulator code.",
+      "learning": "Inference-time researcher/developer/tester agents; testing trajectories also used to fine-tune a model.",
+      "inference_use": "Generate validated symbolic world models for downstream planning.",
+      "correction": "Adaptive test team returns behavior-level feedback to model developer.",
+      "evaluation": "Three general world-model generation benchmarks spanning PDDL and executable code; no web agent benchmark.",
+      "measured_results": [
+        "Paper Table 1 Text2World: GPT-4.1-mini Agent2World Multi executability 93.1%.",
+        "Paper Table 2 CWMB overall accuracy/normalized return: Agent2World 0.5441/0.4811 vs Direct Generation 0.4466/0.2620.",
+        "Paper Table 3 ByteSized32 runnable-game metric: 0.8958. These are world-model generation benchmarks, not web interaction."
+      ],
+      "code_and_weights": "Author repository public with benchmark scripts. Full SFT uses Llama-3.1-8B and 8?A100 resources; repository presence does not mean Luna can run the trained method.",
+      "limits_for_local_study": "Useful model tester feedback architecture; differs from a persistent site model learned online by one agent."
+    }
+  ],
+  "local_experiment_guidance": {
+    "environment": "Self-built, resettable issue-management miniweb with a fixed action interface and fully observable business state; this round is not a real GitLab instance or WebArena.",
+    "shared_protocol": "Same Luna model, observation/action permissions, trajectory data, task split, context and cumulative token/API budget for direct prediction, editable text-memory, and executable-code variants.",
+    "primary_evaluations": [
+      "One-step prediction of independently observable business fields and page differences.",
+      "Open-loop 2-4-step prediction and closed-loop execution for unseen combinations of trained atomic actions.",
+      "Controlled action-precondition or side-effect change, time-to-repair and regression on unaffected rules."
+    ],
+    "fair_baselines": [
+      "Luna direct structured next-state predictor.",
+      "Luna direct predictor with same-history retrieval and editable non-executable text memory.",
+      "Luna-authored executable program with replay-based repair (main treatment).",
+      "No-model UI agent/script and privileged oracle upper bound."
+    ],
+    "reporting": "Separate fixed-model unseen-state generalization from online update; report model prediction, task success, recovery, latency, LLM calls/tokens and model-maintenance cost separately.",
+    "reproduction_label": "WMA, WebEvolver and VeriEnv depend on released/specified model weights and/or fine-tuning pipelines. Luna interface adaptation is a derived implementation, not reproduction of original trained results. Code/world-model approaches must likewise be labeled as local adaptations unless original model, data, environment and protocol are reproduced.",
+    "next_stage_environment": "A fixed-version real GitLab deployment may be considered in a later UI/API speed-comparison stage after checking side-effect and permission equivalence; it is not the current experiment setting."
+  }
+}

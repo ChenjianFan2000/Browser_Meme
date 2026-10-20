@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-20T10:30:14.458166+00:00",
+  "status": "ready; frozen pending root-owned execution; no further site Python edits during run",
+  "hashes": {
+    "harness/sites/discogs/complex_deploy.py": "1eb7339a50463213a437d5b76af6ecbb688b7a31b06575866ab2121820f4f650",
+    "harness/sites/discogs/complex_evaluator.py": "081d38cf9b2f16b2889c168da887f2d3b3c0fee49f204ca88f18d61ff7123c51",
+    "harness/sites/discogs/complex_cases.json": "a091e8018210db4f1bb0bf0a801c1d263fb850c1f0d3daa64470740f2a523b45",
+    "harness/sites/discogs/site-complex.json": "607216db205be76cc856f548187e14e7c9fe712c375ca537c9f8373537ba7dd5",
+    "harness/sites/discogs/complex_observation_schema.json": "51e7691bb69a51266ed4c8ede79447939e47e1b9963f175fec50455f0bb2b6ef",
+    "harness/sites/discogs/deploy.py": "5e8b2e0036ab53f1657f21d4193ec6536e414116f5faf034057d50406e40f376"
+  },
+  "component_checks": {
+    "count": 12,
+    "passed": true,
+    "scope": "Readonly baseline and in-memory counterexamples; not browser verification"
+  },
+  "deployment": "Root already invoked prepare; this agent performed only inspect and no DB writes, reset or browser run",
+  "source_file_count": 110,
+  "production_asset_count": 455,
+  "required_checkpoints": [
+    "selection_committed",
+    "before_checkout"
+  ]
+}

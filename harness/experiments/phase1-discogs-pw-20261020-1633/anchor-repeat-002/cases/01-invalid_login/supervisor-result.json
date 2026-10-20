@@ -1,0 +1,399 @@
+{
+  "id": "invalid_login",
+  "passed": true,
+  "status": "completed",
+  "steps": [
+    {
+      "id": "login_open",
+      "status": "matched",
+      "evidence": "01.json",
+      "screenshot": "01.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nSign in\nUse the seeded demo account: demo / password123\nUsername or Email\nPassword\nSign in\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Sign in"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 1.3590000000003783
+    },
+    {
+      "id": "login_username",
+      "status": "matched",
+      "evidence": "02.json",
+      "screenshot": "02.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              },
+              "status": "pass",
+              "actual": "demo",
+              "expected": "demo"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 0.9059999999990396
+    },
+    {
+      "id": "login_password",
+      "status": "matched",
+      "evidence": "03.json",
+      "screenshot": "03.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nSign in\nUse the seeded demo account: demo / password123\nUsername or Email\nPassword\nSign in\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Sign in"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 0.6409999999996217
+    },
+    {
+      "id": "login_submit",
+      "status": "matched",
+      "evidence": "04.json",
+      "screenshot": "04.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Invalid credentials"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nSign in\nUse the seeded demo account: demo / password123\nUsername or Email\nPassword\n{\"detail\":\"Invalid credentials\"}\nSign in\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Invalid credentials"
+            },
+            {
+              "check": {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/login"
+              },
+              "status": "pass",
+              "actual": "http://127.0.0.1:12042/login",
+              "expected": "/login"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 0.9850000000005821
+    }
+  ],
+  "independent_checks": [
+    {
+      "id": "unrelated_tables_unchanged",
+      "passed": true,
+      "detail": "Unchanged tables: alembic_version, artists, cart_items, collection_items, comments, genres, labels, marketplace_listings, order_items, orders, release_artists, release_formats, release_genres, release_labels, release_styles, releases, styles, tracks, users, wantlist_items"
+    },
+    {
+      "id": "invalid_credentials_visible",
+      "passed": true,
+      "detail": "Invalid password must remain at login and display backend refusal"
+    }
+  ],
+  "setup": {
+    "case_id": "invalid_login",
+    "baseline_sha256": "6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50",
+    "table_hashes": {
+      "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+      "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+      "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+      "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+      "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+      "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+      "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+      "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+      "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+      "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+      "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+      "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+      "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+      "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+      "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+      "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+      "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+      "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+      "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+    },
+    "fixture": {
+      "listing_id": 1,
+      "release_id": 221,
+      "price_cents": 7251,
+      "quantity": 2,
+      "status": "active",
+      "currency": "USD",
+      "seller_user_id": "fd8a9900a5e342208aa167f6b49e79eb"
+    }
+  },
+  "browser_version": "155.0.8059.84",
+  "trace": "trace.zip",
+  "elapsed_seconds": 10.56199999999808
+}

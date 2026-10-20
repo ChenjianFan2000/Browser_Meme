@@ -1,0 +1,97 @@
+{
+  "revision": "pw-extension-v002",
+  "parent_revision": "pw-extension-v001",
+  "category": "business_rule",
+  "failure_category": "website_implementation_dynamic_route_rewrite",
+  "secondary_category": "timing",
+  "source_run": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001",
+  "evidence": [
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/08-collection_duplicate/06.json",
+      "sha256": "378d044b61315a587ae0db14e64033ce0990f54af8b3652a83012f402a54c708"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/09-wantlist_duplicate/06.json",
+      "sha256": "7b02e4cd8d28d96e851f69d9af042cbd62730256695ad10eb0560c2eeb5af572"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/10-cart_repeat_remove/08.json",
+      "sha256": "eaccec7f0b405ffc8671bbd45822512d757b87b7e781825e7c069326197bd7db"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/10-cart_repeat_remove/09.json",
+      "sha256": "e24eb2cc13e501ac94a4e8a80413a796d3333206ba5a936f1e3f56defb3cd79d"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/10-cart_repeat_remove/09.png",
+      "sha256": "e8a24ed8b0c488e33e483c647013f53d979224cc34f368c4a1fc0bfd305ca278"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/10-cart_repeat_remove/final.json",
+      "sha256": "c7fc9d9558b04d2003f57456d0e23334417ff17670840149017b42f808cb0c84"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases/12-signout_gate/06.json",
+      "sha256": "75f3401e72a3d33258c4efa231b4a0d6adf1a4794a005ca07adc43853405f34d"
+    },
+    {
+      "path": ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md",
+      "sha256": "ad670914ed2aa446409501f1eb3a9ceb6545caf18423691c945a4ce1c2b61989"
+    },
+    {
+      "path": ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/diagnosis.json",
+      "sha256": "7f31434aeafea31750a7b86b4cd0052370bf20bf8e7127555f162dc335087a2a"
+    }
+  ],
+  "changed_rules": [
+    "AUTH-GATE",
+    "CAT-SEARCH",
+    "CAT-GENRE",
+    "MEM-COLLECTION",
+    "MEM-WANTLIST",
+    "MKT-FILTER",
+    "CART-ADD",
+    "CART-READ",
+    "CART-REMOVE",
+    "UI-CONSENT",
+    "RUNTIME"
+  ],
+  "changed_steps": [
+    "collection_duplicate/add_first",
+    "collection_duplicate/add_second",
+    "wantlist_duplicate/add_first",
+    "wantlist_duplicate/add_second",
+    "signout_gate/add_first",
+    "cart_repeat_remove/remove"
+  ],
+  "rationale": "Real404 routing responses block the original goals. Model records observed UI reachability separately from intended backend semantics and uses completed native response to stop useless waits. Every original plan check, branch, invariant, step and task goal remains unchanged; the same failed goals remain in the denominator.",
+  "counterexamples": [
+    {
+      "case_ids": [
+        "collection_duplicate",
+        "wantlist_duplicate",
+        "signout_gate"
+      ],
+      "actual": "first membership POST404, no durable membership; later duplicate/signout steps not run",
+      "classification": "website routing implementation"
+    },
+    {
+      "case_ids": [
+        "cart_repeat_remove"
+      ],
+      "actual": "second add201 qty2 total14502; DELETE404; UI Not Found; final cart remains14502",
+      "classification": "website routing implementation, not late successful removal"
+    }
+  ],
+  "independent_causal_confirmation": ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md",
+  "task_endpoint_relaxation": false,
+  "business_actions_by_author": 0,
+  "regression_status": "pending coordinator full-suite execution",
+  "previously_passed_tasks_retained": 8,
+  "claim_limits": [
+    "No original website code changed",
+    "No task removed, no API bypass",
+    "Full workflow success remains8/12 for initial run; v002 has not run",
+    "Some rule source semantics remain browser-unverified due to route masking"
+  ]
+}

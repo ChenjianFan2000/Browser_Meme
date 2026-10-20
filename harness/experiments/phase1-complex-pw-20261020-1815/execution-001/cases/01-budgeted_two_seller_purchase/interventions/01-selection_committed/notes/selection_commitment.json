@@ -1,0 +1,584 @@
+{
+  "release_id": 221,
+  "filter_url": "http://127.0.0.1:12042/sell/release/221?media_condition=&sleeve_condition=&ships_from=&min_rating=95.0&sort=price_asc",
+  "candidate_total": 7,
+  "candidate_rows": [
+    {
+      "listing_id": 4,
+      "seller": "demo",
+      "seller_rating": 99.6,
+      "currency": "USD",
+      "price_cents": 2145,
+      "ships_from": "Netherlands",
+      "condition": "Fair (F) / Near Mint (NM or M-)",
+      "href": "/cart?add=4",
+      "row_text": "demo\n99.6% • New York, USA\n\tNetherlands\tFair (F) / Near Mint (NM or M-)\tUSD 21.45\tAdd to Cart"
+    },
+    {
+      "listing_id": 12,
+      "seller": "ewright99",
+      "seller_rating": 96.9,
+      "currency": "USD",
+      "price_cents": 2812,
+      "ships_from": "Australia",
+      "condition": "Good (G) / Mint (M)",
+      "href": "/cart?add=12",
+      "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+    },
+    {
+      "listing_id": 19,
+      "seller": "jenniferross18",
+      "seller_rating": 97.3,
+      "currency": "USD",
+      "price_cents": 3051,
+      "ships_from": "US",
+      "condition": "Good (G) / Near Mint (NM or M-)",
+      "href": "/cart?add=19",
+      "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+    },
+    {
+      "listing_id": 15,
+      "seller": "nicole3573",
+      "seller_rating": 99.1,
+      "currency": "USD",
+      "price_cents": 4491,
+      "ships_from": "Sweden",
+      "condition": "Good (G) / Near Mint (NM or M-)",
+      "href": "/cart?add=15",
+      "row_text": "nicole3573\n99.1% • Cherylhaven, Algeria\n\tSweden\tGood (G) / Near Mint (NM or M-)\tUSD 44.91\tAdd to Cart"
+    },
+    {
+      "listing_id": 23,
+      "seller": "barbara1039",
+      "seller_rating": 96.5,
+      "currency": "USD",
+      "price_cents": 4622,
+      "ships_from": "US",
+      "condition": "Mint (M) / Very Good (VG)",
+      "href": "/cart?add=23",
+      "row_text": "barbara1039\n96.5% • Port Craig, Fiji\n\tUS\tMint (M) / Very Good (VG)\tUSD 46.22\tAdd to Cart"
+    },
+    {
+      "listing_id": 9,
+      "seller": "usmith87",
+      "seller_rating": 98.5,
+      "currency": "USD",
+      "price_cents": 6498,
+      "ships_from": "Germany",
+      "condition": "Very Good Plus (VG+) / Mint (M)",
+      "href": "/cart?add=9",
+      "row_text": "usmith87\n98.5% • New Rita, Trinidad and Tobago\n\tGermany\tVery Good Plus (VG+) / Mint (M)\tUSD 64.98\tAdd to Cart"
+    },
+    {
+      "listing_id": 1,
+      "seller": "meagan8968",
+      "seller_rating": 99.8,
+      "currency": "USD",
+      "price_cents": 7251,
+      "ships_from": "Sweden",
+      "condition": "Very Good Plus (VG+) / Mint (M)",
+      "href": "/cart?add=1",
+      "row_text": "meagan8968\n99.8% • New Mariotown, Bouvet Island (Bouvetoya)\n\tSweden\tVery Good Plus (VG+) / Mint (M)\tUSD 72.51\tAdd to Cart"
+    }
+  ],
+  "eligible_pair_comparison": [
+    {
+      "key": [
+        5863,
+        12,
+        19
+      ],
+      "offers": [
+        {
+          "listing_id": 12,
+          "seller": "ewright99",
+          "seller_rating": 96.9,
+          "currency": "USD",
+          "price_cents": 2812,
+          "ships_from": "Australia",
+          "condition": "Good (G) / Mint (M)",
+          "href": "/cart?add=12",
+          "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+        },
+        {
+          "listing_id": 19,
+          "seller": "jenniferross18",
+          "seller_rating": 97.3,
+          "currency": "USD",
+          "price_cents": 3051,
+          "ships_from": "US",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=19",
+          "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        7303,
+        12,
+        15
+      ],
+      "offers": [
+        {
+          "listing_id": 12,
+          "seller": "ewright99",
+          "seller_rating": 96.9,
+          "currency": "USD",
+          "price_cents": 2812,
+          "ships_from": "Australia",
+          "condition": "Good (G) / Mint (M)",
+          "href": "/cart?add=12",
+          "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+        },
+        {
+          "listing_id": 15,
+          "seller": "nicole3573",
+          "seller_rating": 99.1,
+          "currency": "USD",
+          "price_cents": 4491,
+          "ships_from": "Sweden",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=15",
+          "row_text": "nicole3573\n99.1% • Cherylhaven, Algeria\n\tSweden\tGood (G) / Near Mint (NM or M-)\tUSD 44.91\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        7434,
+        12,
+        23
+      ],
+      "offers": [
+        {
+          "listing_id": 12,
+          "seller": "ewright99",
+          "seller_rating": 96.9,
+          "currency": "USD",
+          "price_cents": 2812,
+          "ships_from": "Australia",
+          "condition": "Good (G) / Mint (M)",
+          "href": "/cart?add=12",
+          "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+        },
+        {
+          "listing_id": 23,
+          "seller": "barbara1039",
+          "seller_rating": 96.5,
+          "currency": "USD",
+          "price_cents": 4622,
+          "ships_from": "US",
+          "condition": "Mint (M) / Very Good (VG)",
+          "href": "/cart?add=23",
+          "row_text": "barbara1039\n96.5% • Port Craig, Fiji\n\tUS\tMint (M) / Very Good (VG)\tUSD 46.22\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        7542,
+        15,
+        19
+      ],
+      "offers": [
+        {
+          "listing_id": 15,
+          "seller": "nicole3573",
+          "seller_rating": 99.1,
+          "currency": "USD",
+          "price_cents": 4491,
+          "ships_from": "Sweden",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=15",
+          "row_text": "nicole3573\n99.1% • Cherylhaven, Algeria\n\tSweden\tGood (G) / Near Mint (NM or M-)\tUSD 44.91\tAdd to Cart"
+        },
+        {
+          "listing_id": 19,
+          "seller": "jenniferross18",
+          "seller_rating": 97.3,
+          "currency": "USD",
+          "price_cents": 3051,
+          "ships_from": "US",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=19",
+          "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        7673,
+        19,
+        23
+      ],
+      "offers": [
+        {
+          "listing_id": 19,
+          "seller": "jenniferross18",
+          "seller_rating": 97.3,
+          "currency": "USD",
+          "price_cents": 3051,
+          "ships_from": "US",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=19",
+          "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+        },
+        {
+          "listing_id": 23,
+          "seller": "barbara1039",
+          "seller_rating": 96.5,
+          "currency": "USD",
+          "price_cents": 4622,
+          "ships_from": "US",
+          "condition": "Mint (M) / Very Good (VG)",
+          "href": "/cart?add=23",
+          "row_text": "barbara1039\n96.5% • Port Craig, Fiji\n\tUS\tMint (M) / Very Good (VG)\tUSD 46.22\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        9113,
+        15,
+        23
+      ],
+      "offers": [
+        {
+          "listing_id": 15,
+          "seller": "nicole3573",
+          "seller_rating": 99.1,
+          "currency": "USD",
+          "price_cents": 4491,
+          "ships_from": "Sweden",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=15",
+          "row_text": "nicole3573\n99.1% • Cherylhaven, Algeria\n\tSweden\tGood (G) / Near Mint (NM or M-)\tUSD 44.91\tAdd to Cart"
+        },
+        {
+          "listing_id": 23,
+          "seller": "barbara1039",
+          "seller_rating": 96.5,
+          "currency": "USD",
+          "price_cents": 4622,
+          "ships_from": "US",
+          "condition": "Mint (M) / Very Good (VG)",
+          "href": "/cart?add=23",
+          "row_text": "barbara1039\n96.5% • Port Craig, Fiji\n\tUS\tMint (M) / Very Good (VG)\tUSD 46.22\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        9310,
+        9,
+        12
+      ],
+      "offers": [
+        {
+          "listing_id": 9,
+          "seller": "usmith87",
+          "seller_rating": 98.5,
+          "currency": "USD",
+          "price_cents": 6498,
+          "ships_from": "Germany",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=9",
+          "row_text": "usmith87\n98.5% • New Rita, Trinidad and Tobago\n\tGermany\tVery Good Plus (VG+) / Mint (M)\tUSD 64.98\tAdd to Cart"
+        },
+        {
+          "listing_id": 12,
+          "seller": "ewright99",
+          "seller_rating": 96.9,
+          "currency": "USD",
+          "price_cents": 2812,
+          "ships_from": "Australia",
+          "condition": "Good (G) / Mint (M)",
+          "href": "/cart?add=12",
+          "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        9549,
+        9,
+        19
+      ],
+      "offers": [
+        {
+          "listing_id": 9,
+          "seller": "usmith87",
+          "seller_rating": 98.5,
+          "currency": "USD",
+          "price_cents": 6498,
+          "ships_from": "Germany",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=9",
+          "row_text": "usmith87\n98.5% • New Rita, Trinidad and Tobago\n\tGermany\tVery Good Plus (VG+) / Mint (M)\tUSD 64.98\tAdd to Cart"
+        },
+        {
+          "listing_id": 19,
+          "seller": "jenniferross18",
+          "seller_rating": 97.3,
+          "currency": "USD",
+          "price_cents": 3051,
+          "ships_from": "US",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=19",
+          "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        10063,
+        1,
+        12
+      ],
+      "offers": [
+        {
+          "listing_id": 1,
+          "seller": "meagan8968",
+          "seller_rating": 99.8,
+          "currency": "USD",
+          "price_cents": 7251,
+          "ships_from": "Sweden",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=1",
+          "row_text": "meagan8968\n99.8% • New Mariotown, Bouvet Island (Bouvetoya)\n\tSweden\tVery Good Plus (VG+) / Mint (M)\tUSD 72.51\tAdd to Cart"
+        },
+        {
+          "listing_id": 12,
+          "seller": "ewright99",
+          "seller_rating": 96.9,
+          "currency": "USD",
+          "price_cents": 2812,
+          "ships_from": "Australia",
+          "condition": "Good (G) / Mint (M)",
+          "href": "/cart?add=12",
+          "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        10302,
+        1,
+        19
+      ],
+      "offers": [
+        {
+          "listing_id": 1,
+          "seller": "meagan8968",
+          "seller_rating": 99.8,
+          "currency": "USD",
+          "price_cents": 7251,
+          "ships_from": "Sweden",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=1",
+          "row_text": "meagan8968\n99.8% • New Mariotown, Bouvet Island (Bouvetoya)\n\tSweden\tVery Good Plus (VG+) / Mint (M)\tUSD 72.51\tAdd to Cart"
+        },
+        {
+          "listing_id": 19,
+          "seller": "jenniferross18",
+          "seller_rating": 97.3,
+          "currency": "USD",
+          "price_cents": 3051,
+          "ships_from": "US",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=19",
+          "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        10989,
+        9,
+        15
+      ],
+      "offers": [
+        {
+          "listing_id": 9,
+          "seller": "usmith87",
+          "seller_rating": 98.5,
+          "currency": "USD",
+          "price_cents": 6498,
+          "ships_from": "Germany",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=9",
+          "row_text": "usmith87\n98.5% • New Rita, Trinidad and Tobago\n\tGermany\tVery Good Plus (VG+) / Mint (M)\tUSD 64.98\tAdd to Cart"
+        },
+        {
+          "listing_id": 15,
+          "seller": "nicole3573",
+          "seller_rating": 99.1,
+          "currency": "USD",
+          "price_cents": 4491,
+          "ships_from": "Sweden",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=15",
+          "row_text": "nicole3573\n99.1% • Cherylhaven, Algeria\n\tSweden\tGood (G) / Near Mint (NM or M-)\tUSD 44.91\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        11120,
+        9,
+        23
+      ],
+      "offers": [
+        {
+          "listing_id": 9,
+          "seller": "usmith87",
+          "seller_rating": 98.5,
+          "currency": "USD",
+          "price_cents": 6498,
+          "ships_from": "Germany",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=9",
+          "row_text": "usmith87\n98.5% • New Rita, Trinidad and Tobago\n\tGermany\tVery Good Plus (VG+) / Mint (M)\tUSD 64.98\tAdd to Cart"
+        },
+        {
+          "listing_id": 23,
+          "seller": "barbara1039",
+          "seller_rating": 96.5,
+          "currency": "USD",
+          "price_cents": 4622,
+          "ships_from": "US",
+          "condition": "Mint (M) / Very Good (VG)",
+          "href": "/cart?add=23",
+          "row_text": "barbara1039\n96.5% • Port Craig, Fiji\n\tUS\tMint (M) / Very Good (VG)\tUSD 46.22\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        11742,
+        1,
+        15
+      ],
+      "offers": [
+        {
+          "listing_id": 1,
+          "seller": "meagan8968",
+          "seller_rating": 99.8,
+          "currency": "USD",
+          "price_cents": 7251,
+          "ships_from": "Sweden",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=1",
+          "row_text": "meagan8968\n99.8% • New Mariotown, Bouvet Island (Bouvetoya)\n\tSweden\tVery Good Plus (VG+) / Mint (M)\tUSD 72.51\tAdd to Cart"
+        },
+        {
+          "listing_id": 15,
+          "seller": "nicole3573",
+          "seller_rating": 99.1,
+          "currency": "USD",
+          "price_cents": 4491,
+          "ships_from": "Sweden",
+          "condition": "Good (G) / Near Mint (NM or M-)",
+          "href": "/cart?add=15",
+          "row_text": "nicole3573\n99.1% • Cherylhaven, Algeria\n\tSweden\tGood (G) / Near Mint (NM or M-)\tUSD 44.91\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        11873,
+        1,
+        23
+      ],
+      "offers": [
+        {
+          "listing_id": 1,
+          "seller": "meagan8968",
+          "seller_rating": 99.8,
+          "currency": "USD",
+          "price_cents": 7251,
+          "ships_from": "Sweden",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=1",
+          "row_text": "meagan8968\n99.8% • New Mariotown, Bouvet Island (Bouvetoya)\n\tSweden\tVery Good Plus (VG+) / Mint (M)\tUSD 72.51\tAdd to Cart"
+        },
+        {
+          "listing_id": 23,
+          "seller": "barbara1039",
+          "seller_rating": 96.5,
+          "currency": "USD",
+          "price_cents": 4622,
+          "ships_from": "US",
+          "condition": "Mint (M) / Very Good (VG)",
+          "href": "/cart?add=23",
+          "row_text": "barbara1039\n96.5% • Port Craig, Fiji\n\tUS\tMint (M) / Very Good (VG)\tUSD 46.22\tAdd to Cart"
+        }
+      ]
+    },
+    {
+      "key": [
+        13749,
+        1,
+        9
+      ],
+      "offers": [
+        {
+          "listing_id": 1,
+          "seller": "meagan8968",
+          "seller_rating": 99.8,
+          "currency": "USD",
+          "price_cents": 7251,
+          "ships_from": "Sweden",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=1",
+          "row_text": "meagan8968\n99.8% • New Mariotown, Bouvet Island (Bouvetoya)\n\tSweden\tVery Good Plus (VG+) / Mint (M)\tUSD 72.51\tAdd to Cart"
+        },
+        {
+          "listing_id": 9,
+          "seller": "usmith87",
+          "seller_rating": 98.5,
+          "currency": "USD",
+          "price_cents": 6498,
+          "ships_from": "Germany",
+          "condition": "Very Good Plus (VG+) / Mint (M)",
+          "href": "/cart?add=9",
+          "row_text": "usmith87\n98.5% • New Rita, Trinidad and Tobago\n\tGermany\tVery Good Plus (VG+) / Mint (M)\tUSD 64.98\tAdd to Cart"
+        }
+      ]
+    }
+  ],
+  "selected": {
+    "key": [
+      5863,
+      12,
+      19
+    ],
+    "offers": [
+      {
+        "listing_id": 12,
+        "seller": "ewright99",
+        "seller_rating": 96.9,
+        "currency": "USD",
+        "price_cents": 2812,
+        "ships_from": "Australia",
+        "condition": "Good (G) / Mint (M)",
+        "href": "/cart?add=12",
+        "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+      },
+      {
+        "listing_id": 19,
+        "seller": "jenniferross18",
+        "seller_rating": 97.3,
+        "currency": "USD",
+        "price_cents": 3051,
+        "ships_from": "US",
+        "condition": "Good (G) / Near Mint (NM or M-)",
+        "href": "/cart?add=19",
+        "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+      }
+    ]
+  },
+  "maximum_total_cents": 10000,
+  "unit": "USD cents; 100 cents = USD 1.00"
+}

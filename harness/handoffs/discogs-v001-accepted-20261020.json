@@ -1,0 +1,92 @@
+{
+  "site_id": "discogs",
+  "revision": "v001",
+  "bundle_sha256": "d82b0ffbff4afd05465f67aed882e639da402408c2225425c69a521a3715232a",
+  "fixed_cases": [
+    {
+      "id": "invalid_login",
+      "goal": "Reject an invalid password and leave business state unchanged.",
+      "parameters": {
+        "kind": "invalid_login",
+        "username": "demo",
+        "password": "incorrect-phase1-password"
+      }
+    },
+    {
+      "id": "catalog_search",
+      "goal": "Search for The Dark Side Of The Moon and open its release detail without changing business state.",
+      "parameters": {
+        "kind": "catalog_search",
+        "query": "The Dark Side Of The Moon",
+        "release_id": 221
+      }
+    },
+    {
+      "id": "anonymous_collection",
+      "goal": "Attempt to add release 221 to collection without logging in; reach the login gate and leave business state unchanged.",
+      "parameters": {
+        "kind": "anonymous_collection",
+        "release_id": 221
+      }
+    },
+    {
+      "id": "collection_add",
+      "goal": "Log in as demo, add release 221 to collection and verify it on the collection page without changing other business state.",
+      "parameters": {
+        "kind": "collection_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221
+      }
+    },
+    {
+      "id": "wantlist_add",
+      "goal": "Log in as demo, add release 221 to wantlist and verify it on the wantlist page without changing other business state.",
+      "parameters": {
+        "kind": "wantlist_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221
+      }
+    },
+    {
+      "id": "cart_add",
+      "goal": "Log in as demo, add seeded active listing 1 from release 221 marketplace to cart and verify exact item and total without creating an order.",
+      "parameters": {
+        "kind": "cart_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "listing_id": 1
+      }
+    },
+    {
+      "id": "checkout",
+      "goal": "Log in as demo, add listing 1, checkout and verify one paid order, exact item total, sold listing and cleared cart; leave unrelated records unchanged.",
+      "parameters": {
+        "kind": "checkout",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "listing_id": 1
+      }
+    },
+    {
+      "id": "seller_create_deactivate",
+      "goal": "Log in as demo, find release 221, create a USD 19.99 listing with phase1 marker, then deactivate that newly created listing; leave existing listings and other business state unchanged.",
+      "parameters": {
+        "kind": "seller_create_deactivate",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "price_cents": 1999,
+        "quantity": 1,
+        "comments": "phase1-independent-fixture",
+        "ships_from": "US",
+        "media_condition": "Near Mint (NM or M-)",
+        "sleeve_condition": "Very Good Plus (VG+)"
+      }
+    }
+  ],
+  "status": "validated_pending_execution"
+}

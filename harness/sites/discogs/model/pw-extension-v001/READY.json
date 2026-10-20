@@ -1,0 +1,18 @@
+{
+  "revision": "pw-extension-v001",
+  "status": "ready_for_initial_extension_execution",
+  "cases": 12,
+  "steps": 66,
+  "rules": 24,
+  "files": {
+    "plan.json": "54e04eed10b35da78a2cffcf4a2b292341eaaecde2b4753b066e1c823d1ac9e7",
+    "scripts.py": "5dbcc87587e820334ae6e44e516235e62cf8ba3b556f11c7edd03fac9e54bd7b",
+    "rules.json": "a11deb6179eeb096ac05a47fe98190e00cdd013205401482d2fcc28ada30863d",
+    "rulebook.md": "6542054d8358324a240154e4ed2a54a2245524a08ff8d67aeddfa56bc7fb0a4b",
+    "source_review.json": "2b07bcfbbad211d5b0707669c530fd377b5532c75f601b477f5c5639891bda02",
+    "provenance.json": "af786daa6dffeff5b7ff3fa59f9a2ccaa080aca0e9ad32d93ad681e19f409b03",
+    "coverage_mapping.json": "5b0c47e2793b7562a9cba8d5edbfb9be7e8158221a875980c3679a4686cd99e4"
+  },
+  "fixed_cases_sha256": "c8b2aa28d71ace0d7e6f1d1828a96a57be7bb26041ce80110ec0e86d88694011",
+  "business_execution_by_author": 0
+}

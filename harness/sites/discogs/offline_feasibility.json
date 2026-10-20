@@ -1,0 +1,47 @@
+{
+  "scope": "Safe local availability checks only; no blocked network retried and no target source modified",
+  "full_site_offline_ready": false,
+  "backend_assessment": "Validated original backend in separate --system-site-packages venv with only local wheel installs. Original migrations/seed, in-process FastAPI TestClient health/auth/mutation, read-only observer and deterministic reset all passed. No browser UI executed.",
+  "system_python": "D:/Anaconda/python.exe, Python 3.11.4",
+  "available_system_versions": {
+    "fastapi": "0.135.3", "SQLAlchemy": "2.0.37", "pydantic": "2.12.5",
+    "pydantic-settings": "2.12.0", "uvicorn": "0.40.0", "alembic": "1.13.3",
+    "bcrypt": "3.2.0", "cryptography": "39.0.1", "email-validator": "2.3.0",
+    "python-multipart": "0.0.21", "orjson": "3.11.7", "httpx": "0.28.1",
+    "tenacity": "8.2.2", "pyasn1": "0.4.8"
+  },
+  "missing_imports_with_valid_cached_wheels": [
+    {"distribution": "python-jose", "version": "3.3.0", "sha256": "9b1376b023f8b298536eedd47ae1089bcdb848f1535ab30555cd92002d78923a"},
+    {"distribution": "ecdsa", "version": "0.19.1", "sha256": "30638e27cf77b7e15c4c4cc1973720149e1033827cfd00661ca5c8cc0cdb24c3"},
+    {"distribution": "rsa", "version": "4.9", "sha256": "90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7"},
+    {"distribution": "Faker", "version": "40.43.0", "path": ".runtime/downloads/wheels/core/faker-40.43.0-py3-none-any.whl"}
+  ],
+  "cached_wheel_manifest": ".runtime/phase1-discogs-20261020/offline-python-wheels.json",
+  "backend_proposed_reproduction": [
+    "Create dedicated venv-offline with --system-site-packages; do not change base Python",
+    "Copy cached valid wheel objects into dedicated workspace wheelhouse using names from their WHEEL/METADATA and verify recorded SHA256",
+    "Install python-jose3.3.0, ecdsa0.19.1, rsa4.9 and Faker40.43.0 using --no-index --no-deps and explicit local paths",
+    "Freeze complete actual Python environment and run original migrations/seed in isolated runtime with DATABASE_URL pointing to dedicated SQLite file",
+    "Validate original app imports, public health, deterministic reset and independent read-only observation before claiming backend readiness"
+  ],
+  "limitations": [
+    "psycopg is not installed; original backend supports SQLite and does not need the Postgres driver in this mode, but full upstream requirements are not all satisfied",
+    "Using system-site-packages shares installed library versions and is not complete dependency isolation; versions must be recorded separately",
+    "npm cache ls --offline contains no Next.js, React/ReactDOM or Next SWC tarballs; only TypeScript/PostCSS relevant assets were present",
+    "Global npm has React/ReactDOM19.2.5 but no Next.js; these versions also differ from original locked React19.2.3",
+    "Original frontend therefore cannot be reproduced fully from the inspected offline assets; no replacement frontend is authorized or created"
+  ],
+  "lifecycle": "deploy.py serve keeps launcher attached, supervises child exits, prints health every15seconds; use an ongoing exec session",
+  "completed_checks": ["Read-only Python import and version inventory", "2141 local wheel/cache candidates scanned with ZIP metadata", "npm cache ls --offline", "npm ls -g next react react-dom --offline --depth=5", "Python AST and JSON syntax", "deploy.py --help includes serve"],
+  "completed_backend_validation": {
+    "command": "python harness/sites/discogs/deploy.py prepare-backend-offline",
+    "environment": ".runtime/phase1-discogs-20261020/venv-offline",
+    "dependency_provenance": ".runtime/phase1-discogs-20261020/offline-install-provenance.json",
+    "actual_distribution_inventory": ".runtime/phase1-discogs-20261020/offline-python-inventory.json",
+    "evidence": ".runtime/phase1-discogs-20261020/backend-offline-validation.json",
+    "baseline_sha256": "6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50",
+    "checks": ["110 original source files match frozen hashes and isolated copy", "Health200, invalid credentials400 with unchanged state, valid auth200", "Real original API collection add persisted", "Observer read does not change DB byte hash", "Reset restores exact pre-mutation observation", "All8 case resets match frozen table hashes", "Unmet collection goal fails independent evaluator", "Backend goal met by API still fails final evaluator when UI evidence is absent"],
+    "validation_implementation_correction": "First validation attempt used /login and got404; corrected the validation script to original /auth/login. No website, model rule or evaluator change. Second run passed."
+  },
+  "not_completed": ["full frontend dependencies/build", "live browser UI execution", "complete8case website experiment"]
+}

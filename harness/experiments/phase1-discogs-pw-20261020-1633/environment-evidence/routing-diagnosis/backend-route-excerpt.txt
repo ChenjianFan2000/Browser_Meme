@@ -1,0 +1,6 @@
+INFO:     127.0.0.1:56176 - "POST /api/me/collection/221 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33322 - "POST /api/me/collection/221 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:16015 - "POST /api/me/wantlist/221 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:29344 - "GET /api/backend/search?q=The%20Dark%20Side%20Of%20The%20Moon HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:19073 - "POST /api/me/collection/221 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43505 - "POST /api/me/wantlist/221 HTTP/1.1" 404 Not Found

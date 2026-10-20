@@ -1,0 +1,13 @@
+{
+  "request_id": "0dece54710af4b10bda5da8d63c08c32",
+  "request_sha256": "6aa1c37309f8eda5b7e7c86fda99c12b742e331c2f3b2b3a873e4c80e4d552f2",
+  "reviewer": "gpt-6.1-sol",
+  "decision": "continue",
+  "classification": "planned_review",
+  "reason": "SYNTHETIC TEST FIXTURE ONLY: no Solar model was invoked.",
+  "evidence": [
+    "request.json",
+    "ui.dom.json",
+    "ui.png"
+  ]
+}

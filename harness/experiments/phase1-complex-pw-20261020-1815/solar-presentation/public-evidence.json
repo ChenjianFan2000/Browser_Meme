@@ -1,0 +1,922 @@
+{
+  "source_channels": "public summary, frozen public plans/rules, public intervention packets/decisions and public notes only",
+  "run": "execution-001",
+  "metrics": {
+    "case_denominator": 1,
+    "passed_cases": 1,
+    "step_denominator": 19,
+    "matched_steps": 19,
+    "ui_actions_dispatched": 19,
+    "ui_actions_completed": 19,
+    "case_success_rate": 1.0,
+    "step_match_rate": 1.0,
+    "elapsed_seconds": 196.7960000000021
+  },
+  "independent_checks": [
+    {
+      "id": "required_actual_channels",
+      "passed": true
+    },
+    {
+      "id": "independent_pair_exists",
+      "passed": true
+    },
+    {
+      "id": "final_authenticated_demo",
+      "passed": true
+    },
+    {
+      "id": "confirmed_exact_mutation_dispatches",
+      "passed": true
+    },
+    {
+      "id": "unchanged_unrelated_tables",
+      "passed": true
+    },
+    {
+      "id": "one_exact_paid_demo_order",
+      "passed": true
+    },
+    {
+      "id": "all_prior_orders_unchanged",
+      "passed": true
+    },
+    {
+      "id": "exact_two_new_order_items",
+      "passed": true
+    },
+    {
+      "id": "all_prior_items_unchanged",
+      "passed": true
+    },
+    {
+      "id": "only_two_listing_statuses_change",
+      "passed": true
+    },
+    {
+      "id": "cart_restored_exactly",
+      "passed": true
+    },
+    {
+      "id": "empty_cart_ui_disabled",
+      "passed": true
+    },
+    {
+      "id": "single_checkout_dispatch_success",
+      "passed": true
+    },
+    {
+      "id": "checkout_response_matches_persistence",
+      "passed": true
+    },
+    {
+      "id": "only_two_single_quantity_adds",
+      "passed": true
+    },
+    {
+      "id": "no_other_mutation_attempts",
+      "passed": true
+    },
+    {
+      "id": "observed_exact_precheckout_cart",
+      "passed": true
+    },
+    {
+      "id": "required_search_and_return_navigation",
+      "passed": true
+    },
+    {
+      "id": "observed_unrelated_tables_preserved",
+      "passed": true
+    }
+  ],
+  "supervision": {
+    "planned_checkpoints": 2,
+    "consumed_checkpoints": 2,
+    "reviews": [
+      {
+        "checkpoint_id": "selection_committed",
+        "trigger": "planned_review",
+        "before_step": "first_cart_add",
+        "directory": "interventions/01-selection_committed",
+        "status": "consumed",
+        "request_id": "45dec6f4666d45d48a5942e8bc98b040",
+        "request_sha256": "27f389c469e2c8fb3534dea65bba62e2bd563c6ef5e5af05be76d3947c475398",
+        "solar_decision": "continue",
+        "classification": "planned_review",
+        "decision_sha256": "ff38852f7faf8cc5b08d2f181f05f1bf8de4fabcb1dcaed979f520fdefe99a7a",
+        "review_elapsed_seconds": 78.5789999999979
+      },
+      {
+        "checkpoint_id": "before_checkout",
+        "trigger": "planned_review",
+        "before_step": "checkout",
+        "directory": "interventions/02-before_checkout",
+        "status": "consumed",
+        "request_id": "cec4feb5807b41d3831f40b1c1a34613",
+        "request_sha256": "6fb1b8ae3c01722b08fba7c230079b7b14c6644afc0487d285aa83f2e82becdc",
+        "solar_decision": "continue",
+        "classification": "planned_review",
+        "decision_sha256": "1c9e1e347baf7e7fbb820ec347795ae94215d90e47be7752d63c703f4e3661c5",
+        "review_elapsed_seconds": 49.8440000000046
+      }
+    ],
+    "review_elapsed_seconds": 128.4230000000025,
+    "all_required_gates_consumed": true
+  },
+  "event_gate_order": [
+    {
+      "checkpoint": "selection_committed",
+      "intervention_requested": 352,
+      "intervention_decision": 353,
+      "checkpoint_granted": 357,
+      "checkpoint_consumed": 361,
+      "next_dispatch": 363
+    },
+    {
+      "checkpoint": "before_checkout",
+      "intervention_requested": 583,
+      "intervention_decision": 584,
+      "checkpoint_granted": 588,
+      "checkpoint_consumed": 592,
+      "next_dispatch": 594
+    }
+  ],
+  "step_rule_check_mapping": [
+    {
+      "step": "login_open",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Sign in"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 10,
+        "action_dispatch": 11,
+        "action_complete": 23
+      }
+    },
+    {
+      "step": "login_username",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.login_username",
+              "op": "eq",
+              "value": "demo"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 45,
+        "action_dispatch": 46,
+        "action_complete": 50
+      }
+    },
+    {
+      "step": "login_password",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Sign in"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 58,
+        "action_dispatch": 59,
+        "action_complete": 63
+      }
+    },
+    {
+      "step": "login_submit",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.url",
+              "op": "matches",
+              "value": "/$"
+            },
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Trending Releases"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 71,
+        "action_dispatch": 72,
+        "action_complete": 82
+      }
+    },
+    {
+      "step": "search_fill",
+      "rule_ids": [
+        "CAT-SEARCH"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.query",
+              "op": "eq",
+              "value": "The Dark Side Of The Moon"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 130,
+        "action_dispatch": 131,
+        "action_complete": 135
+      }
+    },
+    {
+      "step": "search_submit",
+      "rule_ids": [
+        "CAT-SEARCH"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Results for"
+            },
+            {
+              "path": "after.ui.fields.target_release_count",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 143,
+        "action_dispatch": 144,
+        "action_complete": 153
+      }
+    },
+    {
+      "step": "release_open",
+      "rule_ids": [
+        "CAT-DETAIL"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Tracklist"
+            },
+            {
+              "path": "after.ui.url",
+              "op": "contains",
+              "value": "/release/221"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 191,
+        "action_dispatch": 192,
+        "action_complete": 198
+      }
+    },
+    {
+      "step": "marketplace_open",
+      "rule_ids": [
+        "MKT-FILTER"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Marketplace listings"
+            },
+            {
+              "path": "after.ui.fields.offer_rows",
+              "op": "gte",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 220,
+        "action_dispatch": 221,
+        "action_complete": 229
+      }
+    },
+    {
+      "step": "rating_fill",
+      "rule_ids": [
+        "MKT-FILTER"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.minimum_rating",
+              "op": "eq",
+              "value": "95.0"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 267,
+        "action_dispatch": 268,
+        "action_complete": 272
+      }
+    },
+    {
+      "step": "sort_select",
+      "rule_ids": [
+        "MKT-FILTER"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.sort",
+              "op": "eq",
+              "value": "price_asc"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 280,
+        "action_dispatch": 281,
+        "action_complete": 285
+      }
+    },
+    {
+      "step": "filter_apply",
+      "rule_ids": [
+        "MKT-FILTER",
+        "TASK-SELECTION"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.url",
+              "op": "contains",
+              "value": "min_rating="
+            },
+            {
+              "path": "after.ui.fields.offer_rows",
+              "op": "gte",
+              "value": 2
+            },
+            {
+              "path": "after.ui.fields.offer_rows",
+              "op": "lte",
+              "value": 50
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 293,
+        "action_dispatch": 294,
+        "action_complete": 343
+      }
+    },
+    {
+      "step": "first_cart_add",
+      "rule_ids": [
+        "CART-ADD",
+        "CART-READ",
+        "TASK-SELECTION"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.backend.cart_count",
+              "op": "eq",
+              "value": 1
+            },
+            {
+              "path": "after.backend.cart_total_cents",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "path": "after.backend.cart_total_cents",
+              "op": "lte",
+              "value": 10000
+            },
+            {
+              "path": "after.ui.fields.cart_release_rows",
+              "op": "eq",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.orders",
+          "op": "eq",
+          "value_from": "before.backend.orders"
+        },
+        {
+          "path": "after.backend.order_items",
+          "op": "eq",
+          "value_from": "before.backend.order_items"
+        },
+        {
+          "path": "after.backend.listings",
+          "op": "eq",
+          "value_from": "before.backend.listings"
+        },
+        {
+          "path": "after.backend.collection_ids",
+          "op": "eq",
+          "value_from": "before.backend.collection_ids"
+        },
+        {
+          "path": "after.backend.wantlist_ids",
+          "op": "eq",
+          "value_from": "before.backend.wantlist_ids"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 362,
+        "action_dispatch": 363,
+        "action_complete": 388
+      }
+    },
+    {
+      "step": "return_release",
+      "rule_ids": [
+        "CAT-DETAIL",
+        "TASK-MEMORY"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Tracklist"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 397,
+        "action_dispatch": 398,
+        "action_complete": 404
+      }
+    },
+    {
+      "step": "return_marketplace",
+      "rule_ids": [
+        "MKT-FILTER",
+        "TASK-MEMORY"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Marketplace listings"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 426,
+        "action_dispatch": 427,
+        "action_complete": 433
+      }
+    },
+    {
+      "step": "rating_refill",
+      "rule_ids": [
+        "MKT-FILTER"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.minimum_rating",
+              "op": "eq",
+              "value": "95.0"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 463,
+        "action_dispatch": 464,
+        "action_complete": 468
+      }
+    },
+    {
+      "step": "sort_reselect",
+      "rule_ids": [
+        "MKT-FILTER"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.sort",
+              "op": "eq",
+              "value": "price_asc"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 476,
+        "action_dispatch": 477,
+        "action_complete": 481
+      }
+    },
+    {
+      "step": "filter_reapply",
+      "rule_ids": [
+        "MKT-FILTER",
+        "TASK-MEMORY"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.ui.fields.offer_rows",
+              "op": "gte",
+              "value": 2
+            },
+            {
+              "path": "after.ui.fields.minimum_rating",
+              "op": "eq",
+              "value": "95.0"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.table_hashes",
+          "op": "eq",
+          "value_from": "before.backend.table_hashes"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 489,
+        "action_dispatch": 490,
+        "action_complete": 539
+      }
+    },
+    {
+      "step": "second_cart_add",
+      "rule_ids": [
+        "CART-ADD",
+        "CART-READ",
+        "TASK-MEMORY"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.backend.cart_count",
+              "op": "eq",
+              "value": 2
+            },
+            {
+              "path": "after.backend.cart_total_cents",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "path": "after.backend.cart_total_cents",
+              "op": "lte",
+              "value": 10000
+            },
+            {
+              "path": "after.ui.fields.cart_release_rows",
+              "op": "eq",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.orders",
+          "op": "eq",
+          "value_from": "before.backend.orders"
+        },
+        {
+          "path": "after.backend.order_items",
+          "op": "eq",
+          "value_from": "before.backend.order_items"
+        },
+        {
+          "path": "after.backend.listings",
+          "op": "eq",
+          "value_from": "before.backend.listings"
+        },
+        {
+          "path": "after.backend.collection_ids",
+          "op": "eq",
+          "value_from": "before.backend.collection_ids"
+        },
+        {
+          "path": "after.backend.wantlist_ids",
+          "op": "eq",
+          "value_from": "before.backend.wantlist_ids"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 548,
+        "action_dispatch": 549,
+        "action_complete": 574
+      }
+    },
+    {
+      "step": "checkout",
+      "rule_ids": [
+        "CHECKOUT",
+        "TASK-CHECKPOINT"
+      ],
+      "prediction": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "path": "after.backend.cart_count",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "path": "after.backend.latest_demo_order.status",
+              "op": "eq",
+              "value": "paid"
+            },
+            {
+              "path": "after.backend.latest_demo_order.total_cents",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "path": "after.backend.latest_demo_order.total_cents",
+              "op": "lte",
+              "value": 10000
+            },
+            {
+              "path": "after.ui.text",
+              "op": "contains",
+              "value": "Your cart is empty."
+            },
+            {
+              "path": "after.ui.fields.checkout_disabled",
+              "op": "eq",
+              "value": ""
+            },
+            {
+              "path": "after.backend.latest_demo_order.total_cents",
+              "op": "eq",
+              "value_from": "before.backend.cart_total_cents"
+            }
+          ]
+        }
+      ],
+      "invariants": [
+        {
+          "path": "after.backend.collection_ids",
+          "op": "eq",
+          "value_from": "before.backend.collection_ids"
+        },
+        {
+          "path": "after.backend.wantlist_ids",
+          "op": "eq",
+          "value_from": "before.backend.wantlist_ids"
+        }
+      ],
+      "status": "matched",
+      "event_sequence": {
+        "prediction": 593,
+        "action_dispatch": 594,
+        "action_complete": 601
+      }
+    }
+  ],
+  "candidate_count": 7,
+  "eligible_count": 6,
+  "pair_count": 15,
+  "recomputed_optimum": [
+    5863,
+    12,
+    19
+  ],
+  "final_public_order": {
+    "id": 121,
+    "status": "paid",
+    "total_cents": 5863,
+    "currency": "USD",
+    "created_at": "2026-10-20T10:34:24",
+    "items": [
+      {
+        "listing_id": 12,
+        "price_cents": 2812,
+        "quantity": 1
+      },
+      {
+        "listing_id": 19,
+        "price_cents": 3051,
+        "quantity": 1
+      }
+    ]
+  },
+  "input_hashes": {
+    "G:\\Browser_Meme\\harness\\experiments\\phase1-complex-pw-20261020-1815\\public-execution-summary.json": "d55768fa98d5b08ec4a82aa7aa07d4e89e76607b93ba9306266a9f64a0d63d53",
+    "G:\\Browser_Meme\\harness\\experiments\\phase1-complex-pw-20261020-1815\\execution-001\\cases\\01-budgeted_two_seller_purchase\\interventions\\01-selection_committed\\request.json": "27f389c469e2c8fb3534dea65bba62e2bd563c6ef5e5af05be76d3947c475398",
+    "G:\\Browser_Meme\\harness\\experiments\\phase1-complex-pw-20261020-1815\\execution-001\\cases\\01-budgeted_two_seller_purchase\\interventions\\01-selection_committed\\decision.json": "ff38852f7faf8cc5b08d2f181f05f1bf8de4fabcb1dcaed979f520fdefe99a7a",
+    "G:\\Browser_Meme\\harness\\experiments\\phase1-complex-pw-20261020-1815\\execution-001\\cases\\01-budgeted_two_seller_purchase\\interventions\\02-before_checkout\\request.json": "6fb1b8ae3c01722b08fba7c230079b7b14c6644afc0487d285aa83f2e82becdc",
+    "G:\\Browser_Meme\\harness\\experiments\\phase1-complex-pw-20261020-1815\\execution-001\\cases\\01-budgeted_two_seller_purchase\\interventions\\02-before_checkout\\decision.json": "1c9e1e347baf7e7fbb820ec347795ae94215d90e47be7752d63c703f4e3661c5"
+  },
+  "private_inputs_read": false,
+  "frozen_artifacts_modified": false,
+  "new_business_actions": 0
+}

@@ -1,0 +1,31 @@
+{
+  "model": "gpt-6.1-sol",
+  "context": "independent source-visible phase1 Solar author; fork_turns=none",
+  "parent_version": null,
+  "old_model_read": false,
+  "allowed_inputs": [
+    "AGENTS.md",
+    "实验方案.md",
+    "研究目标.md",
+    "full upstream implementation/config/schema/migrations",
+    "public adapter_contract.md",
+    "public cases.json",
+    "harness/SCRIPT_CONTRACT.md",
+    "current experiment PROTOCOL.md",
+    "generic checks.py and contract.py"
+  ],
+  "excluded_inputs": [
+    "evaluator.py",
+    "private evaluators/oracles",
+    "historical results/test answers",
+    "upstream task_instructions.json",
+    "task-generation scripts"
+  ],
+  "access_isolation": "independent context only; no OS sandbox claimed",
+  "business_execution_count": 0,
+  "database_mutations_by_author": 0,
+  "script_contract": "harness/SCRIPT_CONTRACT.md protocol2",
+  "source_review_manifest": "source_review.json",
+  "token_usage": null,
+  "billing": null
+}

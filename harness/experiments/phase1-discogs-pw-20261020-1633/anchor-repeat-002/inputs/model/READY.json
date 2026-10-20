@@ -1,0 +1,19 @@
+{
+  "revision": "pw-v002",
+  "status": "ready_for_regression_if_coordinator_selects",
+  "cases": 8,
+  "steps": 44,
+  "rules": 24,
+  "files": {
+    "plan.json": "3bd29b7cf8a50a1acac6770b2579bc0112ea2415b85c32103cb3611da08fd527",
+    "scripts.py": "e8ee849893bbdb5c1b12e88387c57b5f921422f46a171be4c1656eac9b427346",
+    "rules.json": "501ba7e7b92df77820d46baf88a5b0a7f5483afe42982c5170b1975d5bf553d3",
+    "rulebook.md": "bafaa8cf0ec4ccc991d569c61f4cc76b34991e64eb1ee433a434db075c100457",
+    "source_review.json": "626f0dfebe63aaaab4bdfac945e2c89b43386810f77c439208b83c12de8a86dd",
+    "provenance.json": "2e0bd309087a57702aa800db620d443db1847f5322a5c199749a4aabcda96c75",
+    "diagnosis.json": "c3ba5483effff8c864977d5b172ecb0c756897c1aa7253146a1908c9b46c3ff4"
+  },
+  "expected_website_blockers_persist": true,
+  "checks_weakened": false,
+  "diagnosis_schema_corrected_before_execution": true
+}

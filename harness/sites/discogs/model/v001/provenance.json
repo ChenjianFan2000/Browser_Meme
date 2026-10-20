@@ -1,0 +1,149 @@
+{
+  "model": "gpt-6.1-sol",
+  "revision": "v001",
+  "generation_mode": "Independent session subagent source-visible phase1; no remote API call",
+  "bundle_sha256": "d82b0ffbff4afd05465f67aed882e639da402408c2225425c69a521a3715232a",
+  "total_ui_steps": 47,
+  "consulted_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dc591079b0f795e4db8b88945ea4017846ee7cfc23e3bad33306bd4c89bb104b"
+    },
+    {
+      "path": "实验方案.md",
+      "sha256": "b4c784339b148e3a12cf8df1101d6be048c17901d8df5f1a7b5941f3b8fdb49f"
+    },
+    {
+      "path": "harness/CONTRACT.md",
+      "sha256": "8b4faf4a7e580e8bacc444b360d9d6a56bc19cad3fd1a1f614e3a5b48fb96797"
+    },
+    {
+      "path": "harness/sites/discogs/cases.json",
+      "sha256": "1c29948b83e9367f87e6bc84237e8cc71ece133547ba65df06ff9fef0b7f0c7a"
+    },
+    {
+      "path": "harness/sites/discogs/adapter_contract.md",
+      "sha256": "f12a376a65ba73af8f74de12cd5682ff0aa9994a2203d51245e0e0772895fd7d"
+    },
+    {
+      "path": "harness/sites/discogs/site.json",
+      "sha256": "c9a0709971136ddd86175125e319c72a5e57690581f0de42dfb74ab8cb9859c5"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/ReleaseActions.tsx",
+      "sha256": "b298edf4e345a571561edeab18678221dbe0ce5bd6751cce0b6434b35d2b4356"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/login/LoginClient.tsx",
+      "sha256": "1e7c14c4a10d495e8e589fbe333e8961720c571064fb25a832af396915676d57"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py",
+      "sha256": "957d70c504cd9510945d15b393cc0104fcf1beaf5c7903cfe783f370575ddc87"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/marketplace.py",
+      "sha256": "908eb34f5cc647d7aab5d59fde1777c2a9de40fe9064f74e0558ead4d145ead3"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/cart/CartClient.tsx",
+      "sha256": "1d18aff3a95a82c4ef7b08a46c21461159beedcc2e13af5896dc606705bfecf6"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/sell/release/[id]/page.tsx",
+      "sha256": "a4e93db1fe6191edb18d89dde4cca3f0fdb3b55ad4a72bad095546b502cd14d6"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/me/collection/page.tsx",
+      "sha256": "a5a60a58e34f7ffdc21ce592d37d994a1b5130a996fc442d06db8747461a5a0f"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/me/wantlist/page.tsx",
+      "sha256": "695ceb996b1cd628e9daa35ceddec0f2cf6be17a9c588e24d00c320225e3d50d"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/Header.tsx",
+      "sha256": "1bff0c4d80d892d11e09e81b71623b5c37ebfef6c5d802594f6a0354cbb3c5de"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/db/seed.py",
+      "sha256": "34811036c9cca79d89aa1d3eb959fed8081c93138e64b18f1ac740cbcfc5ac85"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/search/page.tsx",
+      "sha256": "3a78fb3b8ad2bdfd3808e78a1c931bc6c18144b01bd319970d0cda6f38e34ecb"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/sell/page.tsx",
+      "sha256": "304333e40f0478e0e0cf6541e1897ae457cae75d3aa9ed4ac7f2c0293e232ea2"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/auth.py",
+      "sha256": "782a68d2b6219f04fd0dcb7ab74f79f4de8233a91c4f65f16e4d2e65e1d04f1a"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/release/[id]/page.tsx",
+      "sha256": "6c3f2cc259f23838d8ef745f163a95290aaf119a601d64de2f44e114c5a52447"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/catalog.py",
+      "sha256": "183966e1e6aa004cc81d16930e78ceb62c6cc31f446ce3d1195759b1c8e887d4"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/api/auth/login/route.ts",
+      "sha256": "51dc6fa0637b1d0693fda5be2d443900bb7c6a54150f971d9110776377f1227f"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/CookieBanner.tsx",
+      "sha256": "47ea05c56b0c8df2a80080c03160c70a44ec0d223f0975cb4360e367e0fcb604"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/ReleaseCard.tsx",
+      "sha256": "7bf7592122c5431a13f47fa2d057904302142675d585f8817615ad2493da00e0"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/layout.tsx",
+      "sha256": "9facb164d34c860b83e1dd9ce372cbeb728cd82bf5f9c7d8d92ebf9f56ff4793"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/deps.py",
+      "sha256": "0d90ffbb212532764f0454eaa89ed8e1c01daa58e08777378447c5048052b62f"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/schemas/sell.py",
+      "sha256": "6417adf15b78b66c8fb683104b883e363d5b69d4b1c66e69f1224d6bc1d4c5ea"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/lib/backend.ts",
+      "sha256": "82276c8d0ec01c739887e10747971dff707266b5bdfaf443fe4fddf0d0c76cbf"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/lib/api.ts",
+      "sha256": "95668f93161d31d1d8b6c2e1d7d97cb493816680d99aec728a8bef0bf879f19a"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/collection.py",
+      "sha256": "3265b81af76661ec5563fe24d82a3b3a0f80aa172d91b65c5fc526fe362c0c4a"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/wantlist.py",
+      "sha256": "c92346f1cda16007154f60a8c1732f851f369a9ff344bd696b33c7158096d69d"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/cart.py",
+      "sha256": "98a0364854beb5ecc0551a519748c8469e5cbe6c49e8c7f9c81d71f8881fe19b"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/marketplace.py",
+      "sha256": "7a4bfd13a7b89af3190ee77bcc2a80b5f678e875e2237f8b016537165aaebd7e"
+    },
+    {
+      "path": "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/order.py",
+      "sha256": "a0234a1c87b94670101d49ad1bf9ac9fd5ced5cabda05aacf8056c1d1c228110"
+    }
+  ],
+  "source_unchanged": true,
+  "browser_experimentation_before_generation": false,
+  "private_evaluator_access": false,
+  "actual_model_tokens_and_cost": "not supplied by runtime"
+}

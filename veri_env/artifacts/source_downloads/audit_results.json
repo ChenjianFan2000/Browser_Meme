@@ -1,0 +1,170 @@
+{
+  "python": "3.11.4 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 13:38:37) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "repositories": [
+    {
+      "repo": "WorldCoder",
+      "python_files": 43,
+      "parse_errors": []
+    },
+    {
+      "repo": "PatchWorld",
+      "python_files": 27,
+      "parse_errors": []
+    },
+    {
+      "repo": "WMA-Agents",
+      "python_files": 60,
+      "parse_errors": []
+    },
+    {
+      "repo": "WebDreamer",
+      "python_files": 10,
+      "parse_errors": []
+    },
+    {
+      "repo": "SelfEvolvingAgent",
+      "python_files": 100,
+      "parse_errors": []
+    },
+    {
+      "repo": "code-world-models",
+      "python_files": 164,
+      "parse_errors": []
+    },
+    {
+      "repo": "poe-world",
+      "python_files": 63,
+      "parse_errors": []
+    },
+    {
+      "repo": "WebWorld",
+      "python_files": 23,
+      "parse_errors": []
+    },
+    {
+      "repo": "Code2World",
+      "python_files": 149,
+      "parse_errors": []
+    },
+    {
+      "repo": "agent2world",
+      "python_files": 121,
+      "parse_errors": []
+    },
+    {
+      "repo": "openai-hf-interface",
+      "python_files": 8,
+      "parse_errors": []
+    },
+    {
+      "repo": "OC_Atari",
+      "python_files": 252,
+      "parse_errors": []
+    }
+  ],
+  "dependencies": {
+    "numpy": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "torch": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\torch\\__init__.py"
+    },
+    "openai": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\openai\\__init__.py"
+    },
+    "anthropic": {
+      "available": false,
+      "origin": null
+    },
+    "dill": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\dill\\__init__.py"
+    },
+    "gitinfo": {
+      "available": false,
+      "origin": null
+    },
+    "mloggers": {
+      "available": false,
+      "origin": null
+    },
+    "autopep8": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\autopep8.py"
+    },
+    "gymnasium": {
+      "available": false,
+      "origin": null
+    },
+    "hydra": {
+      "available": false,
+      "origin": null
+    },
+    "omegaconf": {
+      "available": false,
+      "origin": null
+    },
+    "openai_hf_interface": {
+      "available": false,
+      "origin": null
+    },
+    "jsonlines": {
+      "available": false,
+      "origin": null
+    },
+    "json_repair": {
+      "available": false,
+      "origin": null
+    },
+    "tqdm": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\tqdm\\__init__.py"
+    },
+    "PIL": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\PIL\\__init__.py"
+    },
+    "playwright": {
+      "available": false,
+      "origin": null
+    },
+    "pydantic": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\pydantic\\__init__.py"
+    },
+    "loguru": {
+      "available": false,
+      "origin": null
+    },
+    "tiktoken": {
+      "available": false,
+      "origin": null
+    },
+    "transformers": {
+      "available": true,
+      "origin": "D:\\Anaconda\\Lib\\site-packages\\transformers\\__init__.py"
+    },
+    "func_timeout": {
+      "available": false,
+      "origin": null
+    },
+    "pygame": {
+      "available": false,
+      "origin": null
+    },
+    "ale_py": {
+      "available": false,
+      "origin": null
+    }
+  },
+  "patchworld_smoke": {
+    "status": "passed",
+    "GraphState": "(nodes: Dict[str, Dict] = <factory>, edges: Set[Tuple[str, str, str]] = <factory>, metadata: Dict = <factory>) -> None",
+    "validate_model": "(code: str, trajectories: List[patchworld.worldmodel_data.Trajectory], max_trajectories: int = 20, show_progress: bool = False, progress_label: str = '', *, attach_step_text_to_first_n_errors: int = 0, method_timeout_s: Optional[float] = None) -> List[Dict[str, Any]]",
+    "tested": "Original package imports and Transition/Trajectory dataclass behavior only; no LLM, environment server, or generated model execution."
+  }
+}

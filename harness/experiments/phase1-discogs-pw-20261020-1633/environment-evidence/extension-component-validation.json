@@ -1,0 +1,318 @@
+{
+  "scope": "independent adapter reset and negative workflow/goal-tampering controls; no UI execution",
+  "adapter_sha256": "15b04c64ef261da6da565bc7603b210e3afd81aafb113cd85baf112bb50cc3be",
+  "baseline_sha256": "6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50",
+  "cases": [
+    {
+      "case_id": "consent_persistence",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "accepted_survives_reload",
+          "passed": false,
+          "detail": "Initially visible consent banner is absent after a real reload with accepted localStorage"
+        }
+      ]
+    },
+    {
+      "case_id": "genre_navigation",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "genre_card_detail_tracklist",
+          "passed": false,
+          "detail": "A displayed Rock card leads to its real database tracklist"
+        }
+      ]
+    },
+    {
+      "case_id": "search_empty",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_search_empty_results",
+          "passed": false,
+          "detail": "Fixed search term and correct empty-result rendering with no result cards"
+        }
+      ]
+    },
+    {
+      "case_id": "search_no_match",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_search_empty_results",
+          "passed": false,
+          "detail": "Fixed search term and correct empty-result rendering with no result cards"
+        }
+      ]
+    },
+    {
+      "case_id": "market_filter_none",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_empty_filter",
+          "passed": false,
+          "detail": "Fixed impossible shipping filter produces explicit empty table"
+        }
+      ]
+    },
+    {
+      "case_id": "market_sort_desc",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_sorted_market_rows",
+          "passed": false,
+          "detail": "Exact independently derived active offer set, row fields, prices and descending order"
+        }
+      ]
+    },
+    {
+      "case_id": "market_filter_combo",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "first_offer_filter_values",
+          "passed": false,
+          "detail": "Filter values equal the actually displayed first offer"
+        }
+      ]
+    },
+    {
+      "case_id": "collection_duplicate",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_single_membership",
+          "passed": false,
+          "detail": "Exactly one demo/221 membership added and all other membership rows preserved"
+        },
+        {
+          "id": "two_real_adds_and_reload",
+          "passed": false,
+          "detail": "At least two successful actual add responses and detail reload observed"
+        },
+        {
+          "id": "membership_page_visible",
+          "passed": false,
+          "detail": "Persistent target appears on the requested account list"
+        }
+      ]
+    },
+    {
+      "case_id": "wantlist_duplicate",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_single_membership",
+          "passed": false,
+          "detail": "Exactly one demo/221 membership added and all other membership rows preserved"
+        },
+        {
+          "id": "two_real_adds_and_reload",
+          "passed": false,
+          "detail": "At least two successful actual add responses and detail reload observed"
+        },
+        {
+          "id": "membership_page_visible",
+          "passed": false,
+          "detail": "Persistent target appears on the requested account list"
+        }
+      ]
+    },
+    {
+      "case_id": "cart_repeat_remove",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "double_quantity_intermediate",
+          "passed": false,
+          "detail": "Actual intermediate cart and displayed total show two units in one row"
+        },
+        {
+          "id": "removed_final_cart",
+          "passed": false,
+          "detail": "Successful real removal leaves empty cart and disabled checkout"
+        }
+      ]
+    },
+    {
+      "case_id": "anonymous_cart_return",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "anonymous_login_return",
+          "passed": false,
+          "detail": "Anonymous add refused then login returns to exact add URL"
+        },
+        {
+          "id": "exact_cart_after_return",
+          "passed": false,
+          "detail": "Return completes exactly one target unit, preserving other users' carts"
+        }
+      ]
+    },
+    {
+      "case_id": "signout_gate",
+      "reset_hash_ok": true,
+      "unexecuted_workflow_rejected": true,
+      "goal_tampering_rejected": true,
+      "checks": [
+        {
+          "id": "unrelated_tables_unchanged",
+          "passed": true,
+          "detail": "All tables outside the exact public task mutation remain unchanged"
+        },
+        {
+          "id": "observed_intermediate_unrelated_state",
+          "passed": true,
+          "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+        },
+        {
+          "id": "exact_single_membership",
+          "passed": false,
+          "detail": "Exactly one demo/221 membership added and all other membership rows preserved"
+        },
+        {
+          "id": "real_signout_and_gate",
+          "passed": false,
+          "detail": "Successful UI logout, removed auth cookie and real anonymous collection refusal"
+        }
+      ]
+    }
+  ]
+}

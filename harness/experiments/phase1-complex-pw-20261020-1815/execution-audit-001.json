@@ -1,0 +1,28 @@
+{
+  "scope": "Actual execution evidence and intervention ordering; no new website actions",
+  "frozen_file_checks": 147,
+  "predicted_before_dispatch": 19,
+  "planned_actions": 19,
+  "reviews": [
+    {
+      "checkpoint_id": "selection_committed",
+      "public_evidence_hashes_verified": true,
+      "independent_initial_recheck_dispatch_all_allow": true,
+      "consumed_before_bound_dispatch": true,
+      "review_elapsed_seconds": 78.5789999999979
+    },
+    {
+      "checkpoint_id": "before_checkout",
+      "public_evidence_hashes_verified": true,
+      "independent_initial_recheck_dispatch_all_allow": true,
+      "consumed_before_bound_dispatch": true,
+      "review_elapsed_seconds": 49.8440000000046
+    }
+  ],
+  "local_report_links": 107,
+  "trace_readable": true,
+  "jwt_pattern_scan_findings": [],
+  "security_scope": "JWT-shaped value detection only; not universal secret detection",
+  "issues": [],
+  "passed": true
+}

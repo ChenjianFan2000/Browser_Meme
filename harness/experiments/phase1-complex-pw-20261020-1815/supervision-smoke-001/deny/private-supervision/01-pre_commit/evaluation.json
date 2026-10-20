@@ -1,0 +1,10 @@
+{
+  "decision": "stop",
+  "checks": [
+    {
+      "id": "fixture_permission",
+      "passed": false
+    }
+  ],
+  "public_summary": "Synthetic fixture permission."
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "budgeted_two_seller_purchase",
+    "goal": "以demo买家身份，通过站内搜索找到The Dark Side Of The Moon（release221），在真实市场页筛选卖家评分至少95%，从完整可见筛选结果中挑选两个不同卖家的最低总价USD报价，各买一件且合计不超过USD100。记住两个报价对象，经跨页面导航分别加入购物车；结账前真实暂停，由独立评估及Solar根据公开UI证据检查身份、两个对象、数量、单价与合计。仅收到明确继续授权后点击一次Checkout，验证一张paid订单含这两个商品、实际总价正确、两报价sold、购物车清空且无关记录未变。",
+    "parameters": {
+      "username": "demo",
+      "password": "password123",
+      "search_query": "The Dark Side Of The Moon",
+      "release_id": 221,
+      "minimum_seller_rating": 95.0,
+      "currency": "USD",
+      "maximum_total_cents": 10000,
+      "offer_count": 2,
+      "quantity_per_offer": 1,
+      "distinct_sellers": true,
+      "exclude_seller_username": "demo",
+      "sort": "price_asc",
+      "selection_policy": "在完整市场筛选结果中枚举不同卖家的两报价组合，按(total_price_cents, lower_listing_id, higher_listing_id)升序取首对；两报价必须USD且seller!=demo。listing_id只从原生Add to Cart href读出。",
+      "navigation_requirement": "首件入车后，从购物车的release链接回release详情，再经Marketplace链接返回市场并重新应用相同筛选，确认第二个已记忆报价仍可见后再入车；不可直接构造写请求。",
+      "checkpoint_id": "before_checkout",
+      "checkpoint_policy": "真实停止在Checkout点击之前；Solar只读本轮DOM/截图/原生定位/浏览器响应证据作诊断；独立评估明确continue且通用Harness放行才可执行Checkout。拒绝、缺失或超时均不点击。"
+    }
+  }
+]

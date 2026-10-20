@@ -1,0 +1,891 @@
+<!doctype html><html lang="zh"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>任务完整运行证据</title>
+<style>body{font:16px/1.65 system-ui;max-width:1100px;margin:36px auto;padding:0 20px;color:#16232e}
+h1{font-size:30px}h2{font-size:22px}section{border-top:2px solid #dbe5ef;margin:30px 0;padding:12px 0}
+pre{overflow:auto;white-space:pre-wrap;max-height:650px;background:#f3f6f9;padding:16px;font:13px/1.5 monospace}
+details{margin:12px 0}summary{cursor:pointer;font-weight:600}img{width:100%;height:auto;border:1px solid #ccd6e0}
+a{color:#1761a0}strong{background:#edf2f7;padding:3px 8px}</style><h1>anonymous_collection</h1><p>Attempt to add release 221 to collection without logging in; reach the login gate and leave business state unchanged.</p><p>最终状态：<strong>contradiction</strong>；独立通过：False。</p><p><a href='report.html'>返回运行报告</a> · <a href='inputs/model/rulebook.md'>冻结规则书</a> · <a href='inputs/scripts.py'>完整原生 Playwright 脚本</a> · <a href='cases/03-anonymous_collection/events.jsonl'>逐事件原始记录</a> · <a href='cases/03-anonymous_collection/trace.zip'>脱敏 Playwright 轨迹</a></p><p>本页按固定计划列出全部步骤；失败、拒绝、无法确认与未执行步骤均保留。每一步预测先落盘，再执行脚本；界面截图、网络与后台状态为不同证据渠道。</p><details><summary>固定任务参数</summary><pre>{
+  &quot;kind&quot;: &quot;anonymous_collection&quot;,
+  &quot;release_id&quot;: 221
+}</pre></details><details><summary>独立终点评价</summary><pre>[
+  {
+    &quot;id&quot;: &quot;unrelated_tables_unchanged&quot;,
+    &quot;passed&quot;: true,
+    &quot;detail&quot;: &quot;Unchanged tables: alembic_version, artists, cart_items, collection_items, comments, genres, labels, marketplace_listings, order_items, orders, release_artists, release_formats, release_genres, release_labels, release_styles, releases, styles, tracks, users, wantlist_items&quot;
+  },
+  {
+    &quot;id&quot;: &quot;authentication_gate&quot;,
+    &quot;passed&quot;: false,
+    &quot;detail&quot;: &quot;Anonymous mutation reaches login&quot;
+  }
+]</pre></details><details><summary>任务监督结果</summary><pre>{
+  &quot;id&quot;: &quot;anonymous_collection&quot;,
+  &quot;passed&quot;: false,
+  &quot;status&quot;: &quot;contradiction&quot;,
+  &quot;steps&quot;: [
+    {
+      &quot;id&quot;: &quot;release_open&quot;,
+      &quot;status&quot;: &quot;matched&quot;,
+      &quot;evidence&quot;: &quot;01.json&quot;,
+      &quot;screenshot&quot;: &quot;01.png&quot;,
+      &quot;action_completed&quot;: true,
+      &quot;branches&quot;: [
+        {
+          &quot;id&quot;: &quot;expected&quot;,
+          &quot;checks&quot;: [
+            {
+              &quot;check&quot;: {
+                &quot;path&quot;: &quot;after.ui.text&quot;,
+                &quot;op&quot;: &quot;contains&quot;,
+                &quot;value&quot;: &quot;Tracklist&quot;
+              },
+              &quot;status&quot;: &quot;pass&quot;,
+              &quot;actual&quot;: &quot;Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet&#x27;s manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nAdd to WantlistAdd to Collection\nMarketplace (25 for sale)\nHave: 2\nWant: 3\nPink Floyd - The Dark Side Of The Moon\n1973\nHave\n2\nWant\n3\nFor Sale\n25from $21.45\nRelease Information\nLabel\nHarvest — SHVL 804\nFormat\n1 x Vinyl, LP, Album\nCountry\nUK\nReleased\n1973-03-01\nGenre\nRock\nStyle\nPsychedelic Rock, Classic Rock\nTracklist\nPosition\tTitle\tDuration\nA1\tSpeak to Me\t1:30\nA2\tBreathe (In the Air)\t2:43\nA3\tOn the Run\t3:36\nA4\tTime\t6:53\nA5\tThe Great Gig in the Sky\t4:36\nB1\tMoney\t6:22\nB2\tUs and Them\t7:42\nB3\tAny Colour You Like\t3:25\nB4\tBrain Damage\t3:48\nB5\tEclipse\t2:03\nNotes\nA landmark progressive rock album featuring lush production, conceptual continuity, and iconic artwork. This entry is seeded for the clone’s demo dataset.\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp &amp; Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾&quot;,
+              &quot;expected&quot;: &quot;Tracklist&quot;
+            }
+          ],
+          &quot;status&quot;: &quot;pass&quot;
+        }
+      ],
+      &quot;invariants&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          },
+          &quot;expected&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          }
+        }
+      ],
+      &quot;matched_branches&quot;: [
+        &quot;expected&quot;
+      ],
+      &quot;elapsed_seconds&quot;: 1.1090000000003783
+    },
+    {
+      &quot;id&quot;: &quot;membership_add&quot;,
+      &quot;status&quot;: &quot;contradiction&quot;,
+      &quot;evidence&quot;: &quot;02.json&quot;,
+      &quot;screenshot&quot;: &quot;02.png&quot;,
+      &quot;action_completed&quot;: true,
+      &quot;branches&quot;: [
+        {
+          &quot;id&quot;: &quot;expected&quot;,
+          &quot;checks&quot;: [
+            {
+              &quot;check&quot;: {
+                &quot;path&quot;: &quot;after.ui.url&quot;,
+                &quot;op&quot;: &quot;contains&quot;,
+                &quot;value&quot;: &quot;/login?next=&quot;
+              },
+              &quot;status&quot;: &quot;fail&quot;,
+              &quot;actual&quot;: &quot;http://127.0.0.1:12042/release/221&quot;,
+              &quot;expected&quot;: &quot;/login?next=&quot;
+            },
+            {
+              &quot;check&quot;: {
+                &quot;path&quot;: &quot;after.ui.text&quot;,
+                &quot;op&quot;: &quot;contains&quot;,
+                &quot;value&quot;: &quot;Sign in&quot;
+              },
+              &quot;status&quot;: &quot;fail&quot;,
+              &quot;actual&quot;: &quot;Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet&#x27;s manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nAdd to WantlistAdd to Collection\nMarketplace (25 for sale)\nHave: 2\nWant: 3\nPink Floyd - The Dark Side Of The Moon\n1973\nHave\n2\nWant\n3\nFor Sale\n25from $21.45\nRelease Information\nLabel\nHarvest — SHVL 804\nFormat\n1 x Vinyl, LP, Album\nCountry\nUK\nReleased\n1973-03-01\nGenre\nRock\nStyle\nPsychedelic Rock, Classic Rock\nTracklist\nPosition\tTitle\tDuration\nA1\tSpeak to Me\t1:30\nA2\tBreathe (In the Air)\t2:43\nA3\tOn the Run\t3:36\nA4\tTime\t6:53\nA5\tThe Great Gig in the Sky\t4:36\nB1\tMoney\t6:22\nB2\tUs and Them\t7:42\nB3\tAny Colour You Like\t3:25\nB4\tBrain Damage\t3:48\nB5\tEclipse\t2:03\nNotes\nA landmark progressive rock album featuring lush production, conceptual continuity, and iconic artwork. This entry is seeded for the clone’s demo dataset.\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp &amp; Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾&quot;,
+              &quot;expected&quot;: &quot;Sign in&quot;
+            }
+          ],
+          &quot;status&quot;: &quot;fail&quot;
+        }
+      ],
+      &quot;invariants&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          },
+          &quot;expected&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          }
+        }
+      ],
+      &quot;matched_branches&quot;: [],
+      &quot;elapsed_seconds&quot;: 0.75
+    }
+  ],
+  &quot;independent_checks&quot;: [
+    {
+      &quot;id&quot;: &quot;unrelated_tables_unchanged&quot;,
+      &quot;passed&quot;: true,
+      &quot;detail&quot;: &quot;Unchanged tables: alembic_version, artists, cart_items, collection_items, comments, genres, labels, marketplace_listings, order_items, orders, release_artists, release_formats, release_genres, release_labels, release_styles, releases, styles, tracks, users, wantlist_items&quot;
+    },
+    {
+      &quot;id&quot;: &quot;authentication_gate&quot;,
+      &quot;passed&quot;: false,
+      &quot;detail&quot;: &quot;Anonymous mutation reaches login&quot;
+    }
+  ],
+  &quot;setup&quot;: {
+    &quot;case_id&quot;: &quot;anonymous_collection&quot;,
+    &quot;baseline_sha256&quot;: &quot;6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50&quot;,
+    &quot;table_hashes&quot;: {
+      &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+      &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+      &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+      &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+      &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+      &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+      &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+      &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+      &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+      &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+      &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+      &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+      &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+      &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+      &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+      &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+      &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+      &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+      &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+      &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+    },
+    &quot;fixture&quot;: {
+      &quot;listing_id&quot;: 1,
+      &quot;release_id&quot;: 221,
+      &quot;price_cents&quot;: 7251,
+      &quot;quantity&quot;: 2,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;currency&quot;: &quot;USD&quot;,
+      &quot;seller_user_id&quot;: &quot;fd8a9900a5e342208aa167f6b49e79eb&quot;
+    }
+  },
+  &quot;browser_version&quot;: &quot;155.0.8059.84&quot;,
+  &quot;error&quot;: &quot;contradiction: membership_add&quot;,
+  &quot;category&quot;: &quot;unconfirmed&quot;,
+  &quot;traceback&quot;: &quot;Traceback (most recent call last):\n  File \&quot;G:\\Browser_Meme\\harness\\playwright_run.py\&quot;, line 463, in run_worker\n    invoke_script(script, case, harness)\n  File \&quot;G:\\Browser_Meme\\harness\\playwright_run.py\&quot;, line 122, in invoke_script\n    script.run(copy.deepcopy(case), ScriptContext(monitor))\n  File \&quot;G:\\Browser_Meme\\harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-repair-001\\inputs\\scripts.py\&quot;, line 18, in run\n    with h.step(specification[&#x27;id&#x27;]):\n  File \&quot;D:\\Anaconda\\Lib\\contextlib.py\&quot;, line 144, in __exit__\n    next(self.gen)\n  File \&quot;G:\\Browser_Meme\\harness\\playwright_run.py\&quot;, line 359, in step\n    raise StepMismatch(result[\&quot;status\&quot;] + \&quot;: \&quot; + step_id)\nStepMismatch: contradiction: membership_add\n&quot;,
+  &quot;phase&quot;: &quot;execution&quot;,
+  &quot;trace&quot;: &quot;trace.zip&quot;,
+  &quot;elapsed_seconds&quot;: 6.84400000000096
+}</pre></details><section><h2>1. release_open</h2><p>动作：{&#x27;kind&#x27;: &#x27;open&#x27;, &#x27;url&#x27;: &#x27;/release/221&#x27;}</p><p>判断：<strong>matched</strong>；匹配分支：expected</p><details><summary>动作前规则与预测</summary><pre>{
+  &quot;rules&quot;: [
+    {
+      &quot;id&quot;: &quot;CAT-DETAIL&quot;,
+      &quot;statement&quot;: &quot;Release detail returns joined metadata, ordered tracks and current global collection/want counts plus active listing count/minimum price.&quot;,
+      &quot;source_refs&quot;: [
+        &quot;backend/app/api/catalog.py:274-348&quot;,
+        &quot;frontend/src/app/release/[id]/page.tsx:20-180&quot;
+      ],
+      &quot;preconditions&quot;: [
+        &quot;integer release id&quot;
+      ],
+      &quot;branches&quot;: [
+        &quot;exists: metadata, tracklist, optional notes and actions&quot;,
+        &quot;missing: API 404 Release not found; apiGet throws; exact Next error UI pending&quot;
+      ],
+      &quot;forbidden_side_effects&quot;: [
+        &quot;read does not mutate tables&quot;
+      ],
+      &quot;status&quot;: &quot;source_supported_partial_browser_evidence_other_branches_unverified&quot;,
+      &quot;interface&quot;: &quot;native UI&quot;,
+      &quot;browser_evidence&quot;: [
+        &quot;harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases&quot;
+      ],
+      &quot;check_ids&quot;: [
+        &quot;CAT-DETAIL-endpoint&quot;,
+        &quot;CAT-DETAIL-invariants&quot;
+      ],
+      &quot;observed_branches&quot;: [
+        &quot;release221 metadata and tracklist visible&quot;
+      ]
+    }
+  ],
+  &quot;expect&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;path&quot;: &quot;after.ui.text&quot;,
+          &quot;op&quot;: &quot;contains&quot;,
+          &quot;value&quot;: &quot;Tracklist&quot;
+        }
+      ]
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+      &quot;op&quot;: &quot;eq&quot;,
+      &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+    }
+  ]
+}</pre></details><details><summary>实际检查结果</summary><pre>{
+  &quot;id&quot;: &quot;release_open&quot;,
+  &quot;status&quot;: &quot;matched&quot;,
+  &quot;evidence&quot;: &quot;01.json&quot;,
+  &quot;screenshot&quot;: &quot;01.png&quot;,
+  &quot;action_completed&quot;: true,
+  &quot;branches&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.ui.text&quot;,
+            &quot;op&quot;: &quot;contains&quot;,
+            &quot;value&quot;: &quot;Tracklist&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: &quot;Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet&#x27;s manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nAdd to WantlistAdd to Collection\nMarketplace (25 for sale)\nHave: 2\nWant: 3\nPink Floyd - The Dark Side Of The Moon\n1973\nHave\n2\nWant\n3\nFor Sale\n25from $21.45\nRelease Information\nLabel\nHarvest — SHVL 804\nFormat\n1 x Vinyl, LP, Album\nCountry\nUK\nReleased\n1973-03-01\nGenre\nRock\nStyle\nPsychedelic Rock, Classic Rock\nTracklist\nPosition\tTitle\tDuration\nA1\tSpeak to Me\t1:30\nA2\tBreathe (In the Air)\t2:43\nA3\tOn the Run\t3:36\nA4\tTime\t6:53\nA5\tThe Great Gig in the Sky\t4:36\nB1\tMoney\t6:22\nB2\tUs and Them\t7:42\nB3\tAny Colour You Like\t3:25\nB4\tBrain Damage\t3:48\nB5\tEclipse\t2:03\nNotes\nA landmark progressive rock album featuring lush production, conceptual continuity, and iconic artwork. This entry is seeded for the clone’s demo dataset.\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp &amp; Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾&quot;,
+          &quot;expected&quot;: &quot;Tracklist&quot;
+        }
+      ],
+      &quot;status&quot;: &quot;pass&quot;
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;check&quot;: {
+        &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+        &quot;op&quot;: &quot;eq&quot;,
+        &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+      },
+      &quot;status&quot;: &quot;pass&quot;,
+      &quot;actual&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      },
+      &quot;expected&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      }
+    }
+  ],
+  &quot;matched_branches&quot;: [
+    &quot;expected&quot;
+  ],
+  &quot;elapsed_seconds&quot;: 1.1090000000003783
+}</pre></details><details><summary>本步骤浏览器网络反馈</summary><pre>[
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;document&quot;,
+    &quot;time_ns&quot;: 1792488006989204200,
+    &quot;content_type&quot;: &quot;text/html; charset=utf-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/58aee5060854675c.css&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;stylesheet&quot;,
+    &quot;time_ns&quot;: 1792488007107185600,
+    &quot;content_type&quot;: &quot;text/css; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/d51ffd26e47a2752.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007121805000,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/236f7e5abd6f09ff.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007124808100,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/30ea11065999f7ac.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007127809400,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/17bb38bff44521fb.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007130807100,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/turbopack-7efcdd314ea523bb.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007132805100,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/3837daba712f8c3a.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007135805100,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/ff1a16fafef87110.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007138216500,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511671782779-c97d3d27a1d4%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488007143217400,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/7340adf74ff47ec0.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007150218600,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/83f06a867b13a153.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488007168224300,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/favicon.ico?favicon.0b3bf435.ico&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;other&quot;,
+    &quot;time_ns&quot;: 1792488007273970000,
+    &quot;content_type&quot;: &quot;image/x-icon&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007276970700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/add-release?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007312729400,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/sell?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007331741100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/get-started?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007347841800,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/guides?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007360794000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/shipping?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007381316000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/help?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007391310100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/careers?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007416310900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/about?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007440316400,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/sell/release/221?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007455320500,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/login?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007467832600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/api?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007401310200,
+    &quot;content_type&quot;: &quot;application/json&quot;,
+    &quot;request_json&quot;: null,
+    &quot;response_json&quot;: {
+      &quot;detail&quot;: &quot;Not Found&quot;
+    }
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/cart?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007481846200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/?_rsc=b7uy9&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007508995700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221?_rsc=r1vtx&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007519995000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/sell?_rsc=r1vtx&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007529995600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/sell/release/221?_rsc=r1vtx&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007541996600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/login?_rsc=r1vtx&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007553995300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/cart?_rsc=r1vtx&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007555996300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/?_rsc=r1vtx&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488007559000500,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  }
+]</pre></details><details><summary>独立后台表指纹变化</summary><pre>{
+  &quot;changed_tables&quot;: [],
+  &quot;unchanged_tables&quot;: [
+    &quot;alembic_version&quot;,
+    &quot;artists&quot;,
+    &quot;cart_items&quot;,
+    &quot;collection_items&quot;,
+    &quot;comments&quot;,
+    &quot;genres&quot;,
+    &quot;labels&quot;,
+    &quot;marketplace_listings&quot;,
+    &quot;order_items&quot;,
+    &quot;orders&quot;,
+    &quot;release_artists&quot;,
+    &quot;release_formats&quot;,
+    &quot;release_genres&quot;,
+    &quot;release_labels&quot;,
+    &quot;release_styles&quot;,
+    &quot;releases&quot;,
+    &quot;styles&quot;,
+    &quot;tracks&quot;,
+    &quot;users&quot;,
+    &quot;wantlist_items&quot;
+  ]
+}</pre></details><p><a href='cases/03-anonymous_collection/01.json'>完整前后观察 JSON</a> · <a href='cases/03-anonymous_collection/01.dom.json'>原始 DOM</a></p><a href='cases/03-anonymous_collection/01.png'><img loading='lazy' src='cases/03-anonymous_collection/01.png' alt='步骤 1 回读截图'></a></section><section><h2>2. membership_add</h2><p>动作：{&#x27;kind&#x27;: &#x27;click&#x27;, &#x27;selector&#x27;: &#x27;button:has-text(&quot;Add to Collection&quot;)&#x27;}</p><p>判断：<strong>contradiction</strong>；匹配分支：无</p><details><summary>动作前规则与预测</summary><pre>{
+  &quot;rules&quot;: [
+    {
+      &quot;id&quot;: &quot;AUTH-GATE&quot;,
+      &quot;statement&quot;: &quot;All account mutations/reads require current user resolved from a valid JWT subject; UI 401 redirects preserve return target. Runtime counterexample: the current original production UI dynamic membership endpoint returns 404 Not Found before the intended auth/business route, so source backend semantics do not imply UI reachability.&quot;,
+      &quot;source_refs&quot;: [
+        &quot;backend/app/api/deps.py:13-31&quot;,
+        &quot;frontend/src/components/ReleaseActions.tsx:23-36&quot;,
+        &quot;frontend/src/app/cart/CartClient.tsx:38-79&quot;,
+        &quot;frontend/src/app/me/collection/page.tsx:15-34&quot;,
+        &quot;frontend/src/app/sell/page.tsx:46-61&quot;
+      ],
+      &quot;preconditions&quot;: [
+        &quot;authenticated account operations&quot;
+      ],
+      &quot;branches&quot;: [
+        &quot;missing bearer: framework 401&quot;,
+        &quot;invalid/expired JWT: 401 Invalid or expired token&quot;,
+        &quot;missing user: 401 User not found&quot;,
+        &quot;anonymous collection click: login?next=/release/id; login does not replay collection POST&quot;,
+        &quot;anonymous cart add: login returns to /cart?add=id, then retries add&quot;
+      ],
+      &quot;forbidden_side_effects&quot;: [
+        &quot;refusals change no business state&quot;
+      ],
+      &quot;status&quot;: &quot;source_supported_partial_browser_evidence_other_branches_unverified&quot;,
+      &quot;interface&quot;: &quot;native UI&quot;,
+      &quot;browser_evidence&quot;: [
+        &quot;harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases&quot;
+      ],
+      &quot;check_ids&quot;: [
+        &quot;AUTH-GATE-endpoint&quot;,
+        &quot;AUTH-GATE-invariants&quot;
+      ],
+      &quot;observed_branches&quot;: [
+        &quot;current anonymous membership UI POST rejected 404; gate target not reached&quot;
+      ]
+    }
+  ],
+  &quot;expect&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;path&quot;: &quot;after.ui.url&quot;,
+          &quot;op&quot;: &quot;contains&quot;,
+          &quot;value&quot;: &quot;/login?next=&quot;
+        },
+        {
+          &quot;path&quot;: &quot;after.ui.text&quot;,
+          &quot;op&quot;: &quot;contains&quot;,
+          &quot;value&quot;: &quot;Sign in&quot;
+        }
+      ]
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+      &quot;op&quot;: &quot;eq&quot;,
+      &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+    }
+  ]
+}</pre></details><details><summary>实际检查结果</summary><pre>{
+  &quot;id&quot;: &quot;membership_add&quot;,
+  &quot;status&quot;: &quot;contradiction&quot;,
+  &quot;evidence&quot;: &quot;02.json&quot;,
+  &quot;screenshot&quot;: &quot;02.png&quot;,
+  &quot;action_completed&quot;: true,
+  &quot;branches&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.ui.url&quot;,
+            &quot;op&quot;: &quot;contains&quot;,
+            &quot;value&quot;: &quot;/login?next=&quot;
+          },
+          &quot;status&quot;: &quot;fail&quot;,
+          &quot;actual&quot;: &quot;http://127.0.0.1:12042/release/221&quot;,
+          &quot;expected&quot;: &quot;/login?next=&quot;
+        },
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.ui.text&quot;,
+            &quot;op&quot;: &quot;contains&quot;,
+            &quot;value&quot;: &quot;Sign in&quot;
+          },
+          &quot;status&quot;: &quot;fail&quot;,
+          &quot;actual&quot;: &quot;Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet&#x27;s manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nAdd to WantlistAdd to Collection\nMarketplace (25 for sale)\nHave: 2\nWant: 3\nPink Floyd - The Dark Side Of The Moon\n1973\nHave\n2\nWant\n3\nFor Sale\n25from $21.45\nRelease Information\nLabel\nHarvest — SHVL 804\nFormat\n1 x Vinyl, LP, Album\nCountry\nUK\nReleased\n1973-03-01\nGenre\nRock\nStyle\nPsychedelic Rock, Classic Rock\nTracklist\nPosition\tTitle\tDuration\nA1\tSpeak to Me\t1:30\nA2\tBreathe (In the Air)\t2:43\nA3\tOn the Run\t3:36\nA4\tTime\t6:53\nA5\tThe Great Gig in the Sky\t4:36\nB1\tMoney\t6:22\nB2\tUs and Them\t7:42\nB3\tAny Colour You Like\t3:25\nB4\tBrain Damage\t3:48\nB5\tEclipse\t2:03\nNotes\nA landmark progressive rock album featuring lush production, conceptual continuity, and iconic artwork. This entry is seeded for the clone’s demo dataset.\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp &amp; Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾&quot;,
+          &quot;expected&quot;: &quot;Sign in&quot;
+        }
+      ],
+      &quot;status&quot;: &quot;fail&quot;
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;check&quot;: {
+        &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+        &quot;op&quot;: &quot;eq&quot;,
+        &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+      },
+      &quot;status&quot;: &quot;pass&quot;,
+      &quot;actual&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      },
+      &quot;expected&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      }
+    }
+  ],
+  &quot;matched_branches&quot;: [],
+  &quot;elapsed_seconds&quot;: 0.75
+}</pre></details><details><summary>本步骤浏览器网络反馈</summary><pre>[
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/api/me/collection/221&quot;,
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;status&quot;: 404,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488008512207200,
+    &quot;content_type&quot;: &quot;application/json&quot;,
+    &quot;request_json&quot;: null,
+    &quot;response_json&quot;: {
+      &quot;detail&quot;: &quot;Not Found&quot;
+    }
+  }
+]</pre></details><details><summary>独立后台表指纹变化</summary><pre>{
+  &quot;changed_tables&quot;: [],
+  &quot;unchanged_tables&quot;: [
+    &quot;alembic_version&quot;,
+    &quot;artists&quot;,
+    &quot;cart_items&quot;,
+    &quot;collection_items&quot;,
+    &quot;comments&quot;,
+    &quot;genres&quot;,
+    &quot;labels&quot;,
+    &quot;marketplace_listings&quot;,
+    &quot;order_items&quot;,
+    &quot;orders&quot;,
+    &quot;release_artists&quot;,
+    &quot;release_formats&quot;,
+    &quot;release_genres&quot;,
+    &quot;release_labels&quot;,
+    &quot;release_styles&quot;,
+    &quot;releases&quot;,
+    &quot;styles&quot;,
+    &quot;tracks&quot;,
+    &quot;users&quot;,
+    &quot;wantlist_items&quot;
+  ]
+}</pre></details><p><a href='cases/03-anonymous_collection/02.json'>完整前后观察 JSON</a> · <a href='cases/03-anonymous_collection/02.dom.json'>原始 DOM</a></p><a href='cases/03-anonymous_collection/02.png'><img loading='lazy' src='cases/03-anonymous_collection/02.png' alt='步骤 2 回读截图'></a></section></html>

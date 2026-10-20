@@ -1,0 +1,41 @@
+[
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\0\\5\\9\\a\\5\\059a5b19be85ecd6a8b9f6921d406d0336f8b4730ca367ace646e621.body",
+    "name": "python-jose",
+    "version": "3.3.0",
+    "tags": [
+      "py2-none-any",
+      "py3-none-any"
+    ],
+    "sha256": "9b1376b023f8b298536eedd47ae1089bcdb848f1535ab30555cd92002d78923a",
+    "local_wheel": "G:\\Browser_Meme\\.runtime\\phase1-discogs-20261020\\offline-wheelhouse\\python_jose-3.3.0-py2.py3-none-any.whl"
+  },
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\1\\2\\2\\4\\7\\12247cb7a53a5cdb908d9fd7b67f87f28a52a39be42e68699ca441e7.body",
+    "name": "ecdsa",
+    "version": "0.19.1",
+    "tags": [
+      "py2-none-any",
+      "py3-none-any"
+    ],
+    "sha256": "30638e27cf77b7e15c4c4cc1973720149e1033827cfd00661ca5c8cc0cdb24c3",
+    "local_wheel": "G:\\Browser_Meme\\.runtime\\phase1-discogs-20261020\\offline-wheelhouse\\ecdsa-0.19.1-py2.py3-none-any.whl"
+  },
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\9\\8\\b\\5\\0\\98b5018fba81102edc0ce70b3a8244ad2820542bc4ed11ac1e9b9b74.body",
+    "name": "rsa",
+    "version": "4.9",
+    "tags": [
+      "py3-none-any"
+    ],
+    "sha256": "90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7",
+    "local_wheel": "G:\\Browser_Meme\\.runtime\\phase1-discogs-20261020\\offline-wheelhouse\\rsa-4.9-py3-none-any.whl"
+  },
+  {
+    "source": "G:\\Browser_Meme\\.runtime\\downloads\\wheels\\core\\faker-40.43.0-py3-none-any.whl",
+    "local_wheel": "G:\\Browser_Meme\\.runtime\\phase1-discogs-20261020\\offline-wheelhouse\\faker-40.43.0-py3-none-any.whl",
+    "name": "Faker",
+    "version": "40.43.0",
+    "sha256": "9dd7c0ddfaf30c842b05502d3cf641c135e0120a3a19047008ba8525b72953ed"
+  }
+]

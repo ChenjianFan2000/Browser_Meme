@@ -1,0 +1,17 @@
+{
+  "experiment_id": "phase1-discogs-pw-20261020-1633",
+  "kind": "predeclared_frozen_revision_replays_after_repair",
+  "protocol": "PROTOCOL.md",
+  "purpose": "Repeatability of available workflows and observed failures; not a new held-out test or a claim that every goal is attainable.",
+  "order": [
+    {"run_id": "anchor-repeat-001", "site": "harness/sites/discogs/site-pw.json", "model_dir": "harness/sites/discogs/model/pw-v002"},
+    {"run_id": "extension-repeat-001", "site": "harness/sites/discogs/site-pw-extension.json", "model_dir": "harness/sites/discogs/model/pw-extension-v002"},
+    {"run_id": "anchor-repeat-002", "site": "harness/sites/discogs/site-pw.json", "model_dir": "harness/sites/discogs/model/pw-v002"},
+    {"run_id": "extension-repeat-002", "site": "harness/sites/discogs/site-pw-extension.json", "model_dir": "harness/sites/discogs/model/pw-extension-v002"}
+  ],
+  "reset": "same frozen SQLite baseline and fresh browser context per case",
+  "change_policy": "Do not edit the chosen rules, scripts, adapter or Harness during these replays. If new contradictions appear, preserve them and classify separately.",
+  "case_denominators": {"anchor": 8, "extension": 12},
+  "step_denominators": {"anchor": 44, "extension": 66},
+  "activation": "All goals and prediction checks must pass; known website failures do not receive a waiver."
+}

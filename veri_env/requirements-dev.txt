@@ -1,0 +1,7 @@
+# Core issue server, SDK and replay scorer use Python 3.11+ standard library.
+pytest>=8,<10
+# Required only by the offline PoE-World upstream component audit:
+numpy>=1.24
+scipy>=1.10
+# Standalone report PNG/PDF generation only:
+matplotlib>=3.7

@@ -1,0 +1,44 @@
+{
+  "scope": "Public field contract only, not private canonical pair or oracle output. The script receives UI only; backend fields are for independent monitoring.",
+  "fixed_cases": "harness/sites/discogs/complex_cases.json",
+  "backend": {
+    "demo_user_id": "SQLite normalized UUID hex string",
+    "collection_ids": "sorted demo release IDs",
+    "wantlist_ids": "sorted demo release IDs",
+    "cart": "demo cart rows, sorted id: id,user_id,listing_id,quantity,created_at",
+    "cart_count": "number of demo cart rows",
+    "cart_total_cents": "sum of actual listing price times demo cart quantity",
+    "orders": "demo order rows sorted id",
+    "order_count": "number of demo orders",
+    "all_orders": "all user order rows sorted id, for preservation checks",
+    "order_items": "all order item rows sorted id",
+    "cart_rows_all": "all users' cart rows sorted id",
+    "listings": "all original raw listing rows sorted id",
+    "target_marketplace": "release221 rows enriched with seller_username, seller_rating, seller_location; no canonical selection field",
+    "latest_demo_order": "highest-id demo order or null",
+    "latest_demo_order_items": "items for highest-id demo order",
+    "table_hashes": "per-table SHA256 over sorted actual rows; password values are never returned, but their changes affect the users hash",
+    "table_counts": "counts for all non-internal database tables"
+  },
+  "independent_ui": {
+    "url": "actual page URL",
+    "main_text": "rendered main text",
+    "release_links": "visible main release hrefs",
+    "market_total": "parsed visible marketplace total or null",
+    "market_rows": "visible rows: listing_id,seller_username,seller_rating,ships_from,media_condition,sleeve_condition,currency,price_cents,cells,add_href",
+    "filters": "actual input/select values from market form",
+    "cart_rows": "visible cart row release_href,seller_username,currency,unit_price_cents,text; quantities are not displayed by original cart UI",
+    "cart_total_cents": "parsed visible USD summary total or null",
+    "checkout_disabled": "actual Checkout disabled state or null",
+    "auth": "cookie presence, signature/expiry verification flag and normalized subject only; never token value",
+    "traffic": "passive local /api response metadata and safe cart/checkout response bodies; cart POST request listing_id/quantity only; no credential bodies or headers",
+    "dispatches": "passive local API mutation dispatch path/method/state(pending,response,failed)/status and safe cart request IDs/quantity; unconfirmed dispatches forbid continuation"
+  },
+  "checkpoints": {
+    "selection_committed": "Required live review before first cart write: exact full filter universe, authenticated demo, budget-feasible independent optimum, zero business changes. It does not read or approve model notes as an answer; the actual chosen cart is checked later.",
+    "before_checkout": "Required live review before the sole checkout: actual exact optimal pair each quantity1, unchanged active offers/prices, exact DOM and cart network values, required navigation history, two successful add requests, no premature order or unrelated mutation.",
+    "after_checkout": "Final evaluate business checks; not an additional mandatory live gate."
+  },
+  "missing_evidence": "unknown/stop; never implicit permission",
+  "privacy": "Auth validation is privileged independent observation and must be declared in protocol. Script and public reviewer get no backend/secret token; verdict is limited to check IDs, booleans, public_summary."
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "original application import and in-process health only; no UI or business task",
+  "health_status": 200,
+  "health_body": {
+    "ok": true
+  },
+  "database_unchanged": true,
+  "database_sha256": "3e48c0cb8a49fc3765e1c99c409decb87a6225454e0ec3a9b57083e122caf24e"
+}

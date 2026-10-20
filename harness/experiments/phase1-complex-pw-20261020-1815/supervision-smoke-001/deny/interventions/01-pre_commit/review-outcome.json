@@ -1,0 +1,14 @@
+{
+  "checkpoint_id": "pre_commit",
+  "trigger": "planned_review",
+  "before_step": "commit",
+  "directory": "interventions/01-pre_commit",
+  "status": "stopped",
+  "request_id": "bc186c34320e49f2a52cdcfbec02a2a3",
+  "request_sha256": "16682569c21af02ab235236c124dfc115da8b9b0cb61f27cacd13b559c7b2d92",
+  "solar_decision": "continue",
+  "classification": "planned_review",
+  "decision_sha256": "3de93400bba15cc8f7f6ecaea529616e1d4f426b04420cc39c4db583f5471e4d",
+  "review_elapsed_seconds": 0.21799999999711872,
+  "error": "unconfirmed: independent evaluator or Solar denied checkpoint"
+}

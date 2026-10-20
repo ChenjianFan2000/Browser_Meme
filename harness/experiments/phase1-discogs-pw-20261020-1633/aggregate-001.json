@@ -1,0 +1,309 @@
+{
+  "experiment_id": "phase1-discogs-pw-20261020-1633",
+  "scope": "phase1 source-visible development, repair and frozen replay",
+  "unique_task_denominator": 20,
+  "model_tokens": null,
+  "model_cost": null,
+  "measurement_limits": [
+    "No held-out generalization, phase2 learning or official benchmark claim.",
+    "No strict speed comparison; elapsed values describe these executions only.",
+    "Source coverage, branch prediction and independent task completion are separate.",
+    "Stable failure remains failure; repeatability never waives a goal."
+  ],
+  "runs": [
+    {
+      "run_id": "anchor-initial-001",
+      "revision": "pw-v001",
+      "measurement_status": "not_started",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 0,
+        "step_denominator": 44,
+        "matched_steps": 0,
+        "ui_actions_dispatched": 0,
+        "ui_actions_completed": 0,
+        "case_success_rate": null,
+        "step_match_rate": null,
+        "elapsed_seconds": 32.96900000000096
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "8f2d4a2fd2704b41bd47f64f79c95bf5041283cf6ef0403013703b6fd3900ae5",
+      "registration_sha256": "f734dc3380c0bfc454bc69f8c745ae6d7774be2b6f8ec8625904f6ed4c0766b6"
+    },
+    {
+      "run_id": "anchor-initial-002",
+      "revision": "pw-v001",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 4,
+        "step_denominator": 44,
+        "matched_steps": 38,
+        "ui_actions_dispatched": 42,
+        "ui_actions_completed": 40,
+        "case_success_rate": 0.5,
+        "step_match_rate": 0.8636363636363636,
+        "elapsed_seconds": 198.5779999999977
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "7069bbf4e2d734f14721c335fa31cf3761598e7670273d307402bcd61d155903",
+      "registration_sha256": "ca7660a8e0c2d7b92bc696419f9367905319e58b3ec1cc4422723d9c6c52f09e"
+    },
+    {
+      "run_id": "extension-initial-001",
+      "revision": "pw-extension-v001",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 12,
+        "passed_cases": 8,
+        "step_denominator": 66,
+        "matched_steps": 53,
+        "ui_actions_dispatched": 57,
+        "ui_actions_completed": 56,
+        "case_success_rate": 0.6666666666666666,
+        "step_match_rate": 0.803030303030303,
+        "elapsed_seconds": 202.42199999999866
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "69950c49d5fee06edddf4c6e32e4a6d1cadb147dc72ff8ba948ccb1c75a48d71",
+      "registration_sha256": "659daa023bc36ef86a6e96889dde82df99d6cfc31ee72f7e7edfed4ffabf41fb"
+    },
+    {
+      "run_id": "anchor-repair-001",
+      "revision": "pw-v002",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 4,
+        "step_denominator": 44,
+        "matched_steps": 39,
+        "ui_actions_dispatched": 42,
+        "ui_actions_completed": 42,
+        "case_success_rate": 0.5,
+        "step_match_rate": 0.8863636363636364,
+        "elapsed_seconds": 104.29699999999866
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "4b826396b394349f0d1a2f7ed4439b86a2dd34856422b0a7888dfa6d4dfb493c",
+      "registration_sha256": "45a15f48db03f895df6fc21794e05f580748e08376efd4742f7a6e862a837d0b"
+    },
+    {
+      "run_id": "extension-repair-001",
+      "revision": "pw-extension-v002",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 12,
+        "passed_cases": 8,
+        "step_denominator": 66,
+        "matched_steps": 53,
+        "ui_actions_dispatched": 57,
+        "ui_actions_completed": 57,
+        "case_success_rate": 0.6666666666666666,
+        "step_match_rate": 0.803030303030303,
+        "elapsed_seconds": 168.85900000000038
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "695d74efbfa992ec73b6fc4c9dd6646fa3f1e16fd4989735099c7bc257c209a9",
+      "registration_sha256": "44fc2bdb9e0c84c9491ca01c9d73276cf0f0394bc8f47717dbd0009e398a6924"
+    },
+    {
+      "run_id": "anchor-repeat-001",
+      "revision": "pw-v002",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 4,
+        "step_denominator": 44,
+        "matched_steps": 39,
+        "ui_actions_dispatched": 42,
+        "ui_actions_completed": 42,
+        "case_success_rate": 0.5,
+        "step_match_rate": 0.8863636363636364,
+        "elapsed_seconds": 106.48500000000058
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "d6ea82d0773b0d4527655d0e751e315b1399779eeb2f57e6803f2378eed5faa5",
+      "registration_sha256": "805fa36b05575e86713609c25f627ae2c94eaa763471aeb64819991bd2a928a4"
+    },
+    {
+      "run_id": "extension-repeat-001",
+      "revision": "pw-extension-v002",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 12,
+        "passed_cases": 8,
+        "step_denominator": 66,
+        "matched_steps": 53,
+        "ui_actions_dispatched": 57,
+        "ui_actions_completed": 57,
+        "case_success_rate": 0.6666666666666666,
+        "step_match_rate": 0.803030303030303,
+        "elapsed_seconds": 185.84400000000096
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "65f6ffe4cfa969cb01d72f142eb876ccc28cd7374a79a4763a11e0805bbd6e61",
+      "registration_sha256": "2fd0f0a85307c556ae65980555e1ec9990db690e6ebe0130e2f1861dec0b9710"
+    },
+    {
+      "run_id": "anchor-repeat-002",
+      "revision": "pw-v002",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 4,
+        "step_denominator": 44,
+        "matched_steps": 39,
+        "ui_actions_dispatched": 42,
+        "ui_actions_completed": 42,
+        "case_success_rate": 0.5,
+        "step_match_rate": 0.8863636363636364,
+        "elapsed_seconds": 105.375
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "ebe7ee6b7e2655394aeab17a27f3446f018c4f5ae9210b7dc027318d0abaa6de",
+      "registration_sha256": "ed25ab377584322d5b4a07ad857b258c9873af1761a327e5bdd809bd06e74343"
+    },
+    {
+      "run_id": "extension-repeat-002",
+      "revision": "pw-extension-v002",
+      "measurement_status": "partial",
+      "metrics": {
+        "case_denominator": 12,
+        "passed_cases": 8,
+        "step_denominator": 66,
+        "matched_steps": 53,
+        "ui_actions_dispatched": 57,
+        "ui_actions_completed": 57,
+        "case_success_rate": 0.6666666666666666,
+        "step_match_rate": 0.803030303030303,
+        "elapsed_seconds": 163.98500000000058
+      },
+      "regressions": [],
+      "integrity_errors": [],
+      "activation_allowed": false,
+      "summary_sha256": "d516248c7b36c3cc628582e0271d7e70d5db9783a4df50ae34823c2b7fe41cec",
+      "registration_sha256": "5fe378e2435fe1be10901d0baba551d23737583f23b0f67786f7db37d132adb6"
+    }
+  ],
+  "rounds": [
+    {
+      "kind": "first_business_execution",
+      "runs": [
+        "anchor-initial-002",
+        "extension-initial-001"
+      ],
+      "metrics": {
+        "case_denominator": 20,
+        "passed_cases": 12,
+        "step_denominator": 110,
+        "matched_steps": 91,
+        "ui_actions_dispatched": 99,
+        "ui_actions_completed": 96,
+        "elapsed_seconds": 400.99999999999636
+      },
+      "all_goals_accepted": false
+    },
+    {
+      "kind": "model_repair_regression",
+      "runs": [
+        "anchor-repair-001",
+        "extension-repair-001"
+      ],
+      "metrics": {
+        "case_denominator": 20,
+        "passed_cases": 12,
+        "step_denominator": 110,
+        "matched_steps": 92,
+        "ui_actions_dispatched": 99,
+        "ui_actions_completed": 99,
+        "elapsed_seconds": 273.15599999999904
+      },
+      "all_goals_accepted": false
+    },
+    {
+      "kind": "frozen_replay_1",
+      "runs": [
+        "anchor-repeat-001",
+        "extension-repeat-001"
+      ],
+      "metrics": {
+        "case_denominator": 20,
+        "passed_cases": 12,
+        "step_denominator": 110,
+        "matched_steps": 92,
+        "ui_actions_dispatched": 99,
+        "ui_actions_completed": 99,
+        "elapsed_seconds": 292.32900000000154
+      },
+      "all_goals_accepted": false
+    },
+    {
+      "kind": "frozen_replay_2",
+      "runs": [
+        "anchor-repeat-002",
+        "extension-repeat-002"
+      ],
+      "metrics": {
+        "case_denominator": 20,
+        "passed_cases": 12,
+        "step_denominator": 110,
+        "matched_steps": 92,
+        "ui_actions_dispatched": 99,
+        "ui_actions_completed": 99,
+        "elapsed_seconds": 269.3600000000006
+      },
+      "all_goals_accepted": false
+    }
+  ],
+  "repeatability": [
+    {
+      "run_id": "anchor-repeat-001",
+      "reference": "anchor-repair-001",
+      "same_frozen_inputs": true,
+      "same_outcomes_checks_and_initial_state": true,
+      "integrity_errors": [],
+      "repeatability_check_passed": true
+    },
+    {
+      "run_id": "anchor-repeat-002",
+      "reference": "anchor-repair-001",
+      "same_frozen_inputs": true,
+      "same_outcomes_checks_and_initial_state": true,
+      "integrity_errors": [],
+      "repeatability_check_passed": true
+    },
+    {
+      "run_id": "extension-repeat-001",
+      "reference": "extension-repair-001",
+      "same_frozen_inputs": true,
+      "same_outcomes_checks_and_initial_state": true,
+      "integrity_errors": [],
+      "repeatability_check_passed": true
+    },
+    {
+      "run_id": "extension-repeat-002",
+      "reference": "extension-repair-001",
+      "same_frozen_inputs": true,
+      "same_outcomes_checks_and_initial_state": true,
+      "integrity_errors": [],
+      "repeatability_check_passed": true
+    }
+  ],
+  "all_frozen_repeats_consistent": true
+}

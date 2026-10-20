@@ -1,0 +1,65 @@
+{
+  "selection": {
+    "key": [
+      5863,
+      12,
+      19
+    ],
+    "offers": [
+      {
+        "listing_id": 12,
+        "seller": "ewright99",
+        "seller_rating": 96.9,
+        "currency": "USD",
+        "price_cents": 2812,
+        "ships_from": "Australia",
+        "condition": "Good (G) / Mint (M)",
+        "href": "/cart?add=12",
+        "row_text": "ewright99\n96.9% • Lake Yvettetown, Bermuda\n\tAustralia\tGood (G) / Mint (M)\tUSD 28.12\tAdd to Cart"
+      },
+      {
+        "listing_id": 19,
+        "seller": "jenniferross18",
+        "seller_rating": 97.3,
+        "currency": "USD",
+        "price_cents": 3051,
+        "ships_from": "US",
+        "condition": "Good (G) / Near Mint (NM or M-)",
+        "href": "/cart?add=19",
+        "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+      }
+    ]
+  },
+  "browser_cart_response": {
+    "items": [
+      {
+        "id": 2,
+        "quantity": 1,
+        "listing": {
+          "listing_id": 19,
+          "release_id": 221,
+          "release_title": "The Dark Side Of The Moon",
+          "seller_username": "jenniferross18",
+          "price_cents": 3051,
+          "currency": "USD"
+        }
+      },
+      {
+        "id": 1,
+        "quantity": 1,
+        "listing": {
+          "listing_id": 12,
+          "release_id": 221,
+          "release_title": "The Dark Side Of The Moon",
+          "seller_username": "ewright99",
+          "price_cents": 2812,
+          "currency": "USD"
+        }
+      }
+    ],
+    "total_cents": 5863,
+    "currency": "USD"
+  },
+  "total_cents": 5863,
+  "total_usd": "58.63"
+}

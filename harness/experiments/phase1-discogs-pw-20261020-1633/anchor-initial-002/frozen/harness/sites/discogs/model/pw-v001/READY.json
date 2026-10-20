@@ -1,0 +1,16 @@
+{
+  "revision": "pw-v001",
+  "status": "ready_for_initial_anchor_execution",
+  "files": {
+    "scripts.py": "bf0b3756113c4cf79ed4efc63f7836e6af2c18795a26c0e8220c21a2397368da",
+    "plan.json": "9acb53cdd24e58d04a5eeddff82176cb2cfaea4402545b7fdd58e7b11e52428a",
+    "rules.json": "a11deb6179eeb096ac05a47fe98190e00cdd013205401482d2fcc28ada30863d",
+    "rulebook.md": "ae37e6f4f1e1315b5c635c87cd42d68300d300f46d8761c62538e355b8331e1a",
+    "source_review.json": "3823c1ff0c7b149b2d2c82595c9d3797dd6451edb47aecd458f8f702760cc2e4",
+    "provenance.json": "1afe4e72211c785d6623a4435b73bcf2e5d1f159a451260b7b755fea12f3f91f"
+  },
+  "cases": 8,
+  "steps": 44,
+  "browser_execution_by_author": 0,
+  "extension": "../pw-extension-v001 is draft awaiting independent fixed cases"
+}

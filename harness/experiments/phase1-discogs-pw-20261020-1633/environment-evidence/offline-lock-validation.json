@@ -1,0 +1,15 @@
+{
+  "time_utc": "2026-10-20T09:05:25.521890+00:00",
+  "offline": true,
+  "new_venv": "G:\\Browser_Meme\\.runtime\\phase1-discogs-pw-20261020-1633\\venv-lockcheck",
+  "exact_freeze_match": true,
+  "distribution_count": 50,
+  "pip_check": "passed",
+  "resources": "Shares CPU and disk with root-managed preparation/execution; not a strict speed control",
+  "commands": [
+    "python -m venv .runtime/phase1-discogs-pw-20261020-1633/venv-lockcheck",
+    "venv-lockcheck/Scripts/python.exe -m pip install --no-index --find-links wheelhouse pip==26.2.1",
+    "venv-lockcheck/Scripts/python.exe -m pip install --no-index --find-links wheelhouse -r python.freeze.txt",
+    "venv-lockcheck/Scripts/python.exe -m pip check"
+  ]
+}

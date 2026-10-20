@@ -1,0 +1,6 @@
+{
+  "images": 7,
+  "loaded_after_scrolling": 7,
+  "initial_viewport_result_explanation": "Three images outside the first viewport had not been loaded due to loading=lazy; all seven loaded after scrolling.",
+  "passed": true
+}

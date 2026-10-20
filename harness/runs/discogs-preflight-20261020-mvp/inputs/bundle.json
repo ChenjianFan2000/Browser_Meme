@@ -1,0 +1,2451 @@
+{
+  "schema_version": 1,
+  "site_id": "discogs",
+  "model": "gpt-6.1-sol",
+  "revision": "v001",
+  "rules": [
+    {
+      "id": "R_NAV",
+      "statement": "GET navigation and controlled input edits do not mutate business tables; authentication token creation also leaves business rows unchanged.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/Header.tsx:22",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/auth.py:39",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/catalog.py:352"
+      ],
+      "preconditions": [
+        "Isolated baseline and fresh browser session; allowed local origin."
+      ],
+      "branches": [
+        "Source route renders requested page.",
+        "Unavailable backend or missing resource is an execution error, not a successful business endpoint."
+      ],
+      "forbidden_side_effects": [
+        "No collection, wantlist, cart, listing, order or catalog mutations."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_AUTH",
+      "statement": "Login matches username or email and verifies password. Invalid credentials return HTTP400 detail Invalid credentials; successful token response sets httpOnly sameSite=lax discogs_token and LoginClient replaces URL with next (default /).",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/auth.py:39",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/api/auth/login/route.ts:5",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/login/LoginClient.tsx:28"
+      ],
+      "preconditions": [
+        "Login form loaded; username/password supplied."
+      ],
+      "branches": [
+        "Valid seeded demo credentials navigate to next.",
+        "Invalid password remains at login with Invalid credentials error."
+      ],
+      "forbidden_side_effects": [
+        "No business rows change on success or refusal."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_SEARCH",
+      "statement": "Header search submits q to /search. Backend trims q and uses case-insensitive title/main-artist substring search, ordered year descending then title, limit30. Blank query gives no results. ReleaseCard links to its release detail.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/Header.tsx:22",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/catalog.py:352",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/search/page.tsx:16",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/ReleaseCard.tsx:21"
+      ],
+      "preconditions": [
+        "Catalog fixture contains release221 The Dark Side Of The Moon."
+      ],
+      "branches": [
+        "Matching query displays linked release card, whose detail includes metadata/tracklist.",
+        "No match produces an empty results grid, not a mutation."
+      ],
+      "forbidden_side_effects": [
+        "All backend business state remains unchanged."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_GATE",
+      "statement": "Anonymous collection/wantlist POST requires bearer authentication; ReleaseActions handles HTTP401 by navigating to /login?next=/release/<id> without adding membership. Private collection/wantlist/cart/sell pages also redirect on401.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/deps.py:15",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/ReleaseActions.tsx:23",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/me/collection/page.tsx:23"
+      ],
+      "preconditions": [
+        "Fresh browser with no auth cookie; existing release."
+      ],
+      "branches": [
+        "401 navigates to login and leaves all business rows unchanged.",
+        "With valid auth, operation is handled by membership rule."
+      ],
+      "forbidden_side_effects": [
+        "No anonymous collection addition or unrelated mutation."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_COLLECTION",
+      "statement": "Authenticated collection addition checks release existence, inserts one user/release pair if absent and returns {ok:true}; repeated add is idempotent in backend. Collection page reads real membership and renders ReleaseCard. ReleaseActions increments local Have after each successful POST, including duplicate POST, so local counter alone is not membership truth.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:39",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:66",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/collection.py:12",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/ReleaseActions.tsx:32",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/me/collection/page.tsx:57"
+      ],
+      "preconditions": [
+        "Authenticated demo; existing221; reset removes demo221 membership."
+      ],
+      "branches": [
+        "New membership contains221; My Collection renders221.",
+        "Existing membership returns ok unchanged.",
+        "Missing release returns404; anonymous request gated."
+      ],
+      "forbidden_side_effects": [
+        "Wantlist, carts, orders, listings and catalog remain unchanged."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_WANT",
+      "statement": "Authenticated wantlist addition inserts at most one user/release pair and returns {ok:true}; wantlist page reads membership. Local Want counter increments on every successful POST even if backend already contains pair.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:82",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:109",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/models/wantlist.py:12",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/components/ReleaseActions.tsx:33",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/me/wantlist/page.tsx:57"
+      ],
+      "preconditions": [
+        "Authenticated demo; existing221; reset removes demo221 wantlist membership."
+      ],
+      "branches": [
+        "Membership contains221 and My Wantlist renders221.",
+        "Duplicate returns ok with no extra pair.",
+        "Missing release404; anonymous request gated."
+      ],
+      "forbidden_side_effects": [
+        "Collection, carts, orders, listings and catalog remain unchanged."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_MARKET",
+      "statement": "Marketplace shows only active listings for release, defaults price ascending, offers exact condition/country and minimum seller rating filters. Each source-derived Add to Cart anchor points to /cart?add=<listing_id>.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/marketplace.py:33",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/sell/release/[id]/page.tsx:145"
+      ],
+      "preconditions": [
+        "Release221 exists; frozen listing1 active for221."
+      ],
+      "branches": [
+        "Listing1 anchor is present in unfiltered marketplace.",
+        "No matching filters shows explicit no listings text."
+      ],
+      "forbidden_side_effects": [
+        "Reading/filtering marketplace never changes rows."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_CART",
+      "statement": "CartClient sees add query, POSTs listing_id quantity1 then replaces URL /cart and loads cart. Active listing required; backend returns201 CartOut including sum(price_cents*quantity). Existing row quantity adds with cap99. Remove uses authenticated user's row id. UI displays price and empty message but omits item quantity.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/cart/CartClient.tsx:57",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:126",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:162",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:183"
+      ],
+      "preconditions": [
+        "Authenticated demo and empty frozen cart; listing1 active."
+      ],
+      "branches": [
+        "One effect-driven add produces one row listing1 quantity1 and total equal fixture.price_cents.",
+        "Missing/inactive listing returns404.",
+        "Anonymous add redirects to login with add target retained."
+      ],
+      "forbidden_side_effects": [
+        "Add alone cannot create order, sell a listing or change collection/wantlist/catalog."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_CHECKOUT",
+      "statement": "Checkout on nonempty available cart creates paid USD order and order items at current listing prices, marks listing status sold, clears demo cart and commits. It does not decrement listing quantity. Empty cart returns400 and UI disables Checkout. UI reloads cart then alerts Checkout complete (order created).",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:190",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/cart/CartClient.tsx:163"
+      ],
+      "preconditions": [
+        "Authenticated demo; cart listing1 quantity1; listing1 remains active."
+      ],
+      "branches": [
+        "Paid order total equals listing1 fixture price; item quantity1; listing1 sold; cart empty.",
+        "Empty cart400 (disabled in UI).",
+        "Unavailable cart listing400; no commit."
+      ],
+      "forbidden_side_effects": [
+        "Do not decrement stock quantity, alter unrelated listings, memberships or catalog."
+      ],
+      "status": "source_supported"
+    },
+    {
+      "id": "R_SELL",
+      "statement": "Sell search selects the first release result. Create sends selected release, conditions, cents, USD, country, quantity and comments; schema requires positive cents and quantity1..99. Backend creates new active listing; page reloads own listings newest first. Deactivate sends DELETE for owned listing, sets status inactive and retains row; nonowned/missing listing404. Create disabled without selection or positive price.",
+      "source_refs": [
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/sell/page.tsx:100",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/sell/page.tsx:216",
+        "veri_env/external/VeriEnv-main/websites/discogs/frontend/src/app/sell/page.tsx:284",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:234",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:264",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/api/account.py:303",
+        "veri_env/external/VeriEnv-main/websites/discogs/backend/app/schemas/sell.py:6"
+      ],
+      "preconditions": [
+        "Authenticated demo; exact title search uniquely identifies221; original listings predate new row."
+      ],
+      "branches": [
+        "New marker listing has requested fields and active status, appears first in My Listings.",
+        "Deactivation changes newly created owned row to inactive and preserves all its other fields.",
+        "Invalid payload422; no selected release/nonpositive price prevented by UI."
+      ],
+      "forbidden_side_effects": [
+        "No changes to preexisting listings, cart, orders, memberships or catalog."
+      ],
+      "status": "source_supported"
+    }
+  ],
+  "readouts": {
+    "search_query": {
+      "kind": "value",
+      "selector": "header input[name='q']"
+    },
+    "login_username": {
+      "kind": "value",
+      "selector": "form input:not([name]):not([type])"
+    },
+    "login_password": {
+      "kind": "value",
+      "selector": "form input[type='password']"
+    },
+    "target_cards": {
+      "kind": "count",
+      "selector": "main a[href='/release/221']"
+    },
+    "seller_query": {
+      "kind": "value",
+      "selector": "main input[placeholder='Search releases...']"
+    },
+    "newest_seller_row": {
+      "kind": "text",
+      "selector": "main section:nth-of-type(2) > div.divide-y > div:first-child"
+    },
+    "seller_media": {
+      "kind": "value",
+      "selector": "main section:first-of-type > div.grid > div:nth-child(1) > input"
+    },
+    "seller_sleeve": {
+      "kind": "value",
+      "selector": "main section:first-of-type > div.grid > div:nth-child(2) > input"
+    },
+    "seller_country": {
+      "kind": "value",
+      "selector": "main section:first-of-type > div.grid > div:nth-child(3) > input"
+    },
+    "seller_quantity": {
+      "kind": "value",
+      "selector": "main section:first-of-type > div.grid > div:nth-child(4) > input"
+    },
+    "seller_price": {
+      "kind": "value",
+      "selector": "main section:first-of-type > div.grid > div:nth-child(5) > input"
+    },
+    "seller_comments": {
+      "kind": "value",
+      "selector": "main section:first-of-type > div.grid > div:nth-child(6) > input"
+    }
+  },
+  "cases": [
+    {
+      "id": "invalid_login",
+      "goal": "Reject an invalid password and leave business state unchanged.",
+      "parameters": {
+        "kind": "invalid_login",
+        "username": "demo",
+        "password": "incorrect-phase1-password"
+      },
+      "steps": [
+        {
+          "id": "invalid_login.open",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "invalid_login.fill_username",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input:not([name]):not([type])",
+            "value": "demo"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input:not([name]):not([type])"
+          },
+          "expect": [
+            {
+              "id": "fill_username",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "invalid_login.fill_password",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input[type='password']",
+            "value": "incorrect-phase1-password"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "fill_password",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_password",
+                  "op": "eq",
+                  "value": "incorrect-phase1-password"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "invalid_login.reject",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "form:has(input[type='password']) button"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Invalid credentials"
+          },
+          "expect": [
+            {
+              "id": "reject",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/login"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Invalid credentials"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catalog_search",
+      "goal": "Search for The Dark Side Of The Moon and open its release detail without changing business state.",
+      "parameters": {
+        "kind": "catalog_search",
+        "query": "The Dark Side Of The Moon",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "catalog_search.open",
+          "rule_ids": [
+            "R_SEARCH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/search"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Enter a query in the search bar."
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Enter a query in the search bar."
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "catalog_search.query",
+          "rule_ids": [
+            "R_SEARCH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "header input[name='q']",
+            "value": "The Dark Side Of The Moon"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "header input[name='q']"
+          },
+          "expect": [
+            {
+              "id": "query",
+              "checks": [
+                {
+                  "path": "after.ui.fields.search_query",
+                  "op": "eq",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "catalog_search.search",
+          "rule_ids": [
+            "R_SEARCH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "header form[action='/search'] button"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href='/release/221']"
+          },
+          "expect": [
+            {
+              "id": "search",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/search?"
+                },
+                {
+                  "path": "after.ui.fields.target_cards",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "catalog_search.detail",
+          "rule_ids": [
+            "R_SEARCH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main a[href='/release/221']"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Tracklist"
+          },
+          "expect": [
+            {
+              "id": "detail",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/release/221"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Speak to Me"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anonymous_collection",
+      "goal": "Attempt to add release 221 to collection without logging in; reach the login gate and leave business state unchanged.",
+      "parameters": {
+        "kind": "anonymous_collection",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "anonymous_collection.open",
+          "rule_ids": [
+            "R_SEARCH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/release/221"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Tracklist"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "anonymous_collection.login_gate",
+          "rule_ids": [
+            "R_GATE"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text('Add to Collection')"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "login_gate",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/login?next="
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                },
+                {
+                  "path": "after.backend.collection_ids",
+                  "op": "not_contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collection_add",
+      "goal": "Log in as demo, add release 221 to collection and verify it on the collection page without changing other business state.",
+      "parameters": {
+        "kind": "collection_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "collection_add.open",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login?next=/release/221"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "collection_add.fill_username",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input:not([name]):not([type])",
+            "value": "demo"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input:not([name]):not([type])"
+          },
+          "expect": [
+            {
+              "id": "fill_username",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "collection_add.fill_password",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input[type='password']",
+            "value": "password123"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "fill_password",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_password",
+                  "op": "eq",
+                  "value": "password123"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "collection_add.sign_in",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "form:has(input[type='password']) button"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Add to Collection')"
+          },
+          "expect": [
+            {
+              "id": "sign_in",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/release/221"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "collection_add.add",
+          "rule_ids": [
+            "R_COLLECTION"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text('Add to Collection')"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Add to Collection'):not([disabled])"
+          },
+          "expect": [
+            {
+              "id": "add",
+              "checks": [
+                {
+                  "path": "after.backend.collection_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.wantlist_ids",
+              "op": "eq",
+              "value_from": "before.backend.wantlist_ids"
+            },
+            {
+              "path": "after.backend.cart",
+              "op": "eq",
+              "value_from": "before.backend.cart"
+            },
+            {
+              "path": "after.backend.orders",
+              "op": "eq",
+              "value_from": "before.backend.orders"
+            },
+            {
+              "path": "after.backend.order_items",
+              "op": "eq",
+              "value_from": "before.backend.order_items"
+            },
+            {
+              "path": "after.backend.listings",
+              "op": "eq",
+              "value_from": "before.backend.listings"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            }
+          ]
+        },
+        {
+          "id": "collection_add.verify_membership",
+          "rule_ids": [
+            "R_COLLECTION"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/me/collection"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href='/release/221']"
+          },
+          "expect": [
+            {
+              "id": "verify_membership",
+              "checks": [
+                {
+                  "path": "after.ui.fields.target_cards",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "My Collection"
+                },
+                {
+                  "path": "after.backend.collection_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wantlist_add",
+      "goal": "Log in as demo, add release 221 to wantlist and verify it on the wantlist page without changing other business state.",
+      "parameters": {
+        "kind": "wantlist_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "wantlist_add.open",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login?next=/release/221"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "wantlist_add.fill_username",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input:not([name]):not([type])",
+            "value": "demo"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input:not([name]):not([type])"
+          },
+          "expect": [
+            {
+              "id": "fill_username",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "wantlist_add.fill_password",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input[type='password']",
+            "value": "password123"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "fill_password",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_password",
+                  "op": "eq",
+                  "value": "password123"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "wantlist_add.sign_in",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "form:has(input[type='password']) button"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Add to Collection')"
+          },
+          "expect": [
+            {
+              "id": "sign_in",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/release/221"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "wantlist_add.add",
+          "rule_ids": [
+            "R_WANT"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text('Add to Wantlist')"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Add to Wantlist'):not([disabled])"
+          },
+          "expect": [
+            {
+              "id": "add",
+              "checks": [
+                {
+                  "path": "after.backend.wantlist_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.collection_ids",
+              "op": "eq",
+              "value_from": "before.backend.collection_ids"
+            },
+            {
+              "path": "after.backend.cart",
+              "op": "eq",
+              "value_from": "before.backend.cart"
+            },
+            {
+              "path": "after.backend.orders",
+              "op": "eq",
+              "value_from": "before.backend.orders"
+            },
+            {
+              "path": "after.backend.order_items",
+              "op": "eq",
+              "value_from": "before.backend.order_items"
+            },
+            {
+              "path": "after.backend.listings",
+              "op": "eq",
+              "value_from": "before.backend.listings"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            }
+          ]
+        },
+        {
+          "id": "wantlist_add.verify_membership",
+          "rule_ids": [
+            "R_WANT"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/me/wantlist"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href='/release/221']"
+          },
+          "expect": [
+            {
+              "id": "verify_membership",
+              "checks": [
+                {
+                  "path": "after.ui.fields.target_cards",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "My Wantlist"
+                },
+                {
+                  "path": "after.backend.wantlist_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cart_add",
+      "goal": "Log in as demo, add seeded active listing 1 from release 221 marketplace to cart and verify exact item and total without creating an order.",
+      "parameters": {
+        "kind": "cart_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "listing_id": 1
+      },
+      "steps": [
+        {
+          "id": "cart_add.open",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login?next=/sell/release/221"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "cart_add.fill_username",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input:not([name]):not([type])",
+            "value": "demo"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input:not([name]):not([type])"
+          },
+          "expect": [
+            {
+              "id": "fill_username",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "cart_add.fill_password",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input[type='password']",
+            "value": "password123"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "fill_password",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_password",
+                  "op": "eq",
+                  "value": "password123"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "cart_add.sign_in",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "form:has(input[type='password']) button"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href='/cart?add=1']"
+          },
+          "expect": [
+            {
+              "id": "sign_in",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/sell/release/221"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Marketplace listings"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "cart_add.add_listing",
+          "rule_ids": [
+            "R_MARKET",
+            "R_CART"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main a[href='/cart?add=1']"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Remove'):not([disabled])"
+          },
+          "expect": [
+            {
+              "id": "add_listing",
+              "checks": [
+                {
+                  "path": "after.backend.cart_count",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart.0.listing_id",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart.0.quantity",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart_total_cents",
+                  "op": "eq",
+                  "value_from": "after.backend.fixture.price_cents"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.collection_ids",
+              "op": "eq",
+              "value_from": "before.backend.collection_ids"
+            },
+            {
+              "path": "after.backend.wantlist_ids",
+              "op": "eq",
+              "value_from": "before.backend.wantlist_ids"
+            },
+            {
+              "path": "after.backend.orders",
+              "op": "eq",
+              "value_from": "before.backend.orders"
+            },
+            {
+              "path": "after.backend.order_items",
+              "op": "eq",
+              "value_from": "before.backend.order_items"
+            },
+            {
+              "path": "after.backend.listings",
+              "op": "eq",
+              "value_from": "before.backend.listings"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checkout",
+      "goal": "Log in as demo, add listing 1, checkout and verify one paid order, exact item total, sold listing and cleared cart; leave unrelated records unchanged.",
+      "parameters": {
+        "kind": "checkout",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "listing_id": 1
+      },
+      "steps": [
+        {
+          "id": "checkout.open",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login?next=/sell/release/221"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "checkout.fill_username",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input:not([name]):not([type])",
+            "value": "demo"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input:not([name]):not([type])"
+          },
+          "expect": [
+            {
+              "id": "fill_username",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "checkout.fill_password",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input[type='password']",
+            "value": "password123"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "fill_password",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_password",
+                  "op": "eq",
+                  "value": "password123"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "checkout.sign_in",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "form:has(input[type='password']) button"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href='/cart?add=1']"
+          },
+          "expect": [
+            {
+              "id": "sign_in",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/sell/release/221"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Marketplace listings"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "checkout.add_listing",
+          "rule_ids": [
+            "R_MARKET",
+            "R_CART"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main a[href='/cart?add=1']"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Remove'):not([disabled])"
+          },
+          "expect": [
+            {
+              "id": "add_listing",
+              "checks": [
+                {
+                  "path": "after.backend.cart_count",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart.0.listing_id",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart.0.quantity",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart_total_cents",
+                  "op": "eq",
+                  "value_from": "after.backend.fixture.price_cents"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.collection_ids",
+              "op": "eq",
+              "value_from": "before.backend.collection_ids"
+            },
+            {
+              "path": "after.backend.wantlist_ids",
+              "op": "eq",
+              "value_from": "before.backend.wantlist_ids"
+            },
+            {
+              "path": "after.backend.orders",
+              "op": "eq",
+              "value_from": "before.backend.orders"
+            },
+            {
+              "path": "after.backend.order_items",
+              "op": "eq",
+              "value_from": "before.backend.order_items"
+            },
+            {
+              "path": "after.backend.listings",
+              "op": "eq",
+              "value_from": "before.backend.listings"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            }
+          ]
+        },
+        {
+          "id": "checkout.pay",
+          "rule_ids": [
+            "R_CHECKOUT"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text('Checkout')"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Your cart is empty."
+          },
+          "expect": [
+            {
+              "id": "pay",
+              "checks": [
+                {
+                  "path": "after.backend.cart",
+                  "op": "eq",
+                  "value": []
+                },
+                {
+                  "path": "after.backend.cart_total_cents",
+                  "op": "eq",
+                  "value": 0
+                },
+                {
+                  "path": "after.backend.listings.0.status",
+                  "op": "eq",
+                  "value": "sold"
+                },
+                {
+                  "path": "after.backend.table_counts.orders",
+                  "op": "gt",
+                  "value_from": "before.backend.table_counts.orders"
+                },
+                {
+                  "path": "after.backend.latest_demo_order.status",
+                  "op": "eq",
+                  "value": "paid"
+                },
+                {
+                  "path": "after.backend.latest_demo_order.currency",
+                  "op": "eq",
+                  "value": "USD"
+                },
+                {
+                  "path": "after.backend.latest_demo_order.total_cents",
+                  "op": "eq",
+                  "value_from": "after.backend.fixture.price_cents"
+                },
+                {
+                  "path": "after.backend.latest_demo_order_items.0.listing_id",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.latest_demo_order_items.0.quantity",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.latest_demo_order_items.0.price_cents",
+                  "op": "eq",
+                  "value_from": "after.backend.fixture.price_cents"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Your cart is empty."
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.collection_ids",
+              "op": "eq",
+              "value_from": "before.backend.collection_ids"
+            },
+            {
+              "path": "after.backend.wantlist_ids",
+              "op": "eq",
+              "value_from": "before.backend.wantlist_ids"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            },
+            {
+              "path": "after.backend.listings.0.quantity",
+              "op": "eq",
+              "value_from": "before.backend.listings.0.quantity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seller_create_deactivate",
+      "goal": "Log in as demo, find release 221, create a USD 19.99 listing with phase1 marker, then deactivate that newly created listing; leave existing listings and other business state unchanged.",
+      "parameters": {
+        "kind": "seller_create_deactivate",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "price_cents": 1999,
+        "quantity": 1,
+        "comments": "phase1-independent-fixture",
+        "ships_from": "US",
+        "media_condition": "Near Mint (NM or M-)",
+        "sleeve_condition": "Very Good Plus (VG+)"
+      },
+      "steps": [
+        {
+          "id": "seller_create_deactivate.open",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login?next=/sell"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          },
+          "expect": [
+            {
+              "id": "open",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.fill_username",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input:not([name]):not([type])",
+            "value": "demo"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input:not([name]):not([type])"
+          },
+          "expect": [
+            {
+              "id": "fill_username",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.fill_password",
+          "rule_ids": [
+            "R_AUTH",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "form input[type='password']",
+            "value": "password123"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "form input[type='password']"
+          },
+          "expect": [
+            {
+              "id": "fill_password",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_password",
+                  "op": "eq",
+                  "value": "password123"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.sign_in",
+          "rule_ids": [
+            "R_AUTH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "form:has(input[type='password']) button"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main input[placeholder='Search releases...']"
+          },
+          "expect": [
+            {
+              "id": "sign_in",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/sell"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Create a listing"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.query",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[placeholder='Search releases...']",
+            "value": "The Dark Side Of The Moon"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main input[placeholder='Search releases...']"
+          },
+          "expect": [
+            {
+              "id": "query",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_query",
+                  "op": "eq",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.find_release",
+          "rule_ids": [
+            "R_SELL"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main section:first-of-type button:has-text('Search')"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "Selected:"
+          },
+          "expect": [
+            {
+              "id": "find_release",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Selected: Pink Floyd - The Dark Side Of The Moon"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "#221"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.set_media",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main section:first-of-type > div.grid > div:nth-child(1) > input",
+            "value": "Near Mint (NM or M-)"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main section:first-of-type > div.grid > div:nth-child(1) > input"
+          },
+          "expect": [
+            {
+              "id": "set_media",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_media",
+                  "op": "eq",
+                  "value": "Near Mint (NM or M-)"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.set_sleeve",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main section:first-of-type > div.grid > div:nth-child(2) > input",
+            "value": "Very Good Plus (VG+)"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main section:first-of-type > div.grid > div:nth-child(2) > input"
+          },
+          "expect": [
+            {
+              "id": "set_sleeve",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_sleeve",
+                  "op": "eq",
+                  "value": "Very Good Plus (VG+)"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.set_country",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main section:first-of-type > div.grid > div:nth-child(3) > input",
+            "value": "US"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main section:first-of-type > div.grid > div:nth-child(3) > input"
+          },
+          "expect": [
+            {
+              "id": "set_country",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_country",
+                  "op": "eq",
+                  "value": "US"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.set_quantity",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main section:first-of-type > div.grid > div:nth-child(4) > input",
+            "value": "1"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main section:first-of-type > div.grid > div:nth-child(4) > input"
+          },
+          "expect": [
+            {
+              "id": "set_quantity",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_quantity",
+                  "op": "eq",
+                  "value": "1"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.set_price",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main section:first-of-type > div.grid > div:nth-child(5) > input",
+            "value": "1999"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main section:first-of-type > div.grid > div:nth-child(5) > input"
+          },
+          "expect": [
+            {
+              "id": "set_price",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_price",
+                  "op": "eq",
+                  "value": "1999"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.set_comments",
+          "rule_ids": [
+            "R_SELL",
+            "R_NAV"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main section:first-of-type > div.grid > div:nth-child(6) > input",
+            "value": "phase1-independent-fixture"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "main section:first-of-type > div.grid > div:nth-child(6) > input"
+          },
+          "expect": [
+            {
+              "id": "set_comments",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_comments",
+                  "op": "eq",
+                  "value": "phase1-independent-fixture"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.create",
+          "rule_ids": [
+            "R_SELL"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text('Create Listing')"
+          },
+          "wait": {
+            "kind": "selector",
+            "value": "button:has-text('Create Listing'):not([disabled])"
+          },
+          "expect": [
+            {
+              "id": "create",
+              "checks": [
+                {
+                  "path": "after.backend.table_counts.marketplace_listings",
+                  "op": "gt",
+                  "value_from": "before.backend.table_counts.marketplace_listings"
+                },
+                {
+                  "path": "after.backend.phase1_listing.release_id",
+                  "op": "eq",
+                  "value": 221
+                },
+                {
+                  "path": "after.backend.phase1_listing.price_cents",
+                  "op": "eq",
+                  "value": 1999
+                },
+                {
+                  "path": "after.backend.phase1_listing.quantity",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.phase1_listing.currency",
+                  "op": "eq",
+                  "value": "USD"
+                },
+                {
+                  "path": "after.backend.phase1_listing.comments",
+                  "op": "eq",
+                  "value": "phase1-independent-fixture"
+                },
+                {
+                  "path": "after.backend.phase1_listing.ships_from",
+                  "op": "eq",
+                  "value": "US"
+                },
+                {
+                  "path": "after.backend.phase1_listing.media_condition",
+                  "op": "eq",
+                  "value": "Near Mint (NM or M-)"
+                },
+                {
+                  "path": "after.backend.phase1_listing.sleeve_condition",
+                  "op": "eq",
+                  "value": "Very Good Plus (VG+)"
+                },
+                {
+                  "path": "after.backend.phase1_listing.seller_user_id",
+                  "op": "eq",
+                  "value_from": "after.backend.demo_user_id"
+                },
+                {
+                  "path": "after.backend.phase1_listing.status",
+                  "op": "eq",
+                  "value": "active"
+                },
+                {
+                  "path": "after.ui.fields.newest_seller_row",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                },
+                {
+                  "path": "after.ui.fields.newest_seller_row",
+                  "op": "contains",
+                  "value": "active"
+                },
+                {
+                  "path": "after.ui.fields.newest_seller_row",
+                  "op": "contains",
+                  "value": "USD 19.99"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.collection_ids",
+              "op": "eq",
+              "value_from": "before.backend.collection_ids"
+            },
+            {
+              "path": "after.backend.wantlist_ids",
+              "op": "eq",
+              "value_from": "before.backend.wantlist_ids"
+            },
+            {
+              "path": "after.backend.cart",
+              "op": "eq",
+              "value_from": "before.backend.cart"
+            },
+            {
+              "path": "after.backend.orders",
+              "op": "eq",
+              "value_from": "before.backend.orders"
+            },
+            {
+              "path": "after.backend.order_items",
+              "op": "eq",
+              "value_from": "before.backend.order_items"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            }
+          ]
+        },
+        {
+          "id": "seller_create_deactivate.deactivate_new",
+          "rule_ids": [
+            "R_SELL"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main section:nth-of-type(2) > div.divide-y > div:first-child button:has-text('Deactivate')"
+          },
+          "wait": {
+            "kind": "text",
+            "value": "inactive"
+          },
+          "expect": [
+            {
+              "id": "deactivate_new",
+              "checks": [
+                {
+                  "path": "after.backend.phase1_listing.status",
+                  "op": "eq",
+                  "value": "inactive"
+                },
+                {
+                  "path": "after.ui.fields.newest_seller_row",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                },
+                {
+                  "path": "after.ui.fields.newest_seller_row",
+                  "op": "contains",
+                  "value": "inactive"
+                },
+                {
+                  "path": "after.backend.table_counts.marketplace_listings",
+                  "op": "eq",
+                  "value_from": "before.backend.table_counts.marketplace_listings"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.collection_ids",
+              "op": "eq",
+              "value_from": "before.backend.collection_ids"
+            },
+            {
+              "path": "after.backend.wantlist_ids",
+              "op": "eq",
+              "value_from": "before.backend.wantlist_ids"
+            },
+            {
+              "path": "after.backend.cart",
+              "op": "eq",
+              "value_from": "before.backend.cart"
+            },
+            {
+              "path": "after.backend.orders",
+              "op": "eq",
+              "value_from": "before.backend.orders"
+            },
+            {
+              "path": "after.backend.order_items",
+              "op": "eq",
+              "value_from": "before.backend.order_items"
+            },
+            {
+              "path": "after.backend.catalog",
+              "op": "eq",
+              "value_from": "before.backend.catalog"
+            },
+            {
+              "path": "after.backend.phase1_listing.id",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.id"
+            },
+            {
+              "path": "after.backend.phase1_listing.release_id",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.release_id"
+            },
+            {
+              "path": "after.backend.phase1_listing.price_cents",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.price_cents"
+            },
+            {
+              "path": "after.backend.phase1_listing.quantity",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.quantity"
+            },
+            {
+              "path": "after.backend.phase1_listing.currency",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.currency"
+            },
+            {
+              "path": "after.backend.phase1_listing.comments",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.comments"
+            },
+            {
+              "path": "after.backend.phase1_listing.ships_from",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.ships_from"
+            },
+            {
+              "path": "after.backend.phase1_listing.media_condition",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.media_condition"
+            },
+            {
+              "path": "after.backend.phase1_listing.sleeve_condition",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.sleeve_condition"
+            },
+            {
+              "path": "after.backend.phase1_listing.seller_user_id",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.seller_user_id"
+            },
+            {
+              "path": "after.backend.phase1_listing.created_at",
+              "op": "eq",
+              "value_from": "before.backend.phase1_listing.created_at"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Source-supported white-box hypotheses, not measured runtime results. Fresh model context is not OS-enforced isolation; this context is disqualified as a future phase2 learner.",
+    "Eight fixed development goals; no official benchmark or complete site coverage. Filters, duplicate membership, invalid sell payload, missing-resource paths, cart removal and empty checkout are source-described but not exercised in these cases.",
+    "Single CartClient effect-driven add is predicted; development-mode React effect duplication or search-parameter rerenders remain a runtime integration uncertainty and must be diagnosed if exact quantity1 is contradicted.",
+    "Checkout alert may require generic browser dialog handling; it is not an extra business step. Every wait/readback and management observation belongs in measured execution time.",
+    "Optional page-specific readouts are absent on other routes and may yield null plus observation errors; only evidence named in checks is used to confirm a branch.",
+    "Seller newest-row selector follows source newest-created ordering; exact marker/ownership and preexisting-row preservation require independent adapter evaluation, not model UI counters alone.",
+    "No private evaluator code, private data or prior experimental answers read; no browser experimentation, API mutation or source modifications used in generation. Public upstream demo credentials are intentionally used for fixed cases.",
+    "Source refs describe implemented success and refusal semantics; actual backend responses are not collected directly by generated UI actions. No claims for strict speed controls, phase2 exploration or phase3 held-out generalization."
+  ]
+}

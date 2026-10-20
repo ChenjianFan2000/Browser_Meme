@@ -1,0 +1,27 @@
+{
+  "order": {
+    "id": 121,
+    "status": "paid",
+    "total_cents": 5863,
+    "currency": "USD",
+    "created_at": "2026-10-20T10:34:24",
+    "items": [
+      {
+        "listing_id": 12,
+        "price_cents": 2812,
+        "quantity": 1
+      },
+      {
+        "listing_id": 19,
+        "price_cents": 3051,
+        "quantity": 1
+      }
+    ]
+  },
+  "dialogs": [
+    {
+      "type": "alert",
+      "message": "Checkout complete (order created)."
+    }
+  ]
+}

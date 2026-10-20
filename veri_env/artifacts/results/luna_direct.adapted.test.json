@@ -1,0 +1,3959 @@
+{
+  "summary": {
+    "one_step": {
+      "n": 24,
+      "exact": 22,
+      "valid": 24,
+      "all_steps_exact": 22,
+      "step_exact": 22,
+      "steps": 24,
+      "prediction_seconds": 0.003925299999536946,
+      "seconds": 0.03842959999747109
+    },
+    "drift": {
+      "n": 12,
+      "exact": 12,
+      "valid": 12,
+      "all_steps_exact": 12,
+      "step_exact": 12,
+      "steps": 12,
+      "prediction_seconds": 0.0017018999978972715,
+      "seconds": 0.007418799998049508
+    }
+  },
+  "rows": [
+    {
+      "id": "label_new-101",
+      "split": "one_step",
+      "family": "label_new",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug",
+                "triaged"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs",
+                "triaged"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            467,
+            578
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            299,
+            467,
+            578,
+            652,
+            695,
+            967
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00015440000061062165,
+      "cpu_wall_seconds": 0.0219106999993528
+    },
+    {
+      "id": "filter_selected-101",
+      "split": "one_step",
+      "family": "filter_selected",
+      "scores": [
+        {
+          "exact": false,
+          "records": true,
+          "interface": false,
+          "feedback": true
+        }
+      ],
+      "final_exact": false,
+      "all_steps_exact": false,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "open",
+            "label": "bug"
+          },
+          "sort": "asc",
+          "selected": [
+            467
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            467,
+            695
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014310000005934853,
+      "cpu_wall_seconds": 0.000646700000288547
+    },
+    {
+      "id": "blocked_atomic-101",
+      "split": "one_step",
+      "family": "blocked_atomic",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            299,
+            467
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "blocked"
+          },
+          "visible_ids": [
+            299,
+            467,
+            578,
+            652,
+            695,
+            967
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014420000024983892,
+      "cpu_wall_seconds": 0.0006517000001622364
+    },
+    {
+      "id": "viewer_empty_comment-101",
+      "split": "one_step",
+      "family": "viewer_empty_comment",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "viewer",
+          "feedback": {
+            "ok": false,
+            "code": "permission_denied"
+          },
+          "visible_ids": [
+            299,
+            467,
+            578,
+            652,
+            695,
+            967
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00021040000046923524,
+      "cpu_wall_seconds": 0.00119769999946584
+    },
+    {
+      "id": "reopen_mixed-101",
+      "split": "one_step",
+      "family": "reopen_mixed",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            467,
+            578
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "not_all_closed"
+          },
+          "visible_ids": [
+            299,
+            467,
+            578,
+            652,
+            695,
+            967
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0002455000003465102,
+      "cpu_wall_seconds": 0.0011113999998997315
+    },
+    {
+      "id": "sort_selected-101",
+      "split": "one_step",
+      "family": "sort_selected",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "desc",
+          "selected": [
+            467,
+            578
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            967,
+            695,
+            652,
+            578,
+            467,
+            299
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0002148000003217021,
+      "cpu_wall_seconds": 0.0009736000001794309
+    },
+    {
+      "id": "select_hidden-101",
+      "split": "one_step",
+      "family": "select_hidden",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "closed",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            578
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            578,
+            652
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00018519999957788968,
+      "cpu_wall_seconds": 0.000820199999907345
+    },
+    {
+      "id": "comment_empty-101",
+      "split": "one_step",
+      "family": "comment_empty",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 299,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 467,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 578,
+              "title": "Activity history",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 652,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Export report",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 967,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            467,
+            578
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "empty_comment"
+          },
+          "visible_ids": [
+            299,
+            467,
+            578,
+            652,
+            695,
+            967
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00017349999961879803,
+      "cpu_wall_seconds": 0.0007802000000083353
+    },
+    {
+      "id": "label_new-103",
+      "split": "one_step",
+      "family": "label_new",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "triaged"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [
+                "triaged"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            567,
+            813
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            567,
+            813,
+            831,
+            836,
+            852,
+            937
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0001716999995551305,
+      "cpu_wall_seconds": 0.0007441999996444792
+    },
+    {
+      "id": "filter_selected-103",
+      "split": "one_step",
+      "family": "filter_selected",
+      "scores": [
+        {
+          "exact": false,
+          "records": true,
+          "interface": false,
+          "feedback": true
+        }
+      ],
+      "final_exact": false,
+      "all_steps_exact": false,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "open",
+            "label": "bug"
+          },
+          "sort": "asc",
+          "selected": [
+            567,
+            813
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            831,
+            836
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00015729999995528487,
+      "cpu_wall_seconds": 0.0006617999997615698
+    },
+    {
+      "id": "blocked_atomic-103",
+      "split": "one_step",
+      "family": "blocked_atomic",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            567,
+            836
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "blocked"
+          },
+          "visible_ids": [
+            567,
+            813,
+            831,
+            836,
+            852,
+            937
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014240000018617138,
+      "cpu_wall_seconds": 0.0006538999996337225
+    },
+    {
+      "id": "viewer_empty_comment-103",
+      "split": "one_step",
+      "family": "viewer_empty_comment",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "viewer",
+          "feedback": {
+            "ok": false,
+            "code": "permission_denied"
+          },
+          "visible_ids": [
+            567,
+            813,
+            831,
+            836,
+            852,
+            937
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014409999948838959,
+      "cpu_wall_seconds": 0.0006525999997393228
+    },
+    {
+      "id": "reopen_mixed-103",
+      "split": "one_step",
+      "family": "reopen_mixed",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            567,
+            813
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "not_all_closed"
+          },
+          "visible_ids": [
+            567,
+            813,
+            831,
+            836,
+            852,
+            937
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014389999978448031,
+      "cpu_wall_seconds": 0.0006333999999696971
+    },
+    {
+      "id": "sort_selected-103",
+      "split": "one_step",
+      "family": "sort_selected",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "desc",
+          "selected": [
+            567,
+            813
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            937,
+            852,
+            836,
+            831,
+            813,
+            567
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014620000001741573,
+      "cpu_wall_seconds": 0.0006439999997382984
+    },
+    {
+      "id": "select_hidden-103",
+      "split": "one_step",
+      "family": "select_hidden",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "closed",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            813
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            813,
+            852,
+            937
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00018670000008569332,
+      "cpu_wall_seconds": 0.000698499999998603
+    },
+    {
+      "id": "comment_empty-103",
+      "split": "one_step",
+      "family": "comment_empty",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 567,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 813,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 831,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 836,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 852,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 937,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            567,
+            813
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "empty_comment"
+          },
+          "visible_ids": [
+            567,
+            813,
+            831,
+            836,
+            852,
+            937
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00025240000013582176,
+      "cpu_wall_seconds": 0.0007496999996874365
+    },
+    {
+      "id": "label_new-107",
+      "split": "one_step",
+      "family": "label_new",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature",
+                "triaged"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [
+                "triaged"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            352,
+            773
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            352,
+            695,
+            734,
+            773,
+            844,
+            884
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0001447000004191068,
+      "cpu_wall_seconds": 0.0006426999998438987
+    },
+    {
+      "id": "filter_selected-107",
+      "split": "one_step",
+      "family": "filter_selected",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "open",
+            "label": "bug"
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            844
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013669999952981016,
+      "cpu_wall_seconds": 0.000601499999902444
+    },
+    {
+      "id": "blocked_atomic-107",
+      "split": "one_step",
+      "family": "blocked_atomic",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            352,
+            695
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "blocked"
+          },
+          "visible_ids": [
+            352,
+            695,
+            734,
+            773,
+            844,
+            884
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013299999955052044,
+      "cpu_wall_seconds": 0.0005920000003243331
+    },
+    {
+      "id": "viewer_empty_comment-107",
+      "split": "one_step",
+      "family": "viewer_empty_comment",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "viewer",
+          "feedback": {
+            "ok": false,
+            "code": "permission_denied"
+          },
+          "visible_ids": [
+            352,
+            695,
+            734,
+            773,
+            844,
+            884
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013109999963489827,
+      "cpu_wall_seconds": 0.0005748000003222842
+    },
+    {
+      "id": "reopen_mixed-107",
+      "split": "one_step",
+      "family": "reopen_mixed",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            352,
+            773
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "not_all_closed"
+          },
+          "visible_ids": [
+            352,
+            695,
+            734,
+            773,
+            844,
+            884
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013810000018565916,
+      "cpu_wall_seconds": 0.0005934000000706874
+    },
+    {
+      "id": "sort_selected-107",
+      "split": "one_step",
+      "family": "sort_selected",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "desc",
+          "selected": [
+            352,
+            773
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            884,
+            844,
+            773,
+            734,
+            695,
+            352
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013269999999465654,
+      "cpu_wall_seconds": 0.0006194999996296247
+    },
+    {
+      "id": "select_hidden-107",
+      "split": "one_step",
+      "family": "select_hidden",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "closed",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            773
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            773,
+            884
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0001404999993610545,
+      "cpu_wall_seconds": 0.0006270999992921134
+    },
+    {
+      "id": "comment_empty-107",
+      "split": "one_step",
+      "family": "comment_empty",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 352,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 695,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 734,
+              "title": "Activity history",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 773,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 844,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 884,
+              "title": "Profile settings",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            352,
+            773
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "empty_comment"
+          },
+          "visible_ids": [
+            352,
+            695,
+            734,
+            773,
+            844,
+            884
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00015270000039890874,
+      "cpu_wall_seconds": 0.0006483000006483053
+    },
+    {
+      "id": "drift_close-211",
+      "split": "drift",
+      "family": "drift_close",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 121,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 347,
+              "title": "Access review",
+              "status": "closed",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 421,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 465,
+              "title": "Import records",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 678,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 858,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            421
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "reason_required"
+          },
+          "visible_ids": [
+            121,
+            347,
+            421,
+            465,
+            678,
+            858
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00018109999928128673,
+      "cpu_wall_seconds": 0.000697299999956158
+    },
+    {
+      "id": "drift_reason-211",
+      "split": "drift",
+      "family": "drift_reason",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 121,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 347,
+              "title": "Access review",
+              "status": "closed",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 421,
+              "title": "Email alerts",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 465,
+              "title": "Import records",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 678,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 858,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            121,
+            347,
+            421,
+            465,
+            678,
+            858
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0001351000000795466,
+      "cpu_wall_seconds": 0.0006560000001627486
+    },
+    {
+      "id": "drift_filter-211",
+      "split": "drift",
+      "family": "drift_filter",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 121,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 347,
+              "title": "Access review",
+              "status": "closed",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 421,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 465,
+              "title": "Import records",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 678,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 858,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "open",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            421
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            421,
+            465,
+            678,
+            858
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00017049999951268546,
+      "cpu_wall_seconds": 0.0007162000001699198
+    },
+    {
+      "id": "drift_blocked_priority-211",
+      "split": "drift",
+      "family": "drift_blocked_priority",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 121,
+              "title": "Search indexing",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 347,
+              "title": "Access review",
+              "status": "closed",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 421,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 465,
+              "title": "Import records",
+              "status": "open",
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 678,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 858,
+              "title": "Archive cleanup",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": true,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            858
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "reason_required"
+          },
+          "visible_ids": [
+            121,
+            347,
+            421,
+            465,
+            678,
+            858
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00015019999955256935,
+      "cpu_wall_seconds": 0.000668799999402836
+    },
+    {
+      "id": "drift_close-223",
+      "split": "drift",
+      "family": "drift_close",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 293,
+              "title": "Archive cleanup",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 440,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 466,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 501,
+              "title": "Export report",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 550,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": true,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 970,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            440
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "reason_required"
+          },
+          "visible_ids": [
+            293,
+            440,
+            466,
+            501,
+            550,
+            970
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00014399999963643495,
+      "cpu_wall_seconds": 0.0006321999999272521
+    },
+    {
+      "id": "drift_reason-223",
+      "split": "drift",
+      "family": "drift_reason",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 293,
+              "title": "Archive cleanup",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 440,
+              "title": "Table layout",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 466,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 501,
+              "title": "Export report",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 550,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": true,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 970,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            293,
+            440,
+            466,
+            501,
+            550,
+            970
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013900000067224028,
+      "cpu_wall_seconds": 0.0006122999993749545
+    },
+    {
+      "id": "drift_filter-223",
+      "split": "drift",
+      "family": "drift_filter",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 293,
+              "title": "Archive cleanup",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 440,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 466,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 501,
+              "title": "Export report",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 550,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": true,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 970,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "open",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            440
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            440,
+            466,
+            501,
+            550,
+            970
+          ]
+        }
+      ],
+      "prediction_seconds": 0.0001452999995308346,
+      "cpu_wall_seconds": 0.0006155999999464257
+    },
+    {
+      "id": "drift_blocked_priority-223",
+      "split": "drift",
+      "family": "drift_blocked_priority",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 293,
+              "title": "Archive cleanup",
+              "status": "closed",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 440,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 466,
+              "title": "Search indexing",
+              "status": "open",
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 501,
+              "title": "Export report",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 550,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "bug"
+              ],
+              "blocked": true,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 970,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            550
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "reason_required"
+          },
+          "visible_ids": [
+            293,
+            440,
+            466,
+            501,
+            550,
+            970
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013049999961367575,
+      "cpu_wall_seconds": 0.0005935999997745967
+    },
+    {
+      "id": "drift_close-227",
+      "split": "drift",
+      "family": "drift_close",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 183,
+              "title": "Import records",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 478,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 508,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 556,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 803,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 935,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            183
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "reason_required"
+          },
+          "visible_ids": [
+            183,
+            478,
+            508,
+            556,
+            803,
+            935
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00012820000029023504,
+      "cpu_wall_seconds": 0.0005621000000246568
+    },
+    {
+      "id": "drift_reason-227",
+      "split": "drift",
+      "family": "drift_reason",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 183,
+              "title": "Import records",
+              "status": "closed",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 478,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 508,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 556,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 803,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 935,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            183,
+            478,
+            508,
+            556,
+            803,
+            935
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00012369999967631884,
+      "cpu_wall_seconds": 0.0005513000005521462
+    },
+    {
+      "id": "drift_filter-227",
+      "split": "drift",
+      "family": "drift_filter",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 183,
+              "title": "Import records",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 478,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 508,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 556,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 803,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 935,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "open",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            183
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": true,
+            "code": "ok"
+          },
+          "visible_ids": [
+            183,
+            508,
+            556,
+            803,
+            935
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00013020000005781185,
+      "cpu_wall_seconds": 0.0005643999993480975
+    },
+    {
+      "id": "drift_blocked_priority-227",
+      "split": "drift",
+      "family": "drift_blocked_priority",
+      "scores": [
+        {
+          "exact": true,
+          "records": true,
+          "interface": true,
+          "feedback": true
+        }
+      ],
+      "final_exact": true,
+      "all_steps_exact": true,
+      "valid": true,
+      "error": null,
+      "predicted": [
+        {
+          "issues": [
+            {
+              "id": 183,
+              "title": "Import records",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 478,
+              "title": "Export report",
+              "status": "closed",
+              "labels": [
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 3,
+              "comments": []
+            },
+            {
+              "id": 508,
+              "title": "Email alerts",
+              "status": "open",
+              "labels": [],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 556,
+              "title": "Profile settings",
+              "status": "open",
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            },
+            {
+              "id": 803,
+              "title": "Table layout",
+              "status": "open",
+              "labels": [],
+              "blocked": true,
+              "priority": 2,
+              "comments": []
+            },
+            {
+              "id": 935,
+              "title": "Access review",
+              "status": "open",
+              "labels": [
+                "feature"
+              ],
+              "blocked": false,
+              "priority": 1,
+              "comments": []
+            }
+          ],
+          "filter": {
+            "status": "all",
+            "label": ""
+          },
+          "sort": "asc",
+          "selected": [
+            803
+          ],
+          "role": "editor",
+          "feedback": {
+            "ok": false,
+            "code": "reason_required"
+          },
+          "visible_ids": [
+            183,
+            478,
+            508,
+            556,
+            803,
+            935
+          ]
+        }
+      ],
+      "prediction_seconds": 0.00012409999999363208,
+      "cpu_wall_seconds": 0.0005489999994097161
+    }
+  ],
+  "judge": "original VeriEnv judge_dsl exact_match on independently computed canonical state SHA256",
+  "normalization": "sort issue records, labels and selected IDs; retain comment order, visible_ids order, string case/space and JSON types"
+}

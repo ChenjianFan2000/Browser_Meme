@@ -1,0 +1,12 @@
+{
+  "site_id": "discogs",
+  "phase": "source_visible_phase1",
+  "selection_model": "gpt-6.1-sol",
+  "upstream": "veri_env/external/VeriEnv-main/websites/discogs",
+  "upstream_files": 110,
+  "upstream_bytes": 737560,
+  "reason": "Existing complete full-stack catalog and marketplace clone: auth, search, collection, wantlist, cart, checkout, seller listings backed by SQLite.",
+  "runtime": "Native Windows isolated source copy; Python venv, Next.js 16.1.1, React 19.2.3, FastAPI and SQLAlchemy; SQLite supported by upstream config. Upstream source is never edited.",
+  "not_claimed": ["official benchmark", "complete original Discogs reproduction", "phase 2 isolation", "actual model token or fee measurement"],
+  "model_accounting": "One independent deployment/evaluation subagent; no provider API calls. Tool execution and elapsed time recorded by session and deployment logs; model tokens/cost unavailable."
+}

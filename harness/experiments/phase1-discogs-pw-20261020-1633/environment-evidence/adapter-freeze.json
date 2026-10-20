@@ -1,0 +1,15 @@
+{
+  "time_utc": "2026-10-20T09:05:09.631469+00:00",
+  "files": {
+    "harness\\sites\\discogs\\deploy.py": "5e8b2e0036ab53f1657f21d4193ec6536e414116f5faf034057d50406e40f376",
+    "harness\\sites\\discogs\\evaluator.py": "e121ff954ec2208a2afee7f3124e2705f19ca8099e5f5acc1f576bffe85c3be8",
+    "harness\\sites\\discogs\\pw_evaluator.py": "15b04c64ef261da6da565bc7603b210e3afd81aafb113cd85baf112bb50cc3be",
+    "harness\\sites\\discogs\\site-pw.json": "da740f13f411f89c1cdd8cee96a61e9870bc679b8485400445756a63b4510479",
+    "harness\\sites\\discogs\\site-pw-extension.json": "53f77ceb705269603183f8e68e3b38f9a3d5a979e37bcfbe4496b2d238cda714",
+    "harness\\sites\\discogs\\cases.json": "1c29948b83e9367f87e6bc84237e8cc71ece133547ba65df06ff9fef0b7f0c7a",
+    "harness\\sites\\discogs\\extension_cases.json": "c8b2aa28d71ace0d7e6f1d1828a96a57be7bb26041ce80110ec0e86d88694011",
+    "harness\\sites\\discogs\\adapter_contract-pw.md": "5a6b96ce645eafb488fa74f45b0bcf1b39bf13aa648b257bd0c0c7fbd0f85557",
+    "harness\\sites\\discogs\\evaluator_sources-pw.json": "c7953aa5c160cf6b55468e338a3e0c3e7b1d67815569c1d95b4e3df540298115"
+  },
+  "status": "frozen before root-managed site UI runs; no site changes during execution"
+}

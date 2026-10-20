@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>阶段一真实浏览器记录</title>
+<style>body{font:16px system-ui;max-width:1200px;margin:40px auto;padding:0 20px;color:#17202a}
+table{border-collapse:collapse;width:100%}td,th{padding:12px;border:1px solid #ddd;text-align:left}
+pre{white-space:pre-wrap;background:#f4f6f7;padding:20px}a{color:#1565c0}</style>
+<h1>阶段一 · 直接 Playwright 白盒验证</h1><p>运行：anchor-repeat-002；模型作者：gpt-6.1-sol；版本：pw-v002</p><p>固定分母保留全部失败、拒绝、无法确认与超时。当前为开发/回归结果，不是泛化或速度对照成绩。</p><p><a href='inputs/model/rulebook.md'>冻结规则书</a> · <a href='inputs/scripts.py'>原生脚本</a> · <a href='inputs/plan.json'>动作前预测</a> · <a href='registration.json'>运行前冻结</a></p><pre>{
+  &quot;case_denominator&quot;: 8,
+  &quot;passed_cases&quot;: 4,
+  &quot;step_denominator&quot;: 44,
+  &quot;matched_steps&quot;: 39,
+  &quot;ui_actions_dispatched&quot;: 42,
+  &quot;ui_actions_completed&quot;: 42,
+  &quot;case_success_rate&quot;: 0.5,
+  &quot;step_match_rate&quot;: 0.8863636363636364,
+  &quot;elapsed_seconds&quot;: 105.375
+}</pre><table><tr><th>任务</th><th>状态</th><th>匹配步骤</th><th>用时</th><th>失败原因</th></tr><tr><td><a href='task-invalid_login.html'>invalid_login</a> (<a href='cases/01-invalid_login/supervisor-result.json'>原始结果</a>)</td><td>completed</td><td>4/4</td><td>10.56s</td><td></td></tr><tr><td><a href='task-catalog_search.html'>catalog_search</a> (<a href='cases/02-catalog_search/supervisor-result.json'>原始结果</a>)</td><td>completed</td><td>4/4</td><td>11.75s</td><td></td></tr><tr><td><a href='task-anonymous_collection.html'>anonymous_collection</a> (<a href='cases/03-anonymous_collection/supervisor-result.json'>原始结果</a>)</td><td>contradiction</td><td>1/2</td><td>6.38s</td><td>contradiction: membership_add</td></tr><tr><td><a href='task-collection_add.html'>collection_add</a> (<a href='cases/04-collection_add/supervisor-result.json'>原始结果</a>)</td><td>contradiction</td><td>5/7</td><td>12.89s</td><td>contradiction: membership_add</td></tr><tr><td><a href='task-wantlist_add.html'>wantlist_add</a> (<a href='cases/05-wantlist_add/supervisor-result.json'>原始结果</a>)</td><td>contradiction</td><td>5/7</td><td>13.01s</td><td>contradiction: membership_add</td></tr><tr><td><a href='task-cart_add.html'>cart_add</a> (<a href='cases/06-cart_add/supervisor-result.json'>原始结果</a>)</td><td>completed</td><td>6/6</td><td>15.78s</td><td></td></tr><tr><td><a href='task-checkout.html'>checkout</a> (<a href='cases/07-checkout/supervisor-result.json'>原始结果</a>)</td><td>completed</td><td>7/7</td><td>16.78s</td><td></td></tr><tr><td><a href='task-seller_create_deactivate.html'>seller_create_deactivate</a> (<a href='cases/08-seller_create_deactivate/supervisor-result.json'>原始结果</a>)</td><td>independent_failure</td><td>7/7</td><td>15.31s</td><td></td></tr></table></html>

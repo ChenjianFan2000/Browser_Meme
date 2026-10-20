@@ -1,0 +1,15 @@
+{
+  "scope": "Exported run evidence, fixed denominators, prediction-before-dispatch, success support, ZIP integrity and relative HTML links.",
+  "security_scope": "JWT-shaped value scan of case JSON/JSONL and textual trace members; not a universal secret detector. Findings contain paths only.",
+  "counts": {
+    "runs": 9,
+    "cases": 88,
+    "dispatched_steps": 396,
+    "traces": 88,
+    "text_entries_scanned": 4490,
+    "local_links": 2236
+  },
+  "issues": [],
+  "jwt_pattern_finding_paths": [],
+  "passed": true
+}

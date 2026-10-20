@@ -1,0 +1,31 @@
+{
+  "revision": "pw-complex-v001",
+  "model": "gpt-6.1-sol",
+  "status": "ready_for_protocol3_first_real_run",
+  "cases": 1,
+  "steps": 19,
+  "rules": 27,
+  "planned_live_checkpoints": 2,
+  "supervision": {
+    "review_timeout_seconds": 240,
+    "max_reviews_per_case": 3,
+    "case_seconds": 900,
+    "on_step_failure": "diagnose_and_stop"
+  },
+  "files": {
+    "plan.json": "31f08b47268207f62a93c876838b53187a557082b7ad0385fde57f4d61d1ea11",
+    "scripts.py": "9fbb88741cc1e7b7f4e91576ebd2771855f0893d9482c01c595183f4cf02e9b9",
+    "rules.json": "d3cc7e0b30a761e11d6c86b92fbca1092ca4263498dee7368680d115dc1a4404",
+    "rulebook.html": "cde71bcd12ff79aa8d718e938be6d6634b794f19f5b8145c576239aab4551e18",
+    "operation-and-intervention.html": "cde71bcd12ff79aa8d718e938be6d6634b794f19f5b8145c576239aab4551e18",
+    "source_review.json": "2b07bcfbbad211d5b0707669c530fd377b5532c75f601b477f5c5639891bda02",
+    "task-source-review.json": "cf00cdc3caed84679fe3984da8d230fb88c84773d7a42935e294b302421024d8",
+    "provenance.json": "f6357b97936e972f80cff53bf5f20403855fb938aafc8ecb31504488885c3f93",
+    "rule-source-script-check-mapping.json": "453dfa2e1040eab301bcbc69105906d283b02ce808a840574f08996fcc9c6547",
+    "static-checks.json": "dfa63605931d4dd0dca6de9adeda917e64687cdac1ee61746c25ad6f7cd26e09"
+  },
+  "fixed_cases_sha256": "a091e8018210db4f1bb0bf0a801c1d263fb850c1f0d3daa64470740f2a523b45",
+  "source_visibility": "phase1 reused independent Solar source author",
+  "browser_run_by_author": false,
+  "complex_task_measured": false
+}

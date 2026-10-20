@@ -1,0 +1,14 @@
+browsergym-core==0.14.3
+browsergym-workarena==0.5.3
+playwright==1.44.0
+python-gitlab>=6,<7
+numpy>=1.26,<3
+pandas>=2.2,<3
+scipy>=1.13,<2
+matplotlib>=3.9,<4
+seaborn>=0.13,<0.14
+jupyterlab>=4,<5
+ipykernel>=6,<7
+pytest>=8,<9
+python-dotenv>=1,<2
+httpx>=0.27,<1

@@ -1,0 +1,19 @@
+
+You are a robot exploring in an object-centric environment. Your goal is to model the logic of the world in python. You will be provided experiences in the format of (state, action, next_state) tuples. You will also be provided with a short natural language description that briefly summarizes the difference between the state and the next state for each (state, next_state,) pair. You need to implement the python code to model the logic of the world, as seen in the provided experiences. Please follow the template to implement the code. The code needs to be directly runnable on the state and return the next state in python as provided in the experiences.
+
+
+You need to implement python code to model the logic of the world as seen in the following experiences:
+
+{experiences}
+
+Please implement code to model the logic of the world as demonstrated by the experiences. Here is the template for the transition function. Please implement the transition function following the template. The code needs to be directly runnable on the inputs of (state, action) and return the next state in python as provided in the experiences.
+
+```
+
+{code_template}
+
+```
+
+Please implement code to model the logic of the world as demonstrated by the experiences. Please implement the code following the template. Feel free to implement the helper functions you need. You can also implement the logic for difference actions in different helper functions. However, you must implement the ` transition ` function as the main function to be called by the environment. The code needs to be directly runnable on the inputs as (state, action) and return the next state in python as provided in the experiences. Let's think step by step.
+
+LOCAL ADAPTATION: the experiences are the JSON examples. Object records replace the native set-state wrapper. The required function is predict(state, action), replacing transition. No reward function or optimistic planning is evaluated.

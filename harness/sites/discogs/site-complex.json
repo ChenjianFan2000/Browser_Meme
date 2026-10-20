@@ -1,0 +1,31 @@
+{
+  "site_id": "discogs-complex",
+  "base_url": "http://127.0.0.1:12042",
+  "source_roots": [
+    "veri_env/external/VeriEnv-main/websites/discogs"
+  ],
+  "adapter": "harness/sites/discogs/complex_evaluator.py",
+  "allowed_hosts": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "description": "Unmodified original Discogs production build; one source-visible supervised complex task; independent checkpoints; shared frozen dependencies and new DB/log runtime.",
+  "working_directory": ".",
+  "setup_command": "python harness/sites/discogs/complex_deploy.py prepare",
+  "setup_argv": [
+    "python",
+    "harness/sites/discogs/complex_deploy.py",
+    "prepare"
+  ],
+  "start_command": "python harness/sites/discogs/complex_deploy.py serve",
+  "start_argv": [
+    "python",
+    "harness/sites/discogs/complex_deploy.py",
+    "serve"
+  ],
+  "cases": "harness/sites/discogs/complex_cases.json",
+  "runtime_env": {
+    "BM_DISCOGS_RUNTIME": "G:\\Browser_Meme\\.runtime\\phase1-complex-pw-20261020-1815",
+    "BM_DISCOGS_REFERENCE_RUNTIME": "G:\\Browser_Meme\\.runtime\\phase1-discogs-pw-20261020-1633"
+  }
+}

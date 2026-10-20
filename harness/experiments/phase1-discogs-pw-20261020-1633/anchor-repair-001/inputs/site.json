@@ -1,0 +1,30 @@
+{
+  "site_id": "discogs",
+  "base_url": "http://127.0.0.1:12042",
+  "source_roots": [
+    "veri_env/external/VeriEnv-main/websites/discogs"
+  ],
+  "adapter": "harness/sites/discogs/evaluator.py",
+  "allowed_hosts": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "description": "Original VeriEnv Discogs production app; direct Playwright protocol 2; inherited frozen baseline in dedicated runtime.",
+  "working_directory": ".",
+  "setup_command": "python harness/sites/discogs/deploy.py prepare",
+  "setup_argv": [
+    "python",
+    "harness/sites/discogs/deploy.py",
+    "prepare"
+  ],
+  "start_command": "python harness/sites/discogs/deploy.py serve",
+  "start_argv": [
+    "python",
+    "harness/sites/discogs/deploy.py",
+    "serve"
+  ],
+  "cases": "harness/sites/discogs/cases.json",
+  "runtime_env": {
+    "BM_DISCOGS_RUNTIME": "G:\\Browser_Meme\\.runtime\\phase1-discogs-pw-20261020-1633"
+  }
+}

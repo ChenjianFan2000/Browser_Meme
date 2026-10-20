@@ -1,0 +1,216 @@
+{
+  "frozen_artifacts_changed": false,
+  "reference_errata": [
+    {
+      "rule_id": "CART-ADD",
+      "frozen_reference": "backend/app/schemas/cart.py:29-31",
+      "correct_reference": "backend/app/schemas/cart.py:27-30",
+      "reason": "CartAddIn starts at27; EOF30."
+    },
+    {
+      "rule_id": "RUNTIME",
+      "frozen_reference": "frontend/package.json:1-30",
+      "correct_reference": "frontend/package.json:1-26",
+      "reason": "EOF26."
+    }
+  ],
+  "proxy_route_map": [
+    {
+      "file": "frontend/src/app/api/auth/login/route.ts",
+      "source_lines": [
+        1,
+        29
+      ],
+      "endpoint": "POST /api/auth/login → /auth/login",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ],
+      "semantics": "JSON不合法400；后端拒绝状态/文本透传；成功写httpOnly/lax token cookie并返回ok。",
+      "observed_or_inferred_reachability": "静态路径：实际有效登录200、无效凭据400。"
+    },
+    {
+      "file": "frontend/src/app/api/auth/logout/route.ts",
+      "source_lines": [
+        1,
+        10
+      ],
+      "endpoint": "POST /api/auth/logout",
+      "rule_ids": [
+        "AUTH-LOGOUT"
+      ],
+      "semantics": "无后端调用；返回ok并设置cookie maxAge=0。",
+      "observed_or_inferred_reachability": "静态路径；本公开signout任务被此前membership阻断，登出分支未实测。"
+    },
+    {
+      "file": "frontend/src/app/api/auth/register/route.ts",
+      "source_lines": [
+        1,
+        23
+      ],
+      "endpoint": "POST /api/auth/register → /auth/register",
+      "rule_ids": [
+        "AUTH-REGISTER"
+      ],
+      "semantics": "JSON不合法400；后端注册状态/响应透传，不自动登录。",
+      "observed_or_inferred_reachability": "静态路径；无注册UI，未作UI验证。"
+    },
+    {
+      "file": "frontend/src/app/api/backend/[...path]/route.ts",
+      "source_lines": [
+        1,
+        36
+      ],
+      "endpoint": "GET/POST/PUT/PATCH/DELETE /api/backend/* → /*",
+      "rule_ids": [
+        "SELL-SEARCH-PROXY",
+        "RUNTIME"
+      ],
+      "semantics": "转发显式Authorization等请求头，不把cookie转bearer；只拼path而丢query。",
+      "observed_or_inferred_reachability": "动态catch-all：实际搜索首先被rewrite转到后端/api/backend/search而404。解除遮挡后丢q可能422，尚未实测。"
+    },
+    {
+      "file": "frontend/src/app/api/cart/route.ts",
+      "source_lines": [
+        1,
+        13
+      ],
+      "endpoint": "GET /api/cart → /cart",
+      "rule_ids": [
+        "CART-READ",
+        "AUTH-GATE"
+      ],
+      "semantics": "backendFetch附cookie bearer；状态及JSON文本透传。",
+      "observed_or_inferred_reachability": "静态路径：已实际200读空/非空cart。"
+    },
+    {
+      "file": "frontend/src/app/api/cart/items/route.ts",
+      "source_lines": [
+        1,
+        19
+      ],
+      "endpoint": "POST /api/cart/items → /cart/items",
+      "rule_ids": [
+        "CART-ADD",
+        "AUTH-GATE"
+      ],
+      "semantics": "JSON不合法400；其余后端状态透传；数量/active检查在后端。",
+      "observed_or_inferred_reachability": "静态路径：已实际201加购及匿名401登录返回。"
+    },
+    {
+      "file": "frontend/src/app/api/cart/items/[id]/route.ts",
+      "source_lines": [
+        1,
+        17
+      ],
+      "endpoint": "DELETE /api/cart/items/id → /cart/items/id",
+      "rule_ids": [
+        "CART-REMOVE"
+      ],
+      "semantics": "backendFetch附bearer、原始状态透传；后端只删除当前用户row。",
+      "observed_or_inferred_reachability": "动态路径：扩展10/09.json已实际DELETE404，qty2与14502美分仍在。"
+    },
+    {
+      "file": "frontend/src/app/api/checkout/route.ts",
+      "source_lines": [
+        1,
+        13
+      ],
+      "endpoint": "POST /api/checkout → /checkout",
+      "rule_ids": [
+        "CHECKOUT",
+        "AUTH-GATE"
+      ],
+      "semantics": "backendFetch附bearer；后端拒绝/OrderOut响应透传。",
+      "observed_or_inferred_reachability": "静态路径：已实际200单项checkout；其他拒绝/并发分支未实测。"
+    },
+    {
+      "file": "frontend/src/app/api/me/collection/route.ts",
+      "source_lines": [
+        1,
+        13
+      ],
+      "endpoint": "GET /api/me/collection → /me/collection",
+      "rule_ids": [
+        "MEM-COLLECTION",
+        "AUTH-GATE"
+      ],
+      "semantics": "backendFetch附bearer；当前用户ReleaseCard数组或401透传。",
+      "observed_or_inferred_reachability": "静态路径；任务未到列表回读，不能凭静态路由推断当作UI成功。"
+    },
+    {
+      "file": "frontend/src/app/api/me/collection/[id]/route.ts",
+      "source_lines": [
+        1,
+        30
+      ],
+      "endpoint": "POST/DELETE /api/me/collection/id → /me/collection/id",
+      "rule_ids": [
+        "MEM-COLLECTION",
+        "AUTH-GATE"
+      ],
+      "semantics": "后端POST existing幂等、缺release404；DELETE absent仍ok；当前用户隔离。",
+      "observed_or_inferred_reachability": "动态路径：POST已实测404；DELETE同路由遮挡为源码/独立诊断推断，未额外操作。"
+    },
+    {
+      "file": "frontend/src/app/api/me/wantlist/route.ts",
+      "source_lines": [
+        1,
+        13
+      ],
+      "endpoint": "GET /api/me/wantlist → /me/wantlist",
+      "rule_ids": [
+        "MEM-WANTLIST",
+        "AUTH-GATE"
+      ],
+      "semantics": "backendFetch附bearer；当前用户ReleaseCard数组或401透传。",
+      "observed_or_inferred_reachability": "静态路径；任务未到列表回读，不声称UI成功。"
+    },
+    {
+      "file": "frontend/src/app/api/me/wantlist/[id]/route.ts",
+      "source_lines": [
+        1,
+        30
+      ],
+      "endpoint": "POST/DELETE /api/me/wantlist/id → /me/wantlist/id",
+      "rule_ids": [
+        "MEM-WANTLIST",
+        "AUTH-GATE"
+      ],
+      "semantics": "后端POST existing幂等、缺release404；DELETE absent仍ok；当前用户隔离。",
+      "observed_or_inferred_reachability": "动态路径：POST已实测404；DELETE被同机制遮挡是推断，未额外操作。"
+    },
+    {
+      "file": "frontend/src/app/api/me/listings/route.ts",
+      "source_lines": [
+        1,
+        28
+      ],
+      "endpoint": "GET/POST /api/me/listings → /me/listings",
+      "rule_ids": [
+        "SELL-MANAGE",
+        "SELL-CREATE",
+        "AUTH-GATE"
+      ],
+      "semantics": "GET当前用户所有状态listing；POST JSON校验/创建拒绝状态透传。",
+      "observed_or_inferred_reachability": "静态路径：卖家页GET已实际200；搜索阻断，未实际创建POST。"
+    },
+    {
+      "file": "frontend/src/app/api/me/listings/[id]/route.ts",
+      "source_lines": [
+        1,
+        36
+      ],
+      "endpoint": "PATCH/DELETE /api/me/listings/id → /me/listings/id",
+      "rule_ids": [
+        "SELL-UPDATE",
+        "SELL-MANAGE"
+      ],
+      "semantics": "PATCH JSON不合法400；backend ownership缺失404；DELETE本意soft inactive。",
+      "observed_or_inferred_reachability": "动态路径：同机制遮挡是源码/独立诊断推断；未实际PATCH/DELETE，不得写实测404。"
+    }
+  ],
+  "logout_unverified_branch": {
+    "source": "frontend/src/components/LogoutButton.tsx:14-22",
+    "statement": "await fetch does not check res.ok: any resolved non2xx still refresh/push home; cookie clearing follows only successful original logout route semantics. Network rejection exits before refresh/push but finally clears busy. None of these failure branches was executed."
+  }
+}

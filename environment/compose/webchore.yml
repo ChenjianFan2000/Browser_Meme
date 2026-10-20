@@ -1,0 +1,28 @@
+name: browser-meme-webchore
+services:
+  shopping:
+    image: shopping_final_0712:latest
+    pull_policy: never
+    ports: ["127.0.0.1:7770:80"]
+    mem_limit: 2g
+    restart: "no"
+  shopping-admin:
+    image: shopping_admin_final_0719:latest
+    pull_policy: never
+    ports: ["127.0.0.1:7780:80"]
+    mem_limit: 2g
+    restart: "no"
+  forum:
+    image: postmill-populated-exposed-withimg:latest
+    pull_policy: never
+    ports: ["127.0.0.1:9999:80"]
+    mem_limit: 1g
+    restart: "no"
+  gitlab:
+    image: gitlab-populated-final-port8023:latest
+    pull_policy: never
+    ports: ["127.0.0.1:8023:8023"]
+    command: /opt/gitlab/embedded/bin/runsvdir-start
+    shm_size: 256m
+    mem_limit: 4g
+    restart: "no"

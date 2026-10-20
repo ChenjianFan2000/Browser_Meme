@@ -1,0 +1,34 @@
+name: browser-meme-gitlab
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:19.3.5-ce.0
+    pull_policy: never
+    hostname: localhost
+    ports:
+      - "127.0.0.1:8929:8929"
+      - "127.0.0.1:2224:22"
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://localhost:8929'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2224
+        gitlab_rails['initial_root_password'] = File.read('/run/secrets/gitlab_root_password').strip
+        prometheus_monitoring['enable'] = false
+        puma['worker_processes'] = 2
+        sidekiq['concurrency'] = 10
+    secrets:
+      - gitlab_root_password
+    volumes:
+      - gitlab-config:/etc/gitlab
+      - gitlab-logs:/var/log/gitlab
+      - gitlab-data:/var/opt/gitlab
+    shm_size: 256m
+    mem_limit: 6g
+    cpus: 4
+    restart: "no"
+secrets:
+  gitlab_root_password:
+    file: /opt/browser-meme/secrets/gitlab_root_password
+volumes:
+  gitlab-config:
+  gitlab-logs:
+  gitlab-data:

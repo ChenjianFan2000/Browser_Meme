@@ -1,0 +1,1 @@
+Predict effects from the common observed transitions. Return structured predictions directly without generating or executing a transition program.

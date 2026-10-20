@@ -1,0 +1,109 @@
+{
+  "created_date": "2026-10-20",
+  "excluded_files": [
+    {
+      "path": "veri_env/artifacts/source_downloads/Code2World-f01a98ffe843-source.zip",
+      "size": 1706093,
+      "sha256": "7cd65f3f1f15bea64f1be7827d596224320c80be72fe43736cdf3448de8538f4",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/artifacts/source_downloads/SelfEvolvingAgent-a82450e1b5e1-source.zip",
+      "size": 672303,
+      "sha256": "62d43bb162b69ff1180f6e7916dcdbca501cafe01c7e8572ef232e761c7e5118",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/artifacts/source_downloads/agent2world-1330f3cde950-source.zip",
+      "size": 270416,
+      "sha256": "aa0820e3c0d52823db8680449b842483de5dff4f120696ba44c74d1eb2186f84",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/artifacts/source_downloads/payload-007.json",
+      "size": 2609842,
+      "sha256": "4731bfff700e5882e4ae8bea4d93fa8ea7218706cefd15fb3f2ce7c4300fa994",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/artifacts/source_downloads/payload-011.json",
+      "size": 572573,
+      "sha256": "31173ba117a3199eeb7c84e12b94070819cf692663b1078add9f17e896ffe179",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/artifacts/source_downloads/payload-020.json",
+      "size": 469780,
+      "sha256": "cffa2de29edfff57dba27f9ad46c6648238c81876d3e7c398e7fb733dff051bc",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/external/Code2World/android_world/agents/wm_utils.py",
+      "size": 22956,
+      "sha256": "a880bdbec49dca23eae95fa8bab6b5380b37b128b184bf4f5f3c67d16fe35e7a",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/external/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/auth.py",
+      "size": 3971,
+      "sha256": "795963dd171fa57919261559aaa593de4a2257fd2edeba71019466eacf62c08e",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/external/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/cognitive_kernel/call_web.py",
+      "size": 90102,
+      "sha256": "059a9bd6b3b1bb1c987a6eb6e3b76cd53ff8f67e24e3497d36f296a1dc5081e5",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/external/agent2world/utils/count_tokens.py",
+      "size": 8045,
+      "sha256": "5366d3367c845b2a216f76453438fbcaae0063fb37131fd7694b970dbbf50f4f",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    },
+    {
+      "path": "veri_env/external/agent2world/utils/llm.py",
+      "size": 1764,
+      "sha256": "e0f82aa8d42667a351f51b09cd5a7f83bd7e3412fcb04438b842e0d100ba1cba",
+      "reason": "Contains suspected upstream credential constants, directly or inside an archive."
+    }
+  ],
+  "sanitized_copies": [
+    {
+      "original_path": "veri_env/external/Code2World/android_world/agents/wm_utils.py",
+      "export_path": "veri_env/export_safe/Code2World/android_world/agents/wm_utils.py",
+      "original_sha256": "a880bdbec49dca23eae95fa8bab6b5380b37b128b184bf4f5f3c67d16fe35e7a",
+      "export_sha256": "d6a77a6ac4d63f7e6757b10d1d3b809da5d8759f5aa8a6fc46f8d338a879821a",
+      "transformation": "Replace suspected upstream credential constants with REDACTED; original local file is unchanged."
+    },
+    {
+      "original_path": "veri_env/external/agent2world/utils/count_tokens.py",
+      "export_path": "veri_env/export_safe/agent2world/utils/count_tokens.py",
+      "original_sha256": "5366d3367c845b2a216f76453438fbcaae0063fb37131fd7694b970dbbf50f4f",
+      "export_sha256": "4b742909e6a7e22b5b4cd9fb8a8382942e4072266412a0a762f70769bedcf8b4",
+      "transformation": "Replace suspected upstream credential constants with REDACTED; original local file is unchanged."
+    },
+    {
+      "original_path": "veri_env/external/agent2world/utils/llm.py",
+      "export_path": "veri_env/export_safe/agent2world/utils/llm.py",
+      "original_sha256": "e0f82aa8d42667a351f51b09cd5a7f83bd7e3412fcb04438b842e0d100ba1cba",
+      "export_sha256": "646ca44866ff3ca2dd0b0aba3486e8324cda775d9c258956e49eea1758cb92ab",
+      "transformation": "Replace suspected upstream credential constants with REDACTED; original local file is unchanged."
+    },
+    {
+      "original_path": "veri_env/external/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/cognitive_kernel/call_web.py",
+      "export_path": "veri_env/export_safe/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/cognitive_kernel/call_web.py",
+      "original_sha256": "059a9bd6b3b1bb1c987a6eb6e3b76cd53ff8f67e24e3497d36f296a1dc5081e5",
+      "export_sha256": "681a0b2ce892fbcdd5453e8c294a6a441ab27abe97b9f51e692a24a30cc72659",
+      "transformation": "Replace suspected upstream credential constants with REDACTED; original local file is unchanged."
+    },
+    {
+      "original_path": "veri_env/external/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/auth.py",
+      "export_path": "veri_env/export_safe/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/auth.py",
+      "original_sha256": "795963dd171fa57919261559aaa593de4a2257fd2edeba71019466eacf62c08e",
+      "export_sha256": "88b837cedc3ca900cb74003c1b4ced48cc13d6d248f5b6f91435e565d46a3c78",
+      "transformation": "Replace suspected upstream credential constants with REDACTED; original local file is unchanged."
+    }
+  ],
+  "historical_manifests": "Unchanged; refer to original upstream contents, not sanitized copies."
+}

@@ -1,0 +1,1734 @@
+<!doctype html><html lang="zh"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>任务完整运行证据</title>
+<style>body{font:16px/1.65 system-ui;max-width:1100px;margin:36px auto;padding:0 20px;color:#16232e}
+h1{font-size:30px}h2{font-size:22px}section{border-top:2px solid #dbe5ef;margin:30px 0;padding:12px 0}
+pre{overflow:auto;white-space:pre-wrap;max-height:650px;background:#f3f6f9;padding:16px;font:13px/1.5 monospace}
+details{margin:12px 0}summary{cursor:pointer;font-weight:600}img{width:100%;height:auto;border:1px solid #ccd6e0}
+a{color:#1761a0}strong{background:#edf2f7;padding:3px 8px}</style><h1>consent_persistence</h1><p>Accept the cookie banner through the UI, reload the page and confirm it remains dismissed without business changes.</p><p>最终状态：<strong>completed</strong>；独立通过：True。</p><p><a href='report.html'>返回运行报告</a> · <a href='inputs/model/rulebook.md'>冻结规则书</a> · <a href='inputs/scripts.py'>完整原生 Playwright 脚本</a> · <a href='cases/01-consent_persistence/events.jsonl'>逐事件原始记录</a> · <a href='cases/01-consent_persistence/trace.zip'>脱敏 Playwright 轨迹</a></p><p>本页按固定计划列出全部步骤；失败、拒绝、无法确认与未执行步骤均保留。每一步预测先落盘，再执行脚本；界面截图、网络与后台状态为不同证据渠道。</p><details><summary>固定任务参数</summary><pre>{
+  &quot;kind&quot;: &quot;consent_persistence&quot;
+}</pre></details><details><summary>独立终点评价</summary><pre>[
+  {
+    &quot;id&quot;: &quot;unrelated_tables_unchanged&quot;,
+    &quot;passed&quot;: true,
+    &quot;detail&quot;: &quot;All tables outside the exact public task mutation remain unchanged&quot;
+  },
+  {
+    &quot;id&quot;: &quot;observed_intermediate_unrelated_state&quot;,
+    &quot;passed&quot;: true,
+    &quot;detail&quot;: &quot;Unrelated tables also remain unchanged at every recorded intermediate snapshot&quot;
+  },
+  {
+    &quot;id&quot;: &quot;accepted_survives_reload&quot;,
+    &quot;passed&quot;: true,
+    &quot;detail&quot;: &quot;Initially visible consent banner is absent after a real reload with accepted localStorage&quot;
+  }
+]</pre></details><details><summary>任务监督结果</summary><pre>{
+  &quot;id&quot;: &quot;consent_persistence&quot;,
+  &quot;passed&quot;: true,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;steps&quot;: [
+    {
+      &quot;id&quot;: &quot;home&quot;,
+      &quot;status&quot;: &quot;matched&quot;,
+      &quot;evidence&quot;: &quot;01.json&quot;,
+      &quot;screenshot&quot;: &quot;01.png&quot;,
+      &quot;action_completed&quot;: true,
+      &quot;branches&quot;: [
+        {
+          &quot;id&quot;: &quot;expected&quot;,
+          &quot;checks&quot;: [
+            {
+              &quot;check&quot;: {
+                &quot;path&quot;: &quot;after.ui.text&quot;,
+                &quot;op&quot;: &quot;contains&quot;,
+                &quot;value&quot;: &quot;Trending Releases&quot;
+              },
+              &quot;status&quot;: &quot;pass&quot;,
+              &quot;actual&quot;: &quot;Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet&#x27;s manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\n10 Essential Synth-Pop Albums\nExplore new releases on Discogs\nWeekly discovery from the community\nAll-Ages Album of the Week\nHandpicked spotlight\nStart selling on Discogs\nList items and reach collectors\nPINK FLOYD / THE DARK SIDE OF THE MOON\nOUT NOW\nTrending Releases\nOpen-architected maximized Local Area Network\nChavez Trio\nUpgradable full-range system engine\nClark Collective\nConfigurable foreground portal\nBarnett Ensemble\nUpgradable didactic portal\nWalker Quartet\nOperative regional neural-net\nBarnett Ensemble\nCustomer-focused stable array\nJohnson Collective\nMost Expensive Releases Sold This Month\nSee how these expensive items sold\nTotal modular firmware\nMitchell Collective\n$347.49 USD\nSwitchable optimal archive\nDepeche Mode\n$306.90 USD\nOrganized tangible Internet solution\nAvery Quartet\n$230.34 USD\nSynchronized grid-enabled algorithm\nBates Collective\n$121.52 USD\nThe Dark Side Of The Moon\nPink Floyd\n$79.17 USD\nThe Dark Side Of The Moon\nPink Floyd\n$72.51 USD\nEmail\nSubscribe\nExplore Newly Added\nThe Dark Side Of The Moon\nPink Floyd\nCross-platform coherent data-warehouse\nRoberts Quartet\nConfigurable optimizing migration\nMorrison Trio\nCross-platform actuating pricing structure\nMurray Duo\nMulti-lateral disintermediate leverage\nAvery Quartet\nSwitchable uniform open system\nAguilar Ensemble\nProactive even-keeled customer loyalty\nDavis Collective\nFundamental high-level paradigm\nSullivan Duo\nIt&#x27;s everywhere!\n(The Discogs iOS/Android app)\nApp Store\nGoogle Play\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp &amp; Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾&quot;,
+              &quot;expected&quot;: &quot;Trending Releases&quot;
+            }
+          ],
+          &quot;status&quot;: &quot;pass&quot;
+        }
+      ],
+      &quot;invariants&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          },
+          &quot;expected&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          }
+        }
+      ],
+      &quot;matched_branches&quot;: [
+        &quot;expected&quot;
+      ],
+      &quot;elapsed_seconds&quot;: 1.8280000000013388
+    },
+    {
+      &quot;id&quot;: &quot;accept&quot;,
+      &quot;status&quot;: &quot;matched&quot;,
+      &quot;evidence&quot;: &quot;02.json&quot;,
+      &quot;screenshot&quot;: &quot;02.png&quot;,
+      &quot;action_completed&quot;: true,
+      &quot;branches&quot;: [
+        {
+          &quot;id&quot;: &quot;expected&quot;,
+          &quot;checks&quot;: [
+            {
+              &quot;check&quot;: {
+                &quot;path&quot;: &quot;after.ui.fields.consent_count&quot;,
+                &quot;op&quot;: &quot;eq&quot;,
+                &quot;value&quot;: 0
+              },
+              &quot;status&quot;: &quot;pass&quot;,
+              &quot;actual&quot;: 0,
+              &quot;expected&quot;: 0
+            }
+          ],
+          &quot;status&quot;: &quot;pass&quot;
+        }
+      ],
+      &quot;invariants&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          },
+          &quot;expected&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          }
+        }
+      ],
+      &quot;matched_branches&quot;: [
+        &quot;expected&quot;
+      ],
+      &quot;elapsed_seconds&quot;: 1.3280000000013388
+    },
+    {
+      &quot;id&quot;: &quot;reload&quot;,
+      &quot;status&quot;: &quot;matched&quot;,
+      &quot;evidence&quot;: &quot;03.json&quot;,
+      &quot;screenshot&quot;: &quot;03.png&quot;,
+      &quot;action_completed&quot;: true,
+      &quot;branches&quot;: [
+        {
+          &quot;id&quot;: &quot;expected&quot;,
+          &quot;checks&quot;: [
+            {
+              &quot;check&quot;: {
+                &quot;path&quot;: &quot;after.ui.fields.consent_count&quot;,
+                &quot;op&quot;: &quot;eq&quot;,
+                &quot;value&quot;: 0
+              },
+              &quot;status&quot;: &quot;pass&quot;,
+              &quot;actual&quot;: 0,
+              &quot;expected&quot;: 0
+            }
+          ],
+          &quot;status&quot;: &quot;pass&quot;
+        }
+      ],
+      &quot;invariants&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          },
+          &quot;expected&quot;: {
+            &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+            &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+            &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+            &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+            &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+            &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+            &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+            &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+            &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+            &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+            &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+            &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+            &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+            &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+            &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+            &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+            &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+            &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+            &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+            &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+          }
+        }
+      ],
+      &quot;matched_branches&quot;: [
+        &quot;expected&quot;
+      ],
+      &quot;elapsed_seconds&quot;: 2.3280000000013388
+    }
+  ],
+  &quot;independent_checks&quot;: [
+    {
+      &quot;id&quot;: &quot;unrelated_tables_unchanged&quot;,
+      &quot;passed&quot;: true,
+      &quot;detail&quot;: &quot;All tables outside the exact public task mutation remain unchanged&quot;
+    },
+    {
+      &quot;id&quot;: &quot;observed_intermediate_unrelated_state&quot;,
+      &quot;passed&quot;: true,
+      &quot;detail&quot;: &quot;Unrelated tables also remain unchanged at every recorded intermediate snapshot&quot;
+    },
+    {
+      &quot;id&quot;: &quot;accepted_survives_reload&quot;,
+      &quot;passed&quot;: true,
+      &quot;detail&quot;: &quot;Initially visible consent banner is absent after a real reload with accepted localStorage&quot;
+    }
+  ],
+  &quot;setup&quot;: {
+    &quot;case_id&quot;: &quot;consent_persistence&quot;,
+    &quot;baseline_sha256&quot;: &quot;6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50&quot;,
+    &quot;table_hashes&quot;: {
+      &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+      &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+      &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+      &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+      &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+      &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+      &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+      &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+      &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+      &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+      &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+      &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+      &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+      &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+      &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+      &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+      &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+      &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+      &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+      &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+    },
+    &quot;fixture&quot;: {
+      &quot;listing_id&quot;: 1,
+      &quot;release_id&quot;: 221,
+      &quot;price_cents&quot;: 7251,
+      &quot;quantity&quot;: 2,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;currency&quot;: &quot;USD&quot;,
+      &quot;seller_user_id&quot;: &quot;fd8a9900a5e342208aa167f6b49e79eb&quot;
+    }
+  },
+  &quot;browser_version&quot;: &quot;155.0.8059.84&quot;,
+  &quot;trace&quot;: &quot;trace.zip&quot;,
+  &quot;elapsed_seconds&quot;: 13.625
+}</pre></details><section><h2>1. home</h2><p>动作：{&#x27;kind&#x27;: &#x27;open&#x27;, &#x27;url&#x27;: &#x27;/&#x27;}</p><p>判断：<strong>matched</strong>；匹配分支：expected</p><details><summary>动作前规则与预测</summary><pre>{
+  &quot;rules&quot;: [
+    {
+      &quot;id&quot;: &quot;CAT-HOME&quot;,
+      &quot;statement&quot;: &quot;Home ranks most wanted (6), latest created (8), and highest order-item prices in last 31 days (6); promo tiles link home, featured banner links seeded title if available.&quot;,
+      &quot;source_refs&quot;: [
+        &quot;backend/app/api/catalog.py:82-174&quot;,
+        &quot;frontend/src/app/page.tsx:10-178&quot;
+      ],
+      &quot;preconditions&quot;: [
+        &quot;catalog accessible&quot;
+      ],
+      &quot;branches&quot;: [
+        &quot;rankings data-dependent, ties not fully stable&quot;,
+        &quot;newsletter Subscribe has no handler/form action; app store mockups are display only&quot;
+      ],
+      &quot;forbidden_side_effects&quot;: [
+        &quot;no newsletter subscription or database mutation from placeholder controls&quot;
+      ],
+      &quot;status&quot;: &quot;source_supported_browser_unverified&quot;,
+      &quot;interface&quot;: &quot;native UI&quot;,
+      &quot;browser_evidence&quot;: [],
+      &quot;check_ids&quot;: [
+        &quot;CAT-HOME-endpoint&quot;,
+        &quot;CAT-HOME-invariants&quot;
+      ]
+    }
+  ],
+  &quot;expect&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;path&quot;: &quot;after.ui.text&quot;,
+          &quot;op&quot;: &quot;contains&quot;,
+          &quot;value&quot;: &quot;Trending Releases&quot;
+        }
+      ]
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+      &quot;op&quot;: &quot;eq&quot;,
+      &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+    }
+  ]
+}</pre></details><details><summary>实际检查结果</summary><pre>{
+  &quot;id&quot;: &quot;home&quot;,
+  &quot;status&quot;: &quot;matched&quot;,
+  &quot;evidence&quot;: &quot;01.json&quot;,
+  &quot;screenshot&quot;: &quot;01.png&quot;,
+  &quot;action_completed&quot;: true,
+  &quot;branches&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.ui.text&quot;,
+            &quot;op&quot;: &quot;contains&quot;,
+            &quot;value&quot;: &quot;Trending Releases&quot;
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: &quot;Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet&#x27;s manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\n10 Essential Synth-Pop Albums\nExplore new releases on Discogs\nWeekly discovery from the community\nAll-Ages Album of the Week\nHandpicked spotlight\nStart selling on Discogs\nList items and reach collectors\nPINK FLOYD / THE DARK SIDE OF THE MOON\nOUT NOW\nTrending Releases\nOpen-architected maximized Local Area Network\nChavez Trio\nUpgradable full-range system engine\nClark Collective\nConfigurable foreground portal\nBarnett Ensemble\nUpgradable didactic portal\nWalker Quartet\nOperative regional neural-net\nBarnett Ensemble\nCustomer-focused stable array\nJohnson Collective\nMost Expensive Releases Sold This Month\nSee how these expensive items sold\nTotal modular firmware\nMitchell Collective\n$347.49 USD\nSwitchable optimal archive\nDepeche Mode\n$306.90 USD\nOrganized tangible Internet solution\nAvery Quartet\n$230.34 USD\nSynchronized grid-enabled algorithm\nBates Collective\n$121.52 USD\nThe Dark Side Of The Moon\nPink Floyd\n$79.17 USD\nThe Dark Side Of The Moon\nPink Floyd\n$72.51 USD\nEmail\nSubscribe\nExplore Newly Added\nThe Dark Side Of The Moon\nPink Floyd\nCross-platform coherent data-warehouse\nRoberts Quartet\nConfigurable optimizing migration\nMorrison Trio\nCross-platform actuating pricing structure\nMurray Duo\nMulti-lateral disintermediate leverage\nAvery Quartet\nSwitchable uniform open system\nAguilar Ensemble\nProactive even-keeled customer loyalty\nDavis Collective\nFundamental high-level paradigm\nSullivan Duo\nIt&#x27;s everywhere!\n(The Discogs iOS/Android app)\nApp Store\nGoogle Play\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp &amp; Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾&quot;,
+          &quot;expected&quot;: &quot;Trending Releases&quot;
+        }
+      ],
+      &quot;status&quot;: &quot;pass&quot;
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;check&quot;: {
+        &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+        &quot;op&quot;: &quot;eq&quot;,
+        &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+      },
+      &quot;status&quot;: &quot;pass&quot;,
+      &quot;actual&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      },
+      &quot;expected&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      }
+    }
+  ],
+  &quot;matched_branches&quot;: [
+    &quot;expected&quot;
+  ],
+  &quot;elapsed_seconds&quot;: 1.8280000000013388
+}</pre></details><details><summary>本步骤浏览器网络反馈</summary><pre>[
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;document&quot;,
+    &quot;time_ns&quot;: 1792488690897254700,
+    &quot;content_type&quot;: &quot;text/html; charset=utf-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/58aee5060854675c.css&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;stylesheet&quot;,
+    &quot;time_ns&quot;: 1792488691004623700,
+    &quot;content_type&quot;: &quot;text/css; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511379938547-c1f69419868d%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1600%26q%3D80&amp;w=1080&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691058139200,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/d51ffd26e47a2752.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691061141100,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/236f7e5abd6f09ff.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691065137600,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/30ea11065999f7ac.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691068137500,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/17bb38bff44521fb.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691071815000,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/turbopack-7efcdd314ea523bb.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691075880900,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/3837daba712f8c3a.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691079112500,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/ff1a16fafef87110.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691082342500,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/7340adf74ff47ec0.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691085104300,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1524678606370-a47ad25cb82a%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=48&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691220573000,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514320291840-2e0a9bf2a9ae%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=48&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691224364600,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514924013411-cbf25faa35bb%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=48&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691227012400,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/af0f3eebadcb441c.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488691230278800,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1485579149621-3123dd979885%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1400%26q%3D80&amp;w=1080&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691239159500,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514320291840-2e0a9bf2a9ae%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691255168800,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1525286116112-b59af11adad1%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691258860900,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514924013411-cbf25faa35bb%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691263339900,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1531058020387-3be344556be6%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691266091100,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1485579149621-3123dd979885%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691269389700,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511379938547-c1f69419868d%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691271967200,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1517230878791-4d28214057c2%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691303505500,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511671782779-c97d3d27a1d4%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691324503200,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1530133532239-eda6f53fcf0f%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488691327502400,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/favicon.ico?favicon.0b3bf435.ico&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;other&quot;,
+    &quot;time_ns&quot;: 1792488691331507000,
+    &quot;content_type&quot;: &quot;image/x-icon&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691344509000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/23?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691362629600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/30?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691375631600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/109?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691390629700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/102?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691416002600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691433237000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/121?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691445379800,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/168?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691456380200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/192?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691475061900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/26?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691488071200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/59?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691500779300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/84?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691513590800,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/login?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691534597300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/cart?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691546595300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691558808500,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/23?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691568831200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/30?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691593814000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/109?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691603814300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/102?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691616814600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691631819200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/121?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691653364900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/168?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691663363000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/192?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691675362900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/26?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691687362900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/59?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691707375300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/84?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691710376100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/login?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691713384600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/cart?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488691716374700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  }
+]</pre></details><details><summary>独立后台表指纹变化</summary><pre>{
+  &quot;changed_tables&quot;: [],
+  &quot;unchanged_tables&quot;: [
+    &quot;alembic_version&quot;,
+    &quot;artists&quot;,
+    &quot;cart_items&quot;,
+    &quot;collection_items&quot;,
+    &quot;comments&quot;,
+    &quot;genres&quot;,
+    &quot;labels&quot;,
+    &quot;marketplace_listings&quot;,
+    &quot;order_items&quot;,
+    &quot;orders&quot;,
+    &quot;release_artists&quot;,
+    &quot;release_formats&quot;,
+    &quot;release_genres&quot;,
+    &quot;release_labels&quot;,
+    &quot;release_styles&quot;,
+    &quot;releases&quot;,
+    &quot;styles&quot;,
+    &quot;tracks&quot;,
+    &quot;users&quot;,
+    &quot;wantlist_items&quot;
+  ]
+}</pre></details><p><a href='cases/01-consent_persistence/01.json'>完整前后观察 JSON</a> · <a href='cases/01-consent_persistence/01.dom.json'>原始 DOM</a></p><a href='cases/01-consent_persistence/01.png'><img loading='lazy' src='cases/01-consent_persistence/01.png' alt='步骤 1 回读截图'></a></section><section><h2>2. accept</h2><p>动作：{&#x27;kind&#x27;: &#x27;click&#x27;, &#x27;selector&#x27;: &#x27;button:has-text(&quot;Accept All Cookies&quot;)&#x27;}</p><p>判断：<strong>matched</strong>；匹配分支：expected</p><details><summary>动作前规则与预测</summary><pre>{
+  &quot;rules&quot;: [
+    {
+      &quot;id&quot;: &quot;UI-CONSENT&quot;,
+      &quot;statement&quot;: &quot;Accept All Cookies writes localStorage acceptance and hides banner; Cookie Settings has no handler.&quot;,
+      &quot;source_refs&quot;: [
+        &quot;frontend/src/components/CookieBanner.tsx:5-40&quot;
+      ],
+      &quot;preconditions&quot;: [
+        &quot;banner visible in fresh storage&quot;
+      ],
+      &quot;branches&quot;: [
+        &quot;accept: hidden, remains hidden on reload when storage works&quot;,
+        &quot;storage unavailable: hide current mount but return later&quot;,
+        &quot;settings: no implemented transition&quot;
+      ],
+      &quot;forbidden_side_effects&quot;: [
+        &quot;no backend business changes&quot;
+      ],
+      &quot;status&quot;: &quot;source_supported_partial_browser_evidence_other_branches_unverified&quot;,
+      &quot;interface&quot;: &quot;native UI&quot;,
+      &quot;browser_evidence&quot;: [
+        &quot;harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases&quot;
+      ],
+      &quot;check_ids&quot;: [
+        &quot;UI-CONSENT-endpoint&quot;,
+        &quot;UI-CONSENT-invariants&quot;
+      ],
+      &quot;observed_branches&quot;: [
+        &quot;accept and reload persistence passed independent check&quot;
+      ]
+    }
+  ],
+  &quot;expect&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;path&quot;: &quot;after.ui.fields.consent_count&quot;,
+          &quot;op&quot;: &quot;eq&quot;,
+          &quot;value&quot;: 0
+        }
+      ]
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+      &quot;op&quot;: &quot;eq&quot;,
+      &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+    }
+  ]
+}</pre></details><details><summary>实际检查结果</summary><pre>{
+  &quot;id&quot;: &quot;accept&quot;,
+  &quot;status&quot;: &quot;matched&quot;,
+  &quot;evidence&quot;: &quot;02.json&quot;,
+  &quot;screenshot&quot;: &quot;02.png&quot;,
+  &quot;action_completed&quot;: true,
+  &quot;branches&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.ui.fields.consent_count&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value&quot;: 0
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: 0,
+          &quot;expected&quot;: 0
+        }
+      ],
+      &quot;status&quot;: &quot;pass&quot;
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;check&quot;: {
+        &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+        &quot;op&quot;: &quot;eq&quot;,
+        &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+      },
+      &quot;status&quot;: &quot;pass&quot;,
+      &quot;actual&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      },
+      &quot;expected&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      }
+    }
+  ],
+  &quot;matched_branches&quot;: [
+    &quot;expected&quot;
+  ],
+  &quot;elapsed_seconds&quot;: 1.3280000000013388
+}</pre></details><details><summary>本步骤浏览器网络反馈</summary><pre>[]</pre></details><details><summary>独立后台表指纹变化</summary><pre>{
+  &quot;changed_tables&quot;: [],
+  &quot;unchanged_tables&quot;: [
+    &quot;alembic_version&quot;,
+    &quot;artists&quot;,
+    &quot;cart_items&quot;,
+    &quot;collection_items&quot;,
+    &quot;comments&quot;,
+    &quot;genres&quot;,
+    &quot;labels&quot;,
+    &quot;marketplace_listings&quot;,
+    &quot;order_items&quot;,
+    &quot;orders&quot;,
+    &quot;release_artists&quot;,
+    &quot;release_formats&quot;,
+    &quot;release_genres&quot;,
+    &quot;release_labels&quot;,
+    &quot;release_styles&quot;,
+    &quot;releases&quot;,
+    &quot;styles&quot;,
+    &quot;tracks&quot;,
+    &quot;users&quot;,
+    &quot;wantlist_items&quot;
+  ]
+}</pre></details><p><a href='cases/01-consent_persistence/02.json'>完整前后观察 JSON</a> · <a href='cases/01-consent_persistence/02.dom.json'>原始 DOM</a></p><a href='cases/01-consent_persistence/02.png'><img loading='lazy' src='cases/01-consent_persistence/02.png' alt='步骤 2 回读截图'></a></section><section><h2>3. reload</h2><p>动作：{&#x27;kind&#x27;: &#x27;reload&#x27;}</p><p>判断：<strong>matched</strong>；匹配分支：expected</p><details><summary>动作前规则与预测</summary><pre>{
+  &quot;rules&quot;: [
+    {
+      &quot;id&quot;: &quot;UI-CONSENT&quot;,
+      &quot;statement&quot;: &quot;Accept All Cookies writes localStorage acceptance and hides banner; Cookie Settings has no handler.&quot;,
+      &quot;source_refs&quot;: [
+        &quot;frontend/src/components/CookieBanner.tsx:5-40&quot;
+      ],
+      &quot;preconditions&quot;: [
+        &quot;banner visible in fresh storage&quot;
+      ],
+      &quot;branches&quot;: [
+        &quot;accept: hidden, remains hidden on reload when storage works&quot;,
+        &quot;storage unavailable: hide current mount but return later&quot;,
+        &quot;settings: no implemented transition&quot;
+      ],
+      &quot;forbidden_side_effects&quot;: [
+        &quot;no backend business changes&quot;
+      ],
+      &quot;status&quot;: &quot;source_supported_partial_browser_evidence_other_branches_unverified&quot;,
+      &quot;interface&quot;: &quot;native UI&quot;,
+      &quot;browser_evidence&quot;: [
+        &quot;harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases&quot;
+      ],
+      &quot;check_ids&quot;: [
+        &quot;UI-CONSENT-endpoint&quot;,
+        &quot;UI-CONSENT-invariants&quot;
+      ],
+      &quot;observed_branches&quot;: [
+        &quot;accept and reload persistence passed independent check&quot;
+      ]
+    }
+  ],
+  &quot;expect&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;path&quot;: &quot;after.ui.fields.consent_count&quot;,
+          &quot;op&quot;: &quot;eq&quot;,
+          &quot;value&quot;: 0
+        }
+      ]
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+      &quot;op&quot;: &quot;eq&quot;,
+      &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+    }
+  ]
+}</pre></details><details><summary>实际检查结果</summary><pre>{
+  &quot;id&quot;: &quot;reload&quot;,
+  &quot;status&quot;: &quot;matched&quot;,
+  &quot;evidence&quot;: &quot;03.json&quot;,
+  &quot;screenshot&quot;: &quot;03.png&quot;,
+  &quot;action_completed&quot;: true,
+  &quot;branches&quot;: [
+    {
+      &quot;id&quot;: &quot;expected&quot;,
+      &quot;checks&quot;: [
+        {
+          &quot;check&quot;: {
+            &quot;path&quot;: &quot;after.ui.fields.consent_count&quot;,
+            &quot;op&quot;: &quot;eq&quot;,
+            &quot;value&quot;: 0
+          },
+          &quot;status&quot;: &quot;pass&quot;,
+          &quot;actual&quot;: 0,
+          &quot;expected&quot;: 0
+        }
+      ],
+      &quot;status&quot;: &quot;pass&quot;
+    }
+  ],
+  &quot;invariants&quot;: [
+    {
+      &quot;check&quot;: {
+        &quot;path&quot;: &quot;after.backend.table_hashes&quot;,
+        &quot;op&quot;: &quot;eq&quot;,
+        &quot;value_from&quot;: &quot;before.backend.table_hashes&quot;
+      },
+      &quot;status&quot;: &quot;pass&quot;,
+      &quot;actual&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      },
+      &quot;expected&quot;: {
+        &quot;alembic_version&quot;: &quot;c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe&quot;,
+        &quot;artists&quot;: &quot;5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462&quot;,
+        &quot;cart_items&quot;: &quot;4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945&quot;,
+        &quot;collection_items&quot;: &quot;d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2&quot;,
+        &quot;comments&quot;: &quot;6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59&quot;,
+        &quot;genres&quot;: &quot;dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59&quot;,
+        &quot;labels&quot;: &quot;ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3&quot;,
+        &quot;marketplace_listings&quot;: &quot;9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11&quot;,
+        &quot;order_items&quot;: &quot;b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6&quot;,
+        &quot;orders&quot;: &quot;fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0&quot;,
+        &quot;release_artists&quot;: &quot;31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293&quot;,
+        &quot;release_formats&quot;: &quot;b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c&quot;,
+        &quot;release_genres&quot;: &quot;3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0&quot;,
+        &quot;release_labels&quot;: &quot;998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0&quot;,
+        &quot;release_styles&quot;: &quot;da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1&quot;,
+        &quot;releases&quot;: &quot;17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f&quot;,
+        &quot;styles&quot;: &quot;88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114&quot;,
+        &quot;tracks&quot;: &quot;ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad&quot;,
+        &quot;users&quot;: &quot;c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77&quot;,
+        &quot;wantlist_items&quot;: &quot;b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d&quot;
+      }
+    }
+  ],
+  &quot;matched_branches&quot;: [
+    &quot;expected&quot;
+  ],
+  &quot;elapsed_seconds&quot;: 2.3280000000013388
+}</pre></details><details><summary>本步骤浏览器网络反馈</summary><pre>[
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;document&quot;,
+    &quot;time_ns&quot;: 1792488694995941800,
+    &quot;content_type&quot;: &quot;text/html; charset=utf-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/58aee5060854675c.css&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;stylesheet&quot;,
+    &quot;time_ns&quot;: 1792488695168462800,
+    &quot;content_type&quot;: &quot;text/css; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511379938547-c1f69419868d%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1600%26q%3D80&amp;w=1080&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695196336500,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/d51ffd26e47a2752.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695198903500,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/236f7e5abd6f09ff.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695202467900,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/30ea11065999f7ac.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695364975800,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/turbopack-7efcdd314ea523bb.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695368498400,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/17bb38bff44521fb.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695371526200,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/3837daba712f8c3a.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695375222700,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/ff1a16fafef87110.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695378268100,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/7340adf74ff47ec0.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695381298500,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/static/chunks/af0f3eebadcb441c.js&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;script&quot;,
+    &quot;time_ns&quot;: 1792488695383313900,
+    &quot;content_type&quot;: &quot;application/javascript; charset=UTF-8&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1524678606370-a47ad25cb82a%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=48&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695389364500,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514320291840-2e0a9bf2a9ae%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=48&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695391381700,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514924013411-cbf25faa35bb%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=48&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695394387800,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1485579149621-3123dd979885%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1400%26q%3D80&amp;w=1080&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695407997400,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514320291840-2e0a9bf2a9ae%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695461630200,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1525286116112-b59af11adad1%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695465145600,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1514924013411-cbf25faa35bb%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695468145100,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1531058020387-3be344556be6%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695471144600,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1485579149621-3123dd979885%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695474150500,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511379938547-c1f69419868d%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695476676200,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1517230878791-4d28214057c2%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695479677700,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511671782779-c97d3d27a1d4%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695482677200,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1530133532239-eda6f53fcf0f%3Fauto%3Dformat%26fit%3Dcrop%26w%3D600%26q%3D80&amp;w=384&amp;q=75&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;image&quot;,
+    &quot;time_ns&quot;: 1792488695486680400,
+    &quot;content_type&quot;: &quot;image/webp&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/favicon.ico?favicon.0b3bf435.ico&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;other&quot;,
+    &quot;time_ns&quot;: 1792488695489678600,
+    &quot;content_type&quot;: &quot;image/x-icon&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/favicon.ico?favicon.0b3bf435.ico&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;other&quot;,
+    &quot;time_ns&quot;: 1792488695505783100,
+    &quot;content_type&quot;: &quot;image/x-icon&quot;
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695508856400,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/23?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695521320000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/30?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695534164700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/109?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695549419500,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/102?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695571424100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695585425200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/121?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695600026600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/168?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695614193000,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/192?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695639278200,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/26?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695653695600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/59?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695666694900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/84?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695679161100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/login?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695706262700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/cart?_rsc=1r34m&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695722269900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/221?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695741268300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/23?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695760266600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/30?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695792266500,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/109?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695809266900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/102?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695831270600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695850282400,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/121?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695887066600,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/168?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695908655300,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/192?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695926649100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/26?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695943649900,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/59?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695975648500,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/release/84?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695979651100,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/login?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695983645800,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  },
+  {
+    &quot;url&quot;: &quot;http://127.0.0.1:12042/cart?_rsc=p37cr&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;status&quot;: 200,
+    &quot;resource_type&quot;: &quot;fetch&quot;,
+    &quot;time_ns&quot;: 1792488695986647700,
+    &quot;content_type&quot;: &quot;text/x-component&quot;,
+    &quot;request_json&quot;: null
+  }
+]</pre></details><details><summary>独立后台表指纹变化</summary><pre>{
+  &quot;changed_tables&quot;: [],
+  &quot;unchanged_tables&quot;: [
+    &quot;alembic_version&quot;,
+    &quot;artists&quot;,
+    &quot;cart_items&quot;,
+    &quot;collection_items&quot;,
+    &quot;comments&quot;,
+    &quot;genres&quot;,
+    &quot;labels&quot;,
+    &quot;marketplace_listings&quot;,
+    &quot;order_items&quot;,
+    &quot;orders&quot;,
+    &quot;release_artists&quot;,
+    &quot;release_formats&quot;,
+    &quot;release_genres&quot;,
+    &quot;release_labels&quot;,
+    &quot;release_styles&quot;,
+    &quot;releases&quot;,
+    &quot;styles&quot;,
+    &quot;tracks&quot;,
+    &quot;users&quot;,
+    &quot;wantlist_items&quot;
+  ]
+}</pre></details><p><a href='cases/01-consent_persistence/03.json'>完整前后观察 JSON</a> · <a href='cases/01-consent_persistence/03.dom.json'>原始 DOM</a></p><a href='cases/01-consent_persistence/03.png'><img loading='lazy' src='cases/01-consent_persistence/03.png' alt='步骤 3 回读截图'></a></section></html>

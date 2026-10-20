@@ -1,0 +1,12 @@
+{
+  "public_input_only": true,
+  "frozen_files_modified": false,
+  "report_sha256": "75608e4e914dca18bcf6e4f0cb61366ced6d7ef494997fd4c5f0f541eca5515c",
+  "local_assets_and_links_checked": 25,
+  "missing_local_targets": [],
+  "remote_runtime_resources": [],
+  "19_prediction_dispatch_complete_order_valid": true,
+  "two_checkpoint_before_dispatch_orders_valid": true,
+  "request_decision_evidence_hashes_match": true,
+  "money_units": "2812+3051=5863 cents = USD28.12+USD30.51=USD58.63"
+}

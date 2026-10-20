@@ -1,0 +1,99 @@
+{
+  "revision": "pw-complex-v001",
+  "model": "gpt-6.1-sol",
+  "phase": "source-visible phase1 reused author knowledge",
+  "all_source_manifest": "source_review.json",
+  "manifest_sha256": "2b07bcfbbad211d5b0707669c530fd377b5532c75f601b477f5c5639891bda02",
+  "source_counts": {
+    "read_text": 99,
+    "dependency_metadata_only": 1,
+    "decorative_inventory_only": 6,
+    "excluded_opaque_hash_only": 4
+  },
+  "task_relations": [
+    {
+      "stage": "login",
+      "source_refs": [
+        "frontend/src/app/login/LoginClient.tsx:26-49",
+        "frontend/src/app/api/auth/login/route.ts:5-27",
+        "backend/app/api/auth.py:38-45"
+      ],
+      "source_claim": "Original login static UI path submits credentials, stores cookie and navigates; prior real200/400 evidence exists.",
+      "task_added_constraint": "Use fixed public demo buyer; login refusal stops."
+    },
+    {
+      "stage": "header_search_and_detail",
+      "source_refs": [
+        "frontend/src/components/Header.tsx:22-36",
+        "frontend/src/app/search/page.tsx:12-37",
+        "backend/app/api/catalog.py:351-377",
+        "frontend/src/app/release/[id]/page.tsx:20-68",
+        "frontend/src/components/ReleaseActions.tsx:55-60"
+      ],
+      "source_claim": "Header native GET search reaches server apiGet with q preserved; release links expose correct object ID and Marketplace navigation.",
+      "task_added_constraint": "Select exact release221, not a same-name or artist-neighbor card."
+    },
+    {
+      "stage": "market_filter_selection",
+      "source_refs": [
+        "frontend/src/app/sell/release/[id]/page.tsx:18-47",
+        "frontend/src/app/sell/release/[id]/page.tsx:63-115",
+        "frontend/src/app/sell/release/[id]/page.tsx:123-170",
+        "backend/app/api/marketplace.py:32-90"
+      ],
+      "source_claim": "UI forwards rating and sort; active-only query rating>=value, sorted price asc with creation tie-break; total before pagination, default limit50, rows expose seller/rating/currency/price and add href listing ID.",
+      "task_added_constraint": "Require row_count==displayedtotal<=50; exclude seller demo; distinct seller pair; USD only; choose lexicographically minimal(total,lowerid,higherid) pair and cap10000cents. These optimize task objective, not native website validation rules."
+    },
+    {
+      "stage": "cross_page_memory",
+      "source_refs": [
+        "frontend/src/app/cart/CartClient.tsx:103-115",
+        "frontend/src/app/release/[id]/page.tsx:63-68",
+        "frontend/src/components/ReleaseActions.tsx:55-60"
+      ],
+      "source_claim": "Cart release link returns detail; detail links marketplace; marketplace exposes offer ID only via native add href.",
+      "task_added_constraint": "Remember two selectedIDs, seller/price/condition/origin; return via actual links, reapply filters and verify second selection has not changed. No URL-injected writes."
+    },
+    {
+      "stage": "cart_add_read",
+      "source_refs": [
+        "frontend/src/app/cart/CartClient.tsx:57-79",
+        "frontend/src/app/api/cart/items/route.ts:5-17",
+        "backend/app/api/account.py:127-179",
+        "backend/app/schemas/cart.py:27-30"
+      ],
+      "source_claim": "Cart query add triggers one POST quantity1, then reads CartOut; repeating same listing accumulates quantity. UI shows unitprice/total but hides quantity; browser GET response exposes IDs/quantities.",
+      "task_added_constraint": "Exactly two different listings, exactly1each. Never blind-repeat uncertain add. Read permitted browser-origin response, not privileged backend/API action."
+    },
+    {
+      "stage": "before_checkout_checkpoint",
+      "source_refs": [
+        "frontend/src/app/cart/CartClient.tsx:154-180",
+        "backend/app/api/account.py:189-229"
+      ],
+      "source_claim": "Checkout button initiates order mutation. No native confirmation dialog precedes write; alert is after successful commit.",
+      "task_added_constraint": "Harness must add real pause before click; Solar receives public raw UI evidence, independent evaluator must explicitlycontinue. Need new generic contract; not implement by guessing."
+    },
+    {
+      "stage": "checkout_final",
+      "source_refs": [
+        "frontend/src/app/cart/CartClient.tsx:162-180",
+        "frontend/src/app/api/checkout/route.ts:5-11",
+        "backend/app/api/account.py:189-229",
+        "backend/app/models/order.py:12-40"
+      ],
+      "source_claim": "Nonempty/allactivecart yields one paidUSDorder, snapshots unitprice*quantity, each listing sold without quantity decrement, buyer cart clear, one commit; 400 empty/unavailable; UI reload then alert. No shipping/tax addition in total.",
+      "task_added_constraint": "Single checkout, two exactitems; total equals committedselection and budget; independently verify old state preserved. Request uncertainty does not authorize automatic retry."
+    },
+    {
+      "stage": "known_route_limits",
+      "source_refs": [
+        "frontend/next.config.ts:4-13",
+        ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+      ],
+      "source_claim": "Original afterFiles rewrite masks dynamic API handler; prior membership/search/delete404 confirmed.",
+      "task_added_constraint": "Do not rely on deletion to clean up cart or membership/sellerfeatures; unexpected state stops and coordinator/evaluator may reset for a new run, never silently during task."
+    }
+  ],
+  "status": "source review and public task proposal only; no script interface guessed; no business execution"
+}

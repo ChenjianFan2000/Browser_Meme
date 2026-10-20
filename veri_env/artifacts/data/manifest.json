@@ -1,0 +1,16 @@
+{
+  "created_before_model_calls": true,
+  "counts": {
+    "train": 36,
+    "dev": 16,
+    "one_step": 24,
+    "rollout": 12,
+    "adapt": 6,
+    "drift": 12
+  },
+  "hashes": {
+    "artifacts\\data\\train.json": "5e70cecc177a38b7db2efb690ff902c345394183a613991c38979a24e6eb3d4e",
+    "artifacts\\data\\adapt.json": "88297593bc71ddf71c9caaff823c4f4e69c05216fbdb80af8460014f6eaeb5a5",
+    "artifacts\\private_eval\\splits.json": "92da04d8393d11538298d30fcfe6cb1aa10cf14b10cd39f714a04271d9331675"
+  }
+}

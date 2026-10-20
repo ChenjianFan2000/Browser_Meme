@@ -1,0 +1,137 @@
+{
+  "scope": "Original backend and independent adapter component validation only; no browser UI execution",
+  "health": {
+    "status": 200,
+    "body": {
+      "ok": true
+    }
+  },
+  "invalid_login": {
+    "status": 400,
+    "detail": "Invalid credentials",
+    "unchanged": true
+  },
+  "read_only_observation": {
+    "equal_repeated_snapshot": true,
+    "database_file_hash_unchanged": true
+  },
+  "unmet_collection_goal": [
+    {
+      "id": "unrelated_tables_unchanged",
+      "passed": true,
+      "detail": "Unchanged tables: alembic_version, artists, cart_items, comments, genres, labels, marketplace_listings, order_items, orders, release_artists, release_formats, release_genres, release_labels, release_styles, releases, styles, tracks, users, wantlist_items"
+    },
+    {
+      "id": "exact_target_added",
+      "passed": false,
+      "detail": "Exactly one target membership persisted for demo"
+    },
+    {
+      "id": "other_memberships_unchanged",
+      "passed": true,
+      "detail": "All other membership rows preserved"
+    },
+    {
+      "id": "list_page_visible",
+      "passed": false,
+      "detail": "Persisted membership is visible on the requested list page"
+    }
+  ],
+  "api_collection_add": {
+    "status": 200,
+    "target_persisted": true,
+    "evaluator_checks_with_ui_absent": [
+      {
+        "id": "unrelated_tables_unchanged",
+        "passed": true,
+        "detail": "Unchanged tables: alembic_version, artists, cart_items, comments, genres, labels, marketplace_listings, order_items, orders, release_artists, release_formats, release_genres, release_labels, release_styles, releases, styles, tracks, users, wantlist_items"
+      },
+      {
+        "id": "exact_target_added",
+        "passed": true,
+        "detail": "Exactly one target membership persisted for demo"
+      },
+      {
+        "id": "other_memberships_unchanged",
+        "passed": true,
+        "detail": "All other membership rows preserved"
+      },
+      {
+        "id": "list_page_visible",
+        "passed": false,
+        "detail": "Persisted membership is visible on the requested list page"
+      }
+    ],
+    "not_a_ui_success": true
+  },
+  "reset_after_real_api_mutation": {
+    "all_observed_state_restored": true
+  },
+  "resets": [
+    {
+      "case_id": "invalid_login",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "catalog_search",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "anonymous_collection",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "collection_add",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "wantlist_add",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "cart_add",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "checkout",
+      "table_hashes_match": true
+    },
+    {
+      "case_id": "seller_create_deactivate",
+      "table_hashes_match": true
+    }
+  ],
+  "baseline_sha256": "6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50",
+  "table_counts": {
+    "alembic_version": 1,
+    "artists": 72,
+    "cart_items": 0,
+    "collection_items": 690,
+    "comments": 120,
+    "genres": 5,
+    "labels": 48,
+    "marketplace_listings": 639,
+    "order_items": 248,
+    "orders": 120,
+    "release_artists": 260,
+    "release_formats": 221,
+    "release_genres": 221,
+    "release_labels": 221,
+    "release_styles": 303,
+    "releases": 221,
+    "styles": 26,
+    "tracks": 2067,
+    "users": 30,
+    "wantlist_items": 497
+  },
+  "fixture": {
+    "listing_id": 1,
+    "release_id": 221,
+    "price_cents": 7251,
+    "quantity": 2,
+    "status": "active",
+    "currency": "USD",
+    "seller_user_id": "fd8a9900a5e342208aa167f6b49e79eb"
+  },
+  "frontend_status": "blocked: Next.js and SWC unavailable offline"
+}

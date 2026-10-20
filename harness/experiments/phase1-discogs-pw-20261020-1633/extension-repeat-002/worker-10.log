@@ -1,0 +1,6 @@
+Task exception was never retrieved
+future: <Task finished name='Task-1186' coro=<Response.finished.<locals>.on_finished() done, defined at G:\Browser_Meme\.runtime\phase1-discogs-pw-20261020-1633\venv\Lib\site-packages\playwright\_impl\_network.py:878> exception=Error('Target closed')>
+Traceback (most recent call last):
+  File "G:\Browser_Meme\.runtime\phase1-discogs-pw-20261020-1633\venv\Lib\site-packages\playwright\_impl\_network.py", line 880, in on_finished
+    raise Error("Target closed")
+playwright._impl._errors.Error: Target closed

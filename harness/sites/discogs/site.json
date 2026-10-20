@@ -1,0 +1,13 @@
+{
+  "site_id": "discogs",
+  "base_url": "http://127.0.0.1:12042",
+  "source_roots": ["veri_env/external/VeriEnv-main/websites/discogs"],
+  "adapter": "harness/sites/discogs/evaluator.py",
+  "allowed_hosts": ["127.0.0.1", "localhost"],
+  "description": "Existing VeriEnv Discogs full-stack clone, isolated SQLite marketplace runtime.",
+  "working_directory": ".",
+  "setup_command": "python harness/sites/discogs/deploy.py prepare",
+  "setup_argv": ["python", "harness/sites/discogs/deploy.py", "prepare"],
+  "start_command": "python harness/sites/discogs/deploy.py serve",
+  "start_argv": ["python", "harness/sites/discogs/deploy.py", "serve"]
+}

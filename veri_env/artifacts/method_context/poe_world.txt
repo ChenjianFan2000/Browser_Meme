@@ -1,0 +1,57 @@
+We observe that the possible effects of {action} on {obj_type} objects include
+{obs_lst_txt}
+
+We want to synthesize python functions that implements these effects. The format of the functions should be
+
+def alter_{obj_type}_objects(obj_list: ObjList, action: str) -> ObjList:
+    {obj_type}_objs = obj_list.get_objs_by_obj_type('{obj_type}') # get all Obj of obj_type '{obj_type}'
+    for {obj_type}_obj in {obj_type}_objs: # {obj_type}_obj is of type Obj
+        # You can assume {obj_type}_obj.velocity_x and {obj_type}_obj.velocity_y are integers.
+        pass
+    return obj_list
+
+And here are the docstrings for relevant classes:
+
+class RandomValues:
+    Use this class to express the possibility of random values. Example x = RandomValues([x + 2, x - 2])
+
+    Attributes:
+        values (list[ints]): list of possible values
+
+    Methods:
+        __init__(values):
+            Initialize an instance
+
+class Obj:
+    Attributes:
+        id (int): id of the object
+        obj_type (string): type of the object
+        velocity_x (int | RandomValues): x-axis velocity of the object
+        velocity_y (int | RandomValues): y-axis velocity of the object
+        deleted (int | RandomValues): whether this object gets deleted (1 if it does and 0 if it does not)
+
+    Methods:
+        touches(obj: Obj) -> bool:
+            Returns whether this Obj is touching the input obj (True/False)
+
+class ObjList:
+    Attributes:
+        objs (list of Obj)
+
+    Methods:
+        get_objs_by_obj_type(obj_type: str) -> list[Obj]:
+            Returns list of objects with the input obj_type
+
+        create_object(obj_type: str, x: int, y: int) -> ObjList:
+            Returns a new instance of ObjList with the new object (with obj_type, x, y) added
+
+Please output {n} different alter_{obj_type}_objects functions that explains each of the {n} possible effects of action '{action}' following these rules:
+1. Each function should make changes to one attribute -- this could be the x-axis position, y-axis position, creation of object, or deletion of object.
+2. Always use RandomValues to set attribute values. If there are conflicting changes to an attribute, instantiate RandomValues with a list of all possible values for that attribute.
+3. Use Obj.touches to check for interactions.
+4. Avoid setting each attribute value for each {obj_type} object more than once. For example, use 'break' inside a nested loop.
+5. You can assume the velocities of input objects are integers.
+6. Please use if-condition to indicate that the effects only happen because of action '{action}'
+Format the output as a numbered list.
+
+LOCAL ADAPTATION: replace Atari objects with issue records and interface fields. Factor effects into explicit guarded attribute experts and combine compatible outputs, keeping unchanged fields. The domain is deterministic: return the single predicted state. No RandomValues, geometry, external classes or unavailable probability training are required. Use only stdlib and pure predict(state, action). Do not claim a full product-of-experts probabilistic learner.

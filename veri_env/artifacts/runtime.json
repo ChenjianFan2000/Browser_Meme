@@ -1,0 +1,14 @@
+{
+  "python": "3.11.4 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 13:38:37) [MSC v.1916 64 bit (AMD64)]",
+  "executable": "D:\\Anaconda\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.0",
+    "pytest": "9.0.3",
+    "matplotlib": "3.7.1"
+  },
+  "external_api_credentials_used": false,
+  "model_transport": "authorized gpt-6-luna collaboration subagents",
+  "browser_ui_validation": "not_completed; agent-browser daemon connection timed out; Chrome MCP approval policy denied"
+}

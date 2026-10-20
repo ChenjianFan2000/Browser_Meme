@@ -1,0 +1,113 @@
+[
+  {
+    "id": "consent_persistence",
+    "goal": "Accept the cookie banner through the UI, reload the page and confirm it remains dismissed without business changes.",
+    "parameters": {
+      "kind": "consent_persistence"
+    }
+  },
+  {
+    "id": "genre_navigation",
+    "goal": "Navigate through Explore to the Rock genre overview, then open one displayed release card and read its tracklist without business changes.",
+    "parameters": {
+      "kind": "genre_navigation",
+      "slug": "rock"
+    }
+  },
+  {
+    "id": "search_empty",
+    "goal": "Submit an empty header search and confirm the empty search instruction and no release result cards without business changes.",
+    "parameters": {
+      "kind": "search_empty",
+      "query": ""
+    }
+  },
+  {
+    "id": "search_no_match",
+    "goal": "Search for the fixed unique unmatched text and confirm the search page has no release result cards without business changes.",
+    "parameters": {
+      "kind": "search_no_match",
+      "query": "phase1-unique-unmatched-20261020"
+    }
+  },
+  {
+    "id": "market_filter_none",
+    "goal": "Filter release 221 marketplace by a fixed nonexistent shipping origin and confirm no listing rows without business changes.",
+    "parameters": {
+      "kind": "market_filter_none",
+      "release_id": 221,
+      "ships_from": "phase1-no-country"
+    }
+  },
+  {
+    "id": "market_sort_desc",
+    "goal": "Use the release 221 marketplace Sort control to order active offers by price high to low, then verify the visible price order without business changes.",
+    "parameters": {
+      "kind": "market_sort_desc",
+      "release_id": 221,
+      "sort": "price_desc"
+    }
+  },
+  {
+    "id": "market_filter_combo",
+    "goal": "Read the first visible release 221 marketplace offer, apply its media condition, sleeve condition and shipping origin with descending price sort, and verify the nonempty matching rows without business changes.",
+    "parameters": {
+      "kind": "market_filter_combo",
+      "release_id": 221,
+      "sort": "price_desc",
+      "selection": "first_visible_offer"
+    }
+  },
+  {
+    "id": "collection_duplicate",
+    "goal": "Log in as demo, add release 221 to collection twice, reload the detail and verify exactly one persistent target membership on the collection page; leave all other business state unchanged.",
+    "parameters": {
+      "kind": "collection_duplicate",
+      "username": "demo",
+      "password": "[REDACTED]",
+      "release_id": 221
+    }
+  },
+  {
+    "id": "wantlist_duplicate",
+    "goal": "Log in as demo, add release 221 to wantlist twice, reload the detail and verify exactly one persistent target membership on the wantlist page; leave all other business state unchanged.",
+    "parameters": {
+      "kind": "wantlist_duplicate",
+      "username": "demo",
+      "password": "[REDACTED]",
+      "release_id": 221
+    }
+  },
+  {
+    "id": "cart_repeat_remove",
+    "goal": "Log in as demo, add listing 1 twice through its release marketplace link, verify one cart row and twice the unit-price total, then Remove it and verify an empty cart and disabled checkout; create no order and leave all final business state unchanged.",
+    "parameters": {
+      "kind": "cart_repeat_remove",
+      "username": "demo",
+      "password": "[REDACTED]",
+      "release_id": 221,
+      "listing_id": 1
+    }
+  },
+  {
+    "id": "anonymous_cart_return",
+    "goal": "From a fresh anonymous context click listing 1 Add to Cart, reach login, sign in as demo and verify the return flow adds the exact listing once to cart with no order or unrelated changes.",
+    "parameters": {
+      "kind": "anonymous_cart_return",
+      "username": "demo",
+      "password": "[REDACTED]",
+      "release_id": 221,
+      "listing_id": 1
+    }
+  },
+  {
+    "id": "signout_gate",
+    "goal": "Log in as demo, add release 221 to collection, sign out using the account menu and revisit collection to reach login; keep the added membership and leave unrelated business state unchanged.",
+    "parameters": {
+      "kind": "signout_gate",
+      "username": "demo",
+      "password": "[REDACTED]",
+      "release_id": 221
+    }
+  }
+]

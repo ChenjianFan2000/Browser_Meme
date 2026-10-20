@@ -1,0 +1,37 @@
+{
+  "model": "gpt-6.1-sol",
+  "context": "independent source-visible phase1 Solar author; fork_turns=none",
+  "parent_version": "pw-v001 (same phase-one author/source review)",
+  "old_model_read": false,
+  "allowed_inputs": [
+    "AGENTS.md",
+    "实验方案.md",
+    "研究目标.md",
+    "full upstream implementation/config/schema/migrations",
+    "public adapter_contract.md",
+    "public cases.json",
+    "harness/SCRIPT_CONTRACT.md",
+    "current experiment PROTOCOL.md",
+    "generic checks.py and contract.py",
+    "public fixed extension_cases.json",
+    "pw-v001 own source review/rules and script building blocks",
+    "pw-v001-audit-supplement.json"
+  ],
+  "excluded_inputs": [
+    "evaluator.py",
+    "private evaluators/oracles",
+    "historical results/test answers",
+    "upstream task_instructions.json",
+    "task-generation scripts"
+  ],
+  "access_isolation": "independent context only; no OS sandbox claimed",
+  "business_execution_count": 0,
+  "database_mutations_by_author": 0,
+  "script_contract": "harness/SCRIPT_CONTRACT.md protocol2",
+  "source_review_manifest": "source_review.json",
+  "token_usage": null,
+  "billing": null,
+  "revision": "pw-extension-v001",
+  "fixed_cases": "harness/sites/discogs/extension_cases.json",
+  "fixed_cases_sha256": "c8b2aa28d71ace0d7e6f1d1828a96a57be7bb26041ce80110ec0e86d88694011"
+}

@@ -1,0 +1,17 @@
+{
+  "time_utc": "2026-10-20T10:38:52.083170+00:00",
+  "markdown_links_checked": 35,
+  "missing_links": [],
+  "owned_service_ports_after_stop": [
+    {
+      "port": 12042,
+      "listening": false
+    },
+    {
+      "port": 12138,
+      "listening": false
+    }
+  ],
+  "stop_marker": ".runtime/phase1-complex-pw-20261020-1815/stop-session-001",
+  "passed": true
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "Offline deployment lifecycle component checks with sleeping Python processes; no website or browser launched",
+  "stop_file_during_runtime": true,
+  "startup_stop_before_probes": true,
+  "sigterm_during_start_cleanup": true,
+  "owned_children_reaped": true,
+  "unrelated_process_preserved": true,
+  "signal_handlers_restored": true,
+  "normal_stop_elapsed_seconds": 0.5149999999994179,
+  "external_windows_ctrl_break_delivery_tested": false
+}

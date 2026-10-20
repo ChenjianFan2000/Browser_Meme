@@ -1,0 +1,86 @@
+{
+  "decision": "continue",
+  "checks": [
+    {
+      "id": "required_actual_channels",
+      "passed": true,
+      "detail": "Actual independent UI and transaction-consistent DB snapshots required"
+    },
+    {
+      "id": "no_unconfirmed_mutation",
+      "passed": true,
+      "detail": "Every observed API mutation dispatch has a confirmed successful response; pending/failed writes cannot authorize continuation"
+    },
+    {
+      "id": "authenticated_demo",
+      "passed": true,
+      "detail": "Current signed, unexpired auth subject matches initial demo account"
+    },
+    {
+      "id": "initial_cart_empty",
+      "passed": true,
+      "detail": "Initial demo cart must be empty"
+    },
+    {
+      "id": "independent_budget_pair_exists",
+      "passed": true,
+      "detail": "Independent initial-state enumeration finds a distinct-seller USD optimum within fixed budget"
+    },
+    {
+      "id": "search_detail_market_navigation",
+      "passed": true,
+      "detail": "Actual search-result, release-detail and filtered marketplace observations occur in order"
+    },
+    {
+      "id": "login_succeeded",
+      "passed": true,
+      "detail": "One successful real UI login response"
+    },
+    {
+      "id": "only_cart_changed_before_checkout",
+      "passed": true,
+      "detail": "No orders/items/listings/catalog/accounts/memberships changed before checkout"
+    },
+    {
+      "id": "other_users_carts_preserved",
+      "passed": true,
+      "detail": "Other users' cart rows unchanged"
+    },
+    {
+      "id": "exact_independent_pair_quantity_total",
+      "passed": true,
+      "detail": "Actual demo cart equals independent canonical pair, each qty1 and exact total"
+    },
+    {
+      "id": "exact_cart_dom",
+      "passed": true,
+      "detail": "Two visible seller/price/release rows, exact summary total and enabled Checkout"
+    },
+    {
+      "id": "cross_page_second_offer_readback",
+      "passed": true,
+      "detail": "After one-item cart, actual release detail then re-filtered complete marketplace revalidates the other offer"
+    },
+    {
+      "id": "exactly_two_real_adds",
+      "passed": true,
+      "detail": "Exactly two actual POST add responses; original safe request IDs and quantities match"
+    },
+    {
+      "id": "actual_cart_get_matches",
+      "passed": true,
+      "detail": "Latest successful browser GET cart payload independently agrees with DB and DOM"
+    },
+    {
+      "id": "no_checkout_or_unrelated_dispatch",
+      "passed": true,
+      "detail": "No Checkout or other write dispatch before explicit gate"
+    },
+    {
+      "id": "observed_unrelated_state_preserved",
+      "passed": true,
+      "detail": "Unrelated tables unchanged at every recorded pre-checkout state"
+    }
+  ],
+  "public_summary": "独立检查通过；仅可在本次状态复核和Solar明确继续后执行紧邻的声明操作。"
+}

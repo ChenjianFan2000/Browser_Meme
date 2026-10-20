@@ -1,0 +1,104 @@
+{
+  "current": {
+    "source": "G:/Browser_Meme/研究目标.md",
+    "scope": "proposed rule-memory plus executable predictor",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "18d415e97128f29e8f381cbc6e5893cb32d93ef0dfa26a5fdb6e72bb54e4d020"
+  },
+  "verienv_clone": {
+    "source": "external/VeriEnv-main/prompt.yaml",
+    "scope": "behavior-clone proxy; native judge is separate; no RFT",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "8e84afe657dec3ebda751d77978894eb415dcb270a2ab77a8cf9278ad5318135"
+  },
+  "worldcoder": {
+    "source": "external/WorldCoder/worldcoder/agent/synthesizer/init_transit.py",
+    "scope": "original synthesis prompt adapted to JSON; no optimistic reward learning/planner",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "4a8637b00c22d9257b45aafdc5416d701796b00d10912f57cc1adcfec07fa950"
+  },
+  "patchworld": {
+    "source": "external/PatchWorld/patchworld/inducer_prompts.py",
+    "scope": "original induction prompt plus native replay validator; no full TracePatch search",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "6e6fbcd65a756b6fbb251515a74b8120fa67d4d0af84713a0d28a8d8d8da6d07"
+  },
+  "gif_mcts": {
+    "source": "external/code-world-models/data/prompts/gymnasium_envs/Taxi-v3/generate.md",
+    "scope": "Generate/Improve/Fix prompt adaptation; one candidate and one repair, no MCTS search",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "2f12650267d8977e33b0fa7f6e0284e2bd7da607d96b8cbae041a40549e33553"
+  },
+  "poe_world": {
+    "source": "external/poe-world/prompts/synthesizer.py",
+    "scope": "deterministic attribute-expert adaptation; no learned probability weights or Atari planner",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "6c4845aca521ce6511f57f65c0826d66aeb87dd2199ccc4e6fe07ce807f8737c"
+  },
+  "agent2world": {
+    "source": "external/agent2world/src/prompts/gen_code.py",
+    "scope": "original code-agent prompt; independent feedback repair, no research tools, SFT or multi-agent pipeline",
+    "kind": "code",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "1d9ec6b0890a95aa65ed09a4ba6089a663401b1e9a3234ce20f8b721872ccc13"
+  },
+  "luna_direct": {
+    "source": null,
+    "scope": "direct in-context transition prediction baseline",
+    "kind": "direct",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "6e3314467d8a648bca7470c11b8a64cc1c9fb9e8ac61ac562fa28f4a6018fab4"
+  },
+  "wma": {
+    "source": "external/WMA-Agents/agent/prompts/jsons/state_prediction/text_only_description_with_tao_format.json",
+    "scope": "original transition-focused instruction on Luna; structured observations; no Llama adapter/action selection",
+    "kind": "direct",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "cbf22881571db160484e34b833bbfb3b170ca04d20786ac15a5e89bbdb5ec5f5"
+  },
+  "webdreamer": {
+    "source": "external/WebDreamer/world_model.py",
+    "scope": "state-change imagination instruction on Luna; no screenshots/action search/value model",
+    "kind": "direct",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "954b39e76036cefaab39d7cb5e15d3573c662e9bdc0e56f1326a78fcefd0682e"
+  },
+  "webevolver": {
+    "source": "external/SelfEvolvingAgent/WebEvolver/cognitive_kernel_v2/backend/cognitive_kernel/call_web.py",
+    "scope": "original world-model instruction on Luna; no joint self-evolution or fine-tuning",
+    "kind": "direct",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "7c974e7de8fe2a5f93f53ed96df4cb4362d4299216eff9963a0fac33ef74e6c7"
+  },
+  "webworld": {
+    "source": "external/WebWorld/demo/prompts.py",
+    "scope": "original trajectory-prediction instruction on Luna; no Qwen/WebWorld weights",
+    "kind": "direct",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high",
+    "context_sha256": "ab154600ac9287dc9ef6f66b72b23ac58a57566e5ce56445f52d54039a473f5b"
+  },
+  "code2world": {
+    "kind": "not_comparable",
+    "source": "external/Code2World/android_world/agents/m3a_qwen.py",
+    "scope": "native prompt/transport component check only; screenshot-to-HTML prediction does not expose a business-state transition interface; no prediction score",
+    "required_for_full_run": "AndroidWorld emulator, GD-ML/Code2World checkpoint, image rendering, visual evaluation"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "scope": "JWT-pattern scan of initial run cases, event logs and exported trace ZIP members; not a universal secret detector",
+  "entries_checked": 1124,
+  "finding_paths": []
+}

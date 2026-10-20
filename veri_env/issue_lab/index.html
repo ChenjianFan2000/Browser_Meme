@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Issue Lab</title>
+<style>
+  body{font:16px system-ui,sans-serif;margin:2rem auto;padding:0 1rem;max-width:1100px;color:#18243b;background:#f4f7fb}
+  h1{margin-bottom:.3rem} section{background:white;border:1px solid #ccd6e3;border-radius:8px;padding:1rem;margin:1rem 0}
+  form,.controls{display:flex;gap:.7rem;flex-wrap:wrap;align-items:end} label{display:inline-flex;gap:.4rem;align-items:center}
+  input,select,button{font:inherit;padding:.4rem;border:1px solid #a9b7c9;border-radius:4px}button{background:#e9eff8;cursor:pointer}
+  button:hover{background:#dae5f4}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2861cf;outline-offset:2px}
+  table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.6rem;border-bottom:1px solid #dde3ec}
+  caption{text-align:left;font-weight:600;padding:.5rem 0}#notice{padding:.6rem;border-left:4px solid #33764b}#notice[data-ok=false]{border-color:#b74231}
+  .hint{color:#526176;font-size:.9rem} #comments p{margin:.3rem 0} .scroll{overflow-x:auto}
+</style>
+<h1>Issue Lab</h1>
+<p class="hint">A miniature local workflow experiment. All six issues are public in the observation, including rows hidden by filters.</p>
+<p>Role: <strong id="role">Loading</strong> · Selected: <span id="selection">0</span></p>
+<div id="notice" role="status" aria-live="polite">Loading state…</div>
+<section aria-label="Filters and sorting">
+  <form id="filter-form">
+    <label>Status <select id="status"><option value="all">All</option><option value="open">Open</option><option value="closed">Closed</option></select></label>
+    <label>Label <input id="filter-label" placeholder="Any label"></label>
+    <button type="submit">Apply filter</button>
+    <label>Sort by ID <select id="sort"><option value="asc">Ascending</option><option value="desc">Descending</option></select></label>
+  </form>
+</section>
+<section aria-label="Visible issues">
+  <div class="controls"><button id="select-all" type="button">Select all visible</button><button id="clear-selection" type="button">Clear selection</button></div>
+  <div class="scroll"><table><caption id="count">Visible issues</caption>
+    <thead><tr><th scope="col">Select</th><th scope="col">ID</th><th scope="col">Title</th><th scope="col">Status</th><th scope="col">Labels</th><th scope="col">Blocked</th><th scope="col">Priority</th></tr></thead>
+    <tbody id="issues"></tbody>
+  </table></div>
+  <div id="comments" aria-label="Visible issue comments"></div>
+</section>
+<section aria-label="Bulk actions">
+  <h2>Actions on selected issues</h2>
+  <form id="label-form"><label>Label <input id="bulk-label"></label><button type="submit">Add label</button></form>
+  <form id="close-form"><label>Close reason <input id="close-reason"></label><button type="submit">Close selected</button><button id="reopen" type="button">Reopen selected</button></form>
+  <form id="comment-form"><label>Comment <input id="comment-text"></label><button type="submit">Add comment</button></form>
+</section>
+<script>
+'use strict';
+let state;
+const el = id => document.getElementById(id);
+function cell(row, text) { const td = document.createElement('td'); td.textContent = text; row.append(td); return td; }
+function render(next) {
+  state = next;
+  el('role').textContent = state.role;
+  el('selection').textContent = state.selected.join(', ') || 'None';
+  el('notice').textContent = state.feedback.code;
+  el('notice').dataset.ok = String(state.feedback.ok);
+  el('status').value = state.filter.status; el('filter-label').value = state.filter.label; el('sort').value = state.sort;
+  el('issues').replaceChildren(); el('comments').replaceChildren();
+  el('count').textContent = `${state.visible_ids.length} visible of ${state.issues.length} public issues`;
+  const byId = new Map(state.issues.map(issue => [issue.id, issue]));
+  for (const id of state.visible_ids) {
+    const issue = byId.get(id), tr = document.createElement('tr');
+    const checkbox = document.createElement('input'); checkbox.type = 'checkbox'; checkbox.checked = state.selected.includes(id);
+    checkbox.setAttribute('aria-label', `Select issue ${id}: ${issue.title}`);
+    checkbox.addEventListener('change', () => {
+      const checked = checkbox.checked;
+      action(() => ({type:'select', ids: checked ? [...state.selected, id] : state.selected.filter(i => i !== id)}));
+    });
+    cell(tr, '').append(checkbox);
+    for (const value of [id, issue.title, issue.status, issue.labels.join(', '), issue.blocked ? 'Yes' : 'No', issue.priority]) cell(tr, value);
+    el('issues').append(tr);
+    if (issue.comments.length) { const p = document.createElement('p'); p.textContent = `#${id} comments: ${issue.comments.join(' | ')}`; el('comments').append(p); }
+  }
+}
+async function request(url, payload) {
+  try {
+    const response = await fetch(url, payload === undefined ? {cache:'no-store'} : {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    const data = await response.json(); if (!response.ok) throw new Error(data.detail || data.error);
+    render(data);
+  } catch (error) { el('notice').textContent = `Request failed: ${error.message}`; el('notice').dataset.ok = 'false'; }
+}
+// Serialize clicks so each action sees the last server response.
+let pending = Promise.resolve();
+function action(value) { pending = pending.then(() => request('/api/action', typeof value === 'function' ? value() : value)); return pending; }
+el('filter-form').addEventListener('submit', event => {event.preventDefault(); action({type:'filter', status:el('status').value, label:el('filter-label').value});});
+el('sort').addEventListener('change', () => action({type:'sort', direction:el('sort').value}));
+el('select-all').addEventListener('click', () => action({type:'select_all'}));
+el('clear-selection').addEventListener('click', () => action({type:'select', ids:[]}));
+el('label-form').addEventListener('submit', event => {event.preventDefault(); action({type:'label', value:el('bulk-label').value});});
+el('close-form').addEventListener('submit', event => {event.preventDefault(); action({type:'close', reason:el('close-reason').value});});
+el('reopen').addEventListener('click', () => action({type:'reopen'}));
+el('comment-form').addEventListener('submit', event => {event.preventDefault(); action({type:'comment', text:el('comment-text').value});});
+request('/api/state');
+</script>
+</html>

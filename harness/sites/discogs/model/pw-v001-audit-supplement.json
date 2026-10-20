@@ -1,0 +1,44 @@
+{
+  "supplements": "pw-v001/source_review.json",
+  "original_sha256": "3823c1ff0c7b149b2d2c82595c9d3797dd6451edb47aecd458f8f702760cc2e4",
+  "original_changed": false,
+  "entries": [
+    {
+      "path": "scripts/generate_task_instructions.py",
+      "sha256": "cfb4ca4899732f909c042e4ecc69919e6f6a245f0f66762fac858a85844014d0",
+      "size_bytes": 41781,
+      "status": "excluded_content_not_read",
+      "reason": "Task-generation source excluded to avoid importing upstream task answers.",
+      "business_understanding_claim": false,
+      "hash_method": "opaque bytes SHA256 only; no content interpretation"
+    },
+    {
+      "path": "scripts/linear_sync.py",
+      "sha256": "aa12c2506769ce660af259c6cbea63a756ec5e9934558970bef2236660fbd9e8",
+      "size_bytes": 7516,
+      "status": "excluded_content_not_read",
+      "reason": "External Linear synchronization utility excluded; not part of site runtime or model learning.",
+      "business_understanding_claim": false,
+      "hash_method": "opaque bytes SHA256 only; no content interpretation"
+    },
+    {
+      "path": "scripts/smoke_check.sh",
+      "sha256": "5b28fc3940bd2941f11052fc438b100ca5554bfdcfdf53a7cd7550d557b91ad9",
+      "size_bytes": 977,
+      "status": "excluded_content_not_read",
+      "reason": "Upstream smoke test excluded to avoid importing test expectations.",
+      "business_understanding_claim": false,
+      "hash_method": "opaque bytes SHA256 only; no content interpretation"
+    },
+    {
+      "path": "task_instructions.json",
+      "sha256": "c02945fc5afc61ad6ddedeabd0bd56a545cdcadf27c2dbbdf0b6bad6f8ab8db8",
+      "size_bytes": 225994,
+      "status": "excluded_content_not_read",
+      "reason": "Upstream task/answer material excluded from learner inputs.",
+      "business_understanding_claim": false,
+      "hash_method": "opaque bytes SHA256 only; no content interpretation"
+    }
+  ],
+  "meaning": "These four entries are inventory exclusions, not actually reviewed website logic. Hash completeness does not imply source understanding."
+}

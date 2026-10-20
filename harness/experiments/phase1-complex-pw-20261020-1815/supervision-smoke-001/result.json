@@ -1,0 +1,19 @@
+{
+  "scope": "Generic real-browser gate wiring; synthetic review file, no LLM call or website task.",
+  "browser_version": "155.0.8059.84",
+  "checks": [
+    {
+      "independent_permission": false,
+      "passed": true,
+      "value": "0",
+      "actions_dispatched": 0
+    },
+    {
+      "independent_permission": true,
+      "passed": true,
+      "value": "1",
+      "actions_dispatched": 1
+    }
+  ],
+  "passed": true
+}

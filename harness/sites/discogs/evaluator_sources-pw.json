@@ -1,0 +1,16 @@
+{
+  "scope": "Independent deployment and endpoint/workflow evaluation, not model rule authorship",
+  "upstream_root": "veri_env/external/VeriEnv-main/websites/discogs",
+  "source_to_checks": [
+    {"sources": ["frontend/src/components/CookieBanner.tsx"], "cases": ["consent_persistence"], "checks": ["initial banner", "accepted storage", "real reload", "dismissed banner"]},
+    {"sources": ["frontend/src/components/Header.tsx", "frontend/src/app/genre/[slug]/page.tsx", "frontend/src/app/release/[id]/page.tsx", "backend/app/api/catalog.py", "backend/app/models/release.py"], "cases": ["genre_navigation"], "checks": ["observed Rock page", "displayed card", "Rock release association", "exact database track titles"]},
+    {"sources": ["frontend/src/app/search/page.tsx", "backend/app/api/catalog.py"], "cases": ["search_empty", "search_no_match"], "checks": ["exact query", "empty result cards", "empty query instruction"]},
+    {"sources": ["frontend/src/app/sell/release/[id]/page.tsx", "backend/app/api/marketplace.py"], "cases": ["market_filter_none", "market_sort_desc", "market_filter_combo"], "checks": ["active baseline listing set", "exact conditions and origin", "exact prices", "descending sort", "default limit", "no business mutation"]},
+    {"sources": ["frontend/src/components/ReleaseActions.tsx", "frontend/src/app/me/collection/page.tsx", "frontend/src/app/me/wantlist/page.tsx", "backend/app/api/account.py"], "cases": ["collection_duplicate", "wantlist_duplicate"], "checks": ["two actual successful POST responses", "detail reload", "one persisted membership", "other memberships preserved", "list UI"]},
+    {"sources": ["frontend/src/app/cart/CartClient.tsx", "backend/app/api/account.py"], "cases": ["cart_repeat_remove", "anonymous_cart_return"], "checks": ["intermediate quantity and exact displayed total", "successful mutation responses", "empty disabled final cart", "anonymous 401", "exact login return URL", "one exact cart row", "unrelated state unchanged"]},
+    {"sources": ["frontend/src/components/LogoutButton.tsx", "frontend/src/app/api/auth/logout/route.ts", "frontend/src/lib/backend.ts", "frontend/src/app/me/collection/page.tsx"], "cases": ["signout_gate"], "checks": ["successful logout", "absent auth cookie", "real anonymous collection 401", "login gate", "persisted membership"]},
+    {"sources": ["frontend/src/app/sell/page.tsx", "frontend/src/app/api/backend/[...path]/route.ts", "backend/app/api/catalog.py"], "cases": ["original seller_create_deactivate"], "checks": ["query forwarding incompatibility identified; original goal retained without source change"]}
+  ],
+  "verification_status": "Adapter component checks completed separately in runtime; browser outcomes are determined only by Harness real UI runs.",
+  "limitations": ["Only the fixed 8 anchor and 12 extension goals are covered", "Original observation omits password_hash from user table hashes", "Read-only snapshots and passive responses do not establish arbitrary unobserved actions", "Independent agent contexts are not OS isolation"]
+}

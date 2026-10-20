@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-20T09:16:19.125271+00:00",
+  "scope": "Read-only deployment and original source diagnosis; no new browser/API requests, no DB writes, no reset, no source/adapter edits",
+  "original_source_count": 110,
+  "source_copy_and_upstream_unchanged": true,
+  "frozen_site_artifacts_unchanged": true,
+  "source_and_build_hashes": {
+    "frontend/next.config.ts": "3d4c5496cd46d58e02f52e8560a9e1642762892ffb4f7bf1351d000732c0605c",
+    "frontend/package.json": "1b64dbda4aa338b922d335fcdf02aa457458689cd69d9e813b935c3f0db69d4a",
+    "frontend/package-lock.json": "be266dd98c60aa8bd81b79e07af634fc4b738c3c2deb154eccb31f2258cee6ab",
+    "start_servers.sh": "61ff5c420299a6acd54cece8de8c8ae97eb1cd93b221978d75c3785b15545b25",
+    "ports.json": "21efc367fd408244a92191b0b16a09b583e840ef2ca488028b4415cd9b958b38",
+    ".env.example": "6fb5faee0c999ed2f586411d6e8fc5613d633c35e8481d1613bb7825ca4a4a31",
+    "Dockerfile": "06f137f2a1d22d08ea629641b6f98e85b74ffc91f9061cd946d1a2bc2bc952e4",
+    "backend/app/api/router.py": "77340e2fa55ecdb7835198954f7ff64a4c5f396427097c091d125b3a922bd68b",
+    "backend/app/main.py": "100a8b7313545bbfb9c55f1165e8a4f2f25c63a9f000ceb294456a6034d98d60",
+    "frontend/src/lib/backend.ts": "82276c8d0ec01c739887e10747971dff707266b5bdfaf443fe4fddf0d0c76cbf",
+    "frontend/src/app/api/backend/[...path]/route.ts": "fd93389a8fc313911cb1c14645925d53a3a7d281e0fc6bd2e07d27a16e7d2ec2",
+    "frontend/.next/routes-manifest.json": "a8e4fc3a5686e0c3c946884dd3588bfb960e2ffb2f5002d8a70465f5ea1179de",
+    "frontend/.next/server/app-paths-manifest.json": "949c46c11856b369efed2cd09cf31bb4b9b5839e562b8239ae7f092e0696d61f",
+    "frontend/.next/required-server-files.json": "f70c1af447acceb17944856292e45220b2eb27b4834bf45ad21a1eb32734c0a7",
+    "frontend/node_modules/next/dist/server/lib/router-utils/resolve-routes.js": "6dc46124fbee1bf64049f5f03a6e2f4255a34b843bc6c01b47fef767a3c7b9da"
+  },
+  "actual_event_hashes": {
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\01-invalid_login\\events.jsonl": "fed21b4be5c64a15b3c42af0d11c96e00d9f85f5593f03276dc3b6ecb53d62e0",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\02-catalog_search\\events.jsonl": "d3ea7d19ab73b8a48f361d152377cca5ff5a93354db30bab297c8ce75b203940",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\03-anonymous_collection\\events.jsonl": "938b7812a4abed51c631c1c642e57b221304bc29ecb858a0a076ea5922368b77",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\04-collection_add\\events.jsonl": "2ed4212c97c8c933712b3c70b408d390682b36c97c1b5b0487f312db5a78cdaa",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\05-wantlist_add\\events.jsonl": "0fef82cbfb94147488871486becc08febcd6c05c3b20c305b23384ef51bbbb65",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\06-cart_add\\events.jsonl": "a569c3e6254e9efbec81f8660d50156059e92c6cecade79e19bd68025b65fd42",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\07-checkout\\events.jsonl": "626e4a0f6f35397b61f1e77b28bdcbf69e628760dedb0c97144e1f6da221bf1b",
+    "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-initial-002\\cases\\08-seller_create_deactivate\\events.jsonl": "6b5470794103d78eb08eb454a142d44fa58726e87adc32ff9e9f4600b0a0ff31"
+  },
+  "network_record_count": 13,
+  "observed_failure_urls": [
+    "http://127.0.0.1:12042/api/backend/search?q=The%20Dark%20Side%20Of%20The%20Moon",
+    "http://127.0.0.1:12042/api/me/collection/221",
+    "http://127.0.0.1:12042/api/me/wantlist/221"
+  ],
+  "build_id": "NStL3pzu8OvQqPa-s3Bi2",
+  "classification": "Original upstream configuration masks dynamic API route handlers through an afterFiles wildcard rewrite to unsupported backend /api prefix. No changed or missing route file in deployment. Separate latent query-forwarding defect in generic handler remains after removing route mask.",
+  "limits": [
+    "Not reproduced in upstream Docker / Node22; current Windows Node24.5.0 production only",
+    "No repair applied or validated",
+    "Shared live database untouched during extension run"
+  ]
+}

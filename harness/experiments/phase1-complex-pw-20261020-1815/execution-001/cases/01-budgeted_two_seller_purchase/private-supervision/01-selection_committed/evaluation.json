@@ -1,0 +1,56 @@
+{
+  "decision": "continue",
+  "checks": [
+    {
+      "id": "required_actual_channels",
+      "passed": true,
+      "detail": "Actual independent UI and transaction-consistent DB snapshots required"
+    },
+    {
+      "id": "no_unconfirmed_mutation",
+      "passed": true,
+      "detail": "Every observed API mutation dispatch has a confirmed successful response; pending/failed writes cannot authorize continuation"
+    },
+    {
+      "id": "authenticated_demo",
+      "passed": true,
+      "detail": "Current signed, unexpired auth subject matches initial demo account"
+    },
+    {
+      "id": "initial_cart_empty",
+      "passed": true,
+      "detail": "Initial demo cart must be empty"
+    },
+    {
+      "id": "independent_budget_pair_exists",
+      "passed": true,
+      "detail": "Independent initial-state enumeration finds a distinct-seller USD optimum within fixed budget"
+    },
+    {
+      "id": "search_detail_market_navigation",
+      "passed": true,
+      "detail": "Actual search-result, release-detail and filtered marketplace observations occur in order"
+    },
+    {
+      "id": "login_succeeded",
+      "passed": true,
+      "detail": "One successful real UI login response"
+    },
+    {
+      "id": "complete_exact_visible_market",
+      "passed": true,
+      "detail": "Exact full initial filtered universe, visible total and all rows, including unselected offers, agree"
+    },
+    {
+      "id": "no_business_write_before_selection",
+      "passed": true,
+      "detail": "All business tables remain byte-semantic equal to initial rows"
+    },
+    {
+      "id": "no_cart_or_checkout_dispatch",
+      "passed": true,
+      "detail": "No add/checkout or other mutation dispatch before first gate"
+    }
+  ],
+  "public_summary": "独立检查通过；仅可在本次状态复核和Solar明确继续后执行紧邻的声明操作。"
+}

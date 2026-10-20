@@ -1,0 +1,3 @@
+# Preserve exact bytes of frozen experiment evidence and upstream snapshots.
+# Newline conversion would invalidate recorded SHA-256 hashes.
+* -text

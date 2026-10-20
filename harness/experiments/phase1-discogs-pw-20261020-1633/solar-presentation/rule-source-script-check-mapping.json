@@ -1,0 +1,3143 @@
+[
+  {
+    "rule_id": "AUTH-LOGIN",
+    "source_refs": [
+      "backend/app/api/auth.py:38-45",
+      "frontend/src/app/api/auth/login/route.ts:5-27",
+      "frontend/src/app/login/LoginClient.tsx:9-49"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "invalid_login",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "invalid_login",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "invalid_login",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "invalid_login",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Invalid credentials"
+              },
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/login"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "cart_add",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "cart_add",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "cart_add",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "cart_add",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "anonymous_cart_return",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "anonymous_cart_return",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "anonymous_cart_return",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/cart$"
+              },
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "AUTH-GATE",
+    "source_refs": [
+      "backend/app/api/deps.py:13-31",
+      "frontend/src/components/ReleaseActions.tsx:23-36",
+      "frontend/src/app/cart/CartClient.tsx:38-79",
+      "frontend/src/app/me/collection/page.tsx:15-34",
+      "frontend/src/app/sell/page.tsx:46-61"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "anonymous_collection",
+        "step": "membership_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/login?next="
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "anonymous_cart_return",
+        "step": "anonymous_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/login?next="
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "gate",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              },
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/login?next="
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "AUTH-LOGOUT",
+    "source_refs": [
+      "frontend/src/components/LogoutButton.tsx:10-26",
+      "frontend/src/app/api/auth/logout/route.ts:5-8",
+      "frontend/src/components/Header.tsx:9-11"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "signout",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "AUTH-REGISTER",
+    "source_refs": [
+      "backend/app/api/auth.py:18-35",
+      "backend/app/schemas/user.py:9-18",
+      "backend/app/models/user.py:12-33"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CAT-SEARCH",
+    "source_refs": [
+      "backend/app/api/catalog.py:351-377",
+      "frontend/src/app/search/page.tsx:12-37",
+      "frontend/src/components/Header.tsx:22-36"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "catalog_search",
+        "step": "search_fill",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.query",
+                "op": "eq",
+                "value": "The Dark Side Of The Moon"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "catalog_search",
+        "step": "search_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Results for"
+              },
+              {
+                "path": "after.ui.fields.target_release_count",
+                "op": "gte",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "seller_search_fill",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.seller_query",
+                "op": "eq",
+                "value": "The Dark Side Of The Moon"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "search_empty",
+        "step": "query",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "search_empty",
+        "step": "submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.release_cards",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Enter a query in the search bar."
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "search_no_match",
+        "step": "query",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "search_no_match",
+        "step": "submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.release_cards",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Results for"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CAT-DETAIL",
+    "source_refs": [
+      "backend/app/api/catalog.py:274-348",
+      "frontend/src/app/release/[id]/page.tsx:20-180"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "catalog_search",
+        "step": "search_release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/release/221"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "anonymous_collection",
+        "step": "release_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "release_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "release_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "genre_navigation",
+        "step": "release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CAT-HOME",
+    "source_refs": [
+      "backend/app/api/catalog.py:82-174",
+      "frontend/src/app/page.tsx:10-178"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "catalog_search",
+        "step": "search_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "consent_persistence",
+        "step": "home",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "genre_navigation",
+        "step": "home",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "search_empty",
+        "step": "home",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "search_no_match",
+        "step": "home",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CAT-GENRE",
+    "source_refs": [
+      "backend/app/api/catalog.py:177-271",
+      "frontend/src/app/genre/[slug]/page.tsx:48-191"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "extension",
+        "case": "genre_navigation",
+        "step": "genre",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Rock Genre Overview"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "MEM-COLLECTION",
+    "source_refs": [
+      "backend/app/api/account.py:41-81",
+      "backend/app/models/collection.py:12-25",
+      "frontend/src/app/me/collection/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "membership_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.collection_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "anchor",
+        "case": "collection_add",
+        "step": "membership_verify",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "My Collection"
+              },
+              {
+                "path": "after.ui.fields.target_release_count",
+                "op": "gte",
+                "value": 1
+              },
+              {
+                "path": "after.backend.collection_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "add_first",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.collection_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "add_second",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.collection_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "verify",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "My Collection"
+              },
+              {
+                "path": "after.ui.fields.target_release_count",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "add_first",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.collection_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "MEM-WANTLIST",
+    "source_refs": [
+      "backend/app/api/account.py:84-124",
+      "backend/app/models/wantlist.py:12-25",
+      "frontend/src/app/me/wantlist/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "membership_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.wantlist_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "anchor",
+        "case": "wantlist_add",
+        "step": "membership_verify",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "My Wantlist"
+              },
+              {
+                "path": "after.ui.fields.target_release_count",
+                "op": "gte",
+                "value": 1
+              },
+              {
+                "path": "after.backend.wantlist_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "add_first",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.wantlist_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "add_second",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.wantlist_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "verify",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "My Wantlist"
+              },
+              {
+                "path": "after.ui.fields.target_release_count",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "MEM-UI-COUNT",
+    "source_refs": [
+      "frontend/src/components/ReleaseActions.tsx:20-36",
+      "frontend/src/app/release/[id]/page.tsx:83-108",
+      "backend/app/api/account.py:65-74",
+      "backend/app/api/account.py:108-117"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "extension",
+        "case": "collection_duplicate",
+        "step": "reload",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.collection_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "wantlist_duplicate",
+        "step": "reload",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.wantlist_ids",
+                "op": "contains",
+                "value": 221
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "MKT-FILTER",
+    "source_refs": [
+      "backend/app/api/marketplace.py:15-90",
+      "frontend/src/app/sell/release/[id]/page.tsx:18-173"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "cart_add",
+        "step": "marketplace_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "marketplace_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_none",
+        "step": "market",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_none",
+        "step": "origin",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_none",
+        "step": "apply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.listing_rows",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "No listings match these filters."
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_sort_desc",
+        "step": "market",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_sort_desc",
+        "step": "sort",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/sell/release/221"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_sort_desc",
+        "step": "apply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.listing_rows",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_combo",
+        "step": "market",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_combo",
+        "step": "filter_media_condition",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_combo",
+        "step": "filter_sleeve_condition",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_combo",
+        "step": "filter_ships_from",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_combo",
+        "step": "sort",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/sell/release/221"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "market_filter_combo",
+        "step": "apply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.listing_rows",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "market_first",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "market_second",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "anonymous_cart_return",
+        "step": "market",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CART-ADD",
+    "source_refs": [
+      "backend/app/api/account.py:161-179",
+      "backend/app/schemas/cart.py:29-31",
+      "backend/app/models/cart.py:12-28",
+      "frontend/src/app/cart/CartClient.tsx:57-79"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "cart_add",
+        "step": "cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/cart$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "The Dark Side Of The Moon"
+              },
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/cart$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "The Dark Side Of The Moon"
+              },
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "add_first",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/cart$"
+              },
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "The Dark Side Of The Moon"
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      },
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "add_second",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/cart$"
+              },
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "The Dark Side Of The Moon"
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value_from": "before.backend.cart_total_cents"
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CART-READ",
+    "source_refs": [
+      "backend/app/api/account.py:127-158",
+      "frontend/src/app/cart/CartClient.tsx:97-160"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CART-REMOVE",
+    "source_refs": [
+      "backend/app/api/account.py:182-186",
+      "frontend/src/app/cart/CartClient.tsx:120-150",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "extension",
+        "case": "cart_repeat_remove",
+        "step": "remove",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Your cart is empty."
+              },
+              {
+                "path": "after.ui.fields.checkout_disabled",
+                "op": "eq",
+                "value": ""
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "CHECKOUT",
+    "source_refs": [
+      "backend/app/api/account.py:189-229",
+      "backend/app/db/session.py:17-22",
+      "frontend/src/app/cart/CartClient.tsx:162-180",
+      "backend/app/models/order.py:12-40"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "checkout",
+        "step": "checkout",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Your cart is empty."
+              },
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.backend.latest_demo_order.status",
+                "op": "eq",
+                "value": "paid"
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "gt",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "invariants": []
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "SELL-CREATE",
+    "source_refs": [
+      "backend/app/api/account.py:263-285",
+      "backend/app/schemas/sell.py:6-15",
+      "frontend/src/app/sell/page.tsx:215-250"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "SELL-MANAGE",
+    "source_refs": [
+      "backend/app/api/account.py:232-260",
+      "backend/app/api/account.py:302-309",
+      "frontend/src/app/sell/page.tsx:254-311"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "seller_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sell on Discogs"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "SELL-UPDATE",
+    "source_refs": [
+      "backend/app/api/account.py:288-299",
+      "backend/app/schemas/sell.py:18-25",
+      "backend/app/models/marketplace.py:21-31"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "SELL-SEARCH-PROXY",
+    "source_refs": [
+      "frontend/src/app/sell/page.tsx:95-109",
+      "frontend/src/app/api/backend/[...path]/route.ts:5-20",
+      "backend/app/api/catalog.py:351-354"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "anchor",
+        "case": "seller_create_deactivate",
+        "step": "seller_search",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Not Found"
+              },
+              {
+                "path": "after.ui.fields.create_disabled",
+                "op": "eq",
+                "value": ""
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "UI-CONSENT",
+    "source_refs": [
+      "frontend/src/components/CookieBanner.tsx:5-40"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "extension",
+        "case": "consent_persistence",
+        "step": "accept",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.consent_count",
+                "op": "eq",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "consent_persistence",
+        "step": "reload",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.consent_count",
+                "op": "eq",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "UI-NAV",
+    "source_refs": [
+      "frontend/src/components/Header.tsx:38-211",
+      "frontend/src/components/Footer.tsx:26-98"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [
+      {
+        "suite": "extension",
+        "case": "genre_navigation",
+        "step": "explore",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Genres"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "suite": "extension",
+        "case": "signout_gate",
+        "step": "account",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign out"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "DATA-MODEL",
+    "source_refs": [
+      "backend/app/models/release.py:22-133",
+      "backend/app/models/cart.py:12-28",
+      "backend/app/models/collection.py:12-25",
+      "backend/app/models/wantlist.py:12-25",
+      "backend/app/models/comment.py:12-30",
+      "backend/alembic/versions/7c69fa412e18_init_schema.py:21-235",
+      "backend/alembic/versions/c798e9346a24_add_genre_description.py:21-24"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  },
+  {
+    "rule_id": "RUNTIME",
+    "source_refs": [
+      "frontend/package.json:1-30",
+      "frontend/src/lib/api.ts:1-26",
+      "frontend/src/lib/backend.ts:3-22",
+      "backend/app/core/config.py:6-32",
+      "backend/app/main.py:11-26",
+      "ports.json:1-8",
+      "start_servers.sh:15-37",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/diagnosis.json"
+    ],
+    "script": {
+      "anchor": "pw-v002/scripts.py",
+      "extension": "pw-extension-v002/scripts.py"
+    },
+    "entries": [],
+    "claim": "Source rule plus specified observed branch evidence only; never whole-rule verified."
+  }
+]

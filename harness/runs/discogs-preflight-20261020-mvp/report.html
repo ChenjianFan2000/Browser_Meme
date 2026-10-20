@@ -1,0 +1,52 @@
+<!doctype html><meta charset="utf-8"><title>Harness preflight</title><style>body{font:16px system-ui;max-width:1000px;margin:40px auto}pre{white-space:pre-wrap}</style><h1>启动前环境检查</h1><p><strong>未开始目标网站测量</strong></p><p>未执行业务重置或任务，未调用模型。找到 Chrome 或 CDP 端点不代表浏览器能力已经验证。真实 browser-smoke 未通过时，能力标记为未验证。没有模型成功率成绩。</p><p><a href="preflight.json">完整检查记录</a></p><pre>{
+  &quot;kind&quot;: &quot;environment_preflight&quot;,
+  &quot;measurement_status&quot;: &quot;not_started&quot;,
+  &quot;measurement_note&quot;: &quot;未开始目标网站测量；启动前环境检查不是模型成绩。&quot;,
+  &quot;model_repair_allowed&quot;: false,
+  &quot;case_success_rate&quot;: null,
+  &quot;step_match_rate&quot;: null,
+  &quot;ready_for_measurement&quot;: false,
+  &quot;status&quot;: &quot;blocked&quot;,
+  &quot;checks&quot;: {
+    &quot;structure&quot;: {
+      &quot;passed&quot;: true,
+      &quot;cases&quot;: 8,
+      &quot;steps&quot;: 47,
+      &quot;rules&quot;: 10
+    },
+    &quot;site_http&quot;: {
+      &quot;reachable&quot;: false,
+      &quot;available&quot;: false,
+      &quot;error&quot;: &quot;&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;&quot;
+    },
+    &quot;browser_dependency&quot;: {
+      &quot;websocket_client_found&quot;: true,
+      &quot;runtime_use&quot;: &quot;unverified until real smoke succeeds&quot;
+    },
+    &quot;browser_selection&quot;: {
+      &quot;mode&quot;: &quot;cdp&quot;,
+      &quot;url&quot;: &quot;http://127.0.0.1:9337&quot;,
+      &quot;endpoint&quot;: {
+        &quot;reachable&quot;: false,
+        &quot;available&quot;: false,
+        &quot;error&quot;: &quot;&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;&quot;
+      },
+      &quot;transport_verified&quot;: false
+    }
+  },
+  &quot;browser_smoke&quot;: {
+    &quot;status&quot;: &quot;unverified&quot;,
+    &quot;reason&quot;: &quot;No real browser smoke requested or completed.&quot;
+  },
+  &quot;business_reset_performed&quot;: false,
+  &quot;business_tasks_executed&quot;: false,
+  &quot;model_called&quot;: false,
+  &quot;site_id&quot;: &quot;discogs&quot;,
+  &quot;revision&quot;: &quot;v001&quot;,
+  &quot;fixed_denominators&quot;: {
+    &quot;cases&quot;: 8,
+    &quot;steps&quot;: 47,
+    &quot;rules&quot;: 10
+  },
+  &quot;integrity_errors&quot;: []
+}</pre>

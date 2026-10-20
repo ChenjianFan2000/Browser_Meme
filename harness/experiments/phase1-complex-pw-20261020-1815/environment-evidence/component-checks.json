@@ -1,0 +1,66 @@
+{
+  "scope": "Read-only frozen baseline plus in-memory fixtures only; no DB writes, reset, server or browser execution; not website success evidence",
+  "baseline_unchanged": true,
+  "checks": [
+    {
+      "name": "complete-selection-positive-component",
+      "expected": "continue",
+      "actual": "continue"
+    },
+    {
+      "name": "partial-market-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    },
+    {
+      "name": "unverified-auth-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    },
+    {
+      "name": "missing-actual-channels",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "unknown-checkpoint",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "complete-cart-positive-component",
+      "expected": "continue",
+      "actual": "continue"
+    },
+    {
+      "name": "quantity-two-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    },
+    {
+      "name": "offer-state-change-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    },
+    {
+      "name": "missing-cart-response-unconfirmed",
+      "expected": "unknown",
+      "actual": "unknown"
+    },
+    {
+      "name": "duplicate-write-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    },
+    {
+      "name": "premature-order-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    },
+    {
+      "name": "unconfirmed-dispatch-rejected",
+      "expected": "stop",
+      "actual": "stop"
+    }
+  ]
+}

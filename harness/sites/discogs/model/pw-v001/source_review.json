@@ -1,0 +1,994 @@
+{
+  "source_root": "G:\\Browser_Meme\\veri_env\\external\\VeriEnv-main\\websites\\discogs",
+  "claim": "Core frontend/backend implementation reviewed; inventory-only and metadata-only entries distinguished. Read is evidence of review, not proof of full semantic or browser coverage.",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "6fb5faee0c999ed2f586411d6e8fc5613d633c35e8481d1613bb7825ca4a4a31",
+      "lines": 15,
+      "status": "read",
+      "summary": "Public example env values only; configured ports can differ from defaults. No actual .env or private secrets read.",
+      "rule_ids": []
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "6273ff02dc1d8605ad48f2e983a92c0c010a513b26447a2d5f484c54c17ec27e",
+      "lines": 18,
+      "status": "read",
+      "summary": "Dependency/data/env/cache exclusions; no runtime behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/alembic/env.py",
+      "sha256": "31bb69e97e9f76b756cb1bf80ab1da42911fd78eb683db6029e50760406d826b",
+      "lines": 73,
+      "status": "read",
+      "summary": "Requires DATABASE_URL or SQLALCHEMY_URL; imports models metadata and runs offline/online migrations with compare_type.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/alembic/script.py.mako",
+      "sha256": "d9fe3c7a267e9339875523f210b269015fdd133a80a726fe266b964ec11fbbe3",
+      "lines": 27,
+      "status": "read",
+      "summary": "Migration template only, upgrade/downgrade placeholders; no application branch.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/alembic/versions/7c69fa412e18_init_schema.py",
+      "sha256": "5e12925469fb0809f8bf0da688a2abee7e0146c24ce83c1f5b181c675c65a5a9",
+      "lines": 287,
+      "status": "read",
+      "summary": "Source supports DATA-MODEL",
+      "rule_ids": [
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/alembic/versions/c798e9346a24_add_genre_description.py",
+      "sha256": "f366d7ba381eae13b4ceec97e5621d5c43f8c9d6be9ed3b744a266d26b57b21a",
+      "lines": 31,
+      "status": "read",
+      "summary": "Source supports DATA-MODEL",
+      "rule_ids": [
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/alembic.ini",
+      "sha256": "f557fa1ada2fdf75b6a6f6839c71cfb0917f5c9a497d30910f599dafa588df3b",
+      "lines": 38,
+      "status": "read",
+      "summary": "Alembic script path and logging; deliberately unusable placeholder URL superseded by env.py.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "sha256": "f030efab43de6fffe519572eae197852f8ab29b3a583095ea198ade243a961de",
+      "lines": 2,
+      "status": "read",
+      "summary": "Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/api/account.py",
+      "sha256": "957d70c504cd9510945d15b393cc0104fcf1beaf5c7903cfe783f370575ddc87",
+      "lines": 310,
+      "status": "read",
+      "summary": "Source supports MEM-COLLECTION, MEM-WANTLIST, MEM-UI-COUNT, CART-ADD, CART-READ, CART-REMOVE, CHECKOUT, SELL-CREATE, SELL-MANAGE, SELL-UPDATE",
+      "rule_ids": [
+        "MEM-COLLECTION",
+        "MEM-WANTLIST",
+        "MEM-UI-COUNT",
+        "CART-ADD",
+        "CART-READ",
+        "CART-REMOVE",
+        "CHECKOUT",
+        "SELL-CREATE",
+        "SELL-MANAGE",
+        "SELL-UPDATE"
+      ]
+    },
+    {
+      "path": "backend/app/api/auth.py",
+      "sha256": "782a68d2b6219f04fd0dcb7ab74f79f4de8233a91c4f65f16e4d2e65e1d04f1a",
+      "lines": 51,
+      "status": "read",
+      "summary": "Source supports AUTH-LOGIN, AUTH-REGISTER",
+      "rule_ids": [
+        "AUTH-LOGIN",
+        "AUTH-REGISTER"
+      ]
+    },
+    {
+      "path": "backend/app/api/catalog.py",
+      "sha256": "183966e1e6aa004cc81d16930e78ceb62c6cc31f446ce3d1195759b1c8e887d4",
+      "lines": 378,
+      "status": "read",
+      "summary": "Source supports CAT-SEARCH, CAT-DETAIL, CAT-HOME, CAT-GENRE, SELL-SEARCH-PROXY",
+      "rule_ids": [
+        "CAT-SEARCH",
+        "CAT-DETAIL",
+        "CAT-HOME",
+        "CAT-GENRE",
+        "SELL-SEARCH-PROXY"
+      ]
+    },
+    {
+      "path": "backend/app/api/deps.py",
+      "sha256": "0d90ffbb212532764f0454eaa89ed8e1c01daa58e08777378447c5048052b62f",
+      "lines": 32,
+      "status": "read",
+      "summary": "OAuth2 bearer dependency decodes JWT, requires UUID sub and existing user; distinguishes malformed/expired token and missing user.",
+      "rule_ids": [
+        "AUTH-GATE"
+      ]
+    },
+    {
+      "path": "backend/app/api/marketplace.py",
+      "sha256": "908eb34f5cc647d7aab5d59fde1777c2a9de40fe9064f74e0558ead4d145ead3",
+      "lines": 91,
+      "status": "read",
+      "summary": "Source supports MKT-FILTER",
+      "rule_ids": [
+        "MKT-FILTER"
+      ]
+    },
+    {
+      "path": "backend/app/api/router.py",
+      "sha256": "77340e2fa55ecdb7835198954f7ff64a4c5f396427097c091d125b3a922bd68b",
+      "lines": 21,
+      "status": "read",
+      "summary": "Includes auth/account/catalog/marketplace at root; healthz returns ok. No API router for comments, catalog mutation, order history or profile editing.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "sha256": "eff27d655482f55dc623d9e5d18e3504d87e490315bbe1261e351904371261fd",
+      "lines": 33,
+      "status": "read",
+      "summary": "Source supports RUNTIME",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "backend/app/core/logging.py",
+      "sha256": "92e0e1e64c5aeb7f49d9db9871520bddbdcee9555e4150d00c4c394e51d353a0",
+      "lines": 11,
+      "status": "read",
+      "summary": "basicConfig INFO timestamp/level/logger/message; no middleware that alters transaction behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/db/base.py",
+      "sha256": "fe5d958a0879769de57811556a5e355cf31b0ffbf7b11a9aac2c58f7f6c1b009",
+      "lines": 8,
+      "status": "read",
+      "summary": "DeclarativeBase root shared by all ORM tables.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/db/seed.py",
+      "sha256": "34811036c9cca79d89aa1d3eb959fed8081c93138e64b18f1ac740cbcfc5ac85",
+      "lines": 426,
+      "status": "read",
+      "summary": "Reviewed seed control flow: destructive table clearing, 30 users, 220 generated plus DSOTM release, 24 initial DSOTM offers, memberships/comments and historical orders; seeded orders do not mark listings sold. Faker/random seeded but UUID/time/bcrypt remain variable.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/db/session.py",
+      "sha256": "08bba5167a755c18c768b3ffde118ef192b547ed2de796005f05168b18cf4eb7",
+      "lines": 23,
+      "status": "read",
+      "summary": "Engine uses pool_pre_ping and SQLite check_same_thread=False; no PRAGMA FK listener; sessions autocommit/autoflush false and always close.",
+      "rule_ids": [
+        "CHECKOUT"
+      ]
+    },
+    {
+      "path": "backend/app/main.py",
+      "sha256": "100a8b7313545bbfb9c55f1165e8a4f2f25c63a9f000ceb294456a6034d98d60",
+      "lines": 29,
+      "status": "read",
+      "summary": "Source supports RUNTIME",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "backend/app/models/__init__.py",
+      "sha256": "1bc094650b785bd95efe039988cace62ce5fb7debc5cabd6cfaa1fde010948f4",
+      "lines": 43,
+      "status": "read",
+      "summary": "Exports every ORM class so Alembic metadata includes catalog joins, comments, memberships, listings, cart and orders.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/models/artist.py",
+      "sha256": "8054cced0e6980a89420fd53874297a1401dcd4d70d9acb17966aa3f2af0d186",
+      "lines": 17,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for artist; schema declarations alone do not prove live SQLite FK enforcement. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/models/cart.py",
+      "sha256": "98a0364854beb5ecc0551a519748c8469e5cbe6c49e8c7f9c81d71f8881fe19b",
+      "lines": 29,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for cart; schema declarations alone do not prove live SQLite FK enforcement. Source supports CART-ADD, DATA-MODEL",
+      "rule_ids": [
+        "CART-ADD",
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/app/models/collection.py",
+      "sha256": "3265b81af76661ec5563fe24d82a3b3a0f80aa172d91b65c5fc526fe362c0c4a",
+      "lines": 26,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for collection; schema declarations alone do not prove live SQLite FK enforcement. Source supports MEM-COLLECTION, DATA-MODEL",
+      "rule_ids": [
+        "MEM-COLLECTION",
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/app/models/comment.py",
+      "sha256": "a312318de0cee12c396774bda81655033f8a4ef0ed3a3f1a429ac90cd5a6e273",
+      "lines": 31,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for comment; schema declarations alone do not prove live SQLite FK enforcement. Source supports DATA-MODEL",
+      "rule_ids": [
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/app/models/genre.py",
+      "sha256": "5583f5f3539dc5fb6d0ea996b8044ed9b0aac25978092f053b066714a64303ba",
+      "lines": 18,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for genre; schema declarations alone do not prove live SQLite FK enforcement. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/models/label.py",
+      "sha256": "b552e9d8c6e308476294eccfdc22ebf93850339fd3402eb617fece54ae2f00e5",
+      "lines": 17,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for label; schema declarations alone do not prove live SQLite FK enforcement. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/models/marketplace.py",
+      "sha256": "7a4bfd13a7b89af3190ee77bcc2a80b5f678e875e2237f8b016537165aaebd7e",
+      "lines": 37,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for marketplace; schema declarations alone do not prove live SQLite FK enforcement. Source supports SELL-UPDATE",
+      "rule_ids": [
+        "SELL-UPDATE"
+      ]
+    },
+    {
+      "path": "backend/app/models/order.py",
+      "sha256": "a0234a1c87b94670101d49ad1bf9ac9fd5ced5cabda05aacf8056c1d1c228110",
+      "lines": 41,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for order; schema declarations alone do not prove live SQLite FK enforcement. Source supports CHECKOUT",
+      "rule_ids": [
+        "CHECKOUT"
+      ]
+    },
+    {
+      "path": "backend/app/models/release.py",
+      "sha256": "32a3ff490beec25e4be502ba0187173a0b2e8befed1dc1338524e35aecf8db40",
+      "lines": 134,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for release; schema declarations alone do not prove live SQLite FK enforcement. Source supports DATA-MODEL",
+      "rule_ids": [
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/app/models/style.py",
+      "sha256": "09eb91404080ad1c6c43e4a018aa820b0edc52b687590788ddce524259b6cee8",
+      "lines": 18,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for style; schema declarations alone do not prove live SQLite FK enforcement. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/models/user.py",
+      "sha256": "1ee2bce585033f0951d031ce8160c59366d3e168d45ad01f88ffda6771aa90f0",
+      "lines": 34,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for user; schema declarations alone do not prove live SQLite FK enforcement. Source supports AUTH-REGISTER",
+      "rule_ids": [
+        "AUTH-REGISTER"
+      ]
+    },
+    {
+      "path": "backend/app/models/wantlist.py",
+      "sha256": "c92346f1cda16007154f60a8c1732f851f369a9ff344bd696b33c7158096d69d",
+      "lines": 26,
+      "status": "read",
+      "summary": "Reviewed mapped columns, nullability, keys, relationships and cascade declarations for wantlist; schema declarations alone do not prove live SQLite FK enforcement. Source supports MEM-WANTLIST, DATA-MODEL",
+      "rule_ids": [
+        "MEM-WANTLIST",
+        "DATA-MODEL"
+      ]
+    },
+    {
+      "path": "backend/app/schemas/cart.py",
+      "sha256": "75e43a6391ff1be0c1d0522d64b1861c6670f09eea1d184bf1385e121afd55f9",
+      "lines": 30,
+      "status": "read",
+      "summary": "Reviewed cart Pydantic input defaults/constraints and response fields; Source supports CART-ADD",
+      "rule_ids": [
+        "CART-ADD"
+      ]
+    },
+    {
+      "path": "backend/app/schemas/catalog.py",
+      "sha256": "0c0eccd8d278c397850731719c06a30e8d3413fe0f4bb11a14c420fe4eaf1b17",
+      "lines": 94,
+      "status": "read",
+      "summary": "Reviewed catalog Pydantic input defaults/constraints and response fields; Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/schemas/marketplace.py",
+      "sha256": "8b7f03e88106c63f238babd8f9da852ef0ecd08b6f3eeb28e2c3496a262f9681",
+      "lines": 27,
+      "status": "read",
+      "summary": "Reviewed marketplace Pydantic input defaults/constraints and response fields; Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/schemas/order.py",
+      "sha256": "c726bacb003022726f0f9a7a11b4b85076b7ab098bda3bc06e99a29f04b29f4b",
+      "lines": 21,
+      "status": "read",
+      "summary": "Reviewed order Pydantic input defaults/constraints and response fields; Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/schemas/sell.py",
+      "sha256": "6417adf15b78b66c8fb683104b883e363d5b69d4b1c66e69f1224d6bc1d4c5ea",
+      "lines": 25,
+      "status": "read",
+      "summary": "Reviewed sell Pydantic input defaults/constraints and response fields; Source supports SELL-CREATE, SELL-UPDATE",
+      "rule_ids": [
+        "SELL-CREATE",
+        "SELL-UPDATE"
+      ]
+    },
+    {
+      "path": "backend/app/schemas/token.py",
+      "sha256": "5c163cd721f00286f4784b511005ae215f08eee30b6f78d4f21702d687309fd2",
+      "lines": 9,
+      "status": "read",
+      "summary": "Reviewed token Pydantic input defaults/constraints and response fields; Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/app/schemas/user.py",
+      "sha256": "3d262f3ed2272347e4b749d449600d8546a77289f593290cf1cb03f62137c38f",
+      "lines": 33,
+      "status": "read",
+      "summary": "Reviewed user Pydantic input defaults/constraints and response fields; Source supports AUTH-REGISTER",
+      "rule_ids": [
+        "AUTH-REGISTER"
+      ]
+    },
+    {
+      "path": "backend/app/services/auth.py",
+      "sha256": "7d769a5784ff7783bc28d93e2154dd6cf016e7898755b7aa5ecea9552b14a984",
+      "lines": 33,
+      "status": "read",
+      "summary": "bcrypt UTF-8 hashes/checks; JWT sub/iat/exp using configured algorithm, secret and TTL; decode maps JOSE errors to ValueError.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/Dockerfile",
+      "sha256": "ae357c94d4802100edc7c784877d4c082a5ac3ee6cd3124ba31faafbf9c2095c",
+      "lines": 18,
+      "status": "read",
+      "summary": "Python3.11 uvicorn app.main:app, default8000 differs from local adapter.",
+      "rule_ids": []
+    },
+    {
+      "path": "backend/requirements.txt",
+      "sha256": "02dceebf04f46f99e85c2af0151b76b263af2a9abc4c4d7cd474507c540dc8ce",
+      "lines": 14,
+      "status": "read",
+      "summary": "Unpinned FastAPI/SQLAlchemy/Alembic/Pydantic/auth/Faker/http dependencies; installed versions require runtime manifest.",
+      "rule_ids": []
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "daedfdd808f8087f96b2951b1d1ba8ce61ac60e3088d4b92c21398cf228dec7d",
+      "lines": 20,
+      "status": "read",
+      "summary": "Postgres16 database-only service with persistence and healthcheck; local experiment uses separate SQLite adapter.",
+      "rule_ids": []
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "06f137f2a1d22d08ea629641b6f98e85b74ffc91f9061cd946d1a2bc2bc952e4",
+      "lines": 68,
+      "status": "read",
+      "summary": "Python3.11+Node22 multistage packaging, package installation and optional frontend build; port env12138/12093.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/.gitignore",
+      "sha256": "207e265ff4901f9ad9f96d8ce08530e04f9fc600815472a66d0a446096d654cd",
+      "lines": 41,
+      "status": "read",
+      "summary": "Generated/dependency/env/cert/debug files ignored; no runtime behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "sha256": "1264c16b12a4c43254388ff6660dff7a49879b664072f490d3d7c5d8fb1a509a",
+      "lines": 20,
+      "status": "read",
+      "summary": "Node22 Next development server3000; differs from production adapter execution.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/eslint.config.mjs",
+      "sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "lines": 18,
+      "status": "read",
+      "summary": "Next recommended lint configs and generated-dir ignores only.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/next.config.ts",
+      "sha256": "3d4c5496cd46d58e02f52e8560a9e1642762892ffb4f7bf1351d000732c0605c",
+      "lines": 22,
+      "status": "read",
+      "summary": "Unsplash image allowlist and /api wildcard rewrite to localhost12138/api; filesystem route precedence must be observed.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "be266dd98c60aa8bd81b79e07af634fc4b738c3c2deb154eccb31f2258cee6ab",
+      "lines": 6538,
+      "status": "dependency_metadata_inspected",
+      "summary": "Inspected root lockfile metadata and top-level exact Next/React dependencies; did not review third-party package implementations.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "1b64dbda4aa338b922d335fcdf02aa457458689cd69d9e813b935c3f0db69d4a",
+      "lines": 26,
+      "status": "read",
+      "summary": "Source supports RUNTIME",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "frontend/postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "lines": 7,
+      "status": "read",
+      "summary": "Tailwind PostCSS plugin only.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/public/file.svg",
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+      "lines": 1,
+      "status": "asset_inventory_only",
+      "summary": "Static decorative asset; no business semantics inferred.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/public/globe.svg",
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+      "lines": 1,
+      "status": "asset_inventory_only",
+      "summary": "Static decorative asset; no business semantics inferred.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/public/next.svg",
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+      "lines": 1,
+      "status": "asset_inventory_only",
+      "summary": "Static decorative asset; no business semantics inferred.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/public/vercel.svg",
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+      "lines": 1,
+      "status": "asset_inventory_only",
+      "summary": "Static decorative asset; no business semantics inferred.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/public/window.svg",
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+      "lines": 1,
+      "status": "asset_inventory_only",
+      "summary": "Static decorative asset; no business semantics inferred.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/README.md",
+      "sha256": "60b55ff7df79af72590f9524208e46642bc32bdc175cdad41349681c0e2f958f",
+      "lines": 36,
+      "status": "read",
+      "summary": "Generic create-next-app development documentation; runtime truth taken from actual config instead.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/auth/login/route.ts",
+      "sha256": "51dc6fa0637b1d0693fda5be2d443900bb7c6a54150f971d9110776377f1227f",
+      "lines": 29,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Source supports AUTH-LOGIN",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ]
+    },
+    {
+      "path": "frontend/src/app/api/auth/logout/route.ts",
+      "sha256": "8ec4a56cca9cc8087a070ba5f67a8249de03c497cecc33b57f4c61598bb49b52",
+      "lines": 10,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Source supports AUTH-LOGOUT",
+      "rule_ids": [
+        "AUTH-LOGOUT"
+      ]
+    },
+    {
+      "path": "frontend/src/app/api/auth/register/route.ts",
+      "sha256": "d453d4beab0ec2eeeb4030cc2948b06d9f25c474768cda6f1bcb7f8b7d243d3e",
+      "lines": 23,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/backend/[...path]/route.ts",
+      "sha256": "fd93389a8fc313911cb1c14645925d53a3a7d281e0fc6bd2e07d27a16e7d2ec2",
+      "lines": 36,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Source supports SELL-SEARCH-PROXY",
+      "rule_ids": [
+        "SELL-SEARCH-PROXY"
+      ]
+    },
+    {
+      "path": "frontend/src/app/api/cart/items/[id]/route.ts",
+      "sha256": "97aeac515eb392b735f2a3f14e4feb24773e47e702c74a8562a9f22e1d9b182f",
+      "lines": 17,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/cart/items/route.ts",
+      "sha256": "b94c636d4adce912b5251200deda1cd93b066e3adba06658acf635e53fdf412f",
+      "lines": 19,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/cart/route.ts",
+      "sha256": "d6ea500cacfe8eb48fd1a25bcb624267d1860a655cbce8833e0fa5fd770a1ac1",
+      "lines": 13,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/checkout/route.ts",
+      "sha256": "4a2565299c056a3d362327a4b5958656e03690c26827dc1cb63257ea7d753067",
+      "lines": 13,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/me/collection/[id]/route.ts",
+      "sha256": "e1a80e7f697a4b876ce2c950494742aec93750f3e5a82c2129b266cc2adde010",
+      "lines": 30,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/me/collection/route.ts",
+      "sha256": "15f20700e7e523885bb6afae4a52c2e3e9ffb0377a66887fcb25303b8c6e8525",
+      "lines": 13,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/me/listings/[id]/route.ts",
+      "sha256": "dbde7d49bfac71c352d19ae2307d0791907c8c4e48ec61ccbb1af727f9b8bc7c",
+      "lines": 36,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/me/listings/route.ts",
+      "sha256": "a130e5ae7007983878dde2afacfaf33a39d76251aa8c313f3ad60661e01c9751",
+      "lines": 28,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/me/wantlist/[id]/route.ts",
+      "sha256": "6b4f647571c2bf72344ff5e921803699732b4936e1ce2b6209dbb3814623aaba",
+      "lines": 30,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/api/me/wantlist/route.ts",
+      "sha256": "22f1228808f7cc673287c388dda196b879ee1bca44287d44f53582b4fbefc2e3",
+      "lines": 13,
+      "status": "read",
+      "summary": "Reviewed this exact Next route: request method/body/id forwarding through backendFetch, response status/body propagation; auth cookie translation is in lib/backend.ts. Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/cart/CartClient.tsx",
+      "sha256": "1d18aff3a95a82c4ef7b08a46c21461159beedcc2e13af5896dc606705bfecf6",
+      "lines": 188,
+      "status": "read",
+      "summary": "Source supports AUTH-GATE, CART-ADD, CART-READ, CART-REMOVE, CHECKOUT",
+      "rule_ids": [
+        "AUTH-GATE",
+        "CART-ADD",
+        "CART-READ",
+        "CART-REMOVE",
+        "CHECKOUT"
+      ]
+    },
+    {
+      "path": "frontend/src/app/cart/page.tsx",
+      "sha256": "d2446db878a6825f2ae3723b393644e515bd9239336e8cd4a18d3c6c15ea3cc4",
+      "lines": 24,
+      "status": "read",
+      "summary": "Force-dynamic Suspense shell for CartClient; Loading fallback.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/favicon.ico",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+      "lines": 275,
+      "status": "asset_inventory_only",
+      "summary": "Static decorative asset; no business semantics inferred.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/genre/[slug]/page.tsx",
+      "sha256": "956d07a588f9e6499327a62a7b9109aba021090ac71d661aa4b3728f88716aa4",
+      "lines": 193,
+      "status": "read",
+      "summary": "Source supports CAT-GENRE",
+      "rule_ids": [
+        "CAT-GENRE"
+      ]
+    },
+    {
+      "path": "frontend/src/app/globals.css",
+      "sha256": "3a6a582f208e8054076b9703c702a76b8cc3814197d0c77114884877fbeb6dc3",
+      "lines": 10,
+      "status": "read",
+      "summary": "Tailwind import, Arial/Helvetica font and white .page background only.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/layout.tsx",
+      "sha256": "9facb164d34c860b83e1dd9ce372cbeb728cd82bf5f9c7d8d92ebf9f56ff4793",
+      "lines": 27,
+      "status": "read",
+      "summary": "Global header, consent banner, page children, footer; en HTML and Discogs metadata.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/login/LoginClient.tsx",
+      "sha256": "1e7c14c4a10d495e8e589fbe333e8961720c571064fb25a832af396915676d57",
+      "lines": 90,
+      "status": "read",
+      "summary": "Source supports AUTH-LOGIN",
+      "rule_ids": [
+        "AUTH-LOGIN"
+      ]
+    },
+    {
+      "path": "frontend/src/app/login/page.tsx",
+      "sha256": "aac15e137a5cd86d8d5af45b31a49a0b576da0ae3b19bcdc02017cef689bbb01",
+      "lines": 24,
+      "status": "read",
+      "summary": "Force-dynamic Suspense shell for LoginClient; Loading fallback.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/app/me/collection/page.tsx",
+      "sha256": "a5a60a58e34f7ffdc21ce592d37d994a1b5130a996fc442d06db8747461a5a0f",
+      "lines": 63,
+      "status": "read",
+      "summary": "Source supports AUTH-GATE, MEM-COLLECTION",
+      "rule_ids": [
+        "AUTH-GATE",
+        "MEM-COLLECTION"
+      ]
+    },
+    {
+      "path": "frontend/src/app/me/wantlist/page.tsx",
+      "sha256": "695ceb996b1cd628e9daa35ceddec0f2cf6be17a9c588e24d00c320225e3d50d",
+      "lines": 63,
+      "status": "read",
+      "summary": "Source supports MEM-WANTLIST",
+      "rule_ids": [
+        "MEM-WANTLIST"
+      ]
+    },
+    {
+      "path": "frontend/src/app/page.tsx",
+      "sha256": "18e90999ae8ec2b83a957f4bf5f515d36fac1c3dba3993a3f0a07837a5fd313f",
+      "lines": 179,
+      "status": "read",
+      "summary": "Source supports CAT-HOME",
+      "rule_ids": [
+        "CAT-HOME"
+      ]
+    },
+    {
+      "path": "frontend/src/app/release/[id]/page.tsx",
+      "sha256": "6c3f2cc259f23838d8ef745f163a95290aaf119a601d64de2f44e114c5a52447",
+      "lines": 183,
+      "status": "read",
+      "summary": "Source supports CAT-DETAIL, MEM-UI-COUNT",
+      "rule_ids": [
+        "CAT-DETAIL",
+        "MEM-UI-COUNT"
+      ]
+    },
+    {
+      "path": "frontend/src/app/search/page.tsx",
+      "sha256": "3a78fb3b8ad2bdfd3808e78a1c931bc6c18144b01bd319970d0cda6f38e34ecb",
+      "lines": 42,
+      "status": "read",
+      "summary": "Source supports CAT-SEARCH",
+      "rule_ids": [
+        "CAT-SEARCH"
+      ]
+    },
+    {
+      "path": "frontend/src/app/sell/page.tsx",
+      "sha256": "304333e40f0478e0e0cf6541e1897ae457cae75d3aa9ed4ac7f2c0293e232ea2",
+      "lines": 319,
+      "status": "read",
+      "summary": "Source supports AUTH-GATE, SELL-CREATE, SELL-MANAGE, SELL-SEARCH-PROXY",
+      "rule_ids": [
+        "AUTH-GATE",
+        "SELL-CREATE",
+        "SELL-MANAGE",
+        "SELL-SEARCH-PROXY"
+      ]
+    },
+    {
+      "path": "frontend/src/app/sell/release/[id]/page.tsx",
+      "sha256": "a4e93db1fe6191edb18d89dde4cca3f0fdb3b55ad4a72bad095546b502cd14d6",
+      "lines": 189,
+      "status": "read",
+      "summary": "Source supports MKT-FILTER",
+      "rule_ids": [
+        "MKT-FILTER"
+      ]
+    },
+    {
+      "path": "frontend/src/components/CookieBanner.tsx",
+      "sha256": "47ea05c56b0c8df2a80080c03160c70a44ec0d223f0975cb4360e367e0fcb604",
+      "lines": 46,
+      "status": "read",
+      "summary": "Source supports UI-CONSENT",
+      "rule_ids": [
+        "UI-CONSENT"
+      ]
+    },
+    {
+      "path": "frontend/src/components/Footer.tsx",
+      "sha256": "fac3f5d60a7521585de61ba62691fe9ce10f3bbf6cfd7303633f252904bc868a",
+      "lines": 103,
+      "status": "read",
+      "summary": "Source supports UI-NAV",
+      "rule_ids": [
+        "UI-NAV"
+      ]
+    },
+    {
+      "path": "frontend/src/components/Header.tsx",
+      "sha256": "1bff0c4d80d892d11e09e81b71623b5c37ebfef6c5d802594f6a0354cbb3c5de",
+      "lines": 217,
+      "status": "read",
+      "summary": "Source supports AUTH-LOGOUT, CAT-SEARCH, UI-NAV",
+      "rule_ids": [
+        "AUTH-LOGOUT",
+        "CAT-SEARCH",
+        "UI-NAV"
+      ]
+    },
+    {
+      "path": "frontend/src/components/LogoutButton.tsx",
+      "sha256": "7b52254f2b303548be2c121d178a367917f3c33bac336c41073ec2c144341962",
+      "lines": 29,
+      "status": "read",
+      "summary": "Source supports AUTH-LOGOUT",
+      "rule_ids": [
+        "AUTH-LOGOUT"
+      ]
+    },
+    {
+      "path": "frontend/src/components/ReleaseActions.tsx",
+      "sha256": "b298edf4e345a571561edeab18678221dbe0ce5bd6751cce0b6434b35d2b4356",
+      "lines": 72,
+      "status": "read",
+      "summary": "Source supports AUTH-GATE, MEM-COLLECTION, MEM-WANTLIST, MEM-UI-COUNT",
+      "rule_ids": [
+        "AUTH-GATE",
+        "MEM-COLLECTION",
+        "MEM-WANTLIST",
+        "MEM-UI-COUNT"
+      ]
+    },
+    {
+      "path": "frontend/src/components/ReleaseCard.tsx",
+      "sha256": "7bf7592122c5431a13f47fa2d057904302142675d585f8817615ad2493da00e0",
+      "lines": 46,
+      "status": "read",
+      "summary": "Clickable /release/id card with optional Unsplash image and artist text; year accepted but not rendered.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "sha256": "95668f93161d31d1d8b6c2e1d7d97cb493816680d99aec728a8bef0bf879f19a",
+      "lines": 28,
+      "status": "read",
+      "summary": "Source supports RUNTIME",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "frontend/src/lib/backend.ts",
+      "sha256": "82276c8d0ec01c739887e10747971dff707266b5bdfaf443fe4fddf0d0c76cbf",
+      "lines": 26,
+      "status": "read",
+      "summary": "Source supports RUNTIME",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "frontend/src/lib/types.ts",
+      "sha256": "3229fe561f520050e1aa2cdee06b92c8d14f4bd23735d44f3146304dd3cc5a0a",
+      "lines": 36,
+      "status": "read",
+      "summary": "Frontend release cards/home/genre types match display data, not a state transition model.",
+      "rule_ids": []
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "sha256": "5c51df4c59f4510d8c7dadf07a5c32132228826a3b331da5e286207b4df7ef9c",
+      "lines": 34,
+      "status": "read",
+      "summary": "Strict TS bundler config and @/* path alias; no business logic.",
+      "rule_ids": []
+    },
+    {
+      "path": "ports.json",
+      "sha256": "21efc367fd408244a92191b0b16a09b583e840ef2ca488028b4415cd9b958b38",
+      "lines": 8,
+      "status": "read",
+      "summary": "Declares backend12138/frontend12093; adapter public contract independently declares deployed UI12042.",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "README.md",
+      "sha256": "594f2105aa5fb74b8c701d988bec6dfa2f1c22dd518a73284c6c9f1b76b5daf4",
+      "lines": 51,
+      "status": "read",
+      "summary": "Deployment/SDK documentation contains backend port differing from ports.json; do not infer active endpoint solely from README.",
+      "rule_ids": []
+    },
+    {
+      "path": "reset_servers.sh",
+      "sha256": "543dae06823b4b8ecc0c20c5b73b4baf620ef6e00f4e8ca5e41629ab8f7dfa91",
+      "lines": 29,
+      "status": "read",
+      "summary": "Supporting type/export/config/proxy; no independent business rule beyond linked module behavior.",
+      "rule_ids": []
+    },
+    {
+      "path": "scripts/generate_task_instructions.py",
+      "status": "excluded",
+      "reason": "upstream tasks/answers, external sync, or smoke test; not learner input"
+    },
+    {
+      "path": "scripts/linear_sync.py",
+      "status": "excluded",
+      "reason": "upstream tasks/answers, external sync, or smoke test; not learner input"
+    },
+    {
+      "path": "scripts/smoke_check.sh",
+      "status": "excluded",
+      "reason": "upstream tasks/answers, external sync, or smoke test; not learner input"
+    },
+    {
+      "path": "sdk/python/discogs_sdk/__init__.py",
+      "sha256": "e14a9641a7b827e69ab6da1e716ccbdf32d88b93336079fe10057c68d2efd9ef",
+      "lines": 4,
+      "status": "read",
+      "summary": "Exports DiscogsClient only.",
+      "rule_ids": []
+    },
+    {
+      "path": "sdk/python/discogs_sdk/client.py",
+      "sha256": "b9efc9c1c34c5ec14cbc5684fb7d7be90796106e65b11b69bd1dcdf40a0f393f",
+      "lines": 127,
+      "status": "read",
+      "summary": "httpx client API wrappers for auth/catalog/membership/cart/checkout; explicit bearer property. SDK does not bypass generic proxy query loss; not used for UI execution.",
+      "rule_ids": []
+    },
+    {
+      "path": "sdk/python/pyproject.toml",
+      "sha256": "d7cb333174e8cd6c4d43e1c7dcbf42f02b3f76aa9a5414ebe6ae5dbc3451580c",
+      "lines": 20,
+      "status": "read",
+      "summary": "Hatchling package metadata, Python>=3.10 and httpx dependency.",
+      "rule_ids": []
+    },
+    {
+      "path": "sdk/python/README.md",
+      "sha256": "ac33969e0cc1c9ee940beac17fb92f33123d1bbf5ac7a5ad15fc139f457f76ae",
+      "lines": 34,
+      "status": "read",
+      "summary": "Public API SDK usage description; no UI completion evidence.",
+      "rule_ids": []
+    },
+    {
+      "path": "start_servers.sh",
+      "sha256": "61ff5c420299a6acd54cece8de8c8ae97eb1cd93b221978d75c3785b15545b25",
+      "lines": 64,
+      "status": "read",
+      "summary": "Source supports RUNTIME",
+      "rule_ids": [
+        "RUNTIME"
+      ]
+    },
+    {
+      "path": "task_instructions.json",
+      "status": "excluded",
+      "reason": "upstream tasks/answers, external sync, or smoke test; not learner input"
+    },
+    {
+      "path": "website_description.md",
+      "sha256": "37111dff6e6d07d275f55c3d3bbd7dcfb1156286866b6a6e7c9e9b2b6153b9bd",
+      "lines": 304,
+      "status": "read",
+      "summary": "Screenshot-derived desired functionality is aspirational and broader than implementation; source implementation takes precedence.",
+      "rule_ids": []
+    }
+  ]
+}

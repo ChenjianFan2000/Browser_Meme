@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"initial\": {\"passed\": false, \"transitions\": 24, \"native_errors\": 3, \"strict_errors\": 12}, \"repaired\": {\"passed\": true, \"transitions\": 24, \"native_errors\": 0, \"strict_errors\": 0}, \"adapted\": {\"passed\": true, \"transitions\": 12, \"native_errors\": 0, \"strict_errors\": 0}}\n",
+  "stderr": ""
+}

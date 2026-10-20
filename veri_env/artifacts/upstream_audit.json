@@ -1,0 +1,1218 @@
+{
+  "audit_schema": 1,
+  "purpose": "replayable upstream component audit; no paper-method benchmark scores",
+  "environment": {
+    "python": "3.11.4 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 13:38:37) [MSC v.1916 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "dependencies": {
+      "android_env": false,
+      "anthropic": false,
+      "gymnasium": false,
+      "hydra": false,
+      "json_repair": false,
+      "jsonlines": false,
+      "mloggers": false,
+      "numpy": true,
+      "playwright": false,
+      "pydantic": true,
+      "pyflakes": true,
+      "pygame": false,
+      "scipy": true,
+      "torch": true,
+      "yaml": true
+    }
+  },
+  "restrictions": {
+    "network_calls": 0,
+    "model_service_calls": 0,
+    "learner_files_read": 0,
+    "private_eval_files_read": 0,
+    "external_dependency_installations": 0
+  },
+  "fixture": {
+    "source": "handwritten synthetic public-schema example; no domain code or heldout data imported",
+    "transition": {
+      "state": {
+        "issues": [
+          {
+            "id": 17,
+            "title": "Synthetic fixture",
+            "status": "open",
+            "labels": [],
+            "blocked": false,
+            "priority": 2,
+            "comments": []
+          }
+        ],
+        "filter": {
+          "status": "all",
+          "label": ""
+        },
+        "sort": "asc",
+        "selected": [],
+        "role": "editor",
+        "feedback": {
+          "ok": true,
+          "code": "ok"
+        },
+        "visible_ids": [
+          17
+        ]
+      },
+      "action": {
+        "type": "sort",
+        "direction": "desc"
+      },
+      "next_state": {
+        "issues": [
+          {
+            "id": 17,
+            "title": "Synthetic fixture",
+            "status": "open",
+            "labels": [],
+            "blocked": false,
+            "priority": 2,
+            "comments": []
+          }
+        ],
+        "filter": {
+          "status": "all",
+          "label": ""
+        },
+        "sort": "desc",
+        "selected": [],
+        "role": "editor",
+        "feedback": {
+          "ok": true,
+          "code": "ok"
+        },
+        "visible_ids": [
+          17
+        ]
+      }
+    }
+  },
+  "projects": [
+    {
+      "project": "VeriEnv",
+      "source_directory": "external/VeriEnv-main",
+      "source_python_files_present": 370,
+      "weight_or_service_requirement": "optional model/browser stack for full synthesis",
+      "issue_domain_interface_changes": "JSON task checks map directly; browser actions and website generation require a new environment adapter",
+      "missing_probed_dependencies": [
+        "playwright",
+        "gymnasium"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: JSON task checks map directly; browser actions and website generation require a new environment adapter; requires optional model/browser stack for full synthesis",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/VeriEnv-main/README.md",
+          "sha256": "330d05469bd761dcf0d6ba1db4c8100e6872329343511943cab4bde5c280ed6b",
+          "bytes": 7543
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/VeriEnv-main/BrowserGym/browsergym/experiments/src/browsergym/experiments/verienv/judge_dsl.py",
+          "sha256": "e2f0c50482eab4d87bcb3e90d4c9f501d287d5f4c7408ad381e8fd41d9537f11",
+          "bytes": 14113
+        }
+      ],
+      "executed": "full unmodified judge_dsl module: parse_judge_spec + eval_rinfo_checks",
+      "evidence": {
+        "spec": {
+          "eval_type": "rinfo",
+          "checks": [
+            {
+              "op": "exact_match",
+              "path": "sort",
+              "expected": "desc"
+            },
+            {
+              "op": "exact_match",
+              "path": "issues.0.status",
+              "expected": "open"
+            }
+          ],
+          "parse_mode": "json",
+          "program_check": null,
+          "check_logic": "AND"
+        },
+        "positive": {
+          "passed": true,
+          "passed_checks": [
+            "exact_match(sort, 'desc')",
+            "exact_match(issues.0.status, 'open')"
+          ],
+          "failed_checks": [],
+          "failure_reason": null
+        },
+        "negative": {
+          "passed": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "exact_match(sort, 'desc')"
+          ],
+          "failure_reason": "Check failed: exact_match(sort, 'desc')"
+        }
+      },
+      "substitutions": [],
+      "scope": "structured task judgment only, not browser/environment synthesis",
+      "status": "component_executed"
+    },
+    {
+      "project": "PatchWorld",
+      "source_directory": "external/PatchWorld",
+      "source_python_files_present": 27,
+      "weight_or_service_requirement": "LLM backend for induction; no weights for validator",
+      "issue_domain_interface_changes": "JSON observation/action strings + BaseWorldModel predict/correct/readout subclass",
+      "missing_probed_dependencies": [],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: JSON observation/action strings + BaseWorldModel predict/correct/readout subclass; requires LLM backend for induction; no weights for validator",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/PatchWorld/README.md",
+          "sha256": "36d77fba482c9440bbf4ac39c152a9bc2ca55ddabdea8e9440b7dedb1c8eb115",
+          "bytes": 8276
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/PatchWorld/patchworld/worldmodel_base.py",
+          "sha256": "a888d27c3577fb61cf730be2a22c2b77910c2d3a776b73e1ee07fd2cf369c6d2",
+          "bytes": 22582
+        },
+        {
+          "path": "external/PatchWorld/patchworld/worldmodel_data.py",
+          "sha256": "cdc60da89d9163f2b08cb747e49cfd3e9d8eec9ef9a6c5dc1190d2ac64dd8b72",
+          "bytes": 4065
+        },
+        {
+          "path": "external/PatchWorld/patchworld/worldmodel_validator.py",
+          "sha256": "c447157a9fb00240ebd555cd158141b52333de6e862a35da7d695c01cfcc5bc6",
+          "bytes": 19172
+        },
+        {
+          "path": "external/PatchWorld/patchworld/worldmodel_evaluator.py",
+          "sha256": "9ae7819b49813457ea22b6dd463fb063ee58a6a403ea2b00f1cc3708f81886db",
+          "bytes": 40108
+        }
+      ],
+      "executed": "full original BaseWorldModel interface + validate_model + compare_parsed_observations",
+      "evidence": {
+        "positive": {
+          "validator": "patchworld.worldmodel_validator.validate_model",
+          "errors": [],
+          "strict_errors": [],
+          "strict_prediction_checks": 2,
+          "passed": true,
+          "trajectories": 1,
+          "transitions": 1,
+          "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+        },
+        "negative": {
+          "validator": "patchworld.worldmodel_validator.validate_model",
+          "errors": [
+            {
+              "error_type": "render_roundtrip_mismatch",
+              "action": "{\"direction\": \"desc\", \"type\": \"sort\"}",
+              "state": {
+                "feedback": {
+                  "code": "ok",
+                  "ok": true
+                },
+                "filter": {
+                  "label": "",
+                  "status": "all"
+                },
+                "issues": [
+                  {
+                    "blocked": false,
+                    "comments": [],
+                    "id": 17,
+                    "labels": [],
+                    "priority": 2,
+                    "status": "open",
+                    "title": "Synthetic fixture"
+                  }
+                ],
+                "role": "editor",
+                "selected": [],
+                "sort": "asc",
+                "visible_ids": [
+                  17
+                ]
+              },
+              "expected": "{}",
+              "got": "{}"
+            }
+          ],
+          "strict_errors": [
+            {
+              "error_type": "strict_json_mismatch",
+              "action": {
+                "direction": "desc",
+                "type": "sort"
+              },
+              "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Synthetic fixture\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"desc\",\"visible_ids\":[17]}",
+              "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Synthetic fixture\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"asc\",\"visible_ids\":[17]}"
+            },
+            {
+              "error_type": "strict_json_mismatch",
+              "action": {
+                "direction": "desc",
+                "type": "sort"
+              },
+              "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Synthetic fixture\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"desc\",\"visible_ids\":[17]}",
+              "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Synthetic fixture\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"asc\",\"visible_ids\":[17]}"
+            }
+          ],
+          "strict_prediction_checks": 2,
+          "passed": false,
+          "trajectories": 1,
+          "transitions": 1,
+          "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+        },
+        "normalization_false_positive_caught": {
+          "validator": "patchworld.worldmodel_validator.validate_model",
+          "errors": [],
+          "strict_errors": [
+            {
+              "error_type": "strict_json_mismatch",
+              "action": {
+                "direction": "desc",
+                "type": "sort"
+              },
+              "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Synthetic fixture\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"desc\",\"visible_ids\":[17]}",
+              "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"SYNTHETIC FIXTURE\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"desc\",\"visible_ids\":[17]}"
+            },
+            {
+              "error_type": "strict_json_mismatch",
+              "action": {
+                "direction": "desc",
+                "type": "sort"
+              },
+              "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Synthetic fixture\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"desc\",\"visible_ids\":[17]}",
+              "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":17,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"SYNTHETIC FIXTURE\"}],\"role\":\"editor\",\"selected\":[],\"sort\":\"desc\",\"visible_ids\":[17]}"
+            }
+          ],
+          "strict_prediction_checks": 2,
+          "passed": false,
+          "trajectories": 1,
+          "transitions": 1,
+          "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+        },
+        "non_json_prediction_rejected": {
+          "validator": "patchworld.worldmodel_validator.validate_model",
+          "errors": [
+            {
+              "error_type": "predict_observation_error",
+              "action": "{\"direction\": \"desc\", \"type\": \"sort\"}",
+              "state": {
+                "feedback": {
+                  "code": "ok",
+                  "ok": true
+                },
+                "filter": {
+                  "label": "",
+                  "status": "all"
+                },
+                "issues": [
+                  {
+                    "blocked": false,
+                    "comments": [],
+                    "id": 17,
+                    "labels": [],
+                    "priority": 2,
+                    "status": "open",
+                    "title": "Synthetic fixture"
+                  }
+                ],
+                "role": "editor",
+                "selected": [],
+                "sort": "asc",
+                "visible_ids": [
+                  17
+                ]
+              },
+              "expected": "readout_observation(predicted_belief, action) without exception",
+              "got": "Object of type set is not JSON serializable"
+            },
+            {
+              "error_type": "empty_readout_observation",
+              "action": "{\"direction\": \"desc\", \"type\": \"sort\"}",
+              "state": {
+                "feedback": {
+                  "code": "ok",
+                  "ok": true
+                },
+                "filter": {
+                  "label": "",
+                  "status": "all"
+                },
+                "issues": [
+                  {
+                    "blocked": false,
+                    "comments": [],
+                    "id": 17,
+                    "labels": [],
+                    "priority": 2,
+                    "status": "open",
+                    "title": "Synthetic fixture"
+                  }
+                ],
+                "role": "editor",
+                "selected": [],
+                "sort": "asc",
+                "visible_ids": [
+                  17
+                ]
+              },
+              "expected": "non-empty predicted next-observation text from readout_observation",
+              "got": "empty string"
+            }
+          ],
+          "strict_errors": [
+            {
+              "error_type": "invalid_json_prediction",
+              "action": {
+                "direction": "desc",
+                "type": "sort"
+              },
+              "got": "Object of type set is not JSON serializable"
+            },
+            {
+              "error_type": "invalid_json_prediction",
+              "action": {
+                "direction": "desc",
+                "type": "sort"
+              },
+              "got": "Object of type set is not JSON serializable"
+            }
+          ],
+          "strict_prediction_checks": 2,
+          "passed": false,
+          "trajectories": 1,
+          "transitions": 1,
+          "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+        },
+        "public_code_path_hook": {
+          "validator": "patchworld.worldmodel_validator.validate_model",
+          "errors": [],
+          "strict_errors": [],
+          "strict_prediction_checks": 2,
+          "passed": true,
+          "trajectories": 1,
+          "transitions": 1,
+          "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+        }
+      },
+      "substitutions": [
+        "new JSON adapter subclass; no latent-state claim for issue_lab",
+        "method_timeout_s=0; upstream signal timeout unavailable on Windows",
+        "loader wrapper tracks/deletes upstream-created temporary modules"
+      ],
+      "scope": "original validator replays hand-authored adapter fixtures; not PatchWorld induction/repair",
+      "status": "component_executed"
+    },
+    {
+      "project": "WorldCoder",
+      "source_directory": "external/WorldCoder",
+      "source_python_files_present": 43,
+      "weight_or_service_requirement": "LLM backend for synthesis; none for transition evaluator",
+      "issue_domain_interface_changes": "JSON _State/_Action subclasses and Windows-safe execution/timeout backend",
+      "missing_probed_dependencies": [
+        "gymnasium"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: JSON _State/_Action subclasses and Windows-safe execution/timeout backend; requires LLM backend for synthesis; none for transition evaluator",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/WorldCoder/README.md",
+          "sha256": "7a9da475d7c4ae972837e5d847530d114c6a80380867b814b17c8b9ea5ec0e7c",
+          "bytes": 1504
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/WorldCoder/worldcoder/envs/base.py",
+          "sha256": "f6f0882d7db9366de263748ab104643130739c0e6fc104ca3a46abd6a610f369",
+          "bytes": 3197
+        },
+        {
+          "path": "external/WorldCoder/worldcoder/utils/eval_code.py",
+          "sha256": "1e3ecb1f4ef4a915b7dcd39a84d33882ce925c6e8e223d56be5caa2d69e4521e",
+          "bytes": 2825
+        },
+        {
+          "path": "external/WorldCoder/worldcoder/agent/synthesizer/evaluator.py",
+          "sha256": "bdc6d97eb2a930b4f1bcd37684d5a45b1ddb37781b34063ccd7689266e631d5e",
+          "bytes": 47364,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "_Evaluator"
+              ],
+              "start_line": 18,
+              "end_line": 22
+            },
+            {
+              "names": [
+                "TransitEvaluator"
+              ],
+              "start_line": 24,
+              "end_line": 180
+            }
+          ]
+        }
+      ],
+      "executed": "original _State/_Action + extracted TransitEvaluator selection and experience evaluation",
+      "evidence": {
+        "original_eval_code_result": "failed: module 'signal' has no attribute 'setitimer'\nPrinted outputs: ",
+        "adapted_positive_ratio": 1.0,
+        "adapted_negative_ratio": 0.0
+      },
+      "substitutions": [
+        "JSON subclasses of original _State/_Action",
+        "eval_code replaced with portable exec without timeout; original fails on Windows signal.setitimer",
+        "imports of planner, WorldModel, caches and numpy omitted by AST selection"
+      ],
+      "scope": "transition-evaluator core, not original synthesis/planning loop",
+      "status": "component_executed"
+    },
+    {
+      "project": "GIF-MCTS",
+      "source_directory": "external/code-world-models",
+      "source_python_files_present": 164,
+      "weight_or_service_requirement": "code-generation LLM backend/local weights for full search",
+      "issue_domain_interface_changes": "provide JSON transition simulator reward/evaluator and prompt templates; retain search/parser",
+      "missing_probed_dependencies": [
+        "mloggers"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: provide JSON transition simulator reward/evaluator and prompt templates; retain search/parser; requires code-generation LLM backend/local weights for full search",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/code-world-models/README.md",
+          "sha256": "f4b1f8bdeea0083eabfc62833dbd3647d1252d471aade34c0a79505483b9cd7a",
+          "bytes": 4889
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/code-world-models/src/code_helpers.py",
+          "sha256": "06661cdc39197875507720374344af9941df6b600b25f7614b13a31ebd171f25",
+          "bytes": 11284,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "extract_code"
+              ],
+              "start_line": 147,
+              "end_line": 198
+            }
+          ]
+        },
+        {
+          "path": "external/code-world-models/src/mcts/gif_mcts/parser.py",
+          "sha256": "80d645a75a2112e009679fdc03ca6b3698616a03fe84cddf2fe555b01bf0f4bb",
+          "bytes": 2750,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "Parser"
+              ],
+              "start_line": 12,
+              "end_line": 70
+            }
+          ]
+        },
+        {
+          "path": "external/code-world-models/src/mcts/gif_mcts/code_state_node.py",
+          "sha256": "acf6a70fbc56ecf60a0d7bcc0ff93a1f3bcf8eeb99121043f76cf50c416a1091",
+          "bytes": 2810,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "CodeStateNode"
+              ],
+              "start_line": 4,
+              "end_line": 82
+            }
+          ]
+        }
+      ],
+      "executed": "Parser.parse(fix) and CodeStateNode.expand/value; bug branch produces fix child",
+      "evidence": {
+        "parsed": [
+          "def predict(s,a):\n s['sort']=a['direction']\n return s",
+          "",
+          "\ndef predict(s,a):\n s['sort']=a['direction']\n return s",
+          2,
+          1,
+          "The direction was ignored."
+        ],
+        "child_actions": [
+          "f1"
+        ],
+        "value": 0.495
+      },
+      "substitutions": [
+        "mloggers replaced by no-op QuietLogger; original imports/path mutation omitted"
+      ],
+      "scope": "code-search parser/tree bookkeeping, not full GIF-MCTS search or learned world model",
+      "status": "component_executed"
+    },
+    {
+      "project": "PoE-World",
+      "source_directory": "external/poe-world",
+      "source_python_files_present": 323,
+      "weight_or_service_requirement": "LLM program synthesis and expert fitting; no weights for composition kernel",
+      "issue_domain_interface_changes": "encode symbolic issue fields/lists as supported object attributes; replace Atari actions/observations and learner data",
+      "missing_probed_dependencies": [
+        "pygame",
+        "hydra"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: encode symbolic issue fields/lists as supported object attributes; replace Atari actions/observations and learner data; requires LLM program synthesis and expert fitting; no weights for composition kernel",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/poe-world/README.md",
+          "sha256": "d18cbaa4127a4da6317f3f93f79fc055dd16856689eae29ec7d7f77851ef8bef",
+          "bytes": 4395
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/poe-world/classes/utils.py",
+          "sha256": "5e4b38c88a8186661a27df1a3f1f1b60928323c18b39808d5ed660b78c4b41b9",
+          "bytes": 3388,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "logsumexp"
+              ],
+              "start_line": 14,
+              "end_line": 15
+            },
+            {
+              "names": [
+                "exp_normalize"
+              ],
+              "start_line": 18,
+              "end_line": 22
+            }
+          ]
+        },
+        {
+          "path": "external/poe-world/classes/helper.py",
+          "sha256": "68c3d9af76f67e724fd6e29e30277ca83b5ac2da0103a323150c59bae7c093ce",
+          "bytes": 53096,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "RandomValues"
+              ],
+              "start_line": 197,
+              "end_line": 293
+            },
+            {
+              "names": [
+                "combine_random_values"
+              ],
+              "start_line": 945,
+              "end_line": 968
+            }
+          ]
+        }
+      ],
+      "executed": "original NumPy RandomValues logprob and weighted logscore expert composition",
+      "evidence": {
+        "expert_probabilities": [
+          [
+            0.8,
+            0.2
+          ],
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "composed_probabilities": [
+          0.6202041028867287,
+          0.3797958971132712
+        ],
+        "argmax": 0
+      },
+      "substitutions": [
+        "AST excludes pygame/torch/game imports; real numpy and scipy used",
+        "CPU non-Torch branch only; original LOG_IMPOSSIBLE_VALUE=-1000 supplied"
+      ],
+      "scope": "probability composition kernel, not ObjTypeModel learning or game policy",
+      "status": "component_executed"
+    },
+    {
+      "project": "WMA",
+      "source_directory": "external/WMA-Agents",
+      "source_python_files_present": 60,
+      "weight_or_service_requirement": "trained world/value/policy models or serving endpoints",
+      "issue_domain_interface_changes": "replace WebArena accessibility observations/actions with JSON or browser observation adapter; map predictions to full issue state",
+      "missing_probed_dependencies": [
+        "playwright",
+        "gymnasium"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: replace WebArena accessibility observations/actions with JSON or browser observation adapter; map predictions to full issue state; requires trained world/value/policy models or serving endpoints",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/WMA-Agents/README.md",
+          "sha256": "616596f22f4944424791e4779c0b8b6dd5ff20237827f9388b11e3e4064445e8",
+          "bytes": 6277
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/WMA-Agents/browser_env/constants.py",
+          "sha256": "f76c84be095bcc014bf207d00f8ea77d436e4e3f49b036bf3fd81c5373c0376c",
+          "bytes": 5212,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "PLAYWRIGHT_LOCATORS"
+              ],
+              "start_line": 261,
+              "end_line": 272
+            },
+            {
+              "names": [
+                "PLAYWRIGHT_ACTIONS"
+              ],
+              "start_line": 274,
+              "end_line": 286
+            }
+          ]
+        },
+        {
+          "path": "external/WMA-Agents/browser_env/actions.py",
+          "sha256": "b4ade0674d4dd9f3650dcbe7e1e1243f86cf59cf54eca85c13b265ac3415ceed",
+          "bytes": 57272,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "parse_playwright_code"
+              ],
+              "start_line": 1425,
+              "end_line": 1482
+            }
+          ]
+        }
+      ],
+      "executed": "original parse_playwright_code valid and invalid chained actions",
+      "evidence": {
+        "parsed": [
+          {
+            "function_name": "get_by_role",
+            "arguments": [
+              "button"
+            ],
+            "keywords": {
+              "name": "Close selected"
+            }
+          },
+          {
+            "function_name": "click",
+            "arguments": [],
+            "keywords": {}
+          }
+        ],
+        "invalid_rejected": "('Invalid playwright code nonexistent(\"x\"), ', \"the function needs to be one of ('get_by_role', 'get_by_text', 'get_by_label', 'get_by_placeholder', 'get_by_alt_text', 'get_by_title', 'get_by_test_id', 'filter', 'frame_locator', 'locator', 'fill', 'check', 'select_option', 'click', 'hover', 'dclick', 'type', 'focus', 'goto', 'press', 'scroll')\")"
+      },
+      "substitutions": [
+        "ParsedPlaywrightCode TypedDict runtime constructor replaced by dict",
+        "Playwright/gymnasium/browser processor imports omitted; locator/action constants unchanged"
+      ],
+      "scope": "action syntax parsing only; no WMA prediction, policy, or browser execution",
+      "status": "component_executed"
+    },
+    {
+      "project": "WebDreamer",
+      "source_directory": "external/WebDreamer",
+      "source_python_files_present": 10,
+      "weight_or_service_requirement": "GPT-4o/Claude service or substitute VLM weights",
+      "issue_domain_interface_changes": "render issue UI screenshot and map bulk JSON operation to click/type sequence; parse text changes into JSON for exact scoring",
+      "missing_probed_dependencies": [
+        "anthropic",
+        "playwright"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: render issue UI screenshot and map bulk JSON operation to click/type sequence; parse text changes into JSON for exact scoring; requires GPT-4o/Claude service or substitute VLM weights",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/WebDreamer/README.md",
+          "sha256": "6602cb260b52ae5b2b93db231a51a38d0463c78d8e71321620e05b4fa31caacb",
+          "bytes": 6779
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/WebDreamer/world_model.py",
+          "sha256": "fd3a0f436ac23c3b07b55debef3ee3bf234bea5b6f537adafb58f5e25756a786",
+          "bytes": 16436,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "parse_proposed_action"
+              ],
+              "start_line": 14,
+              "end_line": 30
+            },
+            {
+              "names": [
+                "WebWorldModel"
+              ],
+              "start_line": 33,
+              "end_line": 229
+            }
+          ]
+        }
+      ],
+      "executed": "original WebWorldModel.multiple_step_change_prediction k=1 and its three prompt/client paths",
+      "evidence": {
+        "calls": [
+          {
+            "model": "gpt-4o",
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are an agent that predicts the effect of an action on a webpage. You will be given a screenshot of a webpage and an operation to perform on the webpage. You are required to predict the changes that will occur on the webpage after the operation is performed, such as the appearance of new elements, the disappearance of existing elements, or changes in the content of existing elements. The operation type and the element to operate will be provided in the prompt. Directly output 'State changes: ...' and don't output anything else. Try to be as comprehensive and detailed as possible."
+              },
+              {
+                "role": "user",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": " Please predict the changes after click Select all visible."
+                  },
+                  {
+                    "type": "image_url",
+                    "image_url": {
+                      "url": "data:image/png;base64,FIXTURE_NOT_A_REAL_IMAGE",
+                      "detail": "high"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "model": "gpt-4o",
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are an autonomous intelligent agent tasked with navigating a web browser. You will be given web-based tasks. These tasks will be accomplished through the use of specific actions you can issue. Available operation types include \n```click```: Use this to click.\n```type```: Use this to type the content into a field.\n```hover```: Hover over an element.\n```press```:  Simulates the pressing of a key combination on the keyboard (e.g., Ctrl+v).\n```scroll down``` or ```scroll up```: Scroll the page up or down.\n\nURL Navigation Actions:\n```goto```: Navigate to a specific URL.\n```go_back```: Navigate to the previously viewed page.\n```go_forward```: Navigate to the next page (if a previous 'go_back' action was performed).\n\nCompletion Action:\n```stop```: Issue this action when you believe the task is complete. If the objective is to find a text-based answer, provide the answer in the bracket."
+              },
+              {
+                "role": "user",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The above image is a screenshot of a web page. You are required to complete the following task: Synthetic audit task\n PREVIOUS ACTIONS: \n1 : click Select all visible\n\nThe above image is the screenshot before actually performing all the prevoius actions. The current webpage should be a combination of the initial screenshot with the following changes.The webpage has gone through several changes caused by previous actions:\n\nACTION 1: \nclick Select all visible\nState changes: fixture A\n\nBased on the initial screenshot and the changes to the webpage, please predict a single next step action to complete the given task. When proposing a new action, you must be faithful to the current state of the webpage (given by the initial screenshot and a series of state changes afterwards). This means the action proposed by you must be available given the current webpage state based on your evaluation. Please don't repeat any action from PREVIOUS ACTIONS. Please directly specify the operation in a short natural language description, including the operation type and the element to operate. Don't output anything else."
+                  },
+                  {
+                    "type": "image_url",
+                    "image_url": {
+                      "url": "data:image/png;base64,FIXTURE_NOT_A_REAL_IMAGE",
+                      "detail": "high"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "model": "gpt-4o",
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are an agent that predicts the effect of an action on a webpage. You will be given a screenshot of a webpage, a sequence of actions and state changes applied to the initial screenshot, and an operation to perform on the webpage. You are required to predict the new changes that will occur on the webpage after the operation is performed, such as the appearance of new elements, the disappearance of existing elements, or changes in the content of existing elements. The operation type and the element to operate will be provided in the prompt. Directly output 'State changes: ...' and don't output anything else. Try to be as comprehensive and detailed as possible."
+              },
+              {
+                "role": "user",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": " Please predict the changes after action: click Close selectedACTION 1: \nclick Select all visible\nState changes: fixture A\n\nBased on the initial screenshot and the changes to the webpage, please predict the changes after action: click Close selected"
+                  },
+                  {
+                    "type": "image_url",
+                    "image_url": {
+                      "url": "data:image/png;base64,FIXTURE_NOT_A_REAL_IMAGE",
+                      "detail": "high"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "output": "Proposed New Action: \nclick Select all visible\nPredicted new webpage: \nState changes: fixture A\n==================================================STEP: 0==================================================\nProposed New Action: \nclick Close selected\nPredicted new webpage: \nState changes: fixture B\n",
+        "response_source": "declared synthetic RecordingClient fixtures"
+      },
+      "substitutions": [
+        "RecordingClient replaces external OpenAI model service; no API call",
+        "anthropic.Anthropic type marker only; no Anthropic execution",
+        "screenshot is an explicitly invalid image sentinel, since no VLM is called"
+      ],
+      "scope": "prompt construction and imagination control flow; no prediction accuracy evidence",
+      "status": "component_executed"
+    },
+    {
+      "project": "WebEvolver",
+      "source_directory": "external/SelfEvolvingAgent",
+      "source_python_files_present": 100,
+      "weight_or_service_requirement": "trained world model plus policy and self-evolution training setup",
+      "issue_domain_interface_changes": "map JSON observations/actions to cognitive-kernel trajectories, generate new SFT data and retrain",
+      "missing_probed_dependencies": [
+        "playwright"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: map JSON observations/actions to cognitive-kernel trajectories, generate new SFT data and retrain; requires trained world model plus policy and self-evolution training setup",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/SelfEvolvingAgent/README.md",
+          "sha256": "873a78a46309fa3892d94b72cf73fd55542bae0e0ba8235afb26a848a64a8255",
+          "bytes": 831
+        },
+        {
+          "path": "external/SelfEvolvingAgent/WebEvolver/README.md",
+          "sha256": "447dfa1e52789f7f3f111e9e0d453fb1f9fd8bf2d7b858f28fbe21a2239b4b2e",
+          "bytes": 4770
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/SelfEvolvingAgent/WebEvolver/data/get_world_model_sft_from_trajectory.py",
+          "sha256": "1da9aa347b433d7c758fd68a90500ccf0bf1c715bd742479a2a9f37a3c17195f",
+          "bytes": 26324,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "extract_info_from_action"
+              ],
+              "start_line": 22,
+              "end_line": 152
+            }
+          ]
+        }
+      ],
+      "executed": "original data-construction action parser for click/type/stop",
+      "evidence": {
+        "click [17]": [
+          "click",
+          "17",
+          null,
+          false
+        ],
+        "type [21] [reviewed] press_enter_after=1": [
+          "type",
+          "21",
+          "reviewed",
+          "1"
+        ],
+        "stop [done]": [
+          "stop",
+          null,
+          "[done]",
+          null
+        ]
+      },
+      "substitutions": [
+        "script LLAMA_VERSION=3.3 exposed in isolated environ object",
+        "pandas/requests/cognitive_kernel/evaluator imports and top-level script work omitted"
+      ],
+      "scope": "data/action interface only; no self-evolution training or world-model inference",
+      "status": "component_executed"
+    },
+    {
+      "project": "WebWorld",
+      "source_directory": "external/WebWorld",
+      "source_python_files_present": 23,
+      "weight_or_service_requirement": "generation backend plus judge model for original benchmark",
+      "issue_domain_interface_changes": "JSON can be serialized as page text; add dataset task/sample schema; exact JSON evaluation replaces LLM judge",
+      "missing_probed_dependencies": [
+        "jsonlines",
+        "json_repair"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: JSON can be serialized as page text; add dataset task/sample schema; exact JSON evaluation replaces LLM judge; requires generation backend plus judge model for original benchmark",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/WebWorld/README.md",
+          "sha256": "b29c564e4b89548898474a846ad15dfdb98d60a4a92d22b98891f570e1559eaa",
+          "bytes": 11022
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/WebWorld/core/tasks/base_task.py",
+          "sha256": "88ead58e299857fec24405b17b1adea97a8d4341affeb5bc86859cd8cb5aac2b",
+          "bytes": 2798
+        },
+        {
+          "path": "external/WebWorld/core/tasks/web_wm.py",
+          "sha256": "a585576455f7ec5e63df323337484a74a1b1260b0640f7d20bdde9eae8943b1c",
+          "bytes": 28091,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "WebWorldModelTask"
+              ],
+              "start_line": 16,
+              "end_line": 585,
+              "kept_methods": [
+                "generate_prompt",
+                "_get_task_suffix",
+                "_is_web2nal_task",
+                "evaluate"
+              ]
+            }
+          ]
+        }
+      ],
+      "executed": "original generate_prompt single-step branch using original BaseTask parent",
+      "evidence": {
+        "prompt": "You are a web world model. I will provide you with a page state and a action. For the action, predict the resulting page state.\nStrictly maintain the original format. Output only the full page state without explanations, code, or truncation.\n\nPage State:\n{\"feedback\": {\"code\": \"ok\", \"ok\": true}, \"filter\": {\"label\": \"\", \"status\": \"all\"}, \"issues\": [{\"blocked\": false, \"comments\": [], \"id\": 17, \"labels\": [], \"priority\": 2, \"status\": \"open\", \"title\": \"Synthetic fixture\"}], \"role\": \"editor\", \"selected\": [], \"sort\": \"asc\", \"visible_ids\": [17]}\n\nAction: '{\"direction\": \"desc\", \"type\": \"sort\"}'\n\nNext Page State:",
+        "metadata": {
+          "trajectory": "Page State:\n{\"feedback\": {\"code\": \"ok\", \"ok\": true}, \"filter\": {\"label\": \"\", \"status\": \"all\"}, \"issues\": [{\"blocked\": false, \"comments\": [], \"id\": 17, \"labels\": [], \"priority\": 2, \"status\": \"open\", \"title\": \"Synthetic fixture\"}], \"role\": \"editor\", \"selected\": [], \"sort\": \"asc\", \"visible_ids\": [17]}\n\nAction: '{\"direction\": \"desc\", \"type\": \"sort\"}'\n\n",
+          "trajectory_str": "Page State:\n{\"feedback\": {\"code\": \"ok\", \"ok\": true}, \"filter\": {\"label\": \"\", \"status\": \"all\"}, \"issues\": [{\"blocked\": false, \"comments\": [], \"id\": 17, \"labels\": [], \"priority\": 2, \"status\": \"open\", \"title\": \"Synthetic fixture\"}], \"role\": \"editor\", \"selected\": [], \"sort\": \"asc\", \"visible_ids\": [17]}\n\nAction: '{\"direction\": \"desc\", \"type\": \"sort\"}'\n\n",
+          "action": "{\"direction\": \"desc\", \"type\": \"sort\"}",
+          "current_observation": "{\"feedback\": {\"code\": \"ok\", \"ok\": true}, \"filter\": {\"label\": \"\", \"status\": \"all\"}, \"issues\": [{\"blocked\": false, \"comments\": [], \"id\": 17, \"labels\": [], \"priority\": 2, \"status\": \"open\", \"title\": \"Synthetic fixture\"}], \"role\": \"editor\", \"selected\": [], \"sort\": \"asc\", \"visible_ids\": [17]}",
+          "ground_truth_next_observation": "EXPECTED_SENTINEL_NOT_IN_PROMPT",
+          "is_web2nal": false
+        },
+        "ground_truth_excluded_from_prompt": true
+      },
+      "substitutions": [
+        "constructor/dataset/config loading bypassed via __new__; synthetic samples_map supplied",
+        "only listed original class methods retained; evaluator is not invoked"
+      ],
+      "scope": "benchmark input prompt interface; no judge model or prediction model execution",
+      "status": "component_executed"
+    },
+    {
+      "project": "Code2World",
+      "source_directory": "external/Code2World",
+      "source_python_files_present": 149,
+      "weight_or_service_requirement": "pretrained GD-ML/Code2World 8B weights, Android emulator, VLM/HTML rendering stack",
+      "issue_domain_interface_changes": "replace Android screenshots/tap actions with web screenshots/clicks and add HTML-to-business-state readout; JSON exact-state output changes native objective",
+      "missing_probed_dependencies": [
+        "android_env",
+        "playwright"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: replace Android screenshots/tap actions with web screenshots/clicks and add HTML-to-business-state readout; JSON exact-state output changes native objective; requires pretrained GD-ML/Code2World 8B weights, Android emulator, VLM/HTML rendering stack",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/Code2World/README.md",
+          "sha256": "26c14a14166d3b747454d1924ecdf6d96652ac857ae6ad488630dc843036a777",
+          "bytes": 4877
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/Code2World/android_world/agents/qwen_model.py",
+          "sha256": "560612c7dd7f3bc66ed07b2633a765aebd1df958da7dd470c361ec1be36712c8",
+          "bytes": 8227,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "QwenModel"
+              ],
+              "start_line": 9,
+              "end_line": 169
+            }
+          ]
+        },
+        {
+          "path": "external/Code2World/android_world/agents/m3a_qwen.py",
+          "sha256": "dcefe2c6c0f8998c4d9d1bde0970fb52b64d8fa2c285077db1702f8fea0b89f9",
+          "bytes": 40273
+        }
+      ],
+      "executed": "original QwenModel.__init__, post, extract_clean_html through renderer-unavailable branch",
+      "evidence": {
+        "calls": {
+          "checkpoint_requests": [
+            {
+              "kind": "processor",
+              "name": "AUDIT_NO_CHECKPOINT",
+              "trust_remote_code": true
+            },
+            {
+              "kind": "model",
+              "name": "AUDIT_NO_CHECKPOINT",
+              "dtype": "audit-dtype-marker",
+              "device_map": "auto",
+              "trust_remote_code": true
+            }
+          ],
+          "processor_calls": [
+            {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "You are an expert **UI State Transition Simulator** and **Frontend Developer**.\nYour task is to predict the **NEXT UI STATE** based on a screenshot of the current state and a user interaction.\n\n### 1. IMAGE INTERPRETATION RULES\nThe input image contains visual cues denoting the user's action. You must interpret them as follows:\n*   **Red Circle**: Indicates a **Click** or **Long Press** target at that location.\n*   **Red Arrow**: Indicates a **Scroll** or **Swipe**.\n    *   The arrow points in the direction of finger movement.\n    *   *Example*: An arrow pointing UP means the finger slides up, pushing content up (Scrolling Down).\n*   **Note**: These cues exist ONLY to show the action. **DO NOT render these red circles or arrows in your output HTML.**\n\n### 2. CRITICAL STRUCTURAL RULES (MUST FOLLOW)\n*   **Format**: Output ONLY raw HTML. Start with `<!DOCTYPE html>` and end with `</html>`.\n*   **Root Element**: All visible content MUST be wrapped in:\n    `<div id=\"render-target\"> ... </div>`\n*   **Container Style**: `#render-target` must have:\n    `width: 1080px; height: 2400px; position: relative; overflow: hidden;`\n    (Apply background colors and shadows here, NOT on the body).\n*   **Body Style**: The `<body>` tag must have `margin: 0; padding: 0; background: transparent;`.\n*   **Layout**: Do NOT center the body. Let `#render-target` sit at (0,0).\n\n### 3. CONTENT GENERATION LOGIC\n*   **Transition**: Analyze the action. If the user clicks a button, show the *result* (e.g., a menu opens, a checkbox checks, page navigates).\n*   **Images**: Use semantic text placeholders. DO NOT use real URLs.\n    *   Format: `<div style=\"...\">[IMG: description]</div>`\n*   **Icons**: Use simple inline SVG paths or Unicode.\n\n### 4. OUTPUT REQUIREMENT\n*   Do NOT generate Markdown blocks (```html).\n*   Do NOT provide explanations or conversational text.\n*   Output the code directly.\n"
+                    }
+                  ]
+                },
+                {
+                  "role": "user",
+                  "content": [
+                    {
+                      "type": "image",
+                      "image": "AUDIT_IMAGE_SENTINEL"
+                    },
+                    {
+                      "type": "text",
+                      "text": "<image>\n### INPUT CONTEXT\n1.  **User Intent**: Synthetic audit task\n2.  **Interaction Description**:\n    *   **Description**: Click the selected control\n    *   **Action Data**: {'action_type': 'click', 'index': 0}\n\n### COMMAND\nBased on the visual cues in the image and the interaction data above, generate the **HTML for the RESULTING UI STATE** (what the screen looks like *after* this action).\n"
+                    }
+                  ]
+                }
+              ],
+              "kwargs": {
+                "add_generation_prompt": true,
+                "tokenize": true,
+                "return_dict": true,
+                "return_tensors": "pt"
+              }
+            }
+          ],
+          "generate_calls": [
+            {
+              "input_ids": [
+                [
+                  7,
+                  8
+                ]
+              ],
+              "max_new_tokens": 8192
+            }
+          ],
+          "saved_html": [
+            {
+              "path": "AUDIT_NO_WRITE\\test_1.html",
+              "content": "<!DOCTYPE html><html><body><div id=\"render-target\">Synthetic result</div></body></html>"
+            }
+          ],
+          "render_requests": [
+            {
+              "html": "AUDIT_NO_WRITE\\test_1.html",
+              "png": "AUDIT_NO_WRITE\\test_1.png"
+            }
+          ],
+          "device": "audit-no-device",
+          "decode_ids": [
+            [
+              9,
+              10
+            ]
+          ]
+        },
+        "returned": null,
+        "rendered_screenshot": false,
+        "checkpoint_loaded": false
+      },
+      "substitutions": [
+        "recording AutoProcessor and Qwen3VL factories replace actual checkpoint loading/inference",
+        "synthetic token arrays and declared HTML fixture replace model output",
+        "save_html captures content in memory; renderer records paths and returns False",
+        "torch dtype is a marker; image input is a sentinel; no tensor/image computation"
+      ],
+      "scope": "native prompt/token-slicing/HTML-cleanup/render dispatch control flow only; no model or screenshot quality evidence",
+      "status": "component_executed",
+      "captured_component_output": "加载模型中: AUDIT_NO_CHECKPOINT...\n模型加载完毕\nuser_text: <image>\n### INPUT CONTEXT\n1.  **User Intent**: Synthetic audit task\n2.  **Interaction Description**:\n    *   **Description**: Click the selected control\n    *   **Action Data**: {'action_type': 'click', 'index': 0}\n\n### COMMAND\nBased on the visual cues in the image and the interaction data above, generate the **HTML for the RESULTING UI STATE** (what the screen looks like *after* this action).\n\n开始生成html\nhtml生成完毕\n[Error] 将html文件保存成图像失败： test_1\n"
+    },
+    {
+      "project": "Agent2World",
+      "source_directory": "external/agent2world",
+      "source_python_files_present": 121,
+      "weight_or_service_requirement": "LLM agent backends; optional SFT stage; no weights for parser/ranker",
+      "issue_domain_interface_changes": "provide issue simulator/toolkit, test generation and JSON predict API in place of text2world/bytesized tasks",
+      "missing_probed_dependencies": [
+        "anthropic",
+        "gymnasium"
+      ],
+      "full_original_method_feasibility": "not runnable unchanged on issue_lab: provide issue simulator/toolkit, test generation and JSON predict API in place of text2world/bytesized tasks; requires LLM agent backends; optional SFT stage; no weights for parser/ranker",
+      "full_original_method_executed": false,
+      "documentation_provenance": [
+        {
+          "path": "external/agent2world/README.md",
+          "sha256": "822917dc528b81e30107fabe2e7211e199af259378baa4bd4b92086173532fec",
+          "bytes": 11357
+        }
+      ],
+      "sources": [
+        {
+          "path": "external/agent2world/src/agentic_world_model/utils/handle_response.py",
+          "sha256": "723878c27d3f622af26f152ead1c235a3a2c2557f328f98498fd4cabcedad246",
+          "bytes": 12472
+        },
+        {
+          "path": "external/agent2world/src/agentic_world_model/utils/best_code_candidate.py",
+          "sha256": "0d211c802bffdc11cadde91bab79eeeb06bc710a1aae98078f2f1ed187f91729",
+          "bytes": 7731,
+          "execution": "selected_original_AST",
+          "ranges": [
+            {
+              "names": [
+                "select_best_code_candidate"
+              ],
+              "start_line": 7,
+              "end_line": 92
+            }
+          ]
+        }
+      ],
+      "executed": "full original response extraction plus original best-candidate rank function",
+      "evidence": {
+        "extracted_payload": {
+          "sort": "desc"
+        },
+        "selected_candidate": {
+          "code": "synthetic B",
+          "pass_rate": 0.75,
+          "turn": 2,
+          "pytest_success": false,
+          "play_success": false,
+          "feedback": {}
+        }
+      },
+      "substitutions": [
+        "candidate selector logger is QuietLogger; type-only imports omitted",
+        "response parser optional yaml/pydantic imports are real installed packages"
+      ],
+      "scope": "response parsing and candidate ranking, not agentic code generation, self-consistency, sandbox or training",
+      "status": "component_executed"
+    }
+  ]
+}

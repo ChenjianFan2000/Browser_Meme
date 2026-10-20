@@ -1,0 +1,1214 @@
+[
+  {
+    "rule_id": "AUTH-LOGIN",
+    "source_refs": [
+      "backend/app/api/auth.py:38-45",
+      "frontend/src/app/api/auth/login/route.ts:5-27",
+      "frontend/src/app/login/LoginClient.tsx:9-49"
+    ],
+    "steps": [
+      {
+        "step_id": "login_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "login_username",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.login_username",
+                "op": "eq",
+                "value": "demo"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "login_password",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Sign in"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "login_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "matches",
+                "value": "/$"
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "AUTH-GATE",
+    "source_refs": [
+      "backend/app/api/deps.py:13-31",
+      "frontend/src/components/ReleaseActions.tsx:23-36",
+      "frontend/src/app/cart/CartClient.tsx:38-79",
+      "frontend/src/app/me/collection/page.tsx:15-34",
+      "frontend/src/app/sell/page.tsx:46-61"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "AUTH-LOGOUT",
+    "source_refs": [
+      "frontend/src/components/LogoutButton.tsx:10-26",
+      "frontend/src/app/api/auth/logout/route.ts:5-8",
+      "frontend/src/components/Header.tsx:9-11"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "AUTH-REGISTER",
+    "source_refs": [
+      "backend/app/api/auth.py:18-35",
+      "backend/app/schemas/user.py:9-18",
+      "backend/app/models/user.py:12-33"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "CAT-SEARCH",
+    "source_refs": [
+      "backend/app/api/catalog.py:351-377",
+      "frontend/src/app/search/page.tsx:12-37",
+      "frontend/src/components/Header.tsx:22-36"
+    ],
+    "steps": [
+      {
+        "step_id": "search_fill",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.query",
+                "op": "eq",
+                "value": "The Dark Side Of The Moon"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "search_submit",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Results for"
+              },
+              {
+                "path": "after.ui.fields.target_release_count",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "CAT-DETAIL",
+    "source_refs": [
+      "backend/app/api/catalog.py:274-348",
+      "frontend/src/app/release/[id]/page.tsx:20-180"
+    ],
+    "steps": [
+      {
+        "step_id": "release_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              },
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "/release/221"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "return_release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "CAT-HOME",
+    "source_refs": [
+      "backend/app/api/catalog.py:82-174",
+      "frontend/src/app/page.tsx:10-178"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "CAT-GENRE",
+    "source_refs": [
+      "backend/app/api/catalog.py:177-271",
+      "frontend/src/app/genre/[slug]/page.tsx:48-191"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "MEM-COLLECTION",
+    "source_refs": [
+      "backend/app/api/account.py:41-81",
+      "backend/app/models/collection.py:12-25",
+      "frontend/src/app/me/collection/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "MEM-WANTLIST",
+    "source_refs": [
+      "backend/app/api/account.py:84-124",
+      "backend/app/models/wantlist.py:12-25",
+      "frontend/src/app/me/wantlist/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "MEM-UI-COUNT",
+    "source_refs": [
+      "frontend/src/components/ReleaseActions.tsx:20-36",
+      "frontend/src/app/release/[id]/page.tsx:83-108",
+      "backend/app/api/account.py:65-74",
+      "backend/app/api/account.py:108-117"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "MKT-FILTER",
+    "source_refs": [
+      "backend/app/api/marketplace.py:15-90",
+      "frontend/src/app/sell/release/[id]/page.tsx:18-173"
+    ],
+    "steps": [
+      {
+        "step_id": "marketplace_open",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              },
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "rating_fill",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.minimum_rating",
+                "op": "eq",
+                "value": "95.0"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "sort_select",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.sort",
+                "op": "eq",
+                "value": "price_asc"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "filter_apply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "min_rating="
+              },
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "gte",
+                "value": 2
+              },
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "lte",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "return_marketplace",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "rating_refill",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.minimum_rating",
+                "op": "eq",
+                "value": "95.0"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "sort_reselect",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.sort",
+                "op": "eq",
+                "value": "price_asc"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "filter_reapply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "gte",
+                "value": 2
+              },
+              {
+                "path": "after.ui.fields.minimum_rating",
+                "op": "eq",
+                "value": "95.0"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "CART-ADD",
+    "source_refs": [
+      "backend/app/api/account.py:161-179",
+      "backend/app/schemas/cart.py:27-30",
+      "backend/app/models/cart.py:12-28",
+      "frontend/src/app/cart/CartClient.tsx:57-79"
+    ],
+    "steps": [
+      {
+        "step_id": "first_cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.fields.cart_release_rows",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.orders",
+            "op": "eq",
+            "value_from": "before.backend.orders"
+          },
+          {
+            "path": "after.backend.order_items",
+            "op": "eq",
+            "value_from": "before.backend.order_items"
+          },
+          {
+            "path": "after.backend.listings",
+            "op": "eq",
+            "value_from": "before.backend.listings"
+          },
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      },
+      {
+        "step_id": "second_cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 2
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.fields.cart_release_rows",
+                "op": "eq",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.orders",
+            "op": "eq",
+            "value_from": "before.backend.orders"
+          },
+          {
+            "path": "after.backend.order_items",
+            "op": "eq",
+            "value_from": "before.backend.order_items"
+          },
+          {
+            "path": "after.backend.listings",
+            "op": "eq",
+            "value_from": "before.backend.listings"
+          },
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "CART-READ",
+    "source_refs": [
+      "backend/app/api/account.py:127-158",
+      "frontend/src/app/cart/CartClient.tsx:97-160"
+    ],
+    "steps": [
+      {
+        "step_id": "first_cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.fields.cart_release_rows",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.orders",
+            "op": "eq",
+            "value_from": "before.backend.orders"
+          },
+          {
+            "path": "after.backend.order_items",
+            "op": "eq",
+            "value_from": "before.backend.order_items"
+          },
+          {
+            "path": "after.backend.listings",
+            "op": "eq",
+            "value_from": "before.backend.listings"
+          },
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      },
+      {
+        "step_id": "second_cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 2
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.fields.cart_release_rows",
+                "op": "eq",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.orders",
+            "op": "eq",
+            "value_from": "before.backend.orders"
+          },
+          {
+            "path": "after.backend.order_items",
+            "op": "eq",
+            "value_from": "before.backend.order_items"
+          },
+          {
+            "path": "after.backend.listings",
+            "op": "eq",
+            "value_from": "before.backend.listings"
+          },
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "CART-REMOVE",
+    "source_refs": [
+      "backend/app/api/account.py:182-186",
+      "frontend/src/app/cart/CartClient.tsx:120-150",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "CHECKOUT",
+    "source_refs": [
+      "backend/app/api/account.py:189-229",
+      "backend/app/db/session.py:17-22",
+      "frontend/src/app/cart/CartClient.tsx:162-180",
+      "backend/app/models/order.py:12-40"
+    ],
+    "steps": [
+      {
+        "step_id": "checkout",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.backend.latest_demo_order.status",
+                "op": "eq",
+                "value": "paid"
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Your cart is empty."
+              },
+              {
+                "path": "after.ui.fields.checkout_disabled",
+                "op": "eq",
+                "value": ""
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "eq",
+                "value_from": "before.backend.cart_total_cents"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "SELL-CREATE",
+    "source_refs": [
+      "backend/app/api/account.py:263-285",
+      "backend/app/schemas/sell.py:6-15",
+      "frontend/src/app/sell/page.tsx:215-250"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "SELL-MANAGE",
+    "source_refs": [
+      "backend/app/api/account.py:232-260",
+      "backend/app/api/account.py:302-309",
+      "frontend/src/app/sell/page.tsx:254-311"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "SELL-UPDATE",
+    "source_refs": [
+      "backend/app/api/account.py:288-299",
+      "backend/app/schemas/sell.py:18-25",
+      "backend/app/models/marketplace.py:21-31"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "SELL-SEARCH-PROXY",
+    "source_refs": [
+      "frontend/src/app/sell/page.tsx:95-109",
+      "frontend/src/app/api/backend/[...path]/route.ts:5-20",
+      "backend/app/api/catalog.py:351-354"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "UI-CONSENT",
+    "source_refs": [
+      "frontend/src/components/CookieBanner.tsx:5-40"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "UI-NAV",
+    "source_refs": [
+      "frontend/src/components/Header.tsx:38-211",
+      "frontend/src/components/Footer.tsx:26-98"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "DATA-MODEL",
+    "source_refs": [
+      "backend/app/models/release.py:22-133",
+      "backend/app/models/cart.py:12-28",
+      "backend/app/models/collection.py:12-25",
+      "backend/app/models/wantlist.py:12-25",
+      "backend/app/models/comment.py:12-30",
+      "backend/alembic/versions/7c69fa412e18_init_schema.py:21-235",
+      "backend/alembic/versions/c798e9346a24_add_genre_description.py:21-24"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "RUNTIME",
+    "source_refs": [
+      "frontend/package.json:1-26",
+      "frontend/src/lib/api.ts:1-26",
+      "frontend/src/lib/backend.ts:3-22",
+      "backend/app/core/config.py:6-32",
+      "backend/app/main.py:11-26",
+      "ports.json:1-8",
+      "start_servers.sh:15-37",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/diagnosis.json"
+    ],
+    "steps": []
+  },
+  {
+    "rule_id": "TASK-SELECTION",
+    "source_refs": [
+      "frontend/src/app/sell/release/[id]/page.tsx:123-170",
+      "backend/app/api/marketplace.py:32-90",
+      "harness/sites/discogs/complex_cases.json",
+      "harness/SUPERVISION_CONTRACT.md"
+    ],
+    "steps": [
+      {
+        "step_id": "filter_apply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.url",
+                "op": "contains",
+                "value": "min_rating="
+              },
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "gte",
+                "value": 2
+              },
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "lte",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "first_cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 1
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.fields.cart_release_rows",
+                "op": "eq",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.orders",
+            "op": "eq",
+            "value_from": "before.backend.orders"
+          },
+          {
+            "path": "after.backend.order_items",
+            "op": "eq",
+            "value_from": "before.backend.order_items"
+          },
+          {
+            "path": "after.backend.listings",
+            "op": "eq",
+            "value_from": "before.backend.listings"
+          },
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "TASK-MEMORY",
+    "source_refs": [
+      "frontend/src/app/cart/CartClient.tsx:103-115",
+      "frontend/src/components/ReleaseActions.tsx:55-60",
+      "frontend/src/app/sell/release/[id]/page.tsx:123-170",
+      "harness/sites/discogs/complex_cases.json"
+    ],
+    "steps": [
+      {
+        "step_id": "return_release",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "return_marketplace",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Marketplace listings"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "filter_reapply",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.ui.fields.offer_rows",
+                "op": "gte",
+                "value": 2
+              },
+              {
+                "path": "after.ui.fields.minimum_rating",
+                "op": "eq",
+                "value": "95.0"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          }
+        ]
+      },
+      {
+        "step_id": "second_cart_add",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 2
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.cart_total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.fields.cart_release_rows",
+                "op": "eq",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.orders",
+            "op": "eq",
+            "value_from": "before.backend.orders"
+          },
+          {
+            "path": "after.backend.order_items",
+            "op": "eq",
+            "value_from": "before.backend.order_items"
+          },
+          {
+            "path": "after.backend.listings",
+            "op": "eq",
+            "value_from": "before.backend.listings"
+          },
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rule_id": "TASK-CHECKPOINT",
+    "source_refs": [
+      "harness/SUPERVISION_CONTRACT.md",
+      "harness/sites/discogs/complex_cases.json",
+      "frontend/src/app/cart/CartClient.tsx:162-180"
+    ],
+    "steps": [
+      {
+        "step_id": "checkout",
+        "branches": [
+          {
+            "id": "expected",
+            "checks": [
+              {
+                "path": "after.backend.cart_count",
+                "op": "eq",
+                "value": 0
+              },
+              {
+                "path": "after.backend.latest_demo_order.status",
+                "op": "eq",
+                "value": "paid"
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "gt",
+                "value": 0
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "lte",
+                "value": 10000
+              },
+              {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Your cart is empty."
+              },
+              {
+                "path": "after.ui.fields.checkout_disabled",
+                "op": "eq",
+                "value": ""
+              },
+              {
+                "path": "after.backend.latest_demo_order.total_cents",
+                "op": "eq",
+                "value_from": "before.backend.cart_total_cents"
+              }
+            ]
+          }
+        ],
+        "invariants": [
+          {
+            "path": "after.backend.collection_ids",
+            "op": "eq",
+            "value_from": "before.backend.collection_ids"
+          },
+          {
+            "path": "after.backend.wantlist_ids",
+            "op": "eq",
+            "value_from": "before.backend.wantlist_ids"
+          }
+        ]
+      }
+    ]
+  }
+]

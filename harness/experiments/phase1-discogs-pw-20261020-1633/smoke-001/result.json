@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "ambiguous_target_rejected",
+      "passed": true
+    },
+    {
+      "id": "all_native_steps_matched",
+      "passed": true
+    },
+    {
+      "id": "actually_scrolled",
+      "passed": true
+    },
+    {
+      "id": "context_cookie_isolation",
+      "passed": true
+    },
+    {
+      "id": "raw_dom_preserved",
+      "passed": true
+    },
+    {
+      "id": "prediction_precedes_dispatch",
+      "passed": true
+    }
+  ],
+  "started_at": 1792486634.3396728,
+  "browser_version": "155.0.8059.84",
+  "ended_at": 1792486641.8853972
+}

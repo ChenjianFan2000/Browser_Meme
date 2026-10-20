@@ -1,0 +1,52 @@
+{
+  "proposal_version": "1",
+  "id": "budgeted_two_seller_purchase",
+  "goal_zh": "以demo买家身份，通过站内搜索找到The Dark Side Of The Moon（release221），在真实市场页筛选卖家评分至少95%，从完整可见筛选结果中挑选两个不同卖家的最低总价USD报价，各买一件且合计不超过USD100。记住两个报价对象，经跨页面导航分别加入购物车；结账前真实暂停，由独立评估及Solar根据公开UI证据检查身份、两个对象、数量、单价与合计。仅收到明确继续授权后点击一次Checkout，验证一张paid订单含这两个商品、实际总价正确、两报价sold、购物车清空且无关记录未变。",
+  "parameters": {
+    "username": "demo",
+    "password": "password123",
+    "search_query": "The Dark Side Of The Moon",
+    "release_id": 221,
+    "minimum_seller_rating": 95.0,
+    "currency": "USD",
+    "maximum_total_cents": 10000,
+    "offer_count": 2,
+    "quantity_per_offer": 1,
+    "distinct_sellers": true,
+    "exclude_seller_username": "demo",
+    "sort": "price_asc",
+    "selection_policy": "在完整市场筛选结果中枚举不同卖家的两报价组合，按(total_price_cents, lower_listing_id, higher_listing_id)升序取首对；两报价必须USD且seller!=demo。listing_id只从原生Add to Cart href读出。",
+    "navigation_requirement": "首件入车后，从购物车的release链接回release详情，再经Marketplace链接返回市场并重新应用相同筛选，确认第二个已记忆报价仍可见后再入车；不可直接构造写请求。",
+    "checkpoint_id": "before_checkout",
+    "checkpoint_policy": "真实停止在Checkout点击之前；Solar只读本轮DOM/截图/原生定位/浏览器响应证据作诊断；独立评估明确continue且通用Harness放行才可执行Checkout。拒绝、缺失或超时均不点击。"
+  },
+  "success_conditions": [
+    "真实UI登录并通过header搜索、release详情和市场导航。",
+    "提交min_rating=95与price_asc后，可见结果计数不超过UI默认50且显示行数等于页面total，保证本任务候选集合完整；逐行证据可回查。",
+    "按固定选择策略选择两个不同非demo卖家的USD报价，保存listing_id、seller、评分、发货地、condition、unit_price_cents及组合计算证据；合计<=10000。",
+    "两个Add to Cart各执行一次，无额外报价、每件quantity1；跨页面第二次核实对象与价格。",
+    "真实checkpoint发生在购物车双报价核实之后、Checkout之前；checkpoint前无订单创建，Solar诊断与独立continue决定均留证。",
+    "放行后仅一次Checkout；一张新增paid/USD订单，恰含所选两listing各quantity1，单价与总价匹配冻结选择；两listing仅status改sold，原quantity不减。",
+    "DB和UI购物车清空；原订单/order_items、其他listing、其他用户、会员及全部只读目录等无关状态保持。"
+  ],
+  "refusal_or_stop_conditions": [
+    "登录失败、筛选/读取错误、不能确认完整候选集合，或不足两个符合条件的不同卖家报价：记录任务无法完成，不添加或结账。",
+    "没有预算内组合：明确预算拒绝，不选更贵组合，不扩大预算。",
+    "第二次回读时所选报价消失、价格/卖家改变，或者购物车对象/数量/总价不一致：停止并进入Solar诊断；禁止自动替换已冻结选择或自动重试写入。",
+    "任何Add to Cart完成状态无法确认：先诊断公开证据，不重复点击，避免数量累计。",
+    "checkpoint独立评估拒绝/无法确认、Solar判不可继续或Harness未明确放行：保持暂停/终止，无Checkout。",
+    "Checkout返回失效报价拒绝或请求/结果无法确认：不自动再次结账；保留失败和独立副作用检查。",
+    "网站实现、定位、时序、业务矛盾、无法确认分别分类，修订另存v002，不改本轮固定目标。"
+  ],
+  "evaluation_checkpoints": [
+    {"id":"selection_committed","phase":"before_first_cart_write","required_evidence":"全部候选行DOM/截图、筛选URL、候选total与row_count、两个对象的公开选择记忆、计算过程。独立评估不得仅信模型给定答案，需按真实页面/初态独立复核约束与最小组合。","pause_required":false},
+    {"id":"before_checkout","phase":"after_two_cart_adds_before_checkout","required_evidence":"原生两次入车证据、跨页面回读、当前cart DOM/截图与浏览器GET /api/cart响应、Solar分类诊断；独立检查精确两对象qty1/单价/合计、仍active、预算及尚未新建order；独立continue决定。","pause_required":true},
+    {"id":"after_checkout","phase":"after_single_checkout","required_evidence":"实际POST /api/checkout响应、空车DOM/截图、独立订单/items/listing与无关状态检查。","pause_required":false}
+  ],
+  "source_scope": "复用同一源码可见第一阶段Solar作者的完整源码审阅；不是新独立浏览器学习或未见泛化。保留未经修改原站点与既有冻结基线。",
+  "known_scope_limits": "本任务使用已经真实可执行的静态登录、购物车新增/读取、checkout路径，避开已证实被原afterFiles rewrite遮挡的membership、动态购物车删除、卖家搜索/管理。避开已知缺陷不代表这些能力修复。",
+  "model": "gpt-6.1-sol",
+  "billing": null,
+  "tokens": null,
+  "status": "proposal_awaiting_independent_evaluator_freeze"
+}

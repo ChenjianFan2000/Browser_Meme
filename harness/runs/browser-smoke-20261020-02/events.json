@@ -1,0 +1,18 @@
+[
+  {
+    "stage": "browser_launch",
+    "time": 1792482993.3200738,
+    "port": 48177,
+    "pid": 16356,
+    "profile": "G:\\Browser_Meme\\.runtime\\browser-profiles\\smoke-7092ecc5868a"
+  },
+  {
+    "stage": "browser_close_error",
+    "time": 1792482995.3049235,
+    "error": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。"
+  },
+  {
+    "stage": "browser_closed",
+    "time": 1792482995.3256917
+  }
+]

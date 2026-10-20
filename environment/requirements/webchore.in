@@ -1,0 +1,18 @@
+# Local BrowserGym wheels from the pinned WebChoreArena source are added by prepare.sh.
+playwright==1.50.0
+openai>=1.35.4,<1.36
+langchain>=0.2,<0.3
+langchain-openai>=0.1.10,<0.2
+langchain-community>=0.2.6,<0.3
+tiktoken
+huggingface-hub<1
+contexttimer
+ipython
+pyyaml>=6
+pandas<3
+joblib
+transformers>=4.38,<5
+anthropic>=0.49,<0.50
+httpx==0.27.2
+google-generativeai==0.8.5
+torch @ https://download-r2.pytorch.org/whl/cpu/torch-2.8.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=cb9a8ba8137ab24e36bf1742cb79a1294bd374db570f09fc15a5e1318160db4e

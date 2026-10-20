@@ -1,0 +1,246 @@
+[
+  {
+    "case": "01-invalid_login",
+    "event_seq": 74,
+    "time_ns": 1792487262287909600,
+    "url": "http://127.0.0.1:12042/api/auth/login",
+    "method": "POST",
+    "status": 400,
+    "resource_type": "fetch",
+    "content_type": "text/plain;charset=UTF-8",
+    "request_json": {
+      "username_or_email": "demo",
+      "password": "[REDACTED]"
+    }
+  },
+  {
+    "case": "03-anonymous_collection",
+    "event_seq": 54,
+    "time_ns": 1792487293337665500,
+    "url": "http://127.0.0.1:12042/api/me/collection/221",
+    "method": "POST",
+    "status": 404,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": null,
+    "response_json": {
+      "detail": "Not Found"
+    }
+  },
+  {
+    "case": "04-collection_add",
+    "event_seq": 75,
+    "time_ns": 1792487332332502100,
+    "url": "http://127.0.0.1:12042/api/auth/login",
+    "method": "POST",
+    "status": 200,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "username_or_email": "demo",
+      "password": "[REDACTED]"
+    },
+    "response_json": {
+      "ok": true
+    }
+  },
+  {
+    "case": "04-collection_add",
+    "event_seq": 135,
+    "time_ns": 1792487342234883300,
+    "url": "http://127.0.0.1:12042/api/me/collection/221",
+    "method": "POST",
+    "status": 404,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": null,
+    "response_json": {
+      "detail": "Not Found"
+    }
+  },
+  {
+    "case": "05-wantlist_add",
+    "event_seq": 75,
+    "time_ns": 1792487353021835300,
+    "url": "http://127.0.0.1:12042/api/auth/login",
+    "method": "POST",
+    "status": 200,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "username_or_email": "demo",
+      "password": "[REDACTED]"
+    },
+    "response_json": {
+      "ok": true
+    }
+  },
+  {
+    "case": "05-wantlist_add",
+    "event_seq": 128,
+    "time_ns": 1792487357611352700,
+    "url": "http://127.0.0.1:12042/api/me/wantlist/221",
+    "method": "POST",
+    "status": 404,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": null,
+    "response_json": {
+      "detail": "Not Found"
+    }
+  },
+  {
+    "case": "06-cart_add",
+    "event_seq": 75,
+    "time_ns": 1792487367032031000,
+    "url": "http://127.0.0.1:12042/api/auth/login",
+    "method": "POST",
+    "status": 200,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "username_or_email": "demo",
+      "password": "[REDACTED]"
+    },
+    "response_json": {
+      "ok": true
+    }
+  },
+  {
+    "case": "06-cart_add",
+    "event_seq": 187,
+    "time_ns": 1792487376634406900,
+    "url": "http://127.0.0.1:12042/api/cart/items",
+    "method": "POST",
+    "status": 201,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "listing_id": 1,
+      "quantity": 1
+    },
+    "response_json": {
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1,
+          "listing": {
+            "listing_id": 1,
+            "release_id": 221,
+            "release_title": "The Dark Side Of The Moon",
+            "seller_username": "meagan8968",
+            "price_cents": 7251,
+            "currency": "USD"
+          }
+        }
+      ],
+      "total_cents": 7251,
+      "currency": "USD"
+    }
+  },
+  {
+    "case": "07-checkout",
+    "event_seq": 75,
+    "time_ns": 1792487386637645800,
+    "url": "http://127.0.0.1:12042/api/auth/login",
+    "method": "POST",
+    "status": 200,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "username_or_email": "demo",
+      "password": "[REDACTED]"
+    },
+    "response_json": {
+      "ok": true
+    }
+  },
+  {
+    "case": "07-checkout",
+    "event_seq": 192,
+    "time_ns": 1792487397409932200,
+    "url": "http://127.0.0.1:12042/api/cart/items",
+    "method": "POST",
+    "status": 201,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "listing_id": 1,
+      "quantity": 1
+    },
+    "response_json": {
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1,
+          "listing": {
+            "listing_id": 1,
+            "release_id": 221,
+            "release_title": "The Dark Side Of The Moon",
+            "seller_username": "meagan8968",
+            "price_cents": 7251,
+            "currency": "USD"
+          }
+        }
+      ],
+      "total_cents": 7251,
+      "currency": "USD"
+    }
+  },
+  {
+    "case": "07-checkout",
+    "event_seq": 211,
+    "time_ns": 1792487398879056700,
+    "url": "http://127.0.0.1:12042/api/checkout",
+    "method": "POST",
+    "status": 200,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": null,
+    "response_json": {
+      "id": 121,
+      "status": "paid",
+      "total_cents": 7251,
+      "currency": "USD",
+      "created_at": "2026-10-20T09:09:58",
+      "items": [
+        {
+          "listing_id": 1,
+          "price_cents": 7251,
+          "quantity": 1
+        }
+      ]
+    }
+  },
+  {
+    "case": "08-seller_create_deactivate",
+    "event_seq": 75,
+    "time_ns": 1792487409677986100,
+    "url": "http://127.0.0.1:12042/api/auth/login",
+    "method": "POST",
+    "status": 200,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": {
+      "username_or_email": "demo",
+      "password": "[REDACTED]"
+    },
+    "response_json": {
+      "ok": true
+    }
+  },
+  {
+    "case": "08-seller_create_deactivate",
+    "event_seq": 150,
+    "time_ns": 1792487420416109800,
+    "url": "http://127.0.0.1:12042/api/backend/search?q=The%20Dark%20Side%20Of%20The%20Moon",
+    "method": "GET",
+    "status": 404,
+    "resource_type": "fetch",
+    "content_type": "application/json",
+    "request_json": null,
+    "response_json": {
+      "detail": "Not Found"
+    }
+  }
+]

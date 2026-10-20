@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "quantity": 1,
+      "listing": {
+        "listing_id": 12,
+        "release_id": 221,
+        "release_title": "The Dark Side Of The Moon",
+        "seller_username": "ewright99",
+        "price_cents": 2812,
+        "currency": "USD"
+      }
+    }
+  ],
+  "total_cents": 2812,
+  "currency": "USD"
+}

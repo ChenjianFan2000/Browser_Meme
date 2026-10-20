@@ -1,0 +1,13 @@
+{
+  "checkpoint_id": "selection_committed",
+  "trigger": "planned_review",
+  "before_step": "first_cart_add",
+  "directory": "interventions/01-selection_committed",
+  "status": "consumed",
+  "request_id": "45dec6f4666d45d48a5942e8bc98b040",
+  "request_sha256": "27f389c469e2c8fb3534dea65bba62e2bd563c6ef5e5af05be76d3947c475398",
+  "solar_decision": "continue",
+  "classification": "planned_review",
+  "decision_sha256": "ff38852f7faf8cc5b08d2f181f05f1bf8de4fabcb1dcaed979f520fdefe99a7a",
+  "review_elapsed_seconds": 78.5789999999979
+}

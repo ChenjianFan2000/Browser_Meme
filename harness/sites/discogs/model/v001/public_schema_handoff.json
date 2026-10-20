@@ -1,0 +1,14 @@
+{
+  "authority": "Independent deployment/evaluation agent solar_site_selection public schema handoff before v001 generation",
+  "private_evaluator_source_read": false,
+  "fixture": "Flat frozen listing1 fields: listing_id, release_id, price_cents, quantity, status, currency, seller_user_id; fixture is baseline rather than live state.",
+  "listings": "Raw database listing rows sorted by integer id; listing1 at index0.",
+  "cart": "Demo rows with id,user_id,listing_id,quantity,created_at; cart_total_cents uses live listing price.",
+  "collection_ids_and_wantlist_ids": "Sorted integer lists.",
+  "orders": "Demo raw order rows sorted by id.",
+  "phase1_listing": "Nullable raw listing dictionary identified by unique phase1 marker and demo user.",
+  "latest_demo_order": "Nullable raw demo order dictionary with highest id.",
+  "latest_demo_order_items": "List of raw item rows for latest_demo_order sorted by id.",
+  "counts": ["cart_count", "order_count", "demo_listing_count"],
+  "note": "Public adapter_contract.md was still being expanded by deployment agent when v001 was frozen; this records the explicit pre-generation schema clarification messages. It contains no evaluator implementation or hidden answer."
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\0\\5\\9\\a\\5\\059a5b19be85ecd6a8b9f6921d406d0336f8b4730ca367ace646e621.body",
+    "name": "python-jose",
+    "version": "3.3.0",
+    "tags": [
+      "py2-none-any",
+      "py3-none-any"
+    ],
+    "sha256": "9b1376b023f8b298536eedd47ae1089bcdb848f1535ab30555cd92002d78923a"
+  },
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\1\\2\\2\\4\\7\\12247cb7a53a5cdb908d9fd7b67f87f28a52a39be42e68699ca441e7.body",
+    "name": "ecdsa",
+    "version": "0.19.1",
+    "tags": [
+      "py2-none-any",
+      "py3-none-any"
+    ],
+    "sha256": "30638e27cf77b7e15c4c4cc1973720149e1033827cfd00661ca5c8cc0cdb24c3"
+  },
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\9\\8\\b\\5\\0\\98b5018fba81102edc0ce70b3a8244ad2820542bc4ed11ac1e9b9b74.body",
+    "name": "rsa",
+    "version": "4.9",
+    "tags": [
+      "py3-none-any"
+    ],
+    "sha256": "90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7"
+  },
+  {
+    "source": "C:\\Users\\29935\\AppData\\Local\\pip\\Cache\\http-v2\\e\\2\\3\\7\\7\\e23770b55e23c2536a748a013d9be5f283d2049cb684400b0b53bd58.body",
+    "name": "rsa",
+    "version": "4.9.1",
+    "tags": [
+      "py3-none-any"
+    ],
+    "sha256": "68635866661c6836b8d39430f97a996acbd61bfa49406748ea243539fe239762"
+  }
+]

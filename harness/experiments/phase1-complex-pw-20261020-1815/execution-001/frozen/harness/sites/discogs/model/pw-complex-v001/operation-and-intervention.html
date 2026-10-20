@@ -1,0 +1,397 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>复杂任务规则与介入说明</title><style>body{font:16px/1.7 system-ui;max-width:1100px;margin:32px auto;padding:0 18px}td,th{border:1px solid #bbb;padding:8px;vertical-align:top}table{border-collapse:collapse;width:100%}code{background:#eee}pre{white-space:pre-wrap}a{color:#1458a5}</style><body><h1>复杂任务：双卖家预算内最优组合购买</h1><p>独立源码作者gpt-6.1-sol；沿用先前第一阶段源码知识，不是浏览器独立学习。原站点不改、无API业务执行。当前版本未执行真实复杂任务；下面是冻结前操作与失败停止约定。</p>
+<p>精确目标/参数来自独立固定<a href="../../complex_cases.json">complex_cases.json</a>；预算10000美分=USD100.00。通过真实市场DOM枚举完整候选、计算最小不同卖家报价对，保存对象记忆并跨页面回查。价格是商品单价，该站checkout没有额外运费或税项。</p>
+<h2>源码范围与对应</h2><p>110文件已登记哈希：99文本实现/配置/说明已读，1锁文件顶层元数据，6装饰资源仅登记，4任务/测试/外部同步内容排除。继承审阅不能声称所有分支真实验证。见<a href="source_review.json">完整清单</a>、<a href="task-source-review.json">本任务逐阶段源码关系</a>与<a href="rule-source-script-check-mapping.json">规则—源码—脚本—检查表</a>。</p>
+<h2>19步操作与每步监督</h2><p>每个动作前由h.step落盘对应branch与invariants，再确认原生locator唯一/滚动/可见/可用、执行一次UI动作、原生显式等待、回读与截图。schema3固定检查不等于独立精确真值；候选/购物车精确对象同时由脚本只读断言与独立评价复核。脚本为<a href="scripts.py">scripts.py</a>，计划为<a href="plan.json">plan.json</a>。</p>
+<table><tr><th>序号</th><th>stepID</th><th>规则</th><th>UI动作</th><th>预测</th></tr><tr><td>1</td><td>login_open</td><td>AUTH-LOGIN</td><td>{&quot;kind&quot;: &quot;open&quot;, &quot;url&quot;: &quot;/login&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>2</td><td>login_username</td><td>AUTH-LOGIN</td><td>{&quot;kind&quot;: &quot;fill&quot;, &quot;selector&quot;: &quot;main form input:not([type=\&quot;password\&quot;])&quot;, &quot;value&quot;: &quot;demo&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>3</td><td>login_password</td><td>AUTH-LOGIN</td><td>{&quot;kind&quot;: &quot;fill&quot;, &quot;selector&quot;: &quot;main input[type=\&quot;password\&quot;]&quot;, &quot;value&quot;: &quot;password123&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>4</td><td>login_submit</td><td>AUTH-LOGIN</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main button:has-text(\&quot;Sign in\&quot;)&quot;}</td><td>2分支检查 / 1不变式</td></tr><tr><td>5</td><td>search_fill</td><td>CAT-SEARCH</td><td>{&quot;kind&quot;: &quot;fill&quot;, &quot;selector&quot;: &quot;header input[name=\&quot;q\&quot;]&quot;, &quot;value&quot;: &quot;The Dark Side Of The Moon&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>6</td><td>search_submit</td><td>CAT-SEARCH</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;header button[type=\&quot;submit\&quot;]&quot;}</td><td>2分支检查 / 1不变式</td></tr><tr><td>7</td><td>release_open</td><td>CAT-DETAIL</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main a[href=\&quot;/release/221\&quot;]&quot;}</td><td>2分支检查 / 1不变式</td></tr><tr><td>8</td><td>marketplace_open</td><td>MKT-FILTER</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main a[href=\&quot;/sell/release/221\&quot;]&quot;}</td><td>2分支检查 / 1不变式</td></tr><tr><td>9</td><td>rating_fill</td><td>MKT-FILTER</td><td>{&quot;kind&quot;: &quot;fill&quot;, &quot;selector&quot;: &quot;main input[name=\&quot;min_rating\&quot;]&quot;, &quot;value&quot;: &quot;95.0&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>10</td><td>sort_select</td><td>MKT-FILTER</td><td>{&quot;kind&quot;: &quot;select&quot;, &quot;selector&quot;: &quot;main select[name=\&quot;sort\&quot;]&quot;, &quot;value&quot;: &quot;price_asc&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>11</td><td>filter_apply</td><td>MKT-FILTER, TASK-SELECTION</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main button:has-text(\&quot;Apply\&quot;)&quot;}</td><td>3分支检查 / 1不变式</td></tr><tr><td>12</td><td>first_cart_add</td><td>CART-ADD, CART-READ, TASK-SELECTION</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main a[href^=\&quot;/cart?add=\&quot;]&quot;, &quot;binding&quot;: &quot;exact public committed first offer href; scripts.py requires unique locator&quot;}</td><td>4分支检查 / 5不变式</td></tr><tr><td>13</td><td>return_release</td><td>CAT-DETAIL, TASK-MEMORY</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main a[href=\&quot;/release/221\&quot;]&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>14</td><td>return_marketplace</td><td>MKT-FILTER, TASK-MEMORY</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main a[href=\&quot;/sell/release/221\&quot;]&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>15</td><td>rating_refill</td><td>MKT-FILTER</td><td>{&quot;kind&quot;: &quot;fill&quot;, &quot;selector&quot;: &quot;main input[name=\&quot;min_rating\&quot;]&quot;, &quot;value&quot;: &quot;95.0&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>16</td><td>sort_reselect</td><td>MKT-FILTER</td><td>{&quot;kind&quot;: &quot;select&quot;, &quot;selector&quot;: &quot;main select[name=\&quot;sort\&quot;]&quot;, &quot;value&quot;: &quot;price_asc&quot;}</td><td>1分支检查 / 1不变式</td></tr><tr><td>17</td><td>filter_reapply</td><td>MKT-FILTER, TASK-MEMORY</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main button:has-text(\&quot;Apply\&quot;)&quot;}</td><td>2分支检查 / 1不变式</td></tr><tr><td>18</td><td>second_cart_add</td><td>CART-ADD, CART-READ, TASK-MEMORY</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main a[href^=\&quot;/cart?add=\&quot;]&quot;, &quot;binding&quot;: &quot;exact remembered second offer href; scripts.py requires unique locator&quot;}</td><td>4分支检查 / 5不变式</td></tr><tr><td>19</td><td>checkout</td><td>CHECKOUT, TASK-CHECKPOINT</td><td>{&quot;kind&quot;: &quot;click&quot;, &quot;selector&quot;: &quot;main button:has-text(\&quot;Checkout\&quot;)&quot;}</td><td>7分支检查 / 2不变式</td></tr></table>
+<h2>两个真实暂停关卡</h2><p><b>selection_committed：</b>filter_apply已完成、候选记录与组合计算保存后，在first_cart_add之前实际暂停。Solar只读公开市场DOM/截图和独立公开判定；独立评估验证demo认证、完整筛选集合、预算内最优组合可行且未写入。它不把模型note当选择答案；模型已承诺报价的精确结果在第二关由真实cart独立复核。该关新增强于proposal的非暂停提示，正式protocol3要求所有checkpoint真实live。</p>
+<p><b>before_checkout：</b>两次不同报价的原生Add to Cart各一次，且经cart链接→详情→市场重筛/第二对象回查；浏览器页面触发的GET/cart证明两对象各qty1、单价/币种/合计匹配记忆，预算内。保存公开cart note后，在checkout之前再次实际暂停。独立评价从真实cart/页面/历史验证最优pair、两次成功入车、无提前订单及无关状态；Solar诊断同一公开状态。两者continue且Harness重新观察状态不变才放行一次Checkout。</p>
+<p>h.checkpoint必须紧邻对应with h.step、位于步骤外；两次checkpoint之间没有自动批准。每次审阅240秒，最多3次、单case900秒含等待；2次planned review后至多1次失败诊断。单Playwright调用上限30秒、失败不就地修脚本。尚未使用的gate不能借之前批准跳过。</p>
+<h2>需要介入和必须停止的条件</h2><table><tr><th>分类</th><th>触发及响应</th></tr><tr><td>locator</td><td>找不到唯一原生元素、不可见/不可用、目标href不符：保存证据并停止，不force点击。</td></tr><tr><td>timing</td><td>显式30秒等待耗尽：保存实际网络/DOM；不因可能已写入而重试Add或Checkout。</td></tr><tr><td>implementation</td><td>原站点404/响应模式错误、脚本解析实现失败：分清网站/脚本；无API绕过，另版修订。</td></tr><tr><td>business_rule</td><td>候选不完整、没有不同卖家组合、超过预算、第二对象变化、cartIDs/qty/价格/总计不符、Checkout拒绝：停止，不替换弱目标、不自动重购。</td></tr><tr><td>unconfirmed</td><td>网络结果/完整集合/权限/独立判定无法确认：保留unknown并停止，不能记成功。</td></tr></table>
+<p>所有step失败触发diagnose_and_stop；失败审阅仅接受stop，不可把失败变成功。拒绝、unknown、超时、缺失/陈旧决策、recheck状态变化都不授权后续写入。介入JSON绑定request_id与request哈希、reviewer=gpt-6.1-sol、证据限定关卡目录。主Agent不代填Solar结论。公开notes只存DOM候选、计算和浏览器cart/checkout内容，无凭据。</p>
+<h2>最终独立终点</h2><p>只有19步骤全部matched、两gate全部grant，且独立终点评价通过才算成功：新增一张paid/USD订单，恰含冻结最优两listing、各qty1、合计等于cart且<=10000美分；两listing仅status变sold，原quantity保持；UI/DB空cart；旧订单/items、其他listing、会员、目录和其他用户状态均保留。模型自身断言不能作为唯一真值。</p>
+<h2>范围限制</h2><p>本任务有意使用原站点已实测可执行的静态login/cart-add/cart-read/checkout路径；不声称修复动态membership、cart-delete或seller路径的afterFiles重写缺陷，不用删除cart来悄悄修状态。新业务运行与修订另留v002，原历史版本不改。无token/费用记录时保持null。</p>
+<h2>完整规则清单</h2>
+<h3>AUTH-LOGIN</h3><p>Username or email login issues a bearer JWT on success; the UI stores it in an httpOnly sameSite=lax cookie and replaces the URL with next or /.</p><p>来源：backend/app/api/auth.py:38-45; frontend/src/app/api/auth/login/route.ts:5-27; frontend/src/app/login/LoginClient.tsx:9-49</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;username_or_email and password supplied&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;valid: 200 token / UI {ok:true}&quot;,
+    &quot;unknown user or wrong password: 400 Invalid credentials, visible raw error, remain login&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no account, cart, order, catalog or membership changes&quot;,
+    &quot;failed fresh login must not create authenticated session&quot;
+  ]
+}</pre>
+<h3>AUTH-GATE</h3><p>All account mutations/reads require current user resolved from a valid JWT subject; UI 401 redirects preserve return target.</p><p>来源：backend/app/api/deps.py:13-31; frontend/src/components/ReleaseActions.tsx:23-36; frontend/src/app/cart/CartClient.tsx:38-79; frontend/src/app/me/collection/page.tsx:15-34; frontend/src/app/sell/page.tsx:46-61</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;authenticated account operations&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;missing bearer: framework 401&quot;,
+    &quot;invalid/expired JWT: 401 Invalid or expired token&quot;,
+    &quot;missing user: 401 User not found&quot;,
+    &quot;anonymous collection click: login?next=/release/id; login does not replay collection POST&quot;,
+    &quot;anonymous cart add: login returns to /cart?add=id, then retries add&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;refusals change no business state&quot;
+  ]
+}</pre>
+<h3>AUTH-LOGOUT</h3><p>Sign out clears the cookie then refreshes/pushes home; it does not invalidate JWT server-side.</p><p>来源：frontend/src/components/LogoutButton.tsx:10-26; frontend/src/app/api/auth/logout/route.ts:5-8; frontend/src/components/Header.tsx:9-11</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;cookie-backed UI session&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;sign out: cookie expiry and home&quot;,
+    &quot;Header treats cookie presence as signed in without validating it&quot;,
+    &quot;source-only: LogoutButton does not check HTTP res.ok; a resolved non2xx still refreshes/pushes home without proving cookie cleared&quot;,
+    &quot;source-only: network promise rejection exits before refresh/push; finally clears busy&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no business state mutations&quot;
+  ]
+}</pre>
+<h3>AUTH-REGISTER</h3><p>API registration validates schema and exact username/email uniqueness, hashes password, creates a user; there is no registration page.</p><p>来源：backend/app/api/auth.py:18-35; backend/app/schemas/user.py:9-18; backend/app/models/user.py:12-33</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;username length 3..50; valid email; password length 8..128; optional display_name &lt;=120&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;201 UserOut, no token&quot;,
+    &quot;400 Username already taken&quot;,
+    &quot;400 Email already registered&quot;,
+    &quot;422 schema refusal&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no other users or business records change&quot;
+  ]
+}</pre>
+<h3>CAT-SEARCH</h3><p>Search trims q, matches title or main artist using case-insensitive SQL substring pattern, sorts year descending/null last then title, limits 30; it does not search genre/style/label.</p><p>来源：backend/app/api/catalog.py:351-377; frontend/src/app/search/page.tsx:12-37; frontend/src/components/Header.tsx:22-36</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;q string&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;empty/whitespace: []&quot;,
+    &quot;match: release cards&quot;,
+    &quot;no match: empty grid without explicit no-result sentence&quot;,
+    &quot;SQL %/_ act as wildcards&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no database changes&quot;
+  ]
+}</pre>
+<h3>CAT-DETAIL</h3><p>Release detail returns joined metadata, ordered tracks and current global collection/want counts plus active listing count/minimum price.</p><p>来源：backend/app/api/catalog.py:274-348; frontend/src/app/release/[id]/page.tsx:20-180</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;integer release id&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;exists: metadata, tracklist, optional notes and actions&quot;,
+    &quot;missing: API 404 Release not found; apiGet throws; exact Next error UI pending&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;read does not mutate tables&quot;
+  ]
+}</pre>
+<h3>CAT-HOME</h3><p>Home ranks most wanted (6), latest created (8), and highest order-item prices in last 31 days (6); promo tiles link home, featured banner links seeded title if available.</p><p>来源：backend/app/api/catalog.py:82-174; frontend/src/app/page.tsx:10-178</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;catalog accessible&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;rankings data-dependent, ties not fully stable&quot;,
+    &quot;newsletter Subscribe has no handler/form action; app store mockups are display only&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no newsletter subscription or database mutation from placeholder controls&quot;
+  ]
+}</pre>
+<h3>CAT-GENRE</h3><p>Genre overview includes alphabetic styles, most-collected and earliest-year cards, decade and contributor aggregates, recent-sales ranking. Its navigation links lead to text search, not true genre-filtered search.</p><p>来源：backend/app/api/catalog.py:177-271; frontend/src/app/genre/[slug]/page.tsx:48-191</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;existing slug&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;known slug: overview&quot;,
+    &quot;unknown: API 404 Genre not found; exact Next error UI pending&quot;,
+    &quot;style/release/artist links are q text searches&quot;,
+    &quot;artist tiles are placeholders&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no catalog/business mutations&quot;
+  ]
+}</pre>
+<h3>MEM-COLLECTION</h3><p>collection GET returns current user release cards; POST is idempotent; DELETE removes only current user membership and succeeds when absent. UI only exposes add and list, no remove control. Actual production UI dynamic endpoint is masked by original Next afterFiles rewrite and returns404 before this intended backend behavior. Intended API semantics do not prove current UI reachability.</p><p>来源：backend/app/api/account.py:41-81; backend/app/models/collection.py:12-25; frontend/src/app/me/collection/page.tsx:15-58; frontend/src/components/ReleaseActions.tsx:23-66; .runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session&quot;,
+    &quot;POST requires existing release&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;GET 200 array, empty allowed&quot;,
+    &quot;POST 200 {ok:true}, existing no-op&quot;,
+    &quot;POST unknown release 404&quot;,
+    &quot;DELETE 200 {ok:true} even absent&quot;,
+    &quot;UI 401 login gate&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;other users/membership kind and all catalog/cart/order/listing rows unchanged&quot;
+  ]
+}</pre>
+<h3>MEM-WANTLIST</h3><p>wantlist GET returns current user release cards; POST is idempotent; DELETE removes only current user membership and succeeds when absent. UI only exposes add and list, no remove control. Actual production UI dynamic endpoint is masked by original Next afterFiles rewrite and returns404 before this intended backend behavior. Intended API semantics do not prove current UI reachability.</p><p>来源：backend/app/api/account.py:84-124; backend/app/models/wantlist.py:12-25; frontend/src/app/me/wantlist/page.tsx:15-58; frontend/src/components/ReleaseActions.tsx:23-66; .runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session&quot;,
+    &quot;POST requires existing release&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;GET 200 array, empty allowed&quot;,
+    &quot;POST 200 {ok:true}, existing no-op&quot;,
+    &quot;POST unknown release 404&quot;,
+    &quot;DELETE 200 {ok:true} even absent&quot;,
+    &quot;UI 401 login gate&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;other users/membership kind and all catalog/cart/order/listing rows unchanged&quot;
+  ]
+}</pre>
+<h3>MEM-UI-COUNT</h3><p>Successful Add to Collection/Wantlist always increments its local component count, including duplicate POST no-op; the separate summary remains its server-rendered value until navigation/reload.</p><p>来源：frontend/src/components/ReleaseActions.tsx:20-36; frontend/src/app/release/[id]/page.tsx:83-108; backend/app/api/account.py:65-74; backend/app/api/account.py:108-117</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;authenticated duplicate add&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;first add: one durable membership&quot;,
+    &quot;repeat add: local count +1 again; durable count unchanged&quot;,
+    &quot;reload: counts recomputed from backend&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;duplicates must not create another membership&quot;
+  ]
+}</pre>
+<h3>MKT-FILTER</h3><p>Marketplace exposes only active listings for a release; text filters are exact equality, rating is minimum, sorting is price_asc/price_desc/newest with documented secondary keys.</p><p>来源：backend/app/api/marketplace.py:15-90; frontend/src/app/sell/release/[id]/page.tsx:18-173</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid release&quot;,
+    &quot;sort enum; API limit 1..200 default50, offset&gt;=0&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;matching: total before pagination + rows&quot;,
+    &quot;none: No listings match these filters.&quot;,
+    &quot;unknown release 404&quot;,
+    &quot;bad sort/nonnumeric rating/pagination 422 -&gt; server page error&quot;,
+    &quot;UI has no pagination or quantity control and renders at most default 50&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no state changes from filtering/sorting&quot;
+  ]
+}</pre>
+<h3>CART-ADD</h3><p>Add requires active listing and positive quantity; an existing user/listing row accumulates quantity capped at 99; a new row is not capped by the route. No stock or seller-self-purchase check exists.</p><p>来源：backend/app/api/account.py:161-179; backend/app/schemas/cart.py:27-30; backend/app/models/cart.py:12-28; frontend/src/app/cart/CartClient.tsx:57-79</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session&quot;,
+    &quot;listing id and integer quantity&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;201 CartOut with totals&quot;,
+    &quot;404 Listing not found for missing/inactive/sold&quot;,
+    &quot;400 Quantity must be &gt;= 1&quot;,
+    &quot;422 invalid payload types&quot;,
+    &quot;UI always adds one via /cart?add=id and replaces /cart&quot;,
+    &quot;UI ignores non-401 add refusal then loads cart&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no order or stock decrement; no other users cart changes&quot;
+  ]
+}</pre>
+<h3>CART-READ</h3><p>Cart joins current listing price, calculates sum(price*cart quantity), returns currency USD, latest-added first. UI hides quantity and displays unit prices alongside total.</p><p>来源：backend/app/api/account.py:127-158; frontend/src/app/cart/CartClient.tsx:97-160</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;200 CartOut including empty&quot;,
+    &quot;empty UI message and Checkout disabled&quot;,
+    &quot;same listing twice yields one visible row but doubled total&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;read never creates orders or changes listing&quot;
+  ]
+}</pre>
+<h3>CART-REMOVE</h3><p>Remove deletes only the logged-in user cart row by cart_item_id, then UI reloads; absent/other-user IDs are successful no-ops. Actual production UI dynamic endpoint is masked by original Next afterFiles rewrite and returns404 before this intended backend behavior. Intended API semantics do not prove current UI reachability.</p><p>来源：backend/app/api/account.py:182-186; frontend/src/app/cart/CartClient.tsx:120-150; .runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;200 {ok:true}, item gone after reload&quot;,
+    &quot;empty cart checkout disabled&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no listing/order changes; other users cart unchanged&quot;
+  ]
+}</pre>
+<h3>CHECKOUT</h3><p>Checkout snapshots current listing prices and cart quantities into one paid USD order, marks each entire listing sold, leaves listing.quantity unchanged, clears only buyer cart, commits once.</p><p>来源：backend/app/api/account.py:189-229; backend/app/db/session.py:17-22; frontend/src/app/cart/CartClient.tsx:162-180; backend/app/models/order.py:12-40</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session&quot;,
+    &quot;nonempty cart, every listing still active&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;200 OrderOut with item price/quantity snapshots&quot;,
+    &quot;400 Cart is empty&quot;,
+    &quot;400 A listing in your cart is no longer available; session closes without commit, pending flushed order should roll back&quot;,
+    &quot;UI reload then alert Checkout complete (order created).&quot;,
+    &quot;UI has no order history/detail page&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no listing quantity decrement&quot;,
+    &quot;no changes to unrelated listings/orders/cart/memberships/catalog&quot;,
+    &quot;refusal must not leave partial order or sold statuses&quot;
+  ]
+}</pre>
+<h3>SELL-CREATE</h3><p>Authenticated seller creates active listing for existing release. Schema accepts arbitrary nonempty conditions, positive cents, three-character currency, origin 1..80, optional comments and qty1..99. UI fixes currency USD.</p><p>来源：backend/app/api/account.py:263-285; backend/app/schemas/sell.py:6-15; frontend/src/app/sell/page.tsx:215-250</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;selected release in UI&quot;,
+    &quot;valid session and schema&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;201 {id}&quot;,
+    &quot;404 Release not found&quot;,
+    &quot;422 schema error, no new listing&quot;,
+    &quot;UI create disabled when no selected or cents&lt;=0; invalid qty still submits&quot;,
+    &quot;UI price field represents cents, not dollars&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no modifications to existing listings or other business tables&quot;
+  ]
+}</pre>
+<h3>SELL-MANAGE</h3><p>My Listings includes all own statuses sorted newest first; Deactivate is soft deletion (inactive), including already inactive/sold own rows. Missing/non-owned returns 404.</p><p>来源：backend/app/api/account.py:232-260; backend/app/api/account.py:302-309; frontend/src/app/sell/page.tsx:254-311</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session; owned listing to deactivate&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;GET 200 {items:[...]} omits comments&quot;,
+    &quot;DELETE 200 {ok:true}, row retained and visible inactive&quot;,
+    &quot;DELETE missing/non-owned 404 Listing not found&quot;,
+    &quot;current dynamic DELETE listing route masking inferred from independently confirmed afterFiles routing; listing deactivation not actually reached in prior tasks&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no physical row deletion; no changes to other sellers listings or orders/cart&quot;
+  ]
+}</pre>
+<h3>SELL-UPDATE</h3><p>API PATCH updates explicitly supplied schema fields on owned listing; status permits active/inactive, even reactivating sold. Fields nullable in schema can reach non-null SQL columns and cause DB failure.</p><p>来源：backend/app/api/account.py:288-299; backend/app/schemas/sell.py:18-25; backend/app/models/marketplace.py:21-31</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;valid session; own listing; schema-valid partial body&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;200 {ok:true}&quot;,
+    &quot;404 missing/non-owned&quot;,
+    &quot;422 out-of-range or invalid status&quot;,
+    &quot;explicit null non-null-column fields: potential SQL 500 rollback, browser unverified&quot;,
+    &quot;current dynamic PATCH masking inferred from same routing; no actual PATCH execution evidence&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no other listing changes&quot;
+  ]
+}</pre>
+<h3>SELL-SEARCH-PROXY</h3><p>Current original production marketplace seller-search API path is masked by afterFiles rewrite and actually returns404 Not Found. The dynamic catch-all source also drops query, but a resulting422 is only hypothetical after removing earlier masking; not observed.</p><p>来源：frontend/src/app/sell/page.tsx:95-109; frontend/src/app/api/backend/[...path]/route.ts:5-20; backend/app/api/catalog.py:351-354</p><p>状态：source_supported_prior_browser404_complex_task_excludes_this_path</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;original proxy route wins Next routing&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;actual prior UI404 with no selectedrelease/create&quot;,
+    &quot;conditional latent q-loss422 only if dynamic handler becomes reachable; not measured&quot;,
+    &quot;no UI/API bypass and no claim seller task succeeded&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;failed search must not create listing&quot;
+  ]
+}</pre>
+<h3>UI-CONSENT</h3><p>Accept All Cookies writes localStorage acceptance and hides banner; Cookie Settings has no handler.</p><p>来源：frontend/src/components/CookieBanner.tsx:5-40</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;banner visible in fresh storage&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;accept: hidden, remains hidden on reload when storage works&quot;,
+    &quot;storage unavailable: hide current mount but return later&quot;,
+    &quot;settings: no implemented transition&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no backend business changes&quot;
+  ]
+}</pre>
+<h3>UI-NAV</h3><p>Desktop menus reveal on hover. Header has catalog search, cart, account and sell/genre links. Footer/community links mostly target unimplemented routes, social links are #.</p><p>来源：frontend/src/components/Header.tsx:38-211; frontend/src/components/Footer.tsx:26-98</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;desktop viewport for hidden md:flex nav&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;known route navigation&quot;,
+    &quot;unimplemented /forum /blog /about /careers /api /help /shipping /guides /get-started /add-release /terms /privacy /cookies expected Next404&quot;,
+    &quot;no mobile dropdown alternative supplied&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;no implied business capability for dead links&quot;
+  ]
+}</pre>
+<h3>DATA-MODEL</h3><p>Users UUID PK, releases/artists/labels/genres/styles integer PK; releases link tracks, artists with roles, labels, genres, styles, formats; membership composite keys and cart uniqueness constrain duplicates. Comments table exists but no comment API or functional comment UI.</p><p>来源：backend/app/models/release.py:22-133; backend/app/models/cart.py:12-28; backend/app/models/collection.py:12-25; backend/app/models/wantlist.py:12-25; backend/app/models/comment.py:12-30; backend/alembic/versions/7c69fa412e18_init_schema.py:21-235; backend/alembic/versions/c798e9346a24_add_genre_description.py:21-24</p><p>状态：source_supported_browser_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;migrated schema&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;SQL relation declarations do not prove SQLite FK enforcement; engine has no PRAGMA listener&quot;,
+    &quot;no mutation APIs for catalog, comments, profile or order cancellation&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;UI interactions must not modify read-only catalog/comment entities&quot;
+  ]
+}</pre>
+<h3>RUNTIME</h3><p>Original Next16.1.1/React19.2.3 frontend reads API_INTERNAL_URL first and no-store catalog fetches; backend settings default SQLite and 24h JWT. Actual runtime manifest controls versions/ports, not conflicting README values. Independently verified current Windows/Node24.5 production afterFiles wildcard /api rewrite runs before dynamic handlers and forwards unsupported/api prefix; static login/cart-add/checkout still resolve. This is original source configuration, not missing handler or incorrect backend port. Docker/Node22 has not been reproduced.</p><p>来源：frontend/package.json:1-26; frontend/src/lib/api.ts:1-26; frontend/src/lib/backend.ts:3-22; backend/app/core/config.py:6-32; backend/app/main.py:11-26; ports.json:1-8; start_servers.sh:15-37; .runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md; .runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/diagnosis.json</p><p>状态：source_supported_partial_browser_evidence_other_branches_unverified</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;correct frontend/backend deployment&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;SQL session closes on every request&quot;,
+    &quot;no database writes from public reads&quot;,
+    &quot;external Unsplash image failures separate from local business correctness&quot;,
+    &quot;generic proxy forwards explicit Authorization but does not attach cookie JWT; dedicated account proxies do&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;do not expose JWT/password hashes in evidence&quot;
+  ]
+}</pre>
+<h3>TASK-SELECTION</h3><p>Task constraint: from the entire min-rating filtered public marketplace candidate set, choose USD offers from two distinct non-demo sellers minimizing(total_cents,lower_id,higher_id), with each quantity1 and total&lt;=10000. Candidates and arithmetic come solely from DOM, persisted as public notes.</p><p>来源：frontend/src/app/sell/release/[id]/page.tsx:123-170; backend/app/api/marketplace.py:32-90; harness/sites/discogs/complex_cases.json; harness/SUPERVISION_CONTRACT.md</p><p>状态：task_constraint_and_source_supported_complex_run_pending</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;Displayedtotal==visibleoffer rows&lt;=50&quot;,
+    &quot;all offer IDs and prices/rating readable; minrating95 filter verified&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;fullset and affordable pair: freeze public selection and request planned live gate before first add&quot;,
+    &quot;incomplete set/no pair/overbudget/malformed observation: stop without purchase; no goal relaxation&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;No cart/order write before selectiongate grant&quot;,
+    &quot;No hidden DB/oracle input&quot;,
+    &quot;No automatic replacement after commitment&quot;
+  ]
+}</pre>
+<h3>TASK-MEMORY</h3><p>After first add, use cart release link-&gt;release marketplace link, reapply same filters and compare the remembered second offer identity/seller/price/condition/origin against newly observed DOM. Only its original native Add to Cart href may be clicked.</p><p>来源：frontend/src/app/cart/CartClient.tsx:103-115; frontend/src/components/ReleaseActions.tsx:55-60; frontend/src/app/sell/release/[id]/page.tsx:123-170; harness/sites/discogs/complex_cases.json</p><p>状态：task_constraint_and_source_supported_complex_run_pending</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;first cart add exactly once and response confirmsqty1&quot;,
+    &quot;original second selection persisted in note&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;second offer unchanged: add once, then verify exacttwo cartitems via browser-origin GETresponse&quot;,
+    &quot;offer missing/changed or response quantity inconsistent: stop/diagnose, never silently replace or repeat write&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;No direct API write&quot;,
+    &quot;No removal/reset inside task to hide unexpected state&quot;,
+    &quot;No repeat of unknown-outcome add&quot;
+  ]
+}</pre>
+<h3>TASK-CHECKPOINT</h3><p>Protocol3 requires real Solar+independent evaluator continue before first add and before checkout. h.checkpoint is immediately outside/before relevant h.step. No conditional bypass, stale approval, or in-place repair.</p><p>来源：harness/SUPERVISION_CONTRACT.md; harness/sites/discogs/complex_cases.json; frontend/src/app/cart/CartClient.tsx:162-180</p><p>状态：protocol_requirement_complex_run_pending</p><pre>{
+  &quot;preconditions&quot;: [
+    &quot;selection_committed then before_checkout; max3reviews, each240s, totalcase900s&quot;,
+    &quot;public reviewedstate matches independent recheck&quot;
+  ],
+  &quot;branches&quot;: [
+    &quot;Solarcontinue+independentalltruecontinue+unchangedstate:dispatch nextsingleUIaction&quot;,
+    &quot;stop/unknown/malformed/timeout/changedstate/failurepacket:stop; never automatic retry&quot;
+  ],
+  &quot;forbidden_side_effects&quot;: [
+    &quot;No Checkout before explicit gate&quot;,
+    &quot;No further writes after denied gate or failed action&quot;,
+    &quot;No author fabricated evaluator or Solar decision&quot;
+  ]
+}</pre></body></html>

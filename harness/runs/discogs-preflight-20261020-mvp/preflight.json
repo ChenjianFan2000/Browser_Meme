@@ -1,0 +1,52 @@
+{
+  "kind": "environment_preflight",
+  "measurement_status": "not_started",
+  "measurement_note": "未开始目标网站测量；启动前环境检查不是模型成绩。",
+  "model_repair_allowed": false,
+  "case_success_rate": null,
+  "step_match_rate": null,
+  "ready_for_measurement": false,
+  "status": "blocked",
+  "checks": {
+    "structure": {
+      "passed": true,
+      "cases": 8,
+      "steps": 47,
+      "rules": 10
+    },
+    "site_http": {
+      "reachable": false,
+      "available": false,
+      "error": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"
+    },
+    "browser_dependency": {
+      "websocket_client_found": true,
+      "runtime_use": "unverified until real smoke succeeds"
+    },
+    "browser_selection": {
+      "mode": "cdp",
+      "url": "http://127.0.0.1:9337",
+      "endpoint": {
+        "reachable": false,
+        "available": false,
+        "error": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"
+      },
+      "transport_verified": false
+    }
+  },
+  "browser_smoke": {
+    "status": "unverified",
+    "reason": "No real browser smoke requested or completed."
+  },
+  "business_reset_performed": false,
+  "business_tasks_executed": false,
+  "model_called": false,
+  "site_id": "discogs",
+  "revision": "v001",
+  "fixed_denominators": {
+    "cases": 8,
+    "steps": 47,
+    "rules": 10
+  },
+  "integrity_errors": []
+}

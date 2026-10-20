@@ -1,0 +1,59 @@
+{
+  "initial": {
+    "validator": "patchworld.worldmodel_validator.validate_model",
+    "errors": [
+      {
+        "error_type": "load_error",
+        "error": "Code failed to load: invalid non-printable character U+FEFF (<string>, line 1)",
+        "action": "",
+        "state": {},
+        "expected": "",
+        "got": ""
+      }
+    ],
+    "strict_errors": [],
+    "strict_prediction_checks": 0,
+    "passed": false,
+    "trajectories": 1,
+    "transitions": 24,
+    "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+  },
+  "repaired": {
+    "validator": "patchworld.worldmodel_validator.validate_model",
+    "errors": [
+      {
+        "error_type": "load_error",
+        "error": "Code failed to load: invalid non-printable character U+FEFF (<string>, line 1)",
+        "action": "",
+        "state": {},
+        "expected": "",
+        "got": ""
+      }
+    ],
+    "strict_errors": [],
+    "strict_prediction_checks": 0,
+    "passed": false,
+    "trajectories": 1,
+    "transitions": 24,
+    "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+  },
+  "adapted": {
+    "validator": "patchworld.worldmodel_validator.validate_model",
+    "errors": [
+      {
+        "error_type": "load_error",
+        "error": "Code failed to load: invalid non-printable character U+FEFF (<string>, line 1)",
+        "action": "",
+        "state": {},
+        "expected": "",
+        "got": ""
+      }
+    ],
+    "strict_errors": [],
+    "strict_prediction_checks": 0,
+    "passed": false,
+    "trajectories": 1,
+    "transitions": 12,
+    "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+  }
+}

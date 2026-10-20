@@ -1,0 +1,394 @@
+{
+  "id": "genre_navigation",
+  "passed": true,
+  "status": "completed",
+  "steps": [
+    {
+      "id": "home",
+      "status": "matched",
+      "evidence": "01.json",
+      "screenshot": "01.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Trending Releases"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\n10 Essential Synth-Pop Albums\nExplore new releases on Discogs\nWeekly discovery from the community\nAll-Ages Album of the Week\nHandpicked spotlight\nStart selling on Discogs\nList items and reach collectors\nPINK FLOYD / THE DARK SIDE OF THE MOON\nOUT NOW\nTrending Releases\nOpen-architected maximized Local Area Network\nChavez Trio\nUpgradable full-range system engine\nClark Collective\nConfigurable foreground portal\nBarnett Ensemble\nUpgradable didactic portal\nWalker Quartet\nOperative regional neural-net\nBarnett Ensemble\nCustomer-focused stable array\nJohnson Collective\nMost Expensive Releases Sold This Month\nSee how these expensive items sold\nTotal modular firmware\nMitchell Collective\n$347.49 USD\nSwitchable optimal archive\nDepeche Mode\n$306.90 USD\nOrganized tangible Internet solution\nAvery Quartet\n$230.34 USD\nSynchronized grid-enabled algorithm\nBates Collective\n$121.52 USD\nThe Dark Side Of The Moon\nPink Floyd\n$79.17 USD\nThe Dark Side Of The Moon\nPink Floyd\n$72.51 USD\nEmail\nSubscribe\nExplore Newly Added\nThe Dark Side Of The Moon\nPink Floyd\nCross-platform coherent data-warehouse\nRoberts Quartet\nConfigurable optimizing migration\nMorrison Trio\nCross-platform actuating pricing structure\nMurray Duo\nMulti-lateral disintermediate leverage\nAvery Quartet\nSwitchable uniform open system\nAguilar Ensemble\nProactive even-keeled customer loyalty\nDavis Collective\nFundamental high-level paradigm\nSullivan Duo\nIt's everywhere!\n(The Discogs iOS/Android app)\nApp Store\nGoogle Play\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Trending Releases"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 1.6870000000017171
+    },
+    {
+      "id": "explore",
+      "status": "matched",
+      "evidence": "02.json",
+      "screenshot": "02.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Genres"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nDISCOVER\nGenres\nNew Releases\nTrending\nGUIDES\nEditorial Picks\nEssentials Lists\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\n10 Essential Synth-Pop Albums\nExplore new releases on Discogs\nWeekly discovery from the community\nAll-Ages Album of the Week\nHandpicked spotlight\nStart selling on Discogs\nList items and reach collectors\nPINK FLOYD / THE DARK SIDE OF THE MOON\nOUT NOW\nTrending Releases\nOpen-architected maximized Local Area Network\nChavez Trio\nUpgradable full-range system engine\nClark Collective\nConfigurable foreground portal\nBarnett Ensemble\nUpgradable didactic portal\nWalker Quartet\nOperative regional neural-net\nBarnett Ensemble\nCustomer-focused stable array\nJohnson Collective\nMost Expensive Releases Sold This Month\nSee how these expensive items sold\nTotal modular firmware\nMitchell Collective\n$347.49 USD\nSwitchable optimal archive\nDepeche Mode\n$306.90 USD\nOrganized tangible Internet solution\nAvery Quartet\n$230.34 USD\nSynchronized grid-enabled algorithm\nBates Collective\n$121.52 USD\nThe Dark Side Of The Moon\nPink Floyd\n$79.17 USD\nThe Dark Side Of The Moon\nPink Floyd\n$72.51 USD\nEmail\nSubscribe\nExplore Newly Added\nThe Dark Side Of The Moon\nPink Floyd\nCross-platform coherent data-warehouse\nRoberts Quartet\nConfigurable optimizing migration\nMorrison Trio\nCross-platform actuating pricing structure\nMurray Duo\nMulti-lateral disintermediate leverage\nAvery Quartet\nSwitchable uniform open system\nAguilar Ensemble\nProactive even-keeled customer loyalty\nDavis Collective\nFundamental high-level paradigm\nSullivan Duo\nIt's everywhere!\n(The Discogs iOS/Android app)\nApp Store\nGoogle Play\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Genres"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 1.2659999999996217
+    },
+    {
+      "id": "genre",
+      "status": "matched",
+      "evidence": "03.json",
+      "screenshot": "03.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Rock Genre Overview"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nDISCOVER\nGenres\nNew Releases\nTrending\nGUIDES\nEditorial Picks\nEssentials Lists\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nRock Genre Overview\nRock Overview\nRock Releases\nRock Artists\nRock Music Description\nRock music is a broad genre of popular music that originated as \"rock and roll\" in the United States in the late 1940s and early 1950s, developing into a range of different styles in the mid-1960s and later. It drew on blues, rhythm and blues, and country music, but also borrowed from other genres such as folk, jazz, and classical. Rock music is known for a strong back beat and often revolves around the electric guitar.\nMost Collected Rock Music\nExplore the Popular Rock Music\nExclusive context-sensitive frame\nKraftwerk\nVersatile 4thgeneration neural-net\nHart Ensemble\nProgressive secondary array\nFox Trio\nSynergistic encompassing website\nGill Quartet\nUser-centric needs-based concept\nRoberts Quartet\nSwitchable optimal archive\nDepeche Mode\nRock Artists\nEarly Rock Releases\nExplore Early Rock Music\nEnhanced methodical pricing structure\nBishop Collective\nNetworked grid-enabled standardization\nDepeche Mode\nSelf-enabling logistical matrix\nBarnett Ensemble\nUser-centric needs-based concept\nRoberts Quartet\nExclusive tangible success\nDaft Punk\nInverse discrete Local Area Network\nGill Quartet\nRock Music Releases by Decade\n1966s\n1\n1970s\n1\n1971s\n2\n1972s\n1\n1973s\n3\n1974s\n2\n1975s\n1\n1977s\n2\n1978s\n1\n1979s\n5\n1980s\n2\n1982s\n1\n1984s\n1\n1986s\n2\n1987s\n1\n1989s\n2\n1991s\n2\n1992s\n1\n1994s\n3\n1995s\n1\n1997s\n1\n1998s\n2\n2000s\n3\n2004s\n3\n2005s\n2\n2006s\n2\n2007s\n3\n2008s\n1\n2010s\n1\n2011s\n2\n2012s\n1\n2013s\n2\n2016s\n2\n2017s\n2\n2018s\n1\n2019s\n3\n2020s\n1\n2021s\n1\n2022s\n1\n2024s\n2\n2025s\n1\nDecade\nNumber of releases\nTop Submitters of Rock Music\nc79d1d2a\n5\ne1a356d4\n5\n4f999972\n4\n5fa3d888\n4\n872bf3a7\n4\nfd8a9900\n4\nContributor\nNumber of releases\nMost Sold Rock Releases This Month\nExplore more Trending Rock Music\nThe Dark Side Of The Moon\nPink Floyd\nFocused responsive throughput\nNelson Duo\nAmeliorated secondary toolset\nChavez Trio\nGrass-roots national parallelism\nLynn Quartet\nProgressive asymmetric parallelism\nMitchell Collective\nOrganic 24hour database\nNirvana\nCross-platform discrete structure\nMitchell Band\nRelated Styles of Music\nAlternative Rock\nBlues Rock\nClassic Rock\nFolk Rock\nGarage Rock\nHard Rock\nIndie Rock\nPop Rock\nProg Rock\nPsychedelic Rock\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Rock Genre Overview"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 1.5470000000022992
+    },
+    {
+      "id": "release",
+      "status": "matched",
+      "evidence": "04.json",
+      "screenshot": "04.png",
+      "action_completed": true,
+      "branches": [
+        {
+          "id": "expected",
+          "checks": [
+            {
+              "check": {
+                "path": "after.ui.text",
+                "op": "contains",
+                "value": "Tracklist"
+              },
+              "status": "pass",
+              "actual": "Discogs\nSearch\nExplore ▾\nMarketplace ▾\nCommunity ▾\nLet's manage your privacy We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.\nCookie Settings\nAccept All Cookies\nAdd to WantlistAdd to Collection\nMarketplace (6 for sale)\nHave: 9\nWant: 2\nKraftwerk - Exclusive context-sensitive frame\n1979\nHave\n9\nWant\n2\nFor Sale\n6from $10.52\nRelease Information\nLabel\nWarren Records — WARR-7465\nFormat\n1 x CD, Album\nCountry\nGermany\nReleased\n1979-07-21\nGenre\nRock\nStyle\nClassic Rock, Garage Rock\nTracklist\nPosition\tTitle\tDuration\n1\tInternational especially officer\t3:45\n2\tAgreement mention two though whole\t2:32\n3\tCup win\t6:34\n4\tCandidate four\t5:07\n5\tWife finally\t3:40\n6\tSoon learn close\t2:58\n7\tProbably customer\t6:10\nNotes\nEnough majority official give politics last. Reach color wear one choose notice year its. Debate record mean stop some. Message decision design end. Military piece little level. Head help open almost red picture. City little from. Cost group clear national. Keep pattern order. Room list during rich over lot. Feel wife theory shake too medical.\nDISCOGS\nAbout Us\nCareers\nAPI\nHELP IS HERE\nHelp & Support\nDiscogs Shipping\nKeyboard Shortcuts\nJOIN IN\nGet Started\nStart Selling\nAdd Release\nFOLLOW US\nFacebook\nX / Twitter\nInstagram\nYouTube\nON THE GO\nApp Store (placeholder)\nGoogle Play (placeholder)\nDiscogs © 2026\nTerms of Service\nPrivacy Policy\nCookies\nEnglish ▾",
+              "expected": "Tracklist"
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "invariants": [
+        {
+          "check": {
+            "path": "after.backend.table_hashes",
+            "op": "eq",
+            "value_from": "before.backend.table_hashes"
+          },
+          "status": "pass",
+          "actual": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          },
+          "expected": {
+            "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+            "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+            "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+            "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+            "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+            "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+            "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+            "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+            "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+            "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+            "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+            "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+            "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+            "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+            "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+            "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+            "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+            "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+            "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+          }
+        }
+      ],
+      "matched_branches": [
+        "expected"
+      ],
+      "elapsed_seconds": 1.1719999999986612
+    }
+  ],
+  "independent_checks": [
+    {
+      "id": "unrelated_tables_unchanged",
+      "passed": true,
+      "detail": "All tables outside the exact public task mutation remain unchanged"
+    },
+    {
+      "id": "observed_intermediate_unrelated_state",
+      "passed": true,
+      "detail": "Unrelated tables also remain unchanged at every recorded intermediate snapshot"
+    },
+    {
+      "id": "genre_card_detail_tracklist",
+      "passed": true,
+      "detail": "A displayed Rock card leads to its real database tracklist"
+    }
+  ],
+  "setup": {
+    "case_id": "genre_navigation",
+    "baseline_sha256": "6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50",
+    "table_hashes": {
+      "alembic_version": "c5708ab22f8114a9deb595f8b24e20968cc2ab5317f171e6348703a5330634fe",
+      "artists": "5cc05d9408943f395af35c0eab8a35c033d6bfb6a9d05c713a56fc7779515462",
+      "cart_items": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "collection_items": "d49c0c6e708d3ffed0b4ed6d8d71595b3a1fc0fc9aab0c7b571ee977bff745f2",
+      "comments": "6ac64634aeefb489298a51d6f65e0ec34d9801ede2b273cc13a401b5923fdb59",
+      "genres": "dde05848a8c153a4bceafd4f102256e98d801ffd33326a2341226d6a6710bb59",
+      "labels": "ef8073ce5bf0c35008607c6d7db907e35bac956deb74a00f4f1899f6141484b3",
+      "marketplace_listings": "9bc3c0790c36b063b51113b20ff62b2ca5bd455a81286da5a539154c08bd7f11",
+      "order_items": "b333f4d317a21c3e63d8d98088837683c536b95ce6540afc2cf7aa86faefebc6",
+      "orders": "fd3ece665f11da5aea8cf803cf0aa2251d53fe789203ec58cf685141f91fead0",
+      "release_artists": "31e4405a0c0e775b51071c7617c62e369161ef4903cfb5c5aa389f48df4f9293",
+      "release_formats": "b78f715433ce7c0465d082ea7f5033c90e7cd9cac874065bfe1e129eb601037c",
+      "release_genres": "3ff4f7096db67c38bb1186ff1845d4a9bc4605800962afe2bb6f6fd162b331c0",
+      "release_labels": "998c355c6db41e07533d182951fa6a3235ceb0d4faf3d9eba2c7ec22b7a239e0",
+      "release_styles": "da98b9672eb6edfaefeb5b2446d1cb9b4057568f961a655c042a2ca0c38136f1",
+      "releases": "17f67917bfd2203f86a497ca8ef32929a5581df9d6db4049a4e11612f5f00c5f",
+      "styles": "88d658bfc4ef6a4608a61977ca83f1432ad6f1d482fbd641c62a0c73a6a14114",
+      "tracks": "ab34f18f230742367c59add3903ca67a784091aa3f4bd43f005b9b787a6f85ad",
+      "users": "c4e577102b317250244ee62634d1d7ae790bc2a2e5952316a60e8b991c4c4f77",
+      "wantlist_items": "b80068f7895e36633d69a9dd702be7a6fa9ab65d9e8d0f62b76a3bf03654c01d"
+    },
+    "fixture": {
+      "listing_id": 1,
+      "release_id": 221,
+      "price_cents": 7251,
+      "quantity": 2,
+      "status": "active",
+      "currency": "USD",
+      "seller_user_id": "fd8a9900a5e342208aa167f6b49e79eb"
+    }
+  },
+  "browser_version": "155.0.8059.84",
+  "trace": "trace.zip",
+  "elapsed_seconds": 12.687000000001717
+}

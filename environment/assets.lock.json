@@ -1,0 +1,33 @@
+{
+  "checked_on": "2026-10-14",
+  "gitlab": {
+    "image": "docker.io/gitlab/gitlab-ce",
+    "tag": "19.3.5-ce.0",
+    "digest": "sha256:9f5beb6b69859c4e9896985022cef582360529128428cf3e4ca358ed47ead8aa",
+    "archive": "gitlab-ce-19.3.5-ce.0.tar",
+    "compressed_bytes": 1451388487
+  },
+  "torch": {
+    "filename": "torch-2.8.0+cpu-cp312-cp312-manylinux_2_28_x86_64.whl",
+    "sha256": "cb9a8ba8137ab24e36bf1742cb79a1294bd374db570f09fc15a5e1318160db4e",
+    "official": "https://download-r2.pytorch.org/whl/cpu/torch-2.8.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl",
+    "cn": "https://mirror.sjtu.edu.cn/pytorch-wheels/cpu/torch-2.8.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl"
+  },
+  "nltk": [
+    {"name": "punkt", "sha256": "51c3078994aeaf650bfc8e028be4fb42b4a0d177d41c012b6a983979653660ec"},
+    {"name": "punkt_tab", "sha256": "e57f64187974277726a3417ca6f181ec5403676c717672eef6a748a7b20e0106"}
+  ],
+  "webchore_source": {
+    "repository": "https://github.com/WebChoreArena/WebChoreArena",
+    "commit": "542abc538fd9558362119714989166904d82f5f4",
+    "sha256": "8ee1cc2b64d0f094d70c9ce6ac9e37b857bd4c410ff028153aaca0ae841ac60a"
+  },
+  "webarena_images": [
+    {"filename": "shopping_final_0712.tar", "image": "shopping_final_0712:latest", "google_drive_id": "1gxXalk9O0p9eu1YkIJcmZta1nvvyAJpA"},
+    {"filename": "shopping_admin_final_0719.tar", "image": "shopping_admin_final_0719:latest", "google_drive_id": "1See0ZhJRw0WTTL9y8hFlgaduwPZ_nGfd"},
+    {"filename": "postmill-populated-exposed-withimg.tar", "image": "postmill-populated-exposed-withimg:latest", "google_drive_id": "17Qpp1iu_mPqzgO_73Z9BnFjHrzmX9DGf"},
+    {"filename": "gitlab-populated-final-port8023.tar", "image": "gitlab-populated-final-port8023:latest", "google_drive_id": "19W8qM0DPyRvWCLyQe0qtnCWAHGruolMR"}
+  ],
+  "webarena_source": "https://github.com/web-arena-x/webarena/blob/dce04686a56253aefba7b18a4fa0937cf1dc987b/environment_docker/README.md",
+  "webarena_integrity": "Upstream publishes no SHA256 for these four archives. Use its original HTTPS links; validate Docker archive structure and record SHA256 after download. Internet Archive items were dark on the check date."
+}

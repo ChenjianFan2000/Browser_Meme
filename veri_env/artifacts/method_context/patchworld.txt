@@ -1,0 +1,88 @@
+You are implementing a Python world model for the environment: {env_name}.
+
+## Extracted transition rules
+{rules}
+
+## Contrastive example transitions
+These examples were chosen to show the SAME action type with DIFFERENT inputs/outputs,
+so you can see the parametric pattern:
+
+{transition_examples}
+
+Implement the world model class following the rules above exactly.
+The class must work on NEW problems with different products, queries, words, or tasks.
+
+Treat each observation as PARTIAL EVIDENCE about the hidden world, not as the full environment state.
+The belief should keep directly observed page/text structure plus latent fields or hypotheses whenever
+future observations depend on hidden state (candidate answers, page identity, hidden product details, etc.).
+Keep the belief lightweight, but do not avoid latent state when it is necessary for prediction.
+
+Important design constraints for this project:
+- Attach epistemic status to tracked facts (known/inferred/constrained/unknown/unobserved).
+- Treat information-revealing actions separately from world-mutating actions.
+- Preserve raw text buffers so parser failures do not erase usable evidence.
+- If predicted observation diverges from actual, reconcile by abductively updating latent variables/rules.
+
+```python
+from patchworld.worldmodel_base import BaseWorldModel
+# Optional helper scaffold:
+# from patchworld.epistemic_worldmodel import (
+#     EpistemicWorldModel, BeliefState, EpistemicStatus, TransitionType
+# )
+
+class {class_name}(BaseWorldModel):
+    def init_belief(self) -> dict:
+        return {{}}
+
+    def init_belief_from_observation(self, obs_text: str) -> dict:
+        belief = self.init_belief()
+        return self.correct_belief(belief, obs_text, "")
+
+    def predict_belief(self, belief: dict, action: str) -> dict:
+        # Predict step only (no observation correction): b' = f(b, a)
+        ...
+
+    def correct_belief(self, belief_prior: dict, obs_text: str) -> dict:
+        # Correction step: b = g(b', o)
+        ...
+
+    def readout_observation(self, belief: dict, action: str = "") -> str:
+        # Readout authority.
+        # Fill the observation FORMAT template using latent belief state values.
+        # Keep delimiters/section order consistent with what parse_observation expects.
+        # Must always return a non-empty string.
+        ...
+
+    def parse_observation(self, obs_text: str) -> dict:
+        ...
+
+    # Backward-compatible wrappers expected by existing evaluators.
+    def transition(self, belief: dict, action: str) -> dict:
+        return self.predict_belief(belief, action)
+
+    def predict_next(self, state: dict, action: str) -> dict:
+        return self.predict_belief(state, action)
+
+    def predict_observation(self, belief: dict, action: str) -> str:
+        belief_next_prior = self.predict_belief(belief, action)
+        return self.readout_observation(belief_next_prior, action)
+
+    def extract_valid_action_forms(self) -> dict[str, list[str]]:
+        ...
+```
+
+Hard constraints:
+- NEVER hardcode specific values from the examples.
+- Treat the observation as partial evidence and maintain latent belief when hidden state matters.
+- correct_belief must handle any new problem instance.
+- Implement canonical predict/correct/readout pipeline:
+  init_belief_from_observation(o1) -> predict_belief(b, a) -> readout_observation(b') -> correct_belief(b', o_next).
+- Keep transition/predict_next/predict_observation as thin compatibility wrappers around predict_belief/readout_observation.
+- Primary prediction quality should come from pre-correction readout (readout of b').
+- predict_observation must return a non-empty string on every call.
+- Reuse the real observation template from the examples instead of inventing new prose.
+
+Output ONLY the Python code, nothing else.
+
+
+Local adapter: the output contract in the request overrides the class interface. The evaluator wraps predict in the original BaseWorldModel and runs the original validator. This does not run full TracePatch candidate search.

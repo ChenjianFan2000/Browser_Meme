@@ -1,0 +1,42 @@
+{
+  "request_id": "bc186c34320e49f2a52cdcfbec02a2a3",
+  "case": {
+    "id": "generic_gate_fixture",
+    "goal": "Validate gate wiring",
+    "parameters": {}
+  },
+  "checkpoint_id": "pre_commit",
+  "trigger": "planned_review",
+  "before_step": "commit",
+  "reviewer": "gpt-6.1-sol",
+  "ui": {
+    "url": "about:blank",
+    "title": "",
+    "text": "Commit\n\n0",
+    "fields": {},
+    "errors": {},
+    "network": [],
+    "step_network": []
+  },
+  "independent": {
+    "decision": "stop",
+    "checks": [
+      {
+        "id": "fixture_permission",
+        "passed": false
+      }
+    ],
+    "public_summary": "Synthetic fixture permission."
+  },
+  "error": null,
+  "public_evidence_sha256": {
+    "ui.dom.json": "06eb91bef05a715c0f8c8c7c08215aa6b1886a69a2d1d645ebe6d7b204bda164",
+    "ui.png": "c5cb23719c25a11293ae9dd012aa65713ebf66c687adccb1b9391dc0a6621964"
+  },
+  "allowed_decisions": [
+    "continue",
+    "stop"
+  ],
+  "timeout_seconds": 30,
+  "privacy": "Review only this public packet; do not read private-supervision, backend snapshots or evaluator source."
+}

@@ -1,0 +1,29 @@
+{
+  "model": "gpt-6.1-sol",
+  "context": "same independent Solar source-visible author continuing prior phase1; not phase2 independent learner",
+  "parent_model_versions": [
+    "pw-v002",
+    "pw-extension-v002"
+  ],
+  "new_experiment": "phase1-complex-pw-20261020-1815",
+  "allowed_inputs": [
+    "prior fullsource review/rules",
+    "public actual priorUI results and independent routing diagnosis",
+    "new public task proposal",
+    "pending generic checkpoint contract"
+  ],
+  "forbidden_inputs": [
+    "private evaluator implementation/oracles/answers",
+    "privileged backend state as script input"
+  ],
+  "business_actions_by_author": 0,
+  "source_modified": false,
+  "tokens": null,
+  "billing": null,
+  "script_contract": "harness/SUPERVISION_CONTRACT.md protocol3 + SCRIPT_CONTRACT.md",
+  "fixed_cases": "harness/sites/discogs/complex_cases.json",
+  "source_proposal": "harness/experiments/phase1-complex-pw-20261020-1815/public-task-proposal.json",
+  "planned_live_reviews": 2,
+  "remaining_failure_reviews": 1,
+  "new_business_execution_count": 0
+}

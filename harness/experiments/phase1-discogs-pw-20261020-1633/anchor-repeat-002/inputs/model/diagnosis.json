@@ -1,0 +1,109 @@
+{
+  "revision": "pw-v002",
+  "parent_revision": "pw-v001",
+  "source_run": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002",
+  "failure_category": "implementation",
+  "secondary_category": "timing",
+  "evidence": [
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases/03-anonymous_collection/02.json",
+      "sha256": "dfb4c397f3d649fa43a11f22fea3a88f982fad946bc433046834169cabb55c75"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases/03-anonymous_collection/02.png",
+      "sha256": "36121fff7da2452454c49a923db50a5e5fe7c11313d78ffd8ee08aeb1e54607f"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases/04-collection_add/06.json",
+      "sha256": "b19dc4f7fe8879b24ecf65a41e4da07d34685a754718a18db04b6b4214029c24"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases/04-collection_add/06.png",
+      "sha256": "584886ac419a3a021bf311009c6c3492e311b0ce56703db279d81ee29f312eea"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases/05-wantlist_add/06.json",
+      "sha256": "2c80cef4d3d3ee4bddbf3f63ec51667cb77ef7bc24b6953e32d83a9cb4fc30f8"
+    },
+    {
+      "path": "harness/experiments/phase1-discogs-pw-20261020-1633/anchor-initial-002/cases/08-seller_create_deactivate/07.json",
+      "sha256": "9b38427727a00e16717275177265f5e22a45cecea9c79d6f7ebc69efa690dec5"
+    }
+  ],
+  "counterexamples": [
+    {
+      "cases": [
+        "anonymous_collection",
+        "collection_add",
+        "wantlist_add"
+      ],
+      "observation": "POST membership returns404 JSON detail Not Found; no business mutation; no auth redirect",
+      "attribution": "website dynamic API routing failure; leading inference wildcard rewrite precedence, not selector or delayed successful mutation",
+      "repair": "native expect_response+finished, then unchanged task endpoint checks; do not retry business action or reinterpret404 as success"
+    },
+    {
+      "cases": [
+        "seller_create_deactivate"
+      ],
+      "observation": "search returns404 Not Found rather than predicted422 Field required",
+      "attribution": "actual website implementation branch precedes intended catch-all route",
+      "repair": "business-evidence-backed same-count prediction literal changed to Not Found; original seller task remains incomplete"
+    }
+  ],
+  "changed_rules": [
+    "AUTH-LOGIN",
+    "AUTH-GATE",
+    "CAT-SEARCH",
+    "CAT-DETAIL",
+    "MEM-COLLECTION",
+    "MEM-WANTLIST",
+    "CART-ADD",
+    "CART-READ",
+    "CHECKOUT",
+    "SELL-SEARCH-PROXY"
+  ],
+  "changed_steps": [
+    "anonymous_collection/membership_add",
+    "collection_add/membership_add",
+    "wantlist_add/membership_add",
+    "seller_create_deactivate/seller_search"
+  ],
+  "original_targets_preserved": true,
+  "rule_count_preserved": true,
+  "steps_branches_check_counts_preserved": true,
+  "website_mutations_by_author": 0,
+  "regression_status": "not yet executed; preserve four previously passing workflows for full-suite regression",
+  "limitations": [
+    "No UI-only path discovered for routing-blocked membership or seller flow",
+    "Model-side repair cannot resolve original website implementation while preserving source/version",
+    "Independent evaluator remains sole authority for task endpoint success"
+  ],
+  "category": "business_rule",
+  "rationale": "Observed original-site404 responses contradict earlier source-only path reachability and seller422 prediction. Category business_rule is the generic behavior-model revision enum; detailed physical cause is website implementation/routing, with secondary wasted-wait timing. No task endpoint checks are relaxed.",
+  "changed_step_details": [
+    {
+      "case": "anonymous_collection",
+      "step": "membership_add",
+      "change": "response-aware completion waiting only; checks unchanged"
+    },
+    {
+      "case": "collection_add",
+      "step": "membership_add",
+      "change": "response-aware completion waiting only; checks unchanged"
+    },
+    {
+      "case": "wantlist_add",
+      "step": "membership_add",
+      "change": "response-aware completion waiting only; checks unchanged"
+    },
+    {
+      "case": "seller_create_deactivate",
+      "step": "seller_search",
+      "change": "Field required -> Not Found from real404 counterexample; same remaining disabled check"
+    }
+  ],
+  "schema_correction": {
+    "reason": "First candidate diagnosis omitted required category/rationale keys and supplied dicts instead of changed_steps string identifiers. Rejected before any execution; this corrects metadata only.",
+    "plan_scripts_rules_changed": false
+  }
+}

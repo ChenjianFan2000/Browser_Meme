@@ -1,0 +1,24 @@
+[
+  {
+    "page": "solar-presentation\\report.html",
+    "title": "Solar网页模型证据说明",
+    "headings": [
+      "Discogs第一阶段：源码规则与真实网页证据"
+    ],
+    "images": 0,
+    "missing_images": 0,
+    "horizontal_overflow": false,
+    "page_errors": []
+  },
+  {
+    "page": "anchor-repeat-002\\task-checkout.html",
+    "title": "任务完整运行证据",
+    "headings": [
+      "checkout"
+    ],
+    "images": 7,
+    "missing_images": 3,
+    "horizontal_overflow": false,
+    "page_errors": []
+  }
+]

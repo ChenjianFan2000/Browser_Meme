@@ -1,0 +1,1682 @@
+{
+  "schema_version": 2,
+  "revision": "pw-v001",
+  "model": "gpt-6.1-sol",
+  "readouts": {
+    "query": {
+      "selector": "header input[name=\"q\"]",
+      "kind": "value"
+    },
+    "login_username": {
+      "selector": "main form input:not([type=\"password\"])",
+      "kind": "value"
+    },
+    "target_release_count": {
+      "selector": "main a[href=\"/release/221\"]",
+      "kind": "count"
+    },
+    "seller_query": {
+      "selector": "main input[placeholder=\"Search releases...\"]",
+      "kind": "value"
+    },
+    "create_disabled": {
+      "selector": "main button:has-text(\"Create Listing\")",
+      "kind": "attr",
+      "attribute": "disabled"
+    }
+  },
+  "cases": [
+    {
+      "id": "invalid_login",
+      "goal": "Reject an invalid password and leave business state unchanged.",
+      "parameters": {
+        "kind": "invalid_login",
+        "username": "demo",
+        "password": "incorrect-phase1-password"
+      },
+      "steps": [
+        {
+          "id": "login_open",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          }
+        },
+        {
+          "id": "login_username",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main form input:not([type=\"password\"])",
+            "value": "demo"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_password",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[type=\"password\"]",
+            "value": "incorrect-phase1-password"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_submit",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Sign in\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Invalid credentials"
+                },
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/login"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Invalid credentials"
+          }
+        }
+      ]
+    },
+    {
+      "id": "catalog_search",
+      "goal": "Search for The Dark Side Of The Moon and open its release detail without changing business state.",
+      "parameters": {
+        "kind": "catalog_search",
+        "query": "The Dark Side Of The Moon",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "search_open",
+          "rule_ids": [
+            "CAT-HOME"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Trending Releases"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Trending Releases"
+          }
+        },
+        {
+          "id": "search_fill",
+          "rule_ids": [
+            "CAT-SEARCH"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "header input[name=\"q\"]",
+            "value": "The Dark Side Of The Moon"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.query",
+                  "op": "eq",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "search_submit",
+          "rule_ids": [
+            "CAT-SEARCH"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "header button[type=\"submit\"]"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Results for"
+                },
+                {
+                  "path": "after.ui.fields.target_release_count",
+                  "op": "gte",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Results for"
+          }
+        },
+        {
+          "id": "search_release",
+          "rule_ids": [
+            "CAT-DETAIL"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main a[href=\"/release/221\"]"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/release/221"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Tracklist"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anonymous_collection",
+      "goal": "Attempt to add release 221 to collection without logging in; reach the login gate and leave business state unchanged.",
+      "parameters": {
+        "kind": "anonymous_collection",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "release_open",
+          "rule_ids": [
+            "CAT-DETAIL"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/release/221"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Tracklist"
+          }
+        },
+        {
+          "id": "membership_add",
+          "rule_ids": [
+            "AUTH-GATE"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text(\"Add to Collection\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "contains",
+                  "value": "/login?next="
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "url",
+            "value": "/login"
+          }
+        }
+      ]
+    },
+    {
+      "id": "collection_add",
+      "goal": "Log in as demo, add release 221 to collection and verify it on the collection page without changing other business state.",
+      "parameters": {
+        "kind": "collection_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "login_open",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          }
+        },
+        {
+          "id": "login_username",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main form input:not([type=\"password\"])",
+            "value": "demo"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_password",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[type=\"password\"]",
+            "value": "password123"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_submit",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Sign in\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Trending Releases"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "url",
+            "value": "/"
+          }
+        },
+        {
+          "id": "release_open",
+          "rule_ids": [
+            "CAT-DETAIL"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/release/221"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Tracklist"
+          }
+        },
+        {
+          "id": "membership_add",
+          "rule_ids": [
+            "MEM-COLLECTION"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text(\"Add to Collection\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.backend.collection_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [],
+          "wait": {
+            "kind": "enabled",
+            "value": "button:has-text(\"Add to Collection\")"
+          }
+        },
+        {
+          "id": "membership_verify",
+          "rule_ids": [
+            "MEM-COLLECTION"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/me/collection"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "My Collection"
+                },
+                {
+                  "path": "after.ui.fields.target_release_count",
+                  "op": "gte",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.collection_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href=\"/release/221\"]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wantlist_add",
+      "goal": "Log in as demo, add release 221 to wantlist and verify it on the wantlist page without changing other business state.",
+      "parameters": {
+        "kind": "wantlist_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221
+      },
+      "steps": [
+        {
+          "id": "login_open",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          }
+        },
+        {
+          "id": "login_username",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main form input:not([type=\"password\"])",
+            "value": "demo"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_password",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[type=\"password\"]",
+            "value": "password123"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_submit",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Sign in\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Trending Releases"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "url",
+            "value": "/"
+          }
+        },
+        {
+          "id": "release_open",
+          "rule_ids": [
+            "CAT-DETAIL"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/release/221"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Tracklist"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Tracklist"
+          }
+        },
+        {
+          "id": "membership_add",
+          "rule_ids": [
+            "MEM-WANTLIST"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "button:has-text(\"Add to Wantlist\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.backend.wantlist_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [],
+          "wait": {
+            "kind": "enabled",
+            "value": "button:has-text(\"Add to Wantlist\")"
+          }
+        },
+        {
+          "id": "membership_verify",
+          "rule_ids": [
+            "MEM-WANTLIST"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/me/wantlist"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "My Wantlist"
+                },
+                {
+                  "path": "after.ui.fields.target_release_count",
+                  "op": "gte",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.wantlist_ids",
+                  "op": "contains",
+                  "value": 221
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "selector",
+            "value": "main a[href=\"/release/221\"]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cart_add",
+      "goal": "Log in as demo, add seeded active listing 1 from release 221 marketplace to cart and verify exact item and total without creating an order.",
+      "parameters": {
+        "kind": "cart_add",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "listing_id": 1
+      },
+      "steps": [
+        {
+          "id": "login_open",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          }
+        },
+        {
+          "id": "login_username",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main form input:not([type=\"password\"])",
+            "value": "demo"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_password",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[type=\"password\"]",
+            "value": "password123"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_submit",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Sign in\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Trending Releases"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "url",
+            "value": "/"
+          }
+        },
+        {
+          "id": "marketplace_open",
+          "rule_ids": [
+            "MKT-FILTER"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/sell/release/221"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Marketplace listings"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Marketplace listings"
+          }
+        },
+        {
+          "id": "cart_add",
+          "rule_ids": [
+            "CART-ADD"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main a[href=\"/cart?add=1\"]"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/cart$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                },
+                {
+                  "path": "after.backend.cart_count",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart_total_cents",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "invariants": [],
+          "wait": {
+            "kind": "url",
+            "value": "/cart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "checkout",
+      "goal": "Log in as demo, add listing 1, checkout and verify one paid order, exact item total, sold listing and cleared cart; leave unrelated records unchanged.",
+      "parameters": {
+        "kind": "checkout",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "listing_id": 1
+      },
+      "steps": [
+        {
+          "id": "login_open",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          }
+        },
+        {
+          "id": "login_username",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main form input:not([type=\"password\"])",
+            "value": "demo"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_password",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[type=\"password\"]",
+            "value": "password123"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_submit",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Sign in\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Trending Releases"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "url",
+            "value": "/"
+          }
+        },
+        {
+          "id": "marketplace_open",
+          "rule_ids": [
+            "MKT-FILTER"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/sell/release/221"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Marketplace listings"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Marketplace listings"
+          }
+        },
+        {
+          "id": "cart_add",
+          "rule_ids": [
+            "CART-ADD"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main a[href=\"/cart?add=1\"]"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/cart$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "The Dark Side Of The Moon"
+                },
+                {
+                  "path": "after.backend.cart_count",
+                  "op": "eq",
+                  "value": 1
+                },
+                {
+                  "path": "after.backend.cart_total_cents",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "invariants": [],
+          "wait": {
+            "kind": "url",
+            "value": "/cart"
+          }
+        },
+        {
+          "id": "checkout",
+          "rule_ids": [
+            "CHECKOUT"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Checkout\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Your cart is empty."
+                },
+                {
+                  "path": "after.backend.cart_count",
+                  "op": "eq",
+                  "value": 0
+                },
+                {
+                  "path": "after.backend.latest_demo_order.status",
+                  "op": "eq",
+                  "value": "paid"
+                },
+                {
+                  "path": "after.backend.latest_demo_order.total_cents",
+                  "op": "gt",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "invariants": [],
+          "wait": {
+            "kind": "text",
+            "value": "Your cart is empty."
+          }
+        }
+      ]
+    },
+    {
+      "id": "seller_create_deactivate",
+      "goal": "Log in as demo, find release 221, create a USD 19.99 listing with phase1 marker, then deactivate that newly created listing; leave existing listings and other business state unchanged.",
+      "parameters": {
+        "kind": "seller_create_deactivate",
+        "username": "demo",
+        "password": "password123",
+        "release_id": 221,
+        "price_cents": 1999,
+        "quantity": 1,
+        "comments": "phase1-independent-fixture",
+        "ships_from": "US",
+        "media_condition": "Near Mint (NM or M-)",
+        "sleeve_condition": "Very Good Plus (VG+)"
+      },
+      "execution_limitation": "Source predicts original UI search cannot select a release; retain task goal and report incomplete. Do not bypass using API or injected page state.",
+      "steps": [
+        {
+          "id": "login_open",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/login"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sign in"
+          }
+        },
+        {
+          "id": "login_username",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main form input:not([type=\"password\"])",
+            "value": "demo"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.login_username",
+                  "op": "eq",
+                  "value": "demo"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_password",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[type=\"password\"]",
+            "value": "password123"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sign in"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "login_submit",
+          "rule_ids": [
+            "AUTH-LOGIN"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Sign in\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.url",
+                  "op": "matches",
+                  "value": "/$"
+                },
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Trending Releases"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "url",
+            "value": "/"
+          }
+        },
+        {
+          "id": "seller_open",
+          "rule_ids": [
+            "SELL-MANAGE"
+          ],
+          "action": {
+            "kind": "open",
+            "url": "/sell"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Sell on Discogs"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Sell on Discogs"
+          }
+        },
+        {
+          "id": "seller_search_fill",
+          "rule_ids": [
+            "CAT-SEARCH"
+          ],
+          "action": {
+            "kind": "fill",
+            "selector": "main input[placeholder=\"Search releases...\"]",
+            "value": "The Dark Side Of The Moon"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.fields.seller_query",
+                  "op": "eq",
+                  "value": "The Dark Side Of The Moon"
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "load",
+            "value": "domcontentloaded"
+          }
+        },
+        {
+          "id": "seller_search",
+          "rule_ids": [
+            "SELL-SEARCH-PROXY"
+          ],
+          "action": {
+            "kind": "click",
+            "selector": "main button:has-text(\"Search\")"
+          },
+          "expect": [
+            {
+              "id": "expected",
+              "checks": [
+                {
+                  "path": "after.ui.text",
+                  "op": "contains",
+                  "value": "Field required"
+                },
+                {
+                  "path": "after.ui.fields.create_disabled",
+                  "op": "eq",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "invariants": [
+            {
+              "path": "after.backend.table_hashes",
+              "op": "eq",
+              "value_from": "before.backend.table_hashes"
+            }
+          ],
+          "wait": {
+            "kind": "text",
+            "value": "Field required"
+          }
+        }
+      ]
+    }
+  ]
+}

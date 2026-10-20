@@ -1,0 +1,39 @@
+{
+  "runtime": "G:\\Browser_Meme\\.runtime\\phase1-discogs-pw-20261020-1633",
+  "source_file_count": 110,
+  "all_original_files_unchanged": true,
+  "files": {
+    "frontend/package.json": {
+      "sha256": "1b64dbda4aa338b922d335fcdf02aa457458689cd69d9e813b935c3f0db69d4a",
+      "bytes": 530
+    },
+    "frontend/package-lock.json": {
+      "sha256": "be266dd98c60aa8bd81b79e07af634fc4b738c3c2deb154eccb31f2258cee6ab",
+      "bytes": 226846
+    },
+    "backend/requirements.txt": {
+      "sha256": "02dceebf04f46f99e85c2af0151b76b263af2a9abc4c4d7cd474507c540dc8ce",
+      "bytes": 173
+    },
+    "frontend/.next/BUILD_ID": {
+      "sha256": "025733e23b5254f0b79ecd135aa360e0c0019d44270de69a328924869499b477",
+      "bytes": 21
+    }
+  },
+  "node": "v24.5.0",
+  "npm": "11.5.1",
+  "python": "3.11.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "baseline_sha256": "6888037bdcda10c123d0cc99f1eda73501e5f5d5934c99d7d3257f236aa9bd50",
+  "production_frontend_build": "completed",
+  "backend_dependencies": "complete; pip check passed",
+  "chrome_path": "C:\\Users\\29935\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+  "chrome_sha256": "6aa5d599bbc3a0b3842af9f44b18fd29989eb3cc21b4b3ec7489e12f36e9962e",
+  "chrome_launch": "not performed by deployment agent",
+  "python_freeze_sha256": "c0d12797bf864d8fcf20706779ae552200708a6378ba63de80dc4c970728995d",
+  "actual_package_count": 50,
+  "wheel_count": 51,
+  "playwright": "1.56.0",
+  "original_app_health_component": "200; DB bytes unchanged",
+  "offline_lock_replay": "passed; fresh isolated venv exactly matches all 50 installed distributions and pip check; no network"
+}

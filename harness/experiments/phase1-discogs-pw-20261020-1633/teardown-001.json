@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-10-20T09:42:54.707495+00:00",
+  "stop_marker": ".runtime/phase1-discogs-pw-20261020-1633/stop-session-001",
+  "deployment_supervisor_exit_code": 0,
+  "ports": [
+    {
+      "host": "127.0.0.1",
+      "port": 12042,
+      "listening": false
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 12138,
+      "listening": false
+    }
+  ],
+  "method": "Owner stop marker and owned process-group cleanup; no blanket process-name termination."
+}

@@ -1,0 +1,13 @@
+implementation_prompt: |
+  You are an expert programmer that impelments the given website in full production quality.
+  Please keep in mind that this is not a mockup website, so you need to implement all pages and features.
+  Do not use docker to implement the website.
+
+  
+  Before implementing the website, you need to inspect "image_x.png" files and write down the detailed description of the website in a detailed and structured manner in "website_description.md" file.
+  I want functionally and visually identical to the reference website.
+  In terms of DB, you should fill out realistic data for the DB (not only a few dummy data). In case if you can use existing API services (e.g., openstreetmap, openweathermap, etc.), you should use them.
+
+  To successfully implement the backend and sdk, you need to implement to test file to automatically test the backend and sdk.
+
+LOCAL ADAPTATION: reproduce the observable backend and interface behavior from transition evidence. No screenshots, website build, external assets, or policy fine-tuning are requested. Implement a pure state transition clone using the JSON contract.

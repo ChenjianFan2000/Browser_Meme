@@ -1,0 +1,39 @@
+test_blocked_preflight_never_loads_adapter_or_executes_tasks (test_core.HarnessTests.test_blocked_preflight_never_loads_adapter_or_executes_tasks) ... ok
+test_browser_discovery_does_not_imply_verified_capability (test_core.HarnessTests.test_browser_discovery_does_not_imply_verified_capability) ... ok
+test_cli_browser_selection_and_run_exit_codes (test_core.HarnessTests.test_cli_browser_selection_and_run_exit_codes) ... ok
+test_dispatched_but_uncompleted_actions_keep_partial_measurement (test_core.HarnessTests.test_dispatched_but_uncompleted_actions_keep_partial_measurement) ... ok
+test_dispatched_locator_failure_is_error_not_preflight_blocker (test_core.HarnessTests.test_dispatched_locator_failure_is_error_not_preflight_blocker) ... ok
+test_explicit_preflight_smoke_only_verifies_transport_and_never_scores_tasks (test_core.HarnessTests.test_explicit_preflight_smoke_only_verifies_transport_and_never_scores_tasks) ... ok
+test_fixed_goals_are_immutable (test_core.HarnessTests.test_fixed_goals_are_immutable) ... ok
+test_frozen_cases_tamper_is_detected (test_core.HarnessTests.test_frozen_cases_tamper_is_detected) ... ok
+test_generated_checks_cannot_override_independent_failure (test_core.HarnessTests.test_generated_checks_cannot_override_independent_failure) ... ok
+test_independent_adapter_hash_detects_evaluator_change (test_core.HarnessTests.test_independent_adapter_hash_detects_evaluator_change) ... ok
+test_infrastructure_prefix_preserved_and_startup_failure_blocked (test_core.HarnessTests.test_infrastructure_prefix_preserved_and_startup_failure_blocked) ... ok
+test_inputs_are_copied_and_tamper_detected (test_core.HarnessTests.test_inputs_are_copied_and_tamper_detected) ... ok
+test_missing_vs_contradiction_and_irrelevant_readout_error (test_core.HarnessTests.test_missing_vs_contradiction_and_irrelevant_readout_error) ... ok
+test_no_regressions_cannot_activate_all_failed_repair (test_core.HarnessTests.test_no_regressions_cannot_activate_all_failed_repair) ... ok
+test_partial_measurement_keeps_original_denominators (test_core.HarnessTests.test_partial_measurement_keeps_original_denominators) ... ok
+test_preflight_cli_defaults_to_no_real_smoke (test_core.HarnessTests.test_preflight_cli_defaults_to_no_real_smoke) ... ok
+test_preflight_never_overwrites_or_reprobes_existing_output (test_core.HarnessTests.test_preflight_never_overwrites_or_reprobes_existing_output) ... ok
+test_refusal_branch_matches_and_invariant_overrides (test_core.HarnessTests.test_refusal_branch_matches_and_invariant_overrides) ... ok
+test_regression_blocks_activation (test_core.HarnessTests.test_regression_blocks_activation) ... ok
+test_repair_deletion_and_undeclared_changes_rejected (test_core.HarnessTests.test_repair_deletion_and_undeclared_changes_rejected) ... ok
+test_reset_failure_preserves_full_denominators (test_core.HarnessTests.test_reset_failure_preserves_full_denominators) ... ok
+test_source_hashes_detect_content_mutation (test_core.HarnessTests.test_source_hashes_detect_content_mutation) ... ok
+test_step_regression_blocks_activation_even_for_previously_failed_case (test_core.HarnessTests.test_step_regression_blocks_activation_even_for_previously_failed_case) ... ok
+test_success_records_prediction_before_action_and_independent_truth (test_core.HarnessTests.test_success_records_prediction_before_action_and_independent_truth) ... ok
+test_typed_equality (test_core.HarnessTests.test_typed_equality) ... ok
+test_cleanup_failure_is_reported_and_remaining_owned_processes_are_attempted (test_launch.LaunchTests.test_cleanup_failure_is_reported_and_remaining_owned_processes_are_attempted) ... ok
+test_existing_output_is_never_overwritten (test_launch.LaunchTests.test_existing_output_is_never_overwritten) ... ok
+test_failed_preflight_stops_owned_service_and_never_runs_experiment (test_launch.LaunchTests.test_failed_preflight_stops_owned_service_and_never_runs_experiment) ... ok
+test_integrity_check_exception_preserves_cleanup_and_report (test_launch.LaunchTests.test_integrity_check_exception_preserves_cleanup_and_report) ... ok
+test_partial_execution_exception_recovers_durable_action_evidence (test_launch.LaunchTests.test_partial_execution_exception_recovers_durable_action_evidence) ... ok
+test_process_argv_is_a_literal_array_and_shell_is_disabled (test_launch.LaunchTests.test_process_argv_is_a_literal_array_and_shell_is_disabled) ... ok
+test_setup_cannot_change_original_model_input_before_starting_service (test_launch.LaunchTests.test_setup_cannot_change_original_model_input_before_starting_service) ... ok
+test_setup_failure_cannot_start_service_preflight_or_experiment (test_launch.LaunchTests.test_setup_failure_cannot_start_service_preflight_or_experiment) ... ok
+test_working_and_output_paths_cannot_escape_workspace (test_launch.LaunchTests.test_working_and_output_paths_cannot_escape_workspace) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 2.224s
+
+OK

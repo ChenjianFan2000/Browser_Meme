@@ -1,0 +1,19 @@
+{
+  "revision": "pw-extension-v002",
+  "status": "ready_for_regression",
+  "cases": 12,
+  "steps": 66,
+  "rules": 24,
+  "files": {
+    "plan.json": "8b5be0e3d083f02bf7f8848d6af8a21ff114c16b9aef02775da779cd8d2d6864",
+    "scripts.py": "5fd06620a5a134f409b6e7f949bb2f72c1080f87c49cb0173f14501858d68b7f",
+    "rules.json": "53c5bcb0542f2a1143d253df0c2f5c2ba7bf1e3e4eb6fc024367562aabb04915",
+    "rulebook.md": "9a70c9e6c77945ef0c207c197a4c9dbaa74047139f3a023b7070474ef31fb1c1",
+    "source_review.json": "2b07bcfbbad211d5b0707669c530fd377b5532c75f601b477f5c5639891bda02",
+    "provenance.json": "161a4f64c99a36f7b18ea42912c1bbcca3991a7d7be51a28e57299bae8ab7432",
+    "coverage_mapping.json": "d83a60fe13a63588e595070929a6e9ea7a7cb1bdb4b3e38597b164c82ec01cf4",
+    "diagnosis.json": "67792a71b8019db4358ad86b64ee6d50b46199cabda32b5f23ae00fa818dd4c2"
+  },
+  "plan_steps_and_checks_identical_to_parent": true,
+  "regression_pending": true
+}

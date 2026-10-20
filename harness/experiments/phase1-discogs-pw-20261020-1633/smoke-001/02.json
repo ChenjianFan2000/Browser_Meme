@@ -1,0 +1,34 @@
+{
+  "before": {
+    "ui": {
+      "url": "http://127.0.0.1:43285/",
+      "title": "Harness fixture",
+      "text": "Name X X\nSave",
+      "fields": {
+        "name": ""
+      },
+      "errors": {},
+      "network": [],
+      "step_network": []
+    },
+    "backend": {
+      "fixture": "unchanged"
+    }
+  },
+  "after": {
+    "ui": {
+      "url": "http://127.0.0.1:43285/",
+      "title": "Harness fixture",
+      "text": "Name X X\nSave",
+      "fields": {
+        "name": "native"
+      },
+      "errors": {},
+      "network": [],
+      "step_network": []
+    },
+    "backend": {
+      "fixture": "unchanged"
+    }
+  }
+}

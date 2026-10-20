@@ -1,0 +1,25 @@
+{
+  "candidate_total": 7,
+  "remembered": {
+    "listing_id": 19,
+    "seller": "jenniferross18",
+    "seller_rating": 97.3,
+    "currency": "USD",
+    "price_cents": 3051,
+    "ships_from": "US",
+    "condition": "Good (G) / Near Mint (NM or M-)",
+    "href": "/cart?add=19",
+    "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+  },
+  "reobserved": {
+    "listing_id": 19,
+    "seller": "jenniferross18",
+    "seller_rating": 97.3,
+    "currency": "USD",
+    "price_cents": 3051,
+    "ships_from": "US",
+    "condition": "Good (G) / Near Mint (NM or M-)",
+    "href": "/cart?add=19",
+    "row_text": "jenniferross18\n97.3% • Martinezbury, Bahrain\n\tUS\tGood (G) / Near Mint (NM or M-)\tUSD 30.51\tAdd to Cart"
+  }
+}

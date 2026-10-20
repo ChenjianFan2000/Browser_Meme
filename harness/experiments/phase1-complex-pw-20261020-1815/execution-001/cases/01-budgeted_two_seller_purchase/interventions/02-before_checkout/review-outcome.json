@@ -1,0 +1,13 @@
+{
+  "checkpoint_id": "before_checkout",
+  "trigger": "planned_review",
+  "before_step": "checkout",
+  "directory": "interventions/02-before_checkout",
+  "status": "consumed",
+  "request_id": "cec4feb5807b41d3831f40b1c1a34613",
+  "request_sha256": "6fb1b8ae3c01722b08fba7c230079b7b14c6644afc0487d285aa83f2e82becdc",
+  "solar_decision": "continue",
+  "classification": "planned_review",
+  "decision_sha256": "1c9e1e347baf7e7fbb820ec347795ae94215d90e47be7752d63c703f4e3661c5",
+  "review_elapsed_seconds": 49.8440000000046
+}

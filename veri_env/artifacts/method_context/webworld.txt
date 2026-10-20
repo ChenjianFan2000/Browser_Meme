@@ -1,0 +1,9 @@
+You are a web world model. I will provide you with an initial page state and a sequence of actions.
+You must first analyze how the action changes the page state inside <reason>...</reason> tags.
+Then, strictly predict the resulting full page state.
+
+## Output Format:
+First, analyze the action inside <reason>...</reason> tags.
+Then output the full predicted page state DIRECTLY.
+
+LOCAL ADAPTATION: page states are complete structured observations; actions use the local issue schema. For multiple actions, propagate your predicted state forward without seeing true intermediate states. Output the specified JSON deltas and omit reasoning tags.

@@ -1,0 +1,725 @@
+[
+  {
+    "rule_id": "AUTH-LOGIN",
+    "source_refs": [
+      "backend/app/api/auth.py:38-45",
+      "frontend/src/app/api/auth/login/route.ts:5-27",
+      "frontend/src/app/login/LoginClient.tsx:9-49"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "login_open",
+        "check_ids": [
+          "login_open/expected"
+        ]
+      },
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "login_username",
+        "check_ids": [
+          "login_username/expected"
+        ]
+      },
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "login_password",
+        "check_ids": [
+          "login_password/expected"
+        ]
+      },
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "login_submit",
+        "check_ids": [
+          "login_submit/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "login_open",
+        "check_ids": [
+          "login_open/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "login_username",
+        "check_ids": [
+          "login_username/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "login_password",
+        "check_ids": [
+          "login_password/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "login_submit",
+        "check_ids": [
+          "login_submit/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "login_open",
+        "check_ids": [
+          "login_open/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "login_username",
+        "check_ids": [
+          "login_username/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "login_password",
+        "check_ids": [
+          "login_password/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "login_submit",
+        "check_ids": [
+          "login_submit/expected"
+        ]
+      },
+      {
+        "case_id": "anonymous_cart_return",
+        "step_id": "login_username",
+        "check_ids": [
+          "login_username/expected"
+        ]
+      },
+      {
+        "case_id": "anonymous_cart_return",
+        "step_id": "login_password",
+        "check_ids": [
+          "login_password/expected"
+        ]
+      },
+      {
+        "case_id": "anonymous_cart_return",
+        "step_id": "login_submit",
+        "check_ids": [
+          "login_submit/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "login_open",
+        "check_ids": [
+          "login_open/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "login_username",
+        "check_ids": [
+          "login_username/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "login_password",
+        "check_ids": [
+          "login_password/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "login_submit",
+        "check_ids": [
+          "login_submit/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "AUTH-GATE",
+    "source_refs": [
+      "backend/app/api/deps.py:13-31",
+      "frontend/src/components/ReleaseActions.tsx:23-36",
+      "frontend/src/app/cart/CartClient.tsx:38-79",
+      "frontend/src/app/me/collection/page.tsx:15-34",
+      "frontend/src/app/sell/page.tsx:46-61"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "anonymous_cart_return",
+        "step_id": "anonymous_add",
+        "check_ids": [
+          "anonymous_add/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "gate",
+        "check_ids": [
+          "gate/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "AUTH-LOGOUT",
+    "source_refs": [
+      "frontend/src/components/LogoutButton.tsx:10-26",
+      "frontend/src/app/api/auth/logout/route.ts:5-8",
+      "frontend/src/components/Header.tsx:9-11"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "signout_gate",
+        "step_id": "signout",
+        "check_ids": [
+          "signout/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "AUTH-REGISTER",
+    "source_refs": [
+      "backend/app/api/auth.py:18-35",
+      "backend/app/schemas/user.py:9-18",
+      "backend/app/models/user.py:12-33"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "CAT-SEARCH",
+    "source_refs": [
+      "backend/app/api/catalog.py:351-377",
+      "frontend/src/app/search/page.tsx:12-37",
+      "frontend/src/components/Header.tsx:22-36"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "search_empty",
+        "step_id": "query",
+        "check_ids": [
+          "query/expected"
+        ]
+      },
+      {
+        "case_id": "search_empty",
+        "step_id": "submit",
+        "check_ids": [
+          "submit/expected"
+        ]
+      },
+      {
+        "case_id": "search_no_match",
+        "step_id": "query",
+        "check_ids": [
+          "query/expected"
+        ]
+      },
+      {
+        "case_id": "search_no_match",
+        "step_id": "submit",
+        "check_ids": [
+          "submit/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "CAT-DETAIL",
+    "source_refs": [
+      "backend/app/api/catalog.py:274-348",
+      "frontend/src/app/release/[id]/page.tsx:20-180"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "genre_navigation",
+        "step_id": "release",
+        "check_ids": [
+          "release/expected"
+        ]
+      },
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "release",
+        "check_ids": [
+          "release/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "release",
+        "check_ids": [
+          "release/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "release",
+        "check_ids": [
+          "release/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "CAT-HOME",
+    "source_refs": [
+      "backend/app/api/catalog.py:82-174",
+      "frontend/src/app/page.tsx:10-178"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "consent_persistence",
+        "step_id": "home",
+        "check_ids": [
+          "home/expected"
+        ]
+      },
+      {
+        "case_id": "genre_navigation",
+        "step_id": "home",
+        "check_ids": [
+          "home/expected"
+        ]
+      },
+      {
+        "case_id": "search_empty",
+        "step_id": "home",
+        "check_ids": [
+          "home/expected"
+        ]
+      },
+      {
+        "case_id": "search_no_match",
+        "step_id": "home",
+        "check_ids": [
+          "home/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "CAT-GENRE",
+    "source_refs": [
+      "backend/app/api/catalog.py:177-271",
+      "frontend/src/app/genre/[slug]/page.tsx:48-191"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "genre_navigation",
+        "step_id": "genre",
+        "check_ids": [
+          "genre/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "MEM-COLLECTION",
+    "source_refs": [
+      "backend/app/api/account.py:41-81",
+      "backend/app/models/collection.py:12-25",
+      "frontend/src/app/me/collection/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "add_first",
+        "check_ids": [
+          "add_first/expected"
+        ]
+      },
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "add_second",
+        "check_ids": [
+          "add_second/expected"
+        ]
+      },
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "verify",
+        "check_ids": [
+          "verify/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "add_first",
+        "check_ids": [
+          "add_first/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "MEM-WANTLIST",
+    "source_refs": [
+      "backend/app/api/account.py:84-124",
+      "backend/app/models/wantlist.py:12-25",
+      "frontend/src/app/me/wantlist/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "add_first",
+        "check_ids": [
+          "add_first/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "add_second",
+        "check_ids": [
+          "add_second/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "verify",
+        "check_ids": [
+          "verify/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "MEM-UI-COUNT",
+    "source_refs": [
+      "frontend/src/components/ReleaseActions.tsx:20-36",
+      "frontend/src/app/release/[id]/page.tsx:83-108",
+      "backend/app/api/account.py:65-74",
+      "backend/app/api/account.py:108-117"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "collection_duplicate",
+        "step_id": "reload",
+        "check_ids": [
+          "reload/expected"
+        ]
+      },
+      {
+        "case_id": "wantlist_duplicate",
+        "step_id": "reload",
+        "check_ids": [
+          "reload/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "MKT-FILTER",
+    "source_refs": [
+      "backend/app/api/marketplace.py:15-90",
+      "frontend/src/app/sell/release/[id]/page.tsx:18-173"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "market_filter_none",
+        "step_id": "market",
+        "check_ids": [
+          "market/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_none",
+        "step_id": "origin",
+        "check_ids": [
+          "origin/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_none",
+        "step_id": "apply",
+        "check_ids": [
+          "apply/expected"
+        ]
+      },
+      {
+        "case_id": "market_sort_desc",
+        "step_id": "market",
+        "check_ids": [
+          "market/expected"
+        ]
+      },
+      {
+        "case_id": "market_sort_desc",
+        "step_id": "sort",
+        "check_ids": [
+          "sort/expected"
+        ]
+      },
+      {
+        "case_id": "market_sort_desc",
+        "step_id": "apply",
+        "check_ids": [
+          "apply/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_combo",
+        "step_id": "market",
+        "check_ids": [
+          "market/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_combo",
+        "step_id": "filter_media_condition",
+        "check_ids": [
+          "filter_media_condition/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_combo",
+        "step_id": "filter_sleeve_condition",
+        "check_ids": [
+          "filter_sleeve_condition/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_combo",
+        "step_id": "filter_ships_from",
+        "check_ids": [
+          "filter_ships_from/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_combo",
+        "step_id": "sort",
+        "check_ids": [
+          "sort/expected"
+        ]
+      },
+      {
+        "case_id": "market_filter_combo",
+        "step_id": "apply",
+        "check_ids": [
+          "apply/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "market_first",
+        "check_ids": [
+          "market_first/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "market_second",
+        "check_ids": [
+          "market_second/expected"
+        ]
+      },
+      {
+        "case_id": "anonymous_cart_return",
+        "step_id": "market",
+        "check_ids": [
+          "market/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "CART-ADD",
+    "source_refs": [
+      "backend/app/api/account.py:161-179",
+      "backend/app/schemas/cart.py:29-31",
+      "backend/app/models/cart.py:12-28",
+      "frontend/src/app/cart/CartClient.tsx:57-79"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "add_first",
+        "check_ids": [
+          "add_first/expected"
+        ]
+      },
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "add_second",
+        "check_ids": [
+          "add_second/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "CART-READ",
+    "source_refs": [
+      "backend/app/api/account.py:127-158",
+      "frontend/src/app/cart/CartClient.tsx:97-160"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "CART-REMOVE",
+    "source_refs": [
+      "backend/app/api/account.py:182-186",
+      "frontend/src/app/cart/CartClient.tsx:120-150"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "cart_repeat_remove",
+        "step_id": "remove",
+        "check_ids": [
+          "remove/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "CHECKOUT",
+    "source_refs": [
+      "backend/app/api/account.py:189-229",
+      "backend/app/db/session.py:17-22",
+      "frontend/src/app/cart/CartClient.tsx:162-180",
+      "backend/app/models/order.py:12-40"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "SELL-CREATE",
+    "source_refs": [
+      "backend/app/api/account.py:263-285",
+      "backend/app/schemas/sell.py:6-15",
+      "frontend/src/app/sell/page.tsx:215-250"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "SELL-MANAGE",
+    "source_refs": [
+      "backend/app/api/account.py:232-260",
+      "backend/app/api/account.py:302-309",
+      "frontend/src/app/sell/page.tsx:254-311"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "SELL-UPDATE",
+    "source_refs": [
+      "backend/app/api/account.py:288-299",
+      "backend/app/schemas/sell.py:18-25",
+      "backend/app/models/marketplace.py:21-31"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "SELL-SEARCH-PROXY",
+    "source_refs": [
+      "frontend/src/app/sell/page.tsx:95-109",
+      "frontend/src/app/api/backend/[...path]/route.ts:5-20",
+      "backend/app/api/catalog.py:351-354"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "UI-CONSENT",
+    "source_refs": [
+      "frontend/src/components/CookieBanner.tsx:5-40"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "consent_persistence",
+        "step_id": "accept",
+        "check_ids": [
+          "accept/expected"
+        ]
+      },
+      {
+        "case_id": "consent_persistence",
+        "step_id": "reload",
+        "check_ids": [
+          "reload/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  },
+  {
+    "rule_id": "UI-NAV",
+    "source_refs": [
+      "frontend/src/components/Header.tsx:38-211",
+      "frontend/src/components/Footer.tsx:26-98"
+    ],
+    "cases_steps": [
+      {
+        "case_id": "genre_navigation",
+        "step_id": "explore",
+        "check_ids": [
+          "explore/expected"
+        ]
+      },
+      {
+        "case_id": "signout_gate",
+        "step_id": "account",
+        "check_ids": [
+          "account/expected"
+        ]
+      }
+    ],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "DATA-MODEL",
+    "source_refs": [
+      "backend/app/models/release.py:22-133",
+      "backend/app/models/cart.py:12-28",
+      "backend/app/models/collection.py:12-25",
+      "backend/app/models/wantlist.py:12-25",
+      "backend/app/models/comment.py:12-30",
+      "backend/alembic/versions/7c69fa412e18_init_schema.py:21-235",
+      "backend/alembic/versions/c798e9346a24_add_genre_description.py:21-24"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_browser_unverified"
+  },
+  {
+    "rule_id": "RUNTIME",
+    "source_refs": [
+      "frontend/package.json:1-30",
+      "frontend/src/lib/api.ts:1-26",
+      "frontend/src/lib/backend.ts:3-22",
+      "backend/app/core/config.py:6-32",
+      "backend/app/main.py:11-26",
+      "ports.json:1-8",
+      "start_servers.sh:15-37"
+    ],
+    "cases_steps": [],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified"
+  }
+]

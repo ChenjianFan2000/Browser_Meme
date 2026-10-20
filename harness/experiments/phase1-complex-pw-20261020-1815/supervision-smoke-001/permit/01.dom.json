@@ -1,0 +1,7 @@
+[
+  {
+    "url": "about:blank",
+    "name": "",
+    "html": "<html><head></head><body><button id=\"change\" onclick=\"document.querySelector('#value').textContent=1\">Commit</button><p id=\"value\">1</p></body></html>"
+  }
+]

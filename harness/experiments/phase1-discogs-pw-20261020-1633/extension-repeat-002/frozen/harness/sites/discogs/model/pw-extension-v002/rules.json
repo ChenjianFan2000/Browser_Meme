@@ -1,0 +1,738 @@
+[
+  {
+    "id": "AUTH-LOGIN",
+    "statement": "Username or email login issues a bearer JWT on success; the UI stores it in an httpOnly sameSite=lax cookie and replaces the URL with next or /.",
+    "source_refs": [
+      "backend/app/api/auth.py:38-45",
+      "frontend/src/app/api/auth/login/route.ts:5-27",
+      "frontend/src/app/login/LoginClient.tsx:9-49"
+    ],
+    "preconditions": [
+      "username_or_email and password supplied"
+    ],
+    "branches": [
+      "valid: 200 token / UI {ok:true}",
+      "unknown user or wrong password: 400 Invalid credentials, visible raw error, remain login"
+    ],
+    "forbidden_side_effects": [
+      "no account, cart, order, catalog or membership changes",
+      "failed fresh login must not create authenticated session"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "AUTH-LOGIN-endpoint",
+      "AUTH-LOGIN-invariants"
+    ]
+  },
+  {
+    "id": "AUTH-GATE",
+    "statement": "All account mutations/reads require current user resolved from a valid JWT subject; UI 401 redirects preserve return target.",
+    "source_refs": [
+      "backend/app/api/deps.py:13-31",
+      "frontend/src/components/ReleaseActions.tsx:23-36",
+      "frontend/src/app/cart/CartClient.tsx:38-79",
+      "frontend/src/app/me/collection/page.tsx:15-34",
+      "frontend/src/app/sell/page.tsx:46-61"
+    ],
+    "preconditions": [
+      "authenticated account operations"
+    ],
+    "branches": [
+      "missing bearer: framework 401",
+      "invalid/expired JWT: 401 Invalid or expired token",
+      "missing user: 401 User not found",
+      "anonymous collection click: login?next=/release/id; login does not replay collection POST",
+      "anonymous cart add: login returns to /cart?add=id, then retries add"
+    ],
+    "forbidden_side_effects": [
+      "refusals change no business state"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "AUTH-GATE-endpoint",
+      "AUTH-GATE-invariants"
+    ],
+    "observed_branches": [
+      "anonymous cart login-return succeeded; collection-dependent signout workflow not reached"
+    ]
+  },
+  {
+    "id": "AUTH-LOGOUT",
+    "statement": "Sign out clears the cookie then refreshes/pushes home; it does not invalidate JWT server-side.",
+    "source_refs": [
+      "frontend/src/components/LogoutButton.tsx:10-26",
+      "frontend/src/app/api/auth/logout/route.ts:5-8",
+      "frontend/src/components/Header.tsx:9-11"
+    ],
+    "preconditions": [
+      "cookie-backed UI session"
+    ],
+    "branches": [
+      "sign out: cookie expiry and home",
+      "Header treats cookie presence as signed in without validating it"
+    ],
+    "forbidden_side_effects": [
+      "no business state mutations"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "AUTH-LOGOUT-endpoint",
+      "AUTH-LOGOUT-invariants"
+    ]
+  },
+  {
+    "id": "AUTH-REGISTER",
+    "statement": "API registration validates schema and exact username/email uniqueness, hashes password, creates a user; there is no registration page.",
+    "source_refs": [
+      "backend/app/api/auth.py:18-35",
+      "backend/app/schemas/user.py:9-18",
+      "backend/app/models/user.py:12-33"
+    ],
+    "preconditions": [
+      "username length 3..50; valid email; password length 8..128; optional display_name <=120"
+    ],
+    "branches": [
+      "201 UserOut, no token",
+      "400 Username already taken",
+      "400 Email already registered",
+      "422 schema refusal"
+    ],
+    "forbidden_side_effects": [
+      "no other users or business records change"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "API only; not UI validation",
+    "browser_evidence": [],
+    "check_ids": [
+      "AUTH-REGISTER-endpoint",
+      "AUTH-REGISTER-invariants"
+    ]
+  },
+  {
+    "id": "CAT-SEARCH",
+    "statement": "Search trims q, matches title or main artist using case-insensitive SQL substring pattern, sorts year descending/null last then title, limits 30; it does not search genre/style/label.",
+    "source_refs": [
+      "backend/app/api/catalog.py:351-377",
+      "frontend/src/app/search/page.tsx:12-37",
+      "frontend/src/components/Header.tsx:22-36"
+    ],
+    "preconditions": [
+      "q string"
+    ],
+    "branches": [
+      "empty/whitespace: []",
+      "match: release cards",
+      "no match: empty grid without explicit no-result sentence",
+      "SQL %/_ act as wildcards"
+    ],
+    "forbidden_side_effects": [
+      "no database changes"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "CAT-SEARCH-endpoint",
+      "CAT-SEARCH-invariants"
+    ],
+    "observed_branches": [
+      "empty and unmatched query zero-card results passed"
+    ]
+  },
+  {
+    "id": "CAT-DETAIL",
+    "statement": "Release detail returns joined metadata, ordered tracks and current global collection/want counts plus active listing count/minimum price.",
+    "source_refs": [
+      "backend/app/api/catalog.py:274-348",
+      "frontend/src/app/release/[id]/page.tsx:20-180"
+    ],
+    "preconditions": [
+      "integer release id"
+    ],
+    "branches": [
+      "exists: metadata, tracklist, optional notes and actions",
+      "missing: API 404 Release not found; apiGet throws; exact Next error UI pending"
+    ],
+    "forbidden_side_effects": [
+      "read does not mutate tables"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "CAT-DETAIL-endpoint",
+      "CAT-DETAIL-invariants"
+    ]
+  },
+  {
+    "id": "CAT-HOME",
+    "statement": "Home ranks most wanted (6), latest created (8), and highest order-item prices in last 31 days (6); promo tiles link home, featured banner links seeded title if available.",
+    "source_refs": [
+      "backend/app/api/catalog.py:82-174",
+      "frontend/src/app/page.tsx:10-178"
+    ],
+    "preconditions": [
+      "catalog accessible"
+    ],
+    "branches": [
+      "rankings data-dependent, ties not fully stable",
+      "newsletter Subscribe has no handler/form action; app store mockups are display only"
+    ],
+    "forbidden_side_effects": [
+      "no newsletter subscription or database mutation from placeholder controls"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "CAT-HOME-endpoint",
+      "CAT-HOME-invariants"
+    ]
+  },
+  {
+    "id": "CAT-GENRE",
+    "statement": "Genre overview includes alphabetic styles, most-collected and earliest-year cards, decade and contributor aggregates, recent-sales ranking. Its navigation links lead to text search, not true genre-filtered search.",
+    "source_refs": [
+      "backend/app/api/catalog.py:177-271",
+      "frontend/src/app/genre/[slug]/page.tsx:48-191"
+    ],
+    "preconditions": [
+      "existing slug"
+    ],
+    "branches": [
+      "known slug: overview",
+      "unknown: API 404 Genre not found; exact Next error UI pending",
+      "style/release/artist links are q text searches",
+      "artist tiles are placeholders"
+    ],
+    "forbidden_side_effects": [
+      "no catalog/business mutations"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "CAT-GENRE-endpoint",
+      "CAT-GENRE-invariants"
+    ],
+    "observed_branches": [
+      "Rock navigation and release card to tracklist passed"
+    ]
+  },
+  {
+    "id": "MEM-COLLECTION",
+    "statement": "collection GET returns current user release cards; POST is idempotent; DELETE removes only current user membership and succeeds when absent. UI only exposes add and list, no remove control. Actual production UI dynamic endpoint is masked by original Next afterFiles rewrite and returns404 before this intended backend behavior. Intended API semantics do not prove current UI reachability.",
+    "source_refs": [
+      "backend/app/api/account.py:41-81",
+      "backend/app/models/collection.py:12-25",
+      "frontend/src/app/me/collection/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "preconditions": [
+      "valid session",
+      "POST requires existing release"
+    ],
+    "branches": [
+      "GET 200 array, empty allowed",
+      "POST 200 {ok:true}, existing no-op",
+      "POST unknown release 404",
+      "DELETE 200 {ok:true} even absent",
+      "UI 401 login gate"
+    ],
+    "forbidden_side_effects": [
+      "other users/membership kind and all catalog/cart/order/listing rows unchanged"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "MEM-COLLECTION-endpoint",
+      "MEM-COLLECTION-invariants"
+    ],
+    "observed_branches": [
+      "first UI POST404 blocks duplicate workflow; target membership absent"
+    ]
+  },
+  {
+    "id": "MEM-WANTLIST",
+    "statement": "wantlist GET returns current user release cards; POST is idempotent; DELETE removes only current user membership and succeeds when absent. UI only exposes add and list, no remove control. Actual production UI dynamic endpoint is masked by original Next afterFiles rewrite and returns404 before this intended backend behavior. Intended API semantics do not prove current UI reachability.",
+    "source_refs": [
+      "backend/app/api/account.py:84-124",
+      "backend/app/models/wantlist.py:12-25",
+      "frontend/src/app/me/wantlist/page.tsx:15-58",
+      "frontend/src/components/ReleaseActions.tsx:23-66",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "preconditions": [
+      "valid session",
+      "POST requires existing release"
+    ],
+    "branches": [
+      "GET 200 array, empty allowed",
+      "POST 200 {ok:true}, existing no-op",
+      "POST unknown release 404",
+      "DELETE 200 {ok:true} even absent",
+      "UI 401 login gate"
+    ],
+    "forbidden_side_effects": [
+      "other users/membership kind and all catalog/cart/order/listing rows unchanged"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "MEM-WANTLIST-endpoint",
+      "MEM-WANTLIST-invariants"
+    ],
+    "observed_branches": [
+      "first UI POST404 blocks duplicate workflow; target membership absent"
+    ]
+  },
+  {
+    "id": "MEM-UI-COUNT",
+    "statement": "Successful Add to Collection/Wantlist always increments its local component count, including duplicate POST no-op; the separate summary remains its server-rendered value until navigation/reload.",
+    "source_refs": [
+      "frontend/src/components/ReleaseActions.tsx:20-36",
+      "frontend/src/app/release/[id]/page.tsx:83-108",
+      "backend/app/api/account.py:65-74",
+      "backend/app/api/account.py:108-117"
+    ],
+    "preconditions": [
+      "authenticated duplicate add"
+    ],
+    "branches": [
+      "first add: one durable membership",
+      "repeat add: local count +1 again; durable count unchanged",
+      "reload: counts recomputed from backend"
+    ],
+    "forbidden_side_effects": [
+      "duplicates must not create another membership"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "MEM-UI-COUNT-endpoint",
+      "MEM-UI-COUNT-invariants"
+    ]
+  },
+  {
+    "id": "MKT-FILTER",
+    "statement": "Marketplace exposes only active listings for a release; text filters are exact equality, rating is minimum, sorting is price_asc/price_desc/newest with documented secondary keys.",
+    "source_refs": [
+      "backend/app/api/marketplace.py:15-90",
+      "frontend/src/app/sell/release/[id]/page.tsx:18-173"
+    ],
+    "preconditions": [
+      "valid release",
+      "sort enum; API limit 1..200 default50, offset>=0"
+    ],
+    "branches": [
+      "matching: total before pagination + rows",
+      "none: No listings match these filters.",
+      "unknown release 404",
+      "bad sort/nonnumeric rating/pagination 422 -> server page error",
+      "UI has no pagination or quantity control and renders at most default 50"
+    ],
+    "forbidden_side_effects": [
+      "no state changes from filtering/sorting"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "MKT-FILTER-endpoint",
+      "MKT-FILTER-invariants"
+    ],
+    "observed_branches": [
+      "exact no-result origin, descending sort, combined row-derived equality filters passed"
+    ]
+  },
+  {
+    "id": "CART-ADD",
+    "statement": "Add requires active listing and positive quantity; an existing user/listing row accumulates quantity capped at 99; a new row is not capped by the route. No stock or seller-self-purchase check exists.",
+    "source_refs": [
+      "backend/app/api/account.py:161-179",
+      "backend/app/schemas/cart.py:29-31",
+      "backend/app/models/cart.py:12-28",
+      "frontend/src/app/cart/CartClient.tsx:57-79"
+    ],
+    "preconditions": [
+      "valid session",
+      "listing id and integer quantity"
+    ],
+    "branches": [
+      "201 CartOut with totals",
+      "404 Listing not found for missing/inactive/sold",
+      "400 Quantity must be >= 1",
+      "422 invalid payload types",
+      "UI always adds one via /cart?add=id and replaces /cart",
+      "UI ignores non-401 add refusal then loads cart"
+    ],
+    "forbidden_side_effects": [
+      "no order or stock decrement; no other users cart changes"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "CART-ADD-endpoint",
+      "CART-ADD-invariants"
+    ],
+    "observed_branches": [
+      "two real listing1 adds:qty1->2 and total7251->14502; anonymous return adds once"
+    ]
+  },
+  {
+    "id": "CART-READ",
+    "statement": "Cart joins current listing price, calculates sum(price*cart quantity), returns currency USD, latest-added first. UI hides quantity and displays unit prices alongside total.",
+    "source_refs": [
+      "backend/app/api/account.py:127-158",
+      "frontend/src/app/cart/CartClient.tsx:97-160"
+    ],
+    "preconditions": [
+      "valid session"
+    ],
+    "branches": [
+      "200 CartOut including empty",
+      "empty UI message and Checkout disabled",
+      "same listing twice yields one visible row but doubled total"
+    ],
+    "forbidden_side_effects": [
+      "read never creates orders or changes listing"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "CART-READ-endpoint",
+      "CART-READ-invariants"
+    ],
+    "observed_branches": [
+      "one row after repeat add, unit7251 total14502"
+    ]
+  },
+  {
+    "id": "CART-REMOVE",
+    "statement": "Remove deletes only the logged-in user cart row by cart_item_id, then UI reloads; absent/other-user IDs are successful no-ops. Actual production UI dynamic endpoint is masked by original Next afterFiles rewrite and returns404 before this intended backend behavior. Intended API semantics do not prove current UI reachability.",
+    "source_refs": [
+      "backend/app/api/account.py:182-186",
+      "frontend/src/app/cart/CartClient.tsx:120-150",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md"
+    ],
+    "preconditions": [
+      "valid session"
+    ],
+    "branches": [
+      "200 {ok:true}, item gone after reload",
+      "empty cart checkout disabled"
+    ],
+    "forbidden_side_effects": [
+      "no listing/order changes; other users cart unchanged"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "CART-REMOVE-endpoint",
+      "CART-REMOVE-invariants"
+    ],
+    "observed_branches": [
+      "actual dynamic DELETE/api/cart/items/1 returns404; cart qty2 total14502 remains; empty/disabled task endpoint failed"
+    ]
+  },
+  {
+    "id": "CHECKOUT",
+    "statement": "Checkout snapshots current listing prices and cart quantities into one paid USD order, marks each entire listing sold, leaves listing.quantity unchanged, clears only buyer cart, commits once.",
+    "source_refs": [
+      "backend/app/api/account.py:189-229",
+      "backend/app/db/session.py:17-22",
+      "frontend/src/app/cart/CartClient.tsx:162-180",
+      "backend/app/models/order.py:12-40"
+    ],
+    "preconditions": [
+      "valid session",
+      "nonempty cart, every listing still active"
+    ],
+    "branches": [
+      "200 OrderOut with item price/quantity snapshots",
+      "400 Cart is empty",
+      "400 A listing in your cart is no longer available; session closes without commit, pending flushed order should roll back",
+      "UI reload then alert Checkout complete (order created).",
+      "UI has no order history/detail page"
+    ],
+    "forbidden_side_effects": [
+      "no listing quantity decrement",
+      "no changes to unrelated listings/orders/cart/memberships/catalog",
+      "refusal must not leave partial order or sold statuses"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "CHECKOUT-endpoint",
+      "CHECKOUT-invariants"
+    ]
+  },
+  {
+    "id": "SELL-CREATE",
+    "statement": "Authenticated seller creates active listing for existing release. Schema accepts arbitrary nonempty conditions, positive cents, three-character currency, origin 1..80, optional comments and qty1..99. UI fixes currency USD.",
+    "source_refs": [
+      "backend/app/api/account.py:263-285",
+      "backend/app/schemas/sell.py:6-15",
+      "frontend/src/app/sell/page.tsx:215-250"
+    ],
+    "preconditions": [
+      "selected release in UI",
+      "valid session and schema"
+    ],
+    "branches": [
+      "201 {id}",
+      "404 Release not found",
+      "422 schema error, no new listing",
+      "UI create disabled when no selected or cents<=0; invalid qty still submits",
+      "UI price field represents cents, not dollars"
+    ],
+    "forbidden_side_effects": [
+      "no modifications to existing listings or other business tables"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "SELL-CREATE-endpoint",
+      "SELL-CREATE-invariants"
+    ]
+  },
+  {
+    "id": "SELL-MANAGE",
+    "statement": "My Listings includes all own statuses sorted newest first; Deactivate is soft deletion (inactive), including already inactive/sold own rows. Missing/non-owned returns 404.",
+    "source_refs": [
+      "backend/app/api/account.py:232-260",
+      "backend/app/api/account.py:302-309",
+      "frontend/src/app/sell/page.tsx:254-311"
+    ],
+    "preconditions": [
+      "valid session; owned listing to deactivate"
+    ],
+    "branches": [
+      "GET 200 {items:[...]} omits comments",
+      "DELETE 200 {ok:true}, row retained and visible inactive",
+      "DELETE missing/non-owned 404 Listing not found"
+    ],
+    "forbidden_side_effects": [
+      "no physical row deletion; no changes to other sellers listings or orders/cart"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "SELL-MANAGE-endpoint",
+      "SELL-MANAGE-invariants"
+    ]
+  },
+  {
+    "id": "SELL-UPDATE",
+    "statement": "API PATCH updates explicitly supplied schema fields on owned listing; status permits active/inactive, even reactivating sold. Fields nullable in schema can reach non-null SQL columns and cause DB failure.",
+    "source_refs": [
+      "backend/app/api/account.py:288-299",
+      "backend/app/schemas/sell.py:18-25",
+      "backend/app/models/marketplace.py:21-31"
+    ],
+    "preconditions": [
+      "valid session; own listing; schema-valid partial body"
+    ],
+    "branches": [
+      "200 {ok:true}",
+      "404 missing/non-owned",
+      "422 out-of-range or invalid status",
+      "explicit null non-null-column fields: potential SQL 500 rollback, browser unverified"
+    ],
+    "forbidden_side_effects": [
+      "no other listing changes"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "API only; UI provides no edit/reactivate control",
+    "browser_evidence": [],
+    "check_ids": [
+      "SELL-UPDATE-endpoint",
+      "SELL-UPDATE-invariants"
+    ]
+  },
+  {
+    "id": "SELL-SEARCH-PROXY",
+    "statement": "Seller search uses /api/backend/search?q=..., but generic proxy builds upstream URL from path only and drops query. Backend search requires q, so expected 422 prevents selection/creation through normal seller search.",
+    "source_refs": [
+      "frontend/src/app/sell/page.tsx:95-109",
+      "frontend/src/app/api/backend/[...path]/route.ts:5-20",
+      "backend/app/api/catalog.py:351-354"
+    ],
+    "preconditions": [
+      "original proxy route wins Next routing"
+    ],
+    "branches": [
+      "expected 422 missing q; visible JSON error; selected remains unset",
+      "if runtime routing differs record counterexample and revise; do not bypass UI with API/DOM injected state"
+    ],
+    "forbidden_side_effects": [
+      "failed search must not create listing"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "SELL-SEARCH-PROXY-endpoint",
+      "SELL-SEARCH-PROXY-invariants"
+    ]
+  },
+  {
+    "id": "UI-CONSENT",
+    "statement": "Accept All Cookies writes localStorage acceptance and hides banner; Cookie Settings has no handler.",
+    "source_refs": [
+      "frontend/src/components/CookieBanner.tsx:5-40"
+    ],
+    "preconditions": [
+      "banner visible in fresh storage"
+    ],
+    "branches": [
+      "accept: hidden, remains hidden on reload when storage works",
+      "storage unavailable: hide current mount but return later",
+      "settings: no implemented transition"
+    ],
+    "forbidden_side_effects": [
+      "no backend business changes"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "UI-CONSENT-endpoint",
+      "UI-CONSENT-invariants"
+    ],
+    "observed_branches": [
+      "accept and reload persistence passed independent check"
+    ]
+  },
+  {
+    "id": "UI-NAV",
+    "statement": "Desktop menus reveal on hover. Header has catalog search, cart, account and sell/genre links. Footer/community links mostly target unimplemented routes, social links are #.",
+    "source_refs": [
+      "frontend/src/components/Header.tsx:38-211",
+      "frontend/src/components/Footer.tsx:26-98"
+    ],
+    "preconditions": [
+      "desktop viewport for hidden md:flex nav"
+    ],
+    "branches": [
+      "known route navigation",
+      "unimplemented /forum /blog /about /careers /api /help /shipping /guides /get-started /add-release /terms /privacy /cookies expected Next404",
+      "no mobile dropdown alternative supplied"
+    ],
+    "forbidden_side_effects": [
+      "no implied business capability for dead links"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "UI-NAV-endpoint",
+      "UI-NAV-invariants"
+    ]
+  },
+  {
+    "id": "DATA-MODEL",
+    "statement": "Users UUID PK, releases/artists/labels/genres/styles integer PK; releases link tracks, artists with roles, labels, genres, styles, formats; membership composite keys and cart uniqueness constrain duplicates. Comments table exists but no comment API or functional comment UI.",
+    "source_refs": [
+      "backend/app/models/release.py:22-133",
+      "backend/app/models/cart.py:12-28",
+      "backend/app/models/collection.py:12-25",
+      "backend/app/models/wantlist.py:12-25",
+      "backend/app/models/comment.py:12-30",
+      "backend/alembic/versions/7c69fa412e18_init_schema.py:21-235",
+      "backend/alembic/versions/c798e9346a24_add_genre_description.py:21-24"
+    ],
+    "preconditions": [
+      "migrated schema"
+    ],
+    "branches": [
+      "SQL relation declarations do not prove SQLite FK enforcement; engine has no PRAGMA listener",
+      "no mutation APIs for catalog, comments, profile or order cancellation"
+    ],
+    "forbidden_side_effects": [
+      "UI interactions must not modify read-only catalog/comment entities"
+    ],
+    "status": "source_supported_browser_unverified",
+    "interface": "native UI",
+    "browser_evidence": [],
+    "check_ids": [
+      "DATA-MODEL-endpoint",
+      "DATA-MODEL-invariants"
+    ]
+  },
+  {
+    "id": "RUNTIME",
+    "statement": "Original Next16.1.1/React19.2.3 frontend reads API_INTERNAL_URL first and no-store catalog fetches; backend settings default SQLite and 24h JWT. Actual runtime manifest controls versions/ports, not conflicting README values. Independently verified current Windows/Node24.5 production afterFiles wildcard /api rewrite runs before dynamic handlers and forwards unsupported/api prefix; static login/cart-add/checkout still resolve. This is original source configuration, not missing handler or incorrect backend port. Docker/Node22 has not been reproduced.",
+    "source_refs": [
+      "frontend/package.json:1-30",
+      "frontend/src/lib/api.ts:1-26",
+      "frontend/src/lib/backend.ts:3-22",
+      "backend/app/core/config.py:6-32",
+      "backend/app/main.py:11-26",
+      "ports.json:1-8",
+      "start_servers.sh:15-37",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/DIAGNOSIS.md",
+      ".runtime/phase1-discogs-pw-20261020-1633/diagnostics/anchor-initial-002-routing/diagnosis.json"
+    ],
+    "preconditions": [
+      "correct frontend/backend deployment"
+    ],
+    "branches": [
+      "SQL session closes on every request",
+      "no database writes from public reads",
+      "external Unsplash image failures separate from local business correctness",
+      "generic proxy forwards explicit Authorization but does not attach cookie JWT; dedicated account proxies do"
+    ],
+    "forbidden_side_effects": [
+      "do not expose JWT/password hashes in evidence"
+    ],
+    "status": "source_supported_partial_browser_evidence_other_branches_unverified",
+    "interface": "native UI",
+    "browser_evidence": [
+      "harness/experiments/phase1-discogs-pw-20261020-1633/extension-initial-001/cases"
+    ],
+    "check_ids": [
+      "RUNTIME-endpoint",
+      "RUNTIME-invariants"
+    ],
+    "observed_branches": [
+      "Independent deployment diagnosis confirms afterFiles wildcard rewrite precedes dynamic handlers and keeps/api prefix absent in backend routes"
+    ]
+  }
+]

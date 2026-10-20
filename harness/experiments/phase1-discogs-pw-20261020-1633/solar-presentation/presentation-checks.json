@@ -1,0 +1,94 @@
+{
+  "html_checks": [
+    {
+      "path": "harness\\experiments\\phase1-discogs-pw-20261020-1633\\solar-presentation\\report.html",
+      "sha256": "ccb9d640b76a86a348b3978340f840649727a8145c4edf6bd86dc8df715c3880",
+      "local_links": 162,
+      "missing_local_targets": [],
+      "remote_runtime_resources": []
+    },
+    {
+      "path": "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-repeat-002\\task-checkout.html",
+      "sha256": "985b01e3e01eefac9eebc3e8dafcbb7a9965cb02c3d81d7326331ed5e60b7a84",
+      "local_links": 26,
+      "missing_local_targets": [],
+      "remote_runtime_resources": []
+    },
+    {
+      "path": "harness\\experiments\\phase1-discogs-pw-20261020-1633\\anchor-repair-001\\task-checkout.html",
+      "sha256": "dde80b906fa63543abe57efa191693207a7d1a8785392b46613598f8a3bb5faf",
+      "local_links": 26,
+      "missing_local_targets": [],
+      "remote_runtime_resources": []
+    }
+  ],
+  "final_repetition_summaries_verified": [
+    {
+      "run": "anchor-repeat-001",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 4,
+        "step_denominator": 44,
+        "matched_steps": 39,
+        "ui_actions_dispatched": 42,
+        "ui_actions_completed": 42,
+        "case_success_rate": 0.5,
+        "step_match_rate": 0.8863636363636364,
+        "elapsed_seconds": 106.48500000000058
+      },
+      "integrity_errors": [],
+      "activation_allowed": false
+    },
+    {
+      "run": "anchor-repeat-002",
+      "metrics": {
+        "case_denominator": 8,
+        "passed_cases": 4,
+        "step_denominator": 44,
+        "matched_steps": 39,
+        "ui_actions_dispatched": 42,
+        "ui_actions_completed": 42,
+        "case_success_rate": 0.5,
+        "step_match_rate": 0.8863636363636364,
+        "elapsed_seconds": 105.375
+      },
+      "integrity_errors": [],
+      "activation_allowed": false
+    },
+    {
+      "run": "extension-repeat-001",
+      "metrics": {
+        "case_denominator": 12,
+        "passed_cases": 8,
+        "step_denominator": 66,
+        "matched_steps": 53,
+        "ui_actions_dispatched": 57,
+        "ui_actions_completed": 57,
+        "case_success_rate": 0.6666666666666666,
+        "step_match_rate": 0.803030303030303,
+        "elapsed_seconds": 185.84400000000096
+      },
+      "integrity_errors": [],
+      "activation_allowed": false
+    },
+    {
+      "run": "extension-repeat-002",
+      "metrics": {
+        "case_denominator": 12,
+        "passed_cases": 8,
+        "step_denominator": 66,
+        "matched_steps": 53,
+        "ui_actions_dispatched": 57,
+        "ui_actions_completed": 57,
+        "case_success_rate": 0.6666666666666666,
+        "step_match_rate": 0.803030303030303,
+        "elapsed_seconds": 163.98500000000058
+      },
+      "integrity_errors": [],
+      "activation_allowed": false
+    }
+  ],
+  "money_units": "total_cents7251 = USD72.51; quantity2 repeated cart total14502cents = USD145.02",
+  "frozen_artifacts_changed": false,
+  "scope": "Read-only actual summaries and results; writes only solar-presentation"
+}

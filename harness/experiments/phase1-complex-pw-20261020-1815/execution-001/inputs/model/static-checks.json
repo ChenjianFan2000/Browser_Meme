@@ -1,0 +1,28 @@
+{
+  "structure": {
+    "cases": 1,
+    "steps": 19,
+    "rules": 27
+  },
+  "fixed_cases_exact": true,
+  "checkpoint_adjacency": [
+    [
+      "selection_committed",
+      "first_cart_add"
+    ],
+    [
+      "before_checkout",
+      "checkout"
+    ]
+  ],
+  "synthetic_algorithm_checks": [
+    "different seller minimum with excluded_demo",
+    "budget exact boundary1100 accepted,1099 refused",
+    "same-seller-only refused",
+    "USD72.51 parsed7251cents"
+  ],
+  "test_method": "Exact pure function AST extraction; no Playwright import or browser; runtime import validation pending coordinator venv",
+  "browser_started": false,
+  "business_actions": 0,
+  "local_document_links_valid": true
+}

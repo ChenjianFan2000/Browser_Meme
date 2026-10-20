@@ -1,0 +1,59 @@
+{
+  "kind": "MVP_delivery_component_verification",
+  "created_utc": "2026-10-20T08:20:46.952345+00:00",
+  "command": [
+    "D:\\Anaconda\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "harness/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "unit_tests": 34,
+  "test_log": "unit-tests.log",
+  "test_scope": "Generic contract, tri-state monitoring, provenance, preflight, repair gates, lifecycle; fake browser/processes, not actual UI",
+  "target_measurement_status": "not_started",
+  "case_success_rate": null,
+  "step_match_rate": null,
+  "model": "gpt-6.1-sol",
+  "model_transport": "Codex collaboration independent subagents",
+  "model_tokens": null,
+  "model_cost": null,
+  "bundle_sha256": "d82b0ffbff4afd05465f67aed882e639da402408c2225425c69a521a3715232a",
+  "runtime": {
+    "python": "3.11.4 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 13:38:37) [MSC v.1916 64 bit (AMD64)]",
+    "process_user": "laptop-nia5hn26\\codexsandboxoffline",
+    "permission_environment": {
+      "CODEX_PERMISSION_PROFILE": ":workspace",
+      "CODEX_SANDBOX_NETWORK_DISABLED": "1"
+    }
+  },
+  "component_evidence_snapshots": {
+    "backend-offline-validation.json": {
+      "original": ".runtime/phase1-discogs-20261020/backend-offline-validation.json",
+      "sha256": "82ab885ccbe6db2ea1f9eeae21342b79474ab0fc7a2a8677ebee55b43bc1cb1f"
+    },
+    "lifecycle-validation.json": {
+      "original": ".runtime/phase1-discogs-20261020/lifecycle-validation.json",
+      "sha256": "eb95f08c544ca3c60f0f901a26db2e4cb0cb2286540b1c49fcc42f9cc9f0c504"
+    },
+    "offline-python-wheels.json": {
+      "original": ".runtime/phase1-discogs-20261020/offline-python-wheels.json",
+      "sha256": "f543f86dec10ea61a3927083c944d50d61fed8ae4ad3acd46f2897e5b50ea043"
+    },
+    "offline-python-inventory.json": {
+      "original": ".runtime/phase1-discogs-20261020/offline-python-inventory.json",
+      "sha256": "5c40ec69542f03f53f158bc284d6ad969a58016f8c0b004153f1d89af92632a5"
+    },
+    "offline-install-provenance.json": {
+      "original": ".runtime/phase1-discogs-20261020/offline-install-provenance.json",
+      "sha256": "c51a170917cfd6692c82ca2b0fe25c2255475fdea3ba16e8c527e3628910ccc0"
+    },
+    "source_manifest.json": {
+      "original": ".runtime/phase1-discogs-20261020/source_manifest.json",
+      "sha256": "fe51d35d29d297851d52596f8bc6d69d445767788205cae9fc212a821cb44ec6"
+    }
+  }
+}

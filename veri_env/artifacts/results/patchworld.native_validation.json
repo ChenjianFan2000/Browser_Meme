@@ -1,0 +1,429 @@
+{
+  "initial": {
+    "validator": "patchworld.worldmodel_validator.validate_model",
+    "errors": [
+      {
+        "error_type": "render_roundtrip_mismatch",
+        "action": "{\"text\": \" \", \"type\": \"comment\"}",
+        "state": {
+          "feedback": {
+            "code": "ok",
+            "ok": true
+          },
+          "filter": {
+            "label": "",
+            "status": "all"
+          },
+          "issues": [
+            {
+              "blocked": true,
+              "comments": [],
+              "id": 299,
+              "labels": [],
+              "priority": 2,
+              "status": "open",
+              "title": "Archive cleanup"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 467,
+              "labels": [
+                "bug"
+              ],
+              "priority": 3,
+              "status": "open",
+              "title": "Profile settings"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 578,
+              "labels": [
+                "docs"
+              ],
+              "priority": 1,
+              "status": "closed",
+              "title": "Activity history"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 652,
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "priority": 2,
+              "status": "closed",
+              "title": "Search indexing"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 695,
+              "labels": [
+                "bug"
+              ],
+              "priority": 2,
+              "status": "open",
+              "title": "Export report"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 967,
+              "labels": [],
+              "priority": 1,
+              "status": "open",
+              "title": "Email alerts"
+            }
+          ],
+          "role": "editor",
+          "selected": [
+            467,
+            578
+          ],
+          "sort": "asc",
+          "visible_ids": [
+            299,
+            467,
+            578,
+            652,
+            695,
+            967
+          ]
+        },
+        "expected": "{}",
+        "got": "{}"
+      },
+      {
+        "error_type": "render_roundtrip_mismatch",
+        "action": "{\"text\": \" \", \"type\": \"comment\"}",
+        "state": {
+          "feedback": {
+            "code": "ok",
+            "ok": true
+          },
+          "filter": {
+            "label": "",
+            "status": "all"
+          },
+          "issues": [
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 567,
+              "labels": [],
+              "priority": 1,
+              "status": "open",
+              "title": "Search indexing"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 813,
+              "labels": [],
+              "priority": 3,
+              "status": "closed",
+              "title": "Import records"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 831,
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "priority": 1,
+              "status": "open",
+              "title": "Email alerts"
+            },
+            {
+              "blocked": true,
+              "comments": [],
+              "id": 836,
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "priority": 1,
+              "status": "open",
+              "title": "Archive cleanup"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 852,
+              "labels": [],
+              "priority": 3,
+              "status": "closed",
+              "title": "Export report"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 937,
+              "labels": [
+                "bug",
+                "docs"
+              ],
+              "priority": 3,
+              "status": "closed",
+              "title": "Table layout"
+            }
+          ],
+          "role": "editor",
+          "selected": [
+            567,
+            813
+          ],
+          "sort": "asc",
+          "visible_ids": [
+            567,
+            813,
+            831,
+            836,
+            852,
+            937
+          ]
+        },
+        "expected": "{}",
+        "got": "{}"
+      },
+      {
+        "error_type": "render_roundtrip_mismatch",
+        "action": "{\"text\": \" \", \"type\": \"comment\"}",
+        "state": {
+          "feedback": {
+            "code": "ok",
+            "ok": true
+          },
+          "filter": {
+            "label": "",
+            "status": "all"
+          },
+          "issues": [
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 352,
+              "labels": [
+                "feature"
+              ],
+              "priority": 1,
+              "status": "open",
+              "title": "Access review"
+            },
+            {
+              "blocked": true,
+              "comments": [],
+              "id": 695,
+              "labels": [],
+              "priority": 1,
+              "status": "open",
+              "title": "Table layout"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 734,
+              "labels": [
+                "docs",
+                "feature"
+              ],
+              "priority": 2,
+              "status": "open",
+              "title": "Activity history"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 773,
+              "labels": [],
+              "priority": 1,
+              "status": "closed",
+              "title": "Email alerts"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 844,
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "priority": 2,
+              "status": "open",
+              "title": "Search indexing"
+            },
+            {
+              "blocked": false,
+              "comments": [],
+              "id": 884,
+              "labels": [
+                "bug",
+                "feature"
+              ],
+              "priority": 3,
+              "status": "closed",
+              "title": "Profile settings"
+            }
+          ],
+          "role": "editor",
+          "selected": [
+            352,
+            773
+          ],
+          "sort": "asc",
+          "visible_ids": [
+            352,
+            695,
+            734,
+            773,
+            844,
+            884
+          ]
+        },
+        "expected": "{}",
+        "got": "{}"
+      }
+    ],
+    "strict_errors": [
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "type": "label",
+          "value": "  triaged  "
+        },
+        "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":467,\"labels\":[\"bug\",\"triaged\"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[],\"id\":578,\"labels\":[\"docs\",\"triaged\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":467,\"labels\":[\"bug\",\"  triaged  \"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[],\"id\":578,\"labels\":[\"docs\",\"  triaged  \"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "type": "label",
+          "value": "  triaged  "
+        },
+        "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":467,\"labels\":[\"bug\",\"triaged\"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[],\"id\":578,\"labels\":[\"docs\",\"triaged\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":467,\"labels\":[\"bug\",\"  triaged  \"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[],\"id\":578,\"labels\":[\"docs\",\"  triaged  \"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "text": " ",
+          "type": "comment"
+        },
+        "expected": "{\"feedback\":{\"code\":\"empty_comment\",\"ok\":false},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":467,\"labels\":[\"bug\"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[],\"id\":578,\"labels\":[\"docs\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":467,\"labels\":[\"bug\"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":578,\"labels\":[\"docs\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "text": " ",
+          "type": "comment"
+        },
+        "expected": "{\"feedback\":{\"code\":\"empty_comment\",\"ok\":false},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":467,\"labels\":[\"bug\"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[],\"id\":578,\"labels\":[\"docs\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":true,\"comments\":[],\"id\":299,\"labels\":[],\"priority\":2,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":467,\"labels\":[\"bug\"],\"priority\":3,\"status\":\"open\",\"title\":\"Profile settings\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":578,\"labels\":[\"docs\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":652,\"labels\":[\"bug\",\"docs\"],\"priority\":2,\"status\":\"closed\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":695,\"labels\":[\"bug\"],\"priority\":2,\"status\":\"open\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":967,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"}],\"role\":\"editor\",\"selected\":[467,578],\"sort\":\"asc\",\"visible_ids\":[299,467,578,652,695,967]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "type": "label",
+          "value": "  triaged  "
+        },
+        "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":567,\"labels\":[\"triaged\"],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":813,\"labels\":[\"triaged\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":567,\"labels\":[\"  triaged  \"],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":813,\"labels\":[\"  triaged  \"],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "type": "label",
+          "value": "  triaged  "
+        },
+        "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":567,\"labels\":[\"triaged\"],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":813,\"labels\":[\"triaged\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":567,\"labels\":[\"  triaged  \"],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":813,\"labels\":[\"  triaged  \"],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "text": " ",
+          "type": "comment"
+        },
+        "expected": "{\"feedback\":{\"code\":\"empty_comment\",\"ok\":false},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":567,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":813,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[\" \"],\"id\":567,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":813,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "text": " ",
+          "type": "comment"
+        },
+        "expected": "{\"feedback\":{\"code\":\"empty_comment\",\"ok\":false},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":567,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":813,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[\" \"],\"id\":567,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":813,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Import records\"},{\"blocked\":false,\"comments\":[],\"id\":831,\"labels\":[\"bug\",\"docs\"],\"priority\":1,\"status\":\"open\",\"title\":\"Email alerts\"},{\"blocked\":true,\"comments\":[],\"id\":836,\"labels\":[\"bug\",\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Archive cleanup\"},{\"blocked\":false,\"comments\":[],\"id\":852,\"labels\":[],\"priority\":3,\"status\":\"closed\",\"title\":\"Export report\"},{\"blocked\":false,\"comments\":[],\"id\":937,\"labels\":[\"bug\",\"docs\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Table layout\"}],\"role\":\"editor\",\"selected\":[567,813],\"sort\":\"asc\",\"visible_ids\":[567,813,831,836,852,937]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "type": "label",
+          "value": "  triaged  "
+        },
+        "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":352,\"labels\":[\"feature\",\"triaged\"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":773,\"labels\":[\"triaged\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":352,\"labels\":[\"feature\",\"  triaged  \"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":773,\"labels\":[\"  triaged  \"],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "type": "label",
+          "value": "  triaged  "
+        },
+        "expected": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":352,\"labels\":[\"feature\",\"triaged\"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":773,\"labels\":[\"triaged\"],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":352,\"labels\":[\"feature\",\"  triaged  \"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":773,\"labels\":[\"  triaged  \"],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "text": " ",
+          "type": "comment"
+        },
+        "expected": "{\"feedback\":{\"code\":\"empty_comment\",\"ok\":false},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":352,\"labels\":[\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":773,\"labels\":[],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[\" \"],\"id\":352,\"labels\":[\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":773,\"labels\":[],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}"
+      },
+      {
+        "error_type": "strict_json_mismatch",
+        "action": {
+          "text": " ",
+          "type": "comment"
+        },
+        "expected": "{\"feedback\":{\"code\":\"empty_comment\",\"ok\":false},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[],\"id\":352,\"labels\":[\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[],\"id\":773,\"labels\":[],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}",
+        "got": "{\"feedback\":{\"code\":\"ok\",\"ok\":true},\"filter\":{\"label\":\"\",\"status\":\"all\"},\"issues\":[{\"blocked\":false,\"comments\":[\" \"],\"id\":352,\"labels\":[\"feature\"],\"priority\":1,\"status\":\"open\",\"title\":\"Access review\"},{\"blocked\":true,\"comments\":[],\"id\":695,\"labels\":[],\"priority\":1,\"status\":\"open\",\"title\":\"Table layout\"},{\"blocked\":false,\"comments\":[],\"id\":734,\"labels\":[\"docs\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Activity history\"},{\"blocked\":false,\"comments\":[\" \"],\"id\":773,\"labels\":[],\"priority\":1,\"status\":\"closed\",\"title\":\"Email alerts\"},{\"blocked\":false,\"comments\":[],\"id\":844,\"labels\":[\"bug\",\"feature\"],\"priority\":2,\"status\":\"open\",\"title\":\"Search indexing\"},{\"blocked\":false,\"comments\":[],\"id\":884,\"labels\":[\"bug\",\"feature\"],\"priority\":3,\"status\":\"closed\",\"title\":\"Profile settings\"}],\"role\":\"editor\",\"selected\":[352,773],\"sort\":\"asc\",\"visible_ids\":[352,695,734,773,844,884]}"
+      }
+    ],
+    "strict_prediction_checks": 48,
+    "passed": false,
+    "trajectories": 1,
+    "transitions": 24,
+    "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+  },
+  "repaired": {
+    "validator": "patchworld.worldmodel_validator.validate_model",
+    "errors": [],
+    "strict_errors": [],
+    "strict_prediction_checks": 48,
+    "passed": true,
+    "trajectories": 1,
+    "transitions": 24,
+    "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+  },
+  "adapted": {
+    "validator": "patchworld.worldmodel_validator.validate_model",
+    "errors": [],
+    "strict_errors": [],
+    "strict_prediction_checks": 24,
+    "passed": true,
+    "trajectories": 1,
+    "transitions": 12,
+    "adapter": "JSON parse/correct/readout; predict provides transition; no method timeout"
+  }
+}

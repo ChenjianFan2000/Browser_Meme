@@ -1,0 +1,243 @@
+{
+  "html_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/tag/phase2-discogs-20261021-01",
+  "assets": [
+    {
+      "id": 664709545,
+      "name": "PUBLICATION.json",
+      "size": 2407,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709545",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/PUBLICATION.json"
+    },
+    {
+      "id": 664709620,
+      "name": "RELEASE-SHA256SUMS.txt",
+      "size": 2814,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709620",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/RELEASE-SHA256SUMS.txt"
+    },
+    {
+      "id": 664709131,
+      "name": "SHA256SUMS",
+      "size": 2159,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709131",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/SHA256SUMS"
+    },
+    {
+      "id": 664709175,
+      "name": "approved-export-manifest.json",
+      "size": 87827218,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709175",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/approved-export-manifest.json"
+    },
+    {
+      "id": 664709181,
+      "name": "publication-audit-bundle.zip",
+      "size": 71531962,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709181",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/publication-audit-bundle.zip"
+    },
+    {
+      "id": 664709459,
+      "name": "publication-audit-review.json",
+      "size": 48082,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709459",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/publication-audit-review.json"
+    },
+    {
+      "id": 664709599,
+      "name": "release-notes.txt",
+      "size": 3718,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709599",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/release-notes.txt"
+    },
+    {
+      "id": 664667055,
+      "name": "volume-00001.zip",
+      "size": 414715457,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664667055",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00001.zip"
+    },
+    {
+      "id": 664667059,
+      "name": "volume-00002.zip",
+      "size": 377633470,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664667059",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00002.zip"
+    },
+    {
+      "id": 664667054,
+      "name": "volume-00003.zip",
+      "size": 426676206,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664667054",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00003.zip"
+    },
+    {
+      "id": 664667056,
+      "name": "volume-00004.zip",
+      "size": 407202316,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664667056",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00004.zip"
+    },
+    {
+      "id": 664673923,
+      "name": "volume-00005.zip",
+      "size": 398942735,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664673923",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00005.zip"
+    },
+    {
+      "id": 664673962,
+      "name": "volume-00006.zip",
+      "size": 392382830,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664673962",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00006.zip"
+    },
+    {
+      "id": 664674126,
+      "name": "volume-00007.zip",
+      "size": 375080378,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664674126",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00007.zip"
+    },
+    {
+      "id": 664674672,
+      "name": "volume-00008.zip",
+      "size": 412225988,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664674672",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00008.zip"
+    },
+    {
+      "id": 664680683,
+      "name": "volume-00009.zip",
+      "size": 385390134,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664680683",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00009.zip"
+    },
+    {
+      "id": 664680790,
+      "name": "volume-00010.zip",
+      "size": 420378696,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664680790",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00010.zip"
+    },
+    {
+      "id": 664680883,
+      "name": "volume-00011.zip",
+      "size": 412682941,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664680883",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00011.zip"
+    },
+    {
+      "id": 664681794,
+      "name": "volume-00012.zip",
+      "size": 404661860,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664681794",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00012.zip"
+    },
+    {
+      "id": 664687493,
+      "name": "volume-00013.zip",
+      "size": 413813589,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664687493",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00013.zip"
+    },
+    {
+      "id": 664688300,
+      "name": "volume-00014.zip",
+      "size": 407820187,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664688300",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00014.zip"
+    },
+    {
+      "id": 664688407,
+      "name": "volume-00015.zip",
+      "size": 274912352,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664688407",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00015.zip"
+    },
+    {
+      "id": 664688434,
+      "name": "volume-00016.zip",
+      "size": 373809830,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664688434",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00016.zip"
+    },
+    {
+      "id": 664693473,
+      "name": "volume-00017.zip",
+      "size": 335381456,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664693473",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00017.zip"
+    },
+    {
+      "id": 664694565,
+      "name": "volume-00018.zip",
+      "size": 378027377,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664694565",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00018.zip"
+    },
+    {
+      "id": 664695598,
+      "name": "volume-00019.zip",
+      "size": 341576373,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664695598",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00019.zip"
+    },
+    {
+      "id": 664696560,
+      "name": "volume-00020.zip",
+      "size": 388165616,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664696560",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00020.zip"
+    },
+    {
+      "id": 664700500,
+      "name": "volume-00021.zip",
+      "size": 364406061,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664700500",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00021.zip"
+    },
+    {
+      "id": 664702731,
+      "name": "volume-00022.zip",
+      "size": 311596981,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664702731",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00022.zip"
+    },
+    {
+      "id": 664702820,
+      "name": "volume-00023.zip",
+      "size": 287121868,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664702820",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00023.zip"
+    },
+    {
+      "id": 664703889,
+      "name": "volume-00024.zip",
+      "size": 284678400,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664703889",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00024.zip"
+    },
+    {
+      "id": 664708209,
+      "name": "volume-00025.zip",
+      "size": 62704404,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664708209",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-00025.zip"
+    },
+    {
+      "id": 664709511,
+      "name": "volume-index-review.json",
+      "size": 6387,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664709511",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-index-review.json"
+    },
+    {
+      "id": 664708720,
+      "name": "volume-index.json",
+      "size": 39788203,
+      "url": "https://api.github.com/repos/ChenjianFan2000/Browser_Meme/releases/assets/664708720",
+      "browser_download_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/download/phase2-discogs-20261021-01/volume-index.json"
+    }
+  ]
+}

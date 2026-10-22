@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "completed_and_publicly_published",
+  "recorded_at_utc": "2026-10-22T04:52:11.992111+00:00",
+  "repository": "ChenjianFan2000/Browser_Meme",
+  "visibility": "public",
+  "visibility_authorization": "User explicitly requested keeping the existing public repository and publishing all results.",
+  "release_id": 420307401,
+  "release_url": "https://github.com/ChenjianFan2000/Browser_Meme/releases/tag/phase2-discogs-20261021-01",
+  "tag": "phase2-discogs-20261021-01",
+  "study_code_commit": "23dacccac383bb4e6428fd921db07343c6e5cf81",
+  "published_at": "2026-10-22T04:51:10Z",
+  "asset_count": 34,
+  "asset_bytes": 9251200455,
+  "volume_count": 25,
+  "exported_file_count": 90207,
+  "uncompressed_bytes": 12880369382,
+  "zip_bytes": 9051987505,
+  "redacted_file_count": 1781,
+  "approved_manifest_sha256": "29cf80c1c88d95f52198e351f8948202b397c41b90f16d14011c1eb1d1ea52fa",
+  "volume_index_sha256": "4c60019cdb3a836f614ecdb5849eb4328192a7af8aa7a8cbd142d14d83820fb4",
+  "upload_concurrency": 4,
+  "upload_failures": 0,
+  "upload_elapsed_seconds": 1368.117,
+  "asset_verification": "All 34 exact names, sizes and SHA256 digests verified before and after publishing, then independently queried without authentication. The checksum attachment was downloaded and hashed anonymously; large ZIPs were not redundantly downloaded.",
+  "study_results": {
+    "registered_cases": 180,
+    "passed": 176,
+    "failed": 2,
+    "unable_to_confirm": 2,
+    "prediction_fields": 540,
+    "correct": 236,
+    "unknown": 304,
+    "incorrect": 0,
+    "quarantined_learning_packages": [
+      "A2718",
+      "A3141"
+    ],
+    "complete_compliant_paired_seed": 1729,
+    "phase_three_started": false
+  },
+  "data_handling": "All study results including failures, unknowns, quarantined runs and audit evidence are published. Actual session authentication values are redacted only in public copies; local sealed originals and scores remain unchanged. Auth stores, runtime databases, dependencies and caches are excluded with inventories. Images received byte-pattern scanning, not full OCR.",
+  "proofs": [
+    {
+      "path": "release-asset-plan-001.json",
+      "sha256": "aaf8edebbcc2ce4d18c7f5e6d9a8aaf0b273e6e1b728ca83cc253e23f3254010",
+      "size": 7907
+    },
+    {
+      "path": "release-prepare-attempt-001.json",
+      "sha256": "3736caea3f7205bf28bc2b191343633d0d38a3e4fb2a8533cd2d9229f16c691d",
+      "size": 602
+    },
+    {
+      "path": "release-registration-001.json",
+      "sha256": "626b61add38935f00db5e57605ff52548d04915b080ce74441da49898300f81d",
+      "size": 465
+    },
+    {
+      "path": "release-upload-attempt-001.json",
+      "sha256": "6f6670e161ba1b3ecfa207a0e25dc396ce983d692a836730e642f762ed303a75",
+      "size": 7277
+    },
+    {
+      "path": "release-publish-attempt-001.json",
+      "sha256": "1c9e6486a206a4f0313bc56249c05e7cd9d5a5e1a7f417c3b74e244284f5a486",
+      "size": 7495
+    },
+    {
+      "path": "release-registration-001.json.journal.jsonl",
+      "sha256": "cd81a507f23a36e0fb2dfdeb622826f9357de859253dd0e5ee53ab9e9f4663f0",
+      "size": 19734
+    },
+    {
+      "path": "public-release-verification-001.json",
+      "sha256": "4dbdaf61380fdf03b14804fe8cbbbb739096165231a5f88a8b09e1f7e318fad0",
+      "size": 17761
+    },
+    {
+      "path": "release-public-rest-fields-001.json",
+      "sha256": "17e1f723327de72ed5bcbcafdd2c6e9fce9eb0b46cee10628fd64a849bf5ab99",
+      "size": 11890
+    },
+    {
+      "path": "release-asset-urls-001.json",
+      "sha256": "7c7a8c7c4bf7bdf5ddd659bcb90a37eee22f2bc375d7face231c2e4e40e05ec1",
+      "size": 12973
+    }
+  ],
+  "publication_fix": {
+    "path": "../github_release_v002.py",
+    "sha256": "825ad8f2572194f111e3b68c9f5c726ecbaf903f827955b315b9f629eff0b566",
+    "reason": "Initial prepare stopped before mutation because resolving a nonexistent tag through the commits endpoint returned 422; v002 checks exact tag refs and preserves the original guards.",
+    "mock_tests_passed": 16
+  },
+  "public_verifier": {
+    "path": "../verify_public_release_001.py",
+    "sha256": "b0a75df3e2b5d1b5bf9068466ae8dec4e6ff851542767d22fdd65858e3c2b791"
+  },
+  "scope_note": "This new publication receipt and upload tool correction supplement the frozen study. They do not revise the original protocol, models, task scripts, scoring or 90,207-file dataset."
+}

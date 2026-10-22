@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "kind": "restricted_github_release_exact_tag_ref_fix_validation",
+  "status": "mock_tests_passed_no_remote_operations",
+  "recorded_at_utc": "2026-10-22T04:25:21.948249+00:00",
+  "mock_tests_passed": 16,
+  "fix_scope": "Exact GET /git/ref/tags/<tag>;404 absent allowed. Lightweight/annotated/nested tag resolution to exact commit;422, mismatched ref/object, cycle/depth/type errors remain blocking. Existing identity/public/push/admin/target commit and body/asset SHA guards retained.",
+  "original_frozen_entry": {
+    "path": "harness\\publication\\phase2_20261022\\github_release.py",
+    "sha256": "7a125b1977d578045f75e5da39c73b342cf2dad6359e7ffbe79272cf791b5600"
+  },
+  "files": [
+    {
+      "path": "harness\\publication\\phase2_20261022\\github_release_v002.py",
+      "sha256": "825ad8f2572194f111e3b68c9f5c726ecbaf903f827955b315b9f629eff0b566"
+    },
+    {
+      "path": "harness\\publication\\phase2_20261022\\test_github_release_v002.py",
+      "sha256": "b9ad08953ef73227e56b87737fee5a9611f5924bd7c8743c579cf63a44e52c0b"
+    }
+  ],
+  "credentials_read": false,
+  "api_requests": false,
+  "remote_writes": false,
+  "asset_plan_or_packages_changed": false
+}

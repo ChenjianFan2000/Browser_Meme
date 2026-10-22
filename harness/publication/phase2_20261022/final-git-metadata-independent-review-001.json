@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "kind": "independent_final_git_metadata_selection_review",
+  "status": "passed",
+  "reviewed_at_utc": "2026-10-22T04:38:58.811358+00:00",
+  "selection_files": [
+    {
+      "path": ".runtime\\publication-phase2-20261022\\final-metadata-tool-selection-001.json",
+      "sha256": "a6e92cf2b115f3e96d3e813ac022b4eaf99580f85fe0b4fc0367ad2431c33937"
+    },
+    {
+      "path": ".runtime\\publication-phase2-20261022\\final-metadata-static-selection-001.json",
+      "sha256": "94431d7b2c0cf701cc3887b50809663c984d8fdfa9833fad5003b7a5ce7aa8b0"
+    }
+  ],
+  "entries": [
+    {
+      "path": "harness/publication/phase2_20261022/github_release_v002.py",
+      "sha256": "825ad8f2572194f111e3b68c9f5c726ecbaf903f827955b315b9f629eff0b566",
+      "size": 18843
+    },
+    {
+      "path": "harness/publication/phase2_20261022/test_github_release_v002.py",
+      "sha256": "b9ad08953ef73227e56b87737fee5a9611f5924bd7c8743c579cf63a44e52c0b",
+      "size": 11432
+    },
+    {
+      "path": "harness/publication/phase2_20261022/github-release-tool-validation-003.json",
+      "sha256": "dbf9fb195c29199e7aec029da00f89c1396515e6a95a9cd1c317589660a5bc43",
+      "size": 1223
+    },
+    {
+      "path": "harness/publication/phase2_20261022/github-release-independent-review-003.json",
+      "sha256": "17b7a74c62fb63af56d36c15e72fcbb1ba253cd3af1c29c167120e375ee14ddf",
+      "size": 1856
+    },
+    {
+      "path": "harness/publication/phase2_20261022/verify_public_release_001.py",
+      "sha256": "b0a75df3e2b5d1b5bf9068466ae8dec4e6ff851542767d22fdd65858e3c2b791",
+      "size": 7157
+    },
+    {
+      "path": "harness/publication/phase2_20261022/published/release-asset-plan-001.json",
+      "sha256": "aaf8edebbcc2ce4d18c7f5e6d9a8aaf0b273e6e1b728ca83cc253e23f3254010",
+      "size": 7907
+    },
+    {
+      "path": "harness/publication/phase2_20261022/published/release-prepare-attempt-001.json",
+      "sha256": "3736caea3f7205bf28bc2b191343633d0d38a3e4fb2a8533cd2d9229f16c691d",
+      "size": 602
+    },
+    {
+      "path": "harness/publication/phase2_20261022/published/release-registration-001.json",
+      "sha256": "626b61add38935f00db5e57605ff52548d04915b080ce74441da49898300f81d",
+      "size": 465
+    },
+    {
+      "path": "harness/publication/phase2_20261022/published/release-notes-final-001.txt",
+      "sha256": "ee18fb3867bfac695d3c1708598a160853e206c3e5fe29d8f3c18b4629c425a5",
+      "size": 3718
+    },
+    {
+      "path": "harness/publication/phase2_20261022/published/PUBLICATION.json",
+      "sha256": "f216e2fd8367d954bc336b57785f86107fb9fe04a583b32a4aacae2a6f6518af",
+      "size": 2407
+    },
+    {
+      "path": "harness/publication/phase2_20261022/published/RELEASE-SHA256SUMS.txt",
+      "sha256": "c1c80e4ae9cf36d3aed95a18b8cffd31d477ed013fdc6aea25372b927e1581b4",
+      "size": 2814
+    }
+  ],
+  "entry_count": 11,
+  "source_and_worktree_exact_hash_size_match": true,
+  "scope": "Explicit generic publishing fix/mock tests/validation/plan/receipt/release notes/checksums/anonymous verifier only; no dataset re-audit. Previously reviewed tool guards not retested.",
+  "findings": [],
+  "scanner_sha256": "29b5a88f087bcce759f2b626e9119170944d7fe2d78528771cfb28d7e0a076e4",
+  "credentials_read": false,
+  "remote_operations": false,
+  "frozen_experiment_files_modified": false
+}

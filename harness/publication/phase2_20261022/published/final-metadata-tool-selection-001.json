@@ -1,0 +1,25 @@
+{
+  "kind": "publication_tool_fix_explicit_copy",
+  "entries": [
+    {
+      "path": "harness/publication/phase2_20261022/github_release_v002.py",
+      "size": 18843,
+      "sha256": "825ad8f2572194f111e3b68c9f5c726ecbaf903f827955b315b9f629eff0b566"
+    },
+    {
+      "path": "harness/publication/phase2_20261022/test_github_release_v002.py",
+      "size": 11432,
+      "sha256": "b9ad08953ef73227e56b87737fee5a9611f5924bd7c8743c579cf63a44e52c0b"
+    },
+    {
+      "path": "harness/publication/phase2_20261022/github-release-tool-validation-003.json",
+      "size": 1223,
+      "sha256": "dbf9fb195c29199e7aec029da00f89c1396515e6a95a9cd1c317589660a5bc43"
+    },
+    {
+      "path": "harness/publication/phase2_20261022/github-release-independent-review-003.json",
+      "size": 1856,
+      "sha256": "17b7a74c62fb63af56d36c15e72fcbb1ba253cd3af1c29c167120e375ee14ddf"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "kind": "phase2_public_release_evidence_index",
+  "status": "audited_and_packaged",
+  "created_at_utc": "2026-10-22T04:20:48.296419+00:00",
+  "repository": "ChenjianFan2000/Browser_Meme",
+  "visibility": "public",
+  "tag": "phase2-discogs-20261021-01",
+  "code_commit": "23dacccac383bb4e6428fd921db07343c6e5cf81",
+  "study": {
+    "run_id": "phase2-discogs-20261021-01",
+    "formal_cases": 180,
+    "task_passed": 176,
+    "task_failed": 2,
+    "task_unable_to_confirm": 2,
+    "prediction_fields": 540,
+    "prediction_correct": 236,
+    "prediction_unknown": 304,
+    "prediction_incorrect": 0,
+    "quarantined_runs": [
+      "a-seed-2718",
+      "a-seed-3141"
+    ],
+    "complete_compliant_pair_seeds": [
+      1729
+    ],
+    "phase3_started": false,
+    "frozen_results_sha256": "1570f65e3c508b180bbd7e772b506ccd8a9ccbee51ca41ab92f4295916297471"
+  },
+  "data": {
+    "files": 90207,
+    "volumes": 25,
+    "uncompressed_bytes": 12880369382,
+    "volume_bytes": 9051987505,
+    "redacted_files": 1781,
+    "approved_export_manifest_sha256": "29cf80c1c88d95f52198e351f8948202b397c41b90f16d14011c1eb1d1ea52fa",
+    "volume_index_sha256": "4c60019cdb3a836f614ecdb5849eb4328192a7af8aa7a8cbd142d14d83820fb4",
+    "audit_bundle_sha256": "506f8daae5a9050101065137c2444c9047aecac8d9e621b1285940055cb6a95e",
+    "audit_bundle_review_sha256": "b63144414184b6fe1999032e57f3cbe394e84fbc2dfb058151ceb57a1f578fde"
+  },
+  "validation": {
+    "git_selected_blob_hashes_verified": 1673,
+    "phase2_harness_passed": 52,
+    "publication_and_isolation_tests_passed": 154,
+    "publication_subtests_passed": 56,
+    "exact_fixture_restoration_regression_passed": 14,
+    "actual_zip_members_rehashed": 90207
+  },
+  "interpretation": [
+    "export_sha256 verifies public bytes; original_sha256 identifies retained academic originals.",
+    "Only independently classified synthetic test fixtures retain their exact noncredential literals; real session credentials are redacted.",
+    "Runtime evidence is archived under runtime-evidence; the approved manifest records original_source_path and restore_path.",
+    "All original failures, unknowns, timeouts and protocol deviations remain. This is not a strict speed comparison or an official benchmark score.",
+    "Public evaluator evidence is not an allowed future learner input."
+  ]
+}

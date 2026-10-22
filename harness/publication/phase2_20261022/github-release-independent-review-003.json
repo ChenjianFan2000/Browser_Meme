@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "independent_github_release_exact_tag_fix_review",
+  "status": "passed",
+  "recorded_at_utc": "2026-10-22T04:27:06.904053+00:00",
+  "reviewer_role": "independent_generic_infrastructure_auditor",
+  "original_source": {
+    "path": "harness\\publication\\phase2_20261022\\github_release.py",
+    "sha256": "7a125b1977d578045f75e5da39c73b342cf2dad6359e7ffbe79272cf791b5600"
+  },
+  "new_source": {
+    "path": "harness\\publication\\phase2_20261022\\github_release_v002.py",
+    "sha256": "825ad8f2572194f111e3b68c9f5c726ecbaf903f827955b315b9f629eff0b566"
+  },
+  "author_validation": {
+    "path": "harness\\publication\\phase2_20261022\\github-release-tool-validation-003.json",
+    "sha256": "dbf9fb195c29199e7aec029da00f89c1396515e6a95a9cd1c317589660a5bc43"
+  },
+  "actual_validation": {
+    "command": "python -m pytest harness/publication/phase2_20261022/test_github_release_v002.py -q",
+    "exit_code": 0,
+    "tests_passed": 16,
+    "duration_seconds": 1.7
+  },
+  "diff_scope": "Only exact tag ref lookup and bounded annotated-tag dereference within guards. All other source bytes unchanged.",
+  "checks": {
+    "only_404_means_absent": true,
+    "422_and_other_unallowed_http_errors_block": true,
+    "exact_ref_required": true,
+    "existing_tag_exact_target_commit_required": true,
+    "annotated_tag_identity_type_cycle_and_depth_guards": true,
+    "identity_public_visibility_push_admin_exact_commit_guards_retained": true,
+    "body_asset_hash_and_draft_registration_guards_unchanged": true
+  },
+  "credentials_read_by_reviewer": false,
+  "reviewer_api_requests": false,
+  "reviewer_remote_operations": false,
+  "dataset_or_assets_modified": false,
+  "scope_limitation": "Mock/diff review of publishing tool; final actual publication receipt is a separate verification."
+}

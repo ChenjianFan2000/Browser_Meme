@@ -1,0 +1,15 @@
+{
+  "created_ns": 1792570498101408100,
+  "kind": "live_service_dispatch_tests",
+  "status": "passed",
+  "command": "python -m pytest harness/tests/test_phase2_live_dispatch_v002.py -q",
+  "passed": 3,
+  "failed": 0,
+  "reported_seconds": 0.19,
+  "files": {
+    "harness/phase2/run_parallel_v002.py": "bfee82790908e8d519a06b34e6b280bddf7bb2dd0fb3b5a3d67b418737768fa2",
+    "harness/tests/test_phase2_live_dispatch_v002.py": "e7d5bfe45daf4e5656acac7d13972e20f02da1e6688bfa9d7d9a0449af0277a3",
+    "harness/experiments/phase2-discogs-20261021-01/PROTOCOL-005.md": "47ef618d8b405772011cb2f22c8460ee501f9e9c297e2776cb75b1db52b7a967"
+  },
+  "target_business_validation": false
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "tool_version": "phase2-export-v002",
+  "created_at_utc": "2026-10-22T02:35:31.896418+00:00",
+  "kind": "synthetic_exporter_and_packager_validation",
+  "command": "python -m unittest discover -s harness/publication/phase2_20261022 -p test_*.py -v",
+  "python_version": "3.11.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "status": "passed",
+  "test_count": 53,
+  "exporter_test_count": 22,
+  "packager_test_count": 19,
+  "actual_experiment_data_read": false,
+  "browser_calls": 0,
+  "model_calls": 0,
+  "uploads": 0,
+  "frozen_experiment_modified": false,
+  "source_bindings": {
+    "export_evidence.py": "1b5bcf27d3e6e486bc555a4e63a1968975b26f49b5e03a10520a53329380ed6c",
+    "test_export_evidence.py": "c6b3dc8288846861adfaf4bc8729c7d360d750d74dad1cef7bd5c0c670ccf5fa",
+    "package.py": "480a2d3b6c123a29a26b9c5253960e1f5db06689ec2d7a2de4349290e520df9c",
+    "test_package.py": "85ecc4bed567475b0448dd90897cbe44007a8af75af7681c49f1ad0c4c40c9cd",
+    "README.md": "5dcd040b718f1f8148a5a67d88a2ff3901e6bff733adc730d9eccdda571960b9",
+    "exporter-validation-001.txt": "93f19d146f6fa7645c59086ea4d1dc2fccad8107edc38ff4660062aceccd4fb7"
+  },
+  "additional_discovered_github_release_mock_tests": 12
+}

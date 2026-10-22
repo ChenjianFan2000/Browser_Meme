@@ -1,0 +1,32 @@
+{
+  "kind": "readonly_final_independent_review_entry_source_audit",
+  "observed_at_utc": "2026-10-21T09:50:15.521626+00:00",
+  "status": "safety_consistency_revision_requested",
+  "files_sha256": {
+    "private/phase3/finalize_review_v001.py": "5d01dc38ddef620cc6623e2dc0d5ae61b90f61a816d072dfc637df53af945956",
+    "private/audit/final-review-preparation-v001.json": "3c0705bbad049cb7964d8de1976a0ece0d5f5cc364f2d6ffadcee744b8a5ecdb",
+    "private/FINAL_REVIEW_PREPARATION_V001.md": "6a769ea29fa851f24004adf479397a6bea1ebf272b7313edd41dc97686b1ccdf"
+  },
+  "positive_findings": [
+    "Requires actual complete180/540 report and truth archive before prior package review.",
+    "Rebuilds raw report from original immutable cases and binds schedule/exact6x30 identities.",
+    "Verifies180 unique archive manifests and underlying archived original file bytes/size, source case identity/manifest and begin/finish/UI/prediction chains.",
+    "Retains historical false admission and open issues; new blockers require registered package scope or global.",
+    "Records actual review start/end and true evaluation-start status; review_complete does not imply universal admission."
+  ],
+  "finding": {
+    "id": "FINAL-SAFETY-CONSISTENCY-001",
+    "location": "audit_truth unsafe classification",
+    "issue": "Only summary.safe_to_reset controls unsafe collection. Original evaluation.safe_to_reset/reset_safety/management_safety and UI management_barrier are not required to agree with summary.",
+    "required_revision": "Strictly reject inconsistent original safety fields or preserve a global unknown/block; add summarytrue/finishfalse and differing UI barrier regressions."
+  },
+  "notified": [
+    "root",
+    "independent_private_evaluator"
+  ],
+  "formal_review_or_archive_executed": false,
+  "active_sites_accessed": false,
+  "source_modified": false,
+  "new_model_requests": 0,
+  "full180_audit_claimed": false
+}

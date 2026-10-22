@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "tool_version": "phase2-export-v002",
+  "created_at_utc": "2026-10-22T02:38:14.484682+00:00",
+  "kind": "synthetic_exporter_validation_after_base64_review",
+  "command": "python -m unittest discover -s harness/publication/phase2_20261022 -p test_export_evidence.py -v",
+  "python_version": "3.11.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "status": "passed",
+  "test_count": 24,
+  "actual_experiment_data_read": false,
+  "browser_calls": 0,
+  "model_calls": 0,
+  "uploads": 0,
+  "frozen_experiment_modified": false,
+  "source_bindings": {
+    "export_evidence.py": "fbbaea885afae45876d8f67e7b5aea298908e1b510d2a75c24d063857e001ec5",
+    "test_export_evidence.py": "c64fa4c98b54045e8a7e72d6a2318615efd3a50f982bf5bfe77491bcbe1e5664",
+    "package.py": "480a2d3b6c123a29a26b9c5253960e1f5db06689ec2d7a2de4349290e520df9c",
+    "README.md": "af703355a3e2cb766ea7319055bfcab20b831c72334b4549f4e3f0b5d3cdf976",
+    "exporter-validation-002.txt": "7fdd246160ef92a9b499a49ad4a3991bfffedf9885829e3eb98e5a20f7d1eec5"
+  }
+}

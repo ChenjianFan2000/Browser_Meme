@@ -1,0 +1,15 @@
+{
+  "matching_original": {
+    "original_public_files": 1,
+    "rules_with_original_evidence": 1,
+    "semantic_rule_correctness": "requires_independent_website_evaluation"
+  },
+  "unmatched_export": {
+    "accepted": true,
+    "result": {
+      "original_public_files": 1,
+      "rules_with_original_evidence": 1,
+      "semantic_rule_correctness": "requires_independent_website_evaluation"
+    }
+  }
+}

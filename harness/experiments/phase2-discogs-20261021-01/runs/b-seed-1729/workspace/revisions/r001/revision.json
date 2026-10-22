@@ -1,0 +1,235 @@
+{
+  "revision": "r001",
+  "parent_revision": null,
+  "condition": "B",
+  "changed_rules": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "H01",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "U01"
+  ],
+  "changed_scripts": [
+    "scripts.py",
+    "experiments/08_membership.py",
+    "experiments/14_cart_remove_sell_form.py",
+    "experiments/02_login_discovery.py",
+    "experiments/17_own_listing_cart.py",
+    "experiments/19_search_discovery.py",
+    "experiments/ui.py",
+    "experiments/07_release_discovery.py",
+    "experiments/21_login_next_persistence.py",
+    "experiments/15_listing_negative_price.py",
+    "experiments/16_listing_boundaries_create.py",
+    "experiments/13_cart_repeat_combine.py",
+    "experiments/20_unauthenticated.py",
+    "experiments/10_search_market.py",
+    "experiments/03_auth.py",
+    "experiments/09_membership_repeat.py",
+    "experiments/04_auth_locator_fix.py",
+    "experiments/06_account_release_fix.py",
+    "experiments/12_cart_add.py",
+    "experiments/11_market_filters.py",
+    "experiments/05_account_release.py",
+    "experiments/18_deactivate_in_cart.py",
+    "experiments/01_initial.py"
+  ],
+  "failure_category": [
+    "locator",
+    "business_rule",
+    "implementation"
+  ],
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-d8362bfd/actions.jsonl",
+      "sha256": "d18f9d1a8e2f553ac9e54e99c40bbeb25b87a1e37503b87751218db5677f2266"
+    },
+    {
+      "path": "evidence/call-001-d8362bfd/network.json",
+      "sha256": "942e14c05dcfb4105b9a86b10c251bd5e130b4e2b9d9a1a582f86023862b9448"
+    },
+    {
+      "path": "evidence/call-002-ddb9506e/actions.jsonl",
+      "sha256": "cd15732425e17b6f5908b8d72592948b31101dd73fcb3d386908472201c527d5"
+    },
+    {
+      "path": "evidence/call-002-ddb9506e/network.json",
+      "sha256": "1c51464bfe452f346141d7f459bf554b08aacb81549b238eb54c6e593800ad1e"
+    },
+    {
+      "path": "evidence/call-003-3230b32a/actions.jsonl",
+      "sha256": "c4caca9443a8ef2fd27e28a5593830bfffdb759edb5a72e100e47f0086303d8c"
+    },
+    {
+      "path": "evidence/call-003-3230b32a/network.json",
+      "sha256": "7ecee6d5b0839fc12f061398fe7345155a2a201a4810ca9fda8624f66a2a9ff0"
+    },
+    {
+      "path": "evidence/call-004-ea437853/actions.jsonl",
+      "sha256": "570b40463d329d1d89df0fe1573c421fbd3bf455e8020131831888d4d1a8a294"
+    },
+    {
+      "path": "evidence/call-004-ea437853/network.json",
+      "sha256": "c4098db637ae718ae09b733dabcc04e1773ee7753f2103fe91e3d84c0a6a9aca"
+    },
+    {
+      "path": "evidence/call-005-2c57d29c/actions.jsonl",
+      "sha256": "b3b472383ef7978d344e63a32c4570fcdec18092f2ca80833b5286ccd3c20dcb"
+    },
+    {
+      "path": "evidence/call-005-2c57d29c/network.json",
+      "sha256": "876ddb6d8dd8dc9f0086a5fbcbecc6ff9928996efe3479b49333f2b4ccdc9eda"
+    },
+    {
+      "path": "evidence/call-006-9a61800e/actions.jsonl",
+      "sha256": "e3b383627cecf417ad042f8a57f8d9342936cdbe93b446663386f3e9ed04775a"
+    },
+    {
+      "path": "evidence/call-006-9a61800e/network.json",
+      "sha256": "4e14e8c964a44403fe2339e4e3f24dd6d038cb3129f2071a4bdbf8eb73cf0684"
+    },
+    {
+      "path": "evidence/call-007-eea9357d/actions.jsonl",
+      "sha256": "aee78a94f4069ea9e34b568622a103b52311841100bfc618c9a50f437ca814d3"
+    },
+    {
+      "path": "evidence/call-007-eea9357d/network.json",
+      "sha256": "9bac56a3110002327e426483ee421f2efc3295fa857bff2de6781b72179c5a04"
+    },
+    {
+      "path": "evidence/call-008-1084606e/actions.jsonl",
+      "sha256": "46744082e40c4aa84e6644d6f40c5755c3edb30ecb6b43ff2d370b1eebf2e10c"
+    },
+    {
+      "path": "evidence/call-008-1084606e/network.json",
+      "sha256": "d16f290c5256421ee8a206ab34b7578ffab2b64e6f42fdcd5f3e69bdd6466293"
+    },
+    {
+      "path": "evidence/call-009-69a9929d/actions.jsonl",
+      "sha256": "c4ebf2bca6fe5f242fee6082e8e498cfa5fe93b707a60f35b77f9a50f0f8b5fa"
+    },
+    {
+      "path": "evidence/call-009-69a9929d/network.json",
+      "sha256": "70f05fb25dc8cc822034b3b4f157d083efad590f32cb62e473eff604851ff3da"
+    },
+    {
+      "path": "evidence/call-010-80b68c3d/actions.jsonl",
+      "sha256": "d35bfd395a04e39a941b81d5749646e1970a6b34818ca6ab8f3e8fafe5c3b0eb"
+    },
+    {
+      "path": "evidence/call-010-80b68c3d/network.json",
+      "sha256": "478475d0cdf9000b6abcea8b6ee36e28b35231265c21f6eeba88dbf7d0db5dea"
+    },
+    {
+      "path": "evidence/call-011-539ebbfd/actions.jsonl",
+      "sha256": "60ebeeb397acd88aa6a66fdaed26e142d41d6ab4507279b704bd768580a31fb7"
+    },
+    {
+      "path": "evidence/call-011-539ebbfd/network.json",
+      "sha256": "2b13826b30e98e335a744db95adcd389bd45a2e195442de410270970690a2301"
+    },
+    {
+      "path": "evidence/call-012-953cef0b/actions.jsonl",
+      "sha256": "6b933b0d7685c632f38276d06a97ce51ceb86ac38184e786d11c664c063710f0"
+    },
+    {
+      "path": "evidence/call-012-953cef0b/network.json",
+      "sha256": "c39b2429faa7ad68a6f31a399e0cf78057f78a27dc54bb10a36a2fc1af451a0e"
+    },
+    {
+      "path": "evidence/call-013-6541edd9/actions.jsonl",
+      "sha256": "6161b79d4fac3a8cc9da56d098e307620dc11c51e4105858b3b54a973b2ff44b"
+    },
+    {
+      "path": "evidence/call-013-6541edd9/network.json",
+      "sha256": "38ec255a246c5570ccb1e9280063186171b14004c647b06fdc5d8cac9104da35"
+    },
+    {
+      "path": "evidence/call-014-90b2f7e9/actions.jsonl",
+      "sha256": "7db746537f04c29352e1b4d2615821c0feb428d06d15eac39f9f6b066e3f187c"
+    },
+    {
+      "path": "evidence/call-014-90b2f7e9/network.json",
+      "sha256": "84a35339ce881d862ad7327e65306b576e588e0e6f167a0b3df7d2b96e652b99"
+    },
+    {
+      "path": "evidence/call-015-30a3939b/actions.jsonl",
+      "sha256": "e55ccfbe939990a261261d9dc77480576ea951ec5d8cad12f71e919d056e6b6f"
+    },
+    {
+      "path": "evidence/call-015-30a3939b/network.json",
+      "sha256": "f3652b0d1167baf52d00d5b2b8ce92e717a1c3d26b31f25bd4cb01ba6db23c1c"
+    },
+    {
+      "path": "evidence/call-016-ab1eab3a/actions.jsonl",
+      "sha256": "8f398ac1ebb582d6d5d8df718fa4c03abbd0010528d85c652223a0622f250fe6"
+    },
+    {
+      "path": "evidence/call-016-ab1eab3a/network.json",
+      "sha256": "475075f5c4d4cc9203191c9a8c81e997bccdb0489ae7200ae364b6799bbc4b39"
+    },
+    {
+      "path": "evidence/call-017-88872d38/actions.jsonl",
+      "sha256": "8550d678d9c32f2e48f85e2ce63cbae7521abb4ba6c03abff751a8e5a165c70d"
+    },
+    {
+      "path": "evidence/call-017-88872d38/network.json",
+      "sha256": "3df6b71a5b1fff907030310828aca93aec57f8f6c7f97759cf82ccc3c850d768"
+    },
+    {
+      "path": "evidence/call-018-10dd495e/actions.jsonl",
+      "sha256": "4018b22576dfca376e5a11b6b0cfa6bc842c65aadb6c83fd201dd1809843b943"
+    },
+    {
+      "path": "evidence/call-018-10dd495e/network.json",
+      "sha256": "12deb47f912be359656c4902f36003d5bd590f4cea5a21ea8a25010b9a44344c"
+    },
+    {
+      "path": "evidence/call-019-b6160753/actions.jsonl",
+      "sha256": "884feb9dfe37087207c04a4bd988ba4977afd0d5b3bff8756ef31b9b7551e5b1"
+    },
+    {
+      "path": "evidence/call-019-b6160753/network.json",
+      "sha256": "a75818f2bc267586196ae60a9e18198b759c968d5b494eadfe246083b3181d0f"
+    },
+    {
+      "path": "evidence/call-020-885a228f/actions.jsonl",
+      "sha256": "095d27b60cd0ed66e842c597f448aa6bd8b8edd92571ecdaa369f4186493fd03"
+    },
+    {
+      "path": "evidence/call-020-885a228f/network.json",
+      "sha256": "02d35112d11dd742d16b97881b0c843700ecfc2a18755ff980a5704dc282bbbe"
+    },
+    {
+      "path": "evidence/call-021-69c0cd11/actions.jsonl",
+      "sha256": "d199bed1a39d8490bab19fccbf69af1fe5d9d8ac08f1778bb6ff5d0f48cef076"
+    },
+    {
+      "path": "evidence/call-021-69c0cd11/network.json",
+      "sha256": "4d6b77f9b6d45f13cac358285f608a2e7ab2cd216f2dcd2a4b90c060a81b1197"
+    }
+  ],
+  "rationale": "Independent native UI experiments; record bounded rules, preserve failed scripts and distinguish optimistic counters from canonical readback.",
+  "condition_constraints": "Prose rules and native execution only; no executable behavior model",
+  "scheduling_seed": 1729
+}

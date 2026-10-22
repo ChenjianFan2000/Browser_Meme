@@ -1,0 +1,303 @@
+[
+  {
+    "id": "P01",
+    "classification": "implementation",
+    "stage": "offline preparation / pre-execution rejection",
+    "error": "python executable was unavailable; e01.py was not created; execute_script returned ValueError: input file is missing",
+    "correction": "Use python3, create the file, then make the first actual browser submission",
+    "evidence_refs": [],
+    "browser_export_available": false
+  },
+  {
+    "id": "P02",
+    "classification": "implementation",
+    "stage": "static script policy rejection",
+    "error": "ValueError: observation policy excludes name getattr",
+    "preserved_script_refs": [
+      {
+        "path": "experiments/common.py",
+        "sha256": "6e4084526ff66f642d5c8cb5c4a8a6a6da67dde16e8295d813dda1e2e39b8535"
+      },
+      {
+        "path": "experiments/e02.py",
+        "sha256": "cef7f3357962a7cca1ccd08d4584ab80bce9465de45be385d10576feb26f8661"
+      }
+    ],
+    "correction": "Explicit native methods in common_v2.py / e02_v2.py",
+    "evidence_refs": [],
+    "browser_export_available": false
+  },
+  {
+    "id": "P03",
+    "classification": "implementation",
+    "stage": "static module policy rejection",
+    "error": "ValueError: observation policy excludes name _prediction",
+    "preserved_script_refs": [
+      {
+        "path": "experiments/behavior_model_v2.py",
+        "sha256": "d81fe82c0199187bc133eb7d532e6142763e7b3e7eee104d03b0edb6316c4c86"
+      },
+      {
+        "path": "experiments/task_scripts_v2.py",
+        "sha256": "fd8631ed7a1f966c45ac0d4baf64c9f4a384ab51f13b08ba5ef5eb793447d75e"
+      },
+      {
+        "path": "experiments/e32.py",
+        "sha256": "b8ded340137e0dfcb5cd144eb352fcb142104e40aa37e477ef7937505d5cd4a7"
+      }
+    ],
+    "correction": "Public helper name prediction_shape in behavior_model_v3; e32_v2.py executed successfully",
+    "evidence_refs": [],
+    "browser_export_available": false
+  },
+  {
+    "id": "L01",
+    "classification": "locator",
+    "stage": "E03 username selector",
+    "error": "input[type=text] found zero because the username input omitted type; no fill action occurred. Existing prefilled username was used; password fill and login succeeded.",
+    "evidence_refs": [
+      {
+        "path": "evidence/call-003-19c1460f/actions.jsonl",
+        "sha256": "69ac6ca0240cf9853106c14d7a96a0e8cd929351bbf8d0dc72864c5490fe367f"
+      },
+      {
+        "path": "evidence/call-003-19c1460f/network.json",
+        "sha256": "785b6f794d7e4526b01b3e01db32d3de52ab5355b9d33126b890888094f629d9"
+      },
+      {
+        "path": "evidence/call-003-19c1460f/result.json",
+        "sha256": "0b3bf6220ccc3784d0289e52ec029fa6371962f5af4a19b8a3d81f362d53fc71"
+      }
+    ]
+  },
+  {
+    "id": "L02",
+    "classification": "locator",
+    "stage": "E05 removal and E06 header control",
+    "error": "Remove membership controls absent; no action. Last header button was hidden Sign out and skipped; account hrefs were still discoverable in rendered DOM.",
+    "evidence_refs": [
+      {
+        "path": "evidence/call-005-9bae8229/actions.jsonl",
+        "sha256": "16a92e86c0c3f78b8a2497f111470f626f0385536042829c9b868d15d98d8509"
+      },
+      {
+        "path": "evidence/call-005-9bae8229/network.json",
+        "sha256": "adf7a09230603ba6f285b46ce5deaa27cdc2f694f7aa16783fa61906a51d5504"
+      },
+      {
+        "path": "evidence/call-005-9bae8229/result.json",
+        "sha256": "d9c3d5524fca04ed1bb321618d36738ef1437c3c1bc288841061a4152959b33e"
+      },
+      {
+        "path": "evidence/call-006-9595c467/actions.jsonl",
+        "sha256": "c4297144b9efc490273cce3500ff75a6c0fb917df4e3d407b5ff94c3d618ef12"
+      },
+      {
+        "path": "evidence/call-006-9595c467/network.json",
+        "sha256": "63967acbcc37e152f0b13d8e4ba6bd30751dab2e87cbb0a00916f9be11e21780"
+      },
+      {
+        "path": "evidence/call-006-9595c467/result.json",
+        "sha256": "2ffb610f2dd5dd6a4e5d9a58e2f92cf8ac60df56ab15fa185ab7d9b9f0d85118"
+      }
+    ]
+  },
+  {
+    "id": "L03",
+    "classification": "locator",
+    "stage": "E19 explicit selection",
+    "error": "Exact accessible name without whitespace matched zero; first result153 remained selected. Two actual creations for153 were confirmed. No blind retries.",
+    "preserved_script_refs": [
+      {
+        "path": "experiments/e19.py",
+        "sha256": "6877db4c32dddb2c56e35e00a3028304f0c5a82a606b5f57910118cad6b38ab9"
+      }
+    ],
+    "correction": "E20 uses observed #221 text; final helper verifies exact selected artist/title and stops on failure",
+    "evidence_refs": [
+      {
+        "path": "evidence/call-019-3aaf21c1/actions.jsonl",
+        "sha256": "1e57dc7e1e17764f9a6d39c8f7e532d1ad795ead5f651cdc501b1533dee0c4a5"
+      },
+      {
+        "path": "evidence/call-019-3aaf21c1/network.json",
+        "sha256": "d8e823e1e5d7be91eb85b8a92bcec7644f8e466795138a2861c1816b2defa7bb"
+      },
+      {
+        "path": "evidence/call-019-3aaf21c1/result.json",
+        "sha256": "da95f6bfc5a10e1f112fe4fc7edc23aca3640c79da1a05bbf429ef6d5f9efff7"
+      },
+      {
+        "path": "evidence/call-020-a14439f2/actions.jsonl",
+        "sha256": "2f04c336fe49e8027b808658152f684010c65ebac0c36604f3f44f8ce1f87b0a"
+      },
+      {
+        "path": "evidence/call-020-a14439f2/network.json",
+        "sha256": "0fd3a66c51fdb36b6c41738985a76c04bb187066b9b07106cd8021edbda31924"
+      },
+      {
+        "path": "evidence/call-020-a14439f2/result.json",
+        "sha256": "7740753eab43757f2322f9bff9e1988990c7ea654257e4719d62616752858014"
+      }
+    ]
+  },
+  {
+    "id": "L04",
+    "classification": "locator",
+    "stage": "E35 duplicate visible listing key",
+    "error": "After643 deactivation, helper for646 found both inactive640 and646 sharing title/price/status and returned None before any action.",
+    "correction": "E36 only captures final state; reactivation/hidden identity not inferred and no mutation retry attempted",
+    "preserved_script_refs": [
+      {
+        "path": "experiments/e35.py",
+        "sha256": "53f84e7c281a1c33aa4085e2d1a4717510b4b78fa577d0d33ed8c673f01c4009"
+      },
+      {
+        "path": "experiments/e35_v2.py",
+        "sha256": "841c2ec7e6049591eea2ea0b9bfc5bf66d848408d2efe21c97958f7725d04bd1"
+      }
+    ],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-035-a5374528/actions.jsonl",
+        "sha256": "7093fcb21c28f9ed5c380741d514d0af411352dba5262607dd9e024aa8f716d4"
+      },
+      {
+        "path": "evidence/call-035-a5374528/network.json",
+        "sha256": "206c69349aaaf6de47837e217b6875e001851a35e3320e98b62cb27c54e52bcf"
+      },
+      {
+        "path": "evidence/call-035-a5374528/result.json",
+        "sha256": "328b20ae572e954556fa5d11e9093b54c5e427ae5bd1067e48df58091d9e441e"
+      },
+      {
+        "path": "evidence/call-036-b6e5e7cf/actions.jsonl",
+        "sha256": "5a668216cd41a0aec41a0c0c79b829fa85c454c12af269fd7a2213e3c7b0b801"
+      },
+      {
+        "path": "evidence/call-036-b6e5e7cf/network.json",
+        "sha256": "0ff6731503cfcbbdc72508924d6ba4a256c0e6810fb63368333770d47975a989"
+      },
+      {
+        "path": "evidence/call-036-b6e5e7cf/result.json",
+        "sha256": "624bf8d93a9e4788772f43233590ad66866e9f3f543f5858b2cf21733956b461"
+      }
+    ]
+  },
+  {
+    "id": "B01",
+    "classification": "business_rule",
+    "stage": "Intentional validation/authentication/availability probes",
+    "error": "Observed401 invalid login,422 quantity/price/string boundaries,400 unavailable checkout and404 inactive/sold cart add",
+    "evidence_refs": [
+      {
+        "path": "evidence/call-012-27f356b3/actions.jsonl",
+        "sha256": "80d5128b222eb734d8b8bba0b10739059996e73aab09c003fd2dc40e6e2a2854"
+      },
+      {
+        "path": "evidence/call-012-27f356b3/network.json",
+        "sha256": "d0f7ffc8547cb35e16fb9944191bda6ec7f749e189b1e51a1e33dfe180eb8742"
+      },
+      {
+        "path": "evidence/call-012-27f356b3/result.json",
+        "sha256": "bf1f71510de0fdf568f36e94b5cc701aeb4e91062f0c4fc2f5646fa9e89e878d"
+      },
+      {
+        "path": "evidence/call-013-19a7e8d5/actions.jsonl",
+        "sha256": "972e1e4b30980a3fd0baf6362126c4ad2847f282574616de7456551d2d3efdae"
+      },
+      {
+        "path": "evidence/call-013-19a7e8d5/network.json",
+        "sha256": "2ac2f7743a80e0c95182981528c626e77a1cc5c815d86bfb4b9063d941cce2c4"
+      },
+      {
+        "path": "evidence/call-013-19a7e8d5/result.json",
+        "sha256": "b0c49e5dc373ec736b917b1e9b80b2ea19eb114d6eddcdb7925a9b9184005a62"
+      },
+      {
+        "path": "evidence/call-016-7de5e874/actions.jsonl",
+        "sha256": "4f7645fd82e4fd050620792f1fa21829b1d8b956619cd05b2bcd12cab849b525"
+      },
+      {
+        "path": "evidence/call-016-7de5e874/network.json",
+        "sha256": "a4d23bd8dccc097968f358d8eadea338e80f724e937c81f1ee174178bb575dd3"
+      },
+      {
+        "path": "evidence/call-016-7de5e874/result.json",
+        "sha256": "2f1e761c9f7daf2c0875a84cc2c920946390eb46a5d98ab8645462bc0e0d06ed"
+      },
+      {
+        "path": "evidence/call-022-4df679d3/actions.jsonl",
+        "sha256": "dc2ca06e700459051713a98063e713c5af83f62803b085500b57a768e3281bfa"
+      },
+      {
+        "path": "evidence/call-022-4df679d3/network.json",
+        "sha256": "0367ca69908f3c3617df316f9e57fe477a8167770d26108b8414cf7c29154bf2"
+      },
+      {
+        "path": "evidence/call-022-4df679d3/result.json",
+        "sha256": "018ad7f1213c6dc0264c253f5a8e1104605531fd86de63edec87752711fe25d7"
+      },
+      {
+        "path": "evidence/call-025-9037276a/actions.jsonl",
+        "sha256": "bb8f583b99a400ee435c65293c0cbb7589a5df7e3312dc4ed635d65693818b53"
+      },
+      {
+        "path": "evidence/call-025-9037276a/network.json",
+        "sha256": "b83844d5a4840ddb8ba52e845fe35dc5b3e6f929f518da982a9b577a44673c67"
+      },
+      {
+        "path": "evidence/call-025-9037276a/result.json",
+        "sha256": "ebc0cb20a18573b7df6f5e5f1498c9d071e6a788a1862b917661f2780b97531a"
+      },
+      {
+        "path": "evidence/call-026-c5f0a043/actions.jsonl",
+        "sha256": "d97f6e330a81881faedb7b48660b4aa2b4fb751290d7210ee5fba1ecec93e6eb"
+      },
+      {
+        "path": "evidence/call-026-c5f0a043/network.json",
+        "sha256": "0e64f5a2f708aca6128311b0dba8fba968829493ecc9903b75caecb598309be3"
+      },
+      {
+        "path": "evidence/call-026-c5f0a043/result.json",
+        "sha256": "b9cc7ea573e0f0215f94e4f3ade1e6e76a8c056c91d21c0c29188ec57745d450"
+      },
+      {
+        "path": "evidence/call-027-afb2b235/actions.jsonl",
+        "sha256": "a6f687503f6bc986590bf20867514e2d9c4aa22ebb8205d71e50f4dc84b63e1c"
+      },
+      {
+        "path": "evidence/call-027-afb2b235/network.json",
+        "sha256": "dcb242ddf80a0481627b721dfa42f4841f6abf1c0a5db0160c3acdb1bb956f8e"
+      },
+      {
+        "path": "evidence/call-027-afb2b235/result.json",
+        "sha256": "73929e153a35883c980c2a62d57bcac63db8992d39914c4f03182f50d73f43e2"
+      },
+      {
+        "path": "evidence/call-028-df05adf4/actions.jsonl",
+        "sha256": "4bd56b23f96db31572a741e3714568146200ba87eeda6f3b5a191defca22d41e"
+      },
+      {
+        "path": "evidence/call-028-df05adf4/network.json",
+        "sha256": "ca92116e6272d7fa09626c5363f51fad6df84bad1ab413d397a724f1263ce157"
+      },
+      {
+        "path": "evidence/call-028-df05adf4/result.json",
+        "sha256": "b0130cb6053f4010653888fcd0f62db0950b011c551d732f57c27d24dbc93cac"
+      },
+      {
+        "path": "evidence/call-029-0ed53f5c/actions.jsonl",
+        "sha256": "030361ee33418003c3ea2c0db99f39fd85de175309521dc18416796eae8359c8"
+      },
+      {
+        "path": "evidence/call-029-0ed53f5c/network.json",
+        "sha256": "703ac34d184fb6c61b86911b333861c596c98ba0e79d1b73b255ba48c1e4afa6"
+      },
+      {
+        "path": "evidence/call-029-0ed53f5c/result.json",
+        "sha256": "279b6ea97ffca966b39bb564eca08ca80f84163b903266394f6c872e7d77e4b9"
+      }
+    ]
+  }
+]

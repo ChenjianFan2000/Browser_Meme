@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "publication_preparation_not_remote_completion",
+  "experiment": "phase2-discogs-20261021-01",
+  "repository": "ChenjianFan2000/Browser_Meme",
+  "visibility": "public",
+  "explicit_user_authorization": "保留现有公开仓库并公开发布全部结果",
+  "authorization_date_local": "2026-10-22",
+  "parent_commit": "29196c4a17368f6e2d4d3d40b82ffb3e6916d973",
+  "release_tag": "phase2-discogs-20261021-01",
+  "git_scope": "Phase-two source and necessary deployment dependency, tests, protocols and human-readable final reports; unrelated existing phase-one working changes excluded.",
+  "release_scope": "All inventoried phase-two learning/development/frozen evaluation, independent truth and review evidence, failures, timeouts and deviations, plus explicitly inventoried runtime management evidence.",
+  "publication_occurs_after_first_frozen_evaluation": true,
+  "private_path_meaning": "Learner visibility during the experiment; not a blanket public-release exclusion. Future learner input allowlists remain unchanged.",
+  "originals_immutable": true,
+  "authentication_treatment": "Redact authentication values in separate exports; retain original and export SHA256 and explicit treatment. Do not read or hash excluded credential stores.",
+  "excluded_non_result_material": ["credential stores", "runtime databases", "installed dependency trees", "cache and bytecode"],
+  "image_check_limit": "Byte-pattern scanning; no claim of exhaustive OCR.",
+  "evidence_asset_format": "Independent ZIP volumes, target 512 MiB each; complete portable paths and SHA256 indexes.",
+  "publication_gate": "Independent export audit, approved manifest binding, full ZIP member verification, exact repository/account/commit, complete remote asset size and SHA256 verification.",
+  "phase3_started": false
+}

@@ -1,0 +1,19 @@
+{"event": "learning_started", "run_id": "a-seed-2718", "pid": 10076}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 15, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 30, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 45, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 60, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 75, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 90, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 105, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 120, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 135, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 150, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 165, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 180, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 195, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 210, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 225, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 240, "trusted_http_events": 0}
+{"event": "progress", "run_id": "a-seed-2718", "elapsed_seconds": 255, "trusted_http_events": 0}
+{"run_id": "a-seed-2718", "exit_code": 0, "elapsed_seconds": 257.2659999999996, "checks": {"ready_file": true, "rules_valid": true, "required_files": true, "browser_exports_match_originals": true, "launcher_success": true, "relay_settled_without_errors": true, "management_barrier": true, "condition_no_predictor": true}, "management_barrier": {"relay_drained": true, "browser_tree_clean": true, "gateway_log_complete": true}, "validation_errors": [], "trusted_http_events": 0, "relay_errors": [], "status": "learning_finished"}

@@ -1,0 +1,30 @@
+"""Native Playwright entry points. Submit with the phase2 browser tool.
+
+run(h): inspect landing page.
+open_account(h): navigate home, click the observed Account link, read back.
+These are discovery/navigation scripts; no business write is implemented.
+No retries are performed. Runtime exports original per-action evidence.
+"""
+
+def prediction(claim):
+    return {'disposition':'accepted',
+            'effects':{'persistent_state_changed':False,'affected_record_count':0},
+            'ui_claims':[{'claim':claim,'evidence_expected':'Rendered DOM and URL after navigation'}],
+            'unknowns':[]}
+
+def run(h):
+    h.expect(prediction('Landing page exposes a catalogue and Account link'),
+             'Repeat the observed public landing navigation; no business operation')
+    h.page.goto(h.origin)
+    return h.observe('landing-readback')
+
+def open_account(h):
+    run(h)
+    link = h.page.get_by_role('link', name='Account', exact=True)
+    if link.count() != 1 or not link.is_visible():
+        h.note('Locator precondition failed; stop without a click')
+        return h.observe('account-link-precondition-failed')
+    h.expect(prediction('Sign in page exposes Username or Email and Password controls'),
+             'Observed Account click navigated from / to /login; runtime confirms and scrolls target')
+    link.click()
+    return h.observe('account-readback')

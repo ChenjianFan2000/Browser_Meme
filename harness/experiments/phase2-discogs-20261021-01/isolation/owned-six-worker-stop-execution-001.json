@@ -1,0 +1,163 @@
+{
+  "kind": "actual_owned_six_worker_marker_cleanup",
+  "completed_at_utc": "2026-10-22T01:35:15.307182+00:00",
+  "plan_sha256": "e0e7f7281b27b623e1ebeacb67ee4315ad8fe4a989aa57ed78f711538a76314c",
+  "workers": [
+    {
+      "worker": "a",
+      "marker": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a\\stop-recovery-six-55be243c87c041cebd7a35c506ecb528",
+      "process_checks": [
+        {
+          "role": "launcher",
+          "pid": 12312,
+          "creation_date_raw": "/Date(1792570412889)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "backend",
+          "pid": 39704,
+          "creation_date_raw": "/Date(1792570414665)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "frontend",
+          "pid": 8580,
+          "creation_date_raw": "/Date(1792570414691)/",
+          "identity_and_ownership_verified": true
+        }
+      ],
+      "marker_written_at_utc": "2026-10-22T01:35:08.938885+00:00"
+    },
+    {
+      "worker": "b",
+      "marker": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b\\stop-recovery-six-55be243c87c041cebd7a35c506ecb528",
+      "process_checks": [
+        {
+          "role": "launcher",
+          "pid": 40396,
+          "creation_date_raw": "/Date(1792570418751)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "backend",
+          "pid": 27888,
+          "creation_date_raw": "/Date(1792570420447)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "frontend",
+          "pid": 15776,
+          "creation_date_raw": "/Date(1792570420469)/",
+          "identity_and_ownership_verified": true
+        }
+      ],
+      "marker_written_at_utc": "2026-10-22T01:35:08.939887+00:00"
+    },
+    {
+      "worker": "c",
+      "marker": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c\\stop-recovery-six-55be243c87c041cebd7a35c506ecb528",
+      "process_checks": [
+        {
+          "role": "launcher",
+          "pid": 36992,
+          "creation_date_raw": "/Date(1792570424448)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "backend",
+          "pid": 17208,
+          "creation_date_raw": "/Date(1792570426147)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "frontend",
+          "pid": 32528,
+          "creation_date_raw": "/Date(1792570426172)/",
+          "identity_and_ownership_verified": true
+        }
+      ],
+      "marker_written_at_utc": "2026-10-22T01:35:08.939887+00:00"
+    },
+    {
+      "worker": "d",
+      "marker": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\stop-scale001-fb6053d4f4584d32a037d3ee7446eec1",
+      "process_checks": [
+        {
+          "role": "launcher",
+          "pid": 33460,
+          "creation_date_raw": "/Date(1792567273329)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "backend",
+          "pid": 14940,
+          "creation_date_raw": "/Date(1792567275362)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "frontend",
+          "pid": 13052,
+          "creation_date_raw": "/Date(1792567275489)/",
+          "identity_and_ownership_verified": true
+        }
+      ],
+      "marker_written_at_utc": "2026-10-22T01:35:08.940890+00:00"
+    },
+    {
+      "worker": "e",
+      "marker": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\stop-scale001-14d55df23df44edcbf4fdf4e811761f1",
+      "process_checks": [
+        {
+          "role": "launcher",
+          "pid": 13380,
+          "creation_date_raw": "/Date(1792567273369)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "backend",
+          "pid": 34528,
+          "creation_date_raw": "/Date(1792567275391)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "frontend",
+          "pid": 18996,
+          "creation_date_raw": "/Date(1792567275534)/",
+          "identity_and_ownership_verified": true
+        }
+      ],
+      "marker_written_at_utc": "2026-10-22T01:35:08.941884+00:00"
+    },
+    {
+      "worker": "f",
+      "marker": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\stop-scale001-dac829a5d57b4cc39b42f4e4310d22f1",
+      "process_checks": [
+        {
+          "role": "launcher",
+          "pid": 11112,
+          "creation_date_raw": "/Date(1792567273461)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "backend",
+          "pid": 13900,
+          "creation_date_raw": "/Date(1792567275545)/",
+          "identity_and_ownership_verified": true
+        },
+        {
+          "role": "frontend",
+          "pid": 35520,
+          "creation_date_raw": "/Date(1792567275595)/",
+          "identity_and_ownership_verified": true
+        }
+      ],
+      "marker_written_at_utc": "2026-10-22T01:35:08.942884+00:00"
+    }
+  ],
+  "candidate_pids_remaining": [],
+  "listening_ports_remaining": [],
+  "status": "passed",
+  "force_kill_used": false,
+  "other_services_touched": false,
+  "runtime_evidence_or_db_deleted": false
+}

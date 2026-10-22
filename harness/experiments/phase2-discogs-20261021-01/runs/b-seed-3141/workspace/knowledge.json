@@ -1,0 +1,1239 @@
+{
+  "rules": [
+    {
+      "id": "R01",
+      "statement": "In this run, accepting all cookies dismissed the initial banner and it stayed absent across subsequent pages.",
+      "status": "verified",
+      "preconditions": [
+        "Initial home banner present"
+      ],
+      "branches": [
+        "Accept All Cookies clicked; banner absent"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "R02",
+      "statement": "The untouched rendered login form submitted successfully (POST response ok=true), returned home, and later showed an Account button with Collection, Wantlist and Sign out. The initial prediction of an empty-form rejection was contradicted; untouched is not evidence that the fields were empty.",
+      "status": "verified",
+      "preconditions": [
+        "First observed login form in this run; no fields cleared"
+      ],
+      "branches": [
+        "Click Sign in -> home; authenticated menu subsequently available"
+      ],
+      "forbidden_side_effects": [
+        "Do not infer arbitrary credentials accepted"
+      ],
+      "calls": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "R03",
+      "statement": "For release 221 under this account, adding to Wantlist twice returned ok=true twice. Sidebar Want changed 3→4→5 while the static main count stayed 3; a fresh page showed 4 and the wantlist had one target card. A duplicate add did not produce a second persisted membership in these readbacks.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated account; release221 initially absent from own wantlist"
+      ],
+      "branches": [
+        "First add persisted membership",
+        "Second add increased optimistic sidebar only",
+        "Reload reconciled counts"
+      ],
+      "forbidden_side_effects": [
+        "Do not equate optimistic counter increment with a new persisted record"
+      ],
+      "calls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "R04",
+      "statement": "For release221, Collection and Wantlist coexist. Collection first add raised Have 2→3 and displayed the release in own collection. A later repeated collection add showed 4 locally, then 3 on fresh navigation.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated supplied account; release221"
+      ],
+      "branches": [
+        "First collection add persisted",
+        "Repeated add did not increase reloaded count"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "R05",
+      "statement": "On observed marketplace221, Add to Cart is a link rather than a button. Its first own-seller link had href /cart?add=4; clicking it produced a persisted cart item for listing4 at USD21.45. Own-seller purchase eligibility was therefore not blocked at this add step.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated; listing4 active at time of observation"
+      ],
+      "branches": [
+        "Link navigation added item and normalized URL to /cart"
+      ],
+      "forbidden_side_effects": [
+        "Do not treat add-link navigation as read-only"
+      ],
+      "calls": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "R06",
+      "statement": "Repeating the confirmed add for listing4 increased its cart quantity 1→2 and total2145→4290 cents, although only one row and unchanged unit price were displayed. Adding listing7 made a separate row and total6575 cents. The original idempotent-cart prediction is refuted.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated; observed listing4 and listing7 active"
+      ],
+      "branches": [
+        "Same listing accumulates quantity",
+        "Different listing adds separate item"
+      ],
+      "forbidden_side_effects": [
+        "Do not blindly repeat cart adds or infer quantity from row count"
+      ],
+      "calls": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": "R07",
+      "statement": "One checkout with listing4 quantity2 and listing7 quantity1 cleared the cart to total0. Subsequent marketplace221 count fell25→23; own listing4 became sold despite its seller quantity1. Response details and visible effects are the evidence; total hidden record effects and general stock policy remain unknown. The naturally caused checkout response identified order121, status paid, total6575 cents, with listing4 quantity2 and listing7 quantity1. This establishes that response, not complete hidden accounting.",
+      "status": "verified",
+      "preconditions": [
+        "Observed cart6575 cents; supplied authenticated account"
+      ],
+      "branches": [
+        "Checkout accepted; cart emptied; two listings left active marketplace"
+      ],
+      "forbidden_side_effects": [
+        "Do not infer complete order accounting or universal oversell acceptance"
+      ],
+      "calls": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "R08",
+      "statement": "After checkout on marketplace221, Ships From=US plus Apply returned four US rows. Adding Minimum Rating=99 returned none. Clearing country and choosing price_desc with rating99 returned two Sweden rows at72.51 then44.91. Filling controls alone had not refreshed the rows before Apply.",
+      "status": "verified",
+      "preconditions": [
+        "Observed23 active listings after checkout"
+      ],
+      "branches": [
+        "Country plus rating combined",
+        "Apply updates URL query and listing count",
+        "Descending price order observed"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        11
+      ]
+    },
+    {
+      "id": "R09",
+      "statement": "Media Condition=Mint returned zero rows for marketplace221, whereas Mint (M) returned five exact-condition rows. Adding min_rating101 returned no matches. This supports exact-label matching for those two tested condition strings, not every field or case.",
+      "status": "verified",
+      "preconditions": [
+        "Marketplace221 observed23 active listings"
+      ],
+      "branches": [
+        "Abbreviated Mint empty",
+        "Full Mint (M) matched",
+        "Impossible rating produced empty results"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        12
+      ]
+    },
+    {
+      "id": "R10",
+      "statement": "On /sell, Create Listing was disabled before selecting a release. Searching Dark Side returned release221 and automatically showed it as Selected; with default positive price creation became enabled. The disabled click timed out before activation, so it provides no backend rejection evidence.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated fresh /sell form"
+      ],
+      "branches": [
+        "No release -> UI disabled",
+        "Unique search result -> selected and enabled"
+      ],
+      "forbidden_side_effects": [
+        "Do not force disabled controls or infer backend absence"
+      ],
+      "calls": [
+        13,
+        14,
+        16
+      ]
+    },
+    {
+      "id": "R11",
+      "statement": "With selected221, price0 disabled Create Listing; quantity0 alone with positive price remained enabled. Submitting quantity0 with default other values returned HTTP422 with quantity >=1 validation shown in UI. No new listing appeared in that rejection readback.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated /sell; release221 selected; otherwise default valid fields"
+      ],
+      "branches": [
+        "Price0 blocked in UI",
+        "Quantity0 submitted and rejected by server"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        15,
+        16,
+        21
+      ]
+    },
+    {
+      "id": "R12",
+      "statement": "Creating release221 with quantity2, price1234 cents and default conditions/country produced listing640 active at USD12.34. It persisted on navigation and appeared first in ascending marketplace. Deactivate changed640 to inactive; repeating confirmed deactivate returned ok and retained inactive; it was absent from active marketplace afterward.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated account; release221; default NM/VG+ and US"
+      ],
+      "branches": [
+        "Create returns201 id640",
+        "Deactivate retains own record with inactive status",
+        "Repeat deactivate did not restore or delete record"
+      ],
+      "forbidden_side_effects": [
+        "Do not assume first Deactivate always targets newly created listing; confirm title and price"
+      ],
+      "calls": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "R13",
+      "statement": "The observed Add Release footer link navigated to /add-release and rendered404. This only establishes that linked page behavior at that time, not absent backend release creation.",
+      "status": "verified",
+      "preconditions": [
+        "Footer Add Release link"
+      ],
+      "branches": [
+        "Rendered404"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        17
+      ]
+    },
+    {
+      "id": "R14",
+      "statement": "Global search for Pink Floyd returned three release cards; lowercase pink floyd also matched, Dark Side matched the title fragment, the chosen unmatched token gave no cards, and empty query showed a broader release list. No universal search grammar is established.",
+      "status": "verified",
+      "preconditions": [
+        "Global header search; current dataset"
+      ],
+      "branches": [
+        "Artist and title substring cases observed",
+        "Empty and no-match cases observed"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        18,
+        19
+      ]
+    },
+    {
+      "id": "R15",
+      "statement": "Explore hover revealed Genres linked to /genre/rock. On that overview Rock Releases, Rock Artists and Classic Rock routed to text searches q=rock, q=rock artist and q=Classic Rock; Classic Rock search was empty. Genre navigation does not itself prove dedicated genre filtering.",
+      "status": "verified",
+      "preconditions": [
+        "Observed rock overview and header"
+      ],
+      "branches": [
+        "Overview cards and related styles render",
+        "Links lead to global text search"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        19,
+        20
+      ]
+    },
+    {
+      "id": "H01",
+      "statement": "Membership adds may use set semantics across other releases and accounts. Releases221 and153 under this account showed duplicate collection adds reconciling on fresh navigation; transfer beyond those cases remains a hypothesis.",
+      "status": "hypothesis",
+      "preconditions": [
+        "Other release or account"
+      ],
+      "branches": [
+        "Set membership",
+        "Duplicate records"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        6,
+        7,
+        37
+      ]
+    },
+    {
+      "id": "U01",
+      "statement": "Membership removal, listing edit/reactivation, other-account ownership controls, full checkout accounting and unvisited routes remain unknown. Missing controls do not prove absent backend operations. Newsletter behavior is untested because its field locator failed before filling or clicking Subscribe.",
+      "status": "unknown",
+      "preconditions": [
+        "Unobserved operations"
+      ],
+      "branches": [],
+      "forbidden_side_effects": [],
+      "calls": [
+        7,
+        12,
+        17,
+        40
+      ]
+    },
+    {
+      "id": "R16",
+      "statement": "Sign out returned ok and navigated home; the menu briefly retained authenticated labels. Fresh release221 showed an Account link. A signed-out Wantlist add returned401 Not authenticated and navigated to /login?next=%2Frelease%2F221. No membership change was shown.",
+      "status": "verified",
+      "preconditions": [
+        "Supplied account signed out in this run"
+      ],
+      "branches": [
+        "Immediate client menu can be stale",
+        "Fresh page identifies signed-out state",
+        "401 opens login with return route"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        23,
+        24
+      ]
+    },
+    {
+      "id": "R17",
+      "statement": "Deliberately wrong credentials and deliberately cleared username/password each produced HTTP400 and Invalid credentials in the rendered login form. Entering the supplied fixture credentials then returned200 ok and navigated to requested release221. Untouched initial form success does not imply arbitrary or blank credentials are accepted.",
+      "status": "verified",
+      "preconditions": [
+        "Observed login next=/release/221; tested invalid account token, cleared fields, then supplied account"
+      ],
+      "branches": [
+        "Invalid stays on login",
+        "Cleared stays on login",
+        "Valid returns to next route"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        3,
+        25
+      ]
+    },
+    {
+      "id": "R18",
+      "statement": "Seller search Pink Floyd returned153,180,221 and selected first result153; Dark Side selected221. Merely filling the new query retained old results until Search. Searching the unmatched token cleared Selected and disabled creation; an empty seller query also left no selected release and creation disabled.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated fresh /sell; tested these four queries"
+      ],
+      "branches": [
+        "Multiple results auto-select first",
+        "No-match clears previous selection",
+        "Empty seller query differs from empty global search"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        26
+      ]
+    },
+    {
+      "id": "R19",
+      "statement": "Creating a listing with media condition Learning3141 grade and other default fields for221 succeeded as listing641. The custom label appeared in seller view and marketplace. This single accepted string refutes a strictly predefined-condition-only rule for that submitted media field; other invalid labels or blank values remain unknown.",
+      "status": "verified",
+      "preconditions": [
+        "Selected221; quantity1; price1999; default sleeve VG+ and US"
+      ],
+      "branches": [
+        "POST201 id641",
+        "Custom string persisted"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        27,
+        28
+      ]
+    },
+    {
+      "id": "R20",
+      "statement": "After listing641 was added to cart and then deactivated, fresh cart still contained it at1999 cents. Checkout returned400 A listing in your cart is no longer available and the error page hid item controls. Fresh navigation restored the same cart item, which Remove cleared. Error-screen disappearance was not cart clearing.",
+      "status": "verified",
+      "preconditions": [
+        "Own listing641 active when carted, inactive before checkout"
+      ],
+      "branches": [
+        "Checkout rejected inactive item",
+        "Rejected checkout retained item",
+        "Remove cleared it"
+      ],
+      "forbidden_side_effects": [
+        "Do not infer deletion from an error-only screen"
+      ],
+      "calls": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "R21",
+      "statement": "On the observed empty cart, Checkout was disabled. The planned empty-checkout click was guarded and not executed. This is a UI boundary; backend empty-checkout behavior remains unknown.",
+      "status": "verified",
+      "preconditions": [
+        "Fresh empty cart after removing641"
+      ],
+      "branches": [
+        "Disabled button; no checkout request submitted"
+      ],
+      "forbidden_side_effects": [
+        "Do not claim a tested backend empty-cart rejection"
+      ],
+      "calls": [
+        29
+      ]
+    },
+    {
+      "id": "R22",
+      "statement": "Marketplace221 country us yielded zero rows, while US yielded four. With US retained, sleeve Mint yielded zero and Mint (M) one row. Adding min_rating=not-a-rating through the form caused a rendered server-side application error. These are the exact tested combinations, not a universal case or numeric parsing rule.",
+      "status": "verified",
+      "preconditions": [
+        "Observed23 active listings; filters applied through normal form"
+      ],
+      "branches": [
+        "Country case distinction",
+        "Exact sleeve label distinction",
+        "Malformed rating application error"
+      ],
+      "forbidden_side_effects": [
+        "Do not inspect server logs or infer internal exception cause"
+      ],
+      "calls": [
+        30
+      ]
+    },
+    {
+      "id": "R23",
+      "statement": "Quantity1.5 with otherwise default selected221 listing returned422 int_from_float on quantity. In a separate fresh form price_cents1.5 returned422 int_from_float on price_cents. No listing was created in those rejection readbacks.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated /sell; selected221; isolated fractional input"
+      ],
+      "branches": [
+        "Fractional quantity rejected",
+        "Fractional cents rejected"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        31,
+        32
+      ]
+    },
+    {
+      "id": "R24",
+      "statement": "Price1 cent with default valid quantity1 and selected221 created listing642 at USD0.01. A deliberate identical repeat, performed after the first new row was confirmed, created643 and a second visible identical row. Listing creation did not deduplicate that pair.",
+      "status": "verified",
+      "preconditions": [
+        "Same selected release and entered values retained after first confirmed creation"
+      ],
+      "branches": [
+        "First create201 id642",
+        "Repeat create201 id643; two rows"
+      ],
+      "forbidden_side_effects": [
+        "Do not retry an unconfirmed create"
+      ],
+      "calls": [
+        33
+      ]
+    },
+    {
+      "id": "R25",
+      "statement": "Navigating the exact /cart?add=4 href previously observed while listing4 was active, after it had become sold, produced POST404 Listing not found and left the cart empty. That observed stale add differs from the inactive-after-cart checkout rejection for641.",
+      "status": "verified",
+      "preconditions": [
+        "Listing4 sold after observed checkout; cart initially empty"
+      ],
+      "branches": [
+        "Stale sold-link add rejected without cart item"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        9,
+        10,
+        12,
+        34
+      ]
+    },
+    {
+      "id": "R26",
+      "statement": "For newly created listing643 at one cent, repeat add changed UI-caused response quantity1→2 and total1→2 cents while retaining one cart row. Remove deleted the entire repeated-quantity item, with empty cart persisting on fresh navigation. Native reusable add_cart_row and remove_cart_item executed this sequence successfully.",
+      "status": "verified",
+      "preconditions": [
+        "Listing643 active; initial empty cart; explicitly selected first of two one-cent rows"
+      ],
+      "branches": [
+        "Repeat quantity increment",
+        "Remove whole row, not one unit"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        35
+      ]
+    },
+    {
+      "id": "R27",
+      "statement": "Release153 initially showed Have2, Want3. Collection add persisted Have3; repeat showed Have4 locally and Have3 after navigation. Wantlist addition then persisted Want4 alongside Have3. Its marketplace link with zero for sale opened a normal empty listings page; unfiltered Apply retained zero matches.",
+      "status": "verified",
+      "preconditions": [
+        "Authenticated supplied account; release153 current run"
+      ],
+      "branches": [
+        "Second-release duplicate counter reconciliation",
+        "Both memberships coexist",
+        "Zero availability still has marketplace page"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        37,
+        38
+      ]
+    },
+    {
+      "id": "R28",
+      "statement": "Newest sort on221 placed the two recently created one-cent listings before older listings in the observed result. This does not establish tie-breaking or every sort ordering. Two scoped deactivations of those rows retained inactive records642/643 and reduced active marketplace count25→23.",
+      "status": "verified",
+      "preconditions": [
+        "Current one-cent duplicates active at start; explicit row indexes used for otherwise indistinguishable rows"
+      ],
+      "branches": [
+        "Recent rows first under newest",
+        "Both duplicates deactivated and absent from active results"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        38,
+        39
+      ]
+    },
+    {
+      "id": "R29",
+      "statement": "Observed linked pages /forum, /blog, /about, /help, /get-started, /careers, /shipping, /guides, /terms, /privacy and /cookies rendered404. /add-release also rendered404 earlier. This bounds the linked page behavior at these visits; it does not establish absent backend features or other routes.",
+      "status": "verified",
+      "preconditions": [
+        "Public same-origin links rendered in header/footer"
+      ],
+      "branches": [
+        "404 on exact linked routes"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        17,
+        22,
+        36
+      ]
+    },
+    {
+      "id": "F01",
+      "statement": "The initial prediction that repeating cart add for listing4 would be idempotent with no persistent cart change was contradicted by response quantity1→2 and doubled total.",
+      "status": "refuted",
+      "preconditions": [
+        "Listing4 in cart and active when repeated"
+      ],
+      "branches": [
+        "Quantity increased despite one row"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": "F02",
+      "statement": "The initial prediction that clicking Sign in on the untouched initial form would reject it was contradicted by successful login and navigation home. That form had not been deliberately cleared.",
+      "status": "refuted",
+      "preconditions": [
+        "First untouched login form in this run"
+      ],
+      "branches": [
+        "Initial untouched form succeeded",
+        "Later explicitly cleared form failed"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        3,
+        25
+      ]
+    },
+    {
+      "id": "H02",
+      "statement": "The initial login fields may have been prefilled with the demonstration account. Untouched success plus later cleared-field rejection supports this explanation, but no secret input values were printed or used as independent evidence.",
+      "status": "hypothesis",
+      "preconditions": [
+        "Initial login observation and later cleared-form comparison"
+      ],
+      "branches": [
+        "Prefilled fields",
+        "Other initialization behavior"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        2,
+        3,
+        25
+      ]
+    },
+    {
+      "id": "U02",
+      "statement": "Newsletter Subscribe behavior remains unknown: experiment40 targeted placeholder Email, but the input placeholder in exported DOM was empty. The fill timed out before it activated and Subscribe was never clicked. An unexecuted corrected script is preserved for later task execution; no subscription outcome is claimed.",
+      "status": "unknown",
+      "preconditions": [
+        "Home newsletter UI"
+      ],
+      "branches": [
+        "Locator failure before any newsletter action"
+      ],
+      "forbidden_side_effects": [],
+      "calls": [
+        1,
+        40
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "area": "Authentication and cookies",
+      "findings": "Untouched sign-in succeeded; Account changed link→button; cookie accept dismissed banner. Bad/cleared credentials untested in this revision.",
+      "calls": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "area": "Collection and wantlist",
+      "findings": "Successful adds, cross-membership and duplicates versus fresh readbacks for221.",
+      "calls": [
+        6,
+        7
+      ]
+    },
+    {
+      "area": "Marketplace and cart",
+      "findings": "Own-seller add, repeated quantity, two-seller combination, checkout and availability changes; filters exact condition and rating bounds.",
+      "calls": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "area": "Selling",
+      "findings": "Disabled controls, unique-search selection, valid create, price0 UI bound, quantity0 server rejection, persistent deactivation and repeat.",
+      "calls": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        21
+      ]
+    },
+    {
+      "area": "Discovery",
+      "findings": "Global artist/title/case/empty/no-match queries and rock/style navigation; linked add-release404.",
+      "calls": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "area": "Authentication rejection and return navigation",
+      "findings": "Wrong and cleared credentials rejected; supplied credentials honored next; logout fresh-read and membership401 established. Immediate logout UI can be stale.",
+      "calls": [
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "area": "Seller selection and validation",
+      "findings": "Multi-match first selection; no-match/empty clears; arbitrary grade accepted; fractional quantities/cents422; one-cent accepted; identical create produced independent rows.",
+      "calls": [
+        26,
+        27,
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "area": "Cart stale-state boundaries",
+      "findings": "Deactivated cart item blocked checkout and persisted after error; Remove cleared; empty Checkout disabled; stale sold link add404; quantity-two Remove cleared whole item.",
+      "calls": [
+        28,
+        29,
+        34,
+        35
+      ]
+    },
+    {
+      "area": "Additional filter boundaries",
+      "findings": "Country case and exact sleeve-label differences; malformed rating rendered server error; recent items first under newest in observed state.",
+      "calls": [
+        30,
+        38
+      ]
+    },
+    {
+      "area": "Second release and native helper execution",
+      "findings": "153 memberships reproduce optimistic repeat versus fresh counts; empty marketplace exists; helpers successfully scoped cart/remove/deactivate actions including duplicate rows.",
+      "calls": [
+        35,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "area": "Linked static routes and newsletter uncertainty",
+      "findings": "Enumerated links rendered404. Newsletter field locator failed before fill or Subscribe click; behavior untested.",
+      "calls": [
+        22,
+        36,
+        40
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "type": "release",
+      "identity": "221",
+      "name": "Pink Floyd - The Dark Side Of The Moon",
+      "relationships": [
+        "Harvest SHVL804",
+        "Vinyl LP Album UK1973",
+        "marketplace /sell/release/221"
+      ],
+      "actions": [
+        "Add to Wantlist",
+        "Add to Collection",
+        "Marketplace"
+      ],
+      "uncertainty": "Counts changed during run; re-read current values",
+      "calls": [
+        5,
+        6,
+        7,
+        12
+      ]
+    },
+    {
+      "type": "listing",
+      "identity": "4",
+      "name": "Own original221 listing at2145cents",
+      "relationships": [
+        "seller supplied account",
+        "cart quantity reached2",
+        "became sold after checkout"
+      ],
+      "actions": [
+        "Add to Cart while active",
+        "Deactivate in own view"
+      ],
+      "uncertainty": "No universal stock quantity rule inferred",
+      "calls": [
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "type": "listing",
+      "identity": "7",
+      "name": "hernandezernest53 release221 at2285cents",
+      "relationships": [
+        "Second listing checked out alongside4"
+      ],
+      "actions": [
+        "Add to Cart while active"
+      ],
+      "uncertainty": "Current seller view not available",
+      "calls": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "listing",
+      "identity": "640",
+      "name": "Learned creation221 at1234cents quantity2",
+      "relationships": [
+        "Own supplied-account listing",
+        "Created active then deactivated"
+      ],
+      "actions": [
+        "Deactivate"
+      ],
+      "uncertainty": "Edit and reactivation unobserved",
+      "calls": [
+        16,
+        17
+      ]
+    },
+    {
+      "type": "menus",
+      "identity": "header",
+      "name": "Account, Explore, Marketplace, Community",
+      "relationships": [
+        "Account links own collection and wantlist",
+        "Explore hover Genres -> rock"
+      ],
+      "actions": [
+        "Account click",
+        "Explore hover"
+      ],
+      "uncertainty": "Community and remaining links not visited yet",
+      "calls": [
+        5,
+        6,
+        19
+      ]
+    },
+    {
+      "type": "release",
+      "identity": "153",
+      "name": "Pink Floyd - Assimilated grid-enabled open system",
+      "relationships": [
+        "Columbia COLU-9836",
+        "US2008",
+        "Zero marketplace listings observed",
+        "Added to both own memberships"
+      ],
+      "actions": [
+        "Add to Wantlist",
+        "Add to Collection",
+        "Marketplace"
+      ],
+      "uncertainty": "Other operations and accounts not tested",
+      "calls": [
+        26,
+        37,
+        38
+      ]
+    },
+    {
+      "type": "release_card",
+      "identity": "180",
+      "name": "Pink Floyd - Re-contextualized asynchronous Graphical User Interface",
+      "relationships": [
+        "Global and seller Pink Floyd search result"
+      ],
+      "actions": [
+        "Seller result button; not clicked",
+        "Release card; not visited"
+      ],
+      "uncertainty": "Detail and marketplace unvisited",
+      "calls": [
+        18,
+        26
+      ]
+    },
+    {
+      "type": "listing",
+      "identity": "641",
+      "name": "Custom Learning3141 grade at1999cents",
+      "relationships": [
+        "Release221",
+        "Own account",
+        "Created active; added to cart; deactivated; checkout rejected; cart item removed"
+      ],
+      "actions": [
+        "Create",
+        "Add to Cart",
+        "Deactivate",
+        "Checkout rejection",
+        "Remove"
+      ],
+      "uncertainty": "Reactivate/edit unknown",
+      "calls": [
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "type": "listing_pair",
+      "identity": "642,643",
+      "name": "Two identical one-cent own221 listings",
+      "relationships": [
+        "Independent201 creation responses",
+        "643 repeated cart quantity then removed",
+        "Both later inactive"
+      ],
+      "actions": [
+        "Create repeat",
+        "Add to Cart",
+        "Remove",
+        "Explicit row-index Deactivate"
+      ],
+      "uncertainty": "Tie ordering across future data unknown; never assume distinct ID from identical title/price alone",
+      "calls": [
+        33,
+        35,
+        38,
+        39
+      ]
+    },
+    {
+      "type": "order_response",
+      "identity": "121",
+      "name": "Observed paid checkout response6575cents",
+      "relationships": [
+        "Listing4 quantity2",
+        "Listing7 quantity1"
+      ],
+      "actions": [
+        "Checkout once"
+      ],
+      "uncertainty": "No order UI found; hidden accounting beyond response unknown",
+      "calls": [
+        10
+      ]
+    },
+    {
+      "type": "newsletter_control",
+      "identity": "Home Subscribe",
+      "name": "Email text, empty-placeholder input, Subscribe button",
+      "relationships": [
+        "Home newsletter region"
+      ],
+      "actions": [
+        "Only field-location attempt; no fill/click completed"
+      ],
+      "uncertainty": "Subscription behavior entirely untested",
+      "calls": [
+        1,
+        40
+      ]
+    }
+  ],
+  "unexplored": [
+    "Other accounts, roles and ownership rejection",
+    "Membership removal",
+    "Listing editing/reactivation",
+    "Payment, shipping, order-history UI and full checkout accounting",
+    "Stock ceilings, maximum quantities, mixed valid/invalid checkout atomicity",
+    "Other genre origins beyond observed rock links",
+    "Search ranking, all text-indexed fields and pagination",
+    "All whitespace/empty/custom value validation permutations",
+    "Newsletter business behavior: no Subscribe action executed",
+    "Cookie Settings branch: banner dismissed before exploration",
+    "Manual seller result-button selection: auto-selection observed; entry point supplied but not executed",
+    "API footer linked page not explicitly visited; no direct API calls permitted"
+  ],
+  "hypotheses": [
+    "Membership set semantics may transfer beyond221/153 and the supplied account",
+    "Exact marketplace text matching may transfer to other label strings; only listed cases verified",
+    "Global search may index artist/title without dedicated genre/style semantics",
+    "Initial login may have had prefilled demonstration values; unknown initialization details",
+    "Newest tie-breaking remains unknown"
+  ],
+  "proposed": [
+    "On an authorized later run, use corrected native newsletter locator and inspect response once",
+    "Test another account if supplied to compare ownership/auth boundaries",
+    "Test a mixed active/inactive checkout to determine observable atomicity",
+    "Try exact alternative country/condition strings and whitespace as separate experiments",
+    "Inspect manual seller result selection then read Selected identity before creation",
+    "Test listing quantity ceilings and negative input separately",
+    "Revisit Cookie Settings only if banner is available through supported UI"
+  ],
+  "experiments": {
+    "1": {
+      "why": "Discover origin without supplied site model",
+      "outcome": "Discogs-like home with cookie banner, account link, release cards and navigation"
+    },
+    "2": {
+      "why": "Discover auth controls and dismiss banner",
+      "outcome": "Login labels observed; form values not inspected or printed"
+    },
+    "3": {
+      "why": "Attempt untouched-login rejection before valid credentials",
+      "classification": "locator",
+      "outcome": "Untouched form actually signed in; prediction refuted. Subsequent obsolete label locator timed out. No business write attempted after sign-in."
+    },
+    "4": {
+      "why": "Read authenticated account destination",
+      "classification": "locator",
+      "outcome": "Account link no longer exists after auth; read-only href locator timed out. Corrected from observed AX to button in experiment5."
+    },
+    "5": {
+      "why": "Correct observed role and discover release actions",
+      "outcome": "Authenticated menu and release221 discovered"
+    },
+    "6": {
+      "why": "Successful memberships plus repeat and combination",
+      "outcome": "Wantlist repeat optimistic increment contradicted initial idempotent-UI claim; collection coexists; first persistent collection card confirmed"
+    },
+    "7": {
+      "why": "Discriminate local optimistic counters from stored duplicates",
+      "outcome": "Fresh counts reconcile; target one wantlist card; collection duplicate locally increments then reload resets"
+    },
+    "8": {
+      "why": "Test cartability of own listing",
+      "classification": "locator",
+      "outcome": "Add to Cart button locator failed before click; observed AX link corrected next script. No cart write occurred."
+    },
+    "9": {
+      "why": "Use observed Add to Cart link role",
+      "outcome": "Own listing4 cart add confirmed by row and UI-caused JSON response"
+    },
+    "10": {
+      "why": "Repeat cart add, add another seller, then checkout combination",
+      "outcome": "Repeat raised quantity despite single row; checkout accepted, empty cart confirmed; broad initial idempotence assumption refuted"
+    },
+    "11": {
+      "why": "Test country/rating intersection and price sort",
+      "outcome": "Four US rows, none at99; removing US yielded two high-rated rows in descending price"
+    },
+    "12": {
+      "why": "Discriminate exact condition labels and impossible rating; discover selling",
+      "outcome": "Mint empty versus Mint(M) five;101 empty; sold original listing in seller view"
+    },
+    "13": {
+      "why": "Attempt missing-release form boundary",
+      "classification": "locator",
+      "outcome": "Disabled create control prevented activation and timed out; only UI boundary established. No POST creation response."
+    },
+    "14": {
+      "why": "Avoid disabled retry; inspect search selection behavior",
+      "outcome": "Dark Side unique result automatically selected221"
+    },
+    "15": {
+      "why": "Try nonpositive quantity/price compound boundary",
+      "classification": "locator",
+      "outcome": "Price0 left Create Listing disabled; click not activated. Compound test could not identify quantity validation independently. Preserved and isolated in16/21."
+    },
+    "16": {
+      "why": "Isolate zero quantity versus zero price then valid create",
+      "outcome": "Quantity0 enabled; price0 disabled; valid qty2/1234cents created640 with confirmed persistent row"
+    },
+    "17": {
+      "why": "Confirm listing marketplace appearance then deactivate/repeat; inspect Add Release",
+      "outcome": "640 active then inactive, repeated deactivate unchanged; linked Add Release404"
+    },
+    "18": {
+      "why": "Discover global search using observed artist",
+      "outcome": "Pink Floyd three release cards"
+    },
+    "19": {
+      "why": "Compare case, title fragment, no-match and empty query, then genre route",
+      "outcome": "Search variants observed; rock overview discovered"
+    },
+    "20": {
+      "why": "Distinguish genre-specific pages from generic search links",
+      "outcome": "Rock Releases/Artists and Classic Rock navigate global queries"
+    },
+    "21": {
+      "why": "Isolate quantity0 with valid selected release and price",
+      "classification": "business_rule",
+      "outcome": "POST422 quantity>=1; UI error confirms rejection, not an unconfirmed write"
+    },
+    "22": {
+      "why": "Inspect community and informational linked-page behavior",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "All five linked destinations rendered404; only page behavior established",
+      "classification": "observed_boundary"
+    },
+    "23": {
+      "why": "Compare signed-in and signed-out membership action",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Logout returned ok and navigated home; subsequent release button locator obsolete. No membership action occurred; preserved failed version",
+      "classification": "locator"
+    },
+    "24": {
+      "why": "Correct logout navigation assumption with fresh release",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Signed-out membership POST401 and login next route confirmed",
+      "classification": "business_rule"
+    },
+    "25": {
+      "why": "Separate untouched, incorrect, truly blank and valid login inputs",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Wrong and cleared forms400; valid fixture200 returns requested release221",
+      "classification": "observed_success_and_rejection"
+    },
+    "26": {
+      "why": "Compare multi-result, unique, no-match and empty seller search selection",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "First result auto-selected, query typing retained results, submitted no-match and empty cleared selection",
+      "classification": "observed_success_and_boundary"
+    },
+    "27": {
+      "why": "Test whether condition labels are enumerated on create",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Nonstandard Learning3141 grade accepted as listing641",
+      "classification": "observed_success"
+    },
+    "28": {
+      "why": "Test checkout validation after carted listing deactivated",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Checkout400 unavailable; error hides cart controls; no blind retry",
+      "classification": "business_rule"
+    },
+    "29": {
+      "why": "Read persistent cart after error, remove unavailable item, inspect empty boundary",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Same cart item retained then removed; Checkout disabled when empty, so proposed empty checkout not executed",
+      "classification": "observed_success_and_boundary"
+    },
+    "30": {
+      "why": "Compare country case, exact sleeve label, malformed rating syntax",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "us0 versus US4; sleeve Mint0 versus Mint(M)1 with US; malformed rating rendered application error",
+      "classification": "implementation"
+    },
+    "31": {
+      "why": "Isolate integer quantity rule from minimum bound",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Fractional quantity1.5 returned422 and visible validation",
+      "classification": "business_rule"
+    },
+    "32": {
+      "why": "Isolate integer cents rule with valid quantity",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Fractional cents1.5 returned422 and visible validation",
+      "classification": "business_rule"
+    },
+    "33": {
+      "why": "Test smallest positive integer cents and repeat confirmed creation",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "One-cent642 created; explicit guarded repeat created643; two distinct rows/responses",
+      "classification": "observed_success_and_repeat"
+    },
+    "34": {
+      "why": "Reuse exact previously observed sold listing link under changed status",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "POST404 Listing not found; cart empty",
+      "classification": "business_rule"
+    },
+    "35": {
+      "why": "Exercise reusable execution functions and whole-item removal after repeat",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "643 quantity1→2, total1→2cents; Remove cleared entire item and persisted",
+      "classification": "observed_success_and_repeat"
+    },
+    "36": {
+      "why": "Inspect remaining chosen static/footer routes",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Six linked destinations rendered404; no absence-of-backend conclusion",
+      "classification": "observed_boundary"
+    },
+    "37": {
+      "why": "Test whether221 membership pattern holds on one other observed release",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "153 collection2→3; repeat local4 reload3; want3→4 alongside collection3",
+      "classification": "observed_success_and_repeat"
+    },
+    "38": {
+      "why": "Inspect zero availability marketplace and newest sort",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "153 empty marketplace still renders filters; newest221 shows recent one-cent rows first; tie policy unknown",
+      "classification": "observed_success_and_boundary"
+    },
+    "39": {
+      "why": "Validate reusable scoped deactivation with otherwise indistinguishable duplicate rows",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Explicit index0 and1 deactivated643 and642; marketplace25→23",
+      "classification": "observed_success"
+    },
+    "40": {
+      "why": "Use last submission to inspect newsletter response",
+      "alternatives": [
+        "Test another branch of the same object",
+        "Inspect persistent readback before expanding scope"
+      ],
+      "outcome": "Email placeholder locator failed before fill; exported DOM placeholder empty. Subscribe not clicked. No newsletter effect can be classified. Script submission budget exhausted; no retry",
+      "classification": "locator"
+    }
+  }
+}

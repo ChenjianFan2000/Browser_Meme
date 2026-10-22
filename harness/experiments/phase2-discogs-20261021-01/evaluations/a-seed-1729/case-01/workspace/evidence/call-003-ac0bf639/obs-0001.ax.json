@@ -1,0 +1,16 @@
+{
+  "role": "WebArea",
+  "name": "",
+  "children": [
+    {
+      "role": "none",
+      "name": "",
+      "children": [
+        {
+          "role": "none",
+          "name": ""
+        }
+      ]
+    }
+  ]
+}

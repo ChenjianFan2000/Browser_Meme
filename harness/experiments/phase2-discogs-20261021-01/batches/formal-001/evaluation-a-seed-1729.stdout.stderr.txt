@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "G:\Browser_Meme\harness\phase2\run_evaluation.py", line 270, in <module>
+    main()
+  File "G:\Browser_Meme\harness\phase2\run_evaluation.py", line 264, in main
+    raise ValueError("partial case exists; explicit recovery record is required")
+ValueError: partial case exists; explicit recovery record is required

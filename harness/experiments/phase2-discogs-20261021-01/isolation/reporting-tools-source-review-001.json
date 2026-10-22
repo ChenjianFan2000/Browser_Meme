@@ -1,0 +1,52 @@
+{
+  "kind": "readonly_generic_reporting_source_review",
+  "observed_at_utc": "2026-10-21T09:11:51.403737+00:00",
+  "status": "changes_recommended_before_final_render",
+  "sources_sha256": {
+    "execution_context_v001.py": "72fcf245749b4e38aa5d1db9d834d8fb9951ac287a8903abdef3725302426712",
+    "evidence_index_v001.py": "db3f77bfe4a71f51beb948cda31f8866d9d368d1cf4911a9c25afc6ce18de9f6",
+    "plot_results_v001.py": "3457183f82bfe08123ad8693af77980e5f9eb2c985cae07d6468c6949afae1a5",
+    "render_report_v001.py": "c79239c34119d15bbfbb06d4d0bff666fe16aa562acdcc2f93eedd2f26427420"
+  },
+  "positive_findings": [
+    "No writes to raw case records or frozen learning inputs in these four tools; outputs use new-artifact paths.",
+    "Evidence index selection uses admitted package, safe closure, UI action presence and deterministic A/seed/index ordering, not task success score.",
+    "Evidence index explicitly distinguishes learner action predictions from independently graded case-level fields.",
+    "Execution context checks exact six identities/30 indices, administrative legacy plus unique claims, case manifests and global worker process overlap.",
+    "Plots retain unknown/unscorable/task failure categories and separate registered cohort from paired compliance sensitivity."
+  ],
+  "findings": [
+    {
+      "id": "RPT-LINEAGE-001",
+      "files": [
+        "render_report_v001.py",
+        "evidence_index_v001.py"
+      ],
+      "issue": "Render accepts weak any-reference hashes and does not verify learning/truth-index/figure/evidence provenance; index does not independently validate complete qualified handoff lineage.",
+      "recommendation": "Use exact named references; rebuild handoff through existing read-only build_handoff and compare; validate figure/evidence sidecars and their input/output hashes; require independently bound truth archive index."
+    },
+    {
+      "id": "RPT-DENOM-002",
+      "files": [
+        "execution_context_v001.py",
+        "plot_results_v001.py",
+        "render_report_v001.py"
+      ],
+      "issue": "Entry guards do not all independently enforce full registered 180/540 plus per-condition90/270 or rebuild raw records; hard-coded prose/provenance can disagree with supplied data.",
+      "recommendation": "Reuse build_report equality validation for runs/conditions/overall/schedule; enforce registered totals and category exhaustion before rendering."
+    },
+    {
+      "id": "RPT-LOG-003",
+      "files": [
+        "execution_context_v001.py"
+      ],
+      "issue": "service_error_counts silently ignores malformed JSONL rows and can imply an exhaustive zero-error count.",
+      "recommendation": "Preserve parseable error counts and report malformed/missing rows as incomplete availability evidence."
+    }
+  ],
+  "formal_180_audit_completed": false,
+  "formal_reports_generated": false,
+  "source_modified": false,
+  "website_business_material_read": false,
+  "new_model_requests": 0
+}

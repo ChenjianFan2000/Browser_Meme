@@ -1,0 +1,164 @@
+{
+  "status": "passed",
+  "scope": "generic learning browser MCP admission, not website coverage or evaluation extension",
+  "model": "gpt-6.1-sol",
+  "runtime_files_sha256": {
+    "browser_broker.py": "e8846969d76c6eb9913214667ff401780bdb16b5e5b80c4408e8fc098c40648d",
+    "browser_runtime.py": "2f0899d683d766532dcb22a15fc5faea76780a0c0508b0a7541f306fdc67623f",
+    "launch_solar.py": "9501ed9400bb36752830c2defa81ee24760e74117d6eaebc0be04e2504d5bf1a",
+    "observation.py": "03b8ea53f20626fa85aa8802aee273dd0fd321c8e32a8865b0c247cb3fed9580",
+    "permissions.py": "512c72931fae63cf1636b74b253372dca9226cb4ac203164765a27810ec00d5e",
+    "process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "relay.py": "bc721eeb1f48c15465bbc26c94ad45c2d953b2bc59fd24470f7d55bb5fec79b2",
+    "script_policy.py": "7ec075e1afc1d54948e3cb853a2597e4a93195ecdfb87bff981230f5753d0606"
+  },
+  "support_files_sha256": {
+    "harness/phase2_isolation/unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a"
+  },
+  "checks": {
+    "real_solar_mcp_native_ui": true,
+    "actual_returned_screenshot": true,
+    "cli_private_file_boundary": true,
+    "cli_no_site_socket_or_direct_network": true,
+    "path_import_evaluate_request_format_js_rejections": true,
+    "page_type_locator_type_set_checked_prediction_regressions": true,
+    "sanitized_public_dom_ax_and_masked_screenshot": true,
+    "automatic_project_skills_memory_injection_disabled": true,
+    "collaboration_disabled": true,
+    "relay_stops_ingress_before_final_drain": true,
+    "raw_codex_parent_death_counterexample_reproduced": true,
+    "guard_reaps_owned_namespace_tree": true,
+    "guard_reaps_native_sandboxed_chromium_tree": true,
+    "launcher_timeout_reaps_separate_session_descendant": true,
+    "current_broker_native_browser_generic_replay": true,
+    "cleanup_receipt_requires_matching_nonce_and_supervisor_pid": true,
+    "killed_guard_without_receipt_blocks_cleanup_claim": true,
+    "executor_cannot_read_private_cleanup_receipt": true,
+    "real_gateway_callback_failure_blocks_barrier": true,
+    "learning_completion_requires_management_barrier": true,
+    "evaluation_reset_requires_exact_driver_true_and_local_barrier": true,
+    "unsafe_case_frozen_then_stops_and_resume_refuses": true
+  },
+  "evidence": [
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-010.solar.events.jsonl",
+      "sha256": "4d12550505dbd89b573b18939e8e962516209addc8f36fac41ce003eecea1ca9"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-010.raw-rollout.jsonl",
+      "sha256": "a98f2a10eca854a656fbc0f6c296f6d04c49939ce5f3ab1bb0aacbd4f927792b"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-010.runtime-hashes.json",
+      "sha256": "0f89ae9fe086e212657202e5c2bb47752842b939e0f4f734e46ea11a12d5f20e"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-010.solar-result.json",
+      "sha256": "57c669846e63c9ddc58f44a3a5dc6c17258f0320934f07b2fcc98b31dc8fc592"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-011.solar.events.jsonl",
+      "sha256": "7ab4741ef84ea3ca4ec99e39abd301033eca119eac1bf1dcb61dca29fe725941"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-011.solar-result.json",
+      "sha256": "805b51d89de2f1281104aa4acd7ae81c1b27bcd1850bf7696337dea9d4ea1355"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-audit-009.action-regressions.json",
+      "sha256": "24058e42a59b0854f28d83fe2fd53c77ff38ad4a7f3e9f79b8c4bd5ece3701e3"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe-005.raw-rollout.jsonl",
+      "sha256": "d7f6f446292c1ae307108a8676e638fe8f10b4e5371a897258c7645083404230"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/lifecycle-close-019/result.json",
+      "sha256": "c9b20b3e4b1a25fe3481dde5baaa221ee13e27b0b0621f1bfecad87dd8760206"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/lifecycle-close-020/result.json",
+      "sha256": "501c58b0c383bec708d4b0a3d0cc5f0d2658719d6d07bdcaf58192bbae225efd"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/lifecycle-tree-022.result.json",
+      "sha256": "62079a24b5e82bb24754937f9554fcfb29fd5639dc418894b6b41431be30190a"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/lifecycle-chromium-026.result.json",
+      "sha256": "935ce0b72f200bedc7fa803bfcd2e3fe965f1ed81f6098a7551f9fb01c58dba6"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/launcher-timeout-028.result.json",
+      "sha256": "c5af5f1e21d506dad51d785f79d1bb331a03b269807295037105d203c4625341"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-lifecycle-027.result.json",
+      "sha256": "c22a9e129037b9d1e4a109392de9bceb21e0d5e97c0db5c95f5a8b5364343f9f"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/evaluation-generic-029.result.json",
+      "sha256": "cd9fb36568d5fd557b501d981b25531f18fa6236a9207218cb342a847bcad5cc"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/controller-030.result.json",
+      "sha256": "286db13d991adc019a29bc7e343ff34e291066abed722861eea00d04f1827c4f"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/relay-canary-1792559796946897500/result.json",
+      "sha256": "f6dfa90968443c0aa2cf553aa7e346c4fc188969a50fc06803a95f16b027ecdf"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/control-canary-1792559802801261100/result.json",
+      "sha256": "a62cf694b9b32dc85e412298f59260ed5558c0188ff2eea435d38b635c2341bf"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/cleanup-receipt-031.result.json",
+      "sha256": "47b9cca80fc3176bde9bd1e8f79d83154acf8339f2ab1c06818740a1ec860644"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mcp-receipt-032.result.json",
+      "sha256": "b27c00248dbac30220e0f6b1de6266f1266447900f78a715eca93e78dec5d270"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/management-barrier-033.result.json",
+      "sha256": "0d1861292ae8e16e0fcc3e778863d4777b52b10df213ace3ab671b5b857a0ed0"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/management-barrier-034.result.json",
+      "sha256": "78b363eeed94c7a9f4605bc48e3609fa88cca5c40b4efd5446e597e5f286126c"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/receipt-boundary-035.result.json",
+      "sha256": "1ad38aaf43cdea8de0e34f1752f7c30fd0eb3c9f93f7a099ecc474e8799ddc92"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/reset-safety-components-036.result.json",
+      "sha256": "70fcab691f6d2874224d06a69b0cb943fbacc8a66e1b6b96012b66008e0688ff"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/isolation/driver-components-036.result.json",
+      "sha256": "7bbdc12d71bae3fe841e4e4fbd2a8bf344a6ef9efb90ac94d83571896dbe1782"
+    }
+  ],
+  "limitations": [
+    "Generic fixture only; not a proof against every possible program or browser behavior.",
+    "010 final model table overclaimed file checks after python command-not-found; ignored and replaced by actual 011 command outputs.",
+    "008 and 009 MCP approval failures are retained; approve is the tested preauthorization mode.",
+    "Formal dedicated CODEX_HOME must be auth-only; project_doc_max_bytes does not block home AGENTS.",
+    "This gate does not authorize changed runtime hashes or the future evaluation broker."
+  ],
+  "parent_gate": {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/learning-browser-mcp-acceptance-002.json",
+    "sha256": "7b5efbe315b2f2954ce2d39283ab7ea5042da161b7c4ba0224514e204975e5ba"
+  },
+  "accepted_at_ns": 1792560723955246500,
+  "increment": "Private authenticated cleanup receipts plus strict management barrier and independent driver safe_to_reset admission; generic fixtures only, no new model calls.",
+  "coordinator_files_sha256": {
+    "run_learning.py": "21d68ab63878ad4c6a08be4fc0b6f3f627c8edcd0c5921842f2140b046808590",
+    "run_evaluation.py": "71ed14593ffa7ae1bcfcd7523d22afb8f0e7f61ed5d598693ed96eac4a493ea6",
+    "run_batch.py": "70ecacc0ef24653ec87a8c04a5b91b30738f6633bce86b7e85bd554b717b943f",
+    "status.py": "bb80507980b239fe735698c623d984e7172c1ef8c2fd542381c0fc15116866aa",
+    "management.py": "75c5c67ebf60000e26ae327c27f8c551448d3dcaeb69a46daaad0bbed40d3bdc"
+  }
+}

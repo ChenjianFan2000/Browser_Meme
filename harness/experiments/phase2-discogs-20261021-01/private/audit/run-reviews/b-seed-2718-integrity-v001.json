@@ -1,0 +1,821 @@
+{
+  "kind": "independent_export_integrity_audit",
+  "schema_version": 1,
+  "run_id": "b-seed-2718",
+  "manifest_files": 1298,
+  "original_public_files": 510,
+  "checked_reference_occurrences": 937,
+  "calls": [
+    {
+      "call_id": "call-001-9faee651",
+      "actions": 1,
+      "before_count": 1,
+      "after_count": 1,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-002-01f0dfe3",
+      "actions": 3,
+      "before_count": 3,
+      "after_count": 3,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-003-8c83c3e0",
+      "actions": 3,
+      "before_count": 3,
+      "after_count": 3,
+      "status": "error",
+      "failure_category": "unclassified",
+      "error": "TimeoutError: Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for get_by_label(\"Username or Email\") to be visible\n",
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-004-e72d7816",
+      "actions": 10,
+      "before_count": 10,
+      "after_count": 10,
+      "status": "error",
+      "failure_category": "unclassified",
+      "error": "TimeoutError: Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for get_by_role(\"link\", name=\"Account\", exact=True) to be visible\n",
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-005-437a3c73",
+      "actions": 2,
+      "before_count": 2,
+      "after_count": 2,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-006-6c0c68cf",
+      "actions": 10,
+      "before_count": 10,
+      "after_count": 10,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-007-5cbf52f9",
+      "actions": 3,
+      "before_count": 3,
+      "after_count": 3,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-008-4ff7e232",
+      "actions": 7,
+      "before_count": 7,
+      "after_count": 7,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-009-a4672f61",
+      "actions": 5,
+      "before_count": 5,
+      "after_count": 5,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-010-c04f8715",
+      "actions": 3,
+      "before_count": 3,
+      "after_count": 3,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-011-7a83aa24",
+      "actions": 3,
+      "before_count": 3,
+      "after_count": 3,
+      "status": "error",
+      "failure_category": "boundary",
+      "error": "BoundaryError: active-code or input-value attribute is excluded; use input_value for nonsecret controls",
+      "predictions_present": true
+    }
+  ],
+  "actions": 50,
+  "python_files": [
+    {
+      "path": "experiments\\01_initial.py",
+      "sha256": "3af464bfd0953dd14069c83e0e7c84f948b38d552f60a4ca3ad8c32abc7e6f38",
+      "imports": [],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\02_login_discovery.py",
+      "sha256": "d9635f2a2ae3c47fb1d77484d34c33e3e1e11c7d71e6622916102845f4e4bb21",
+      "imports": [
+        "from ui import go, click, snap, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\03_login_validation.py",
+      "sha256": "e9fcd2a0755f06f1440cf3810ad76f9d3608956c4c53671a91e9472cf0b55daa",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\04_login_corrected.py",
+      "sha256": "fbafffcdf83c57021d16b8699716dc4f1349564924efd97a53b5b9e468633d40",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\05_account_release.py",
+      "sha256": "ab3f209a87714b943f71937228b32ebce5010ae23e8180199c798e464d95f5a4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\06_membership.py",
+      "sha256": "6aaae22113a8a13fa7b07850b43abd5443b379ad09e2ee5fed8d4b2d5abf39d8",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\07_market_cart.py",
+      "sha256": "f9fea61a4605e23d7f3397d8557215435ff85ab16a6fa16e752be51e49b3e5ee",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\08_cart_repeat.py",
+      "sha256": "afb49b8f8e92ee0c49d4fb3aa22e0b5b69383cda4d0a2f626cd61a994114ed94",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\09_cart_combination.py",
+      "sha256": "3f59c18bbd9c622515e4c2838536a965bcc30157076f847e4aec94272a5bcd52",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\10_sell_discovery.py",
+      "sha256": "a01ab713b7ad3e9fd8728460eccb5296dba1e487f384d0c4b0d7023a8bc1b2b4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\11_sell_search.py",
+      "sha256": "59df6a9e18fff01752ff8b18da89bf9564b961661e326192d168669886678d80",
+      "imports": [
+        "from ui import go, click, fill, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\ui.py",
+      "sha256": "88fd653efba41a04bd606ae83f47b2a894d27d067ba743edf42f095cde4449df",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "experiments\\ui_v1.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "package_work\\build_package.py",
+      "sha256": "599f34d04506da05b2ec58537b63ff8c41bb1be34d15057707809c61195f8963",
+      "imports": [
+        "import json, hashlib, shutil, re, ast",
+        "from pathlib import Path",
+        "from html.parser import HTMLParser"
+      ],
+      "functions": [
+        "ref",
+        "ev",
+        "dump",
+        "cite",
+        "rule",
+        "objects",
+        "action_actual",
+        "exploration",
+        "assemble",
+        "__init__",
+        "handle_starttag",
+        "handle_data",
+        "handle_endtag"
+      ]
+    },
+    {
+      "path": "package_work\\finalize_revision.py",
+      "sha256": "d2329efd1102b3378160c0c3cd213f5fa4fbc9270387ae7fee8b6a88f04c87f0",
+      "imports": [
+        "import json, hashlib, shutil",
+        "from pathlib import Path",
+        "from build_package import ref, ev, cite"
+      ],
+      "functions": []
+    },
+    {
+      "path": "package_work\\scripts.py",
+      "sha256": "50477379b20c3841c8cc44683e684479357d17fc4526894d1c524deaa8d00ff8",
+      "imports": [],
+      "functions": [
+        "_expect",
+        "_read",
+        "_one",
+        "_click",
+        "_fill",
+        "home",
+        "follow_observed_link",
+        "login_from_current_form",
+        "add_membership_once",
+        "add_current_listing_once",
+        "remove_cart_item_once",
+        "checkout_once",
+        "seller_search",
+        "run"
+      ]
+    },
+    {
+      "path": "package_work\\validate_package.py",
+      "sha256": "fb730420b4c86dfae87e18edf5c70f9d1f76ae491bfd970f155b8f9002578177",
+      "imports": [
+        "import json, hashlib, ast",
+        "from pathlib import Path"
+      ],
+      "functions": [
+        "refs"
+      ]
+    },
+    {
+      "path": "revisions\\r001\\scripts.py",
+      "sha256": "4739eec3fe252a9428617c63634b880566b86e84af1edc73beaace3d65c9c8f7",
+      "imports": [],
+      "functions": [
+        "_expect",
+        "_read",
+        "_one",
+        "_click",
+        "_fill",
+        "home",
+        "follow_observed_link",
+        "login_from_current_form",
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r001\\experiments\\01_initial.py",
+      "sha256": "3af464bfd0953dd14069c83e0e7c84f948b38d552f60a4ca3ad8c32abc7e6f38",
+      "imports": [],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r001\\experiments\\02_login_discovery.py",
+      "sha256": "d9635f2a2ae3c47fb1d77484d34c33e3e1e11c7d71e6622916102845f4e4bb21",
+      "imports": [
+        "from ui import go, click, snap, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r001\\experiments\\03_login_validation.py",
+      "sha256": "e9fcd2a0755f06f1440cf3810ad76f9d3608956c4c53671a91e9472cf0b55daa",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r001\\experiments\\ui.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r001\\experiments\\ui_v1.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\scripts.py",
+      "sha256": "4739eec3fe252a9428617c63634b880566b86e84af1edc73beaace3d65c9c8f7",
+      "imports": [],
+      "functions": [
+        "_expect",
+        "_read",
+        "_one",
+        "_click",
+        "_fill",
+        "home",
+        "follow_observed_link",
+        "login_from_current_form",
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\01_initial.py",
+      "sha256": "3af464bfd0953dd14069c83e0e7c84f948b38d552f60a4ca3ad8c32abc7e6f38",
+      "imports": [],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\02_login_discovery.py",
+      "sha256": "d9635f2a2ae3c47fb1d77484d34c33e3e1e11c7d71e6622916102845f4e4bb21",
+      "imports": [
+        "from ui import go, click, snap, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\03_login_validation.py",
+      "sha256": "e9fcd2a0755f06f1440cf3810ad76f9d3608956c4c53671a91e9472cf0b55daa",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\04_login_corrected.py",
+      "sha256": "fbafffcdf83c57021d16b8699716dc4f1349564924efd97a53b5b9e468633d40",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\05_account_release.py",
+      "sha256": "ab3f209a87714b943f71937228b32ebce5010ae23e8180199c798e464d95f5a4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\ui.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r002\\experiments\\ui_v1.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\scripts.py",
+      "sha256": "50477379b20c3841c8cc44683e684479357d17fc4526894d1c524deaa8d00ff8",
+      "imports": [],
+      "functions": [
+        "_expect",
+        "_read",
+        "_one",
+        "_click",
+        "_fill",
+        "home",
+        "follow_observed_link",
+        "login_from_current_form",
+        "add_membership_once",
+        "add_current_listing_once",
+        "remove_cart_item_once",
+        "checkout_once",
+        "seller_search",
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\01_initial.py",
+      "sha256": "3af464bfd0953dd14069c83e0e7c84f948b38d552f60a4ca3ad8c32abc7e6f38",
+      "imports": [],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\02_login_discovery.py",
+      "sha256": "d9635f2a2ae3c47fb1d77484d34c33e3e1e11c7d71e6622916102845f4e4bb21",
+      "imports": [
+        "from ui import go, click, snap, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\03_login_validation.py",
+      "sha256": "e9fcd2a0755f06f1440cf3810ad76f9d3608956c4c53671a91e9472cf0b55daa",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\04_login_corrected.py",
+      "sha256": "fbafffcdf83c57021d16b8699716dc4f1349564924efd97a53b5b9e468633d40",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\05_account_release.py",
+      "sha256": "ab3f209a87714b943f71937228b32ebce5010ae23e8180199c798e464d95f5a4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\06_membership.py",
+      "sha256": "6aaae22113a8a13fa7b07850b43abd5443b379ad09e2ee5fed8d4b2d5abf39d8",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\07_market_cart.py",
+      "sha256": "f9fea61a4605e23d7f3397d8557215435ff85ab16a6fa16e752be51e49b3e5ee",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\08_cart_repeat.py",
+      "sha256": "afb49b8f8e92ee0c49d4fb3aa22e0b5b69383cda4d0a2f626cd61a994114ed94",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\09_cart_combination.py",
+      "sha256": "3f59c18bbd9c622515e4c2838536a965bcc30157076f847e4aec94272a5bcd52",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\10_sell_discovery.py",
+      "sha256": "a01ab713b7ad3e9fd8728460eccb5296dba1e487f384d0c4b0d7023a8bc1b2b4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\11_sell_search.py",
+      "sha256": "59df6a9e18fff01752ff8b18da89bf9564b961661e326192d168669886678d80",
+      "imports": [
+        "from ui import go, click, fill, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\ui.py",
+      "sha256": "88fd653efba41a04bd606ae83f47b2a894d27d067ba743edf42f095cde4449df",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r003\\experiments\\ui_v1.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\scripts.py",
+      "sha256": "50477379b20c3841c8cc44683e684479357d17fc4526894d1c524deaa8d00ff8",
+      "imports": [],
+      "functions": [
+        "_expect",
+        "_read",
+        "_one",
+        "_click",
+        "_fill",
+        "home",
+        "follow_observed_link",
+        "login_from_current_form",
+        "add_membership_once",
+        "add_current_listing_once",
+        "remove_cart_item_once",
+        "checkout_once",
+        "seller_search",
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\01_initial.py",
+      "sha256": "3af464bfd0953dd14069c83e0e7c84f948b38d552f60a4ca3ad8c32abc7e6f38",
+      "imports": [],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\02_login_discovery.py",
+      "sha256": "d9635f2a2ae3c47fb1d77484d34c33e3e1e11c7d71e6622916102845f4e4bb21",
+      "imports": [
+        "from ui import go, click, snap, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\03_login_validation.py",
+      "sha256": "e9fcd2a0755f06f1440cf3810ad76f9d3608956c4c53671a91e9472cf0b55daa",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\04_login_corrected.py",
+      "sha256": "fbafffcdf83c57021d16b8699716dc4f1349564924efd97a53b5b9e468633d40",
+      "imports": [
+        "from ui import go, click, fill, links"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\05_account_release.py",
+      "sha256": "ab3f209a87714b943f71937228b32ebce5010ae23e8180199c798e464d95f5a4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\06_membership.py",
+      "sha256": "6aaae22113a8a13fa7b07850b43abd5443b379ad09e2ee5fed8d4b2d5abf39d8",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\07_market_cart.py",
+      "sha256": "f9fea61a4605e23d7f3397d8557215435ff85ab16a6fa16e752be51e49b3e5ee",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\08_cart_repeat.py",
+      "sha256": "afb49b8f8e92ee0c49d4fb3aa22e0b5b69383cda4d0a2f626cd61a994114ed94",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\09_cart_combination.py",
+      "sha256": "3f59c18bbd9c622515e4c2838536a965bcc30157076f847e4aec94272a5bcd52",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\10_sell_discovery.py",
+      "sha256": "a01ab713b7ad3e9fd8728460eccb5296dba1e487f384d0c4b0d7023a8bc1b2b4",
+      "imports": [
+        "from ui import go, click, links, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\11_sell_search.py",
+      "sha256": "59df6a9e18fff01752ff8b18da89bf9564b961661e326192d168669886678d80",
+      "imports": [
+        "from ui import go, click, fill, fields"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\ui.py",
+      "sha256": "88fd653efba41a04bd606ae83f47b2a894d27d067ba743edf42f095cde4449df",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    },
+    {
+      "path": "revisions\\r004\\experiments\\ui_v1.py",
+      "sha256": "061608e7547a9a8b9a63740adbabf2ba532792d6d7ef5410c0db537921c6bccc",
+      "imports": [],
+      "functions": [
+        "expect",
+        "snap",
+        "go",
+        "click",
+        "fill",
+        "select",
+        "links",
+        "fields"
+      ]
+    }
+  ],
+  "errors": [],
+  "frozen_revision": "revisions/r004",
+  "binding_hashes": {
+    "registration.json": "5f827ae4a5291184bb74459ffeb20a761cc9e823ef9978360b1930b7affcd586",
+    "learning-manifest.json": "73cb22b7c3d6a38b275bd8b38cbeb8ef5dcbb6083d2dc0a30541d369c1df5ad0",
+    "learning-summary.json": "5fc5c5bd7bf7d0e2a25a88937aee8b1f17330c02b5c7d12b2bd32336bace7c59",
+    "workspace/READY.json": "a49b5e543b9847cc27423bc3711e6bf126b9a7669b545674e231f28536b84d4d"
+  }
+}

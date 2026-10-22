@@ -1,0 +1,167 @@
+{
+  "status": "passed",
+  "scope": "generic synthetic validity and qualified handoff only; no actual formal aggregation/handoff",
+  "checked_at_utc": "2026-10-21T06:08:26.713584+00:00",
+  "validation": {
+    "command": "python -m pytest harness/tests/test_phase2_validity_v001.py -q",
+    "exit_code": 0,
+    "tests_passed": 3,
+    "observed_elapsed_seconds": 26.67
+  },
+  "checks": {
+    "raw_180_and_A_B_90_unchanged": true,
+    "one_noncompliant_package_retains_30_diagnostic_cases": true,
+    "paired_compliant_sensitivity_120_cases_360_fields_kept_separate": true,
+    "five_allowed_one_quarantined_with_open_failed_issue_preserved": true,
+    "quarantine_has_no_allowed_artifact_paths": true,
+    "unknown_and_global_blockers_never_promoted": true,
+    "incomplete_unbound_or_stale_reports_rejected": true,
+    "original_source_report_bytes_unchanged": true
+  },
+  "new_files_sha256": {
+    "harness/phase2/validity_report_v001.py": "399b583ea6c50fca22e2b300f034796fae636591e054cdf5b0eb0063cc3d2387",
+    "harness/phase2/handoff_v003.py": "9435e20c93379b8c9a4581663093ad603b344da3dcb45683ed59147160f9e682",
+    "harness/tests/test_phase2_validity_v001.py": "1725b384a158cd5fbcf6036fb6c6d76a7782137629fb37ae33825a4a5829eab5",
+    "harness/experiments/phase2-discogs-20261021-01/DEVIATIONS-001.md": "e1298b62b1b8b7f095ea8d22f5170cca0d01499039f567cb159f6e07970c705f",
+    "harness/experiments/phase2-discogs-20261021-01/isolation/stop-protocol-adjudication-001.json": "794872ca907e52991ea5ff68ff7ac23141a1d7025d824ef9ddfb28844144bf33"
+  },
+  "v002_parent_validation": {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/reporting-v002-validation-002.json",
+    "sha256": "f40e20d76d6996d3166b99afcc5c11038b672256cdcfc26e091df318eedf8f0a"
+  },
+  "v002_files_unchanged": {
+    "harness/phase2/report_v002.py": true,
+    "harness/phase2/review_learning_v002.py": true,
+    "harness/phase2/handoff_v002.py": true,
+    "harness/tests/test_phase2_reporting_v002.py": true,
+    "harness/experiments/phase2-discogs-20261021-01/REPORTING-001.md": true
+  },
+  "frozen_generic_input_count": 29,
+  "frozen_generic_inputs": {
+    "harness/phase2/__init__.py": {
+      "expected": "2b2926bd5000497941e076f5ceefa2fd18092f12f6b4334494828d365c2a89bd",
+      "actual": "2b2926bd5000497941e076f5ceefa2fd18092f12f6b4334494828d365c2a89bd"
+    },
+    "harness/phase2/browser_broker.py": {
+      "expected": "e8846969d76c6eb9913214667ff401780bdb16b5e5b80c4408e8fc098c40648d",
+      "actual": "e8846969d76c6eb9913214667ff401780bdb16b5e5b80c4408e8fc098c40648d"
+    },
+    "harness/phase2/browser_runtime.py": {
+      "expected": "2f0899d683d766532dcb22a15fc5faea76780a0c0508b0a7541f306fdc67623f",
+      "actual": "2f0899d683d766532dcb22a15fc5faea76780a0c0508b0a7541f306fdc67623f"
+    },
+    "harness/phase2/call_records.py": {
+      "expected": "15b2f56b9869ae975057ba02ca89fdd1f458c6b3e4ba9dc958ca801e0a1f3118",
+      "actual": "15b2f56b9869ae975057ba02ca89fdd1f458c6b3e4ba9dc958ca801e0a1f3118"
+    },
+    "harness/phase2/control_probe.py": {
+      "expected": "98a5d8ca01f6894bb3646c5447913c0b0e06a771c5f61a141e829d79c690078b",
+      "actual": "98a5d8ca01f6894bb3646c5447913c0b0e06a771c5f61a141e829d79c690078b"
+    },
+    "harness/phase2/evaluation_broker.py": {
+      "expected": "fcaef66841045d12cfc1f021d18f2b74f3c0503443612f80cecf5fd18c0c45cc",
+      "actual": "fcaef66841045d12cfc1f021d18f2b74f3c0503443612f80cecf5fd18c0c45cc"
+    },
+    "harness/phase2/handoff.py": {
+      "expected": "bd1896d821c8ee60cda63ba2db9957d428eb3daec275095923d39c39f0c6ba43",
+      "actual": "bd1896d821c8ee60cda63ba2db9957d428eb3daec275095923d39c39f0c6ba43"
+    },
+    "harness/phase2/launch_solar.py": {
+      "expected": "9501ed9400bb36752830c2defa81ee24760e74117d6eaebc0be04e2504d5bf1a",
+      "actual": "9501ed9400bb36752830c2defa81ee24760e74117d6eaebc0be04e2504d5bf1a"
+    },
+    "harness/phase2/LEARNER_CONTRACT.md": {
+      "expected": "e13471cfeeee45dc4386b870a16111ef19e02b8e8200222420e69844d92d86e0",
+      "actual": "e13471cfeeee45dc4386b870a16111ef19e02b8e8200222420e69844d92d86e0"
+    },
+    "harness/phase2/management.py": {
+      "expected": "75c5c67ebf60000e26ae327c27f8c551448d3dcaeb69a46daaad0bbed40d3bdc",
+      "actual": "75c5c67ebf60000e26ae327c27f8c551448d3dcaeb69a46daaad0bbed40d3bdc"
+    },
+    "harness/phase2/observation.py": {
+      "expected": "03b8ea53f20626fa85aa8802aee273dd0fd321c8e32a8865b0c247cb3fed9580",
+      "actual": "03b8ea53f20626fa85aa8802aee273dd0fd321c8e32a8865b0c247cb3fed9580"
+    },
+    "harness/phase2/permissions.py": {
+      "expected": "512c72931fae63cf1636b74b253372dca9226cb4ac203164765a27810ec00d5e",
+      "actual": "512c72931fae63cf1636b74b253372dca9226cb4ac203164765a27810ec00d5e"
+    },
+    "harness/phase2/predict_runtime.py": {
+      "expected": "159555bd8dd7eab15b2da1b59a8508e33ec5c0abdcd86efea354855f4da3df0f",
+      "actual": "159555bd8dd7eab15b2da1b59a8508e33ec5c0abdcd86efea354855f4da3df0f"
+    },
+    "harness/phase2/prediction_record.py": {
+      "expected": "5153ab1d0825fd12777b7caacd7058b88d1974be7c81d62fa9562f170a5a322c",
+      "actual": "5153ab1d0825fd12777b7caacd7058b88d1974be7c81d62fa9562f170a5a322c"
+    },
+    "harness/phase2/process_guard.py": {
+      "expected": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+      "actual": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59"
+    },
+    "harness/phase2/README.md": {
+      "expected": "ac6d83112336ac6fb364b31f7c28f89712db6940132c41e6d2a19b3beee763c7",
+      "actual": "ac6d83112336ac6fb364b31f7c28f89712db6940132c41e6d2a19b3beee763c7"
+    },
+    "harness/phase2/records.py": {
+      "expected": "1127c5019befdf9667081f64762c6b2c6d532e39df8b330d2028c76e7e0240ab",
+      "actual": "1127c5019befdf9667081f64762c6b2c6d532e39df8b330d2028c76e7e0240ab"
+    },
+    "harness/phase2/register_schedule.py": {
+      "expected": "4ebb129e1535a0b2b6c819f8ed19031fe51711988d553787d4337855b0b44314",
+      "actual": "4ebb129e1535a0b2b6c819f8ed19031fe51711988d553787d4337855b0b44314"
+    },
+    "harness/phase2/relay.py": {
+      "expected": "bc721eeb1f48c15465bbc26c94ad45c2d953b2bc59fd24470f7d55bb5fec79b2",
+      "actual": "bc721eeb1f48c15465bbc26c94ad45c2d953b2bc59fd24470f7d55bb5fec79b2"
+    },
+    "harness/phase2/relay_probe.py": {
+      "expected": "c24b29307d02a81710296b6ba16a40dba301bacc956e83865a18d126a01fae04",
+      "actual": "c24b29307d02a81710296b6ba16a40dba301bacc956e83865a18d126a01fae04"
+    },
+    "harness/phase2/report.py": {
+      "expected": "2030c616bb37f342adccbb64c17114a77073b9166ee5d08e3bfadefa26d54507",
+      "actual": "2030c616bb37f342adccbb64c17114a77073b9166ee5d08e3bfadefa26d54507"
+    },
+    "harness/phase2/review_learning.py": {
+      "expected": "a9d421ce782655622b49f291948becbce2db2ad0f14786048ec989f5082e6a77",
+      "actual": "a9d421ce782655622b49f291948becbce2db2ad0f14786048ec989f5082e6a77"
+    },
+    "harness/phase2/review_pilot.py": {
+      "expected": "1097ad043ec14fe71d0f455c89f5b1ae7a732159f500afccbe410135c585c68e",
+      "actual": "1097ad043ec14fe71d0f455c89f5b1ae7a732159f500afccbe410135c585c68e"
+    },
+    "harness/phase2/run_batch.py": {
+      "expected": "70ecacc0ef24653ec87a8c04a5b91b30738f6633bce86b7e85bd554b717b943f",
+      "actual": "70ecacc0ef24653ec87a8c04a5b91b30738f6633bce86b7e85bd554b717b943f"
+    },
+    "harness/phase2/run_evaluation.py": {
+      "expected": "71ed14593ffa7ae1bcfcd7523d22afb8f0e7f61ed5d598693ed96eac4a493ea6",
+      "actual": "71ed14593ffa7ae1bcfcd7523d22afb8f0e7f61ed5d598693ed96eac4a493ea6"
+    },
+    "harness/phase2/run_learning.py": {
+      "expected": "21d68ab63878ad4c6a08be4fc0b6f3f627c8edcd0c5921842f2140b046808590",
+      "actual": "21d68ab63878ad4c6a08be4fc0b6f3f627c8edcd0c5921842f2140b046808590"
+    },
+    "harness/phase2/RUNTIME_GUIDE.md": {
+      "expected": "0ef93ca645c4a64206c84830d22ae1d5228c8e4fcf8aeebb1aff0dcbdf6b229a",
+      "actual": "0ef93ca645c4a64206c84830d22ae1d5228c8e4fcf8aeebb1aff0dcbdf6b229a"
+    },
+    "harness/phase2/script_policy.py": {
+      "expected": "7ec075e1afc1d54948e3cb853a2597e4a93195ecdfb87bff981230f5753d0606",
+      "actual": "7ec075e1afc1d54948e3cb853a2597e4a93195ecdfb87bff981230f5753d0606"
+    },
+    "harness/phase2/status.py": {
+      "expected": "bb80507980b239fe735698c623d984e7172c1ef8c2fd542381c0fc15116866aa",
+      "actual": "bb80507980b239fe735698c623d984e7172c1ef8c2fd542381c0fc15116866aa"
+    }
+  },
+  "final_review_extension": {
+    "deviations_sha256": "required exact hash",
+    "blocking_scope": "package + affected_run_ids, or global",
+    "review_complete_does_not_mean_all_admitted": true,
+    "validity_report_binds_final_review_without_circular_hash": true
+  },
+  "formal_summary_generated": false,
+  "formal_handoff_generated": false,
+  "controller_or_runtime_changed": false
+}

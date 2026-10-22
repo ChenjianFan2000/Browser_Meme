@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:\\Users\\29935\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+    "sandbox",
+    "-P",
+    "phase2-canary",
+    "-C",
+    "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\canary\\workspace",
+    "-c",
+    "windows.sandbox=mxc",
+    "-c",
+    "permissions.phase2-canary.filesystem.:root=deny",
+    "-c",
+    "permissions.phase2-canary.filesystem.:minimal=read",
+    "-c",
+    "permissions.phase2-canary.filesystem.:workspace_roots=write",
+    "-c",
+    "permissions.phase2-canary.network.enabled=false",
+    "-c",
+    "permissions.phase2-canary.filesystem={\":root\"=\"deny\",\":minimal\"=\"read\",\":workspace_roots\"=\"write\",\"G:/Browser_Meme/.runtime/phase1-discogs-pw-20261020-1633/venv\"=\"read\",\"D:/Anaconda/Lib\"=\"read\",\"D:/Anaconda/DLLs\"=\"read\",\"D:/Anaconda/python.exe\"=\"read\",\"D:/Anaconda/python311.dll\"=\"read\",\"D:/Anaconda/python3.dll\"=\"read\",\"C:/Users/29935/AppData/Local/Google/Chrome/Application\"=\"read\",\"D:/Anaconda/api-ms-win-core-console-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-console-l1-2-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-datetime-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-debug-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-errorhandling-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-fibers-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-file-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-file-l1-2-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-file-l2-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-handle-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-heap-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-interlocked-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-libraryloader-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-localization-l1-2-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-memory-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-namedpipe-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-processenvironment-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-processthreads-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-processthreads-l1-1-1.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-profile-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-rtlsupport-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-string-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-synch-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-synch-l1-2-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-sysinfo-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-timezone-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-core-util-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-conio-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-convert-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-environment-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-filesystem-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-heap-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-locale-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-math-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-multibyte-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-private-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-process-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-runtime-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-stdio-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-string-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-time-l1-1-0.dll\"=\"read\",\"D:/Anaconda/api-ms-win-crt-utility-l1-1-0.dll\"=\"read\",\"D:/Anaconda/concrt140.dll\"=\"read\",\"D:/Anaconda/msvcp140.dll\"=\"read\",\"D:/Anaconda/msvcp140_1.dll\"=\"read\",\"D:/Anaconda/msvcp140_2.dll\"=\"read\",\"D:/Anaconda/msvcp140_atomic_wait.dll\"=\"read\",\"D:/Anaconda/msvcp140_codecvt_ids.dll\"=\"read\",\"D:/Anaconda/ucrtbase.dll\"=\"read\",\"D:/Anaconda/vccorlib140.dll\"=\"read\",\"D:/Anaconda/vcomp140.dll\"=\"read\",\"D:/Anaconda/vcruntime140.dll\"=\"read\",\"D:/Anaconda/vcruntime140_1.dll\"=\"read\",\"D:/Anaconda/vcruntime140_threads.dll\"=\"read\",\"D:/Anaconda/xlwings32-0.29.1.dll\"=\"read\",\"D:/Anaconda/xlwings64-0.29.1.dll\"=\"read\",\"D:/Anaconda/zlib.dll\"=\"read\"}",
+    "G:\\Browser_Meme\\.runtime\\phase1-discogs-pw-20261020-1633\\venv\\Scripts\\python.exe",
+    "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\canary\\workspace\\browser_probe.py"
+  ],
+  "exit_code": 1,
+  "timeout": true,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "required_artifacts": [
+    "revision.json",
+    "rulebook.md",
+    "rules.json",
+    "objects.json",
+    "coverage.json",
+    "scripts.py",
+    "exploration.jsonl"
+  ],
+  "rules": 35,
+  "verified_rules": 29,
+  "hypotheses": 2,
+  "unknown_rules": 2,
+  "refuted_rules": 2,
+  "experiments": 40,
+  "per_action_records": 214,
+  "referenced_files_sha256_verified": 420,
+  "condition": "B",
+  "executable_behavior_prediction_model": false,
+  "notes": [
+    "Offline validation only; semantic assertions remain bounded by original browser evidence.",
+    "Successful Python compilation was run separately.",
+    "No private tasks, independent scores, or exhaustive understanding claimed.",
+    "Script40 locator failed before newsletter fill/click; correction is unexecuted."
+  ]
+}

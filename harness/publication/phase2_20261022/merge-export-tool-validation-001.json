@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "metadata_export_merge_tool_validation",
+  "status": "synthetic_tests_passed_actual_merge_not_executed",
+  "recorded_at_utc": "2026-10-22T03:38:12.219898+00:00",
+  "synthetic_tests_passed": 13,
+  "payload_files_read": false,
+  "credentials_read": false,
+  "upload_performed": false,
+  "old_inputs_modified": false,
+  "approved_manifest_generated": false,
+  "files": [
+    {
+      "path": "harness\\publication\\phase2_20261022\\merge_export_manifests_v001.py",
+      "sha256": "a7f535af2d165ae36af3f0bde521436ae8a2218a195f769c1d44598d4c012b2c"
+    },
+    {
+      "path": "harness\\publication\\phase2_20261022\\test_merge_export_manifests_v001.py",
+      "sha256": "6b4ea1f80b01b18520f6f92cb3836d1a8245403487a1cdcd245e09917535e205"
+    },
+    {
+      "path": "harness\\publication\\phase2_20261022\\MERGE_EXPORT_MANIFESTS_V001.md",
+      "sha256": "8a83c17f4d16f65afcad5092082b76454c1cb1ecca7f2a539277ace08ab0a4c5"
+    }
+  ],
+  "union_validator": {
+    "path": "harness/phase2_isolation/publication_export_audit_parallel_v002.py",
+    "sha256": "a3eaf19de88395f340aea977bdbb4aab230dd12060f0b6b1a0e8f949e02a12ad"
+  },
+  "synthetic_scope": "Nonexistent original/export payload paths, exact complete row preservation, missing repair, successful-parent replacement denial, remaining child failure, overlap, new exclusion, hash/source/restore binding, duplicate retry, safe paths, exclusive output, and full dictionary shard union tamper rejection."
+}

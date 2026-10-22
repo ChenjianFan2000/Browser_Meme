@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "time_ns": 1792632589136699700,
+  "status": "management_checks_passed",
+  "case_count": 180,
+  "prediction_field_count": 540,
+  "raw_report": {
+    "path": "reports/frozen-results-001.json",
+    "sha256": "1570f65e3c508b180bbd7e772b506ccd8a9ccbee51ca41ab92f4295916297471"
+  },
+  "execution_context": {
+    "path": "reports/execution-context-001.json",
+    "sha256": "0a5ff9e8b50021eccb94e5c6fdfb1e787da1047d582df7d7229543da658db8cb"
+  },
+  "formal_input_inventory_sha256": "5099b176468d9a6c9c87eb12ad4b150bc08a683f6568008a7768acff35d30fbc",
+  "formal_inputs_checked": 73,
+  "formal_input_mismatches": [],
+  "expansion_registration_sha256": "e5a06341c43d59afbc25dd74143cc5cf50ff4c6453b9a10b47c42ab520e2beb5",
+  "batches": [
+    {
+      "batch": "parallel-001",
+      "manifest_sha256": "8f333b6f0dc19d1adde3b1ad6cbad1cb6e9dbe9c83a845736290bcbfc68e96b2",
+      "dispatch_stopped": true,
+      "outcomes": 3,
+      "unclaimed_at_batch_end": 159
+    },
+    {
+      "batch": "parallel-002",
+      "manifest_sha256": "7d5e319c3d7eaa51a28b694795e80afacb85256d86a46ff1a7d4545aa7230812",
+      "dispatch_stopped": true,
+      "outcomes": 57,
+      "unclaimed_at_batch_end": 102
+    },
+    {
+      "batch": "parallel-003",
+      "manifest_sha256": "7d6e5ca85d788a9d9c1a697c0178ca1b0b21a2941fb7ce197014fadb72ed8241",
+      "dispatch_stopped": true,
+      "outcomes": 12,
+      "unclaimed_at_batch_end": 90
+    },
+    {
+      "batch": "parallel-004",
+      "manifest_sha256": "e0e90d0f5ff878347e6a1668d91a81e1dc44c115e494be60bd10f7e8c56ddacf",
+      "dispatch_stopped": false,
+      "outcomes": 90,
+      "unclaimed_at_batch_end": 0
+    }
+  ],
+  "summary_safe_to_reset_true_count": 180,
+  "observed_expanded_case_process_peak": 6,
+  "independent_final_review_complete": false,
+  "qualification": "This is management closure of immutable evaluation archives; independent original finish/UI safety consistency, website truth and package admission require the final independent review."
+}

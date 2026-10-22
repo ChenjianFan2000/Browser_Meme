@@ -1,0 +1,35 @@
+{
+  "revision_directory": "revisions/002",
+  "stop_reason": "contract_stop_after_ui_action_timeout",
+  "limitations": [
+    "Successful positive listing creation and listing deactivation/reactivation were not tested.",
+    "Zero-price backend acceptance/rejection is unknown; only disabled UI and timed-out click were observed.",
+    "Terminal write effect remains conservatively unconfirmed; the run stopped without a browser retry.",
+    "Anonymous and cross-account writes, sign-out, account-list removal and membership generalization are unknown.",
+    "Quantity ceilings, stock decrements, mixed currencies, multi-seller checkout, cancellation and fulfillment are unknown.",
+    "Artist/label/genre/community pages, most footer routes and search case/substring/pagination behavior were not explored.",
+    "Cookie settings/consent, newsletter subscription and account sign-out effects were not tested.",
+    "/add-release rendered 404 but no inference about unavailable backend business behavior is made.",
+    "Only 72/100 UI actions and 18/40 browser submissions were used because timeout required early stop.",
+    "The final reusable scripts and predictor were compiled and checked offline; no browser validation followed the stop."
+  ],
+  "condition": "A",
+  "scheduling_seed": 1729,
+  "prior_revision_directory": "revisions/001",
+  "actions_used": 72,
+  "browser_submissions_used": 18,
+  "evidence_refs": [
+    {
+      "path": "evidence/call-018-ee1f9e5a/result.json",
+      "sha256": "95b2410bd5e58ec41b79accef8b2c81f4f5137df6f0d243a52dd0653b5779058"
+    },
+    {
+      "path": "evidence/call-018-ee1f9e5a/obs-0018.html",
+      "sha256": "cacb6f6563a0aad3105411d2e5fd4ad0fba0522ee5f4fa5c50065439bb20649e"
+    },
+    {
+      "path": "evidence/call-015-b56c53e9/obs-0012.html",
+      "sha256": "ffafd3c92812ddad9606d5f386148ff475bebcc21f1fa4eaaa06358927cd725e"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "input": {
+    "observation": {
+      "authenticated": true,
+      "account_scope": "supplied_fixture",
+      "release_id": 1,
+      "memberships": {
+        "collection": false
+      },
+      "page_kind": "release",
+      "release_title": "Business-focused directional knowledgebase",
+      "collection_baseline_target_link_count": 0,
+      "add_to_collection_visible": true
+    },
+    "intent": {
+      "operation": "collection.add",
+      "release_id": 1,
+      "confirm_via": "fresh collection UI readback"
+    }
+  },
+  "model_response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"prediction\": {\"disposition\": \"unknown\", \"effects\": {\"persistent_state_changed\": null, \"affected_record_count\": null}, \"ui_claims\": [], \"unknowns\": [\"Only authenticated additions for release 221 were tested.\"]}, \"model_sha256\": \"11694ce5e2b2b948ada74cfdf9f78cf38073088738806912a85e17b838620990\", \"input_sha256\": \"ba9cc03af86cb5a084d29fe747aa4bdb94d48abab82220f9fcbbbf381a26b879\", \"elapsed_seconds\": 0.21592175700016014, \"directory\": \"prediction-2ded2cbbaaf1\"}"
+      }
+    ]
+  },
+  "declaration_response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"status\": \"frozen\", \"case_id\": \"P01\", \"declared_at_ns\": 1792571197939520100, \"record_sha256\": \"cdc0fd80919a801668201c21091c3086e98903d608e37a28c6ed7bee1baf1b6c\"}"
+      }
+    ]
+  }
+}

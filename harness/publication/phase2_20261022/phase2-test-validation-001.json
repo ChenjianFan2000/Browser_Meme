@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "date_local": "2026-10-22",
+  "working_directory": "G:/Browser_Meme",
+  "command": "python -m pytest harness/tests -q -k phase2",
+  "exit_code": 0,
+  "passed": 52,
+  "deselected": 77,
+  "elapsed_seconds": 74.51,
+  "scope": "Generic phase-two Harness regression checks; no new model calls or website experiment reruns.",
+  "independent_experiment_review": "../../experiments/phase2-discogs-20261021-01/private/audit/final-independent-review-001.json",
+  "does_not_replace_real_browser_evidence": true
+}

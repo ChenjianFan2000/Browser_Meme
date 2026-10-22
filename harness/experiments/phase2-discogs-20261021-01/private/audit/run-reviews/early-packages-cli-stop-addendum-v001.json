@@ -1,0 +1,175 @@
+{
+  "kind": "complete_cli_stop_audit_addendum",
+  "runs": [
+    {
+      "run_id": "b-seed-2718",
+      "non_dispatch_policy_rejections": 0,
+      "submission_events": [
+        {
+          "line": 18,
+          "item_id": "item_8",
+          "executed_call": "call-001-9faee651",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 24,
+          "item_id": "item_11",
+          "executed_call": "call-002-01f0dfe3",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 29,
+          "item_id": "item_14",
+          "executed_call": "call-003-8c83c3e0",
+          "result_status": "error",
+          "failure_category": "unclassified"
+        },
+        {
+          "line": 35,
+          "item_id": "item_17",
+          "executed_call": "call-004-e72d7816",
+          "result_status": "error",
+          "failure_category": "unclassified"
+        },
+        {
+          "line": 41,
+          "item_id": "item_20",
+          "executed_call": "call-005-437a3c73",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 46,
+          "item_id": "item_23",
+          "executed_call": "call-006-6c0c68cf",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 52,
+          "item_id": "item_26",
+          "executed_call": "call-007-5cbf52f9",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 56,
+          "item_id": "item_28",
+          "executed_call": "call-008-4ff7e232",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 64,
+          "item_id": "item_32",
+          "executed_call": "call-009-a4672f61",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 70,
+          "item_id": "item_35",
+          "executed_call": "call-010-c04f8715",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 77,
+          "item_id": "item_39",
+          "executed_call": "call-011-7a83aa24",
+          "result_status": "error",
+          "failure_category": "boundary"
+        }
+      ],
+      "last_executed_runtime_boundary_is_final_submission": true,
+      "evidence_ref": {
+        "path": "runs/b-seed-2718/private/solar/events.jsonl",
+        "sha256": "44ba76e4d9c10705935b56030feb7b00bed1c9d71856c229a433de86b85ed8ff"
+      }
+    },
+    {
+      "run_id": "a-seed-1729",
+      "non_dispatch_policy_rejections": 0,
+      "submission_events": [
+        {
+          "line": 16,
+          "item_id": "item_7",
+          "executed_call": "call-001-49942053",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 22,
+          "item_id": "item_10",
+          "executed_call": "call-002-d2ff8107",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 28,
+          "item_id": "item_13",
+          "executed_call": "call-003-aed7b82b",
+          "result_status": "error",
+          "failure_category": "unclassified"
+        },
+        {
+          "line": 35,
+          "item_id": "item_17",
+          "executed_call": "call-004-9ff8981c",
+          "result_status": "error",
+          "failure_category": "unclassified"
+        },
+        {
+          "line": 41,
+          "item_id": "item_20",
+          "executed_call": "call-005-458acab8",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 45,
+          "item_id": "item_22",
+          "executed_call": "call-006-67f666a9",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 50,
+          "item_id": "item_25",
+          "executed_call": "call-007-84712f42",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 56,
+          "item_id": "item_28",
+          "executed_call": "call-008-a75dfe0d",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 62,
+          "item_id": "item_31",
+          "executed_call": "call-009-79c1d31d",
+          "result_status": "completed",
+          "failure_category": null
+        },
+        {
+          "line": 68,
+          "item_id": "item_34",
+          "executed_call": "call-010-cd631f88",
+          "result_status": "error",
+          "failure_category": "boundary"
+        }
+      ],
+      "last_executed_runtime_boundary_is_final_submission": true,
+      "evidence_ref": {
+        "path": "runs/a-seed-1729/private/solar/events.jsonl",
+        "sha256": "362485ad48535b3fb21380ffa0ba3f4220d06cb9a09b85cdac11ef4882055240"
+      }
+    }
+  ],
+  "does_not_modify_prior_reports": true
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "frozen_document_drift_and_exact_restoration",
+  "observed_last_write_local": "2026-10-21T13:33:46+08:00",
+  "formal_inputs_last_write_local": "2026-10-21T13:32:36+08:00",
+  "restored_at_utc": "2026-10-21T05:53:10.619410+00:00",
+  "frozen_sha256": "397ae4f2c533628edb765de682e36c2a86568649677f0e08d23f99d8c1952fe4",
+  "observed_sha256": "d5dde8c01b1a6521375c7c0dff31ece1fb867cf2f39c9783c7787645671e46f9",
+  "difference": "2926-byte append documenting existing reset-safety-v001 interface; no original bytes changed",
+  "responsibility": "independent evaluator appended documentation after inputs registration; disclosed and restored",
+  "authorization": "[REDACTED_AUTH]",
+  "runtime_or_business_state_touched": false
+}

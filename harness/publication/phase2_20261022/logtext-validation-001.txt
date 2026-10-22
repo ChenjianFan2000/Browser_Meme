@@ -1,0 +1,12 @@
+test_binary_log_and_large_text_bounds_preserved (test_export_logtext_v002.LogTextTests.test_binary_log_and_large_text_bounds_preserved) ... ok
+test_bracket_prefix_with_json_fragment_headers_and_tokens (test_export_logtext_v002.LogTextTests.test_bracket_prefix_with_json_fragment_headers_and_tokens) ... ok
+test_json_records_followed_by_ordinary_tail (test_export_logtext_v002.LogTextTests.test_json_records_followed_by_ordinary_tail) ... ok
+test_nested_zip_log_uses_narrow_policy (test_export_logtext_v002.LogTextTests.test_nested_zip_log_uses_narrow_policy) ... ok
+test_retry_manifest_lineage_and_original_bytes_unchanged (test_export_logtext_v002.LogTextTests.test_retry_manifest_lineage_and_original_bytes_unchanged) ... ok
+test_structured_extensions_remain_strict (test_export_logtext_v002.LogTextTests.test_structured_extensions_remain_strict) ... ok
+test_whole_json_log_preserves_nonsensitive_bytes (test_export_logtext_v002.LogTextTests.test_whole_json_log_preserves_nonsensitive_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.963s
+
+OK

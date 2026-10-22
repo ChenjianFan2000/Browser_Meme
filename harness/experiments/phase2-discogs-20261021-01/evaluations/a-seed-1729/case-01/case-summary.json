@@ -1,0 +1,113 @@
+{
+  "case_id": "P01",
+  "case_index": 1,
+  "learning_run": "a-seed-1729",
+  "condition": "A",
+  "launcher_exit_code": 0,
+  "model_cli_exit_code": 0,
+  "model_cli_timeout": false,
+  "elapsed_seconds": 335.3590000000004,
+  "ui_actions": 11,
+  "browser_executions": 4,
+  "declared_prediction": true,
+  "independent_evaluation": {
+    "case_id": "P01",
+    "outcome": "passed",
+    "checks": {
+      "unrelated_tables_unchanged": true,
+      "exactly_one_membership": true,
+      "unrelated_rows_unchanged": true,
+      "correct_transition": true,
+      "trusted_ui_response": true,
+      "screenshot_exists": true,
+      "no_ui_error": true
+    },
+    "ui_error": null,
+    "source_truth": "independent read-only SQLite plus trusted UI response and screenshot",
+    "inventory_sha256": "e19abdb1a489300e37fcbefe46a13eed63d44c5c9b6a97d2d68697cc41aad880",
+    "initial_sha256": "a4346135491fc2a07e7750a68b81cc0844cb37f883e628c00f3a63c42ea683d1",
+    "denominator_retained": true,
+    "task_outcome": "passed",
+    "transport_disposition": "accepted",
+    "environment_limited": false,
+    "business_disposition": "accepted",
+    "side_effects_ok": true,
+    "prediction_grading": {
+      "disposition": "unknown",
+      "persistent_state_changed": "unknown",
+      "affected_record_count": "unknown"
+    },
+    "ui_claims_grading": [],
+    "management_safety": {
+      "version": 1,
+      "safe_to_reset": true,
+      "status": "confirmed",
+      "case_result_final": true,
+      "business_request_groups": 1,
+      "business_events": 2,
+      "unconfirmed_request_groups": 0,
+      "reasons": [],
+      "request_diagnostics": [],
+      "recovery_policy": "Do not reset or retry writes on unknown. Preserve this case and stop/reap the affected frontend/backend worker trees before an independently recorded recovery; never infer safety from a state snapshot alone.",
+      "assumptions": [
+        "management-owned complete dispatch/response log",
+        "all browser descendants closed",
+        "gateway ingress closed and requests drained",
+        "trusted frozen deployment; responses in registered normal contract complete after backend handler returns"
+      ]
+    }
+  },
+  "prediction_provenance": {
+    "mode": "trusted_broker_record",
+    "status": "valid",
+    "reason": null,
+    "record_path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a\\private\\frozen-evaluation\\eval-a-seed-1729-01\\prediction.json",
+    "record_sha256": "cdc0fd80919a801668201c21091c3086e98903d608e37a28c6ed7bee1baf1b6c",
+    "declared_at_ns": 1792571197939520100,
+    "first_business_write_started_ns": 1792571271255465800,
+    "source": "trusted_browser_broker"
+  },
+  "evaluation_record": {
+    "command": "finish",
+    "output": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a\\private\\frozen-evaluation\\eval-a-seed-1729-01\\evaluation.json",
+    "sha256": "e2afa36601f871976f6f556a1f29cbd617b0fc147e77623c770268374752e360",
+    "status": "written"
+  },
+  "usage_events": [
+    {
+      "input_tokens": 455411,
+      "cached_input_tokens": 402176,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3800,
+      "reasoning_output_tokens": 270
+    }
+  ],
+  "model_calls": null,
+  "cost": null,
+  "relay_errors": [],
+  "management_barrier": {
+    "relay_drained": true,
+    "browser_tree_clean": true,
+    "gateway_log_complete": true
+  },
+  "safe_to_reset": true,
+  "reset_safety": {
+    "version": 1,
+    "safe_to_reset": true,
+    "status": "confirmed",
+    "case_result_final": true,
+    "business_request_groups": 1,
+    "business_events": 2,
+    "unconfirmed_request_groups": 0,
+    "reasons": [],
+    "request_diagnostics": [],
+    "recovery_policy": "Do not reset or retry writes on unknown. Preserve this case and stop/reap the affected frontend/backend worker trees before an independently recorded recovery; never infer safety from a state snapshot alone.",
+    "assumptions": [
+      "management-owned complete dispatch/response log",
+      "all browser descendants closed",
+      "gateway ingress closed and requests drained",
+      "trusted frozen deployment; responses in registered normal contract complete after backend handler returns"
+    ]
+  },
+  "case_denominator_retained": true
+}

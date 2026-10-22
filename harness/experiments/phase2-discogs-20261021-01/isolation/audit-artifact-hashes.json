@@ -1,0 +1,118 @@
+[
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/AUDIT.md",
+    "sha256": "c71da1620b122a77b48030802bd23897d0173ab8bde5ff804745ee34e0650b08"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/docker-offline-canary.json",
+    "sha256": "f9c2c79f0df730e4f003af2f079447ae74a34684eb2d55c927bf6e20ecc9578b"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-cli-download.json",
+    "sha256": "56e14174d37bfd9ecebe00ad64a7c7a1d530c7ffa573380d057e4480fc5e44f0"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-cli-offline.json",
+    "sha256": "36b8e71fe91326a812c762ea6e2c8e9211637bfeb67ac150be0a6f8c3e52d2b7"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-managed-network.json",
+    "sha256": "123ed78c1dc29aa95ef6b40ca674f72edb0152596c8a985bf80a14835e805bd6"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-managed-port-filter.json",
+    "sha256": "36d4acfbe1f1d7d7885151867ad4638990641b9fe5ac4daa8dde3e5d6bc7d501"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-playwright-relay-negative.json",
+    "sha256": "1e815c5a2172abb092acb08fff27fdffb31075f1ad428c4e39a1da682eecfcca"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-playwright-reusable-relay.json",
+    "sha256": "a00ac1b55115e7980d5b4fd805729132ccdfbce252ca43491129eba64c29d94c"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-playwright-unix-relay.json",
+    "sha256": "522b4c82c0cb997dd7408b61cf232a7f6595f4586eed79b2f5f52582d0e1cd16"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-unix-offline-filter.json",
+    "sha256": "e937f6f58ff996e82aa064f1625964443ba4215ea0d5764f03223b637cca227a"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-unix-port-filter.json",
+    "sha256": "6500c62385a5d4080ed9ae3e576529a83b6c4ea372b73bb8336868509e8c84a8"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/linux-unix-visible-only-filter.json",
+    "sha256": "86651df35c6fa0aa01a7346597180a3c77a8a17bf4c7db74a033557ff1f5fc08"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mxc-access-probe-managed-network.json",
+    "sha256": "559e873a8380947ff1b8fdb5f07044255d2e2044809d2c41b60d80a9b0a0582d"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mxc-access-probe-offline.json",
+    "sha256": "e44db3c7f80fd9ac834fddc10a0c8fc906317f114ba27cd05d79b45ebe208e6d"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mxc-access-probe.json",
+    "sha256": "e44db3c7f80fd9ac834fddc10a0c8fc906317f114ba27cd05d79b45ebe208e6d"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/mxc-browser-probe.json",
+    "sha256": "69019d3ab84ff60fb354f190352385146bbdab5640d3cc2493726ea379c8ae20"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-diagnostic-usage.json",
+    "sha256": "e45fc66d42445ca79d77e52300c9b1748145d6ab2d3c109f1790236b8b9be617"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe-002.events.jsonl",
+    "sha256": "b78b00b8ef00e4f6d4c733315040a6a529cc9fb2f0394f488b7c50adb41e099f"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe-002.result.json",
+    "sha256": "23708c4d6da1ff61d36f988cb6f9e5c3a8f5a1516a06465bb4c28995c1f148a7"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe-003.events.jsonl",
+    "sha256": "55d101ebc73896f5a72a980b6267613a1a9f87724d9398c032561449f01bd4fb"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe-003.result.json",
+    "sha256": "f1eed7c83ca559e4972ccf4c923734c0aac43695d3aa3f0801bed1149ef3561f"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe.events.jsonl",
+    "sha256": "f6e1bad6524f33eda3d0e425980650d04c9a675a8cabadb3045703fd4d514b13"
+  },
+  {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/solar-tools-probe.result.json",
+    "sha256": "dbbf7f488cfe7e6cf9b1bce08121ddf5daaad2a0b0f54c35ef19fd644168cdab"
+  },
+  {
+    "path": "harness/phase2_isolation/linux_network_probe.py",
+    "sha256": "fc9ac577bdd8e0ac6ce2ce4d38ba2fc5094173955913790092c791b8feb01781"
+  },
+  {
+    "path": "harness/phase2_isolation/mxc_canary.py",
+    "sha256": "d83658fdfea3b48ed18accd5cbaeb4d9497bf91ee957f61f49f83a7b9ae9c15a"
+  },
+  {
+    "path": "harness/phase2_isolation/README.md",
+    "sha256": "1e5dc959ebd0c3402d8b03a643b01f712c66af14c954acc741f374bd88126ad2"
+  },
+  {
+    "path": "harness/phase2_isolation/solar_tools_probe.py",
+    "sha256": "b71a4774710b26952b1fc8b4ee5ca9ac1cfce327ac6770b7bb1f63487dfb614c"
+  },
+  {
+    "path": "harness/phase2_isolation/unix_bridge.py",
+    "sha256": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a"
+  },
+  {
+    "path": "harness/phase2_isolation/unix_gateway.py",
+    "sha256": "73eeba3b10aecb8ffaa4d767aa44dfd321ec9d0a9147c3529c2505b72bb3443f"
+  }
+]

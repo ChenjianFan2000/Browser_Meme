@@ -1,0 +1,32 @@
+{
+  "kind": "independent_export_stage_auditor_v002_preparation",
+  "status": "synthetic_checks_passed_actual_export_not_yet_audited",
+  "created_at_utc": "2026-10-22T03:22:09.575538+00:00",
+  "files_sha256": {
+    "harness/phase2_isolation/publication_export_audit_v002.py": "29b5a88f087bcce759f2b626e9119170944d7fe2d78528771cfb28d7e0a076e4",
+    "harness/phase2_isolation/publication_export_audit_parallel_v002.py": "a3eaf19de88395f340aea977bdbb4aab230dd12060f0b6b1a0e8f949e02a12ad",
+    "harness/phase2_isolation/test_publication_export_audit_v002.py": "f7b3f113f32bd4c555869e217ac97f04c15de988f81cd8b1dabcc5f07cdc6350",
+    "harness/phase2_isolation/test_publication_export_audit_parallel_v002.py": "51452861a90d18d94d0bddb01a4acd1aa76837e0bd8ba556ec31a0b5f8e77959"
+  },
+  "prior_v001_source_and_preparations_unchanged": true,
+  "tests": {
+    "command": "python -m pytest harness/phase2_isolation/test_publication_export_audit_v002.py harness/phase2_isolation/test_publication_export_audit_parallel_v002.py -q",
+    "passed": 34,
+    "elapsed_seconds": 5.56,
+    "exit_code": 0,
+    "generic_child_processes_in_integration_test": 2
+  },
+  "added_coverage": [
+    "Base64 encoding/base64Encoded/type flags including normalized flag keys, whitespace-tolerant payload decode, nested JSON/JSONL and encoded archive fail-closed.",
+    "Normalize credential/header key case and punctuation, covering accessToken/refreshToken/clientSecret/apiKey and token/private-key/AWS variants.",
+    "Required JSON maximum32MiB and JSONL record maximum16MiB exact-boundary tests; above limit is blocking, no silent drop.",
+    "Required structured parse failure, duplicate keys, nonfinite constants, malformed base64/missing payload and recursion limits are explicit blocking findings.",
+    "Optional nonJSON prose/opaque resources are not falsely declared JSON parse errors; byte-token scan still runs and structural limits disclosed.",
+    "Identified temporary browser profiles and recognized authentication stores refused before hash/read; local trace/state originals intentionally hashed for export mapping, historical unknown-profile reads transparently scoped.",
+    "Encrypted PEM/Slack/bearer token patterns supplement existing token families; exact placeholder and known synthetic fixture passwords remain distinguished."
+  ],
+  "parallel_policy": "Same strict full shard union+inventory/exclusions coverage and manifest stability as v001; fixed v002 scanner hash bound, maximum8 processes each workers1; no reduced scan.",
+  "actual_export_audited": false,
+  "approved_manifest_written": false,
+  "originals_modified": false
+}

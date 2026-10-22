@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "tool_version": "validated_ico_and_mixed_log_v003",
+  "created_at_utc": "2026-10-22T03:43:20.890886+00:00",
+  "kind": "synthetic_ico_retry_wrapper_validation",
+  "command": "python -m unittest discover -s harness/publication/phase2_20261022 -p test_export_ico_v003.py -v",
+  "python_version": "3.11.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "status": "passed",
+  "test_count": 8,
+  "actual_trace_format_inspected": true,
+  "actual_trace_values_emitted": false,
+  "actual_retry_exports": false,
+  "browser_calls": 0,
+  "model_calls": 0,
+  "uploads": 0,
+  "parents_modified": false,
+  "prior_manifests_modified": false,
+  "frozen_experiment_modified": false,
+  "diagnosis_bindings": {
+    ".runtime\\publication-phase2-20261022\\format-diagnosis-v003-001.json": "5c6a357975bc68b19b977ec010313ec56c80f8a3d2bb9b2e6fa7bebccc440eed",
+    ".runtime\\publication-phase2-20261022\\format-diagnosis-v003-002.json": "dd8a29cf2d119a342299805cc4b4c8068aba7838fab89495ac6d559173c888e7"
+  },
+  "source_bindings": {
+    "export_evidence_ico_v003.py": "2dd1abe120f1a37b6d584ae72f41826b4c34ecd633b71cad074c882ae2fb81f7",
+    "test_export_ico_v003.py": "c2593217570d930142065d154b45c65b84f287e5c32be389d8e1586a6a6ab75e",
+    "README-ico-v003.md": "df972e9f56b90f901b7a339730b093399a03a9baeb01871cb56970b6e040c3d1",
+    "export_evidence.py": "fbbaea885afae45876d8f67e7b5aea298908e1b510d2a75c24d063857e001ec5",
+    "export_evidence_logtext_v002.py": "788063e3ac8f9f26fd3b2cf611207951a223b49e3fa680c6030c5c5ed5e5464b",
+    "run_export_shards_v001.py": "f4467fa31d1dc9d1a234264fd1aff2df206f06e845de8cdafd0b6162a7fcf037",
+    "ico-validation-001.txt": "edf9d58e0865bfd636aea4b5ae266083208c8cef148e1feb6ff910c5aaf623cc"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "run_id": "b-seed-3141",
+  "condition": "B",
+  "seed": 3141,
+  "case_index": 28,
+  "worker": "f",
+  "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+  "frontend_port": 18042,
+  "claimed_ns": 1792575055024363000,
+  "expansion_registration_sha256": "e5a06341c43d59afbc25dd74143cc5cf50ff4c6453b9a10b47c42ab520e2beb5"
+}

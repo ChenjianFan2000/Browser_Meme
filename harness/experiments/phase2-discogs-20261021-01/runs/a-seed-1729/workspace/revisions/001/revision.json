@@ -1,0 +1,78 @@
+{
+  "revision": "001",
+  "parent_revision": null,
+  "parent_revision_directory": null,
+  "condition": "A",
+  "model": "gpt-6.1-sol",
+  "scheduling_seed": 1729,
+  "changed_rules": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "H000"
+  ],
+  "changed_scripts": [
+    "scripts.py",
+    "behavior_model.py"
+  ],
+  "failure_category": "locator",
+  "runtime_failure_category": null,
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-49942053/result.json",
+      "sha256": "66599c794ad4b2ef900ef6516f810f79f4400a3357821d3d506924ae7578b3b9"
+    },
+    {
+      "path": "evidence/call-002-d2ff8107/result.json",
+      "sha256": "ffec6d1443836a5c2e4d3269f51938da636f6741a55a3e98e2acde465346e9b6"
+    },
+    {
+      "path": "evidence/call-003-aed7b82b/result.json",
+      "sha256": "97466c1aeb5b7eaa87a9cd6a304b9804cb2d6231544f1311297f140e72300a56"
+    },
+    {
+      "path": "evidence/call-004-9ff8981c/result.json",
+      "sha256": "5b0d08c6b333af3757ce01f76d44b899a961aaa2389ab56bab41e1ba1c590536"
+    },
+    {
+      "path": "evidence/call-005-458acab8/result.json",
+      "sha256": "d68f3ac25669b8b4258c1937dca66d8317259d364db11bb9b50ad33d34b1eda5"
+    },
+    {
+      "path": "evidence/call-006-67f666a9/result.json",
+      "sha256": "67bd4459a18bdf73cd2015a405b956325b40809969e4aeed1ea168d30621a9aa"
+    },
+    {
+      "path": "evidence/call-001-49942053/network.json",
+      "sha256": "1ab4904ad4e4c99b11a582362fcdfeed8e71462c088107b0048e1330a360cdb9"
+    },
+    {
+      "path": "evidence/call-002-d2ff8107/network.json",
+      "sha256": "9a22ebca4751dc749c4b21cd48df39bf06216a140d603cd0d735bb09849c6a0e"
+    },
+    {
+      "path": "evidence/call-003-aed7b82b/network.json",
+      "sha256": "474bd97d2a36708f39129ab4bdc9a0ef997de2a62d3d28e4b0294d0927759019"
+    },
+    {
+      "path": "evidence/call-004-9ff8981c/network.json",
+      "sha256": "95620e6a69f865a29c37e4ffe208f973fe84429c5faf5a5720d7191d835b4fd9"
+    },
+    {
+      "path": "evidence/call-005-458acab8/network.json",
+      "sha256": "d5a2a82d24574e881e8f39f66a6f0dd6cc16de94b0ec46376d8e365d27584b0a"
+    },
+    {
+      "path": "evidence/call-006-67f666a9/network.json",
+      "sha256": "e8b693a1229f9d5a6eb147ac5b7d89b948b03a05a7182aa541ec9484e257bde5"
+    }
+  ],
+  "rationale": "Retrospective complete checkpoint published offline after exploration, using only calls001-006; not a claim that these files existed before later experiments.",
+  "failed_versions_preserved": [
+    "experiments/e03_login.py",
+    "experiments/e04_account_release.py"
+  ],
+  "corrections": "e03 mislabeled prefilled login as empty; e04 reused a signed-out link role; final scripts inspect current state. Final scripts omit denied value attribute getter and are only offline syntax-checked.",
+  "evidence_integrity": "Original exported evidence retained unchanged; coordinator separately retains originals."
+}

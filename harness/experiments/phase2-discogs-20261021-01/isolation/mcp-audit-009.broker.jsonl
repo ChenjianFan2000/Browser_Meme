@@ -1,0 +1,6 @@
+{"event": "dispatch", "call": "call-001-12959d56", "script_sha256": "02241991d1ec13517b98633fb8ff7df0eeeee3a2297ada22ea1633c6235a18de", "time_ns": 1792558169887592658, "actions_before": 0}
+{"event": "result", "call": "call-001-12959d56", "actions": 1, "status": "error", "elapsed_seconds": 3.7884611360000235, "stop_reason": null}
+{"event": "dispatch", "call": "call-002-5c77c7fc", "script_sha256": "555480c4804564837363fdece40af06b719e87b6c534c9b4ab4dee39130eedd0", "time_ns": 1792558173743761967, "actions_before": 1}
+{"event": "result", "call": "call-002-5c77c7fc", "actions": 1, "status": "error", "elapsed_seconds": 2.0313794160001635, "stop_reason": null}
+{"event": "dispatch", "call": "call-003-7aa7f9e4", "script_sha256": "339f0ba2704aa0549805da79d10111b82546e57f36bd80ac7f4f21dc00e8aeec", "time_ns": 1792558175836515649, "actions_before": 2}
+{"event": "result", "call": "call-003-7aa7f9e4", "actions": 1, "status": "error", "elapsed_seconds": 1.9817489019997083, "stop_reason": null}

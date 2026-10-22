@@ -1,0 +1,212 @@
+{
+  "revision": 4,
+  "parent_revision": "revisions/r003",
+  "condition": "B",
+  "model_identity": "gpt-6.1-sol as assigned by user; not independently introspected",
+  "scheduling_seed": 2718,
+  "seed_scope": "Local scheduling only; no model-sampling guarantee",
+  "changed_rules": [
+    "MEMBERSHIP-ADD",
+    "CART-SELF",
+    "CART-NO-SELF-PURCHASE"
+  ],
+  "changed_scripts": [],
+  "failure_category": "implementation",
+  "failures": [
+    {
+      "experiment": 3,
+      "category": "locator",
+      "parent_script": null,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-003-8c83c3e0/result.json",
+          "sha256": "2fa77c537dc3df228d65b48f563974bc7674f5c7dbc2ad0e260e7fd61add7233"
+        }
+      ]
+    },
+    {
+      "experiment": 4,
+      "category": "locator",
+      "parent_script": "experiments/03_login_validation.py",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-004-e72d7816/result.json",
+          "sha256": "19a408fb8250d8146fbd492a7d5e109cf925dde5b44f2c30db87a7b24ed7ac5e"
+        }
+      ]
+    },
+    {
+      "experiment": 9,
+      "category": "implementation",
+      "summary": "Positional removal selected a different item than rationale intended",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-009-a4672f61/actions.jsonl",
+          "sha256": "1e56d983edc430b237b85a163b3442e8141405ede59b67903f1c763f44d7e30f"
+        },
+        {
+          "path": "evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        }
+      ]
+    },
+    {
+      "experiment": 11,
+      "category": "implementation",
+      "summary": "Runtime value-attribute denial is terminal; no bypass or retry",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-011-7a83aa24/result.json",
+          "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+        }
+      ]
+    }
+  ],
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-9faee651/actions.jsonl",
+      "sha256": "a542398ff9d28d7ee7924ce4c6f745620961bf908a858e70ae5c988bbf2a9830"
+    },
+    {
+      "path": "evidence/call-001-9faee651/network.json",
+      "sha256": "e657aba9fa545fa7a634d63313787b1c9f7c967f9d590ce88c395ca3c972bce0"
+    },
+    {
+      "path": "evidence/call-001-9faee651/result.json",
+      "sha256": "a5d21e667649e4f88bda488a8a93a93d695da0a03a00407851206e50b243a3b2"
+    },
+    {
+      "path": "evidence/call-002-01f0dfe3/actions.jsonl",
+      "sha256": "8328a276edc835cf8e332105433cda31ab140fe1b66850e9f61758708a3459b4"
+    },
+    {
+      "path": "evidence/call-002-01f0dfe3/network.json",
+      "sha256": "d3a760994fafdfcb03ec4f66d933cdc8beff71a9dd160f77237b08273f13ad5b"
+    },
+    {
+      "path": "evidence/call-002-01f0dfe3/result.json",
+      "sha256": "ead2e279eba4645b611b3db8cbfe69fe3bf1a41ce7066edbfab09c55907f7133"
+    },
+    {
+      "path": "evidence/call-003-8c83c3e0/actions.jsonl",
+      "sha256": "096dfd72f3a4a4d5e719f49e3b72c1e12009cef5bd655a5cc06afeff90eccc4c"
+    },
+    {
+      "path": "evidence/call-003-8c83c3e0/network.json",
+      "sha256": "bff459992a6808fa85365ac1b619189e7db368175f2bd71d0ed2dce377491abb"
+    },
+    {
+      "path": "evidence/call-003-8c83c3e0/result.json",
+      "sha256": "2fa77c537dc3df228d65b48f563974bc7674f5c7dbc2ad0e260e7fd61add7233"
+    },
+    {
+      "path": "evidence/call-004-e72d7816/actions.jsonl",
+      "sha256": "7ec721327549da00cfafabd40a685f698f95f7956af524e2fdf8a3761aec3273"
+    },
+    {
+      "path": "evidence/call-004-e72d7816/network.json",
+      "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+    },
+    {
+      "path": "evidence/call-004-e72d7816/result.json",
+      "sha256": "19a408fb8250d8146fbd492a7d5e109cf925dde5b44f2c30db87a7b24ed7ac5e"
+    },
+    {
+      "path": "evidence/call-005-437a3c73/actions.jsonl",
+      "sha256": "566f3453f608a54612a36fb4950d9efa259c4f706bfec6da6b13c570f8299151"
+    },
+    {
+      "path": "evidence/call-005-437a3c73/network.json",
+      "sha256": "6612dbc97bbf4d6ee2c4b046a9c124a1f8838d61aa2cefa70be0b4301fbd33e7"
+    },
+    {
+      "path": "evidence/call-005-437a3c73/result.json",
+      "sha256": "07a09a813106853b46450927310972cee189031e5ebb5b3f371148e1da9635c8"
+    },
+    {
+      "path": "evidence/call-006-6c0c68cf/actions.jsonl",
+      "sha256": "abc6115220a312c92113e480d088ec039b923f92db94f5b93e3ecaf1e30423b9"
+    },
+    {
+      "path": "evidence/call-006-6c0c68cf/network.json",
+      "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+    },
+    {
+      "path": "evidence/call-006-6c0c68cf/result.json",
+      "sha256": "53b8a66f6c24e648ded541b0cf3582ff34a6194a11699933746e1dd3da9eda6a"
+    },
+    {
+      "path": "evidence/call-007-5cbf52f9/actions.jsonl",
+      "sha256": "9659368f2bec3223c0d42e17c5c1c42d553684f3f5d24e32e4bce6db4e559563"
+    },
+    {
+      "path": "evidence/call-007-5cbf52f9/network.json",
+      "sha256": "cd1c478f56758bb5e0dcccc316d2a8161c09c74709d696180e88f5cca3e3a797"
+    },
+    {
+      "path": "evidence/call-007-5cbf52f9/result.json",
+      "sha256": "659d557714a66b45e2e9504b7956f4cd62acd334b2cbbf112026aaa4db4cc87f"
+    },
+    {
+      "path": "evidence/call-008-4ff7e232/actions.jsonl",
+      "sha256": "7ff991498ece8099c857a02e1d47ffe2e778c668fa9dd7565e0caccea568064b"
+    },
+    {
+      "path": "evidence/call-008-4ff7e232/network.json",
+      "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+    },
+    {
+      "path": "evidence/call-008-4ff7e232/result.json",
+      "sha256": "3bd2de827ba0fb9f0dbb6bfca12bd5fb74a7cfaf0766d13f29f9506c559b84dd"
+    },
+    {
+      "path": "evidence/call-009-a4672f61/actions.jsonl",
+      "sha256": "1e56d983edc430b237b85a163b3442e8141405ede59b67903f1c763f44d7e30f"
+    },
+    {
+      "path": "evidence/call-009-a4672f61/network.json",
+      "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+    },
+    {
+      "path": "evidence/call-009-a4672f61/result.json",
+      "sha256": "a806fa8191c89081dc6d830758236ee53870b9caa76b975e7dc1021085cac8e9"
+    },
+    {
+      "path": "evidence/call-010-c04f8715/actions.jsonl",
+      "sha256": "aa2a0f60bf776763e59f44422c7abd82943a3fdf0e61cd92ba2882dba0ea3d7d"
+    },
+    {
+      "path": "evidence/call-010-c04f8715/network.json",
+      "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+    },
+    {
+      "path": "evidence/call-010-c04f8715/result.json",
+      "sha256": "dcce39ff0c90b7d27fca13a092c3012bec270d0c03cae3d8de6bfc5bde16b5c2"
+    },
+    {
+      "path": "evidence/call-011-7a83aa24/actions.jsonl",
+      "sha256": "be4fed2e9832f2c684ad0ead2b3153d522685f96d9379bb8b6c9372bef5905a4"
+    },
+    {
+      "path": "evidence/call-011-7a83aa24/network.json",
+      "sha256": "9ba324d4ff2f76b9f064d3f308e4add7b62729584e1e3f2740deb2f5e70ef58a"
+    },
+    {
+      "path": "evidence/call-011-7a83aa24/result.json",
+      "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+    },
+    {
+      "path": "evidence/call-007-5cbf52f9/obs-0006.html",
+      "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+    }
+  ],
+  "rationale": "Final offline evidence audit: add the actual persisted Have-count citation, phrase pre-checkout status as marketplace-visible rather than asserting an unread active field, and label the refuted universal hypothesis explicitly. No browser interaction after terminal boundary; all earlier revisions retained.",
+  "condition_compliance": "Human-readable knowledge and native UI task scripts only; no executable behavior model or predict function.",
+  "script_validation": {
+    "kind": "offline syntax checks",
+    "browser_validated": "Original experiments only; new reusable scripts.py was not browser-executed after terminal boundary",
+    "helper_history": "ui_v1.py used in calls 2-5. ui.py changed console truncation only before call 6; both versions preserved."
+  },
+  "effect_confirmation": "No unconfirmed non-idempotent write was retried. Membership repeats and cart repeats followed visible results and natural successful response exports. Locator timeouts were on login-field fill and missing Account link, with preceding authentication navigation confirmed.",
+  "evidence_caveat": "Original exports are retained byte-for-byte. Some runtime logs initially included public demo login hint content. Derived artifact prose does not copy credential values."
+}

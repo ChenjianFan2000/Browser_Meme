@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "scope": "first_and_last_learning_trace_per_formal_run_only",
+  "values_recorded": false,
+  "samples": [
+    {
+      "path": "runs/a-seed-1729/private/browser/call-001-49942053/private-trace.zip",
+      "sha256": "933a05ee79e813e805d9f9f1c306eee99ab60312868cad9cd0a76ab94de00373",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 110
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/a-seed-1729/private/browser/call-010-cd631f88/private-trace.zip",
+      "sha256": "3f8c1a46a260d53abc152825abfba988af2ae27aae0cb8ff90f51bb81db52f63",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 218,
+        "header:cookie": 89
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/a-seed-2718/private/browser/call-001-dbccdd13/private-trace.zip",
+      "sha256": "a98ccdb572728202bfb00f9f63916fe43e353cdd00adfb66115428ee0fb13764",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 110
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/a-seed-2718/private/browser/call-002-918f04fd/private-trace.zip",
+      "sha256": "92e57cd2d963797cbaf73952559005b6b9f5e5c292a780436b49b949218b7a04",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 140
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/a-seed-3141/private/browser/call-001-860295e4/private-trace.zip",
+      "sha256": "fbeb0f01dbb9f5479d7cd90387dd3ccc33b4a4e48b08195cf1feb920f47a37d6",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 110
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/a-seed-3141/private/browser/call-036-b6e5e7cf/private-trace.zip",
+      "sha256": "18e446a6e63ea733c5e9441850cbc65dcfca87a293736c3d5c7dbf9d1fd8bccf",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 604,
+        "header:cookie": 236
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/b-seed-1729/private/browser/call-001-d8362bfd/private-trace.zip",
+      "sha256": "689191afb719ec9e9fba4c7909f5a1b54e09877854ca431c1553061a0c1d4210",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 110
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/b-seed-1729/private/browser/call-040-935db196/private-trace.zip",
+      "sha256": "f6a2b7c02e91a704ebc06c55bb8bc03d3d4e2c2aedc343dd7bbcde5d11bfe818",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 68,
+        "header:cookie": 33
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/b-seed-2718/private/browser/call-001-9faee651/private-trace.zip",
+      "sha256": "e5b505ed404a719d4b96b4cf3e31a85ef05ba8fdbb507efba3f2d0082351c537",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 110
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/b-seed-2718/private/browser/call-011-7a83aa24/private-trace.zip",
+      "sha256": "65dc70f88057b91e87564d1a05ae8371790062abde9fb813661f1db54d1e6dc4",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 92,
+        "header:cookie": 45
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/b-seed-3141/private/browser/call-001-0044c695/private-trace.zip",
+      "sha256": "c04ca5249aa1acb0ff7f62bfd844813bcc4b24eb4356ea8b20b5166b8175d33e",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 110
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "path": "runs/b-seed-3141/private/browser/call-040-13da86c7/private-trace.zip",
+      "sha256": "f3ae35af9dc65f33a135711e62d6cfe565b21721f088836de98988cb9819ffa7",
+      "schema_members": [
+        "trace.trace",
+        "trace.network"
+      ],
+      "sensitive_field_occurrences": {
+        "field:cookies": 106,
+        "header:cookie": 52
+      },
+      "network_hosts": [
+        "127.0.0.1"
+      ]
+    }
+  ]
+}

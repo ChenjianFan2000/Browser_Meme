@@ -1,0 +1,24 @@
+{
+  "kind": "read_only_management_resource_snapshot",
+  "captured_by_utc": "2026-10-21 05:30:05 UTC",
+  "windows_g_drive": {
+    "used_bytes": 22342549504,
+    "free_bytes": 1978038464512
+  },
+  "wsl_storage_for_experiment": {
+    "filesystem": "/dev/sdd",
+    "total_bytes": 1081101176832,
+    "used_bytes": 12522315776,
+    "available_bytes": 1013586505728
+  },
+  "windows_physical_memory": {
+    "total_kib": 24500728,
+    "free_kib": 8322492
+  },
+  "measurement_scope": "single pre-formal snapshot; not a peak or minimum during experiment",
+  "commands": [
+    "Get-PSDrive -Name G | Select-Object Name,Used,Free | ConvertTo-Json -Compress",
+    "wsl -d BrowserMeme-Ubuntu -- df -B1 /opt/browser-meme/phase2-runs",
+    "Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize,FreePhysicalMemory | ConvertTo-Json -Compress"
+  ]
+}

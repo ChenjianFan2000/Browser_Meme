@@ -1,0 +1,8 @@
+{
+  "close_seconds": 0.0,
+  "active_after_close": 1,
+  "errors_after_close": [],
+  "committed_when_close_returned": false,
+  "committed_later": true,
+  "active_later": 1
+}

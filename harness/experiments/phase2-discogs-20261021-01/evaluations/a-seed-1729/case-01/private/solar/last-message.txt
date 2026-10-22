@@ -1,0 +1,5 @@
+Added release #1 to the collection; fresh UI navigation confirmed one matching card.
+
+The frozen prediction remains **unknown**. One locator timeout was corrected before any business write.
+
+Saved [CASE_DONE.json](/opt/browser-meme/phase2-runs/eval-a-seed-1729-01/workspace/CASE_DONE.json) with verified evidence hashes and failure details.

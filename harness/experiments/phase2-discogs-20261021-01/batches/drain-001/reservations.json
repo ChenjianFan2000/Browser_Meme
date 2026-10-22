@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-21T07:12:34.654737+00:00",
+  "formal_schedule_sha256": "e626da0fc26dca3c419a266c2d93018130e78accad7649685b3954466564cf73",
+  "user_authorization": "大大提速。可尝试尽可能提高并发数量",
+  "case_results_changed": false,
+  "records": [
+    {
+      "kind": "administrative_dispatch_reservation_not_a_case_attempt",
+      "run_id": "a-seed-1729",
+      "case_index": 13,
+      "worker": "a",
+      "created_ns": 1792566754643425600,
+      "reason": "User requested substantially higher concurrency; drain legacy controller at its existing fail-closed pending-directory check after the current case closes. No model, reset, or browser action is authorized by this marker.",
+      "reservation_path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\evaluations\\a-seed-1729\\case-13",
+      "resume_rule": "After legacy controller exits, move this administrative-only directory into drain evidence; preserve all bytes. A new dispatcher may then launch the not-yet-attempted case under the expansion protocol."
+    },
+    {
+      "kind": "administrative_dispatch_reservation_not_a_case_attempt",
+      "run_id": "b-seed-2718",
+      "case_index": 18,
+      "worker": "b",
+      "created_ns": 1792566754647913400,
+      "reason": "User requested substantially higher concurrency; drain legacy controller at its existing fail-closed pending-directory check after the current case closes. No model, reset, or browser action is authorized by this marker.",
+      "reservation_path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\evaluations\\b-seed-2718\\case-18",
+      "resume_rule": "After legacy controller exits, move this administrative-only directory into drain evidence; preserve all bytes. A new dispatcher may then launch the not-yet-attempted case under the expansion protocol."
+    },
+    {
+      "kind": "administrative_dispatch_reservation_not_a_case_attempt",
+      "run_id": "a-seed-3141",
+      "case_index": 16,
+      "worker": "c",
+      "created_ns": 1792566754652141600,
+      "reason": "User requested substantially higher concurrency; drain legacy controller at its existing fail-closed pending-directory check after the current case closes. No model, reset, or browser action is authorized by this marker.",
+      "reservation_path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\evaluations\\a-seed-3141\\case-16",
+      "resume_rule": "After legacy controller exits, move this administrative-only directory into drain evidence; preserve all bytes. A new dispatcher may then launch the not-yet-attempted case under the expansion protocol."
+    }
+  ]
+}

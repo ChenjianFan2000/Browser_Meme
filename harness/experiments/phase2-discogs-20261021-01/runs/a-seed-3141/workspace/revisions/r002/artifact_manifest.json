@@ -1,0 +1,64 @@
+{
+  "revision_directory": "revisions/r002",
+  "parent_revision_directory": "revisions/r001",
+  "artifacts": [
+    {
+      "path": "revisions/r002/README.md",
+      "sha256": "e83babf693ab87a9e6324515dd685db366cc9036be2ef665699f12036c1cbc7b"
+    },
+    {
+      "path": "revisions/r002/behavior_model.py",
+      "sha256": "b3044e0f77d322a676300fa8dfb89ac6585b848862b015e7f69351b6bb0fc842"
+    },
+    {
+      "path": "revisions/r002/budget.json",
+      "sha256": "d093b38c3f51c5d1b2635d8b8285792772a650b8aae978fbfb7f20235d09d482"
+    },
+    {
+      "path": "revisions/r002/coverage.json",
+      "sha256": "029ebc20c2ed50e8fd208213451359ce5ee8a23195c80e6af6fa7df1c60acbcf"
+    },
+    {
+      "path": "revisions/r002/evidence_manifest.json",
+      "sha256": "fa287c07074756988ba19f071272de6a34786af3fa532f98cf216575267b94bb"
+    },
+    {
+      "path": "revisions/r002/exploration.jsonl",
+      "sha256": "1874d99e9b05371e7c7fcf91938563697d906b15a128a2374b63e32dbfff014c"
+    },
+    {
+      "path": "revisions/r002/failures.json",
+      "sha256": "095d3829c7b6072e949e19f1f3f140a3017f7d49f53b0163215a1ff1bc937362"
+    },
+    {
+      "path": "revisions/r002/objects.json",
+      "sha256": "3f33159c0eca72f71f46c01e5ea0e27f3f3d2c82d1f9e17b38c9deea2da41d71"
+    },
+    {
+      "path": "revisions/r002/revision.json",
+      "sha256": "42fdfedf14310ed05d8d58e6c43588cda7e12049f095a102a1922e5e6193d36f"
+    },
+    {
+      "path": "revisions/r002/rulebook.md",
+      "sha256": "844eee1c2c48bfa0600f2a28c019f86c83d3d353ba7a59283d5abfb2f08ee47b"
+    },
+    {
+      "path": "revisions/r002/rules.json",
+      "sha256": "878a5c903fb5608daaaa0e2d751183bda47ca16ea106fd1ac88e26dc24f1e72f"
+    },
+    {
+      "path": "revisions/r002/script_manifest.json",
+      "sha256": "5753fdea5f2e824b45fa647448e235e9fd9c66ad737e07829927875f713d15b2"
+    },
+    {
+      "path": "revisions/r002/scripts.py",
+      "sha256": "506ff7642f6bc85b73d07bdb5f4407ccf9402b38c4c8b6904e2038d9c8fd34ef"
+    },
+    {
+      "path": "revisions/r002/validation.json",
+      "sha256": "6af5aceb35cb161b7a50b62780ef042fc4fdd328af7cbcac571fba3383fe226c"
+    }
+  ],
+  "evidence_inventory": "revisions/r002/evidence_manifest.json",
+  "validation": "revisions/r002/validation.json"
+}

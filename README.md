@@ -13,7 +13,23 @@
 - [环境准备](environment/README.md)：WSL、依赖锁、站点部署和恢复命令。
 - [历史派生实验](veri_env/README.md)：文献、固定来源的上游源码、issue 子域实验和原始结果。
 
-## 浏览器实验
+## 第二阶段：浏览器信息可见的主动探索
+
+- [第二阶段中文实验报告](harness/experiments/phase2-discogs-20261021-01/reports/第二阶段实验报告-001.md)
+- [结案、独立审核与第三阶段交接索引](harness/experiments/phase2-discogs-20261021-01/reports/第二阶段结案索引-001.md)
+- [单任务完整证据示例](harness/experiments/phase2-discogs-20261021-01/reports/evidence-example-001.md)
+- [全量结果 Release](https://github.com/ChenjianFan2000/Browser_Meme/releases/tag/phase2-discogs-20261021-01)及[分卷校验、恢复和脱敏说明](harness/publication/phase2_20261022/README.md)
+
+6 个学习包、180 个首次冻结评测案例已完成并保留全部失败与未知结果。
+任务成功 176/180；540 个整任务预测字段中正确 236、未知 304。
+两个学习包因学习期停止违规被隔离，只有种子 1729 构成完整合规 A/B 配对。
+四包获第三阶段准入；第三阶段尚未启动，本轮不构成严格速度对照或全站覆盖。
+
+Git 保存源码、协议、报告和证据示例；全部轨迹、截图、逐例产物及管理验收证据由
+Release 分卷提供。会话认证值在公开副本中脱敏，双哈希映射解释与原始冻结清单的差异。
+首次冻结评测完成后的公开发布不改变后续学习者的访问白名单。
+
+## 第一阶段浏览器实验
 
 - [复杂任务运行记录](harness/experiments/phase1-complex-pw-20261020-1815/RESULTS.md)
 - [规则书](harness/sites/discogs/model/pw-complex-v001/rulebook.html)

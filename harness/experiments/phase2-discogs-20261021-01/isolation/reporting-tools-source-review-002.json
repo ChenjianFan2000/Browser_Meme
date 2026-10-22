@@ -1,0 +1,57 @@
+{
+  "kind": "readonly_generic_reporting_source_review_followup",
+  "status": "targeted_revision_checks_passed",
+  "observed_at_utc": "2026-10-21T09:19:42.021905+00:00",
+  "prior_review": {
+    "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\reporting-tools-source-review-001.json",
+    "sha256": "2ccfd85b3bbe237e63fad932d99ff54c278c1368a5fb8fc265fbd6ff885712a6"
+  },
+  "sources_sha256": {
+    "harness/phase2/execution_context_v001.py": "815787cca3810a19fbb2a14773f8b38b6ef583211e4e7e5624427d6048bd60cb",
+    "harness/phase2/evidence_index_v001.py": "32d8b35e607cc22310b105e4cf2989c0ceb466fae269a89a290a187c791739eb",
+    "harness/phase2/plot_results_v001.py": "80354c8295cc55e1de4a4457377b588e2d0500b171ed4836a4e9fcde1150cfd5",
+    "harness/phase2/render_report_v001.py": "3aee6025ed62b164c782fc2fd8909685034360506a8633fc24a2d97709ec0a9a",
+    "harness/phase2/report_lineage_v001.py": "715681046ac373695057ce8b191b5446429e45d2bd3cc6f08d98c1a5fb765401"
+  },
+  "tests_sha256": {
+    "harness/tests/test_phase2_report_lineage_v001.py": "0f8ee4ec46a11a24466d505eb40c8dcd8a96a1f3dde7e5243cb5d688faf2aa0d",
+    "harness/tests/test_phase2_execution_context_v001.py": "772673b410bc066ceebd57c8868759d4aaa381a52e43b9f7573a8a3ead3adf49"
+  },
+  "independent_test_run": {
+    "command": "python -m pytest harness/tests/test_phase2_report_lineage_v001.py harness/tests/test_phase2_execution_context_v001.py -q",
+    "passed": 10,
+    "elapsed_seconds": 18.08,
+    "exit_code": 0
+  },
+  "resolved_initial_findings": [
+    {
+      "id": "RPT-LINEAGE-001",
+      "result": "Named role/path/hash checks and complete build_validity_report/build_handoff equality reconstruction validate historical raw/admission lineage. Render binds explicit learning/raw/independent/validity/deviations, image/index sidecar bytes, and independent truth_archive_index exact180 case-manifest identities/source hashes."
+    },
+    {
+      "id": "RPT-DENOM-002",
+      "result": "Raw six identities x30, aggregate run/condition/overall values, registered180/540 and per-condition90/270 checked. Execution context also matches immutable original case summary and formal schedule hash."
+    },
+    {
+      "id": "RPT-LOG-003",
+      "result": "Malformed JSON/nonobject records and missing events archive explicitly counted; availability evidence completeness exposed instead of treating missing records as zero errors."
+    }
+  ],
+  "preserved_properties": [
+    "Evidence selection remains deterministic by admitted condition/seed/index and UI availability, never outcome score.",
+    "Learner action predictions remain unscored author declarations; case task/prediction grades derive independent frozen summaries.",
+    "Quarantined packages and open stopping deviations remain excluded from stage3 artifacts.",
+    "New-output-only behavior preserves all original raw/frozen files."
+  ],
+  "scope_limits": [
+    "This validates generic source and synthetic regressions, not completion or final correctness of180 live cases.",
+    "Final actual raw/validity/handoff/truth archive and presentation outputs still require postcompletion execution and hash audit.",
+    "Truth index check verifies180 archive manifests and source bindings; archive component independently copies/hashes underlying private files.",
+    "Execution report content is trusted management output; renderer checks its raw hash/denominator, and final provenance binds exact input bytes."
+  ],
+  "formal_reports_generated": false,
+  "formal_180_audit_completed": false,
+  "source_modified": false,
+  "website_business_material_read": false,
+  "new_model_requests": 0
+}

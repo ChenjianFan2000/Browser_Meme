@@ -1,0 +1,42 @@
+[
+  {
+    "path": "revisions/001/behavior_model.py",
+    "sha256": "409723675c2f642ea627fe86945ba295bf469488613e67ce87626f9740b6bb81"
+  },
+  {
+    "path": "revisions/001/coverage.json",
+    "sha256": "ceba64b3eb1d5c931486ba8393213a4b2de703b1c652406584cbafbbeb32d99b"
+  },
+  {
+    "path": "revisions/001/evidence_manifest.json",
+    "sha256": "fe59488cc013d69dc3395402734a3329b275fda851abcb1a6c61ba5d63601c1f"
+  },
+  {
+    "path": "revisions/001/exploration.jsonl",
+    "sha256": "c3c3962163431394d317a657f8494d3fb4d5854392bb4808e7fc769e4d021266"
+  },
+  {
+    "path": "revisions/001/model_interface.md",
+    "sha256": "671c9b956f1e1638498a6063a9a8a8407a2526a97872a790aaa5d0cb10e88756"
+  },
+  {
+    "path": "revisions/001/objects.json",
+    "sha256": "903718475c2712b4e0ab97f9c57b281620b11e13239ae59eadcf2dc3b29123ed"
+  },
+  {
+    "path": "revisions/001/revision.json",
+    "sha256": "ec401210deeb142a95e15455b9bb784adbe177b43650911ad2f2f5cbf768c67f"
+  },
+  {
+    "path": "revisions/001/rulebook.md",
+    "sha256": "24abbc40dbad2e40f1de2124bf1e05e3b8d19dc216dbedb0f44046c2f9bc844f"
+  },
+  {
+    "path": "revisions/001/rules.json",
+    "sha256": "bf40545972c6d41096aa2e84b9c999cd25d4ace7373c8b5c9cc7fa33a1978725"
+  },
+  {
+    "path": "revisions/001/scripts.py",
+    "sha256": "afa5820c3b60c9a604f64ad257f107a79a49097d7f78a65b23dca12f616c60bb"
+  }
+]

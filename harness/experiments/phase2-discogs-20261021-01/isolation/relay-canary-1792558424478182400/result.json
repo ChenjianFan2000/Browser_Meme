@@ -1,0 +1,8 @@
+{
+  "runtime_sha256": "e87ad84940f05444567b4fb22eb027e76505fd93701404886f0d3b091ca11239",
+  "exit_code": 0,
+  "stdout": "{\"get_status\": 200, \"body\": \"<title>Relay fixture</title><button>Generic control</button>\", \"post_status\": 201, \"post\": {\"length\": 3, \"path\": \"/echo?a=1\"}, \"wrong_port\": \"HTTP Error 403: Destination or framing denied\"}\n",
+  "stderr": "",
+  "trusted_event_count": 2,
+  "relay_errors": []
+}

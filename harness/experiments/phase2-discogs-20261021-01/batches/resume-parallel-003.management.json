@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "time_ns": 1792573583871995900,
+  "prior_batch": "parallel-002",
+  "prior_batch_summary_sha256": "a0beae175c7d1e0f1a60978710c36c06727a0e7eb5d03808f91c95a38f1bb808",
+  "new_batch": "parallel-003",
+  "reason": "Terminal exact-model capacity error in a-seed-1729 case-20; five already-in-flight cases subsequently completed and all 78 sealed cases have safe_to_reset true. Resume only unattempted cases using unchanged model, registration and six-worker cap.",
+  "new_model_probe": false,
+  "retry_sealed_cases": false,
+  "model_configuration_changed": false,
+  "registration": "EXPANSION_SCHEDULE-002.json",
+  "remaining_cases": 102
+}

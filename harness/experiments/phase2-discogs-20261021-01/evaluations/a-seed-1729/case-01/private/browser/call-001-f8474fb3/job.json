@@ -1,0 +1,19 @@
+{
+  "origin": "http://127.0.0.1:12042",
+  "socket": "/opt/browser-meme/phase2-runs/eval-a-seed-1729-01.sock",
+  "fixture": {
+    "kind": "public_fixture",
+    "is_real_credential": false,
+    "role": "ordinary_test_account",
+    "account": {
+      "username": "demo",
+      "password": "password123"
+    },
+    "source": "public login page supplied by unchanged site fixture"
+  },
+  "script": "def run(h):\n    h.expect({'disposition':'unknown','effects':{'persistent_state_changed':False,'affected_record_count':0},'ui_claims':[],'unknowns':['Initial UI not yet inspected']}, 'Read initial homepage only')\n    h.page.goto(h.origin)\n    print(h.observe('initial-home'))\n",
+  "modules": {},
+  "state_path": "/opt/browser-meme/phase2-runs/eval-a-seed-1729-01/private/browser/state/browser-state.json",
+  "action_limit": 60,
+  "intent": null
+}

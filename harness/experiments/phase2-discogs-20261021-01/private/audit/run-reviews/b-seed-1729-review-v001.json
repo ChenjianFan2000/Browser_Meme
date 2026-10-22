@@ -1,0 +1,225 @@
+{
+  "schema_version": 2,
+  "kind": "independent_learning_single_run_review",
+  "phase": "post_freeze_independent_review",
+  "scope": "single_run_not_final_handoff",
+  "status": "review_complete",
+  "admission_checks_passed": true,
+  "final_handoff_admissible": false,
+  "reviewer_role": "independent_evaluator_not_learner",
+  "review_started_at_utc": null,
+  "review_completed_at_utc": "2026-10-21T06:27:44.310110+00:00",
+  "private_evaluation_started_at_review": false,
+  "private_evaluation_timing_basis": "Parent reports all-six frozen-package barrier remains pending; no evaluation artifacts inspected.",
+  "formal_schedule_sha256": "e626da0fc26dca3c419a266c2d93018130e78accad7649685b3954466564cf73",
+  "candidate_templates_sha256": "20000792473bdfc8948a04faed29809f7d1ce6fa11863ed81cbd16b40bc684ee",
+  "candidate_template_freeze_sha256": "a59f5478f6c33ebc5ca8dde1ef034f594cece14aa1baa02649c7ff8b06e18950",
+  "source_report_sha256": null,
+  "evaluation_report_sha256": null,
+  "pending_final_bindings": [
+    "six-run structural review",
+    "complete fixed180 evaluation report",
+    "last remaining run review"
+  ],
+  "runs": [
+    {
+      "run_id": "b-seed-1729",
+      "condition": "B",
+      "seed": 1729,
+      "status": "review_complete",
+      "admission_checks_passed": true,
+      "registration_sha256": "eaa49af00dd2fadf6cee147e0716ecd329090cef3bf82333c1fdbb2fb489d09d",
+      "learning_manifest_sha256": "0a118ff4061eb8c6a47e056a36ccc552cd320631d4600db1fdc9c48154d3c78c",
+      "learning_summary_sha256": "c97fadeaa86ac5b5ff5fcecdc0edb679d00ea94c60f6a7eea6f4fb2f4c50a548",
+      "ready_sha256": "2b0128c23cc723b99708e9e0b18939d37766a761f0612ad505e0a561b26e6205",
+      "frozen_revision": "revisions/r004",
+      "action_evidence_complete": true,
+      "checks": [
+        {
+          "id": "manifest_integrity",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            }
+          ],
+          "issue_ids": []
+        },
+        {
+          "id": "browser_exports_match_originals",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            }
+          ],
+          "issue_ids": []
+        },
+        {
+          "id": "evidence_references_valid",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            }
+          ],
+          "issue_ids": []
+        },
+        {
+          "id": "condition_artifact_contract",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            },
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-semantic-v001.private.json",
+              "sha256": "9a3704d14c8aec39404334ceef9c06a439665b79d09aa8431a636f3f04353402"
+            }
+          ],
+          "issue_ids": [
+            "b1729-bounded-knowledge"
+          ]
+        },
+        {
+          "id": "observation_boundary_compliance",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            },
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-stop-timeline-v001.json",
+              "sha256": "13464b092a6e6898db16d15dcab6fe6865fc67104706b4d324c849fe258b397f"
+            }
+          ],
+          "issue_ids": []
+        },
+        {
+          "id": "frozen_version_lineage",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            }
+          ],
+          "issue_ids": []
+        },
+        {
+          "id": "budgets_and_stopping_accounted",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            },
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-stop-timeline-v001.json",
+              "sha256": "13464b092a6e6898db16d15dcab6fe6865fc67104706b4d324c849fe258b397f"
+            }
+          ],
+          "issue_ids": []
+        },
+        {
+          "id": "rule_claims_audited",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            },
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-semantic-v001.private.json",
+              "sha256": "9a3704d14c8aec39404334ceef9c06a439665b79d09aa8431a636f3f04353402"
+            }
+          ],
+          "issue_ids": [
+            "b1729-bounded-knowledge"
+          ]
+        },
+        {
+          "id": "novelty_and_coverage_claims_audited",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            },
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-semantic-v001.private.json",
+              "sha256": "9a3704d14c8aec39404334ceef9c06a439665b79d09aa8431a636f3f04353402"
+            }
+          ],
+          "issue_ids": [
+            "b1729-bounded-knowledge"
+          ]
+        },
+        {
+          "id": "limitations_and_unknowns_preserved",
+          "status": "passed",
+          "evidence_refs": [
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+              "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+            },
+            {
+              "path": "private/audit/run-reviews/b-seed-1729-semantic-v001.private.json",
+              "sha256": "9a3704d14c8aec39404334ceef9c06a439665b79d09aa8431a636f3f04353402"
+            }
+          ],
+          "issue_ids": [
+            "b1729-bounded-knowledge"
+          ]
+        }
+      ],
+      "unresolved_issue_ids": [
+        "b1729-bounded-knowledge"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "b1729-bounded-knowledge",
+      "severity": "limitation",
+      "status": "open",
+      "evidence_refs": [
+        {
+          "path": "private/audit/run-reviews/b-seed-1729-semantic-v001.private.json",
+          "sha256": "9a3704d14c8aec39404334ceef9c06a439665b79d09aa8431a636f3f04353402"
+        },
+        {
+          "path": "runs/b-seed-1729/workspace/READY.json",
+          "sha256": "2b0128c23cc723b99708e9e0b18939d37766a761f0612ad505e0a561b26e6205"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Only supplied account and tested record/parameter combinations are verified; alternate accounts and broader numeric domains untested.",
+    "No observed exact inventory state after final payment; persistent effects beyond visible/UI-response fields remain unknown.",
+    "Model-generated validation is internal consistency, not independent held-out performance.",
+    "Forty executed submissions do not include initial missing-file attempt; complete CLI records41 attempts.",
+    "Single-run completed audit is not global six-run admission or the complete fixed180 evaluation report."
+  ],
+  "evidence_refs": [
+    {
+      "path": "private/audit/run-reviews/b-seed-1729-semantic-v001.private.json",
+      "sha256": "9a3704d14c8aec39404334ceef9c06a439665b79d09aa8431a636f3f04353402"
+    },
+    {
+      "path": "private/audit/run-reviews/b-seed-1729-integrity-v001.json",
+      "sha256": "adc8cecadf52a2532796324f9217e71eeeeffbdb09927d874e23d9314127e867"
+    },
+    {
+      "path": "private/audit/run-reviews/b-seed-1729-stop-timeline-v001.json",
+      "sha256": "13464b092a6e6898db16d15dcab6fe6865fc67104706b4d324c849fe258b397f"
+    }
+  ],
+  "review_started_at_utc_precision": "Not recorded at first package read; intentionally unknown, not inferred from file times"
+}

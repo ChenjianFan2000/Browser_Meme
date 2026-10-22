@@ -1,0 +1,18 @@
+{
+  "status": "error",
+  "error": "BoundaryError: navigation outside the registered website",
+  "actions": 0,
+  "failure_category": "boundary",
+  "last_observation": {
+    "kind": "observation",
+    "label": "final",
+    "url": "about:blank",
+    "dom": "obs-0001.html",
+    "screenshot": "obs-0001.png",
+    "accessibility": "obs-0001.ax.json",
+    "visible_text": "",
+    "network": []
+  },
+  "console": "",
+  "elapsed_seconds": 2.05394183899989
+}

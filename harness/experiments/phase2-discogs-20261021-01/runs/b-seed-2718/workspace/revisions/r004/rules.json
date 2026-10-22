@@ -1,0 +1,570 @@
+[
+  {
+    "id": "UI-COOKIE",
+    "statement": "In the initial home-page state, Accept All Cookies dismissed the visible privacy banner. Its longer-term persistence was not tested.",
+    "status": "verified",
+    "preconditions": [
+      "Initial home page showed privacy banner"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-002-01f0dfe3/obs-0004.html",
+        "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+      },
+      {
+        "path": "evidence/call-002-01f0dfe3/obs-0006.html",
+        "sha256": "ec389d3baa871fc14edca664f9a413634dd19965cba2fc75c17a945d10f1b510"
+      }
+    ]
+  },
+  {
+    "id": "AUTH-PREFILL",
+    "statement": "The discovered login form was prefilled; submitting it without clearing fields navigated home and returned a successful authentication response. This was not an empty-credential test.",
+    "status": "verified",
+    "preconditions": [
+      "Discovered /login form in this fixture"
+    ],
+    "branches": [
+      {
+        "condition": "Untouched prefilled login",
+        "observed": "Home navigation and successful login response"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-002-01f0dfe3/obs-0010.html",
+        "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+      },
+      {
+        "path": "evidence/call-003-8c83c3e0/obs-0006.html",
+        "sha256": "5c3fa437fc2e6b0319fd069a0e44dc2bc46e3fdb2ca98bd9304edbf290ca61f5"
+      },
+      {
+        "path": "evidence/call-003-8c83c3e0/network.json",
+        "sha256": "bff459992a6808fa85365ac1b619189e7db368175f2bd71d0ed2dce377491abb"
+      }
+    ]
+  },
+  {
+    "id": "AUTH-EMPTY",
+    "statement": "With both login inputs explicitly cleared, submitting Sign in stayed on /login, displayed Invalid credentials, and produced an HTTP 400 authentication response.",
+    "status": "verified",
+    "preconditions": [
+      "Fixture browser session",
+      "Both login inputs explicitly cleared"
+    ],
+    "branches": [
+      {
+        "condition": "Both inputs empty",
+        "observed": "Invalid credentials and login retained"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-004-e72d7816/obs-0012.html",
+        "sha256": "386a6af5584949ebd1e73a56766c463174368bf18018145a1c5f06a63f987814"
+      },
+      {
+        "path": "evidence/call-004-e72d7816/network.json",
+        "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+      }
+    ]
+  },
+  {
+    "id": "AUTH-LOCATOR-FAILURE",
+    "statement": "After the prefilled login navigated home, a Username or Email locator timed out. This is a page/locator assumption failure, not evidence of credential rejection.",
+    "status": "verified",
+    "preconditions": [
+      "Experiment 03 continued after home navigation"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-003-8c83c3e0/result.json",
+        "sha256": "2fa77c537dc3df228d65b48f563974bc7674f5c7dbc2ad0e260e7fd61add7233"
+      },
+      {
+        "path": "evidence/call-003-8c83c3e0/obs-0009.html",
+        "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+      }
+    ]
+  },
+  {
+    "id": "AUTH-INVALID",
+    "statement": "The fixture username with the tested deliberately invalid password stayed on /login and displayed Invalid credentials with HTTP 400. This does not establish validation for all malformed accounts.",
+    "status": "verified",
+    "preconditions": [
+      "Fixture username",
+      "One deliberately invalid password"
+    ],
+    "branches": [
+      {
+        "condition": "Tested invalid password",
+        "observed": "Rejected; authentication error"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-004-e72d7816/obs-0021.html",
+        "sha256": "53819b8210379bee1dfa737de4067a5d15379fb6ec8ec58075fc834512467260"
+      },
+      {
+        "path": "evidence/call-004-e72d7816/network.json",
+        "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+      }
+    ]
+  },
+  {
+    "id": "AUTH-VALID",
+    "statement": "Submitting the fixture username/password navigated home with an ok authentication response. A fresh script retained the authenticated header. Authentication is excluded from business-record effects.",
+    "status": "verified",
+    "preconditions": [
+      "Public fixture credentials entered into discovered login controls"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-004-e72d7816/obs-0027.html",
+        "sha256": "b22cae2daccec49985e9e8b64f0c36027f48625945f8cdb6ff545a6bafc62682"
+      },
+      {
+        "path": "evidence/call-004-e72d7816/network.json",
+        "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+      },
+      {
+        "path": "evidence/call-005-437a3c73/obs-0003.html",
+        "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+      }
+    ]
+  },
+  {
+    "id": "AUTH-HEADER",
+    "statement": "In the observed authenticated header, Account is a button rather than the anonymous Account link; its DOM contains Collection, Wantlist and Sign out controls. The menus themselves were not activated in the corrected exploration.",
+    "status": "verified",
+    "preconditions": [
+      "Authenticated header after fixture login"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-002-01f0dfe3/obs-0010.html",
+        "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+      },
+      {
+        "path": "evidence/call-005-437a3c73/obs-0003.html",
+        "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+      },
+      {
+        "path": "evidence/call-004-e72d7816/result.json",
+        "sha256": "19a408fb8250d8146fbd492a7d5e109cf925dde5b44f2c30db87a7b24ed7ac5e"
+      }
+    ]
+  },
+  {
+    "id": "RELEASE-221",
+    "statement": "The observed featured /release/221 page identifies Pink Floyd, The Dark Side Of The Moon (1973), with release metadata and ten track rows, Add to Wantlist, Add to Collection, and a link to /sell/release/221. Initial Have/Want/For Sale figures were 2/3/25.",
+    "status": "verified",
+    "preconditions": [
+      "Featured release 221 in initial fixture state"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-005-437a3c73/obs-0006.html",
+        "sha256": "ceb8a7ee1a0fe06da112a30b7a5be7ffbbdb2cf7913e4142c7b382bafe31fbc0"
+      }
+    ]
+  },
+  {
+    "id": "MEMBERSHIP-ADD",
+    "statement": "For authenticated release 221 initially absent from both account lists, two Wantlist adds and two Collection adds each returned ok. Later list readbacks showed one new release identity in each list, not two cards. These membership operations were independently accessible on the same release.",
+    "status": "verified",
+    "preconditions": [
+      "Authenticated fixture account",
+      "Release 221 absent from baseline lists",
+      "Two consecutive adds per membership kind"
+    ],
+    "branches": [
+      {
+        "condition": "Wantlist added twice",
+        "observed": "One visible release 221 membership; Want persisted as 4 on revisit"
+      },
+      {
+        "condition": "Collection added twice",
+        "observed": "One visible release 221 membership; Have later read back as 3"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0003.html",
+        "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0006.html",
+        "sha256": "9b648d5338065bb7f0d945fe31a09256c233cb1b0bc20ee37a2ec7e2f9857722"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0018.html",
+        "sha256": "88a570b3a66e0396829adac8b6ff6209c2464ecacab5db3ad107a9e3ab92ed44"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0031.html",
+        "sha256": "c919125611f9b9675a9716f31b9b93920940b0e416f9eea7693911d84dc04b2a"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/network.json",
+        "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+      },
+      {
+        "path": "evidence/call-007-5cbf52f9/obs-0006.html",
+        "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+      }
+    ]
+  },
+  {
+    "id": "MEMBERSHIP-COUNTERS",
+    "statement": "For release 221, each observed add click incremented the local sidebar count, including repeat adds, while the central summary stayed stale. Navigation reconciled Want from local 5 to 4, and Have from local 4 to 3. Local count changes alone do not establish new persistent memberships.",
+    "status": "verified",
+    "preconditions": [
+      "Release 221",
+      "Two repeated adds of each kind in the same rendered page"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0012.html",
+        "sha256": "b86d77693ef2d7ed7c6e7b0d5a5234e4e98f84624fc5573114555137bda4e023"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0015.html",
+        "sha256": "300208976de8ab5f569223e4b95a4698c3da58afb395b748b9ca6e1a52c38888"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0021.html",
+        "sha256": "869bc39824f8a0866b70eaba966e553a17a638dcc95a29a7d99a4f2da26bde6a"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0024.html",
+        "sha256": "a9a4d94e65808e4eb2fe05f07d598dbe3f4aa5058017a6fa5e171cbcf05d0282"
+      },
+      {
+        "path": "evidence/call-006-6c0c68cf/obs-0027.html",
+        "sha256": "e067d1eb1be5b28a28ebab3394531bebfd83f233d9fff454526740f1620beb73"
+      },
+      {
+        "path": "evidence/call-007-5cbf52f9/obs-0006.html",
+        "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+      }
+    ]
+  },
+  {
+    "id": "MEMBERSHIP-REPEAT-EFFECT",
+    "statement": "The repeated membership adds appear to have set-like business behavior for this account/release, despite optimistic counter inflation. Hidden metadata effects and behavior for other releases remain untested.",
+    "status": "hypothesis",
+    "preconditions": [
+      "Same membership kind repeated for account/release 221"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-006-6c0c68cf/network.json",
+        "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+      },
+      {
+        "path": "evidence/call-007-5cbf52f9/obs-0006.html",
+        "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+      }
+    ]
+  },
+  {
+    "id": "MARKET-221",
+    "statement": "The initial release-221 marketplace displayed 25 listing rows, with seller, shipping origin, media/sleeve condition, price, and Add to Cart links. The observed default order was increasing price. Filter controls existed for media/sleeve condition, ships-from, minimum rating and sort, but were not applied.",
+    "status": "verified",
+    "preconditions": [
+      "Release-221 marketplace before checkout"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-007-5cbf52f9/obs-0010.html",
+        "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+      }
+    ]
+  },
+  {
+    "id": "CART-EMPTY",
+    "statement": "In the observed authenticated empty cart, total was USD 0.00 and Checkout was disabled. No forced empty checkout was attempted.",
+    "status": "verified",
+    "preconditions": [
+      "Authenticated empty cart before adds and after checkout"
+    ],
+    "branches": [
+      {
+        "condition": "Observed empty cart",
+        "observed": "Checkout disabled"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-008-4ff7e232/result.json",
+        "sha256": "3bd2de827ba0fb9f0dbb6bfca12bd5fb74a7cfaf0766d13f29f9506c559b84dd"
+      },
+      {
+        "path": "evidence/call-008-4ff7e232/obs-0003.html",
+        "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+      },
+      {
+        "path": "evidence/call-010-c04f8715/obs-0003.html",
+        "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+      }
+    ]
+  },
+  {
+    "id": "CART-SELF",
+    "statement": "Clicking listing 4 Add to Cart while authenticated as its seller was accepted in this observed case, and cart readback showed one item at USD 21.45. A universal self-purchase prohibition is contradicted by this case.",
+    "status": "verified",
+    "preconditions": [
+      "Fixture account is seller of marketplace-visible listing 4",
+      "Release 221 marketplace before checkout"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-008-4ff7e232/obs-0009.html",
+        "sha256": "bbd298c3e7a900057d2fb650c25edd7c7409284c4e2c8df1c258bbf50a27b3fa"
+      },
+      {
+        "path": "evidence/call-008-4ff7e232/network.json",
+        "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+      }
+    ]
+  },
+  {
+    "id": "CART-NO-SELF-PURCHASE",
+    "statement": "Hypothesis tested: the site always rejects buying one’s own listing. This universal hypothesis is refuted by the fixture account/listing-4 add and paid checkout observations. Other permission boundaries are unknown.",
+    "status": "refuted",
+    "preconditions": [
+      "Tested fixture account and listing 4"
+    ],
+    "branches": [
+      {
+        "condition": "Fixture seller adds and checks out listing 4",
+        "observed": "Add accepted; paid order response returned"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-008-4ff7e232/network.json",
+        "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+      },
+      {
+        "path": "evidence/call-009-a4672f61/network.json",
+        "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+      }
+    ]
+  },
+  {
+    "id": "CART-REPEAT",
+    "statement": "Adding listing 4 twice produced one cart item with quantity 2 in the exported UI-caused response, total 4290 cents, and one visible row displaying unit price USD 21.45. Cart revisit retained quantity/total; no visible quantity editor was discovered.",
+    "status": "verified",
+    "preconditions": [
+      "Authenticated account",
+      "Listing 4 added once then added once more",
+      "No intervening remove or checkout"
+    ],
+    "branches": [
+      {
+        "condition": "First add",
+        "observed": "Quantity 1, total 2145"
+      },
+      {
+        "condition": "Second confirmed add",
+        "observed": "Same cart item id, quantity 2, total 4290"
+      }
+    ],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-008-4ff7e232/obs-0022.html",
+        "sha256": "55a62fe34c675362aecc7c60cedba7d85b5742fc27475de281426e3a4c480a3f"
+      },
+      {
+        "path": "evidence/call-008-4ff7e232/network.json",
+        "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+      }
+    ]
+  },
+  {
+    "id": "CART-COMBINE-REMOVE",
+    "statement": "After adding listing 7 to the quantity-2 listing-4 cart, the total was 6575 cents and the new listing-7 row appeared first. Clicking the first Remove deleted cart item 2 (listing 7), leaving listing 4 at quantity 2 and total 4290. This does not test removing or decrementing a quantity-2 item.",
+    "status": "verified",
+    "preconditions": [
+      "Existing cart item 1 for listing 4, quantity 2",
+      "Listing 7 added then first visible Remove clicked"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-009-a4672f61/obs-0006.html",
+        "sha256": "d72e59132d6861376abc76b899617129fa7d90dd515418dc68a86fe98ef96233"
+      },
+      {
+        "path": "evidence/call-009-a4672f61/obs-0009.html",
+        "sha256": "55a62fe34c675362aecc7c60cedba7d85b5742fc27475de281426e3a4c480a3f"
+      },
+      {
+        "path": "evidence/call-009-a4672f61/network.json",
+        "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+      }
+    ]
+  },
+  {
+    "id": "CHECKOUT-OBSERVED",
+    "statement": "Clicking enabled Checkout with listing 4 quantity 2 immediately returned order 121, status paid, total 4290 cents, and item quantity 2; the cart became empty and stayed empty on revisit. The next seller view showed listing 4 as sold, still displaying Qty 1. No separate confirmation form was observed in this flow.",
+    "status": "verified",
+    "preconditions": [
+      "Fixture account cart containing only listing 4, quantity 2",
+      "One Checkout click"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-009-a4672f61/obs-0015.html",
+        "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+      },
+      {
+        "path": "evidence/call-009-a4672f61/network.json",
+        "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+      },
+      {
+        "path": "evidence/call-010-c04f8715/obs-0003.html",
+        "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+      },
+      {
+        "path": "evidence/call-010-c04f8715/obs-0006.html",
+        "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+      },
+      {
+        "path": "evidence/call-010-c04f8715/network.json",
+        "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+      }
+    ]
+  },
+  {
+    "id": "CHECKOUT-STOCK",
+    "statement": "This observed checkout accepted cart quantity 2, while the subsequent seller view showed listing 4 with Qty 1 and sold status. Exact inventory validation, decrement behavior, checkout atomicity, repeat checkout and unavailable-item rejection remain unknown.",
+    "status": "unknown",
+    "preconditions": [
+      "Only the single observed order for listing 4"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-009-a4672f61/network.json",
+        "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+      },
+      {
+        "path": "evidence/call-010-c04f8715/network.json",
+        "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+      }
+    ]
+  },
+  {
+    "id": "SELL-FORM",
+    "statement": "The authenticated /sell page showed Create a listing and 21 existing seller listings. Before a release search/selection, Create Listing was disabled. It exposed media condition, sleeve condition, ships from, quantity, price in cents, and comments inputs, plus Deactivate controls on seller rows. No listing was created or deactivated.",
+    "status": "verified",
+    "preconditions": [
+      "Authenticated /sell, initial form state"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-010-c04f8715/obs-0006.html",
+        "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+      },
+      {
+        "path": "evidence/call-010-c04f8715/network.json",
+        "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+      },
+      {
+        "path": "evidence/call-011-7a83aa24/result.json",
+        "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+      }
+    ]
+  },
+  {
+    "id": "SELL-SEARCH",
+    "statement": "On /sell, submitting the seller release search query Dark Side returned one result, release 221, and showed Selected: Pink Floyd - The Dark Side Of The Moon without an explicit result click. The resulting DOM had Create Listing enabled. Behavior for zero/multiple results is unknown.",
+    "status": "verified",
+    "preconditions": [
+      "Authenticated seller page",
+      "Query Dark Side",
+      "One Search click in seller section"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-011-7a83aa24/obs-0009.html",
+        "sha256": "5a6d96628d8b35c6a9bcd95ad0664bbd35acfe14195ffc69a167bb07ab3cf1f9"
+      },
+      {
+        "path": "evidence/call-011-7a83aa24/network.json",
+        "sha256": "9ba324d4ff2f76b9f064d3f308e4add7b62729584e1e3f2740deb2f5e70ef58a"
+      }
+    ]
+  },
+  {
+    "id": "ADD-RELEASE-PAGE",
+    "statement": "Navigating to the discovered Add Release footer link /add-release rendered a 404 page in this session. This establishes only the observed page response, not the absence of release-creation backend behavior elsewhere.",
+    "status": "verified",
+    "preconditions": [
+      "Observed footer href /add-release",
+      "Authenticated session"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-010-c04f8715/obs-0010.html",
+        "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+      }
+    ]
+  },
+  {
+    "id": "UNKNOWN-COVERAGE",
+    "statement": "Main catalog search, marketplace filtering/sorting, listing creation/deactivation, membership removal, stock rejection, anonymous business operations, multi-currency behavior, orders UI, and community pages were not exercised. Missing controls do not establish missing backend behavior.",
+    "status": "unknown",
+    "preconditions": [
+      "Learning stopped at a runtime boundary before further experiments"
+    ],
+    "branches": [],
+    "forbidden_side_effects": [],
+    "evidence_refs": [
+      {
+        "path": "evidence/call-011-7a83aa24/result.json",
+        "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+      }
+    ]
+  }
+]

@@ -1,0 +1,207 @@
+[
+  {
+    "path": "experiments/01_initial.py",
+    "sha256": "0cf45dca224590cd237d1bd91d68e51591c7ccf262729731a389f668e1626b8b",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/02_login_discovery.py",
+    "sha256": "1cac0d777871af674b68942d87509db785cc036aca56df19e6b0068cadbba207",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/03_login.py",
+    "sha256": "d89de73a38e74423ab0e7972ca44419ff09b579f6a6e5d1f2e7f86048bf35c61",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/04_account_release.py",
+    "sha256": "7ccd84ffcee3b58233df4a9c9a7ead9284e6aa8e4ac20ac4b5e7db67377d5edd",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/05_account_release_v2.py",
+    "sha256": "c6044c8d77efe3eb9b862471531130d74599046d2e5c646ae4c788bc03655fc1",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/06_memberships.py",
+    "sha256": "25a778d97aee67040e74b77b6a2bd11a92c622f57bd197b562a180f34523d043",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/07_repeat_persistence_market.py",
+    "sha256": "646ed54ca8c372c75fa06670fe6a35f95ae7e32748910341ee7912e6a19952f5",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/08_cart.py",
+    "sha256": "9178b8fe27320ab82846c48fe7a9b753e52c91183b14c4d28b181a743503d65d",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/09_cart_v2.py",
+    "sha256": "b39f57979bdf6a1395d205efc166f92cd8f943db211eee889c6271b5310eac87",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/10_cart_repeat_checkout.py",
+    "sha256": "9782783d55bdcb96eb6490b39dc22252f5deb84dd2df3633005954cc5f5e2736",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/11_filter.py",
+    "sha256": "93584ff5bd63868c5dd6eadff26bd34d2235c2829172de62ac95025c025d8811",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/12_filter_boundaries_sell.py",
+    "sha256": "9c64b4c6760df45fadb7a0d64abe4c4803fab6820956bbe35a7749a97154a6e3",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/13_sell_form.py",
+    "sha256": "21fb7095790475cdcb9409ef58af8d2c1389a21bcbc92be349b962816664b2ad",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/14_sell_search_v2.py",
+    "sha256": "01cae0947cc585c85171e2442bcbec182fff952cb3094a023db0645fb471d04a",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/15_listing_zero_boundary.py",
+    "sha256": "d074357dcd2b190301f6274dd14221c2c1feb4c3b0e6f9be6e425ee1605f3295",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/16_listing_boundaries_v2.py",
+    "sha256": "603909f94a78e7d34bf3444f8718c8dfaa11c6df310770bbde69782e653266d1",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/17_deactivate.py",
+    "sha256": "df8eba77a9dd52bde68e228f792274e4689540c4042ad35580c524b3c342949e",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/18_search.py",
+    "sha256": "39541e52bff90748babf2d31a5e41bdb79942261eb0d4dae67e02c4e4c52ba1a",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/19_search_variants_genre.py",
+    "sha256": "6026f2e3794a65314b7159b08148418f1dc68ef099e150a6fd117c476bd54d0c",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/20_genre_navigation.py",
+    "sha256": "25f9abda06123bb22215492ed8aa149841eae54da50be33c83a370a2d63fed25",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/21_quantity_zero.py",
+    "sha256": "25002321211f0d1c5ba2b0611c3714bab2d3d68273a3ad0bc3a633fdcfa90975",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/22_navigation_boundaries.py",
+    "sha256": "ed54318698d79ab22108c6fb43483858d7760c8c913f8e5cc381bd8da941027b",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/23_signed_out_membership.py",
+    "sha256": "87cece8d7fa7935fab8e08d0a0ffbd65704bee64830c2aa4570983249bf387fa",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/24_signed_out_membership_v2.py",
+    "sha256": "518e0b49b6d9001e30241e153b1ebb3135f7cec4531396bc9aba817e11c464cb",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/25_login_rejection_return.py",
+    "sha256": "f49830e8102ffc5e52bea6d6f2f3533d51877bf90e7c42445b3a45918f051ce0",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/26_seller_search_selection.py",
+    "sha256": "c38d9191a07a0e3c5baec04d84723742a384410c60516420050900e2ae94e77d",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/27_nonstandard_condition_create.py",
+    "sha256": "5ac11469dfc6225ebaf5610e1bd69f3168e2d277503b4447c5ec6c56a0172cb6",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/28_stale_cart_checkout.py",
+    "sha256": "2196373407ae1a01fbf956fddd22e7029d43a3a4c758ba0ca87007b5c837b843",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/29_cart_remove_empty_checkout.py",
+    "sha256": "688aec35bbcbeecf544cfaccf7f4b4f6cc0a3fe78552d5eaf9ef8e5965890423",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/30_filter_case_sleeve_rating.py",
+    "sha256": "91a2a8d3699b3302710046b567d172d11f230fa9273e1fb02286d80fa774ea2c",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/31_fractional_quantity.py",
+    "sha256": "2fd0f4ce0dd56347d96d9ea23a62b70d1548b5bbeb3c4a8010ea3984ec3e3ad8",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/32_fractional_price.py",
+    "sha256": "1a43a17ad45631eee95ac5e83720f073e6d3710718c9d1dd5f57410c9515ea02",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/33_minimum_price_duplicate_create.py",
+    "sha256": "0f866b418b77345836bb48746d038e2f68e6a10116bfca511de01836850299e3",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/34_stale_cart_add_link.py",
+    "sha256": "fd6d62d168371371e9aeb1a10959a1bbf4fe3169c1ee0c04e88fbe87f920c359",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/35_reusable_cart_repeat_remove.py",
+    "sha256": "a9aa395732366880d7f0cabfe6c9ffd66883ec34cdbafb3397f11a30b5bd2d97",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/36_footer_boundaries.py",
+    "sha256": "23553c4e73edc0d5a44a1dc5ce1ca7cba80890657d0930870f8520b82bbc9e86",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/37_second_release_memberships.py",
+    "sha256": "62e14431739319250447069a696f1423643161e6415aa529d5ba1ebfb07b7ca9",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/38_empty_market_newest.py",
+    "sha256": "22d08ceda105bc251b22627770ff0721bbe048a74d9c4994585b2f8d9c16ba82",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/39_reusable_deactivate_duplicates.py",
+    "sha256": "3480d93af3559edf68d140d53333057c93eda3e7ab9020d71ac5e3ffcc1a2d53",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/40_subscribe_final.py",
+    "sha256": "18ba0044196012ba0d625602482265885f44c5a927c1ac638ce0b476d6761e51",
+    "executed_during_learning": true
+  },
+  {
+    "path": "experiments/40b_subscribe_locator_v2_UNEXECUTED.py",
+    "sha256": "a3c6b090c9324c197ee1766bf7803dcc5e18b566aab06e98a30fa16c7dbc5000",
+    "executed_during_learning": false
+  }
+]

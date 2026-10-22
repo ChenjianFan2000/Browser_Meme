@@ -1,0 +1,2334 @@
+{
+  "scope": "Observed DOM and naturally UI-caused public responses only",
+  "pages": [
+    {
+      "path": "/",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "name": "Landing catalog",
+      "actions": [
+        "Search",
+        "Cookie Settings",
+        "Accept All Cookies",
+        "Menu controls",
+        "Release links"
+      ]
+    },
+    {
+      "path": "/login",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-002-01f0dfe3/obs-0008.html",
+          "sha256": "73affa00a4bd094f8c4f1b22eff098ba9886e2c64e44d232fe36c95c46de248d"
+        }
+      ],
+      "name": "Sign in",
+      "actions": [
+        "Fill account fields",
+        "Sign in"
+      ]
+    },
+    {
+      "path": "/release/221",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-005-437a3c73/obs-0005.html",
+          "sha256": "a50f47e0010f08f2791602ed5638928f7b028222081877bd863d545247b94c39"
+        }
+      ],
+      "name": "Pink Floyd release 221",
+      "actions": [
+        "Add to Wantlist",
+        "Add to Collection",
+        "Open marketplace"
+      ]
+    },
+    {
+      "path": "/me/collection",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "name": "My Collection",
+      "actions": [
+        "Open release links"
+      ]
+    },
+    {
+      "path": "/me/wantlist",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "name": "My Wantlist",
+      "actions": [
+        "Open release links"
+      ]
+    },
+    {
+      "path": "/cart",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-5cbf52f9/obs-0002.html",
+          "sha256": "03ce547365e2ef31dc6ea92d4d81f00156eb1afc02a498d2a74ffd1a3550edde"
+        }
+      ],
+      "name": "Cart",
+      "actions": [
+        "Remove item",
+        "Checkout (disabled when observed empty)"
+      ]
+    },
+    {
+      "path": "/sell/release/221",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-5cbf52f9/obs-0008.html",
+          "sha256": "be2873e9b7988d37b267ce1187e063e5354fd37d32a19ba9803332a4ef1812a2"
+        }
+      ],
+      "name": "Release 221 marketplace",
+      "actions": [
+        "Filter inputs",
+        "Sort",
+        "Apply",
+        "Add to Cart per listing"
+      ]
+    },
+    {
+      "path": "/sell",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ],
+      "name": "Seller listings and creation form",
+      "actions": [
+        "Search releases",
+        "Select release result",
+        "Fill listing fields",
+        "Create Listing",
+        "Deactivate"
+      ]
+    },
+    {
+      "path": "/add-release",
+      "visited": true,
+      "uncertainty": "Only this session and rendered states observed",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0008.html",
+          "sha256": "d008885725fa51d4f0062e2f6ae1670381289efabe6c3efc75dde75515cf01d3"
+        }
+      ],
+      "name": "Observed 404 at Add Release link",
+      "actions": []
+    }
+  ],
+  "linked_unvisited_pages": [
+    {
+      "path": "/genre/rock",
+      "label": "Genres",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/search?q=new",
+      "label": "New Releases",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/search?q=trending",
+      "label": "Trending",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/forum",
+      "label": "Forum",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/blog",
+      "label": "Blog",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/84",
+      "label": "Open-architected maximized Local Area Network Chavez Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/59",
+      "label": "Upgradable full-range system engine Clark Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/26",
+      "label": "Configurable foreground portal Barnett Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/192",
+      "label": "Upgradable didactic portal Walker Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/168",
+      "label": "Operative regional neural-net Barnett Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/121",
+      "label": "Customer-focused stable array Johnson Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/102",
+      "label": "Total modular firmware Mitchell Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/109",
+      "label": "Switchable optimal archive Depeche Mode",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/30",
+      "label": "Organized tangible Internet solution Avery Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/23",
+      "label": "Synchronized grid-enabled algorithm Bates Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/113",
+      "label": "Cross-platform coherent data-warehouse Roberts Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/119",
+      "label": "Configurable optimizing migration Morrison Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/198",
+      "label": "Cross-platform actuating pricing structure Murray Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/186",
+      "label": "Multi-lateral disintermediate leverage Avery Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/29",
+      "label": "Switchable uniform open system Aguilar Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/95",
+      "label": "Proactive even-keeled customer loyalty Davis Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/10",
+      "label": "Fundamental high-level paradigm Sullivan Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "label": "About Us",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/careers",
+      "label": "Careers",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/api",
+      "label": "API",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/help",
+      "label": "Help & Support",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/shipping",
+      "label": "Discogs Shipping",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/guides",
+      "label": "Keyboard Shortcuts",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/get-started",
+      "label": "Get Started",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/terms",
+      "label": "Terms of Service",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/privacy",
+      "label": "Privacy Policy",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/cookies",
+      "label": "Cookies",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ]
+    },
+    {
+      "path": "/release/1",
+      "label": "Business-focused directional knowledgebase Walker Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/7",
+      "label": "Realigned intermediate implementation Hernandez Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/19",
+      "label": "Extended well-modulated analyzer Hamilton Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/46",
+      "label": "Customizable content-based forecast Kraftwerk",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/57",
+      "label": "Self-enabling fault-tolerant success Depeche Mode",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/61",
+      "label": "Synergized intangible archive Nirvana",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/88",
+      "label": "Quality-focused scalable attitude Chavez Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/89",
+      "label": "Mandatory systemic paradigm Morgan Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/93",
+      "label": "Assimilated multimedia data-warehouse Mcmillan Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/126",
+      "label": "Multi-layered intangible infrastructure Daft Punk",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/129",
+      "label": "Pre-emptive even-keeled benchmark Jones Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/137",
+      "label": "Robust composite protocol Rose Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/151",
+      "label": "Progressive real-time throughput Hill Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/154",
+      "label": "User-centric needs-based concept Roberts Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/156",
+      "label": "Upgradable tertiary flexibility Hart Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/157",
+      "label": "Open-source methodical orchestration Joseph Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/172",
+      "label": "Reactive asynchronous neural-net Johnston Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/190",
+      "label": "Customer-focused contextually-based data-warehouse Rose Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/193",
+      "label": "Versatile holistic ability Patterson Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/197",
+      "label": "Cross-group demand-driven hierarchy Johnston Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ]
+    },
+    {
+      "path": "/release/12",
+      "label": "Open-source exuding intranet Morgan Collective",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/24",
+      "label": "Right-sized impactful capability Ball Band",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/36",
+      "label": "Multi-tiered demand-driven initiative Johnston Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/49",
+      "label": "Operative client-server ability Lynn Quartet",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/55",
+      "label": "Fully-configurable bifurcated definition Nelson Duo",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/78",
+      "label": "Ergonomic incremental contingency Mcmillan Trio",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/112",
+      "label": "Assimilated user-facing utilization Patterson Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/128",
+      "label": "Self-enabling mobile toolset Bowers Ensemble",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/release/166",
+      "label": "Exclusive tangible success Daft Punk",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/190",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/113",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/87",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/46",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/29",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/96",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/160",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/198",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/14",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/126",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/196",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/127",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/28",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/188",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/161",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/175",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/125",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/151",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    },
+    {
+      "path": "/sell/release/155",
+      "label": "View marketplace for this release",
+      "visited": false,
+      "uncertainty": "DOM-discovered link; not necessarily a functioning page",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/obs-0005.html",
+          "sha256": "deaaa32003b2283484bb0197b7577ebffe76a3099003e209c550ad28410d1f0c"
+        }
+      ]
+    }
+  ],
+  "release_identities": [
+    {
+      "object_type": "release",
+      "release_id": 221,
+      "title_text": "PINK FLOYD / THE DARK SIDE OF THE MOON OUT NOW",
+      "path": "/release/221",
+      "metadata_read": true,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 84,
+      "title_text": "Open-architected maximized Local Area Network Chavez Trio",
+      "path": "/release/84",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 59,
+      "title_text": "Upgradable full-range system engine Clark Collective",
+      "path": "/release/59",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 26,
+      "title_text": "Configurable foreground portal Barnett Ensemble",
+      "path": "/release/26",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 192,
+      "title_text": "Upgradable didactic portal Walker Quartet",
+      "path": "/release/192",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 168,
+      "title_text": "Operative regional neural-net Barnett Ensemble",
+      "path": "/release/168",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 121,
+      "title_text": "Customer-focused stable array Johnson Collective",
+      "path": "/release/121",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 102,
+      "title_text": "Total modular firmware Mitchell Collective",
+      "path": "/release/102",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 109,
+      "title_text": "Switchable optimal archive Depeche Mode",
+      "path": "/release/109",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 30,
+      "title_text": "Organized tangible Internet solution Avery Quartet",
+      "path": "/release/30",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 23,
+      "title_text": "Synchronized grid-enabled algorithm Bates Collective",
+      "path": "/release/23",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 113,
+      "title_text": "Cross-platform coherent data-warehouse Roberts Quartet",
+      "path": "/release/113",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 119,
+      "title_text": "Configurable optimizing migration Morrison Trio",
+      "path": "/release/119",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 198,
+      "title_text": "Cross-platform actuating pricing structure Murray Duo",
+      "path": "/release/198",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 186,
+      "title_text": "Multi-lateral disintermediate leverage Avery Quartet",
+      "path": "/release/186",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 29,
+      "title_text": "Switchable uniform open system Aguilar Ensemble",
+      "path": "/release/29",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 95,
+      "title_text": "Proactive even-keeled customer loyalty Davis Collective",
+      "path": "/release/95",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 10,
+      "title_text": "Fundamental high-level paradigm Sullivan Duo",
+      "path": "/release/10",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-9faee651/obs-0002.html",
+          "sha256": "673defa5f225935b9c8bd23964193569f18e417c92c80a3df565325b710da161"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 1,
+      "title_text": "Business-focused directional knowledgebase Walker Quartet",
+      "path": "/release/1",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 7,
+      "title_text": "Realigned intermediate implementation Hernandez Trio",
+      "path": "/release/7",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 19,
+      "title_text": "Extended well-modulated analyzer Hamilton Trio",
+      "path": "/release/19",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 46,
+      "title_text": "Customizable content-based forecast Kraftwerk",
+      "path": "/release/46",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 57,
+      "title_text": "Self-enabling fault-tolerant success Depeche Mode",
+      "path": "/release/57",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 61,
+      "title_text": "Synergized intangible archive Nirvana",
+      "path": "/release/61",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 88,
+      "title_text": "Quality-focused scalable attitude Chavez Trio",
+      "path": "/release/88",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 89,
+      "title_text": "Mandatory systemic paradigm Morgan Collective",
+      "path": "/release/89",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 93,
+      "title_text": "Assimilated multimedia data-warehouse Mcmillan Trio",
+      "path": "/release/93",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 126,
+      "title_text": "Multi-layered intangible infrastructure Daft Punk",
+      "path": "/release/126",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 129,
+      "title_text": "Pre-emptive even-keeled benchmark Jones Collective",
+      "path": "/release/129",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 137,
+      "title_text": "Robust composite protocol Rose Collective",
+      "path": "/release/137",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 151,
+      "title_text": "Progressive real-time throughput Hill Duo",
+      "path": "/release/151",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 154,
+      "title_text": "User-centric needs-based concept Roberts Quartet",
+      "path": "/release/154",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 156,
+      "title_text": "Upgradable tertiary flexibility Hart Ensemble",
+      "path": "/release/156",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 157,
+      "title_text": "Open-source methodical orchestration Joseph Ensemble",
+      "path": "/release/157",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 172,
+      "title_text": "Reactive asynchronous neural-net Johnston Duo",
+      "path": "/release/172",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 190,
+      "title_text": "Customer-focused contextually-based data-warehouse Rose Collective",
+      "path": "/release/190",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 193,
+      "title_text": "Versatile holistic ability Patterson Ensemble",
+      "path": "/release/193",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 197,
+      "title_text": "Cross-group demand-driven hierarchy Johnston Duo",
+      "path": "/release/197",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0002.html",
+          "sha256": "e97ef42d99975c1473d610b50846efa8eb45dc0c4436decd0b72dec5ab89de72"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 12,
+      "title_text": "Open-source exuding intranet Morgan Collective",
+      "path": "/release/12",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 24,
+      "title_text": "Right-sized impactful capability Ball Band",
+      "path": "/release/24",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 36,
+      "title_text": "Multi-tiered demand-driven initiative Johnston Duo",
+      "path": "/release/36",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 49,
+      "title_text": "Operative client-server ability Lynn Quartet",
+      "path": "/release/49",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 55,
+      "title_text": "Fully-configurable bifurcated definition Nelson Duo",
+      "path": "/release/55",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 78,
+      "title_text": "Ergonomic incremental contingency Mcmillan Trio",
+      "path": "/release/78",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 112,
+      "title_text": "Assimilated user-facing utilization Patterson Ensemble",
+      "path": "/release/112",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 128,
+      "title_text": "Self-enabling mobile toolset Bowers Ensemble",
+      "path": "/release/128",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    },
+    {
+      "object_type": "release",
+      "release_id": 166,
+      "title_text": "Exclusive tangible success Daft Punk",
+      "path": "/release/166",
+      "metadata_read": false,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/obs-0005.html",
+          "sha256": "5ca483c21e113af7287154dd097c62f83037f175fc9b9ff692a2faa4367d93db"
+        }
+      ],
+      "uncertainty": "Link identity only unless metadata_read is true"
+    }
+  ],
+  "records": [
+    {
+      "object_type": "release_details",
+      "release_id": 221,
+      "artist": "Pink Floyd",
+      "title": "The Dark Side Of The Moon",
+      "year": 1973,
+      "label": "Harvest — SHVL 804",
+      "format": "1 x Vinyl, LP, Album",
+      "country": "UK",
+      "released": "1973-03-01",
+      "genre": "Rock",
+      "styles": [
+        "Psychedelic Rock",
+        "Classic Rock"
+      ],
+      "track_count": 10,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-005-437a3c73/obs-0006.html",
+          "sha256": "ceb8a7ee1a0fe06da112a30b7a5be7ffbbdb2cf7913e4142c7b382bafe31fbc0"
+        }
+      ],
+      "uncertainty": "Other releases were not opened"
+    },
+    {
+      "object_type": "account_membership_snapshot",
+      "account": "public_fixture_account",
+      "kind": "collection",
+      "stage": "baseline",
+      "release_ids": [
+        1,
+        7,
+        19,
+        46,
+        57,
+        61,
+        88,
+        89,
+        93,
+        95,
+        102,
+        126,
+        129,
+        137,
+        151,
+        154,
+        156,
+        157,
+        172,
+        190,
+        193,
+        197
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ],
+      "uncertainty": "Only release identities returned by this UI-caused response"
+    },
+    {
+      "object_type": "account_membership_snapshot",
+      "account": "public_fixture_account",
+      "kind": "collection",
+      "stage": "after_adds",
+      "release_ids": [
+        1,
+        7,
+        19,
+        46,
+        57,
+        61,
+        88,
+        89,
+        93,
+        95,
+        102,
+        126,
+        129,
+        137,
+        151,
+        154,
+        156,
+        157,
+        172,
+        190,
+        193,
+        197,
+        221
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ],
+      "uncertainty": "Only release identities returned by this UI-caused response"
+    },
+    {
+      "object_type": "account_membership_snapshot",
+      "account": "public_fixture_account",
+      "kind": "wantlist",
+      "stage": "baseline",
+      "release_ids": [
+        12,
+        24,
+        36,
+        49,
+        55,
+        59,
+        78,
+        112,
+        128,
+        166
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ],
+      "uncertainty": "Only release identities returned by this UI-caused response"
+    },
+    {
+      "object_type": "account_membership_snapshot",
+      "account": "public_fixture_account",
+      "kind": "wantlist",
+      "stage": "after_adds",
+      "release_ids": [
+        12,
+        24,
+        36,
+        49,
+        55,
+        59,
+        78,
+        112,
+        128,
+        166,
+        221
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ],
+      "uncertainty": "Only release identities returned by this UI-caused response"
+    },
+    {
+      "object_type": "listing",
+      "listing_id": 4,
+      "release_id": 221,
+      "seller": "public_fixture_account",
+      "price_cents": 2145,
+      "currency": "USD",
+      "ships_from": "Netherlands",
+      "media_condition": "Fair (F)",
+      "sleeve_condition": "Near Mint (NM or M-)",
+      "observed_status": "marketplace-visible before checkout; sold after checkout",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-5cbf52f9/obs-0010.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        },
+        {
+          "path": "evidence/call-008-4ff7e232/network.json",
+          "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+        },
+        {
+          "path": "evidence/call-010-c04f8715/network.json",
+          "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+        }
+      ],
+      "uncertainty": "Initial stock was not read from seller page before purchase"
+    },
+    {
+      "object_type": "listing",
+      "listing_id": 7,
+      "release_id": 221,
+      "seller": "hernandezernest53",
+      "price_cents": 2285,
+      "currency": "USD",
+      "ships_from": "Sweden",
+      "media_condition": "Mint (M)",
+      "sleeve_condition": "Very Good Plus (VG+)",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-5cbf52f9/obs-0010.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        }
+      ],
+      "uncertainty": "Other seller account controls not inspected"
+    },
+    {
+      "object_type": "order_response",
+      "observed": {
+        "id": 121,
+        "status": "paid",
+        "total_cents": 4290,
+        "currency": "USD",
+        "created_at": "2026-10-21T05:38:01",
+        "items": [
+          {
+            "listing_id": 4,
+            "price_cents": 2145,
+            "quantity": 2
+          }
+        ]
+      },
+      "evidence_refs": [
+        {
+          "path": "evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        }
+      ],
+      "uncertainty": "No order-detail UI found or visited; total changed records not established"
+    },
+    {
+      "object_type": "seller_listing_snapshot",
+      "account": "public_fixture_account",
+      "items": [
+        {
+          "id": 4,
+          "release_id": 221,
+          "release_title": "The Dark Side Of The Moon",
+          "media_condition": "Fair (F)",
+          "sleeve_condition": "Near Mint (NM or M-)",
+          "price_cents": 2145,
+          "currency": "USD",
+          "ships_from": "Netherlands",
+          "quantity": 1,
+          "status": "sold",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 63,
+          "release_id": 190,
+          "release_title": "Customer-focused contextually-based data-warehouse",
+          "media_condition": "Mint (M)",
+          "sleeve_condition": "Very Good (VG)",
+          "price_cents": 2031,
+          "currency": "USD",
+          "ships_from": "Japan",
+          "quantity": 1,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 118,
+          "release_id": 113,
+          "release_title": "Cross-platform coherent data-warehouse",
+          "media_condition": "Fair (F)",
+          "sleeve_condition": "Very Good Plus (VG+)",
+          "price_cents": 4640,
+          "currency": "USD",
+          "ships_from": "US",
+          "quantity": 3,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 183,
+          "release_id": 87,
+          "release_title": "Ameliorated tangible open system",
+          "media_condition": "Very Good (VG)",
+          "sleeve_condition": "Good (G)",
+          "price_cents": 4393,
+          "currency": "USD",
+          "ships_from": "Germany",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 192,
+          "release_id": 46,
+          "release_title": "Customizable content-based forecast",
+          "media_condition": "Good (G)",
+          "sleeve_condition": "Very Good (VG)",
+          "price_cents": 3876,
+          "currency": "USD",
+          "ships_from": "Canada",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 244,
+          "release_id": 29,
+          "release_title": "Switchable uniform open system",
+          "media_condition": "Fair (F)",
+          "sleeve_condition": "Mint (M)",
+          "price_cents": 2227,
+          "currency": "USD",
+          "ships_from": "Germany",
+          "quantity": 1,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 268,
+          "release_id": 96,
+          "release_title": "Adaptive disintermediate architecture",
+          "media_condition": "Near Mint (NM or M-)",
+          "sleeve_condition": "Very Good Plus (VG+)",
+          "price_cents": 3818,
+          "currency": "USD",
+          "ships_from": "Germany",
+          "quantity": 1,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 278,
+          "release_id": 160,
+          "release_title": "Proactive local pricing structure",
+          "media_condition": "Near Mint (NM or M-)",
+          "sleeve_condition": "Very Good Plus (VG+)",
+          "price_cents": 2873,
+          "currency": "USD",
+          "ships_from": "Germany",
+          "quantity": 3,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 279,
+          "release_id": 160,
+          "release_title": "Proactive local pricing structure",
+          "media_condition": "Very Good Plus (VG+)",
+          "sleeve_condition": "Near Mint (NM or M-)",
+          "price_cents": 1507,
+          "currency": "USD",
+          "ships_from": "Sweden",
+          "quantity": 1,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 305,
+          "release_id": 198,
+          "release_title": "Cross-platform actuating pricing structure",
+          "media_condition": "Fair (F)",
+          "sleeve_condition": "Very Good (VG)",
+          "price_cents": 1801,
+          "currency": "USD",
+          "ships_from": "France",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 362,
+          "release_id": 14,
+          "release_title": "Self-enabling modular methodology",
+          "media_condition": "Very Good (VG)",
+          "sleeve_condition": "Very Good Plus (VG+)",
+          "price_cents": 3010,
+          "currency": "USD",
+          "ships_from": "Germany",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 367,
+          "release_id": 126,
+          "release_title": "Multi-layered intangible infrastructure",
+          "media_condition": "Near Mint (NM or M-)",
+          "sleeve_condition": "Mint (M)",
+          "price_cents": 1171,
+          "currency": "USD",
+          "ships_from": "Canada",
+          "quantity": 3,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 393,
+          "release_id": 196,
+          "release_title": "Mandatory dynamic moderator",
+          "media_condition": "Fair (F)",
+          "sleeve_condition": "Very Good (VG)",
+          "price_cents": 2092,
+          "currency": "USD",
+          "ships_from": "Netherlands",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 436,
+          "release_id": 127,
+          "release_title": "Multi-tiered hybrid framework",
+          "media_condition": "Good (G)",
+          "sleeve_condition": "Very Good Plus (VG+)",
+          "price_cents": 2427,
+          "currency": "USD",
+          "ships_from": "US",
+          "quantity": 3,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 501,
+          "release_id": 28,
+          "release_title": "Cross-group foreground strategy",
+          "media_condition": "Very Good Plus (VG+)",
+          "sleeve_condition": "Good (G)",
+          "price_cents": 2341,
+          "currency": "USD",
+          "ships_from": "Canada",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 554,
+          "release_id": 188,
+          "release_title": "Optimized uniform success",
+          "media_condition": "Very Good (VG)",
+          "sleeve_condition": "Mint (M)",
+          "price_cents": 2670,
+          "currency": "USD",
+          "ships_from": "Canada",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 559,
+          "release_id": 161,
+          "release_title": "Compatible stable core",
+          "media_condition": "Near Mint (NM or M-)",
+          "sleeve_condition": "Near Mint (NM or M-)",
+          "price_cents": 1245,
+          "currency": "USD",
+          "ships_from": "US",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 573,
+          "release_id": 175,
+          "release_title": "Persistent static ability",
+          "media_condition": "Very Good Plus (VG+)",
+          "sleeve_condition": "Near Mint (NM or M-)",
+          "price_cents": 2750,
+          "currency": "USD",
+          "ships_from": "Sweden",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 576,
+          "release_id": 125,
+          "release_title": "User-friendly multi-tasking synergy",
+          "media_condition": "Near Mint (NM or M-)",
+          "sleeve_condition": "Good (G)",
+          "price_cents": 1403,
+          "currency": "USD",
+          "ships_from": "UK",
+          "quantity": 1,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 612,
+          "release_id": 151,
+          "release_title": "Progressive real-time throughput",
+          "media_condition": "Very Good Plus (VG+)",
+          "sleeve_condition": "Very Good Plus (VG+)",
+          "price_cents": 2981,
+          "currency": "USD",
+          "ships_from": "Sweden",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        },
+        {
+          "id": 631,
+          "release_id": 155,
+          "release_title": "Inverse discrete Local Area Network",
+          "media_condition": "Near Mint (NM or M-)",
+          "sleeve_condition": "Good (G)",
+          "price_cents": 4605,
+          "currency": "USD",
+          "ships_from": "Germany",
+          "quantity": 2,
+          "status": "active",
+          "created_at": "2026-10-20T08:00:46"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/network.json",
+          "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+        }
+      ],
+      "uncertainty": "No create, edit, or deactivate operation tested"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "public_fixture_account",
+      "to": "release:221",
+      "relationship": "collection membership",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ],
+      "uncertainty": "One identity in later list after repeated adds"
+    },
+    {
+      "from": "public_fixture_account",
+      "to": "release:221",
+      "relationship": "wantlist membership",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ],
+      "uncertainty": "One identity in later list after repeated adds"
+    },
+    {
+      "from": "order:121",
+      "to": "listing:4",
+      "relationship": "contains quantity 2 at unit 2145 cents",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        }
+      ],
+      "uncertainty": "Only this response observed"
+    }
+  ],
+  "account": {
+    "identity": "public_fixture_account",
+    "credential_values": "Not copied into derived artifacts",
+    "fixture_shape": {
+      "kind": "str",
+      "is_real_credential": "bool",
+      "role": "str",
+      "account": {
+        "username": "str",
+        "password": "[REDACTED_AUTH]"
+      },
+      "source": "str"
+    }
+  }
+}

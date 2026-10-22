@@ -1,0 +1,42 @@
+{
+  "revision": "r001",
+  "parent_revision": null,
+  "condition": "A",
+  "learner": "gpt-6.1-sol",
+  "scheduling_seed": 2718,
+  "changed_rules": [
+    "R01",
+    "U01"
+  ],
+  "changed_scripts": [
+    "../../explore_01.py",
+    "scripts.py",
+    "behavior_model.py"
+  ],
+  "failure_category": null,
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-dbccdd13/obs-0004.html",
+      "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/obs-0004.ax.json",
+      "sha256": "74b48b5480d8c6497e7b74408ca4a7bb59d631e646f8e1bac2497ec96bdcf873"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/obs-0004.png",
+      "sha256": "d993a21aced45159443a48eaa529fa9399225b9f0ebc77520d702aea39424b0a"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/actions.jsonl",
+      "sha256": "91273453e64dceafd2c21c7000839a062da2234ac709868f97834be019a3dd0f"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/result.json",
+      "sha256": "23505cb32a68df9d667011b01aff2278eec280fd55db14884972038d04a381bf"
+    }
+  ],
+  "rationale": "Initial evidence-only discovery snapshot, reconstructed offline from first call.",
+  "procedural_deviation": null,
+  "audit_refs": []
+}

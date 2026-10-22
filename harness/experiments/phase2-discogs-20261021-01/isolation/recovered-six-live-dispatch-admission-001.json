@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "kind": "incremental_six_worker_recovery_and_live_dispatch_admission",
+  "scope": "abcdef_max6_v002_live_service_gate",
+  "admitted_at_utc": "2026-10-21T08:15:46.722086+00:00",
+  "admitted_worker_ids": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+  ],
+  "max_active_workers": 6,
+  "dispatcher_entry": "harness/phase2/run_parallel_v002.py",
+  "management_files_sha256": {
+    "harness/phase2/run_expanded_case_v001.py": "18dccac4db16a74c1fe2178d28555015ede4f12aebdf58c5cb541519d341fae3",
+    "harness/phase2/run_parallel_v001.py": "0815eb6ab570dd2fdb853fc2573384fa8c893eb16562bfd3f5af0327978e59b7",
+    "harness/tests/test_phase2_parallel_v001.py": "e67b171dd3314d53cf015759a5b18e93b2a381a8815d9e45916062277ca2ae10",
+    "harness/sites/discogs/phase2_private/scale_v001/management.py": "352904b8ce1b7c4b07e9924c079ab9abe39638b6ee503753d0d4ecc6cec5fb77",
+    "harness/experiments/phase2-discogs-20261021-01/PROTOCOL-004.md": "2fd0818c29ff3e6a7b2e2fa79590ab139ed9f8dcd4dc56ed8e009ce7132ffa1b",
+    "harness/phase2/run_parallel_v002.py": "bfee82790908e8d519a06b34e6b280bddf7bb2dd0fb3b5a3d67b418737768fa2",
+    "harness/tests/test_phase2_live_dispatch_v002.py": "e7d5bfe45daf4e5656acac7d13972e20f02da1e6688bfa9d7d9a0449af0277a3",
+    "harness/experiments/phase2-discogs-20261021-01/PROTOCOL-005.md": "47ef618d8b405772011cb2f22c8460ee501f9e9c297e2776cb75b1db52b7a967"
+  },
+  "evidence": [
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\expanded-def-worker-admission-001.json",
+      "sha256": "d39211220f1540cf782e021b975a769b1cb4f030bbb855525e2cbc1f5452a4de"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\private\\recovery-six-55be243c87c041cebd7a35c506ecb528.json",
+      "sha256": "d002f5bb76f5d77b1f03445d2fcc5a3790562e749b5b5c58c7c32476aaf1788a"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\expansion-preparation-001\\live-dispatch-tests-002.json",
+      "sha256": "bc67bbd1d12d8b977f0a3692b46a937e9502a47c3eb194a0d92fb3352540ec8c"
+    }
+  ],
+  "independent_tests": {
+    "command": "python -m pytest harness/tests/test_phase2_live_dispatch_v002.py -q",
+    "passed": 3,
+    "elapsed_seconds": 0.24
+  },
+  "live_tcp_checks": [
+    {
+      "worker": "a",
+      "role": "frontend",
+      "port": 13042,
+      "connected": true
+    },
+    {
+      "worker": "a",
+      "role": "backend",
+      "port": 13138,
+      "connected": true
+    },
+    {
+      "worker": "b",
+      "role": "frontend",
+      "port": 14042,
+      "connected": true
+    },
+    {
+      "worker": "b",
+      "role": "backend",
+      "port": 14138,
+      "connected": true
+    },
+    {
+      "worker": "c",
+      "role": "frontend",
+      "port": 15042,
+      "connected": true
+    },
+    {
+      "worker": "c",
+      "role": "backend",
+      "port": 15138,
+      "connected": true
+    },
+    {
+      "worker": "d",
+      "role": "frontend",
+      "port": 16042,
+      "connected": true
+    },
+    {
+      "worker": "d",
+      "role": "backend",
+      "port": 16138,
+      "connected": true
+    },
+    {
+      "worker": "e",
+      "role": "frontend",
+      "port": 17042,
+      "connected": true
+    },
+    {
+      "worker": "e",
+      "role": "backend",
+      "port": 17138,
+      "connected": true
+    },
+    {
+      "worker": "f",
+      "role": "frontend",
+      "port": 18042,
+      "connected": true
+    },
+    {
+      "worker": "f",
+      "role": "backend",
+      "port": 18138,
+      "connected": true
+    }
+  ],
+  "checks": {
+    "frozen_v001_and_29_generic_hashes_unchanged": true,
+    "abc_new_owned_processes_and_markers_recorded": true,
+    "abc_before_after_db_and_sidecar_bytes_match": true,
+    "g_through_l_owned_services_paused": true,
+    "memory_gate_then_all_registered_tcp_checks_before_queue_take": true,
+    "actual_v002_dispatcher_entry_and_hash_registration_required": true,
+    "failed_check_raises_before_claim_and_inflight_not_killed": true
+  },
+  "conditions": [
+    "New registration must explicitly bind v002 entry/hash, this gate, scope a..f and maximum6.",
+    "Retain dynamic Windows4GiB/WSL2GiB guards and stop new dispatch on any registered service failure.",
+    "Preserve21 sealed cases and159 pending identities; no retry/overwrite of terminal cases."
+  ],
+  "limitations": [
+    "TCP is sampled liveness, not continuous availability or UI/semantic proof; prior deployment/UI isolation gates remain necessary.",
+    "DB endpoint hashes do not prove absence of all writes during the interval.",
+    "abc original stop cause remains unproven; h low-memory exit is independently confirmed.",
+    "Provider service availability and sustained six-Solar capacity not established."
+  ],
+  "new_model_requests": 0,
+  "fixed_case_denominator": 180,
+  "fixed_prediction_field_denominator": 540,
+  "runtime_controller_or_frozen_files_modified": false
+}

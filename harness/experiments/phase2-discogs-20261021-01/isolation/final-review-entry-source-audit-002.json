@@ -1,0 +1,32 @@
+{
+  "kind": "readonly_final_review_v002_and_renderer_v002_followup",
+  "observed_at_utc": "2026-10-21T09:55:24.746200+00:00",
+  "prior_audit": {
+    "path": "isolation/final-review-entry-source-audit-001.json",
+    "sha256": "8a9c9e294153560ac6c61c849dd614fdc8b23952345cfd8adedec92ee10e5f7a"
+  },
+  "final_review": {
+    "status": "one_additional_consistency_revision_requested",
+    "files_sha256": {
+      "private/phase3/finalize_review_v002.py": "ef493361d88cabbf849bdd60a990a6d2469c0468583129ae66bed46179494f46",
+      "private/phase3/validate_finalize_review_v002.py": "0409aa7d449585aae63f381d6217e6ee9b1d18cb3e21f323bddc8868cb7b82ec",
+      "private/audit/final-review-preparation-v002.json": "6a0029cb16c6cc3b60d86365f2d7cb225fcead07febf69341e7e08ad86f269ce"
+    },
+    "fixed": "Original finish and summary boolean agreement, nested finish safety agreement, exact UI barrier agreement and safe-claim negative evidence now fail closed.",
+    "remaining": "summary.reset_safety object is not compared to original finish.reset_safety; evaluator asked to retain v002 and add v003 with a targeted mismatch regression."
+  },
+  "renderer": {
+    "status": "source_diff_checks_passed",
+    "files_sha256": {
+      "harness/phase2/render_report_v001.py": "3aee6025ed62b164c782fc2fd8909685034360506a8633fc24a2d97709ec0a9a",
+      "harness/phase2/render_report_v002.py": "5cbaa93380c0ef055e4627b4291b8c7cbb05262406e702ffd8007e32c3a7e0c1"
+    },
+    "scope": "Only module docstring and resource event/DB sampling prose changed; binding/statistics/chart logic unchanged.",
+    "findings": "v002 distinguishes observation/recovery state from unknown precise exit time, discloses truncated abc captures and restricts equal DB/sidecar samples to abc."
+  },
+  "formal_review_or_archive_executed": false,
+  "actual180_audit_completed": false,
+  "active_sites_accessed": false,
+  "frozen_or_source_files_modified": false,
+  "new_model_requests": 0
+}

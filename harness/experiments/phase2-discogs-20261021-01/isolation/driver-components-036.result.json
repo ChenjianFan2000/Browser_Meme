@@ -1,0 +1,20 @@
+{
+  "kind": "isolated_cli_component_checks",
+  "passed": 12,
+  "checks": [
+    "reset-learning original baseline on disposable DB",
+    "exclusive existing output rejected before management mutation",
+    "public inventory exact three-field projection retains 30",
+    "finish evaluates real disposable state and begin-frozen prediction, never later source change",
+    "missing trusted gateway event provenance rejected",
+    "absence of lexical exposure does not establish novelty",
+    "broker prediction bound to unchanged before is accepted before business write; earlier auth/query excluded",
+    "equal/late declaration cannot score predictions or rewrite task outcome",
+    "earlier wrong-action business write also prevents retroactive prediction",
+    "missing declaration/request timing or write observation remains invalid/unknown",
+    "replayed before binding and learner-declared source rejected",
+    "private CLI/evaluator wire identical top/nested safety flags; failed task can safely reset, incomplete write cannot"
+  ],
+  "active_runtime_db_touched": false,
+  "ui_runs": 0
+}

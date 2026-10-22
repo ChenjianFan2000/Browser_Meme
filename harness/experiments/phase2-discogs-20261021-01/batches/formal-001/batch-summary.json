@@ -1,0 +1,72 @@
+{
+  "started_ns": 1792560769514155400,
+  "batch_id": "formal-001",
+  "learning": {
+    "results": [
+      {
+        "worker": "b",
+        "outcomes": [
+          {
+            "label": "b-seed-2718",
+            "exit_code": 0,
+            "log": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\formal-001\\b-seed-2718.stdout.txt"
+          },
+          {
+            "label": "a-seed-2718",
+            "exit_code": 0,
+            "log": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\formal-001\\a-seed-2718.stdout.txt"
+          }
+        ]
+      },
+      {
+        "worker": "a",
+        "outcomes": [
+          {
+            "label": "a-seed-1729",
+            "exit_code": 0,
+            "log": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\formal-001\\a-seed-1729.stdout.txt"
+          },
+          {
+            "label": "b-seed-1729",
+            "exit_code": 0,
+            "log": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\formal-001\\b-seed-1729.stdout.txt"
+          }
+        ]
+      },
+      {
+        "worker": "c",
+        "outcomes": [
+          {
+            "label": "a-seed-3141",
+            "exit_code": 0,
+            "log": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\formal-001\\a-seed-3141.stdout.txt"
+          },
+          {
+            "label": "b-seed-3141",
+            "exit_code": 0,
+            "log": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\batches\\formal-001\\b-seed-3141.stdout.txt"
+          }
+        ]
+      }
+    ],
+    "failures": []
+  },
+  "evaluation": {
+    "results": [],
+    "failures": [
+      {
+        "worker": "b",
+        "error": "RuntimeError: case evaluation needs recovery: b-seed-2718"
+      },
+      {
+        "worker": "c",
+        "error": "RuntimeError: case evaluation needs recovery: a-seed-3141"
+      },
+      {
+        "worker": "a",
+        "error": "RuntimeError: case evaluation needs recovery: a-seed-1729"
+      }
+    ]
+  },
+  "finished_ns": 1792567082841307400
+}

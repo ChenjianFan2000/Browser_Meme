@@ -1,0 +1,49 @@
+{
+  "kind": "incremental_publication_recheck_and_finalization_preparation",
+  "status": "tools_frozen_synthetic_and_actual_partial_checks_complete_no_overall_approval",
+  "created_at_utc": "2026-10-22T03:55:18.897905+00:00",
+  "files_sha256": {
+    "harness/phase2_isolation/publication_fixture_findings_recheck_v001.py": "a533dbf9916b105b52a12c92161b76c0174147c5c08ead46380b09c473aaf2a7",
+    "harness/phase2_isolation/test_publication_fixture_findings_recheck_v001.py": "2d450278965e28c77fbfad0627c02729a0223357e036c8d12713dbabb28d8c94",
+    "harness/phase2_isolation/publication_findings_recheck_v002.py": "d333aab15303922b81bdf730069dd4b1925275dd178a87e584c546b9c2843a0f",
+    "harness/phase2_isolation/test_publication_findings_recheck_v002.py": "02a8192ea97a159507870a94d511e70cad3bb7b4f5c3c073a5831e8044d8e813",
+    "harness/phase2_isolation/publication_incremental_approval_v001.py": "075569945ef4fbaa88063b8c96a9d121d1752188f760e08b265f967837594c75",
+    "harness/phase2_isolation/test_publication_incremental_approval_v001.py": "0015e0fbc666f385f523bd235b4f4e6cb13a6bc80e600aec926107507b5e2fdc"
+  },
+  "tests": {
+    "command": "python -m pytest harness/phase2_isolation/test_publication_fixture_findings_recheck_v001.py harness/phase2_isolation/test_publication_findings_recheck_v002.py harness/phase2_isolation/test_publication_incremental_approval_v001.py -q",
+    "passed": 16,
+    "elapsed_seconds": 0.36,
+    "exit_code": 0
+  },
+  "actual_partial_results": {
+    "full_primary_entries_scanned": 89406,
+    "primary_errors": 0,
+    "primary_findings": 1307,
+    "exact_frozen_synthetic_fixture_only_findings": 1306,
+    "exact_pinned_zero_byte_historical_diagnostic": 1,
+    "other_findings_remaining": 0,
+    "retry_entries_fully_independently_scanned": 768,
+    "retry_findings": 0,
+    "retry_errors": 0,
+    "supplement1_entries_scanned": 18,
+    "supplement1_findings": 0
+  },
+  "recheck_scope": [
+    "v001 code and original unresolved-empty report preserved; v002 adds one exact empty path+double SHA/0size classification only.",
+    "Known synthetic password cannot be excepted outside an exact complete object equal to the frozen fixture. Other password/token/cookie findings remain blocking.",
+    "Finalizer requires exact full part-entry dictionary union, original candidate/failure partition, unchanged original successful dictionaries/exclusions, and added inventory original SHA binding.",
+    "Every input and primary audit is hash-bound, all entries actually scanned, all findings covered by exact classification, no incomplete/error scan admitted.",
+    "All final payload hashes must be revalidated by packager; metadata-only finalizer does not repeat content scans."
+  ],
+  "actual_overall_publication_approved": false,
+  "fixed_v001_v002_scanners_modified": false,
+  "files_new_for_final_supplement": [
+    "harness/phase2_isolation/publication_fixture_findings_recheck_v001.py",
+    "harness/phase2_isolation/test_publication_fixture_findings_recheck_v001.py",
+    "harness/phase2_isolation/publication_findings_recheck_v002.py",
+    "harness/phase2_isolation/test_publication_findings_recheck_v002.py",
+    "harness/phase2_isolation/publication_incremental_approval_v001.py",
+    "harness/phase2_isolation/test_publication_incremental_approval_v001.py"
+  ]
+}

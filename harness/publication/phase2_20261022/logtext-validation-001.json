@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "tool_version": "ordinary_log_text_v002",
+  "created_at_utc": "2026-10-22T03:27:05.979796+00:00",
+  "kind": "synthetic_log_format_retry_wrapper_validation",
+  "command": "python -m unittest discover -s harness/publication/phase2_20261022 -p test_export_logtext_v002.py -v",
+  "python_version": "3.11.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "status": "passed",
+  "test_count": 7,
+  "actual_source_format_inspected": true,
+  "actual_source_exported": false,
+  "actual_source_values_emitted": false,
+  "format_diagnosis": {
+    "source_path": "harness/experiments/phase2-discogs-20261021-01/private/scale-deployment-v001/h-stopped-supervisor-original.log",
+    "source_sha256": "f384048568a7eaecea481b1d0bd20505e1dad1fcab23d3a395e8a202aa4047c3",
+    "size_bytes": 34153,
+    "encoding": "UTF-8",
+    "lines": 285,
+    "leading_json_object_lines": 271,
+    "ordinary_text_or_fragment_tail_lines": 14,
+    "first_non_json_line": 272,
+    "prior_failure_manifest": ".runtime/publication-phase2-20261022/format-probe-002/export-manifest.pending.json",
+    "prior_failure_manifest_sha256": "068c1083f4755223f4809f94d7e2046a200bd2c5eaf396b29400028d62195402",
+    "reason": "ordinary .log contains JSONL followed by ordinary text; parent auto-detects strict JSONL and rejects the text tail"
+  },
+  "browser_calls": 0,
+  "model_calls": 0,
+  "uploads": 0,
+  "parent_exporter_modified": false,
+  "prior_manifest_modified": false,
+  "frozen_experiment_modified": false,
+  "source_bindings": {
+    "export_evidence_logtext_v002.py": "788063e3ac8f9f26fd3b2cf611207951a223b49e3fa680c6030c5c5ed5e5464b",
+    "test_export_logtext_v002.py": "3f6b5ae4d51327de4bd397115f5255877d391efa681934a0ac89531f676f8588",
+    "README-logtext-v002.md": "dcfa88b0e80ac6295155b4336ec6c83ed7d4018a76cefea3776947b9158c301f",
+    "export_evidence.py": "fbbaea885afae45876d8f67e7b5aea298908e1b510d2a75c24d063857e001ec5",
+    "logtext-validation-001.txt": "5ed2f0a1d8fa0a87a8ee05373573a47a8e742ba5cad5abd61622b2a8c8f051fc"
+  }
+}

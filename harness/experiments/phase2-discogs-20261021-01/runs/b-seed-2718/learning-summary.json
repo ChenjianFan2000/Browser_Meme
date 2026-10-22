@@ -1,0 +1,24 @@
+{
+  "run_id": "b-seed-2718",
+  "exit_code": 0,
+  "elapsed_seconds": 910.5619999999999,
+  "checks": {
+    "ready_file": true,
+    "rules_valid": true,
+    "required_files": true,
+    "browser_exports_match_originals": true,
+    "launcher_success": true,
+    "relay_settled_without_errors": true,
+    "management_barrier": true,
+    "condition_no_predictor": true
+  },
+  "management_barrier": {
+    "relay_drained": true,
+    "browser_tree_clean": true,
+    "gateway_log_complete": true
+  },
+  "validation_errors": [],
+  "trusted_http_events": 60,
+  "relay_errors": [],
+  "status": "learning_finished"
+}

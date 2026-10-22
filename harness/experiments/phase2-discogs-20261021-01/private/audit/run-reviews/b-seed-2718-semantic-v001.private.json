@@ -1,0 +1,489 @@
+{
+  "kind": "private_claim_and_composition_review",
+  "run_id": "b-seed-2718",
+  "basis": "Independent reading of frozen rules, original native scripts/action logs, readbacks and UI-caused exported responses; not learner assertions alone. No live site calls.",
+  "rule_reviews": [
+    {
+      "rule_id": "UI-COOKIE",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-002-01f0dfe3/obs-0004.html",
+          "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-002-01f0dfe3/obs-0006.html",
+          "sha256": "ec389d3baa871fc14edca664f9a413634dd19965cba2fc75c17a945d10f1b510"
+        }
+      ]
+    },
+    {
+      "rule_id": "AUTH-PREFILL",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Correctly distinguishes untouched prefill from cleared-input refusal; locator timeout is not relabelled credential rejection.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-002-01f0dfe3/obs-0010.html",
+          "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-003-8c83c3e0/obs-0006.html",
+          "sha256": "5c3fa437fc2e6b0319fd069a0e44dc2bc46e3fdb2ca98bd9304edbf290ca61f5"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-003-8c83c3e0/network.json",
+          "sha256": "bff459992a6808fa85365ac1b619189e7db368175f2bd71d0ed2dce377491abb"
+        }
+      ]
+    },
+    {
+      "rule_id": "AUTH-EMPTY",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/obs-0012.html",
+          "sha256": "386a6af5584949ebd1e73a56766c463174368bf18018145a1c5f06a63f987814"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/network.json",
+          "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+        }
+      ]
+    },
+    {
+      "rule_id": "AUTH-LOCATOR-FAILURE",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-003-8c83c3e0/result.json",
+          "sha256": "2fa77c537dc3df228d65b48f563974bc7674f5c7dbc2ad0e260e7fd61add7233"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-003-8c83c3e0/obs-0009.html",
+          "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+        }
+      ]
+    },
+    {
+      "rule_id": "AUTH-INVALID",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/obs-0021.html",
+          "sha256": "53819b8210379bee1dfa737de4067a5d15379fb6ec8ec58075fc834512467260"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/network.json",
+          "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+        }
+      ]
+    },
+    {
+      "rule_id": "AUTH-VALID",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/obs-0027.html",
+          "sha256": "b22cae2daccec49985e9e8b64f0c36027f48625945f8cdb6ff545a6bafc62682"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/network.json",
+          "sha256": "6e8a99a80a7f85146ab553143ec1077a2d6e56ca9959fdd37bbeecb52eb18d73"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-005-437a3c73/obs-0003.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        }
+      ]
+    },
+    {
+      "rule_id": "AUTH-HEADER",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-002-01f0dfe3/obs-0010.html",
+          "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-005-437a3c73/obs-0003.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-004-e72d7816/result.json",
+          "sha256": "19a408fb8250d8146fbd492a7d5e109cf925dde5b44f2c30db87a7b24ed7ac5e"
+        }
+      ]
+    },
+    {
+      "rule_id": "RELEASE-221",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-005-437a3c73/obs-0006.html",
+          "sha256": "ceb8a7ee1a0fe06da112a30b7a5be7ffbbdb2cf7913e4142c7b382bafe31fbc0"
+        }
+      ]
+    },
+    {
+      "rule_id": "MEMBERSHIP-ADD",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Observed identity cardinality and ok responses support narrow UI/API-exposed result; hidden metadata is not claimed unchanged.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0003.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0006.html",
+          "sha256": "9b648d5338065bb7f0d945fe31a09256c233cb1b0bc20ee37a2ec7e2f9857722"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0018.html",
+          "sha256": "88a570b3a66e0396829adac8b6ff6209c2464ecacab5db3ad107a9e3ab92ed44"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0031.html",
+          "sha256": "c919125611f9b9675a9716f31b9b93920940b0e416f9eea7693911d84dc04b2a"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-007-5cbf52f9/obs-0006.html",
+          "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+        }
+      ]
+    },
+    {
+      "rule_id": "MEMBERSHIP-COUNTERS",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0012.html",
+          "sha256": "b86d77693ef2d7ed7c6e7b0d5a5234e4e98f84624fc5573114555137bda4e023"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0015.html",
+          "sha256": "300208976de8ab5f569223e4b95a4698c3da58afb395b748b9ca6e1a52c38888"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0021.html",
+          "sha256": "869bc39824f8a0866b70eaba966e553a17a638dcc95a29a7d99a4f2da26bde6a"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0024.html",
+          "sha256": "a9a4d94e65808e4eb2fe05f07d598dbe3f4aa5058017a6fa5e171cbcf05d0282"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/obs-0027.html",
+          "sha256": "e067d1eb1be5b28a28ebab3394531bebfd83f233d9fff454526740f1620beb73"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-007-5cbf52f9/obs-0006.html",
+          "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+        }
+      ]
+    },
+    {
+      "rule_id": "MEMBERSHIP-REPEAT-EFFECT",
+      "author_status": "hypothesis",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Set-like interpretation remains hypothesis, not promoted to hidden-record proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-007-5cbf52f9/obs-0006.html",
+          "sha256": "a625ebbe5dab6361ea743cd49dc0a3749ce76263d1cb919fb49c6bd01cf36e88"
+        }
+      ]
+    },
+    {
+      "rule_id": "MARKET-221",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-007-5cbf52f9/obs-0010.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        }
+      ]
+    },
+    {
+      "rule_id": "CART-EMPTY",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/result.json",
+          "sha256": "3bd2de827ba0fb9f0dbb6bfca12bd5fb74a7cfaf0766d13f29f9506c559b84dd"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/obs-0003.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/obs-0003.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "CART-SELF",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/obs-0009.html",
+          "sha256": "bbd298c3e7a900057d2fb650c25edd7c7409284c4e2c8df1c258bbf50a27b3fa"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/network.json",
+          "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+        }
+      ]
+    },
+    {
+      "rule_id": "CART-NO-SELF-PURCHASE",
+      "author_status": "refuted",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/network.json",
+          "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        }
+      ]
+    },
+    {
+      "rule_id": "CART-REPEAT",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/obs-0022.html",
+          "sha256": "55a62fe34c675362aecc7c60cedba7d85b5742fc27475de281426e3a4c480a3f"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-008-4ff7e232/network.json",
+          "sha256": "ffa77d8430fd8db4c76e9a47d4a3114a8f82a32136aab183b30e94c117566792"
+        }
+      ]
+    },
+    {
+      "rule_id": "CART-COMBINE-REMOVE",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Original rationale selected wrong row; subsequent rule records actual removed identity, preserving implementation counterexample.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/obs-0006.html",
+          "sha256": "d72e59132d6861376abc76b899617129fa7d90dd515418dc68a86fe98ef96233"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/obs-0009.html",
+          "sha256": "55a62fe34c675362aecc7c60cedba7d85b5742fc27475de281426e3a4c480a3f"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        }
+      ]
+    },
+    {
+      "rule_id": "CHECKOUT-OBSERVED",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Returned order, cart reread and subsequent seller view support bounded observed result; no inference of stock invariant or atomicity.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/obs-0015.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/obs-0003.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/obs-0006.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/network.json",
+          "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+        }
+      ]
+    },
+    {
+      "rule_id": "CHECKOUT-STOCK",
+      "author_status": "unknown",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Conflicting quantity presentations preserved as unknown.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/network.json",
+          "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+        }
+      ]
+    },
+    {
+      "rule_id": "SELL-FORM",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/obs-0006.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/network.json",
+          "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-011-7a83aa24/result.json",
+          "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+        }
+      ]
+    },
+    {
+      "rule_id": "SELL-SEARCH",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Single-result automatic selection bounded to tested query; terminal attribute denial retained.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-011-7a83aa24/obs-0009.html",
+          "sha256": "5a6d96628d8b35c6a9bcd95ad0664bbd35acfe14195ffc69a167bb07ab3cf1f9"
+        },
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-011-7a83aa24/network.json",
+          "sha256": "9ba324d4ff2f76b9f064d3f308e4add7b62729584e1e3f2740deb2f5e70ef58a"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADD-RELEASE-PAGE",
+      "author_status": "verified",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Cited observation and branch are consistent with bounded wording; generalization is not established.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-010-c04f8715/obs-0010.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        }
+      ]
+    },
+    {
+      "rule_id": "UNKNOWN-COVERAGE",
+      "author_status": "unknown",
+      "review_status": "audited",
+      "scope": "Observed statements bounded to recorded fixture/session; hypotheses/refutations/unknowns retain their original scope.",
+      "note": "Unexecuted operations are explicitly listed; no whole-site coverage claim.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-2718/workspace/evidence/call-011-7a83aa24/result.json",
+          "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+        }
+      ]
+    }
+  ],
+  "template_novelty": [
+    {
+      "template_id": "C01",
+      "status": "not_proven_novel",
+      "reason": "Relevant same-object membership sequence demonstrated; different preceding search does not establish novel composition."
+    },
+    {
+      "template_id": "C02",
+      "status": "prerequisites_not_demonstrated",
+      "reason": "Filter/sort behavior not executed; absence of full workflow is not composition generalization evidence."
+    },
+    {
+      "template_id": "C03",
+      "status": "prerequisites_not_demonstrated",
+      "reason": "Listing write/deactivation primitives not executed."
+    },
+    {
+      "template_id": "C04",
+      "status": "exposed_composition_family",
+      "reason": "Two-item add/remove/checkout sequence executed despite mistaken row rationale; exclude novelty claim."
+    },
+    {
+      "template_id": "C05",
+      "status": "not_proven_novel",
+      "reason": "Membership and purchase co-occurred in this learning session; preservation endpoint not independently audited at final boundary, so neither unseen nor verified composition claimed."
+    },
+    {
+      "template_id": "C06",
+      "status": "prerequisites_not_demonstrated",
+      "reason": "Invalid listing refusal, repair and deactivation not executed."
+    }
+  ],
+  "novel_composition_claims_admitted": 0,
+  "limitations": [
+    "Retrospective checkpoints are disclosed; do not claim contemporaneous immutable intermediate models.",
+    "Improved consolidated UI helper only parsed, not executed after terminal stop.",
+    "No hidden side-effect absence proven from UI counters/card counts.",
+    "Semantic audit is scoped to archived evidence and frozen claims, not a fresh browser regression or model performance score."
+  ]
+}

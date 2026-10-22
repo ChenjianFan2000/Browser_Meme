@@ -1,0 +1,3000 @@
+{
+  "role": "WebArea",
+  "name": "Discogs",
+  "children": [
+    {
+      "role": "none",
+      "name": "",
+      "children": [
+        {
+          "role": "none",
+          "name": "",
+          "children": [
+            {
+              "role": "banner",
+              "name": "",
+              "children": [
+                {
+                  "role": "none",
+                  "name": "",
+                  "children": [
+                    {
+                      "role": "link",
+                      "name": "Discogs",
+                      "children": [
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "text",
+                              "name": "Discogs",
+                              "children": [
+                                {
+                                  "role": "InlineTextBox",
+                                  "name": ""
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "Section",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "textbox",
+                              "name": "Search artists, albums and more...",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": ""
+                                },
+                                {
+                                  "role": "generic",
+                                  "name": ""
+                                }
+                              ]
+                            },
+                            {
+                              "role": "button",
+                              "name": "Search",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Search",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "navigation",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "generic",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "button",
+                              "name": "Explore ▾",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Explore ▾",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "generic",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "button",
+                              "name": "Marketplace ▾",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Marketplace ▾",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "generic",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "button",
+                              "name": "Community ▾",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Community ▾",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "none",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "link",
+                          "name": "Cart",
+                          "children": [
+                            {
+                              "role": "image",
+                              "name": ""
+                            }
+                          ]
+                        },
+                        {
+                          "role": "link",
+                          "name": "Account",
+                          "children": [
+                            {
+                              "role": "image",
+                              "name": ""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "none",
+              "name": "",
+              "children": [
+                {
+                  "role": "none",
+                  "name": "",
+                  "children": [
+                    {
+                      "role": "generic",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "text",
+                          "name": "Let's manage your privacy",
+                          "children": [
+                            {
+                              "role": "InlineTextBox",
+                              "name": ""
+                            }
+                          ]
+                        },
+                        {
+                          "role": "text",
+                          "name": "We use cookies to personalize content and ads, to provide social media features and to analyze our traffic.",
+                          "children": [
+                            {
+                              "role": "InlineTextBox",
+                              "name": ""
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "none",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "button",
+                          "name": "Cookie Settings",
+                          "children": [
+                            {
+                              "role": "text",
+                              "name": "Cookie Settings",
+                              "children": [
+                                {
+                                  "role": "InlineTextBox",
+                                  "name": ""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "button",
+                          "name": "Accept All Cookies",
+                          "children": [
+                            {
+                              "role": "text",
+                              "name": "Accept All Cookies",
+                              "children": [
+                                {
+                                  "role": "InlineTextBox",
+                                  "name": ""
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "none",
+              "name": "",
+              "children": [
+                {
+                  "role": "main",
+                  "name": "",
+                  "children": [
+                    {
+                      "role": "none",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "Section",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": ""
+                                }
+                              ]
+                            },
+                            {
+                              "role": "generic",
+                              "name": ""
+                            },
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "heading",
+                                      "name": "10 Essential Synth-Pop Albums",
+                                      "level": 1,
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "10 Essential Synth-Pop Albums",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "Explore new releases on Discogs Weekly discovery from the community",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "none",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Explore new releases on Discogs",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Weekly discovery from the community",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "link",
+                                      "name": "All-Ages Album of the Week Handpicked spotlight",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "none",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "All-Ages Album of the Week",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Handpicked spotlight",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "link",
+                                      "name": "Start selling on Discogs List items and reach collectors",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "none",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Start selling on Discogs",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "List items and reach collectors",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "Section",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "link",
+                              "name": "PINK FLOYD / THE DARK SIDE OF THE MOON PINK FLOYD / THE DARK SIDE OF THE MOON OUT NOW",
+                              "children": [
+                                {
+                                  "role": "image",
+                                  "name": "PINK FLOYD / THE DARK SIDE OF THE MOON"
+                                },
+                                {
+                                  "role": "generic",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "PINK FLOYD / THE DARK SIDE OF THE MOON",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "OUT NOW",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "Section",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "heading",
+                                  "name": "Trending Releases",
+                                  "level": 2,
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Trending Releases",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "link",
+                                  "name": "Open-architected maximized Local Area Network Open-architected maximized Local Area Network Chavez Trio",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "image",
+                                              "name": "Open-architected maximized Local Area Network"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Open-architected maximized Local Area Network",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Chavez Trio",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Upgradable full-range system engine Upgradable full-range system engine Clark Collective",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "image",
+                                              "name": "Upgradable full-range system engine"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Upgradable full-range system engine",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Clark Collective",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Configurable foreground portal Configurable foreground portal Barnett Ensemble",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "image",
+                                              "name": "Configurable foreground portal"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Configurable foreground portal",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Barnett Ensemble",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Upgradable didactic portal Upgradable didactic portal Walker Quartet",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "image",
+                                              "name": "Upgradable didactic portal"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Upgradable didactic portal",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Walker Quartet",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Operative regional neural-net Operative regional neural-net Barnett Ensemble",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "image",
+                                              "name": "Operative regional neural-net"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Operative regional neural-net",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Barnett Ensemble",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Customer-focused stable array Customer-focused stable array Johnson Collective",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "image",
+                                              "name": "Customer-focused stable array"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Customer-focused stable array",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    },
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "text",
+                                                  "name": "Johnson Collective",
+                                                  "children": [
+                                                    {
+                                                      "role": "InlineTextBox",
+                                                      "name": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "Section",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "heading",
+                                  "name": "Most Expensive Releases Sold This Month",
+                                  "level": 2,
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Most Expensive Releases Sold This Month",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "See how these expensive items sold",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "See how these expensive items sold",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "Total modular firmware Total modular firmware Mitchell Collective",
+                                      "children": [
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "image",
+                                                  "name": "Total modular firmware"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "none",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Total modular firmware",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Mitchell Collective",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "$",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "347.49",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": " ",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "USD",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "Switchable optimal archive Switchable optimal archive Depeche Mode",
+                                      "children": [
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "image",
+                                                  "name": "Switchable optimal archive"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "none",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Switchable optimal archive",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        },
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Depeche Mode",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "$",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "306.90",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": " ",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "USD",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "Organized tangible Internet solution Organized tangible Internet solution Avery Quartet",
+                                      "children": [
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "image",
+                                                  "name": "Organized tangible Internet solution"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "none",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Organized tangible Internet solution",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        },
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Avery Quartet",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "$",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "230.34",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": " ",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "USD",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "Synchronized grid-enabled algorithm Synchronized grid-enabled algorithm Bates Collective",
+                                      "children": [
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "image",
+                                                  "name": "Synchronized grid-enabled algorithm"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "none",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Synchronized grid-enabled algorithm",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        },
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Bates Collective",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "$",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "121.52",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": " ",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "USD",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "The Dark Side Of The Moon The Dark Side Of The Moon Pink Floyd",
+                                      "children": [
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "image",
+                                                  "name": "The Dark Side Of The Moon"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "none",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "The Dark Side Of The Moon",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        },
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Pink Floyd",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "$",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "79.17",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": " ",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "USD",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "link",
+                                      "name": "The Dark Side Of The Moon The Dark Side Of The Moon Pink Floyd",
+                                      "children": [
+                                        {
+                                          "role": "none",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "generic",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "image",
+                                                  "name": "The Dark Side Of The Moon"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "role": "none",
+                                              "name": "",
+                                              "children": [
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "The Dark Side Of The Moon",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        },
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "role": "generic",
+                                                  "name": "",
+                                                  "children": [
+                                                    {
+                                                      "role": "text",
+                                                      "name": "Pink Floyd",
+                                                      "children": [
+                                                        {
+                                                          "role": "InlineTextBox",
+                                                          "name": ""
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "$",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "72.51",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": " ",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "text",
+                                          "name": "USD",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "LabelText",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Email",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "textbox",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "none",
+                                      "name": ""
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": ""
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "button",
+                                  "name": "Subscribe",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Subscribe",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "Section",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "heading",
+                              "name": "Explore Newly Added",
+                              "level": 2,
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Explore Newly Added",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "link",
+                              "name": "The Dark Side Of The Moon The Dark Side Of The Moon Pink Floyd",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "The Dark Side Of The Moon"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "The Dark Side Of The Moon",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Pink Floyd",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Cross-platform coherent data-warehouse Cross-platform coherent data-warehouse Roberts Quartet",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Cross-platform coherent data-warehouse"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Cross-platform coherent data-warehouse",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Roberts Quartet",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Configurable optimizing migration Configurable optimizing migration Morrison Trio",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Configurable optimizing migration"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Configurable optimizing migration",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Morrison Trio",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Cross-platform actuating pricing structure Cross-platform actuating pricing structure Murray Duo",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Cross-platform actuating pricing structure"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Cross-platform actuating pricing structure",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Murray Duo",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Multi-lateral disintermediate leverage Multi-lateral disintermediate leverage Avery Quartet",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Multi-lateral disintermediate leverage"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Multi-lateral disintermediate leverage",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Avery Quartet",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Switchable uniform open system Switchable uniform open system Aguilar Ensemble",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Switchable uniform open system"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Switchable uniform open system",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Aguilar Ensemble",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Proactive even-keeled customer loyalty Proactive even-keeled customer loyalty Davis Collective",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Proactive even-keeled customer loyalty"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Proactive even-keeled customer loyalty",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Davis Collective",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Fundamental high-level paradigm Fundamental high-level paradigm Sullivan Duo",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "image",
+                                          "name": "Fundamental high-level paradigm"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "none",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Fundamental high-level paradigm",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                },
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "role": "generic",
+                                          "name": "",
+                                          "children": [
+                                            {
+                                              "role": "text",
+                                              "name": "Sullivan Duo",
+                                              "children": [
+                                                {
+                                                  "role": "InlineTextBox",
+                                                  "name": ""
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "Section",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "generic",
+                                  "name": ""
+                                },
+                                {
+                                  "role": "generic",
+                                  "name": ""
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "generic",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "It's everywhere!",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "generic",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "(The Discogs iOS/Android app)",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        },
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "App Store",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            },
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "Google Play",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            },
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "contentinfo",
+              "name": "",
+              "children": [
+                {
+                  "role": "none",
+                  "name": "",
+                  "children": [
+                    {
+                      "role": "none",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "DISCOGS",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "link",
+                                  "name": "About Us",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "About Us",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Careers",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Careers",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "API",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "API",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "HELP IS HERE",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "link",
+                                  "name": "Help & Support",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Help & Support",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Discogs Shipping",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Discogs Shipping",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Keyboard Shortcuts",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Keyboard Shortcuts",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "JOIN IN",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "link",
+                                  "name": "Get Started",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Get Started",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Start Selling",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Start Selling",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Add Release",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Add Release",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "FOLLOW US",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "link",
+                                  "name": "Facebook",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Facebook",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "X / Twitter",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "X / Twitter",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "Instagram",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "Instagram",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "role": "link",
+                                  "name": "YouTube",
+                                  "children": [
+                                    {
+                                      "role": "text",
+                                      "name": "YouTube",
+                                      "children": [
+                                        {
+                                          "role": "InlineTextBox",
+                                          "name": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "generic",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "ON THE GO",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "none",
+                                  "name": "",
+                                  "children": [
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "App Store (placeholder)",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "role": "generic",
+                                      "name": "",
+                                      "children": [
+                                        {
+                                          "role": "text",
+                                          "name": "Google Play (placeholder)",
+                                          "children": [
+                                            {
+                                              "role": "InlineTextBox",
+                                              "name": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "role": "none",
+                      "name": "",
+                      "children": [
+                        {
+                          "role": "generic",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "text",
+                              "name": "Discogs © ",
+                              "children": [
+                                {
+                                  "role": "InlineTextBox",
+                                  "name": ""
+                                }
+                              ]
+                            },
+                            {
+                              "role": "text",
+                              "name": "2026",
+                              "children": [
+                                {
+                                  "role": "InlineTextBox",
+                                  "name": ""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "role": "none",
+                          "name": "",
+                          "children": [
+                            {
+                              "role": "link",
+                              "name": "Terms of Service",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Terms of Service",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Privacy Policy",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Privacy Policy",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "link",
+                              "name": "Cookies",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "Cookies",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "role": "none",
+                              "name": "",
+                              "children": [
+                                {
+                                  "role": "text",
+                                  "name": "English ▾",
+                                  "children": [
+                                    {
+                                      "role": "InlineTextBox",
+                                      "name": ""
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "role": "generic",
+              "name": "",
+              "children": [
+                {
+                  "role": "alert",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

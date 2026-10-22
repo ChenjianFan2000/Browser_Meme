@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "final_independent_review_preparation",
+  "status": "prepared_not_executed",
+  "formal_review_created": false,
+  "formal_truth_archive_created": false,
+  "synthetic_groups_passed": 8,
+  "files": [
+    {
+      "path": "phase3/finalize_review_v001.py",
+      "sha256": "5d01dc38ddef620cc6623e2dc0d5ae61b90f61a816d072dfc637df53af945956"
+    },
+    {
+      "path": "phase3/validate_finalize_review_v001.py",
+      "sha256": "7cf3ba58daa3b011aac79c104b8e8c0be6027beba958e8399b152b1088b67d77"
+    },
+    {
+      "path": "phase3/final-review-plan-v001.json",
+      "sha256": "2b9e5a4a4ba19e71f8abd3ddd739314dff8aa69cf9780776a7869d5ac603742f"
+    },
+    {
+      "path": "FINAL_REVIEW_PREPARATION_V001.md",
+      "sha256": "6a769ea29fa851f24004adf479397a6bea1ebf272b7313edd41dc97686b1ccdf"
+    }
+  ]
+}

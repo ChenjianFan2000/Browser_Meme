@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "runtime_evidence_scope_selection_review",
+  "status": "scope_and_structure_checked_not_publication_approved",
+  "effective_inventory": {
+    "path": "harness/publication/phase2_20261022/runtime-evidence-inventory-002.json",
+    "sha256": "7183e27476162638689448a018efce2569d2ddb3f997ce75825d97c4d2ea73a3"
+  },
+  "checks": {
+    "archive_paths_unique": true,
+    "restore_paths_unique": true,
+    "all_sources_exist_with_recorded_size": true,
+    "no_forbidden_installation_or_database_parts": true,
+    "formal3_readiness_sha_exact": true,
+    "all_pending_secret_scan": true
+  },
+  "hash_sampling_policy": "every entry SHA computed at inventory selection with per-file stat stability check; structure review does not repeat full 1.45GiB hashing, export must verify all selected hashes",
+  "uncovered_results": "No missing referenced result file identified in the bounded management reference set; five missing references are stop-control markers. Not a claim of exhaustive historical installation recovery.",
+  "public_export_still_requires": [
+    "unique scanner over all selected bytes and recursive trace resources",
+    "separate sanitized export mapping original/export SHA",
+    "publication archive closure verification"
+  ],
+  "originals_modified": false,
+  "upload_performed": false
+}

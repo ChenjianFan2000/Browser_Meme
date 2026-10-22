@@ -1,0 +1,126 @@
+{
+  "kind": "actual_final_presentation_artifact_audit",
+  "status": "passed",
+  "observed_at_utc": "2026-10-22T02:02:02.696232+00:00",
+  "human_report": {
+    "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\第二阶段实验报告-001.md",
+    "sha256": "079e0aa5c0d0443ff4ab69b1c606dc5bc2beecdd090bf1930c62ca2be9e8d177",
+    "provenance_sha256": "1a0510aa9e138fd892584d8a45e4192087b2d2b93823c0a05ffa3a8e248af451"
+  },
+  "input_artifacts": {
+    "raw": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\frozen-results-001.json",
+      "sha256": "1570f65e3c508b180bbd7e772b506ccd8a9ccbee51ca41ab92f4295916297471"
+    },
+    "validity": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\validity-001.json",
+      "sha256": "9889a28331eaa5b5d55a9136805168518a25f187de2351889eb52455893c04e1"
+    },
+    "learning": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reviews\\learning-001.json",
+      "sha256": "d585ad23c72a4151129f1d18fa3e0abbf1505101330e13c31da25631bb2355b5"
+    },
+    "handoff": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\handoff\\phase3-001.json",
+      "sha256": "3f23ba99d1221cbe56e5fd42df23aa9efcef69cc6ba62e4ecfb943387252ce7d"
+    },
+    "execution": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\execution-context-001.json",
+      "sha256": "0a5ff9e8b50021eccb94e5c6fdfb1e787da1047d582df7d7229543da658db8cb"
+    },
+    "independent": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\private\\audit\\final-independent-review-001.json",
+      "sha256": "6ecfa10b82e2f9ad316bc57f18373117f8c4b35806ce7140cfcdd6be1ca73f6a"
+    },
+    "truth_index": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\private\\truth-archive\\formal-180-001\\archive-index.json",
+      "sha256": "ed187ace443cd8edb785dc03d44f4624c5188a7a46357e1cfbcb40f50d0cd750"
+    },
+    "evidence": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\evidence-example-001.md",
+      "sha256": "689085d0a7d26cb69f033be12d784bc5148607fcb906e6ddcf016c53d70c2854"
+    },
+    "figure": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\phase2-results-001.png",
+      "sha256": "f1b17356f1095cc3625526771cfc59f8b741fa839c477be71af35fffa511196b"
+    },
+    "deviations": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\DEVIATIONS-002.md",
+      "sha256": "f67792888296e8ed14c7fef384a5ba8f6fe3d8691c474605840225aad3ff304d"
+    },
+    "evidence_provenance": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\evidence-example-001.provenance.json",
+      "sha256": "3a2df16cf670581d68bb095f701df18242c4691afcb55785e6f07dce65c219c7"
+    },
+    "figure_provenance": {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\reports\\phase2-results-001.provenance.json",
+      "sha256": "6ab88839e9472ef778c0ef6c80256c0207c64cae60c0fbee83b0d91c9c511185"
+    }
+  },
+  "source_sha256": {
+    "harness/phase2/report_lineage_v001.py": "715681046ac373695057ce8b191b5446429e45d2bd3cc6f08d98c1a5fb765401",
+    "harness/phase2/render_report_v002.py": "5cbaa93380c0ef055e4627b4291b8c7cbb05262406e702ffd8007e32c3a7e0c1",
+    "harness/phase2/plot_results_v001.py": "80354c8295cc55e1de4a4457377b588e2d0500b171ed4836a4e9fcde1150cfd5",
+    "harness/phase2/evidence_index_v001.py": "32d8b35e607cc22310b105e4cf2989c0ceb466fae269a89a290a187c791739eb"
+  },
+  "prior_actual_evidence": [
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\final-management-artifact-audit-001.json",
+      "sha256": "2d9ccb37a82549da3ac769573b2c38c315e0ec369b69f0e7658b461f6b9afb7f"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\final-management-artifact-audit-002.json",
+      "sha256": "c2e8e0c3ef2cff83c0c3ff2e2dc215bbca298cbb925d70bc031b8001e3644e72"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\formal-auth-only-cleanup-execution-001.json",
+      "sha256": "0cbba527f91d182d8a922581f760876c1c360662f48fef048d0f87c1d32ff62c"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\owned-six-worker-stop-execution-001.json",
+      "sha256": "bdb4031181dd9032c8f7379b1e0b7721575e7c4786675d8f00bd89deedd11b69"
+    }
+  ],
+  "checks": {
+    "exact_named_input_paths_and_hashes": true,
+    "raw180_540_condition90_270": true,
+    "paired1729_60_180_recomputed_from_raw": true,
+    "four_allowed_two_quarantine_matches_independent": true,
+    "all_published_table_counts_match_raw_or_paired": true,
+    "utf8_no_replacement_characters": true,
+    "all_markdown_links_exist": true,
+    "figure_png_pdf_original_hashes_match": true,
+    "truth_index_exact180_identity_and_raw_manifest_binding": true,
+    "private_diagnosis_not_learner_allowlist": true,
+    "historical_open_blockers_and_unknowns_preserved": true
+  },
+  "markdown_links": {
+    "第二阶段实验报告-001.md": {
+      "checked_count": 16,
+      "all_exist_and_contained": true
+    },
+    "evidence-example-001.md": {
+      "checked_count": 87,
+      "all_exist_and_contained": true
+    }
+  },
+  "allowed_artifact_count_previously_individually_hash_checked": 5994,
+  "visual_inspection": {
+    "performed_by_this_auditor": true,
+    "figure": "reports/phase2-results-001.png",
+    "readable_no_clipping_or_overlap": true,
+    "raw_and_compliant_paired_views_separate": true,
+    "root_visual_review_also_reported": true
+  },
+  "evidence_example": {
+    "selection": "score-independent admitted A then seed/index; a-seed-1729 case01",
+    "actions_before": 11,
+    "actions_after": 11,
+    "scripts_hash_checked": 4,
+    "action_predictions_independently_graded": false
+  },
+  "scope": "Actual complete presentation/lineage verification; reuses prior full180 management byte audit, does not repeat website business oracle or all180 prediction semantic review.",
+  "business_truth_recomputed": false,
+  "raw_or_scores_modified": false,
+  "third_stage_started": false
+}

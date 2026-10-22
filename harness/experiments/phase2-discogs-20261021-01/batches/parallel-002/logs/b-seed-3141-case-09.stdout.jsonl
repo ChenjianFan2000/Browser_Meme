@@ -1,0 +1,8 @@
+{"event": "expanded_management_entry", "worker": "d", "learning_run": "b-seed-3141", "case_index": 9, "expansion_registration_sha256": "e5a06341c43d59afbc25dd74143cc5cf50ff4c6453b9a10b47c42ab520e2beb5", "runner_sha256": "18dccac4db16a74c1fe2178d28555015ede4f12aebdf58c5cb541519d341fae3", "driver_entry_sha256": "352904b8ce1b7c4b07e9924c079ab9abe39638b6ee503753d0d4ecc6cec5fb77"}
+{"event": "case_started", "learning_run": "b-seed-3141", "case_index": 9, "case_id": "P09"}
+{"event": "case_progress", "learning_run": "b-seed-3141", "case_index": 9, "elapsed_seconds": 60, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "b-seed-3141", "case_index": 9, "elapsed_seconds": 120, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "b-seed-3141", "case_index": 9, "elapsed_seconds": 180, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "b-seed-3141", "case_index": 9, "elapsed_seconds": 241, "http_events": 2, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "b-seed-3141", "case_index": 9, "elapsed_seconds": 301, "http_events": 6, "prediction_declared": true}
+{"event": "case_finished", "learning_run": "b-seed-3141", "case_index": 9, "ui_actions": 18, "elapsed_seconds": 358}

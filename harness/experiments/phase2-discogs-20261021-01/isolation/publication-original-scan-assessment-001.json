@@ -1,0 +1,54 @@
+{
+  "kind": "consolidated_original_publication_secret_scan_assessment",
+  "status": "originals_blocked_awaiting_redacted_export_audit",
+  "observed_at_utc": "2026-10-22T02:23:32.400317+00:00",
+  "user_visibility_authorization": "Root reports explicit latest user authorization to retain existing public repository and publicly publish complete results after180 evaluation completion. Private evaluation directory names are not exclusions.",
+  "scans": [
+    {
+      "path": "isolation/publication-credential-scan-001.json",
+      "sha256": "725b28e151c44fbab0c8be60f48e852b3029c80e62fa87faba4406b788bdfe12"
+    },
+    {
+      "path": "isolation/publication-zip-resources-scan-001.json",
+      "sha256": "cb934eabb2ca94c54f4a3e74c37ea9df01036c166e156f846607a089171cfcb7"
+    },
+    {
+      "path": "isolation/publication-runtime-credential-scan-001.json",
+      "sha256": "063816114a8bcd7eb3f8fb7fa0579e4879a90eef494278a29df9b29b98aaab34"
+    },
+    {
+      "path": "isolation/publication-binary-credential-scan-002.json",
+      "sha256": "4330d18a4771fec478bbc07005d2fb91d4248a1d6c00e5f41f4552bb7d05565e"
+    }
+  ],
+  "domain_review": {
+    "path": "private/audit/publication-credential-domain-review-001.json",
+    "sha256": "317be77ca4dc47271dcdb91a04ce5e1a6b226369a0d8c23b8bd57e71492cf2e5"
+  },
+  "runtime_inventory": {
+    "path": "harness/publication/phase2_20261022/runtime-evidence-inventory-002.json",
+    "sha256": "7183e27476162638689448a018efce2569d2ddb3f997ce75825d97c4d2ea73a3"
+  },
+  "findings_interpretation": [
+    "Trace/browser-state local JWT/cookie values are authentication material and must not be published verbatim.",
+    "Account fixture is independently labeled local synthetic ordinary account and not real external credentials; distinguish fixture fields from reusable sessions.",
+    "No OpenAI sk-key or Authorization header values detected within pattern scan scope; not a universal proof of absence of all credential types."
+  ],
+  "export_requirements": [
+    "Original files remain byte-for-byte frozen; redact only independent export copies.",
+    "Scan all ZIP members including opaque resources and nested textual payloads; remove cookie/storage/login token values and sensitive headers.",
+    "Keep complete results, scripts, observations, failures and fixed denominator; no outcome-based selection.",
+    "Publish original/export SHA mapping and redaction categories; preserve historical manifest SHA without falsely claiming exported secret-bearing bytes are original.",
+    "Named real authentication stores excluded without reading or hashing, with explicit exclusions; no fake original hashes.",
+    "Require independent staged export audit before unique manifest status approved_for_publication."
+  ],
+  "limits": [
+    "Byte-pattern scan is not OCR or exhaustive semantic secret detection in pixels.",
+    "Future generated exporter files/Release body/assets require separate final staged checks.",
+    "Initial slow binary scanner stopped as redundant only after complete equivalent-pattern v002 supplement finished."
+  ],
+  "original_files_modified": false,
+  "uploaded": false,
+  "matched_secret_values_emitted": false,
+  "real_authentication_store_read": false
+}

@@ -1,0 +1,29 @@
+{
+  "request": {
+    "command": "declare_prediction",
+    "prediction": {
+      "disposition": "unknown",
+      "effects": {
+        "persistent_state_changed": null,
+        "affected_record_count": null
+      },
+      "ui_claims": [],
+      "unknowns": [
+        "Only authenticated additions for release 221 were tested."
+      ]
+    },
+    "basis": "Exact output from immutable revisions/002 behavior_model.py through model_predict (model sha256 11694ce5e2b2b948ada74cfdf9f78cf38073088738806912a85e17b838620990, input sha256 ba9cc03af86cb5a084d29fe747aa4bdb94d48abab82220f9fcbbbf381a26b879). Current read-only UI/authentication in evidence/call-002-66834fb3 establishes supplied fixture sign-in, collection baseline has zero /release/1 links, target title matches and Add to Collection is rendered. Intent is adding release 1 to collection and confirming fresh list readback. Frozen model covers only release 221 and preserves its unknown.",
+    "case_id": "P01",
+    "before_sha256": "f821a55ef4fe394a9ababc90335c1aeace2ed1bab9cbcb470645f718068865c4",
+    "model_provenance": {
+      "model_sha256": "11694ce5e2b2b948ada74cfdf9f78cf38073088738806912a85e17b838620990",
+      "input_sha256": "ba9cc03af86cb5a084d29fe747aa4bdb94d48abab82220f9fcbbbf381a26b879"
+    }
+  },
+  "acknowledgement": {
+    "status": "frozen",
+    "case_id": "P01",
+    "declared_at_ns": 1792571197939520100,
+    "record_sha256": "cdc0fd80919a801668201c21091c3086e98903d608e37a28c6ed7bee1baf1b6c"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "BrowserMeme-Ubuntu",
+    "--",
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--user",
+    "65534:65534",
+    "browser-meme/ubuntu-smoke:24.04.4",
+    "sh"
+  ],
+  "exit_code": 0,
+  "stdout": "uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)\nABSENT /mnt/g/Browser_Meme\nABSENT /var/run/docker.sock\nABSENT /opt/browser-meme/secrets\nABSENT /proc/1/root/mnt/g/Browser_Meme\nPID_COUNT 3\nDEFAULT_ROUTE Iface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \n",
+  "stderr": ""
+}

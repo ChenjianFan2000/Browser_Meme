@@ -1,0 +1,1 @@
+{"status": "passed", "executor_cleanup_receipt_read": {"allowed": false, "error": "FileNotFoundError", "errno": 2}}

@@ -1,0 +1,3616 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "kind": "execution_context_and_service_availability",
+  "report_sha256": "1570f65e3c508b180bbd7e772b506ccd8a9ccbee51ca41ab92f4295916297471",
+  "drain_record_sha256": "4db89c21590cbaaeeec4dab99cdca52a2a49b0479badeb4eac97ff9abc827a9b",
+  "generator_sha256": "815787cca3810a19fbb2a14773f8b38b6ef583211e4e7e5624427d6048bd60cb",
+  "case_denominator": 180,
+  "lineage_validator_sha256": "715681046ac373695057ce8b191b5446429e45d2bd3cc6f08d98c1a5fb765401",
+  "phase_counts": {
+    "parallel-002": 57,
+    "parallel-004": 90,
+    "original_three_workers": 18,
+    "parallel-003": 12,
+    "parallel-001": 3
+  },
+  "failure_class_counts": {
+    "no_provider_failure_classified": 173,
+    "model_provider_connection_or_availability_failure": 7
+  },
+  "cli_success_with_service_error_events": 4,
+  "incomplete_model_service_event_archive_count": 0,
+  "global_expanded_case_process_peak": 6,
+  "batches": [
+    {
+      "batch_id": "parallel-001",
+      "manifest_sha256": "8f333b6f0dc19d1adde3b1ad6cbad1cb6e9dbe9c83a845736290bcbfc68e96b2",
+      "registered_max_workers": 3,
+      "observed_case_process_peak": 3,
+      "started_ns": 1792568811847537400,
+      "finished_ns": 1792569743274310900,
+      "dispatch_stopped": true,
+      "claimed_cases": 3,
+      "windows_min_sampled_available_bytes": 10111807488,
+      "wsl_min_sampled_available_bytes": 10081071104,
+      "memory_observations_are_dispatch_samples_only": true
+    },
+    {
+      "batch_id": "parallel-002",
+      "manifest_sha256": "7d5e319c3d7eaa51a28b694795e80afacb85256d86a46ff1a7d4545aa7230812",
+      "registered_max_workers": 6,
+      "observed_case_process_peak": 6,
+      "started_ns": 1792570782588531900,
+      "finished_ns": 1792573360903169700,
+      "dispatch_stopped": true,
+      "claimed_cases": 57,
+      "windows_min_sampled_available_bytes": 4434767872,
+      "wsl_min_sampled_available_bytes": 8900599808,
+      "memory_observations_are_dispatch_samples_only": true
+    },
+    {
+      "batch_id": "parallel-003",
+      "manifest_sha256": "7d6e5ca85d788a9d9c1a697c0178ca1b0b21a2941fb7ce197014fadb72ed8241",
+      "registered_max_workers": 6,
+      "observed_case_process_peak": 6,
+      "started_ns": 1792573699078622700,
+      "finished_ns": 1792574307140638200,
+      "dispatch_stopped": true,
+      "claimed_cases": 12,
+      "windows_min_sampled_available_bytes": 6534422528,
+      "wsl_min_sampled_available_bytes": 9331490816,
+      "memory_observations_are_dispatch_samples_only": true
+    },
+    {
+      "batch_id": "parallel-004",
+      "manifest_sha256": "e0e90d0f5ff878347e6a1668d91a81e1dc44c115e494be60bd10f7e8c56ddacf",
+      "registered_max_workers": 6,
+      "observed_case_process_peak": 6,
+      "started_ns": 1792574471610037400,
+      "finished_ns": 1792578016686260600,
+      "dispatch_stopped": false,
+      "claimed_cases": 90,
+      "windows_min_sampled_available_bytes": 5816008704,
+      "wsl_min_sampled_available_bytes": 9014153216,
+      "memory_observations_are_dispatch_samples_only": true
+    }
+  ],
+  "cases": [
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 1,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "a344c90d4a82fb20efb7e6813d8bafb04448ebba5425c168d56b7c9731eb1e08"
+      },
+      "case_manifest_sha256": "2c5372304cae442402aef2a5462d544866fe796099fbfcd1c38bd7f700caa565",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 2,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "3c08cbeb9412c6c7f6a75c9479864fbc94fb5f68f024b8d19d2aae5bfac6af85"
+      },
+      "case_manifest_sha256": "556fd2bd5665572f0d346c3b72d1c2d9cf3005d4cb7bd71061d0dcfc0d0b604a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 3,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "32192e726ed46586403bd6e29bedd9cf25ef281dba2230a0d88440818b4acc91"
+      },
+      "case_manifest_sha256": "55e18fc261fa5c5a90b751c3daa527ef06569244820a2c863bb23f6b0457c2e5",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 4,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "a6068aa6887cf64259fc1665434adf641f71cc5af4708b718551117a8a2aa7b4",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {
+        "workspace_routing": 7
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 5,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "fe4275e480b9c627f52d4ca59713448c0a690145d8cf734fe84f7d6b6adbd074",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 6,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "45f51ef8c87a5d88e7bc0e855fdad592aa28f2d446c3e0d59cd13a9a5af8ec23"
+      },
+      "case_manifest_sha256": "cdc243e220815367e3cd558aa240833cc0031001b51fe50d16a85f7e22237592",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 7,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "4f32981bcc72238cc841be6f27cd74c2f4904b41df24f06ad91f4ae4e9d7e02f"
+      },
+      "case_manifest_sha256": "23ffd0b2f4945bb3649b3630ec12b16360a729930899b77f03fdfa185686c795",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 8,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "08dd808372b37a5029aa03f5decbf95ba5ccac86199b7826fc7148892c2d81f4"
+      },
+      "case_manifest_sha256": "ed71161e0e3b593605e02df3357a2986d1f8aaa88273d6ca4571904502f11b64",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 9,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "4d7a74d20775d75d2c990abb1bf879be7549d195d4a6d99707185f728a8d6da9"
+      },
+      "case_manifest_sha256": "c4b798f289efa426d737f23489de96e216b1b27eb26bb77b645acf1f99012a30",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 10,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "c222d36ecf16718524516f47c7d17dacfc910fef57a109a9e1594c8d69124c3c"
+      },
+      "case_manifest_sha256": "8a7bba6aa6f04f39d506cfcf53185b7891bc5e24ae6136e024cdbdd6b6b6bfef",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 11,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "1706dc0ff20e52ec47732072048a5bd9a41e0f7b048454845bdb08e1d105f6aa",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 12,
+      "condition": "A",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "3948dc69e0c1f173c78dea0f935ea6bc27f8ff3c7160c45ce33dd91186ff275c"
+      },
+      "case_manifest_sha256": "99fbe1cd8993b1dd837f118de7049e09f020eefda76a1d1ee7eb6e76e07e74d6",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 13,
+      "condition": "A",
+      "schedule_phase": "parallel-001",
+      "claim": {
+        "batch_id": "parallel-001",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "e425e8ab5cefc6c7703821eb0471ba75f3ab6f49d30a0d8e47a3e86c2eb26db8"
+      },
+      "case_manifest_sha256": "78b24048ad454db1d6a9e44b91a288ce25f7d56671c45129cdee4fd1ceec4248",
+      "model_cli_exit_code": 143,
+      "model_cli_timeout": true,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "workspace_routing": 7
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 14,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "89d81083479dfb01e3f39304865428dfdede566d983f9987a0cdf3e0f5c4352b"
+      },
+      "case_manifest_sha256": "075e007079ee06562ad484c3e2a4286e9d43c6b5d2d69c5a2f166f96683c7a7b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 15,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "d0e53dad32783b04562dc5fa460df00bd4dc13a22c812bc76da27ffd1f578da8"
+      },
+      "case_manifest_sha256": "538c5ef8e848e6c674ea971fba12ba8961234a3723f3ad8ea30c12ee7edf7364",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 16,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "7e01d176220ee31f8f4c1519721f1ce176f8618e94ad6319186470bb6444d4c6",
+      "model_cli_exit_code": 1,
+      "model_cli_timeout": false,
+      "ui_actions": 0,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "workspace_routing": 11
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "failed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 17,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "cfa550319048c10a26ab01fe956a28dc8d67c9fd549ff5afcb1e928d3fa33970"
+      },
+      "case_manifest_sha256": "f857e34ed96e0b8de53e5184aab1b1d56e734daffa2634f8c67dfc04b15b0049",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 18,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "5be5c9b848c1e6c3a80c68b4d1b6942fcb753d8d30b99485076f79505db904e6"
+      },
+      "case_manifest_sha256": "6f2668a0361aea72ee7937aeb14c17d0c762c355fe15e8b8e74f6db3693835cc",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 19,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "2182ca3aad3a249c2a0056cd7271daede6bd4c6747e8d6dac7cc29d4f2d1cfc0"
+      },
+      "case_manifest_sha256": "33bd4e7ab447daa9981bf5d805c0ad077302945043f2f52b819e672c55d28450",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 20,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "8d2b75c33a349b2319003c50c00e621eecc61680eb480bc19be0070b3483a68d"
+      },
+      "case_manifest_sha256": "d104e1498152952fb6ee8ec8c3bd2725538eeeb5e6754d8a02581faf5b3e60ce",
+      "model_cli_exit_code": 1,
+      "model_cli_timeout": false,
+      "ui_actions": 4,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "model_service_connection_or_availability": 2
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "failed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 21,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "66686d02d345660f203eebf15e0cab093e0cf1af53b705870b2bef3c8d19fbe8"
+      },
+      "case_manifest_sha256": "ee30126090795a8ccf0d565d28944baf8a802c6036d30f88fe5118e2c4452a8d",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 22,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "32930dbcad6d5e7b1f7f3819a5a5d96578d45a2aad2f46fd804c1f0cd9d9a27e"
+      },
+      "case_manifest_sha256": "6bdb6116843be96a0ca4c3538e71b3c0146336044729077fbefc29ac37117846",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 23,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "aae3a325790503220796985d102a9b08bd957b774b9323a97946a866cb9a56af",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 24,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "0f88cacff216e70c8cbd7fbe7b0c5e6e5530326bcc799eedfa60dad7efc21b76"
+      },
+      "case_manifest_sha256": "959eb3aa33625164dcc34881afa310a35536b7a4cc9ef849a46c5b36df04e590",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 25,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "43e714b0a1953b70e02e927b2ec96c03d405f6b34df290ff27ec2bb9d361d717"
+      },
+      "case_manifest_sha256": "5570d904d639cb2d8a29572c7861ba4e98372323b08ecaa052bf3360130730ed",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 26,
+      "condition": "A",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "8af3c799f2ae44694bb069905bb560b84140ecca68051cb46414410a87d9e085"
+      },
+      "case_manifest_sha256": "25eef5dec567ce967abce7db7eebae4a11ff900254561532d2438e459eace172",
+      "model_cli_exit_code": 1,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "model_service_connection_or_availability": 2
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 27,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "49a8fa4c29502a4f90788887803bdf2ca43a3b260b289a71b8cce4e2385b2942"
+      },
+      "case_manifest_sha256": "56d713b7cfc2e8bc748efcc55c18efff4d6084c9aaef08dd62405b759aa77090",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 28,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "e64056a996137cdc1ef3bd9e18f6b3b2b9bbca989614ba34e685f1055b290c84"
+      },
+      "case_manifest_sha256": "e03ae19775d3fa9f8119291e2004a7e2cab8d9d825e89b45e84285e1d3099d7f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 29,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "fb54a66c5d94ed8b8b3898aba9ace1c77f4bff2a109a37407906df5b08bf0ad0"
+      },
+      "case_manifest_sha256": "abf34216a00f3a7e450efefb816472031b01a4ec6589c103ffac3d9d8b3891d2",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-1729",
+      "case_index": 30,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "dab508a81480794d0ea8670445a11a26724faf8c041db06710eb7c2188f1e9ca",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 19,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 1,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "8e117507f0f34ce4451da2ce09b8d1fb91431a2c3e9bf2e5f5e2c4b9780e884f"
+      },
+      "case_manifest_sha256": "61bc3e3c48f369077ee28d359339b08c27e047ee263694aa1dc6f21960a5d077",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 2,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "9beb35048b4cf1ce0055c7329c99a4c81660daba9c1e3949a2db9857340b19a2"
+      },
+      "case_manifest_sha256": "cda4d550fe4b9a84a16a6a52b89b2740bec8b48771221c13f7684dc0dd253512",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 3,
+      "condition": "B",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "f5c056f1f1edb6b17e12f5abd7706b1161a74b1737f4f3c6411b48db7928b5c0"
+      },
+      "case_manifest_sha256": "8155d332d49a03520cdb99146a09caecd3f5c53fa01fea426c202dbeee4f2e6c",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 4,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "89fda17a2dfa03c992c568d767363171dca8c6a6d29dd6e4b45c3c11f493396c"
+      },
+      "case_manifest_sha256": "68deaecbeff5b69df0a4a5d56df1eb5c30f9332d380ec17bac87b88f41fe7440",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 5,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "91020123aca3d9fe90445384896c6cbaf7768e32731bd5a82b73d226518861f4"
+      },
+      "case_manifest_sha256": "edfb13c673896ba850e5e156ef6e9357e8247088e8689c4937431cae7debdd9d",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 6,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "56f7de694c81ad6c759e9bbd3f80e957201c0a2fb63f99ef5f567a915f8fa39d"
+      },
+      "case_manifest_sha256": "14d0e07eedcd2461a7df2955f341dfefd986f79c235315b5d68375891712e1d0",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 7,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "817c52b72162d20ced34971667371218637b77add55018a5a59108c356de8b46"
+      },
+      "case_manifest_sha256": "1b663c574e566ea1bdf9a3f5d0a0dec9807663ca93d9c41e306ca0fdb23c0c19",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 8,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "326161ea1e47124b5998c5e2827d63f84031c81eb35075c44b63bb0d0ef4a8d2"
+      },
+      "case_manifest_sha256": "8c48ab42c0390226ae48fc74a4d2bc268ba544ae6b6db4b3537cae8e4cd89b2f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 9,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "77dca87d6f023c1a1c3a0f193afa93f8fe7fb5c8fd36cae4afeb0c9c9d21fea3"
+      },
+      "case_manifest_sha256": "424a07c3bd1b55d5bc9b63414164b9a6dea278701a291516fb83dc47d1b8d709",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 10,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "8cd9c9f2d6deee3b1b3a2ff64e6f51e2fc4d81c426b1737092d165fc0d9b33bc"
+      },
+      "case_manifest_sha256": "ab4d7193d459e3867017825804e38ae3266ea069d1fb8b3c224df2b80222aa4f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 11,
+      "condition": "B",
+      "schedule_phase": "parallel-001",
+      "claim": {
+        "batch_id": "parallel-001",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "7e2ff4e895b253556b6e54df55d2e99d65bec7f6a105fbf55366cab33dc3d587"
+      },
+      "case_manifest_sha256": "73447fc5f751f63e899bdc2cdf267228de4326f9e8c93720958013080fafd127",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {
+        "model_request_timeout": 4
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 12,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "7e80083300a9c1f4f527c70a91645562f4dbb5343b75ee06141235c818e04f9a"
+      },
+      "case_manifest_sha256": "4a5a5163c873d73a7526e877d4cdcba07379f0f1a2149d3e7ca68e488ca0979f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 13,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "e00aa50c1423924be0f6678cacea5bf71c14045fb0ac37e11a78d74551edbe58"
+      },
+      "case_manifest_sha256": "c00e03697676fb746b5c7abd141915b858cbe3b85a07cb02eaf2072e8ebe7e1b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 14,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "f50800788b51de0add5d8959d943a60f4e36879eb598014b345e670c63d12374"
+      },
+      "case_manifest_sha256": "fc5dda09f9b4eccb50462686f55637589142eebdf786f3895bf581a4e764d30e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 15,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "d9d17c049c4ae34dc7a0be3befbd543012d9c175a9126bdad57d88caf37acad8"
+      },
+      "case_manifest_sha256": "6ddf6d7dae0ae0c2ea8c6b2562bb0c423b5282917043ac62eb1a78fe8bf76ad7",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 16,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "6018096ed8f2f0c4c20a96222a9f03e8412fe9580fe87ae83a88fa6104d40099"
+      },
+      "case_manifest_sha256": "f9b2ea3f01b33b56bdfcf3ee55ba12199c022c4746a9a39c783219bc1e99eed3",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 17,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "7b504baf1c834d3bc16faf2bb946c4194a893528cb9b1e731ccb4cf284a996ba"
+      },
+      "case_manifest_sha256": "3941cc1f7a038a49009332f96b823731e797255297f2664cd4e8dc3309fe26e8",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 18,
+      "condition": "B",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "d21279a2ea5026e0084c691a9bc4bc0f592a50ca160e1b658333780f7f82aa6e"
+      },
+      "case_manifest_sha256": "5d1ce09ea507042ffb47f85127eb958f13e287cc3985e08a86ae79fd8d059465",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 19,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "c8733c0bf18dc79d9d1411ddb3ac02e41d1eb32ab13a5dd01c918c3b888ea9fb"
+      },
+      "case_manifest_sha256": "41a56368a96548e3ad3a01e53a744967847dd7e65e0b86f1d150e8cab5bccb2c",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 20,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "204e7f0a3c86d74e67a6e69383af74a0c6d1e99542ca26be6e833d509c33b30d"
+      },
+      "case_manifest_sha256": "4c69712242fced11fd2e1a96fc57aef5640bf24be9a6166f082962391ccfcc58",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 21,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "81a579988ecd2afbb8bbdeb723e0b48f9977d71f1abb2cfa8ee4640ba4ccb8c4"
+      },
+      "case_manifest_sha256": "f1b888b78cbfcdf313c736f1d8bba83b19171f5fcaa552bbca3ed47d1189349a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 22,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "e3e7b78c43a35ddde3be56ca41f5aa51697c05f7154a9cd15a4d788be95f8fb4"
+      },
+      "case_manifest_sha256": "d4b5cfb2e5bb3597cc3e3c915c8093147c7b359a09c14515c728d6e7ae60f131",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 23,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "5d7e963d30b5e696c66a5256fb8d8f7f3d4ca84f4e7d67121611c0792c61a4dd"
+      },
+      "case_manifest_sha256": "fee2ac86cf72421b39d96e5ebccdd6593a1532d749e17ce43c29351a37464619",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 24,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "5344dd24fbd73d63dee0d56504dadc8632e079044f785d35c989d6007ac51ab9"
+      },
+      "case_manifest_sha256": "bcf2d597985d513daac5d0fac17ed2294c567cae0474c19b6f4452f84d33b00a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 25,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "0961c49a6fd30ec187467dabc5800b7a55dbebe48bc589c4cc6f5e8accd7afa7"
+      },
+      "case_manifest_sha256": "5623c03d9d6dae90b87cf611ce409ac14ea4b6493adb0f88fde5d65668660692",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 26,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "c47c85c8e5d6af8f3a5323a368faaff922ae39e374ef124fa0ab0fd9605b4841"
+      },
+      "case_manifest_sha256": "160d59629f3cd06379e37916ecbe96b1bbe475d3b35d54b19e49089598c259c6",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 27,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "1007ca541aed174d5fea6c3407c69145d38ff30a4dd8882615df99bf552e773c"
+      },
+      "case_manifest_sha256": "38193baa4a7b659c86a064d9838d92457628be11587d36274965bc434d7b2029",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 28,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "73acb1a9ecce8f0c4279d00ba0d746752f3292c0463842113aaef94ae01f1c93"
+      },
+      "case_manifest_sha256": "d49377fc17514ad0c9ec8fbf0309e02a2d3ea51424bdd1efa3bdb1c38af5404e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 29,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "4609e009c2b4818eafa0669ff2d44eb1f2d5abe47ac162af680985633aad5efd"
+      },
+      "case_manifest_sha256": "775672308f375337e2bc2e8d1d5aa4717aabac0f26baa14c14e6992725e5a8d1",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-1729",
+      "case_index": 30,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "096f5506ce6a59e78ab798d992e31aebe59fd5c4c73aa09b2961b6017ca306b3"
+      },
+      "case_manifest_sha256": "3da2e5bba3e600a17abfd82f3e72228852cdc842031656e5962101e97c860222",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 1,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "c283083efe950db5713c95ca53a9f873dd352421880a3e71c4fcd284f8f04d86"
+      },
+      "case_manifest_sha256": "17737cccf741674766e087e626c3b4c1ef5aff293c1d2ee6d406812c32726b9b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 2,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "93d037bd6d4f423311426b8e471db19890d4e34694292519c8fc993a6f6893a4"
+      },
+      "case_manifest_sha256": "03b829f54a5dbe3687b7e24f84a32f1c3f3496ac1142c91b0c7410e4c7610c27",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 3,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "af5f9cadb51d9e959ecdaab63fc22d52b72d9290099e5586f171d2af48262eb5"
+      },
+      "case_manifest_sha256": "571f884ae7659d58df044d936aafd0a9e66e12d917134aa074383cf161dd6f6e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 4,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "54f3e123ce4116300b6bcf555a59ede2a36070d1aae89dce719b8b73c668ca21"
+      },
+      "case_manifest_sha256": "4d1bedcf02dc8ebf80ef95a6f6ad2346bfaeffe806e90a4109222f24856fea31",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 5,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "a3ddf81c94ccfe42c2e49f95bacddd1fd5279ef7e1d5045ccc5dd642997f6965"
+      },
+      "case_manifest_sha256": "8a25f9d3ab53c4d0df24c1883b0823a17a91561786a156b164803b00d73cba99",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 6,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "eb56813bfb123e64f0f3f20a8573de51f39d56641a6aff6958a9a4639e327544"
+      },
+      "case_manifest_sha256": "c11b44bc1f241c77f138f0ad0c22f859fc62d38d2223097f1688a80d57f37c4e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 7,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "58d268cf8d87c163d6a0151f0bdd644872364556cf68d468142a7f0e83affb2c"
+      },
+      "case_manifest_sha256": "de927b9bcdbfd44a2fafc7b7d09946236926b88d27771a8c72c4389f5443759a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 8,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "77f76ffe64c929bffb9d7499e0d08b4d4276d275f3426aa581d352dbc8205c35"
+      },
+      "case_manifest_sha256": "15a3373ee4aec9df4ae3c8b419dd3c0aec19223597ae81a97e20efd327d8183e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 9,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "716bf2f65bad51834a8b0ca2d09e2fe27a2d207faef84f58fa6729d3a311a7d2"
+      },
+      "case_manifest_sha256": "ceb471af5709950db8215a7c16c57b0b35729abeb4b9599d2011ffecf263c5c1",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 10,
+      "condition": "B",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "d4473161d6d44525ac67b03cc73d1a67f3a77d1d7f25b390a44831e3c8f19c93"
+      },
+      "case_manifest_sha256": "4a52d88cf1d7fa50e4d2df4275430cc6d7ea6a6ae2666e59f4b4163a5cbab61e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 11,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "fdd1e37e2d8750b6fc407c61dd042c502321dd7101cd78b9d494ce7ad187378f"
+      },
+      "case_manifest_sha256": "e6614d39ececa9a22b90a84a26a711d8cfaac8816738893c0e3408ee8c5e9441",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 12,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "1a32050cb5d5e6c591d389634a49e64ac828664d95175b0cc791f1b11697ef3f"
+      },
+      "case_manifest_sha256": "ed6ae4c2f4b7cd2eadcd56358de55458f4e7e8f43676ade728c4fd56bfb02793",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 13,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "923fb789b9b699b92776bba9ba2566812c8ae774c22d4287ba7907e5491e82d0"
+      },
+      "case_manifest_sha256": "263282f30b560eb3ee65f358734c8c2ff9d13cae697bdad7ab74c95b5646a25d",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 14,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "ab14cd25dfac92943158123d5f9349d5ae486951aba4599d9f0824df4a5321be"
+      },
+      "case_manifest_sha256": "449ce220cc381e4bfe284194f3c88427736742525fe98ece5ec9a4fec2048b5b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 15,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "d854949efc10acbbb0a4db038b533310f4ca560dea310879561a33f9a02ed8ea"
+      },
+      "case_manifest_sha256": "03ee3f9276f399132f6681fe9d7753b13b3504bfb7001ff8b10448551ba6e103",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 16,
+      "condition": "B",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "ebc581a587be0221d51fd8ff8698adcbec3fd7e92d352951718edc79d08854df"
+      },
+      "case_manifest_sha256": "bb061c48b8c10f4c6d9658919d1dde532d36266e2c4526257612030612ce41b5",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 17,
+      "condition": "B",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "d23cae61da18b618d59e1c00a923225cbd2cbb3f3ba47252d582d0cb2c6f3309",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 18,
+      "condition": "B",
+      "schedule_phase": "parallel-001",
+      "claim": {
+        "batch_id": "parallel-001",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "7117089b7b3af225ff6c48ea25653cca95069dee06ea645b2ff5a180551a1370"
+      },
+      "case_manifest_sha256": "ee095a3207896cd55feca5c4c01c77d62d41ef1dd399943fc5807c1ec86ff223",
+      "model_cli_exit_code": 143,
+      "model_cli_timeout": true,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "workspace_routing": 4,
+        "model_service_connection_or_availability": 1
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 19,
+      "condition": "B",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "0e5edcc037a25cae8cb84fb1d9be3839fb6c977cef417bc1e8031ab2a71e0543",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 20,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "055b5fb062b250df011d6d969a4389fef787986efea4227f7318259092111063"
+      },
+      "case_manifest_sha256": "7e7fb326adc7ef938a46a3768c721cacd4a127053c7708a8fbc83e7774a8cdda",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 21,
+      "condition": "B",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "d07764eb8e0cac62cf83360c5ad9390b9442951032bad029a5d625efc84dc61a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 22,
+      "condition": "B",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "75d378e7790275382283544e6064a933a1eed1dc178e7d886d4ad2b0d3579222",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 20,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {
+        "workspace_routing": 4
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 23,
+      "condition": "B",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "30113c0668be15354b492d95f1c1ec476dceb87e0e8495ff5a30000232174e1f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 24,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "ebbfb7ff7301c5e6482896a93685a71f5392ddb50348b915941e9e79e74c6d99"
+      },
+      "case_manifest_sha256": "2890b1639497e69e688c34df1f871645042289ac4060c9be63900e0cf769aea7",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 25,
+      "condition": "B",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "7631f708962d6a0d7eacef0123df995d0239be1b44e691e2655d7a871c27c1cc",
+      "model_cli_exit_code": 1,
+      "model_cli_timeout": false,
+      "ui_actions": 0,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "workspace_routing": 11
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "unable_to_confirm"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 26,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "4e420a1c5077d521cf9a1def353a8fee97a770cebf283c5abc21a7d13ffe5b6a"
+      },
+      "case_manifest_sha256": "cdeb670401ceae01944865d53e88949129df2a341323c9607502ab956cfca304",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 27,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "f70c4f37f5d980b403693dcc71827c6b971eb6a44981d850995778e158a8d922"
+      },
+      "case_manifest_sha256": "9d9f95fd04b5cef8fa8d30b47f25df971a5b0028a6847d9f8edb3b989c35e12c",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 28,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "f6b9399d07ca1a9de8f4a4dbd6919ce7732a802ce54e73723a0b591fba97b00c"
+      },
+      "case_manifest_sha256": "681b187f8900bc375fc9a66f86092a35109b2e400886bc89302a1d91763737cf",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 29,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "76b30f8a742e701d3902d480c5ade627fdcca4d2f0d9174f1803b7b46015e657"
+      },
+      "case_manifest_sha256": "25bd6ff6a6fd10a026042bf349aee3e06ede4729b062616dfb6bacfb716333c0",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-2718",
+      "case_index": 30,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "0be838751594e4b6213f491bdb925415326d85e5499b716cc1bf6432e5b7249f"
+      },
+      "case_manifest_sha256": "0b19ae0c2adc311d60f38a714ea61bc1d6669e0f6d055ee8a5d63b2978ab6e8b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 1,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "c0ab66eaa91506990aba5ae43a6162dcbe4dd4f51e0299df68e429490ada7576"
+      },
+      "case_manifest_sha256": "e4ea72bb05687687c37415baa94367d1304ec25700a8962e980ed4fda7b9146e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 20,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 2,
+      "condition": "A",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "b1fff9df6e60fd1fb92005e22d8dbc8748bcdfdc33daf61f2934fca0cdb64aa7"
+      },
+      "case_manifest_sha256": "8cd40abff8a1cde6af775c32648768d5a4a042dc77472a3bfd0a21b3f5394ded",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 3,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "ae324e3bd79c11b4a7f29b94a8577365cbf9955b84e235f0547ba6dcc7253c9e"
+      },
+      "case_manifest_sha256": "5fd4624e8e2248c116f9e45e2a0ba5f2f7f179bb0d12fc64cc1a61e4c8eee8ee",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 4,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "0c03f74a24461d25351cf916ace88c8aac08e260919b4947d278b248ec0c772f"
+      },
+      "case_manifest_sha256": "32a52813ea8bf088bf4565da9046bee654cb6afe15c4904925bd1dfdd65151dc",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 5,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "199989abdaaa29ffef95dcfe6cf982d286d8d84c6c874529b1ce756b3fb445df"
+      },
+      "case_manifest_sha256": "6793f8e7b3f35094f3105e72a40087d250193a20c8e0e5d46dd0e27eb111a07a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 24,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 6,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "d01c1d5921313ff018581bc1e7786cc2190d3d304d16143c19c23efe161e7deb"
+      },
+      "case_manifest_sha256": "3d46d2b08e9c2c8b7089d2e122927402d4f84d7155672be457e9dc93191c1bb5",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 7,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "42003661caae174ed812a6ca1996639c9a6bfff0e072777628839a29d067eb36"
+      },
+      "case_manifest_sha256": "11dc9b8ab2f3973a785c2fa9e838a8fc94e5d90a4237a6436368b0199fb99065",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 8,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "8b05d29a899384971789ff072111cf09332845b4c2287f6205585aa4f4d1f11a"
+      },
+      "case_manifest_sha256": "1d14cccf59665a2af185c20af757ebc3960f2d63266696718a9b523b827f3ee1",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 9,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "7451ce435308275e52d7409427e12b68cda64d11b5a846c03c7c5cb616fefcef"
+      },
+      "case_manifest_sha256": "77ea40a0226d95e5b2f731b8d7db314ec4b5525d4015ba568760b9204185784b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 10,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "758666927887cef6d4bc1bb94d7e655c70b2e37816c561050e42e7ce5272534f"
+      },
+      "case_manifest_sha256": "70a0bbe9e72b7a163323ea401060d191f0b6174dce8cd159fbeac71d075ecbf9",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 11,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "71ebd5a0733258adb25d2a7223d20f30d062eb7dac6f8468880b946669e0753c"
+      },
+      "case_manifest_sha256": "e62b2a228e710ab1061af5cfc642d5d70221fc7dc3abd1c6c8a6c61fada5ef7b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 12,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "7de664854b288a28b212a68040154c521ac8364d6e510335d196ada2fa06b3ba"
+      },
+      "case_manifest_sha256": "2f8a80a07879f526ce45a212990760f5833e964e5ea89241d7038fcd4f02028e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 13,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "00c5c3660c64546d6380aecab1f89e6b0a11215202eff6e2857dd8066ac03cb2"
+      },
+      "case_manifest_sha256": "538683792a8726a3fef01d9fe2ced4d5bc3aaad8c84e35e2c3088a475b52ae0a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 14,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "6884f6ebcce4de069525afae9728b1ef8fe605bd0702ab1ffe9fc28242e7cd44"
+      },
+      "case_manifest_sha256": "f6b6947078f8357fc0b1a5892aca1796d75ccc17b1bd6b58e55a3d1eaf8c5acf",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 15,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "9c6e4717c1ecc3a0175f0b96c307ec62146e2798e582179f4fb0507fb133d605"
+      },
+      "case_manifest_sha256": "820917a6230b148d0603c87b7f0480f91934fca477a42a35add34f84eb69de42",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 16,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "5eaf6a61fcef7f56191238839aa62136b1e72119cdce5d9b444344e1e3c2212a"
+      },
+      "case_manifest_sha256": "0c4483d4c66c7b59445ff95bb28c0be96625c9fa50498b45c2fe7d2a03961ded",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 17,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "aa33f1238ee6556a6d7f67d13cafa677bc99ef3e07846592c744c1a434fe6cc8"
+      },
+      "case_manifest_sha256": "e7c1dd34d5dbf839a205fa43fb7ed72ca3b2711696b8286e1d9e7eacf6829b13",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 18,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "2a2407471f1951cc752c307b9815e071673b7790402044bc0ac30963c1a72ce7"
+      },
+      "case_manifest_sha256": "944da0593e6a43b14a83a226eea01feeec9b2996d94f928636a3e81c38960a62",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 19,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "8cf8a6d553083a61cb71ce2d71b126e25580ffd9f6e3c07c38844bb1b724cb9e"
+      },
+      "case_manifest_sha256": "89fe19bb0866e3c0cd2a2579f5709071434fd6ba31f145f93b39fd19bbcf576b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 20,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "c28a3f9806bc66aa3a64ff287734f81bc4e8a1dcb04bb8b74abcb312f0ce7406"
+      },
+      "case_manifest_sha256": "54ba54eb3ca9eeb89d7b5ad073b02dfa8fb1f33496bb17f5e5f1e80b7836dab7",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 21,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "5c0dbf2244574a822467f18fe6372b309b3ebba9623975dca0b18d27bad20b0b"
+      },
+      "case_manifest_sha256": "eeea1e1ce0b2c04312b70d5419f095c6e1e35f1214d46814f15c0e7d988e2f03",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 20,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 22,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "d6d23aa4cec57c33f9874c11504264ef6a362c3b385e7f8a5928d0364e31b53a"
+      },
+      "case_manifest_sha256": "9066120b2e7953f5d070a0162269baa24fb522dcf744b78de382222f465128bf",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 23,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "8519c96780fd30d7ebc4ab26195eb766499d6136d99631bcd7bfdba52bd2bb39"
+      },
+      "case_manifest_sha256": "409527a1825ce55abbca8e614d06b024fb8dc1a83c203dbaacedd28df78ba161",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 19,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 24,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "4f144f87e8bf8f5acf020820a902b6d851d1485e2abb7e8710e0eea0a32ec209"
+      },
+      "case_manifest_sha256": "d524bae082bc72a2b5dc5c0fa4dd7522c0988e8653a06cf8905a10a143f749c2",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 24,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 25,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "c5b9436d67709c89c2fb1ce5c9a8e7eaf03b11ee0edebcf30717018df6841fd8"
+      },
+      "case_manifest_sha256": "292277a8f619a76cd085195bb74a9b70fd11b14a63a077bbcdbcaf4bf249e642",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 26,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "ad67a42aced3c334310be4a18c5421c9a3002acc63a5aa02de93e3edc6e2e484"
+      },
+      "case_manifest_sha256": "afb81cd44ff1231e82caa4092a37ec48ba1d82f300b44e97e759c0ea427ea769",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 24,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 27,
+      "condition": "A",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "66b91d0637b8bdd34de8947580c47d01038b36df6dfca61a6d9043f02715c2cc"
+      },
+      "case_manifest_sha256": "5c4eae29f23de61ee33b197d1adbc932b402e892a2042d3669ae757896d9a8b2",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 21,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 28,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "2226e8b1dc00a4ca24e433798794c9f272fd379bfa2e88cd7cbc112651619a0c"
+      },
+      "case_manifest_sha256": "0fc822fb0ff269ad9ad304d46e6fb4dc87d6cdb6dc97edbb2eea7426b3d4990a",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 21,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 29,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "b96de3e6a92625476979e86bdf5b76e64f78c019c616e73c0aa98f2a4fc73afb"
+      },
+      "case_manifest_sha256": "d108b92783e8657f377c7cb1a45a59a4cefe24f263bb90049ea2873f9780fc06",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 21,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-2718",
+      "case_index": 30,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "13c97a1cf83315b3b24cb9e05bb3c4c74c44f9c23c42b3e1427d7c715897f0ff"
+      },
+      "case_manifest_sha256": "4db8da00e659e3024afaee28fd28c25daf3cbf9eaaf044beac75d8ee1788b9d4",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 19,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 1,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "19058b0a951d5846fc09678df7c7b10fba4bfad6d118a081542ee8e6d887a7e0"
+      },
+      "case_manifest_sha256": "5eb37008ebe49cf08d208a4c659b4f03715a450885d52877fc7e4be39a71f93b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 2,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "d7b4ee409201b9f6f5029badc5f6ad1aeddadd98087270e496354e0284184b83"
+      },
+      "case_manifest_sha256": "3cdd032d11a8ee94e53837d4123ab7133b2d733d6b921581762bf67a159d8f08",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 3,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "d4917e1bfa979e85477314240418954ad4cca0e40648d9959b0f6a3f52e4dde0"
+      },
+      "case_manifest_sha256": "7958ee27a6a03a3ef9d57dac41b07fd1b0f6ea7efa2d7a53e2e95aa1da68b8d9",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 4,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "635758afeda92b05f17dcc0d3b53af9f89a717e06db5505edc7ae2d5d999f3a6"
+      },
+      "case_manifest_sha256": "23fb19ea7d422289ab2d84073f422540877584b88407fa5f88f85ef08d54cc22",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 5,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "126a707dc47033d1a7079c193d3839113581af1ed58257825a7befd93cbbe672",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 6,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "cce87a0e8d17024e51c6422bf416b216fb30021ac0ee73afdad028685351ed62",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 7,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "68cf7f6fc8a973db5ad7e4ff0652b5375ce5608014efbc788a3f7949a1ee8053"
+      },
+      "case_manifest_sha256": "0b5736695fb248337ae21158a32369a28c5d569717e04929e08fc05d0eb60717",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 8,
+      "condition": "A",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "83410f2b127ad2a1b16f75284aa32e3b256d03fc56386c4f84df51327af3abd7"
+      },
+      "case_manifest_sha256": "715411ecb2470a5853ce55bcb86968b3412238d1eb25d7e540707993182fde50",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 9,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "dbd448c11e44c2c59ed68ac10df6a0e28ee41d2ea52648de1f0a0c65be94c318",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 10,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "eeecf154b2de3ea8a1992adaf1826d9c06d70e55f0de04b6239b5d4035a924cb",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {
+        "workspace_routing": 7
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 11,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "90afe30ceb1d47a41cfbc858e5290db817764dbdc6cea6f43f5e67dd60f35917"
+      },
+      "case_manifest_sha256": "fd695eb7521619895e205c6382d531bf434e5952371c46823c436f820116ed1d",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 12,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "9cb6a2b2980be0e755b291a2a8273bba76b86308eae16d83cd5196272e32a586"
+      },
+      "case_manifest_sha256": "d5d6a0ebb846cce372072f85baed3661d61651d879f6860285b7cd80f06976f7",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 13,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "46b701b16a4da895e07d9bee6d5bffd46f4025e1b0c6f6c7ca8f4259973b1ce8"
+      },
+      "case_manifest_sha256": "bd94fe41af3c63a687a90531ffb45ce1136de437a2d47a2c372e2de2cdea724f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 14,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "2f0e1f4dc09e16d5757a816b64cdbae97e4019c9384a4243eaf30989766d6270"
+      },
+      "case_manifest_sha256": "98d8f17b6644797997e796fcd47f621b598c255b247a4c3134d77c0fa09303a6",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 15,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "ab6f36ab674904e793cbf90572074480e9f883bc060ea6aeb6b60b586ae6206c"
+      },
+      "case_manifest_sha256": "bb89e582e947295ba7b2a3f264a875b1f7d9f312d2010c824318f398e6463631",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 16,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "e20d52698709b6fe84c0ea5a8c376fb1650cf51d4ce922f77f13257bc20d75d6"
+      },
+      "case_manifest_sha256": "daf0752209ee36498a32dc86d84e1103ee9702d3fe93a990f41fa5e79bc02072",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 17,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "38af12b2db2015b19d4b97010b90f487eb8d932adf200512afc7361ccfaf9073"
+      },
+      "case_manifest_sha256": "fa93179bb73ccde48340f5fa2b7129290e7601ec2687e4c707b747072df47a50",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 18,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "8b94338b375269e9f2a07600cca02e6df395d05e4e897dbe57d5afcaba14d767"
+      },
+      "case_manifest_sha256": "1d87aaee728ba950f27421cac2eed8560bbdecd3cbafd399f1e54d1507460291",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 19,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "8a9ba6922cc0bfe42eb6411ba89d0683e2ab5edd3c332e77ad2fa6941ca97a7b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 20,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "a30e07d88e2e548e3ec845bfc99533b3cca5e9f9d39e7a0d623e78620f7330ac"
+      },
+      "case_manifest_sha256": "f7f04b9cd67f6a4bea1251aea078682c8f4a009a333cb55d4a719fb907d07f5c",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 8,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 21,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "5a2462bb910b53f146fe3791f0a21f7cc661170902b15a7cf453f04ba09cd909"
+      },
+      "case_manifest_sha256": "5c7267945202cc4423b68a082bda55d5bb7a086ca2806e1c2dccb589650c6f74",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 9,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 22,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "9c87fdc3daa8b3fab7622797bc07bcf8933acbcca40a50136c5107638033baf6"
+      },
+      "case_manifest_sha256": "8d3490b57d5a6f4033ecf3c2d5a260e4f748ac35cb8a6024d5a7a96850dd4321",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 23,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "3793295130f46123e8291eb64bd52daa00f43e7b91dd17080827afd5aec5fc94"
+      },
+      "case_manifest_sha256": "7092613e2f19e19eb2be24c8661216445f68a09292f1413c7e2413d361915208",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 24,
+      "condition": "A",
+      "schedule_phase": "original_three_workers",
+      "claim": null,
+      "case_manifest_sha256": "dc035cef1ea6a06188b945925ee054d82cf8584d96a1af395f7743f3a2717440",
+      "model_cli_exit_code": 1,
+      "model_cli_timeout": false,
+      "ui_actions": 0,
+      "provider_or_cli_failure_class": "model_provider_connection_or_availability_failure",
+      "model_service_error_event_counts": {
+        "workspace_routing": 11
+      },
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "unable_to_confirm"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 25,
+      "condition": "A",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "1a2c0e31085f175de6c7b4d97f89e851b72f0ec72e48bd3c90b857dc19c4727c"
+      },
+      "case_manifest_sha256": "68a60eb9544850f35a746d539706c3630dab8b3b0c3ee635d4c6b8a6831fb73f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 26,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "be3f18b4e848f731cd12f72057fb2c0c3981447a777386bc23161cfdd64cba5f"
+      },
+      "case_manifest_sha256": "eed2ddec8b6c848e9849ed9c95e65d561c79a26090f2e43b6abe9b3a03e84c9e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 27,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "64e0af9c1a5ed47b89dc4c3eda647e3fb21402841432390a5a481f197b95416e"
+      },
+      "case_manifest_sha256": "3516ab09e0de7c974b614aa7d9755138761594ead0483f8deab7cbcc6699ed55",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 28,
+      "condition": "A",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "6e90f15892349c4cb9b011124c5f7dd0bc472c70503eecb7aa61f305bb5a8dfe"
+      },
+      "case_manifest_sha256": "7e32a45f3cc41b8f1878787051259380b484e5a7d954141b4a2a92981526b391",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 21,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 29,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "435f047cac069be61c7fb9f459b96f523a8ce880a249897af8ecbbff0b2db2bd"
+      },
+      "case_manifest_sha256": "313fe5c801ccd89fd05aa4ac4e95df185c0412c48835f25be4de0ef53ed82279",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "a-seed-3141",
+      "case_index": 30,
+      "condition": "A",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "8f5c8b79f0ededda24ba6323d25bebd1f7beda6db346a9683551fbe3296fd201"
+      },
+      "case_manifest_sha256": "122cf83742f1902a75eab527e58eaf89748d12beffe29d7f18fd51255d046d52",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 1,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "6a74424e69ced030a590b82eb6383ea389572ff34199f9f236e2bd651f2d9d10"
+      },
+      "case_manifest_sha256": "e983847c20728991aac7947312760f59b75eb9511ff987fa76ce4145193ea5fe",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 2,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "4457d0143bfeeef842e154992cf0b6de966085d7fd82edb92d7e0f4148d1fe77"
+      },
+      "case_manifest_sha256": "93e9dd533686267691064bd99b94f6794b91336d647592ea77752aa4496909bb",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 3,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "10b1d05e2ba4a1b4d1bee91c647d4efe9faa820de12e509a30d056d056f906f4"
+      },
+      "case_manifest_sha256": "d8e2f7d076d584efcb8b2c1a7c6758f4a56d08d496063f3cc944a129f9d40812",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 4,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "d1fd22c9a3f135d9f37e41098650bbfdf11440c84dd26135605255d1d2e950be"
+      },
+      "case_manifest_sha256": "0f388f14709dfad6ed2edfa648edc138a63d2d6415a99af5df7e1e03cc271d8b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 5,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "d69f97fb868b703da20a79ca8b3442b429032e5b2985e9f51104c1303f24aef1"
+      },
+      "case_manifest_sha256": "6f5d3a3399d95dba64f507b5f060834eabd19ccda1655db612d1f6a7e377294d",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 6,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "b6d6084dbab0e36135bb0ea1eab7b2c983754e618292ea7f544c2350bce8a53e"
+      },
+      "case_manifest_sha256": "2eba4ebb42600b506f8d40914560135e46d97211afa40eb7a19ace88d038ef94",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 7,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "e08738b40b5f8fd9457f809fe9363ab96fb0a88fe28b4c9ba164c8b06c7a6f98"
+      },
+      "case_manifest_sha256": "3bb97e9ce990db26d084a99ddc7fe8167163606819c33c3b8a836688e6d498bf",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 8,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "80229fde05ba7ed5b4e21be94b9d48303424edd66df38360601d831611ca2844"
+      },
+      "case_manifest_sha256": "220efadd67b88cea68548de82992e3adc4cd26945f9a4fde782bfb203baf887f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 9,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "374b16a544b390aa2c51cdf891ec565f4c2e0e59572220bf2f1a97302a0de0fc"
+      },
+      "case_manifest_sha256": "0c47e3eaf6f0267c631ec86a5c701078f30af4839d5ebbc48c4a35dbac15e0f7",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 18,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 10,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "fc0708bd53e7ebb41d188f35b59c26d2697575be63736d261877ae403a99626e"
+      },
+      "case_manifest_sha256": "aae292c61bb4488a78378718576476aa2c684679cd9696e059df88a638f39e35",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 11,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "468c2ba8396da0570de3d70787eaa58114cebd11caf42652f58ffcf0d3bfc54d"
+      },
+      "case_manifest_sha256": "7e333ea1a455d3aa90ac33392c00379ca0bcc112d76e3429bc3f1098e87b9f6c",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 12,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "e28f8a2e754b1a6d369eec921428f1e1236113da2f6af58c1599006d1d4cbae8"
+      },
+      "case_manifest_sha256": "601e4b85973e4f7eca352a80ae125f36e02d339d125d61539344c3d9e0f0b86e",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 13,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 13,
+      "condition": "B",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "563013d38efd40996de1c65f32c7bd3d9f541c7a35b761fdbd29d23255089469"
+      },
+      "case_manifest_sha256": "94906a2d5844dc5f3caa1bc6361b72c17cd0362b130efe042044706231444cc2",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 14,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 14,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "df351524e49cecf95e1467a072b40fc8f920b854926a9bc527c699f71f2ebf8e"
+      },
+      "case_manifest_sha256": "9a651ee3eaf5d597b396ed339bc327d5405005f9ad5cee78139989a6b985322c",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 15,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "7ca2b647beb0a4dbdc3ea9b1c4f84b1d5c05d0f12a4fd264d6d1df377ee3d393"
+      },
+      "case_manifest_sha256": "85ae92972c93605f1ebfb8c893ec2948b71f17d4f4df82a3a743bad4860356da",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 11,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 16,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "0f326f86e23125866530f5ed971074e741ffa93f6bbb78841e544b57683272e3"
+      },
+      "case_manifest_sha256": "46bdb52990b6628e75a5b61d599a4624851e2a2b00d847ebea4f0a2df690422b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 17,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "93eeb662d06d6b92245dd5fdcb7f851c8062217eeb7eac91259f34a42e1ddfa0"
+      },
+      "case_manifest_sha256": "1318ea402f5dd2e3a036f99e95cfafc8694544adb29f5931561828ea43647f09",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 18,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "9a6cf5d195b48d8d650c840e4e750c5319591d30cead9dbd80d86ad56a127c0f"
+      },
+      "case_manifest_sha256": "94de8869b41b9c2b09715f080e9833857dd9f45a06eeccae9e63bf3077d96805",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 19,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "b",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-b",
+        "claim_sha256": "23c3a656e1738899679e813b03c2be8a8cbfd48e2baf22ff6c9d033278cc3f58"
+      },
+      "case_manifest_sha256": "c7cd959f7912b395a34086a5bcb32c6f6920f5af828fc6902a6f1ac860427cd5",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 12,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 20,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "d",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d",
+        "claim_sha256": "bd293e15efbcd436eaf7c319a63cb63761a5c84204a0b572d7ee30dfd440bf38"
+      },
+      "case_manifest_sha256": "b507c596e49d2fb6db80b13dfcffe518c82fed6c5dd03dfe75d3a366f60ef2c7",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 10,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 21,
+      "condition": "B",
+      "schedule_phase": "parallel-003",
+      "claim": {
+        "batch_id": "parallel-003",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "88c61ff398d630e15f2dcff2827e7e042e0594b38c0fdb60cbe405b9134f6821"
+      },
+      "case_manifest_sha256": "ca31b2138056df3315fbd38592d9caf81cc25a34ebff4e545c62e660c1bb70d5",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 19,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 22,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "e",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e",
+        "claim_sha256": "a386a2ea42dd29003c1aff94af944e1a32e6cdc877cb8b9dda5dd672de8eb8cc"
+      },
+      "case_manifest_sha256": "326bc5fa4e6e47abaa413cfe38970221476ba20116f80ca74840c5a52d67f519",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 23,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "0ade2e584147f9c2ce54a47009d65f593f15e3658d38486e66ccd1d12ed568ee"
+      },
+      "case_manifest_sha256": "010c2370cb7339fb1c09d5db9050b2f6265b7c7dd0f908301051b7e6c424cc99",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 24,
+      "condition": "B",
+      "schedule_phase": "parallel-002",
+      "claim": {
+        "batch_id": "parallel-002",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "ced1296db4ee46e826107e16a53c07fcba9c1b7b706996e8a51a0da66668798a"
+      },
+      "case_manifest_sha256": "b0db896a1d3310442f3aa0055fd72c6b42b955984543ff84a2340c4664187554",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 25,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "7f04b27738d98f11e61ecbd80833da6ef7adf918988424597afbe4c741676b30"
+      },
+      "case_manifest_sha256": "f4a2ac78235b894e301d4ff1621b82930441efa21b1c846c2f26c480c8f42a77",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 26,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "9b2e8452b333eaab7725be5d2e53cfd04abceb7474dbd9268b47cf8368e8ad26"
+      },
+      "case_manifest_sha256": "89a0085cdfbeb549deeda1df1734d0f64ee8d764ae42a64989e551663e2b7fdb",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 17,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 27,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "66de3d49235acf7f2cde087f60e590c90f105fb3594378de2bb78739e59d7005"
+      },
+      "case_manifest_sha256": "c5c21c2684246c0fd11b1a7aea2a1e5c00a31348bd300da4d24dc225196ab38f",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 19,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 28,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "f",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f",
+        "claim_sha256": "b8f0551fa4d913d7a82b4bb6691e40f0ba5f9606ea01b06bb4f7a2a01668fd40"
+      },
+      "case_manifest_sha256": "ebe537f0ba49a10428f66aa0f0feed38531ce5d856b413b524cd182a85150b00",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 15,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 29,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "c",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-c",
+        "claim_sha256": "576a1b4a363995ee9d40ae6675d7dd77a72618b0a95b5e78730b06ba2699019d"
+      },
+      "case_manifest_sha256": "b2f2eeb1b08ca65750ff463f191932f7e743b85529a729faa87164bc8b151852",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 16,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    },
+    {
+      "run_id": "b-seed-3141",
+      "case_index": 30,
+      "condition": "B",
+      "schedule_phase": "parallel-004",
+      "claim": {
+        "batch_id": "parallel-004",
+        "worker": "a",
+        "runtime": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-a",
+        "claim_sha256": "1b4bdb818fac8ae717d7f6911da3a3266bb58e73bb5121ff5768fac5a8816259"
+      },
+      "case_manifest_sha256": "2391fdb074e05d3708c76536123daa1d9ae751ad76fcd47cfa5b89d54fa5000b",
+      "model_cli_exit_code": 0,
+      "model_cli_timeout": false,
+      "ui_actions": 20,
+      "provider_or_cli_failure_class": null,
+      "model_service_error_event_counts": {},
+      "model_service_event_archive_complete": true,
+      "raw_task_status": "passed"
+    }
+  ],
+  "raw_results_rewritten": false,
+  "strict_speed_comparison": false,
+  "qualification": "Process concurrency is scheduling overlap, not simultaneous browser actions or a throughput causal comparison. Infrastructure failures remain in the original 180 cases. Unknown causes are not attributed to the model or website."
+}

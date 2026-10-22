@@ -1,0 +1,24 @@
+{
+  "run_id": "b-seed-1729",
+  "exit_code": 0,
+  "elapsed_seconds": 2097.9849999999988,
+  "checks": {
+    "ready_file": true,
+    "rules_valid": true,
+    "required_files": true,
+    "browser_exports_match_originals": true,
+    "launcher_success": true,
+    "relay_settled_without_errors": true,
+    "management_barrier": true,
+    "condition_no_predictor": true
+  },
+  "management_barrier": {
+    "relay_drained": true,
+    "browser_tree_clean": true,
+    "gateway_log_complete": true
+  },
+  "validation_errors": [],
+  "trusted_http_events": 276,
+  "relay_errors": [],
+  "status": "learning_finished"
+}

@@ -1,0 +1,41 @@
+{
+  "revision": "001",
+  "parent_revision": null,
+  "condition": "A",
+  "changed_rules": [
+    "R01",
+    "R02",
+    "U01"
+  ],
+  "changed_scripts": [
+    "scripts.py",
+    "behavior_model.py"
+  ],
+  "failure_category": "locator",
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-709a330b/result.json",
+      "sha256": "48dd31f30c4f0471e548f7bb3315dfae49d7ce4c0c5dd1c683d771f5d4858f48"
+    },
+    {
+      "path": "evidence/call-002-a1ce73a3/result.json",
+      "sha256": "565a7fe8123846f17b43f691cec92ac00892caf0191ebdb611c4041306c89a05"
+    },
+    {
+      "path": "evidence/call-003-3e99425e/result.json",
+      "sha256": "70b6eb8c10b6e9331e11b0e843ce1ab1cc9fb39dd684d8f1c886c5d82758b412"
+    }
+  ],
+  "rationale": "Retrospective artifact checkpoint synthesized after browser learning; it does not claim the executable predictor generated earlier predictions. Original LLM per-action predictions remain in browser action logs. Initial observations and failed label targeting preserved before corrected selector knowledge.",
+  "identity": {
+    "learner_requested": "exact gpt-6.1-sol",
+    "condition": "A",
+    "scheduling_seed": 1729,
+    "protocol_pilot": true
+  },
+  "failure_categories_observed": [
+    "locator"
+  ],
+  "whole_task_predictions": "None; no private tasks available. Per-action predictions and synthesized model are separate.",
+  "script_validation": "Offline compilation only; final guard not browser-retested after timeout."
+}

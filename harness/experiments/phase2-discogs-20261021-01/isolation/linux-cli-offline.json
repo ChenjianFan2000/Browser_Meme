@@ -1,0 +1,6 @@
+{
+  "script": "#!/bin/sh\nset -eu\nexe=/opt/browser-meme/tmp/phase2-isolation-audit/package/vendor/x86_64-unknown-linux-musl/bin/codex\n\"$exe\" sandbox -P p2 -C /opt/browser-meme/tmp/phase2-isolation-audit -c 'permissions.p2.filesystem={\":root\"=\"deny\",\":minimal\"=\"read\",\":workspace_roots\"=\"write\"}' -c permissions.p2.network.enabled=false sh -c 'id; test ! -r /opt/browser-meme/secrets/research.env && echo SECRET_DENIED; cat /proc/net/route'\n",
+  "exit_code": 0,
+  "stdout": "uid=1000(research) gid=1000(research) groups=1000(research),65534(nogroup)\nSECRET_DENIED\nIface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \n",
+  "stderr": ""
+}

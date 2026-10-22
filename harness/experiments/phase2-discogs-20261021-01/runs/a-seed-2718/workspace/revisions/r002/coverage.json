@@ -1,0 +1,235 @@
+{
+  "explored": [
+    {
+      "area": "Public landing",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-dbccdd13/obs-0004.html",
+          "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+        },
+        {
+          "path": "evidence/call-001-dbccdd13/obs-0004.ax.json",
+          "sha256": "74b48b5480d8c6497e7b74408ca4a7bb59d631e646f8e1bac2497ec96bdcf873"
+        },
+        {
+          "path": "evidence/call-001-dbccdd13/obs-0004.png",
+          "sha256": "d993a21aced45159443a48eaa529fa9399225b9f0ebc77520d702aea39424b0a"
+        },
+        {
+          "path": "evidence/call-001-dbccdd13/actions.jsonl",
+          "sha256": "91273453e64dceafd2c21c7000839a062da2234ac709868f97834be019a3dd0f"
+        },
+        {
+          "path": "evidence/call-001-dbccdd13/result.json",
+          "sha256": "23505cb32a68df9d667011b01aff2278eec280fd55db14884972038d04a381bf"
+        }
+      ]
+    },
+    {
+      "area": "Login form discovery only",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-002-918f04fd/obs-0008.html",
+          "sha256": "a784eb5c57887b1f32941f833792c3af2db661f7124711885ebbfb732970b7ed"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/obs-0008.ax.json",
+          "sha256": "ea80298aae6c9efbd8300e7fab051c6975eba6b5a8a17aa567924a211e9bb943"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/obs-0008.png",
+          "sha256": "9575426116ec8444ab9310b7ff7a41734ac4d736ca3c3858db1d7d35f303763f"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/actions.jsonl",
+          "sha256": "045ccca4c842e959561f0abe517cfbc5e7b0b1f86f37556f1379efb5ae50c862"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/result.json",
+          "sha256": "208907c3883e5571d524122e720d04266e383ba0dc5cf4dfb7c8c2a825d73a9c"
+        }
+      ]
+    }
+  ],
+  "unexplored": [
+    "Authentication success/rejection",
+    "Business write success/rejection",
+    "Collection and wantlist",
+    "Search and filters",
+    "Release details",
+    "Cart and checkout",
+    "Selling",
+    "Repeat writes",
+    "Short business combinations",
+    "Validation boundaries"
+  ],
+  "success_evidence": [
+    {
+      "path": "evidence/call-001-dbccdd13/obs-0004.html",
+      "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/obs-0004.ax.json",
+      "sha256": "74b48b5480d8c6497e7b74408ca4a7bb59d631e646f8e1bac2497ec96bdcf873"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/obs-0004.png",
+      "sha256": "d993a21aced45159443a48eaa529fa9399225b9f0ebc77520d702aea39424b0a"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/actions.jsonl",
+      "sha256": "91273453e64dceafd2c21c7000839a062da2234ac709868f97834be019a3dd0f"
+    },
+    {
+      "path": "evidence/call-001-dbccdd13/result.json",
+      "sha256": "23505cb32a68df9d667011b01aff2278eec280fd55db14884972038d04a381bf"
+    },
+    {
+      "path": "evidence/call-002-918f04fd/obs-0008.html",
+      "sha256": "a784eb5c57887b1f32941f833792c3af2db661f7124711885ebbfb732970b7ed"
+    },
+    {
+      "path": "evidence/call-002-918f04fd/obs-0008.ax.json",
+      "sha256": "ea80298aae6c9efbd8300e7fab051c6975eba6b5a8a17aa567924a211e9bb943"
+    },
+    {
+      "path": "evidence/call-002-918f04fd/obs-0008.png",
+      "sha256": "9575426116ec8444ab9310b7ff7a41734ac4d736ca3c3858db1d7d35f303763f"
+    },
+    {
+      "path": "evidence/call-002-918f04fd/actions.jsonl",
+      "sha256": "045ccca4c842e959561f0abe517cfbc5e7b0b1f86f37556f1379efb5ae50c862"
+    },
+    {
+      "path": "evidence/call-002-918f04fd/result.json",
+      "sha256": "208907c3883e5571d524122e720d04266e383ba0dc5cf4dfb7c8c2a825d73a9c"
+    }
+  ],
+  "rejection_evidence": [],
+  "boundary_evidence": {
+    "type": "runtime helper-name policy denial, not a website business rejection",
+    "browser_evidence_refs": [],
+    "audit_refs": [
+      {
+        "path": "runtime_denial.json",
+        "sha256": "9442dd1b05bccc0eb31db931f5095310b0260d7dc78d023907017eaea86e74db"
+      }
+    ]
+  },
+  "repeats": {
+    "root_navigation_observations": 2,
+    "evidence_refs": [
+      {
+        "path": "evidence/call-001-dbccdd13/obs-0004.html",
+        "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+      },
+      {
+        "path": "evidence/call-001-dbccdd13/obs-0004.ax.json",
+        "sha256": "74b48b5480d8c6497e7b74408ca4a7bb59d631e646f8e1bac2497ec96bdcf873"
+      },
+      {
+        "path": "evidence/call-001-dbccdd13/obs-0004.png",
+        "sha256": "d993a21aced45159443a48eaa529fa9399225b9f0ebc77520d702aea39424b0a"
+      },
+      {
+        "path": "evidence/call-001-dbccdd13/actions.jsonl",
+        "sha256": "91273453e64dceafd2c21c7000839a062da2234ac709868f97834be019a3dd0f"
+      },
+      {
+        "path": "evidence/call-001-dbccdd13/result.json",
+        "sha256": "23505cb32a68df9d667011b01aff2278eec280fd55db14884972038d04a381bf"
+      },
+      {
+        "path": "evidence/call-002-918f04fd/obs-0008.html",
+        "sha256": "a784eb5c57887b1f32941f833792c3af2db661f7124711885ebbfb732970b7ed"
+      },
+      {
+        "path": "evidence/call-002-918f04fd/obs-0008.ax.json",
+        "sha256": "ea80298aae6c9efbd8300e7fab051c6975eba6b5a8a17aa567924a211e9bb943"
+      },
+      {
+        "path": "evidence/call-002-918f04fd/obs-0008.png",
+        "sha256": "9575426116ec8444ab9310b7ff7a41734ac4d736ca3c3858db1d7d35f303763f"
+      },
+      {
+        "path": "evidence/call-002-918f04fd/actions.jsonl",
+        "sha256": "045ccca4c842e959561f0abe517cfbc5e7b0b1f86f37556f1379efb5ae50c862"
+      },
+      {
+        "path": "evidence/call-002-918f04fd/result.json",
+        "sha256": "208907c3883e5571d524122e720d04266e383ba0dc5cf4dfb7c8c2a825d73a9c"
+      }
+    ]
+  },
+  "short_combinations": [
+    {
+      "sequence": [
+        "Root navigation",
+        "Account click"
+      ],
+      "scope": "navigation only",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-002-918f04fd/obs-0008.html",
+          "sha256": "a784eb5c57887b1f32941f833792c3af2db661f7124711885ebbfb732970b7ed"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/obs-0008.ax.json",
+          "sha256": "ea80298aae6c9efbd8300e7fab051c6975eba6b5a8a17aa567924a211e9bb943"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/obs-0008.png",
+          "sha256": "9575426116ec8444ab9310b7ff7a41734ac4d736ca3c3858db1d7d35f303763f"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/actions.jsonl",
+          "sha256": "045ccca4c842e959561f0abe517cfbc5e7b0b1f86f37556f1379efb5ae50c862"
+        },
+        {
+          "path": "evidence/call-002-918f04fd/result.json",
+          "sha256": "208907c3883e5571d524122e720d04266e383ba0dc5cf4dfb7c8c2a825d73a9c"
+        }
+      ]
+    }
+  ],
+  "current_competing_hypotheses": [
+    {
+      "question": "Does account authentication expose business controls?",
+      "alternatives": [
+        "Valid credentials unlock controls",
+        "Further account constraints exist"
+      ],
+      "status": "unknown"
+    },
+    {
+      "question": "How are repeated writes handled?",
+      "alternatives": [
+        "Idempotent",
+        "Duplicate records",
+        "Explicit rejection"
+      ],
+      "status": "unknown"
+    }
+  ],
+  "proposed_distinguishing_experiments": [
+    "In a separately authorized new run, submit fixture credentials through observed login controls and read back.",
+    "Discover business action controls after authentication; compare successful mutation, explicit rejection, repeat, and persisted readback."
+  ],
+  "whole_task_predictions": "Unknown; no business task executed",
+  "budget_last_observed": {
+    "actions": 3,
+    "action_limit": 300,
+    "script_calls": 2,
+    "script_call_limit": 40,
+    "submission_attempts_including_policy_rejection": 3,
+    "elapsed_seconds": 53.18775209799992,
+    "note": "Last returned authoritative budget. Policy-rejected submission returned no call record or updated budget."
+  },
+  "stop_reason": "runtime_policy_denial",
+  "limitations": [
+    "No site business behavior verified",
+    "Only read-only discovery",
+    "No submitted credentials",
+    "Static helper rejection and post-denial submission explicitly preserved"
+  ]
+}

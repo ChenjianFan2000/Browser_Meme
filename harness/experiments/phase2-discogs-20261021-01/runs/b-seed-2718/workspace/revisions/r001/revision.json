@@ -1,0 +1,81 @@
+{
+  "revision": 1,
+  "parent_revision": null,
+  "condition": "B",
+  "model_identity": "gpt-6.1-sol as assigned by user; not independently introspected",
+  "scheduling_seed": 2718,
+  "seed_scope": "Local scheduling only; no model-sampling guarantee",
+  "changed_rules": [
+    "UI-COOKIE",
+    "AUTH-PREFILL",
+    "AUTH-EMPTY",
+    "AUTH-LOCATOR-FAILURE"
+  ],
+  "changed_scripts": [
+    "scripts.py",
+    "experiments/01_initial.py",
+    "experiments/02_login_discovery.py",
+    "experiments/03_login_validation.py"
+  ],
+  "failure_category": "locator",
+  "failures": [
+    {
+      "experiment": 3,
+      "category": "locator",
+      "parent_script": null,
+      "evidence_refs": [
+        {
+          "path": "evidence/call-003-8c83c3e0/result.json",
+          "sha256": "2fa77c537dc3df228d65b48f563974bc7674f5c7dbc2ad0e260e7fd61add7233"
+        }
+      ]
+    }
+  ],
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-9faee651/actions.jsonl",
+      "sha256": "a542398ff9d28d7ee7924ce4c6f745620961bf908a858e70ae5c988bbf2a9830"
+    },
+    {
+      "path": "evidence/call-001-9faee651/network.json",
+      "sha256": "e657aba9fa545fa7a634d63313787b1c9f7c967f9d590ce88c395ca3c972bce0"
+    },
+    {
+      "path": "evidence/call-001-9faee651/result.json",
+      "sha256": "a5d21e667649e4f88bda488a8a93a93d695da0a03a00407851206e50b243a3b2"
+    },
+    {
+      "path": "evidence/call-002-01f0dfe3/actions.jsonl",
+      "sha256": "8328a276edc835cf8e332105433cda31ab140fe1b66850e9f61758708a3459b4"
+    },
+    {
+      "path": "evidence/call-002-01f0dfe3/network.json",
+      "sha256": "d3a760994fafdfcb03ec4f66d933cdc8beff71a9dd160f77237b08273f13ad5b"
+    },
+    {
+      "path": "evidence/call-002-01f0dfe3/result.json",
+      "sha256": "ead2e279eba4645b611b3db8cbfe69fe3bf1a41ce7066edbfab09c55907f7133"
+    },
+    {
+      "path": "evidence/call-003-8c83c3e0/actions.jsonl",
+      "sha256": "096dfd72f3a4a4d5e719f49e3b72c1e12009cef5bd655a5cc06afeff90eccc4c"
+    },
+    {
+      "path": "evidence/call-003-8c83c3e0/network.json",
+      "sha256": "bff459992a6808fa85365ac1b619189e7db368175f2bd71d0ed2dce377491abb"
+    },
+    {
+      "path": "evidence/call-003-8c83c3e0/result.json",
+      "sha256": "2fa77c537dc3df228d65b48f563974bc7674f5c7dbc2ad0e260e7fd61add7233"
+    }
+  ],
+  "rationale": "Retrospective versioned checkpoint assembled after browser work stopped. This complete checkpoint deliberately includes only evidence from experiments 1 through 3, preserving earlier uncertainty and script failures. It was not claimed to have been published during exploration.",
+  "condition_compliance": "Human-readable knowledge and native UI task scripts only; no executable behavior model or predict function.",
+  "script_validation": {
+    "kind": "offline syntax checks",
+    "browser_validated": "Original experiments only; new reusable scripts.py was not browser-executed after terminal boundary",
+    "helper_history": "ui_v1.py used in calls 2-5. ui.py changed console truncation only before call 6; both versions preserved."
+  },
+  "effect_confirmation": "No unconfirmed non-idempotent write was retried. Membership repeats and cart repeats followed visible results and natural successful response exports. Locator timeouts were on login-field fill and missing Account link, with preceding authentication navigation confirmed.",
+  "evidence_caveat": "Original exports are retained byte-for-byte. Some runtime logs initially included public demo login hint content. Derived artifact prose does not copy credential values."
+}

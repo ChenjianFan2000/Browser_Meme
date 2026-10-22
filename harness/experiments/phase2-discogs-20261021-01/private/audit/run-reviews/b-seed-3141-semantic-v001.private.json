@@ -1,0 +1,1256 @@
+{
+  "kind": "private_claim_and_composition_review",
+  "run_id": "b-seed-3141",
+  "basis": "Read frozen rulebook/helpers,40 original executed job sources/modules and original native action/readback/UI-caused response records; no site calls or learner-code execution by reviewer.",
+  "rule_reviews": [
+    {
+      "rule_id": "R01",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-001-0044c695/actions.jsonl",
+          "sha256": "ecbf1a484dbd0f066f054baf7ba3ac1a2bf9a7272d371c5c7af365b8cf4d9812"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-001-0044c695/network.json",
+          "sha256": "1eedb3e06c9c4ce85f36848e9dc8369b38ffb06c5b1d06364b9c2b8b5ec698db"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-001-0044c695/obs-0004.html",
+          "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/actions.jsonl",
+          "sha256": "a41eb7d88f431213eb766911c16bf6707531606aab52378908600726cb577c8a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/network.json",
+          "sha256": "9f039abaf0040948720b7f17806b8fde167df086b006fd1f4101e6f6246e98ca"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/obs-0010.html",
+          "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-004-d2e60c91/actions.jsonl",
+          "sha256": "3828a4b408fd7f9855a600e60af1ae27b2e73d7904ea5fe51ba1869d76db572b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-004-d2e60c91/network.json",
+          "sha256": "b08e9fe37e03ced137665295ca496ed364b36a6efa74394a4760c2b5fa4bb8e9"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-004-d2e60c91/obs-0004.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        }
+      ]
+    },
+    {
+      "rule_id": "R02",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/actions.jsonl",
+          "sha256": "a41eb7d88f431213eb766911c16bf6707531606aab52378908600726cb577c8a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/network.json",
+          "sha256": "9f039abaf0040948720b7f17806b8fde167df086b006fd1f4101e6f6246e98ca"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/obs-0010.html",
+          "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/actions.jsonl",
+          "sha256": "d202535fca05cd6e9d3b9002a7639b93222f2ebd1513c081c1e405258ed8f273"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/network.json",
+          "sha256": "5621f1d2f7d21fb0c4937f875c236348c4d5709a0382d7fedf9df986d5a257dd"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/obs-0009.html",
+          "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-004-d2e60c91/actions.jsonl",
+          "sha256": "3828a4b408fd7f9855a600e60af1ae27b2e73d7904ea5fe51ba1869d76db572b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-004-d2e60c91/network.json",
+          "sha256": "b08e9fe37e03ced137665295ca496ed364b36a6efa74394a4760c2b5fa4bb8e9"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-004-d2e60c91/obs-0004.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-005-4fa785dc/actions.jsonl",
+          "sha256": "630a1bd2aa44500017c941618385e60150a5fe1b539ade8a0e3fe0f3eb099b4f"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-005-4fa785dc/network.json",
+          "sha256": "ead8ea8bf244283117e7119ff8e1a3523ad1caa2e582b366bdd33fddaa52fc5c"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-005-4fa785dc/obs-0010.html",
+          "sha256": "ceb8a7ee1a0fe06da112a30b7a5be7ffbbdb2cf7913e4142c7b382bafe31fbc0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R03",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/actions.jsonl",
+          "sha256": "f84dc8ed0dfb6556a88c300cbc5645def46d9a6f5a885d80ed02c1dc0af4eb34"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/network.json",
+          "sha256": "5ec6aabc88bf075b7df9a91f72b4548393707cf75da399a00403a3f16edfd024"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/obs-0019.html",
+          "sha256": "c919125611f9b9675a9716f31b9b93920940b0e416f9eea7693911d84dc04b2a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/actions.jsonl",
+          "sha256": "5a39c9f83a47b0be96304312c374a5bdb6c59c13a6a61ab826381b49a309eaba"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/network.json",
+          "sha256": "92bc0c31f26e06deb6c8df3f38797f957dad167c038cef3a6cdf58576358ddf4"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/obs-0022.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        }
+      ]
+    },
+    {
+      "rule_id": "R04",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/actions.jsonl",
+          "sha256": "f84dc8ed0dfb6556a88c300cbc5645def46d9a6f5a885d80ed02c1dc0af4eb34"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/network.json",
+          "sha256": "5ec6aabc88bf075b7df9a91f72b4548393707cf75da399a00403a3f16edfd024"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/obs-0019.html",
+          "sha256": "c919125611f9b9675a9716f31b9b93920940b0e416f9eea7693911d84dc04b2a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/actions.jsonl",
+          "sha256": "5a39c9f83a47b0be96304312c374a5bdb6c59c13a6a61ab826381b49a309eaba"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/network.json",
+          "sha256": "92bc0c31f26e06deb6c8df3f38797f957dad167c038cef3a6cdf58576358ddf4"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/obs-0022.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        }
+      ]
+    },
+    {
+      "rule_id": "R05",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-008-5a9e2c49/actions.jsonl",
+          "sha256": "aac19c6e9779dbf69ecc2ab1628c2482a8f98560266e9d7e4a1882d832fd3bc1"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-008-5a9e2c49/network.json",
+          "sha256": "3631ce3086a015579c5c8671277b822a4e6be7072986b683c77df7a00d382034"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-008-5a9e2c49/obs-0006.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/actions.jsonl",
+          "sha256": "8db8bfeda1ec9f34659bf1b10a146b4e1d3b7323fc98ecb3e8a638df8b11c87b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/network.json",
+          "sha256": "d797f1a8ec9320250e6f14334ead09e6c2a10a03fc31b5fed4a28a63b341d2c5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/obs-0007.html",
+          "sha256": "bbd298c3e7a900057d2fb650c25edd7c7409284c4e2c8df1c258bbf50a27b3fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/actions.jsonl",
+          "sha256": "c0e8b076f708adea15bc1ba4cb7ec640d7d0942d70d8e01e734b2e3b35d13e5a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/network.json",
+          "sha256": "6b372523687c8e7a1a341265fc9efd1393c54e41fed928c4ac02abb597d70f6a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/obs-0019.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R06",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/actions.jsonl",
+          "sha256": "8db8bfeda1ec9f34659bf1b10a146b4e1d3b7323fc98ecb3e8a638df8b11c87b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/network.json",
+          "sha256": "d797f1a8ec9320250e6f14334ead09e6c2a10a03fc31b5fed4a28a63b341d2c5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/obs-0007.html",
+          "sha256": "bbd298c3e7a900057d2fb650c25edd7c7409284c4e2c8df1c258bbf50a27b3fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/actions.jsonl",
+          "sha256": "c0e8b076f708adea15bc1ba4cb7ec640d7d0942d70d8e01e734b2e3b35d13e5a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/network.json",
+          "sha256": "6b372523687c8e7a1a341265fc9efd1393c54e41fed928c4ac02abb597d70f6a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/obs-0019.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R07",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/actions.jsonl",
+          "sha256": "c0e8b076f708adea15bc1ba4cb7ec640d7d0942d70d8e01e734b2e3b35d13e5a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/network.json",
+          "sha256": "6b372523687c8e7a1a341265fc9efd1393c54e41fed928c4ac02abb597d70f6a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/obs-0019.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-011-4f29d8fa/actions.jsonl",
+          "sha256": "87840b32c48b1e0fb6a9f70519c17e248e2d5277302831da0b0dea4b36683be3"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-011-4f29d8fa/network.json",
+          "sha256": "ad483212e6c06e5e40946cc0793ac8ad95237171599c76f37d2359406db1fc78"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-011-4f29d8fa/obs-0025.html",
+          "sha256": "1503c1d0ae8a1287eb453c43738d0acb85e961f45be7a3414a3c2ddff5450905"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/actions.jsonl",
+          "sha256": "f244e2ab79290ea29b3786a3403ded5a3bf3008381b18a00cb39205a3ef73e20"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/network.json",
+          "sha256": "bd871e4c4a0ac2182040290e364d19f5953db0221d1b49da9c08cc5f8b86a680"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/obs-0028.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        }
+      ]
+    },
+    {
+      "rule_id": "R08",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-011-4f29d8fa/actions.jsonl",
+          "sha256": "87840b32c48b1e0fb6a9f70519c17e248e2d5277302831da0b0dea4b36683be3"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-011-4f29d8fa/network.json",
+          "sha256": "ad483212e6c06e5e40946cc0793ac8ad95237171599c76f37d2359406db1fc78"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-011-4f29d8fa/obs-0025.html",
+          "sha256": "1503c1d0ae8a1287eb453c43738d0acb85e961f45be7a3414a3c2ddff5450905"
+        }
+      ]
+    },
+    {
+      "rule_id": "R09",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/actions.jsonl",
+          "sha256": "f244e2ab79290ea29b3786a3403ded5a3bf3008381b18a00cb39205a3ef73e20"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/network.json",
+          "sha256": "bd871e4c4a0ac2182040290e364d19f5953db0221d1b49da9c08cc5f8b86a680"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/obs-0028.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        }
+      ]
+    },
+    {
+      "rule_id": "R10",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-013-68af1aa2/actions.jsonl",
+          "sha256": "40822525f21836004e88b3b4a295a4db5056afe2979e6c0e9c4959c9e9d4f566"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-013-68af1aa2/network.json",
+          "sha256": "db56740517d0bff499ecf85c6d6abe4cde9161d45863a6c786b6dd54ae2ea6e7"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-013-68af1aa2/obs-0006.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-014-0b11d5cb/actions.jsonl",
+          "sha256": "be88c054a93df179a427699732cd8f5f801ca35242863caf3f0f11b0cb4fddd9"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-014-0b11d5cb/network.json",
+          "sha256": "a3ba2310262a773e396a26a9cc437dedaf07a0fbeb2fec5b770a3fcae482664e"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-014-0b11d5cb/obs-0010.html",
+          "sha256": "5a6d96628d8b35c6a9bcd95ad0664bbd35acfe14195ffc69a167bb07ab3cf1f9"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/actions.jsonl",
+          "sha256": "96599c8f1603cb64ce7d6ea67e9922a30c08a77001a22dcc7953236ed2a86991"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/network.json",
+          "sha256": "d96bb7c43c8a50a05291cf6e185f072bb95af9fdea602a9d9cc83f4ec307ab31"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/obs-0028.html",
+          "sha256": "4aca52896c72d0976ebf46dc2996484b4fdaf2c59690544c464caac03ee4aa59"
+        }
+      ]
+    },
+    {
+      "rule_id": "R11",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-015-1e6404ec/actions.jsonl",
+          "sha256": "6be026678f27e9fbcf74fbc703c0af26f1d033e4623642ecf7145c69cf028269"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-015-1e6404ec/network.json",
+          "sha256": "8d81992722db936c529f3c78eece630230c79033314cb80df4a6140bea0c76cc"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-015-1e6404ec/obs-0021.html",
+          "sha256": "d8a72c7a60abc9ddfd3fd9793fb6495baae822c83d7dcc49a43a0e6a2f2a9b51"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/actions.jsonl",
+          "sha256": "96599c8f1603cb64ce7d6ea67e9922a30c08a77001a22dcc7953236ed2a86991"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/network.json",
+          "sha256": "d96bb7c43c8a50a05291cf6e185f072bb95af9fdea602a9d9cc83f4ec307ab31"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/obs-0028.html",
+          "sha256": "4aca52896c72d0976ebf46dc2996484b4fdaf2c59690544c464caac03ee4aa59"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-021-7f2c0b34/actions.jsonl",
+          "sha256": "628842effcd125538a6124edfe39357794fbf67e8ad31638cc0504c6b8c9aaaa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-021-7f2c0b34/network.json",
+          "sha256": "7c8ac4d17d7449a238664868c584b0c8f1695b7770ef4d7b3df9a9aa8ee7d4e3"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-021-7f2c0b34/obs-0016.html",
+          "sha256": "ef5d8628b5d5c69e956a828fb2142a4596a3b90295256b1c82c150d6012c8163"
+        }
+      ]
+    },
+    {
+      "rule_id": "R12",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/actions.jsonl",
+          "sha256": "96599c8f1603cb64ce7d6ea67e9922a30c08a77001a22dcc7953236ed2a86991"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/network.json",
+          "sha256": "d96bb7c43c8a50a05291cf6e185f072bb95af9fdea602a9d9cc83f4ec307ab31"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-016-6151fea4/obs-0028.html",
+          "sha256": "4aca52896c72d0976ebf46dc2996484b4fdaf2c59690544c464caac03ee4aa59"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/actions.jsonl",
+          "sha256": "d5e01c9aa965c949c4d81c5cd73de95629c43e906d8e88ac6913d3723af38b77"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/network.json",
+          "sha256": "a7c3075d86e7bb7670df53b78fc59de1aae464ba0de1fa3159391fa07e9c5ff7"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/obs-0019.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        }
+      ]
+    },
+    {
+      "rule_id": "R13",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/actions.jsonl",
+          "sha256": "d5e01c9aa965c949c4d81c5cd73de95629c43e906d8e88ac6913d3723af38b77"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/network.json",
+          "sha256": "a7c3075d86e7bb7670df53b78fc59de1aae464ba0de1fa3159391fa07e9c5ff7"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/obs-0019.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        }
+      ]
+    },
+    {
+      "rule_id": "R14",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-018-5e7199d9/actions.jsonl",
+          "sha256": "47a6946c7050adb825ae413d636268f5cb7cdbe0c41f098f6c0c3c1c56b482c3"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-018-5e7199d9/network.json",
+          "sha256": "a65f3d33a1626da3650967cb4b09870e85340e54fc28173bb2e1db3e227f391e"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-018-5e7199d9/obs-0010.html",
+          "sha256": "53911e9163de41122e6692481ce50e0051f5f1e92e67fd81add7340a6034d788"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-019-0a643ddf/actions.jsonl",
+          "sha256": "528d1949269a15ab59b6fb37bc19fda0e09b2faec7cda2a14858a21b79dbea51"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-019-0a643ddf/network.json",
+          "sha256": "077344a928a456b75e58da241c2026cee5904c36891a87963de6ba6593258870"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-019-0a643ddf/obs-0034.html",
+          "sha256": "8c9990d002ae130deae6cc4bddc262d7689f9a189c1e39acc82782841cef2f8f"
+        }
+      ]
+    },
+    {
+      "rule_id": "R15",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-019-0a643ddf/actions.jsonl",
+          "sha256": "528d1949269a15ab59b6fb37bc19fda0e09b2faec7cda2a14858a21b79dbea51"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-019-0a643ddf/network.json",
+          "sha256": "077344a928a456b75e58da241c2026cee5904c36891a87963de6ba6593258870"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-019-0a643ddf/obs-0034.html",
+          "sha256": "8c9990d002ae130deae6cc4bddc262d7689f9a189c1e39acc82782841cef2f8f"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-020-f0f415c0/actions.jsonl",
+          "sha256": "92d7a2fa4de7626400f30be0736e29f2a699df1ddbe536fcf354152a16a99536"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-020-f0f415c0/network.json",
+          "sha256": "b12deafc73b452a9266a7416e896b7513ce346192915eb015dff6a8c7cf39bb3"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-020-f0f415c0/obs-0019.html",
+          "sha256": "0b316bbb277dcb703ee7bb5eb3c46ffad49d7d47733acfcde25468bcbe7c83d5"
+        }
+      ]
+    },
+    {
+      "rule_id": "H01",
+      "author_status": "hypothesis",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/actions.jsonl",
+          "sha256": "f84dc8ed0dfb6556a88c300cbc5645def46d9a6f5a885d80ed02c1dc0af4eb34"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/network.json",
+          "sha256": "5ec6aabc88bf075b7df9a91f72b4548393707cf75da399a00403a3f16edfd024"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-006-e68938e6/obs-0019.html",
+          "sha256": "c919125611f9b9675a9716f31b9b93920940b0e416f9eea7693911d84dc04b2a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/actions.jsonl",
+          "sha256": "5a39c9f83a47b0be96304312c374a5bdb6c59c13a6a61ab826381b49a309eaba"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/network.json",
+          "sha256": "92bc0c31f26e06deb6c8df3f38797f957dad167c038cef3a6cdf58576358ddf4"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/obs-0022.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-037-df7c8050/actions.jsonl",
+          "sha256": "0a7eb36a88b04a624958a43e6e7dc4eefd3e774660837ad381617e2ca7acb047"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-037-df7c8050/network.json",
+          "sha256": "6b8162a4efee574729188d8aad223701ef25fe91164a35b8882402d8685421d9"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-037-df7c8050/obs-0031.html",
+          "sha256": "fafc0fc8b7198256fef5796592dc4be842a2dadccedfa83a332ff0e085a435ff"
+        }
+      ]
+    },
+    {
+      "rule_id": "U01",
+      "author_status": "unknown",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/actions.jsonl",
+          "sha256": "5a39c9f83a47b0be96304312c374a5bdb6c59c13a6a61ab826381b49a309eaba"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/network.json",
+          "sha256": "92bc0c31f26e06deb6c8df3f38797f957dad167c038cef3a6cdf58576358ddf4"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-007-a28ed596/obs-0022.html",
+          "sha256": "43bbbbfe69b4fc4ab15fddcef9e1c0c9046dc9043a81765d3141bcf719b4c356"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/actions.jsonl",
+          "sha256": "f244e2ab79290ea29b3786a3403ded5a3bf3008381b18a00cb39205a3ef73e20"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/network.json",
+          "sha256": "bd871e4c4a0ac2182040290e364d19f5953db0221d1b49da9c08cc5f8b86a680"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/obs-0028.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/actions.jsonl",
+          "sha256": "d5e01c9aa965c949c4d81c5cd73de95629c43e906d8e88ac6913d3723af38b77"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/network.json",
+          "sha256": "a7c3075d86e7bb7670df53b78fc59de1aae464ba0de1fa3159391fa07e9c5ff7"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/obs-0019.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-040-13da86c7/actions.jsonl",
+          "sha256": "98af19c3be64dc89c74a62a48ab933e546c5189e4272dd4a8133b31425494b02"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-040-13da86c7/network.json",
+          "sha256": "5220d076fd9ce9b297bfec43bd3da61994dfb090ef4b84efa218355a7c24de3f"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-040-13da86c7/obs-0006.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        }
+      ]
+    },
+    {
+      "rule_id": "R16",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-023-ad4fdd7c/actions.jsonl",
+          "sha256": "211c8c68f9aee1ae5b39457824272f9637776a8e8b8d50d83f23d64783d16a04"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-023-ad4fdd7c/network.json",
+          "sha256": "57260c5f3baa8c5b6d0219ed85a93efd4ccd4bde30e7f63134b880fd26645e45"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-023-ad4fdd7c/obs-0012.html",
+          "sha256": "c9fc60d2053621049556ba9006f3f9a55a416463bf9f7c38bcde7fd226345113"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-024-3a8c1a7b/actions.jsonl",
+          "sha256": "a3a5a4b1dfae824844dfcef987a1fee593def16c97cb5d816f717a08d37dddfe"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-024-3a8c1a7b/network.json",
+          "sha256": "0b30bca20803e257cb9c37c784a69c9aa6d82a1cf68adc46f30bdc9c8a60bf34"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-024-3a8c1a7b/obs-0007.html",
+          "sha256": "01df6501fecfee961a874a92d6b511cf7403466abd76a618b22cecc47b5f81c9"
+        }
+      ]
+    },
+    {
+      "rule_id": "R17",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/actions.jsonl",
+          "sha256": "d202535fca05cd6e9d3b9002a7639b93222f2ebd1513c081c1e405258ed8f273"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/network.json",
+          "sha256": "5621f1d2f7d21fb0c4937f875c236348c4d5709a0382d7fedf9df986d5a257dd"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/obs-0009.html",
+          "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/actions.jsonl",
+          "sha256": "c5f9522e9dc5603bd781f1ae1f170831bcf59cebd3f0bbd46a62aec69ebd06b0"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/network.json",
+          "sha256": "048555d275335ecbe4f271a60ecd164f43f8ad95c6889cd7424f7298bc2b9e6b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/obs-0031.html",
+          "sha256": "b6520243a58ddb9e80cb77d21599c879670ad7723c2da89e2b04ea0f87466d2c"
+        }
+      ]
+    },
+    {
+      "rule_id": "R18",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-026-32bab536/actions.jsonl",
+          "sha256": "d0302a3140e9757fade88ee852ff7d7c4d1eb118c7683b9657a107cf957b2b07"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-026-32bab536/network.json",
+          "sha256": "5599d1b3636312fa5b27b246e66bed6c21677f3a7ac617b10f450dba44a3d8b5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-026-32bab536/obs-0028.html",
+          "sha256": "ee7c6f87bc886587bb330f02f2128f697156438b1384e6a0a4afd2c4d9a6f533"
+        }
+      ]
+    },
+    {
+      "rule_id": "R19",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-027-8239b009/actions.jsonl",
+          "sha256": "2c1b56d182a5f11f823c90376bf9e16ef02d89f70a3d66e675a8f0522d4bb461"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-027-8239b009/network.json",
+          "sha256": "6e361009722b544f27c8b9c9c798875e39ba79dca95a03ed903e366ec87c90eb"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-027-8239b009/obs-0019.html",
+          "sha256": "153285995a51410e6236b9ea5b99f3065e67a1fb8a08358a3f13d19de1c633ac"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-028-454a04e4/actions.jsonl",
+          "sha256": "39d7490ec12e8ebeecb2b19e827ab64eb143c00d86e0e2b581ed77b9ea5a995d"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-028-454a04e4/network.json",
+          "sha256": "b386419e0cec5589e5ea2ae68d76a0001d18db76731563544fbbb44c758f6dfb"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-028-454a04e4/obs-0019.html",
+          "sha256": "29ce293f6279ecbe6c89c98237908d85515abcff3b5a914bbf43ff964a3550ac"
+        }
+      ]
+    },
+    {
+      "rule_id": "R20",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-028-454a04e4/actions.jsonl",
+          "sha256": "39d7490ec12e8ebeecb2b19e827ab64eb143c00d86e0e2b581ed77b9ea5a995d"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-028-454a04e4/network.json",
+          "sha256": "b386419e0cec5589e5ea2ae68d76a0001d18db76731563544fbbb44c758f6dfb"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-028-454a04e4/obs-0019.html",
+          "sha256": "29ce293f6279ecbe6c89c98237908d85515abcff3b5a914bbf43ff964a3550ac"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-029-598b3871/actions.jsonl",
+          "sha256": "f855af3be2e3e593f9a06e3dd7b33e8421d3f3f8d554a62f676c1a5d26cba3b2"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-029-598b3871/network.json",
+          "sha256": "51bba15c90aa367cea3bab066960741c87e6e9b4b406cf7a08f904fd11b84240"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-029-598b3871/obs-0010.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R21",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-029-598b3871/actions.jsonl",
+          "sha256": "f855af3be2e3e593f9a06e3dd7b33e8421d3f3f8d554a62f676c1a5d26cba3b2"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-029-598b3871/network.json",
+          "sha256": "51bba15c90aa367cea3bab066960741c87e6e9b4b406cf7a08f904fd11b84240"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-029-598b3871/obs-0010.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R22",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-030-1f9e862c/actions.jsonl",
+          "sha256": "53cd16347b84ff433431b0446a7f2792468d5bdf18947f883e56b604c33c5a60"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-030-1f9e862c/network.json",
+          "sha256": "9950371c462da0ef1997b99bc18af0265415b661ee4d52bdceb2ec527c171fdc"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-030-1f9e862c/obs-0034.html",
+          "sha256": "ffadfd03a2a56aa0dec01a6104cafe2490ed6dcc0a59c7d8d7a9caceebdedfa9"
+        }
+      ]
+    },
+    {
+      "rule_id": "R23",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-031-f660e179/actions.jsonl",
+          "sha256": "14265fb0e4b1a57c9c02e6d8760a6e30eae4d0d4e01e24523eded6d4b14da20e"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-031-f660e179/network.json",
+          "sha256": "a89d511e0a5bf99bcb365b61f59c63dd3ff76e0f9881665bcad2d8c24beff979"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-031-f660e179/obs-0016.html",
+          "sha256": "68031e5af9552276dbb331aee254929384adb17ed44aaa4c854519046af4d35c"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-032-e41c5d80/actions.jsonl",
+          "sha256": "2fdbf669435de1e8294cbc2b623ef62e1a6717e3ef59b6276abebdc08820ec52"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-032-e41c5d80/network.json",
+          "sha256": "7303db47b61fbe4639e274d74e5729dd7c0e030e0f7c32275120c441bc6f7d0e"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-032-e41c5d80/obs-0016.html",
+          "sha256": "1db9f593aa8f1a4431d6df33638ca2aa4aa56df65b3940cd09cef7567565cb42"
+        }
+      ]
+    },
+    {
+      "rule_id": "R24",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-033-dce6c636/actions.jsonl",
+          "sha256": "2a95b4a20cae1f4c0230f00cad8ec45b5ffaeccb67e27b1ff31f3c2e4fe8d861"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-033-dce6c636/network.json",
+          "sha256": "45998604eda0220329df444f8e1daff12920771c2806aea2e610fb1d6528de70"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-033-dce6c636/obs-0019.html",
+          "sha256": "15c1f9b9c2f41cf0f4a1200ef737e4c2485b00c617ae9ed83bc92d8e0509382d"
+        }
+      ]
+    },
+    {
+      "rule_id": "R25",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/actions.jsonl",
+          "sha256": "8db8bfeda1ec9f34659bf1b10a146b4e1d3b7323fc98ecb3e8a638df8b11c87b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/network.json",
+          "sha256": "d797f1a8ec9320250e6f14334ead09e6c2a10a03fc31b5fed4a28a63b341d2c5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/obs-0007.html",
+          "sha256": "bbd298c3e7a900057d2fb650c25edd7c7409284c4e2c8df1c258bbf50a27b3fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/actions.jsonl",
+          "sha256": "c0e8b076f708adea15bc1ba4cb7ec640d7d0942d70d8e01e734b2e3b35d13e5a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/network.json",
+          "sha256": "6b372523687c8e7a1a341265fc9efd1393c54e41fed928c4ac02abb597d70f6a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/obs-0019.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/actions.jsonl",
+          "sha256": "f244e2ab79290ea29b3786a3403ded5a3bf3008381b18a00cb39205a3ef73e20"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/network.json",
+          "sha256": "bd871e4c4a0ac2182040290e364d19f5953db0221d1b49da9c08cc5f8b86a680"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-012-6ccdd3d6/obs-0028.html",
+          "sha256": "4f5e92c4450d32d7ed30f791359aa436da3c955944e41293d501d14ed171fbce"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-034-c4cb1766/actions.jsonl",
+          "sha256": "4e4d3e0c8befddf55d4ee733580a7e2daea350d748ea0cfacd1e072b2d409d01"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-034-c4cb1766/network.json",
+          "sha256": "73ceba2128097e89b9322731099a8a99cbfdaba0e068be7d83a9281aa33cf2c6"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-034-c4cb1766/obs-0007.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R26",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-035-3c9bafb7/actions.jsonl",
+          "sha256": "f240ead15c40b4802bbb4c606967a8f6cfdcd26ec2dad15c7c01182c6f4bce0f"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-035-3c9bafb7/network.json",
+          "sha256": "5d58c1ceff619201df5fc3587698a70cc80b4de689cfb3255ae4888d0d1c8148"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-035-3c9bafb7/obs-0016.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "R27",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-037-df7c8050/actions.jsonl",
+          "sha256": "0a7eb36a88b04a624958a43e6e7dc4eefd3e774660837ad381617e2ca7acb047"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-037-df7c8050/network.json",
+          "sha256": "6b8162a4efee574729188d8aad223701ef25fe91164a35b8882402d8685421d9"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-037-df7c8050/obs-0031.html",
+          "sha256": "fafc0fc8b7198256fef5796592dc4be842a2dadccedfa83a332ff0e085a435ff"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-038-bd84c7df/actions.jsonl",
+          "sha256": "ef4139347ea0dcb61266e528241806442370686ef095a143c66fd596df20ec63"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-038-bd84c7df/network.json",
+          "sha256": "5f7b57ef7dbfc4ddb59ba5a67579e7a98f8c3714e9e8b82441eb9775afe745f5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-038-bd84c7df/obs-0019.html",
+          "sha256": "250f9f62e193d09feeff42afa94a7c5ea98a5d49f25e91f2ce02a2260cc3a57a"
+        }
+      ]
+    },
+    {
+      "rule_id": "R28",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-038-bd84c7df/actions.jsonl",
+          "sha256": "ef4139347ea0dcb61266e528241806442370686ef095a143c66fd596df20ec63"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-038-bd84c7df/network.json",
+          "sha256": "5f7b57ef7dbfc4ddb59ba5a67579e7a98f8c3714e9e8b82441eb9775afe745f5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-038-bd84c7df/obs-0019.html",
+          "sha256": "250f9f62e193d09feeff42afa94a7c5ea98a5d49f25e91f2ce02a2260cc3a57a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-039-1a014366/actions.jsonl",
+          "sha256": "41a132a06057f90ea569d6fc1033ea2a12ad19e065d6be2dcf036af9f03d366a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-039-1a014366/network.json",
+          "sha256": "2ae7025e88bd79e97092835677745e2254faad7fa3da21315e2168191240cc4b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-039-1a014366/obs-0013.html",
+          "sha256": "ae4253947fcebd2b66825d26b8ab5abbc91fa035b0037595185ca3f25586c179"
+        }
+      ]
+    },
+    {
+      "rule_id": "R29",
+      "author_status": "verified",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/actions.jsonl",
+          "sha256": "d5e01c9aa965c949c4d81c5cd73de95629c43e906d8e88ac6913d3723af38b77"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/network.json",
+          "sha256": "a7c3075d86e7bb7670df53b78fc59de1aae464ba0de1fa3159391fa07e9c5ff7"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-017-fd765642/obs-0019.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-022-4cc28227/actions.jsonl",
+          "sha256": "3990685add054f0a196a37c4991621066359f9892c86d77bcd601221d7914e1b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-022-4cc28227/network.json",
+          "sha256": "a23f30932a7c679cec0b453506ae9444083f83e5d7c7565f8b271b203bb449ef"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-022-4cc28227/obs-0025.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-036-3a8db7cb/actions.jsonl",
+          "sha256": "a4e0fd50be8585d1c1805f68e6e1f44a1be5ec5ca7da54d88ee2f22e8ff5e178"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-036-3a8db7cb/network.json",
+          "sha256": "8708776065a0c2294b5ee9dd136ae8aa0ddd6fa8e76002f229f4e974f74cbb94"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-036-3a8db7cb/obs-0022.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        }
+      ]
+    },
+    {
+      "rule_id": "F01",
+      "author_status": "refuted",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/actions.jsonl",
+          "sha256": "8db8bfeda1ec9f34659bf1b10a146b4e1d3b7323fc98ecb3e8a638df8b11c87b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/network.json",
+          "sha256": "d797f1a8ec9320250e6f14334ead09e6c2a10a03fc31b5fed4a28a63b341d2c5"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-009-7e607d04/obs-0007.html",
+          "sha256": "bbd298c3e7a900057d2fb650c25edd7c7409284c4e2c8df1c258bbf50a27b3fa"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/actions.jsonl",
+          "sha256": "c0e8b076f708adea15bc1ba4cb7ec640d7d0942d70d8e01e734b2e3b35d13e5a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/network.json",
+          "sha256": "6b372523687c8e7a1a341265fc9efd1393c54e41fed928c4ac02abb597d70f6a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-010-380d90cc/obs-0019.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "rule_id": "F02",
+      "author_status": "refuted",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/actions.jsonl",
+          "sha256": "d202535fca05cd6e9d3b9002a7639b93222f2ebd1513c081c1e405258ed8f273"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/network.json",
+          "sha256": "5621f1d2f7d21fb0c4937f875c236348c4d5709a0382d7fedf9df986d5a257dd"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/obs-0009.html",
+          "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/actions.jsonl",
+          "sha256": "c5f9522e9dc5603bd781f1ae1f170831bcf59cebd3f0bbd46a62aec69ebd06b0"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/network.json",
+          "sha256": "048555d275335ecbe4f271a60ecd164f43f8ad95c6889cd7424f7298bc2b9e6b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/obs-0031.html",
+          "sha256": "b6520243a58ddb9e80cb77d21599c879670ad7723c2da89e2b04ea0f87466d2c"
+        }
+      ]
+    },
+    {
+      "rule_id": "H02",
+      "author_status": "hypothesis",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/actions.jsonl",
+          "sha256": "a41eb7d88f431213eb766911c16bf6707531606aab52378908600726cb577c8a"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/network.json",
+          "sha256": "9f039abaf0040948720b7f17806b8fde167df086b006fd1f4101e6f6246e98ca"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-002-df9b7624/obs-0010.html",
+          "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/actions.jsonl",
+          "sha256": "d202535fca05cd6e9d3b9002a7639b93222f2ebd1513c081c1e405258ed8f273"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/network.json",
+          "sha256": "5621f1d2f7d21fb0c4937f875c236348c4d5709a0382d7fedf9df986d5a257dd"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-003-547e1cb6/obs-0009.html",
+          "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/actions.jsonl",
+          "sha256": "c5f9522e9dc5603bd781f1ae1f170831bcf59cebd3f0bbd46a62aec69ebd06b0"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/network.json",
+          "sha256": "048555d275335ecbe4f271a60ecd164f43f8ad95c6889cd7424f7298bc2b9e6b"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-025-0ccd0ebd/obs-0031.html",
+          "sha256": "b6520243a58ddb9e80cb77d21599c879670ad7723c2da89e2b04ea0f87466d2c"
+        }
+      ]
+    },
+    {
+      "rule_id": "U02",
+      "author_status": "unknown",
+      "review_status": "audited",
+      "conclusion": "Bounded observed statement or explicitly preserved hypothesis/refutation/unknown; no global hidden-accounting proof.",
+      "evidence_refs": [
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-001-0044c695/actions.jsonl",
+          "sha256": "ecbf1a484dbd0f066f054baf7ba3ac1a2bf9a7272d371c5c7af365b8cf4d9812"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-001-0044c695/network.json",
+          "sha256": "1eedb3e06c9c4ce85f36848e9dc8369b38ffb06c5b1d06364b9c2b8b5ec698db"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-001-0044c695/obs-0004.html",
+          "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-040-13da86c7/actions.jsonl",
+          "sha256": "98af19c3be64dc89c74a62a48ab933e546c5189e4272dd4a8133b31425494b02"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-040-13da86c7/network.json",
+          "sha256": "5220d076fd9ce9b297bfec43bd3da61994dfb090ef4b84efa218355a7c24de3f"
+        },
+        {
+          "path": "runs/b-seed-3141/workspace/evidence/call-040-13da86c7/obs-0006.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "B3141-corrected-predictions",
+      "finding": "Initial untouched-login rejection and cart idempotence predictions are preserved/refuted; final rules distinguish untouched from cleared credentials and persisted quantity from visible row count."
+    },
+    {
+      "id": "B3141-execution-helpers",
+      "finding": "Condition B has supervisor-supplied forecasts and native execution helpers, no behavior predictor. Reusable cart/remove/deactivate exercised; newsletter corrected helper remains explicitly unexecuted. Optional row_index still requires caller current-identity confirmation; native nth is not semantic identity proof."
+    },
+    {
+      "id": "B3141-failure-accounting",
+      "finding": "Seven locator/disabled timeouts retained. Disabled click is not backend rejection. Newsletter locator failed before fill/subscribe action and script budget then stopped; no subscription claim."
+    },
+    {
+      "id": "B3141-inactive-checkout",
+      "finding": "Unavailable checkout error screen distinguished from cart clearing by subsequent canonical navigation and removal. No universal stock/inventory accounting claim."
+    }
+  ],
+  "template_novelty": [
+    {
+      "template_id": "C01",
+      "status": "not_proven_novel",
+      "reason": "Search and dual-membership sequence exposed; unseen composition not established."
+    },
+    {
+      "template_id": "C02",
+      "status": "not_proven_novel",
+      "reason": "Marketplace filters/sorts/cart/checkout exposed; exact template novelty not established."
+    },
+    {
+      "template_id": "C03",
+      "status": "exposed_composition_family",
+      "reason": "Create/market readback/deactivate demonstrated."
+    },
+    {
+      "template_id": "C04",
+      "status": "not_proven_novel",
+      "reason": "Multi-offer checkout and removal/repair paths exposed; novel full dependency composition not proven."
+    },
+    {
+      "template_id": "C05",
+      "status": "not_proven_novel",
+      "reason": "Membership and purchase appear in same session; final preservation endpoint not established as unseen or verified."
+    },
+    {
+      "template_id": "C06",
+      "status": "not_proven_novel",
+      "reason": "Invalid numeric listing refusal and subsequent repair/create/deactivation exposed; precise new composition not proven."
+    }
+  ],
+  "novel_composition_claims_admitted": 0,
+  "limitations": [
+    "One supplied account, finite tested record/state/parameter set; hidden effects and broader transfer remain unknown.",
+    "Unexecuted correction and internal package validation are not browser validation or independent task scores.",
+    "Some helpers accept positional narrowing; execution robustness depends on confirming current identity.",
+    "Runtime generic unconfirmed classifications retained; evidence-based interpretations do not constitute evaluator scores."
+  ]
+}

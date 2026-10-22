@@ -1,0 +1,19 @@
+{
+  "origin": "http://127.0.0.1:12042",
+  "socket": "/opt/browser-meme/phase2-runs/eval-a-seed-1729-01.sock",
+  "fixture": {
+    "kind": "public_fixture",
+    "is_real_credential": false,
+    "role": "ordinary_test_account",
+    "account": {
+      "username": "demo",
+      "password": "password123"
+    },
+    "source": "public login page supplied by unchanged site fixture"
+  },
+  "script": "def run(h):\n    read = {'disposition':'accepted','effects':{'persistent_state_changed':False,'affected_record_count':0},'ui_claims':[],'unknowns':[]}\n    frozen = {'disposition':'unknown','effects':{'persistent_state_changed':None,'affected_record_count':None},'ui_claims':[],'unknowns':['Only authenticated additions for release 221 were tested.']}\n    h.expect(read, 'Open previously inspected target release after whole-task prediction is frozen')\n    h.page.goto(h.origin + '/release/1')\n    if h.page.get_by_role('button',name='Account',exact=True).count() != 1:\n        h.note('Authentication not confirmed; no business write attempted')\n        return\n    print({'target_heading':h.page.locator('main h1').inner_text()})\n    add = h.page.get_by_role('button',name='Add to Collection',exact=True)\n    if add.count() != 1 or not add.is_visible() or not add.is_enabled():\n        h.note('Implementation/locator precondition failed; no business write attempted')\n        return\n    h.expect(frozen, 'Single authorized collection addition for release 1; frozen model has no supported prediction for this release')\n    add.click()\n    print(h.observe('collection-add-immediate'))\n    print(h.network())\n    h.expect(read, 'Confirm stored membership by opening collection after single click')\n    h.page.goto(h.origin + '/me/collection')\n    print(h.observe('collection-after-fresh-navigation'))\n    target = h.page.locator('main a[href=\"/release/1\"]')\n    print({'target_collection_link_count':target.count(),'target_collection_texts':target.all_text_contents()})\n    h.note('Current-task UI readback only. Frozen package remains unchanged; unknown prediction is not a business counterexample.')\n",
+  "modules": {},
+  "state_path": "/opt/browser-meme/phase2-runs/eval-a-seed-1729-01/private/browser/state/browser-state.json",
+  "action_limit": 53,
+  "intent": null
+}

@@ -1,0 +1,46 @@
+{
+  "scope": "Business effects observed during learning, not a promise about evaluator reset state",
+  "changes": [
+    {
+      "effect": "Release 221 appeared once in both account membership lists after repeated adds",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-6c0c68cf/network.json",
+          "sha256": "8cc934e5b791e4dfa4f7d629f0e6cb37ca4844f2c6d6a8f0d8ba6454b1e0bee3"
+        }
+      ]
+    },
+    {
+      "effect": "Order 121 returned paid for listing 4 quantity 2 at total 4290 cents; cart later remained empty",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-009-a4672f61/network.json",
+          "sha256": "0310d60cb4183196c70a05e6a794a33b9874f44fc219f243dd6803072fcf46c7"
+        },
+        {
+          "path": "evidence/call-010-c04f8715/obs-0003.html",
+          "sha256": "b361021e5c92bae7becbc119414ccf65c1d65eede4272f696fe9f30a119e32a0"
+        }
+      ]
+    },
+    {
+      "effect": "Seller view showed listing 4 sold and Qty 1 after checkout",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-c04f8715/network.json",
+          "sha256": "fa3cecce3802d5e0401b59b1e1c6d412f28f960bc628c0393c9fe5e67effba65"
+        }
+      ]
+    },
+    {
+      "effect": "No listing creation or deactivation attempted; terminal seller search was read-only",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-011-7a83aa24/result.json",
+          "sha256": "9ca2d463dd5181ce7217163ac881f2531a9733d597dee547c3cf694d0b44359f"
+        }
+      ]
+    }
+  ],
+  "hidden_record_counts": "Unknown; not inferred from optimistic UI counters or response success"
+}

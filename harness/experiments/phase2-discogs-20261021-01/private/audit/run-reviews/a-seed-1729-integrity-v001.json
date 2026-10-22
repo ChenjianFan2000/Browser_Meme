@@ -1,0 +1,330 @@
+{
+  "kind": "independent_export_integrity_audit",
+  "schema_version": 1,
+  "run_id": "a-seed-1729",
+  "manifest_files": 1110,
+  "original_public_files": 450,
+  "checked_reference_occurrences": 1125,
+  "calls": [
+    {
+      "call_id": "call-001-49942053",
+      "actions": 1,
+      "before_count": 1,
+      "after_count": 1,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-002-d2ff8107",
+      "actions": 2,
+      "before_count": 2,
+      "after_count": 2,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-003-aed7b82b",
+      "actions": 3,
+      "before_count": 3,
+      "after_count": 3,
+      "status": "error",
+      "failure_category": "unclassified",
+      "error": "TimeoutError: Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for get_by_label(\"Username or Email\") to be visible\n",
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-004-9ff8981c",
+      "actions": 2,
+      "before_count": 2,
+      "after_count": 2,
+      "status": "error",
+      "failure_category": "unclassified",
+      "error": "TimeoutError: Locator.wait_for: Timeout 30000ms exceeded.\nCall log:\nwaiting for get_by_role(\"link\", name=\"Account\", exact=True) to be visible\n",
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-005-458acab8",
+      "actions": 2,
+      "before_count": 2,
+      "after_count": 2,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-006-67f666a9",
+      "actions": 7,
+      "before_count": 7,
+      "after_count": 7,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-007-84712f42",
+      "actions": 10,
+      "before_count": 10,
+      "after_count": 10,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-008-a75dfe0d",
+      "actions": 4,
+      "before_count": 4,
+      "after_count": 4,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-009-79c1d31d",
+      "actions": 9,
+      "before_count": 9,
+      "after_count": 9,
+      "status": "completed",
+      "failure_category": null,
+      "error": null,
+      "predictions_present": true
+    },
+    {
+      "call_id": "call-010-cd631f88",
+      "actions": 4,
+      "before_count": 4,
+      "after_count": 4,
+      "status": "error",
+      "failure_category": "boundary",
+      "error": "BoundaryError: active-code or input-value attribute is excluded; use input_value for nonsecret controls",
+      "predictions_present": true
+    }
+  ],
+  "actions": 44,
+  "python_files": [
+    {
+      "path": "build_artifacts.py",
+      "sha256": "b484c7ed43f8420a45adac8590df1a5e2f058644795e7d0aae7fbd14a9f0f65a",
+      "imports": [
+        "import json, hashlib, pathlib, shutil",
+        "from html.parser import HTMLParser"
+      ],
+      "functions": [
+        "ref",
+        "er",
+        "write",
+        "rule",
+        "citations",
+        "objects",
+        "exploration",
+        "__init__",
+        "handle_starttag",
+        "handle_data",
+        "handle_endtag"
+      ]
+    },
+    {
+      "path": "validate_package.py",
+      "sha256": "68f31a30363231eaf04cdc5f44390fd0500ba7e6c1e1f210710f95ba0e48596e",
+      "imports": [
+        "import json, pathlib, hashlib, importlib.util"
+      ],
+      "functions": [
+        "check",
+        "refs"
+      ]
+    },
+    {
+      "path": "experiments\\e01_initial.py",
+      "sha256": "b754a67284d55783e4d16381580ba1c2684fe52a7b17345996577c8bb8f52403",
+      "imports": [],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e02_login_discovery.py",
+      "sha256": "7b3ec9e28ed0a2ba1527b65dc2dbc2325e5cb335b6b052b51e2d68b3f3160cec",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e03_login.py",
+      "sha256": "c0483f2379c64ed51236bd0a172b66d6cdd0eeb7598cca98accac3f6a6504385",
+      "imports": [
+        "from ui import go, click, fill"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e04_account_release.py",
+      "sha256": "c786f6388079cd6bb3250eb152b91b1d7fa98f8652fb256942f93053ea2ac526",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e05_account_corrected.py",
+      "sha256": "81e551553d933840cf8f9ffe98b799784e4a6d4abd7a30764fd7ef056bde50b8",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e06_baselines.py",
+      "sha256": "f5470ddd112d9055afd8a375e1078e8eda373a5e52b6c303034d422d7560477a",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e07_membership_repeats.py",
+      "sha256": "65e56d40c22f97e5464977cd47a1888b124a1761e6faf7056780716174654cae",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e08_marketplace.py",
+      "sha256": "861b5dd6ff4e540077bbdfcbac6172b38f913a91cd185fb84bafe6e484d7da6c",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e09_cart.py",
+      "sha256": "d7c01c541d6a4b12b19cd2bf89faf4efe0ab51006f1367215de1168221b6fb3d",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\e10_checkout_remove.py",
+      "sha256": "cb64820168fa1aadadabb0e1563d84c137ba4ab8823836f7da344e01b3ac3393",
+      "imports": [
+        "from ui import go, click"
+      ],
+      "functions": [
+        "run"
+      ]
+    },
+    {
+      "path": "experiments\\ui.py",
+      "sha256": "32f76ab9b59c81ee27536d93cfe089030a70307e790aa27e5c11b7a336a4e451",
+      "imports": [],
+      "functions": [
+        "prediction",
+        "observe",
+        "go",
+        "click",
+        "fill",
+        "select"
+      ]
+    },
+    {
+      "path": "experiments\\ui_v1.py",
+      "sha256": "6670d532b21e9c4e830984d8c7d57041bc680ce7f3e35b18ef8bb614839d9f08",
+      "imports": [],
+      "functions": [
+        "prediction",
+        "observe",
+        "go",
+        "click",
+        "fill",
+        "select"
+      ]
+    },
+    {
+      "path": "revisions\\001\\behavior_model.py",
+      "sha256": "409723675c2f642ea627fe86945ba295bf469488613e67ce87626f9740b6bb81",
+      "imports": [],
+      "functions": [
+        "predict"
+      ]
+    },
+    {
+      "path": "revisions\\001\\scripts.py",
+      "sha256": "afa5820c3b60c9a604f64ad257f107a79a49097d7f78a65b23dca12f616c60bb",
+      "imports": [
+        "from behavior_model import predict"
+      ],
+      "functions": [
+        "run",
+        "add_new_wantlist_221"
+      ]
+    },
+    {
+      "path": "revisions\\002\\behavior_model.py",
+      "sha256": "11694ce5e2b2b948ada74cfdf9f78cf38073088738806912a85e17b838620990",
+      "imports": [],
+      "functions": [
+        "_result",
+        "_claim",
+        "_predict",
+        "predict"
+      ]
+    },
+    {
+      "path": "revisions\\002\\scripts.py",
+      "sha256": "9f6b5a1cf62ca37499fc795258f14a5d2a039c4fd5c3435711d603e6dd0e0859",
+      "imports": [
+        "import re",
+        "from behavior_model import predict"
+      ],
+      "functions": [
+        "_unknown",
+        "_read",
+        "_go",
+        "_click",
+        "_fill",
+        "sign_in",
+        "inspect_release",
+        "add_membership",
+        "_total_from_cart",
+        "add_to_cart",
+        "checkout_once",
+        "inspect_selling",
+        "run"
+      ]
+    }
+  ],
+  "errors": [],
+  "frozen_revision": "revisions/002",
+  "binding_hashes": {
+    "registration.json": "08dec131cee4f9bbd87d7a1722f314a206b1cd652cf30b9ee5a674a95d4f9c22",
+    "learning-manifest.json": "ccd84f346d9f50153de514fd55e7788d6494f6792e35aa5e9e6b0bb3cb6a6f64",
+    "learning-summary.json": "7fc50d7d7298e6cdc6835ce6232a11fd859db8c1da7bef2e3bbb8906952bf2df",
+    "workspace/READY.json": "99fc5cdd87bcad7ae7a29480aa23d2d0b11c3836225a5318953268498583c4c7"
+  }
+}

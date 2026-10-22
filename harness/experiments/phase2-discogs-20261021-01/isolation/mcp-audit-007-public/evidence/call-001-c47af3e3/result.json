@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "error": null,
+  "actions": 2,
+  "return_value": {
+    "kind": "observation",
+    "label": "generic-final",
+    "url": "http://127.0.0.1:39293/",
+    "dom": "obs-0005.html",
+    "screenshot": "obs-0005.png",
+    "accessibility": "obs-0005.ax.json",
+    "visible_text": "Generic fixture\nClicked API credential",
+    "network": []
+  },
+  "last_observation": {
+    "kind": "observation",
+    "label": "final",
+    "url": "http://127.0.0.1:39293/",
+    "dom": "obs-0006.html",
+    "screenshot": "obs-0006.png",
+    "accessibility": "obs-0006.ax.json",
+    "visible_text": "Generic fixture\nClicked API credential",
+    "network": []
+  },
+  "console": "",
+  "elapsed_seconds": 3.5637080770002285
+}

@@ -1,0 +1,190 @@
+{
+  "status": "passed",
+  "kind": "incremental_worker_deployment_admission",
+  "scope": "def_deployment_ui_and_reused_frozen_namespace_relay",
+  "admitted_at_utc": "2026-10-21T08:08:10.235908+00:00",
+  "newly_admitted_worker_ids": [
+    "d",
+    "e",
+    "f"
+  ],
+  "admitted_worker_ids": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+  ],
+  "max_active_workers": 6,
+  "prior_abc_gate": {
+    "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\isolation\\expanded-abc-management-admission-001.json",
+    "sha256": "c4f9919fdf88a2e3e5481cdeafc86cc9a9fba8b05398f9f4dee69fea1acabd82"
+  },
+  "readiness": [
+    {
+      "worker_id": "d",
+      "readiness_sha256": "0bb1eacb21868fc73f35b92ad5b362c7f31ac4a2de4abcabdce672d8ac467fc9",
+      "ui_passed": 30,
+      "ui_denominator": 30,
+      "frontend_port": 16042,
+      "backend_port": 16138
+    },
+    {
+      "worker_id": "e",
+      "readiness_sha256": "892891516d7fa14c774cfdaa610f857a478721c01f9a199dfeadedeb8fd00cff",
+      "ui_passed": 30,
+      "ui_denominator": 30,
+      "frontend_port": 17042,
+      "backend_port": 17138
+    },
+    {
+      "worker_id": "f",
+      "readiness_sha256": "b5a3cfa659694a7ec8e564ee38a026503eda08e5d28ef0614d2072de6a5cd9e6",
+      "ui_passed": 30,
+      "ui_denominator": 30,
+      "frontend_port": 18042,
+      "backend_port": 18138
+    }
+  ],
+  "physical_formal_relay_positive_worker": "d",
+  "model_requests": 0,
+  "fixed_case_denominator": 180,
+  "fixed_prediction_field_denominator": 540,
+  "management_files_sha256": {
+    "harness/phase2/run_expanded_case_v001.py": "18dccac4db16a74c1fe2178d28555015ede4f12aebdf58c5cb541519d341fae3",
+    "harness/phase2/run_parallel_v001.py": "0815eb6ab570dd2fdb853fc2573384fa8c893eb16562bfd3f5af0327978e59b7",
+    "harness/tests/test_phase2_parallel_v001.py": "e67b171dd3314d53cf015759a5b18e93b2a381a8815d9e45916062277ca2ae10",
+    "harness/sites/discogs/phase2_private/scale_v001/management.py": "352904b8ce1b7c4b07e9924c079ab9abe39638b6ee503753d0d4ecc6cec5fb77",
+    "harness/experiments/phase2-discogs-20261021-01/PROTOCOL-004.md": "2fd0818c29ff3e6a7b2e2fa79590ab139ed9f8dcd4dc56ed8e009ce7132ffa1b"
+  },
+  "original_frozen_generic_files_sha256": {
+    "harness/phase2/__init__.py": "2b2926bd5000497941e076f5ceefa2fd18092f12f6b4334494828d365c2a89bd",
+    "harness/phase2/browser_broker.py": "e8846969d76c6eb9913214667ff401780bdb16b5e5b80c4408e8fc098c40648d",
+    "harness/phase2/browser_runtime.py": "2f0899d683d766532dcb22a15fc5faea76780a0c0508b0a7541f306fdc67623f",
+    "harness/phase2/call_records.py": "15b2f56b9869ae975057ba02ca89fdd1f458c6b3e4ba9dc958ca801e0a1f3118",
+    "harness/phase2/control_probe.py": "98a5d8ca01f6894bb3646c5447913c0b0e06a771c5f61a141e829d79c690078b",
+    "harness/phase2/evaluation_broker.py": "fcaef66841045d12cfc1f021d18f2b74f3c0503443612f80cecf5fd18c0c45cc",
+    "harness/phase2/handoff.py": "bd1896d821c8ee60cda63ba2db9957d428eb3daec275095923d39c39f0c6ba43",
+    "harness/phase2/launch_solar.py": "9501ed9400bb36752830c2defa81ee24760e74117d6eaebc0be04e2504d5bf1a",
+    "harness/phase2/LEARNER_CONTRACT.md": "e13471cfeeee45dc4386b870a16111ef19e02b8e8200222420e69844d92d86e0",
+    "harness/phase2/management.py": "75c5c67ebf60000e26ae327c27f8c551448d3dcaeb69a46daaad0bbed40d3bdc",
+    "harness/phase2/observation.py": "03b8ea53f20626fa85aa8802aee273dd0fd321c8e32a8865b0c247cb3fed9580",
+    "harness/phase2/permissions.py": "512c72931fae63cf1636b74b253372dca9226cb4ac203164765a27810ec00d5e",
+    "harness/phase2/predict_runtime.py": "159555bd8dd7eab15b2da1b59a8508e33ec5c0abdcd86efea354855f4da3df0f",
+    "harness/phase2/prediction_record.py": "5153ab1d0825fd12777b7caacd7058b88d1974be7c81d62fa9562f170a5a322c",
+    "harness/phase2/process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "harness/phase2/README.md": "ac6d83112336ac6fb364b31f7c28f89712db6940132c41e6d2a19b3beee763c7",
+    "harness/phase2/records.py": "1127c5019befdf9667081f64762c6b2c6d532e39df8b330d2028c76e7e0240ab",
+    "harness/phase2/register_schedule.py": "4ebb129e1535a0b2b6c819f8ed19031fe51711988d553787d4337855b0b44314",
+    "harness/phase2/relay.py": "bc721eeb1f48c15465bbc26c94ad45c2d953b2bc59fd24470f7d55bb5fec79b2",
+    "harness/phase2/relay_probe.py": "c24b29307d02a81710296b6ba16a40dba301bacc956e83865a18d126a01fae04",
+    "harness/phase2/report.py": "2030c616bb37f342adccbb64c17114a77073b9166ee5d08e3bfadefa26d54507",
+    "harness/phase2/review_learning.py": "a9d421ce782655622b49f291948becbce2db2ad0f14786048ec989f5082e6a77",
+    "harness/phase2/review_pilot.py": "1097ad043ec14fe71d0f455c89f5b1ae7a732159f500afccbe410135c585c68e",
+    "harness/phase2/run_batch.py": "70ecacc0ef24653ec87a8c04a5b91b30738f6633bce86b7e85bd554b717b943f",
+    "harness/phase2/run_evaluation.py": "71ed14593ffa7ae1bcfcd7523d22afb8f0e7f61ed5d598693ed96eac4a493ea6",
+    "harness/phase2/run_learning.py": "21d68ab63878ad4c6a08be4fc0b6f3f627c8edcd0c5921842f2140b046808590",
+    "harness/phase2/RUNTIME_GUIDE.md": "0ef93ca645c4a64206c84830d22ae1d5228c8e4fcf8aeebb1aff0dcbdf6b229a",
+    "harness/phase2/script_policy.py": "7ec075e1afc1d54948e3cb853a2597e4a93195ecdfb87bff981230f5753d0606",
+    "harness/phase2/status.py": "bb80507980b239fe735698c623d984e7172c1ef8c2fd542381c0fc15116866aa"
+  },
+  "evidence": [
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\readiness.scale-v001.management.json",
+      "sha256": "0bb1eacb21868fc73f35b92ad5b362c7f31ac4a2de4abcabdce672d8ac467fc9"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\worker-manifest.json",
+      "sha256": "492126eb182673ab7f241a0d1e1570ec01ab57626851b0e4ab4787140b122b04"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\scale-admission.json",
+      "sha256": "39e8591ce6a50ce8b71a262cdf2096303b96bc290c51cb6f6316b8b9f95342dd"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\private\\scale-ui-acceptance-002\\report.private.json",
+      "sha256": "023108187a83da30304d159b7d2ed8ffb4a51d9aa29130d56bd1dea1b1419e38"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\private\\scale-boundary-001\\result.private.json",
+      "sha256": "0e01406330bc68b6f90dac13e22452e63414198265a4bfc1e11939661a60170b"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\private\\scale-cli-ui-001\\result.management.json",
+      "sha256": "2cad585e3c27588494a052a56c83536212b8b54641b63fb44fa41e178165684b"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\readiness.scale-v001.management.json",
+      "sha256": "892891516d7fa14c774cfdaa610f857a478721c01f9a199dfeadedeb8fd00cff"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\worker-manifest.json",
+      "sha256": "85e073ae1a3fc888abfe6d4ccf928c977b0a097534d3e0904539722280b23e08"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\scale-admission.json",
+      "sha256": "39e8591ce6a50ce8b71a262cdf2096303b96bc290c51cb6f6316b8b9f95342dd"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\private\\scale-ui-acceptance-002\\report.private.json",
+      "sha256": "a5d2a2ad4d977f99dc73e9c1a0aa8ae7957d40ec63bef9efcafb65887f1e0444"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\private\\scale-boundary-001\\result.private.json",
+      "sha256": "4a14dcc200dd301cecbd28e18021b8e2b28c506bcb6679cbd3029ecef81d90f1"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-e\\private\\scale-cli-ui-001\\result.management.json",
+      "sha256": "5b6938a1f057e404540f66aebd94fa4d4476c8c1ddb2acf6d5bb47c0639837e3"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\readiness.scale-v001.management.json",
+      "sha256": "b5a3cfa659694a7ec8e564ee38a026503eda08e5d28ef0614d2072de6a5cd9e6"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\worker-manifest.json",
+      "sha256": "09ec630e96798829d5c5b4b3caad0f31e44b1bb32495a81a0f1db7571e724af5"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\scale-admission.json",
+      "sha256": "39e8591ce6a50ce8b71a262cdf2096303b96bc290c51cb6f6316b8b9f95342dd"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\private\\scale-ui-acceptance-002\\report.private.json",
+      "sha256": "60affda3c8e5546ef005984ba1543c90154523a37b02cc5b0feae64bbb70f65f"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\private\\scale-boundary-001\\result.private.json",
+      "sha256": "d99c8a31b97ca3bd20545b60fd04ce6aa25ece6ea2622bc25ba28520af68cab1"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-f\\private\\scale-cli-ui-001\\result.management.json",
+      "sha256": "845ca6068727a0efb9cb88abc624f1ea182a6dabc7196eca3b76a084ef1f7456"
+    },
+    {
+      "path": "G:\\Browser_Meme\\.runtime\\phase2-eval-worker-d\\private\\scale-relay-ui-002\\result.management.json",
+      "sha256": "225c8098e233dc26570417bf0a2e462c493c3102c438b6b67299cf7df188e64d"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\private\\scale-management-equivalence-v001.json",
+      "sha256": "8df374c796120e85fa22fa781b1085c3e43369865b0310f7d507da33f7337018"
+    },
+    {
+      "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\private\\scale-driver-cli-equivalence-v001.json",
+      "sha256": "cbe9bbd0ab651f0ce23e7ad111557b9e8d7ca66a9ba059a6c8f5f59e9bfe4927"
+    }
+  ],
+  "conditions": [
+    "New registration must bind this gate and explicitly constrain worker scope to a..f; no frozen v001 edits.",
+    "No active worker may be owned by two dispatchers. Preserve existing sealed cases and unattempted queue exactly.",
+    "Enforce Windows>=4GiB and WSL>=2GiB dispatch guards; deployment acceptance is not sustained six-Solar capacity measurement."
+  ],
+  "limitations": [
+    "g..l and twelve-worker admission not included.",
+    "UI acceptance corrected002 ran in three-browser cohorts; original001 failures preserved.",
+    "Physical formal relay tested on d; e/f use identical hashed runtime/adapter with their individually verified routing boundaries.",
+    "No model inference probe, website modeling, task truth inference or performance comparison in this audit.",
+    "Model provider routing and stream failures remain a distinct availability risk."
+  ]
+}

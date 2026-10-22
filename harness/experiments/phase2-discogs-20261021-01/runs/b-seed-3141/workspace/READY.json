@@ -1,0 +1,29 @@
+{
+  "revision_directory": "revisions/r002",
+  "revision": "r002",
+  "parent_revision": "r001",
+  "condition": "B",
+  "learner": "gpt-6.1-sol",
+  "scheduling_seed": 3141,
+  "stop_reason": "script_submission_limit_reached: 40 of 40 submissions used; no further browser submission attempted",
+  "budget": {
+    "runtime_action_count": 214,
+    "action_limit": 300,
+    "script_calls": 40,
+    "script_call_limit": 40,
+    "last_reported_elapsed_seconds": 1713.3735502940003,
+    "inclusive_time_limit_seconds": 7200
+  },
+  "validation": "revisions/r002/validation.json",
+  "manifest": "revisions/r002/package_manifest.json",
+  "limitations": [
+    "Bounded observations under one supplied account; no complete website or universal backend model claimed.",
+    "Condition B package contains prose knowledge and native UI execution scripts; no executable behavior-prediction model.",
+    "Newsletter field locator failed in the final submission before fill or Subscribe click. Behavior remains untested; corrected script is explicitly unexecuted.",
+    "Membership removal, listing edit/reactivation, other-account ownership, stock ceilings and complete checkout accounting remain unknown.",
+    "Cookie Settings, some linked routes and manual seller-result selection were not exercised.",
+    "Runtime generic classifications and incorrect pre-action predictions remain in original evidence. Learner interpretations are bounded separately in exploration and rules.",
+    "Original failures, parent revision and exported browser evidence are preserved; evidence references use workspace-relative paths and verified SHA256 hashes.",
+    "No private tasks or independent evaluation scores were supplied. Per-action predictions are not whole-task scores."
+  ]
+}

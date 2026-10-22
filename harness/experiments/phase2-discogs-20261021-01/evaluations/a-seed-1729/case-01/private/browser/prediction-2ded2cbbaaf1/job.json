@@ -1,0 +1,20 @@
+{
+  "model_path": "/opt/browser-meme/phase2-runs/a-seed-1729/workspace/revisions/002/behavior_model.py",
+  "observation": {
+    "authenticated": true,
+    "account_scope": "supplied_fixture",
+    "release_id": 1,
+    "memberships": {
+      "collection": false
+    },
+    "page_kind": "release",
+    "release_title": "Business-focused directional knowledgebase",
+    "collection_baseline_target_link_count": 0,
+    "add_to_collection_visible": true
+  },
+  "intent": {
+    "operation": "collection.add",
+    "release_id": 1,
+    "confirm_via": "fresh collection UI readback"
+  }
+}

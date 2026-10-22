@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "kind": "incremental_management_dispatch_admission",
+  "scope": "abc_loader_hook_queue_3_only",
+  "admitted_at_utc": "2026-10-21T07:42:38.250801+00:00",
+  "admitted_worker_ids": [
+    "a",
+    "b",
+    "c"
+  ],
+  "max_active_workers": 3,
+  "new_worker_ids_d_through_l_admitted": false,
+  "twelve_worker_capacity_admitted": false,
+  "new_worker_ui_or_deployment_gate_claimed": false,
+  "case_denominator": 180,
+  "prediction_field_denominator": 540,
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "qualification": "Reuses unchanged accepted namespace/browser runtime and original abc sites; admits new management adapter/event hook/queue only. No model probe or new business execution in this increment.",
+  "checks": {
+    "original_abc_readiness_reused": true,
+    "frozen_driver_and_evaluator_hashes_unchanged": true,
+    "abc_evaluator_factory_original_functions_equal": true,
+    "abc_runtime_db_binding_and_pure_ingest_equivalent": true,
+    "new_event_hook_reuses_original_call_and_close": true,
+    "actual_runner_driver_protocol_hash_binding": true,
+    "exact_six_learning_identities_and_180_cases_preserved": true,
+    "queue_unique_claim_stop_and_sealed_skip_tests_passed": true,
+    "provider_error_detection_before_total_timeout_exclusion": true,
+    "host_and_wsl_memory_gate_present": true,
+    "original_namespace_browser_runtime_hashes_unchanged": true
+  },
+  "management_files_sha256": {
+    "harness/phase2/run_expanded_case_v001.py": "18dccac4db16a74c1fe2178d28555015ede4f12aebdf58c5cb541519d341fae3",
+    "harness/phase2/run_parallel_v001.py": "0815eb6ab570dd2fdb853fc2573384fa8c893eb16562bfd3f5af0327978e59b7",
+    "harness/tests/test_phase2_parallel_v001.py": "e67b171dd3314d53cf015759a5b18e93b2a381a8815d9e45916062277ca2ae10",
+    "harness/sites/discogs/phase2_private/scale_v001/management.py": "352904b8ce1b7c4b07e9924c079ab9abe39638b6ee503753d0d4ecc6cec5fb77",
+    "harness/experiments/phase2-discogs-20261021-01/PROTOCOL-004.md": "2fd0818c29ff3e6a7b2e2fa79590ab139ed9f8dcd4dc56ed8e009ce7132ffa1b"
+  },
+  "original_frozen_generic_file_count": 29,
+  "original_frozen_generic_files_sha256": {
+    "harness/phase2/__init__.py": "2b2926bd5000497941e076f5ceefa2fd18092f12f6b4334494828d365c2a89bd",
+    "harness/phase2/browser_broker.py": "e8846969d76c6eb9913214667ff401780bdb16b5e5b80c4408e8fc098c40648d",
+    "harness/phase2/browser_runtime.py": "2f0899d683d766532dcb22a15fc5faea76780a0c0508b0a7541f306fdc67623f",
+    "harness/phase2/call_records.py": "15b2f56b9869ae975057ba02ca89fdd1f458c6b3e4ba9dc958ca801e0a1f3118",
+    "harness/phase2/control_probe.py": "98a5d8ca01f6894bb3646c5447913c0b0e06a771c5f61a141e829d79c690078b",
+    "harness/phase2/evaluation_broker.py": "fcaef66841045d12cfc1f021d18f2b74f3c0503443612f80cecf5fd18c0c45cc",
+    "harness/phase2/handoff.py": "bd1896d821c8ee60cda63ba2db9957d428eb3daec275095923d39c39f0c6ba43",
+    "harness/phase2/launch_solar.py": "9501ed9400bb36752830c2defa81ee24760e74117d6eaebc0be04e2504d5bf1a",
+    "harness/phase2/LEARNER_CONTRACT.md": "e13471cfeeee45dc4386b870a16111ef19e02b8e8200222420e69844d92d86e0",
+    "harness/phase2/management.py": "75c5c67ebf60000e26ae327c27f8c551448d3dcaeb69a46daaad0bbed40d3bdc",
+    "harness/phase2/observation.py": "03b8ea53f20626fa85aa8802aee273dd0fd321c8e32a8865b0c247cb3fed9580",
+    "harness/phase2/permissions.py": "512c72931fae63cf1636b74b253372dca9226cb4ac203164765a27810ec00d5e",
+    "harness/phase2/predict_runtime.py": "159555bd8dd7eab15b2da1b59a8508e33ec5c0abdcd86efea354855f4da3df0f",
+    "harness/phase2/prediction_record.py": "5153ab1d0825fd12777b7caacd7058b88d1974be7c81d62fa9562f170a5a322c",
+    "harness/phase2/process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "harness/phase2/README.md": "ac6d83112336ac6fb364b31f7c28f89712db6940132c41e6d2a19b3beee763c7",
+    "harness/phase2/records.py": "1127c5019befdf9667081f64762c6b2c6d532e39df8b330d2028c76e7e0240ab",
+    "harness/phase2/register_schedule.py": "4ebb129e1535a0b2b6c819f8ed19031fe51711988d553787d4337855b0b44314",
+    "harness/phase2/relay.py": "bc721eeb1f48c15465bbc26c94ad45c2d953b2bc59fd24470f7d55bb5fec79b2",
+    "harness/phase2/relay_probe.py": "c24b29307d02a81710296b6ba16a40dba301bacc956e83865a18d126a01fae04",
+    "harness/phase2/report.py": "2030c616bb37f342adccbb64c17114a77073b9166ee5d08e3bfadefa26d54507",
+    "harness/phase2/review_learning.py": "a9d421ce782655622b49f291948becbce2db2ad0f14786048ec989f5082e6a77",
+    "harness/phase2/review_pilot.py": "1097ad043ec14fe71d0f455c89f5b1ae7a732159f500afccbe410135c585c68e",
+    "harness/phase2/run_batch.py": "70ecacc0ef24653ec87a8c04a5b91b30738f6633bce86b7e85bd554b717b943f",
+    "harness/phase2/run_evaluation.py": "71ed14593ffa7ae1bcfcd7523d22afb8f0e7f61ed5d598693ed96eac4a493ea6",
+    "harness/phase2/run_learning.py": "21d68ab63878ad4c6a08be4fc0b6f3f627c8edcd0c5921842f2140b046808590",
+    "harness/phase2/RUNTIME_GUIDE.md": "0ef93ca645c4a64206c84830d22ae1d5228c8e4fcf8aeebb1aff0dcbdf6b229a",
+    "harness/phase2/script_policy.py": "7ec075e1afc1d54948e3cb853a2597e4a93195ecdfb87bff981230f5753d0606",
+    "harness/phase2/status.py": "bb80507980b239fe735698c623d984e7172c1ef8c2fd542381c0fc15116866aa"
+  },
+  "prior_evaluation_admission": {
+    "path": "harness/experiments/phase2-discogs-20261021-01/isolation/evaluation-browser-mcp-acceptance-004.json",
+    "sha256": "66aa8854e0426a11cc79fe0ff708d2d603beefc3404beea618d97a3f4ef0075e"
+  },
+  "evidence": [
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/private/scale-management-equivalence-v001.json",
+      "sha256": "8df374c796120e85fa22fa781b1085c3e43369865b0310f7d507da33f7337018"
+    },
+    {
+      "path": "harness/experiments/phase2-discogs-20261021-01/batches/expansion-preparation-001/manager-tests.json",
+      "sha256": "c11568300a325c66fb87543acc4669b97ddafc72b5b612d270ebbf259f5977c3"
+    }
+  ],
+  "independent_targeted_test_run": {
+    "command": "python -m pytest harness/tests/test_phase2_parallel_v001.py -q",
+    "tests_passed": 12,
+    "exit_code": 0,
+    "observed_elapsed_seconds": 1.01
+  },
+  "old_abc_readiness": [
+    {
+      "worker_id": "a",
+      "path": ".runtime/phase2-eval-worker-a/readiness.management.json",
+      "sha256": "2811b5020dc458d1b76c16385627f1068d1dd047554ba31bac5d81880256cd6d",
+      "status": "ready",
+      "ui_denominator": 30,
+      "ui_verified": 30,
+      "qualification": "previous accepted readiness reused; no new DB read/reset or UI performed"
+    },
+    {
+      "worker_id": "b",
+      "path": ".runtime/phase2-eval-worker-b/readiness.management.json",
+      "sha256": "c66805734d6682e8fa351a3df97845216831887c72fbf76cda35eef6bef17b47",
+      "status": "ready",
+      "ui_denominator": 30,
+      "ui_verified": 30,
+      "qualification": "previous accepted readiness reused; no new DB read/reset or UI performed"
+    },
+    {
+      "worker_id": "c",
+      "path": ".runtime/phase2-eval-worker-c/readiness.management.json",
+      "sha256": "38e98392686abf420f2ae8731c4535ac4a893e39902841e200d5fb01bd78de32",
+      "status": "ready",
+      "ui_denominator": 30,
+      "ui_verified": 30,
+      "qualification": "previous accepted readiness reused; no new DB read/reset or UI performed"
+    }
+  ],
+  "model_probe_calls": 0,
+  "existing_run_results_rewritten": false,
+  "feedback_to_models": false,
+  "future_expansion": "d..l require separate deployment, connection-boundary and full UI admission plus new registration; this gate must not authorize more than abc/3."
+}

@@ -1,0 +1,15 @@
+{
+  "revision_directory": "revisions/r003",
+  "stop_reason": "runtime_policy_denial: observation policy excludes name getattr; conservatively treated as contract boundary stop",
+  "limitations": [
+    "Only landing and login-form discovery observed; no authentication submission or business mutations tested.",
+    "Business success, rejection, validation boundaries, repeat writes, persistence, and combinations remain unknown.",
+    "Procedural deviation: one corrected navigation submission executed after the policy denial before the stop condition was recognized; exact denial, failed helper, and subsequent evidence are preserved.",
+    "Predictor accepts only two narrowly conditioned per-action navigation intents; whole-task and business predictions return unknown.",
+    "Reported budget counted 3 UI actions and 2 executed script calls; there were 3 submission attempts including the policy rejection."
+  ],
+  "validation": "publication_validation.json",
+  "condition": "A",
+  "learner": "gpt-6.1-sol",
+  "scheduling_seed": 2718
+}

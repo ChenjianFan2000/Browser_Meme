@@ -1,0 +1,39 @@
+{
+  "revision_directory": "revisions/002",
+  "stop_reason": "Mandatory contract stop: call010 denied native input get_attribute(\"value\") inspection with BoundaryError. Browser exploration stopped immediately; no later browser submission occurred.",
+  "limitations": [
+    "Coverage is limited to one supplied account, release221, two tested cart listings and one checkout sequence.",
+    "No valid blank/incorrect-login experiment or website business-rule rejection was observed.",
+    "Search, marketplace filtering/sorting, listing creation/deactivation, membership removal, cart removal, stock ceilings and alternative checkout conditions remain unknown.",
+    "Final reusable scripts were corrected and checked offline only; no browser rerun followed the boundary.",
+    "Predictor returns unknown outside explicitly observed conditions; no private evaluation tasks were supplied."
+  ],
+  "condition": "A",
+  "revision": "002",
+  "parent_revision_directory": "revisions/001",
+  "browser_budget_used": {
+    "runtime_counted_ui_actions": 44,
+    "browser_script_submissions": 10,
+    "elapsed_seconds_at_last_browser_receipt": 302.84254755100005
+  },
+  "validation": {
+    "status": "passed",
+    "offline_check_count": 37,
+    "unchanged_exported_evidence_file_count": 450
+  },
+  "evidence_refs": [
+    {
+      "path": "evidence/call-010-cd631f88/result.json",
+      "sha256": "3f7cb5665459f2b302ff36a771291ed7b91d3e204837702825118036b560c973"
+    },
+    {
+      "path": "evidence/call-010-cd631f88/actions.jsonl",
+      "sha256": "e95cea0962e6baa3b98214242a4bb76a56aac8e3dfca4e1a3f5f6b88169f7fea"
+    },
+    {
+      "path": "evidence/call-010-cd631f88/network.json",
+      "sha256": "b53ee273c87eed130ad1680172477245bb5cbb106da1a089db4a7a23153596f4"
+    }
+  ],
+  "validation_artifact": "revisions/002/validation.json"
+}

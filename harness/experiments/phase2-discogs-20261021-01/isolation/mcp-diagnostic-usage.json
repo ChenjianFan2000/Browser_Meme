@@ -1,0 +1,46 @@
+[
+  {
+    "artifact": "mcp-audit-008.solar.events.jsonl",
+    "usage": {
+      "input_tokens": 66905,
+      "cached_input_tokens": 54656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2485,
+      "reasoning_output_tokens": 19
+    },
+    "condition": "extra_generic_infrastructure_diagnostic_not_learning"
+  },
+  {
+    "artifact": "mcp-audit-009.solar.events.jsonl",
+    "usage": {
+      "input_tokens": 64793,
+      "cached_input_tokens": 55552,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1877,
+      "reasoning_output_tokens": 17
+    },
+    "condition": "extra_generic_infrastructure_diagnostic_not_learning"
+  },
+  {
+    "artifact": "mcp-audit-010.solar.events.jsonl",
+    "usage": {
+      "input_tokens": 80667,
+      "cached_input_tokens": 69120,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2116,
+      "reasoning_output_tokens": 12
+    },
+    "condition": "extra_generic_infrastructure_diagnostic_not_learning"
+  },
+  {
+    "artifact": "mcp-audit-011.solar.events.jsonl",
+    "usage": {
+      "input_tokens": 18461,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 266,
+      "reasoning_output_tokens": 0
+    },
+    "condition": "extra_generic_infrastructure_diagnostic_not_learning"
+  }
+]

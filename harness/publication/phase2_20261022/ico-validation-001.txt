@@ -1,0 +1,13 @@
+test_binary_credentials_blocked_not_replaced (test_export_ico_v003.IconTests.test_binary_credentials_blocked_not_replaced) ... ok
+test_cli_manifest_new_and_parent_sha_lineage (test_export_ico_v003.IconTests.test_cli_manifest_new_and_parent_sha_lineage) ... ok
+test_fake_truncated_overlap_and_bad_png_rejected (test_export_ico_v003.IconTests.test_fake_truncated_overlap_and_bad_png_rejected) ... ok
+test_narrow_suffix_and_strict_json_policies (test_export_ico_v003.IconTests.test_narrow_suffix_and_strict_json_policies) ... ok
+test_nested_trace_still_redacts_every_text_and_cookie (test_export_ico_v003.IconTests.test_nested_trace_still_redacts_every_text_and_cookie) ... ok
+test_real_dib_and_png_icon_bytes_unchanged (test_export_ico_v003.IconTests.test_real_dib_and_png_icon_bytes_unchanged) ... ok
+test_two_process_failed_only_cli_preserves_wrapper_and_parent_chain (test_export_ico_v003.IconTests.test_two_process_failed_only_cli_preserves_wrapper_and_parent_chain) ... ok
+test_unchanged_archive_stays_byte_identical (test_export_ico_v003.IconTests.test_unchanged_archive_stays_byte_identical) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.341s
+
+OK

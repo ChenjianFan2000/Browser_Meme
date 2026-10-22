@@ -1,0 +1,101 @@
+{
+  "kind": "reporting_erratum_management_observation",
+  "observed_at_utc": "2026-10-21T06:13:29.410481+00:00",
+  "formal_runs": [
+    {
+      "run_id": "a-seed-1729",
+      "summary_exists": true,
+      "manifest_exists": true,
+      "summary_sha256": "7fc50d7d7298e6cdc6835ce6232a11fd859db8c1da7bef2e3bbb8906952bf2df",
+      "summary_status": "learning_finished",
+      "manifest_sha256": "ccd84f346d9f50153de514fd55e7788d6494f6792e35aa5e9e6b0bb3cb6a6f64",
+      "batch_log_prefix": {
+        "path": "harness/experiments/phase2-discogs-20261021-01/batches/formal-001/a-seed-1729.stdout.txt",
+        "bytes": 7016,
+        "sha256": "fb81595dc01262ff95aee0738fea6d5340dacc1e54cd692fa3dab9b80ce11580",
+        "last_management_event": {
+          "event": "progress",
+          "run_id": "a-seed-1729",
+          "elapsed_seconds": 975
+        }
+      }
+    },
+    {
+      "run_id": "b-seed-1729",
+      "summary_exists": false,
+      "manifest_exists": false,
+      "batch_log_prefix": {
+        "path": "harness/experiments/phase2-discogs-20261021-01/batches/formal-001/b-seed-1729.stdout.txt",
+        "bytes": 9633,
+        "sha256": "2ea34b8b58b0e1fa2daf7ea7e597578f23f5ab64abb08f43e89120047b330349",
+        "last_management_event": {
+          "event": "progress",
+          "run_id": "b-seed-1729",
+          "elapsed_seconds": 1440
+        }
+      }
+    },
+    {
+      "run_id": "b-seed-2718",
+      "summary_exists": true,
+      "manifest_exists": true,
+      "summary_sha256": "5fc5c5bd7bf7d0e2a25a88937aee8b1f17330c02b5c7d12b2bd32336bace7c59",
+      "summary_status": "learning_finished",
+      "manifest_sha256": "73cb22b7c3d6a38b275bd8b38cbeb8ef5dcbb6083d2dc0a30541d369c1df5ad0",
+      "batch_log_prefix": {
+        "path": "harness/experiments/phase2-discogs-20261021-01/batches/formal-001/b-seed-2718.stdout.txt",
+        "bytes": 6520,
+        "sha256": "d2a2120c8834ae2f14366635f5c32aae3e13ffd6eab73884aa10ec42b8c5e8f6",
+        "last_management_event": {
+          "event": "progress",
+          "run_id": "b-seed-2718",
+          "elapsed_seconds": 900
+        }
+      }
+    },
+    {
+      "run_id": "a-seed-2718",
+      "summary_exists": true,
+      "manifest_exists": true,
+      "summary_sha256": "0a790164df496951d498bdd1c250ff3a364cda7c1ab52ec5541f83aae91ac24f",
+      "summary_status": "learning_finished",
+      "manifest_sha256": "de33329bfba5532d9562d363d983cab5560ed28ecb8d785714963376cf785258",
+      "batch_log_prefix": {
+        "path": "harness/experiments/phase2-discogs-20261021-01/batches/formal-001/a-seed-2718.stdout.txt",
+        "bytes": 2260,
+        "sha256": "b122bd5c87f9d68b821507677095dbaa31b8ce0c5a3efbffa5c84a7177bea6c9",
+        "last_management_event": {
+          "event": "progress",
+          "run_id": "a-seed-2718",
+          "elapsed_seconds": 255
+        }
+      }
+    },
+    {
+      "run_id": "a-seed-3141",
+      "summary_exists": false,
+      "manifest_exists": false,
+      "batch_log_prefix": {
+        "path": "harness/experiments/phase2-discogs-20261021-01/batches/formal-001/a-seed-3141.stdout.txt",
+        "bytes": 16318,
+        "sha256": "4ff85dc5c298f10eb0ad57e84420f242b6e7975fd2704068b6d39af9815da89e",
+        "last_management_event": {
+          "event": "progress",
+          "run_id": "a-seed-3141",
+          "elapsed_seconds": 2430
+        }
+      }
+    },
+    {
+      "run_id": "b-seed-3141",
+      "summary_exists": false,
+      "manifest_exists": false
+    }
+  ],
+  "frozen_formal_packages": 3,
+  "evaluation_directory_exists": false,
+  "evaluation_case_directory_count": 0,
+  "original_reporting_document_sha256": "98add8cca1eeb8115efc89d1294b400daced93f713bdd339060dfebf7a41f80c",
+  "batch_schedule_sha256": "e626da0fc26dca3c419a266c2d93018130e78accad7649685b3954466564cf73",
+  "qualification": "File/management-log observation only; active log hashes bind the exact read prefix, not future appended contents."
+}

@@ -1,0 +1,13 @@
+# 通用冻结评测扩展验收
+
+最终机器gate：`evaluation-browser-mcp-acceptance.json`。仅覆盖通用协议、权限与时钟链路，不代表任务学习、目标站点覆盖或业务成绩。没有新增LLM调用，未访问目标站点或其源码/规则/评测答案。
+
+Linux016用真实stdio MCP调用evaluation_broker，并真实运行离线predict_runtime。A必须先执行冻结模型，错预测声明失败且未触达control；正确预测只能冻结一次，重复失败。B的实际tools/list无model_predict，强行调用也被condition检查拒绝。frozen模型实际尝试自写得到EROFS(errno30)；learner与browser-worker两个namespace实际写冻结文件均失败、control socket均不可达；只有browser-worker能连接site socket。所有文件hash保持一致。
+
+014补出了实际类型反例：Python字典比较将模型JSON true与声明JSON 1视为相同，修改后声明被接受。仅修改evaluation_broker.py，使用sort_keys、allow_nan=False的规范JSON比较，区分boolean/integer/float，且拒绝非字典预测。015/016实测该类型变化被拒，未触达control，完整原预测仍能正确冻结。learning五个已验收文件没有修改。
+
+012最初因审计断言只接受PermissionError而中止，实际OS返回EROFS的OSError，属于探针过严而非隔离失效；后续按实际errno接受1/13/30。013为基础通过，016加入严格类型及完整公共预测结构后再通过。失败产物保留。
+
+Windows实测证据由主Agent提供：`control-canary-1792558743413636700/result.json`。实际拒绝错误case/digest，正确一次冻结、重复拒绝、POST成功；同一Windows time.time_ns记录的声明时间早于HTTP dispatch，dispatch在转发前保存，relay无错误。合并gate时检查其已部署runtime中的relay.py与当前代码及Linux016所测版本sha一致。
+
+Linux控制端使用严格generic stub，Windows真实control/HTTP链路由单独的上述probe验证；gate明确分开两者，没有把stub时钟当Windows测量。gate包含11个关键源文件hash及证据hash；后续实现变更需重新验收。新code只增加evaluation_broker严格类型比较，predict_runtime、relay和learning代码未由本次审计修改。

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": {
+    "per_call_management_result_fallback_actions_and_last_error": true,
+    "controller_read_text_explicit_utf8": true
+  }
+}

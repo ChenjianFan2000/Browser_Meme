@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "kind": "final_independent_review_preparation",
+  "status": "prepared_not_executed",
+  "formal_review_created": false,
+  "formal_truth_archive_created": false,
+  "synthetic_groups_passed": 13,
+  "syntax_check_passed": true,
+  "files": [
+    {
+      "path": "phase3/finalize_review_v003.py",
+      "sha256": "b81fb1f77da6915267f440d2735ccb4103cbd4bcef456d09e39cbead2e1aae77"
+    },
+    {
+      "path": "phase3/validate_finalize_review_v003.py",
+      "sha256": "e44cbd0797caded5a0daa36f484735da729d8e8b19de085ac6453d036e3e248d"
+    },
+    {
+      "path": "FINAL_REVIEW_PREPARATION_V003.md",
+      "sha256": "8d997e3fb8000924552441a7a10840e5ea0a7cc3de90bcd47c77863be1ef71bb"
+    }
+  ],
+  "prior_versions_preserved": true,
+  "test_development_note": "First synthetic run hit strengthened earlier rejection in an existing negative-evidence assertion. Updated test to keep summary object consistent for that isolated assertion; rerun passed all13."
+}

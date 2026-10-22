@@ -1,0 +1,229 @@
+{
+  "transcript": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "tools/list",
+        "params": {}
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "tools": [
+            {
+              "name": "execute_script",
+              "description": "Execute a workspace-relative native Playwright script def run(h) in the isolated browser. Use h.expect before every UI action. Before declaring a task prediction, only inspect the initial state and authenticate; do not change target business state. After declare_task_prediction, execute the task with within-case supervision. Original evidence and budget are authoritative.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "script_path": {
+                    "type": "string"
+                  },
+                  "modules": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "script_path"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "name": "declare_task_prediction",
+              "description": "Freeze the single whole-task prediction BEFORE any target business write. The coordinator timestamps it and binds it to this case. This returns only an acknowledgement, never an answer or score. Cannot revise it. Use the registered prediction object and describe its evidence/model basis.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "prediction": {
+                    "type": "object"
+                  },
+                  "basis": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "prediction",
+                  "basis"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "name": "status",
+              "description": "Read actual case execution budget.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            },
+            {
+              "name": "model_predict",
+              "description": "Run the exact immutable learned behavior_model.predict(observation,intent) in an offline namespace. Supply only allowed current browser observations and the current task intent. Declare this exact returned prediction; the model cannot be edited during frozen evaluation.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "observation": {
+                    "type": "object"
+                  },
+                  "intent": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "observation",
+                  "intent"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/call",
+        "params": {
+          "name": "declare_task_prediction",
+          "arguments": {
+            "prediction": {
+              "disposition": "accepted"
+            },
+            "basis": "generic-before-model"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "isError": true,
+          "content": [
+            {
+              "type": "text",
+              "text": "ValueError: condition A must first call model_predict and declare that exact frozen-model output"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "tools/call",
+        "params": {
+          "name": "model_predict",
+          "arguments": {
+            "observation": {
+              "generic": "visible"
+            },
+            "intent": {
+              "generic": "intent"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"prediction\": {\"disposition\": \"accepted\", \"effects\": {\"generic\": true}, \"audit\": {\"frozen_write\": \"OSError\", \"frozen_errno\": 30, \"control_access\": \"PermissionError\", \"observation\": {\"generic\": \"visible\"}, \"intent\": {\"generic\": \"intent\"}}}, \"model_sha256\": \"424aeca5665aad33267eac39def32d1646633f63bdbff1b0b566930c0f8751c4\", \"input_sha256\": \"60a01ad09bd8debd9100cfe692b64d15d35ab4846529549032f67fb667446cdd\", \"elapsed_seconds\": 0.21580593999988196, \"directory\": \"prediction-d17e6776fe99\"}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "tools/call",
+        "params": {
+          "name": "declare_task_prediction",
+          "arguments": {
+            "prediction": {
+              "disposition": "accepted",
+              "effects": {
+                "generic": 1
+              },
+              "audit": {
+                "frozen_write": "OSError",
+                "frozen_errno": 30,
+                "control_access": "PermissionError",
+                "observation": {
+                  "generic": "visible"
+                },
+                "intent": {
+                  "generic": "intent"
+                }
+              }
+            },
+            "basis": "generic-type-mismatch"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"status\": \"frozen\", \"case_id\": \"GENERIC-CASE-014\", \"before_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"declared_at_ns\": 1792558812351711232}"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "control_stub_records": [
+    {
+      "request": {
+        "command": "declare_prediction",
+        "prediction": {
+          "disposition": "accepted",
+          "effects": {
+            "generic": 1
+          },
+          "audit": {
+            "frozen_write": "OSError",
+            "frozen_errno": 30,
+            "control_access": "PermissionError",
+            "observation": {
+              "generic": "visible"
+            },
+            "intent": {
+              "generic": "intent"
+            }
+          }
+        },
+        "basis": "generic-type-mismatch",
+        "case_id": "GENERIC-CASE-014",
+        "before_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "model_provenance": {
+          "model_sha256": "424aeca5665aad33267eac39def32d1646633f63bdbff1b0b566930c0f8751c4",
+          "input_sha256": "60a01ad09bd8debd9100cfe692b64d15d35ab4846529549032f67fb667446cdd"
+        }
+      },
+      "response": {
+        "status": "frozen",
+        "case_id": "GENERIC-CASE-014",
+        "before_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "declared_at_ns": 1792558812351711232
+      }
+    }
+  ]
+}

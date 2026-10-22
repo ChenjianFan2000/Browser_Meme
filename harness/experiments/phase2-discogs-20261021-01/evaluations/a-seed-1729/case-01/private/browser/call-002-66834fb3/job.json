@@ -1,0 +1,19 @@
+{
+  "origin": "http://127.0.0.1:12042",
+  "socket": "/opt/browser-meme/phase2-runs/eval-a-seed-1729-01.sock",
+  "fixture": {
+    "kind": "public_fixture",
+    "is_real_credential": false,
+    "role": "ordinary_test_account",
+    "account": {
+      "username": "demo",
+      "password": "password123"
+    },
+    "source": "public login page supplied by unchanged site fixture"
+  },
+  "script": "def run(h):\n    read = {'disposition':'accepted','effects':{'persistent_state_changed':False,'affected_record_count':0},'ui_claims':[],'unknowns':[]}\n    h.expect(read, 'Inspect login page linked by Account')\n    h.page.goto(h.origin + '/login')\n    print(h.observe('login-form'))\n    password = h.page.locator('input[type=\"password\"]')\n    form = h.page.locator('form').filter(has=password)\n    h.expect(read, 'Set supplied fixture username without exposing its value')\n    form.locator('input').first.fill(h.fixture['account']['username'])\n    h.expect(read, 'Set supplied fixture password without exposing its value')\n    password.fill(h.fixture['account']['password'])\n    h.expect({'disposition':'accepted','effects':{'persistent_state_changed':False,'affected_record_count':0},'ui_claims':['Sign in reaches home; Account button appears'],'unknowns':['Only supplied valid account was learned']}, 'Authenticate once using supplied fixture, supported by frozen R001')\n    h.page.get_by_role('button',name='Sign in',exact=True).click()\n    print(h.observe('authenticated-home'))\n    h.expect(read, 'Read existing collection baseline using learned collection route')\n    h.page.goto(h.origin + '/me/collection')\n    print(h.observe('collection-before'))\n    print({'authenticated':h.page.get_by_role('button',name='Account',exact=True).count()==1, 'target_collection_link_count':h.page.locator('main a[href=\"/release/1\"]').count()})\n    h.expect(read, 'Inspect task-specified release 1 using learned public release route')\n    h.page.goto(h.origin + '/release/1')\n    print(h.observe('target-release-before'))\n",
+  "modules": {},
+  "state_path": "/opt/browser-meme/phase2-runs/eval-a-seed-1729-01/private/browser/state/browser-state.json",
+  "action_limit": 59,
+  "intent": null
+}

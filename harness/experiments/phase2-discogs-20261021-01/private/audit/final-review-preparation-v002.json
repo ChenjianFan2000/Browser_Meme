@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "kind": "final_independent_review_preparation",
+  "status": "prepared_not_executed",
+  "formal_review_created": false,
+  "formal_truth_archive_created": false,
+  "synthetic_groups_passed": 12,
+  "syntax_check_passed": true,
+  "files": [
+    {
+      "path": "phase3/finalize_review_v002.py",
+      "sha256": "ef493361d88cabbf849bdd60a990a6d2469c0468583129ae66bed46179494f46"
+    },
+    {
+      "path": "phase3/validate_finalize_review_v002.py",
+      "sha256": "0409aa7d449585aae63f381d6217e6ee9b1d18cb3e21f323bddc8868cb7b82ec"
+    },
+    {
+      "path": "FINAL_REVIEW_PREPARATION_V002.md",
+      "sha256": "95da5396d243120d28f1f40347943edb908bcaa96cde70bf1da75eca1190fba3"
+    }
+  ],
+  "supersedes_preparation_only": "audit/final-review-preparation-v001.json",
+  "original_v001_preserved": true
+}

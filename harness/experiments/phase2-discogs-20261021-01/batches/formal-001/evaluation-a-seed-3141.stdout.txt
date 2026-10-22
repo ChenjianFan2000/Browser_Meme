@@ -1,0 +1,36 @@
+{"event": "case_started", "learning_run": "a-seed-3141", "case_index": 6, "case_id": "P06"}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 6, "elapsed_seconds": 60, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 6, "elapsed_seconds": 120, "http_events": 4, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 6, "elapsed_seconds": 180, "http_events": 8, "prediction_declared": true}
+{"event": "case_finished", "learning_run": "a-seed-3141", "case_index": 6, "ui_actions": 9, "elapsed_seconds": 204}
+{"event": "case_started", "learning_run": "a-seed-3141", "case_index": 9, "case_id": "P09"}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 9, "elapsed_seconds": 60, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 9, "elapsed_seconds": 120, "http_events": 4, "prediction_declared": true}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 9, "elapsed_seconds": 180, "http_events": 8, "prediction_declared": true}
+{"event": "case_finished", "learning_run": "a-seed-3141", "case_index": 9, "ui_actions": 9, "elapsed_seconds": 224}
+{"event": "case_started", "learning_run": "a-seed-3141", "case_index": 19, "case_id": "S09"}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 19, "elapsed_seconds": 60, "http_events": 2, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 19, "elapsed_seconds": 120, "http_events": 14, "prediction_declared": true}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 19, "elapsed_seconds": 180, "http_events": 14, "prediction_declared": true}
+{"event": "case_finished", "learning_run": "a-seed-3141", "case_index": 19, "ui_actions": 8, "elapsed_seconds": 184}
+{"event": "case_started", "learning_run": "a-seed-3141", "case_index": 5, "case_id": "P05"}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 5, "elapsed_seconds": 60, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 5, "elapsed_seconds": 120, "http_events": 4, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 5, "elapsed_seconds": 180, "http_events": 8, "prediction_declared": true}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 5, "elapsed_seconds": 240, "http_events": 8, "prediction_declared": true}
+{"event": "case_finished", "learning_run": "a-seed-3141", "case_index": 5, "ui_actions": 11, "elapsed_seconds": 253}
+{"event": "case_started", "learning_run": "a-seed-3141", "case_index": 24, "case_id": "B04"}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 24, "elapsed_seconds": 60, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 24, "elapsed_seconds": 120, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 24, "elapsed_seconds": 180, "http_events": 0, "prediction_declared": false}
+{"event": "case_finished", "learning_run": "a-seed-3141", "case_index": 24, "ui_actions": 0, "elapsed_seconds": 235}
+{"event": "case_started", "learning_run": "a-seed-3141", "case_index": 10, "case_id": "P10"}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 60, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 120, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 180, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 240, "http_events": 0, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 300, "http_events": 2, "prediction_declared": false}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 360, "http_events": 2, "prediction_declared": true}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 420, "http_events": 6, "prediction_declared": true}
+{"event": "case_progress", "learning_run": "a-seed-3141", "case_index": 10, "elapsed_seconds": 480, "http_events": 6, "prediction_declared": true}
+{"event": "case_finished", "learning_run": "a-seed-3141", "case_index": 10, "ui_actions": 12, "elapsed_seconds": 494}

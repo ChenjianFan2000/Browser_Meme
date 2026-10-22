@@ -1,0 +1,2296 @@
+{
+  "pages_observed": [
+    {
+      "call": 1,
+      "url": "http://127.0.0.1:12042/",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0004.html",
+          "sha256": "d66e644d72c9791d9b05d2ba3f43a7bd6802b376b869ca9fa92d78156151e044"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 2,
+      "url": "http://127.0.0.1:12042/login",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-002-ddb9506e/obs-0010.html",
+          "sha256": "33a0a82a291a03b77ecca1cd05f6b733465ac081b44157a54b8c68e53dd08a11"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 3,
+      "url": "http://127.0.0.1:12042/login",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-003-3230b32a/obs-0006.html",
+          "sha256": "01df6501fecfee961a874a92d6b511cf7403466abd76a618b22cecc47b5f81c9"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 4,
+      "url": "http://127.0.0.1:12042/",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-004-ea437853/obs-0019.html",
+          "sha256": "09e2afc664c5f4ffca9acd918a28c0f7b53f7c7189b54a11d05a04a8259a045c"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 5,
+      "url": "http://127.0.0.1:12042/",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-005-2c57d29c/obs-0004.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 6,
+      "url": "http://127.0.0.1:12042/",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0015.html",
+          "sha256": "cf6e53eac6b6380ed1aa15d5edcdbda83de0dcf3491ccaeadb595c627581febd"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 7,
+      "url": "http://127.0.0.1:12042/sell",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0010.html",
+          "sha256": "5c0d8eb36e3df887d582974c3d3bf20c18c09657127e326cb932b8eceb53c4ec"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 8,
+      "url": "http://127.0.0.1:12042/me/wantlist",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-008-1084606e/obs-0019.html",
+          "sha256": "c80b565b711f73a6c0c6faeaad90e16ab7a8c7b5d5a5011d0e63d67209b321f5"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 9,
+      "url": "http://127.0.0.1:12042/me/wantlist",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-009-69a9929d/obs-0022.html",
+          "sha256": "c80b565b711f73a6c0c6faeaad90e16ab7a8c7b5d5a5011d0e63d67209b321f5"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 10,
+      "url": "http://127.0.0.1:12042/sell/release/12",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-80b68c3d/obs-0016.html",
+          "sha256": "04ce91c97c86220050bb61b0e1f115d190224750a99a5766964f4c7c0907966a"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 11,
+      "url": "http://127.0.0.1:12042/sell/release/12?media_condition=&sleeve_condition=&ships_from=&min_rating=101&sort=price_desc",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-011-539ebbfd/obs-0034.html",
+          "sha256": "8e7510868955f5ea131522868f9fd37cc6a5196d9b893b5191042c30dbee260f"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 12,
+      "url": "http://127.0.0.1:12042/cart",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-012-953cef0b/obs-0013.html",
+          "sha256": "fcccc0c03532c7b69a74e07be030af27eb98ec345ba0310f03366cfdc18b20f2"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 13,
+      "url": "http://127.0.0.1:12042/cart",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-013-6541edd9/obs-0019.html",
+          "sha256": "123ccb672ca6a8dc2c7345381652a3b759188c1e595878a3ddc55bb8aff2e1cd"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 14,
+      "url": "http://127.0.0.1:12042/sell",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-014-90b2f7e9/obs-0019.html",
+          "sha256": "fb83069342516d3762c9029897a61717274e07bb12189152f00e58f605fe40f9"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 15,
+      "url": "http://127.0.0.1:12042/sell",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-015-30a3939b/obs-0015.html",
+          "sha256": "39177715422560e1f2cf4f306d27d8fd8dfaf84d90f852129ce313688265affa"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 16,
+      "url": "http://127.0.0.1:12042/sell/release/12",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-016-ab1eab3a/obs-0037.html",
+          "sha256": "06bac803c53aa503a574a079a17a70ce981fb2e9a26c346703352e111c8012f8"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 17,
+      "url": "http://127.0.0.1:12042/cart",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-017-88872d38/obs-0010.html",
+          "sha256": "0b6c48f68c295e116e09d4e2c389b8608a812ff911611b48e582ee0a4315869d"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 18,
+      "url": "http://127.0.0.1:12042/cart",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-018-10dd495e/obs-0016.html",
+          "sha256": "0b6c48f68c295e116e09d4e2c389b8608a812ff911611b48e582ee0a4315869d"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 19,
+      "url": "http://127.0.0.1:12042/add-release",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0028.html",
+          "sha256": "77a61128d23387c31e74cfc24f6b7aa8de6a8e8cb34df86a543dda16b392c8fa"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 20,
+      "url": "http://127.0.0.1:12042/login?next=%2Frelease%2F12",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-020-885a228f/obs-0025.html",
+          "sha256": "01df6501fecfee961a874a92d6b511cf7403466abd76a618b22cecc47b5f81c9"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    },
+    {
+      "call": 21,
+      "url": "http://127.0.0.1:12042/release/1",
+      "label": "final",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-021-69c0cd11/obs-0022.html",
+          "sha256": "4883a77b1adeb395f8ed2a266877b2d408a1ff16201f2de840d6d454fa7f60a5"
+        }
+      ],
+      "uncertainty": "Page state at this call only"
+    }
+  ],
+  "navigation_targets": [
+    {
+      "identity": "/",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/genre/rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=new",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=trending",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/sell",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/cart",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/forum",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/blog",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/login",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/221",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/84",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/59",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/26",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/192",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/168",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/121",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/102",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/109",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/30",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/23",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/113",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/119",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/198",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/186",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/29",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/95",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/release/10",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/about",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/careers",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/api",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/help",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/shipping",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/guides",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/get-started",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/add-release",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/terms",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/privacy",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/cookies",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-001-d8362bfd/obs-0002.html",
+          "sha256": "e78cb0f3a17ddc4f5d3400a5c1c617463c5b182466be2fcdbea08428ed49f83e"
+        }
+      ]
+    },
+    {
+      "identity": "/me/collection",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-005-2c57d29c/obs-0002.html",
+          "sha256": "15813f9bc7c5bf5cfc596477bded595112272eae64aa3e19e90a3d2ee848e1d8"
+        }
+      ]
+    },
+    {
+      "identity": "/me/wantlist",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-005-2c57d29c/obs-0002.html",
+          "sha256": "15813f9bc7c5bf5cfc596477bded595112272eae64aa3e19e90a3d2ee848e1d8"
+        }
+      ]
+    },
+    {
+      "identity": "/release/1",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/7",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/19",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/46",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/57",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/61",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/88",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/89",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/93",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/126",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/129",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/137",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/151",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/154",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/156",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/157",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/172",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/190",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/193",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/release/197",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-006-9a61800e/obs-0008.html",
+          "sha256": "cde30971b7a972024ca2714a8af61dd019f35e8928789e45c499abf3248bddf3"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/1",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0002.html",
+          "sha256": "e012562554c625e12c3ee547584f07cf0936ff3cb5811587109fb252184cd331"
+        }
+      ]
+    },
+    {
+      "identity": "/release/12",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/24",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/36",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/49",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/55",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/78",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/112",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/128",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/release/166",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0005.html",
+          "sha256": "0fcc43ad1b8901c1ab2683256804322d6fc65dc8697fc38ac5afc394b3408eb4"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/221",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/190",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/113",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/87",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/46",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/29",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/96",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/160",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/198",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/14",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/126",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/196",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/127",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/28",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/188",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/161",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/175",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/125",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/151",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/155",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/obs-0008.html",
+          "sha256": "fea5cf766f6cfe44e77cfa83ffff2a632545600257abc95df39499c63d16712f"
+        }
+      ]
+    },
+    {
+      "identity": "/sell/release/12",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-009-69a9929d/obs-0011.html",
+          "sha256": "70f250387d616a56e09cc6188b719813b0a2681a1e6e51c3b5a384c8b2883ea2"
+        }
+      ]
+    },
+    {
+      "identity": "/release/153",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-80b68c3d/obs-0008.html",
+          "sha256": "b2befd75cbe7dddb53be0b82e3b62583da65b9f848309d48b7e194da817f750f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/180",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-80b68c3d/obs-0008.html",
+          "sha256": "b2befd75cbe7dddb53be0b82e3b62583da65b9f848309d48b7e194da817f750f"
+        }
+      ]
+    },
+    {
+      "identity": "/cart?add=145",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-80b68c3d/obs-0014.html",
+          "sha256": "f74729b2dbb6f5b1e9f02c97d461460a0268df252f36fce011f82d4b662cf126"
+        }
+      ]
+    },
+    {
+      "identity": "/cart?add=144",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-010-80b68c3d/obs-0014.html",
+          "sha256": "f74729b2dbb6f5b1e9f02c97d461460a0268df252f36fce011f82d4b662cf126"
+        }
+      ]
+    },
+    {
+      "identity": "/cart?add=640",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-016-ab1eab3a/obs-0035.html",
+          "sha256": "96ce53d921e3b85aa0c7c4f5b9002e5a6b66704123dbefdcdb86cd9f00e363be"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=rock%20artist",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/67",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/205",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/163",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/176",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=early%20rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/5",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/147",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/66",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/155",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=trending%20rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/64",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/54",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/220",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/98",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/165",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/release/142",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Alternative%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Blues%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Classic%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Folk%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Garage%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Hard%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Indie%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Pop%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Prog%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    },
+    {
+      "identity": "/search?q=Psychedelic%20Rock",
+      "kind": "DOM-discovered navigation target",
+      "relationship": "rendered anchor from observed page",
+      "actions": [
+        "navigate using observed link"
+      ],
+      "uncertainty": "Link existence is not proof target is implemented; no unobserved backend inference",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-019-b6160753/obs-0023.html",
+          "sha256": "d0ec4de3c2c3fa7b1d8193253fe4104e89fdd92fa8012a10a731b2332b27f38f"
+        }
+      ]
+    }
+  ],
+  "business_objects": [
+    {
+      "identity": "release/1",
+      "title": "Business-focused directional knowledgebase",
+      "artist": "Walker Quartet",
+      "relationships": [
+        "collection",
+        "wantlist",
+        "zero marketplace listings observed"
+      ],
+      "actions": [
+        "Add to Collection",
+        "Add to Wantlist",
+        "Marketplace"
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/actions.jsonl",
+          "sha256": "aee78a94f4069ea9e34b568622a103b52311841100bfc618c9a50f437ca814d3"
+        },
+        {
+          "path": "evidence/call-007-eea9357d/network.json",
+          "sha256": "9bac56a3110002327e426483ee421f2efc3295fa857bff2de6781b72179c5a04"
+        },
+        {
+          "path": "evidence/call-008-1084606e/actions.jsonl",
+          "sha256": "46744082e40c4aa84e6644d6f40c5755c3edb30ecb6b43ff2d370b1eebf2e10c"
+        },
+        {
+          "path": "evidence/call-008-1084606e/network.json",
+          "sha256": "d16f290c5256421ee8a206ab34b7578ffab2b64e6f42fdcd5f3e69bdd6466293"
+        },
+        {
+          "path": "evidence/call-009-69a9929d/actions.jsonl",
+          "sha256": "c4ebf2bca6fe5f242fee6082e8e498cfa5fe93b707a60f35b77f9a50f0f8b5fa"
+        },
+        {
+          "path": "evidence/call-009-69a9929d/network.json",
+          "sha256": "70f05fb25dc8cc822034b3b4f157d083efad590f32cb62e473eff604851ff3da"
+        }
+      ],
+      "uncertainty": "No visible removal workflow established"
+    },
+    {
+      "identity": "release/12",
+      "title": "Open-source exuding intranet",
+      "artist": "Morgan Collective",
+      "relationships": [
+        "collection",
+        "wantlist",
+        "marketplace listings 144,145,640"
+      ],
+      "actions": [
+        "membership adds",
+        "marketplace filters",
+        "cart add"
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-007-eea9357d/actions.jsonl",
+          "sha256": "aee78a94f4069ea9e34b568622a103b52311841100bfc618c9a50f437ca814d3"
+        },
+        {
+          "path": "evidence/call-007-eea9357d/network.json",
+          "sha256": "9bac56a3110002327e426483ee421f2efc3295fa857bff2de6781b72179c5a04"
+        },
+        {
+          "path": "evidence/call-010-80b68c3d/actions.jsonl",
+          "sha256": "d35bfd395a04e39a941b81d5749646e1970a6b34818ca6ab8f3e8fafe5c3b0eb"
+        },
+        {
+          "path": "evidence/call-010-80b68c3d/network.json",
+          "sha256": "478475d0cdf9000b6abcea8b6ee36e28b35231265c21f6eeba88dbf7d0db5dea"
+        },
+        {
+          "path": "evidence/call-016-ab1eab3a/actions.jsonl",
+          "sha256": "8f398ac1ebb582d6d5d8df718fa4c03abbd0010528d85c652223a0622f250fe6"
+        },
+        {
+          "path": "evidence/call-016-ab1eab3a/network.json",
+          "sha256": "475075f5c4d4cc9203191c9a8c81e997bccdb0489ae7200ae364b6799bbc4b39"
+        },
+        {
+          "path": "evidence/call-018-10dd495e/actions.jsonl",
+          "sha256": "4018b22576dfca376e5a11b6b0cfa6bc842c65aadb6c83fd201dd1809843b943"
+        },
+        {
+          "path": "evidence/call-018-10dd495e/network.json",
+          "sha256": "12deb47f912be359656c4902f36003d5bd590f4cea5a21ea8a25010b9a44344c"
+        }
+      ],
+      "uncertainty": "Counts vary with run mutations"
+    },
+    {
+      "identity": "listing/640",
+      "owner": "fixture account",
+      "release_id": 12,
+      "quantity": 2,
+      "price_cents": 1234,
+      "observed_state": "inactive after call 18; cart line retained",
+      "actions": [
+        "created",
+        "deactivated",
+        "added to cart"
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-016-ab1eab3a/actions.jsonl",
+          "sha256": "8f398ac1ebb582d6d5d8df718fa4c03abbd0010528d85c652223a0622f250fe6"
+        },
+        {
+          "path": "evidence/call-016-ab1eab3a/network.json",
+          "sha256": "475075f5c4d4cc9203191c9a8c81e997bccdb0489ae7200ae364b6799bbc4b39"
+        },
+        {
+          "path": "evidence/call-017-88872d38/actions.jsonl",
+          "sha256": "8550d678d9c32f2e48f85e2ce63cbae7521abb4ba6c03abff751a8e5a165c70d"
+        },
+        {
+          "path": "evidence/call-017-88872d38/network.json",
+          "sha256": "3df6b71a5b1fff907030310828aca93aec57f8f6c7f97759cf82ccc3c850d768"
+        },
+        {
+          "path": "evidence/call-018-10dd495e/actions.jsonl",
+          "sha256": "4018b22576dfca376e5a11b6b0cfa6bc842c65aadb6c83fd201dd1809843b943"
+        },
+        {
+          "path": "evidence/call-018-10dd495e/network.json",
+          "sha256": "12deb47f912be359656c4902f36003d5bd590f4cea5a21ea8a25010b9a44344c"
+        }
+      ],
+      "uncertainty": "No reactivation tested"
+    },
+    {
+      "identity": "cart items 1,2,3",
+      "relationship": "UI-caused responses identify cart items separately from listing IDs",
+      "actions": [
+        "add",
+        "repeat add",
+        "remove"
+      ],
+      "evidence_refs": [
+        {
+          "path": "evidence/call-012-953cef0b/actions.jsonl",
+          "sha256": "6b933b0d7685c632f38276d06a97ce51ceb86ac38184e786d11c664c063710f0"
+        },
+        {
+          "path": "evidence/call-012-953cef0b/network.json",
+          "sha256": "c39b2429faa7ad68a6f31a399e0cf78057f78a27dc54bb10a36a2fc1af451a0e"
+        },
+        {
+          "path": "evidence/call-013-6541edd9/actions.jsonl",
+          "sha256": "6161b79d4fac3a8cc9da56d098e307620dc11c51e4105858b3b54a973b2ff44b"
+        },
+        {
+          "path": "evidence/call-013-6541edd9/network.json",
+          "sha256": "38ec255a246c5570ccb1e9280063186171b14004c647b06fdc5d8cac9104da35"
+        },
+        {
+          "path": "evidence/call-014-90b2f7e9/actions.jsonl",
+          "sha256": "7db746537f04c29352e1b4d2615821c0feb428d06d15eac39f9f6b066e3f187c"
+        },
+        {
+          "path": "evidence/call-014-90b2f7e9/network.json",
+          "sha256": "84a35339ce881d862ad7327e65306b576e588e0e6f167a0b3df7d2b96e652b99"
+        },
+        {
+          "path": "evidence/call-017-88872d38/actions.jsonl",
+          "sha256": "8550d678d9c32f2e48f85e2ce63cbae7521abb4ba6c03abff751a8e5a165c70d"
+        },
+        {
+          "path": "evidence/call-017-88872d38/network.json",
+          "sha256": "3df6b71a5b1fff907030310828aca93aec57f8f6c7f97759cf82ccc3c850d768"
+        }
+      ],
+      "uncertainty": "Later mutations may change final state"
+    }
+  ]
+}

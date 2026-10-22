@@ -1,0 +1,371 @@
+{
+  "kind": "incremental_provider_retry_versus_mcp_diagnostic",
+  "observed_at_utc": "2026-10-21T08:03:03.662943+00:00",
+  "cases_observed": 3,
+  "sealed_case_audit_claimed": false,
+  "snapshots": [
+    {
+      "case": "eval-a-seed-1729-13",
+      "observed_at_utc": "2026-10-21T08:03:03.486450+00:00",
+      "active_event_prefix_bytes": 114887,
+      "stream_error_events": [
+        {
+          "line": 4,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 5,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 6,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 7,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 9,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 10,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 11,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        }
+      ],
+      "last_error_line": 11,
+      "mcp_completed_events": [
+        {
+          "line": 24,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 29,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "error",
+          "actions": 6,
+          "execution_error_class": "timeout"
+        },
+        {
+          "line": 35,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 2,
+          "execution_error_class": null
+        },
+        {
+          "line": 37,
+          "tool": "model_predict",
+          "transport_status": "completed"
+        },
+        {
+          "line": 39,
+          "tool": "declare_task_prediction",
+          "transport_status": "completed"
+        },
+        {
+          "line": 43,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 3,
+          "execution_error_class": null
+        }
+      ],
+      "item_error_markers": [
+        {
+          "line": 2,
+          "markers": []
+        },
+        {
+          "line": 8,
+          "markers": [
+            "workspace routing"
+          ]
+        }
+      ],
+      "model_catalog_refresh_timeout_count": 16,
+      "first_catalog_timeout_utc": "2026-10-21T07:47:13.655073Z",
+      "last_catalog_timeout_utc": "2026-10-21T08:00:58.676311Z",
+      "mcp_progress_after_stream_errors": true
+    },
+    {
+      "case": "eval-b-seed-2718-18",
+      "observed_at_utc": "2026-10-21T08:03:03.488463+00:00",
+      "active_event_prefix_bytes": 125242,
+      "stream_error_events": [
+        {
+          "line": 4,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 5,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 6,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 7,
+          "event": "error",
+          "error_markers": [
+            "workspace routing discovery timed out"
+          ]
+        },
+        {
+          "line": 61,
+          "event": "error",
+          "error_markers": [
+            "stream disconnected"
+          ]
+        }
+      ],
+      "last_error_line": 61,
+      "mcp_completed_events": [
+        {
+          "line": 19,
+          "tool": "status",
+          "transport_status": "completed"
+        },
+        {
+          "line": 23,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 30,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 2,
+          "execution_error_class": null
+        },
+        {
+          "line": 34,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "error",
+          "actions": 4,
+          "execution_error_class": "timeout"
+        },
+        {
+          "line": 38,
+          "tool": "status",
+          "transport_status": "completed"
+        },
+        {
+          "line": 43,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 49,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 51,
+          "tool": "declare_task_prediction",
+          "transport_status": "completed"
+        },
+        {
+          "line": 55,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 2,
+          "execution_error_class": null
+        },
+        {
+          "line": 60,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        }
+      ],
+      "item_error_markers": [
+        {
+          "line": 2,
+          "markers": []
+        },
+        {
+          "line": 8,
+          "markers": [
+            "request timed out"
+          ]
+        }
+      ],
+      "model_catalog_refresh_timeout_count": 20,
+      "first_catalog_timeout_utc": "2026-10-21T07:47:14.374606Z",
+      "last_catalog_timeout_utc": "2026-10-21T08:00:59.392544Z",
+      "mcp_progress_after_stream_errors": false
+    },
+    {
+      "case": "eval-b-seed-1729-11",
+      "observed_at_utc": "2026-10-21T08:03:03.492425+00:00",
+      "active_event_prefix_bytes": 325360,
+      "stream_error_events": [
+        {
+          "line": 4,
+          "event": "error",
+          "error_markers": [
+            "request timed out"
+          ]
+        },
+        {
+          "line": 5,
+          "event": "error",
+          "error_markers": [
+            "request timed out"
+          ]
+        },
+        {
+          "line": 6,
+          "event": "error",
+          "error_markers": [
+            "request timed out"
+          ]
+        },
+        {
+          "line": 7,
+          "event": "error",
+          "error_markers": [
+            "request timed out"
+          ]
+        }
+      ],
+      "last_error_line": 7,
+      "mcp_completed_events": [
+        {
+          "line": 21,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 28,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 4,
+          "execution_error_class": null
+        },
+        {
+          "line": 32,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 36,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 1,
+          "execution_error_class": null
+        },
+        {
+          "line": 41,
+          "tool": "declare_task_prediction",
+          "transport_status": "completed"
+        },
+        {
+          "line": 45,
+          "tool": "execute_script",
+          "transport_status": "completed",
+          "execution_status": "completed",
+          "actions": 3,
+          "execution_error_class": null
+        },
+        {
+          "line": 54,
+          "tool": "status",
+          "transport_status": "completed"
+        }
+      ],
+      "item_error_markers": [
+        {
+          "line": 2,
+          "markers": []
+        },
+        {
+          "line": 8,
+          "markers": [
+            "request timed out"
+          ]
+        }
+      ],
+      "model_catalog_refresh_timeout_count": 19,
+      "first_catalog_timeout_utc": "2026-10-21T07:47:36.015544Z",
+      "last_catalog_timeout_utc": "2026-10-21T08:01:21.032410Z",
+      "mcp_progress_after_stream_errors": true
+    }
+  ],
+  "conclusion": "All three sessions show completed MCP work after earlier routing/request timeout error events. Background model catalogue refresh failures do not establish that the current inference stream is wholly disconnected.",
+  "qualifications": [
+    "CLI transport completed and browser execution status/error are separately counted.",
+    "Exact remote service versus network-path cause remains unidentified.",
+    "Live event ordering is used; individual error wall times unavailable.",
+    "STOP_DISPATCH is retained by management and in-flight sessions are not interrupted."
+  ],
+  "new_model_probe_calls": 0,
+  "credentials_read": false,
+  "model_runtime_controller_or_worker_state_modified": false
+}

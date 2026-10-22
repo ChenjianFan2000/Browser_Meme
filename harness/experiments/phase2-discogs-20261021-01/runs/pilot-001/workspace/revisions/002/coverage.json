@@ -1,0 +1,254 @@
+{
+  "condition": "A",
+  "scheduling_seed": 1729,
+  "scheduling_note": "Seed is recorded for local scheduling. Experiment order was chosen adaptively for discriminating evidence; no claim about model sampling determinism.",
+  "scope": "One supplied account and origin; exploratory protocol pilot, no private tasks or formal scores.",
+  "budget_at_stop": {
+    "actions": 72,
+    "action_limit": 100,
+    "script_calls": 18,
+    "script_call_limit": 40,
+    "elapsed_seconds_last_authoritative": 439.66180173099974,
+    "time_limit_seconds": 3600,
+    "runtime_stop_reason": null,
+    "learner_stop_reason": "Contract stop after native UI click timeout in call018."
+  },
+  "explored": [
+    "Home and observed navigation",
+    "Login invalid/valid cases",
+    "Account menu, collection and wantlist views",
+    "Release84 metadata and persistent membership additions",
+    "Confirmed repeats and collection/wantlist combination",
+    "Release84 marketplace listings, exact US/descending/rating99 filters",
+    "Cart adds, repeated quantity, checkout and sole-item removal",
+    "Pink Floyd header search",
+    "Seller unique release search and zero quantity validation",
+    "Zero-price disabled UI boundary",
+    "Observed Add Release route404"
+  ],
+  "unexplored": [
+    "Successful positive listing creation and listing deactivation/reactivation were not tested.",
+    "Zero-price backend acceptance/rejection is unknown; only disabled UI and timed-out click were observed.",
+    "Terminal write effect remains conservatively unconfirmed; the run stopped without a browser retry.",
+    "Anonymous and cross-account writes, sign-out, account-list removal and membership generalization are unknown.",
+    "Quantity ceilings, stock decrements, mixed currencies, multi-seller checkout, cancellation and fulfillment are unknown.",
+    "Artist/label/genre/community pages, most footer routes and search case/substring/pagination behavior were not explored.",
+    "Cookie settings/consent, newsletter subscription and account sign-out effects were not tested.",
+    "/add-release rendered 404 but no inference about unavailable backend business behavior is made.",
+    "Only 72/100 UI actions and 18/40 browser submissions were used because timeout required early stop.",
+    "The final reusable scripts and predictor were compiled and checked offline; no browser validation followed the stop."
+  ],
+  "success_evidence": [
+    {
+      "path": "evidence/call-007-b883c60f/obs-0010.html",
+      "sha256": "f4f41eb0020d55a4ba5e964499d463ab890e0f38ff256620f2f83c2789a0ef15"
+    },
+    {
+      "path": "evidence/call-008-d9a7b977/obs-0015.html",
+      "sha256": "6bae56e38925a94a05407d54f3ac44bbb869b63cd0e2268155535da283ade787"
+    },
+    {
+      "path": "evidence/call-011-0a0a4fed/network.json",
+      "sha256": "00dfc06bcf6545f83d4cffab10aabbde1698f4b3fd5a69ea9afbaa092e34d924"
+    },
+    {
+      "path": "evidence/call-012-18445869/network.json",
+      "sha256": "4515e345a5a93f64a69d1e6be1199e1aa7b78e26e42a052a9daca1a12eb62163"
+    },
+    {
+      "path": "evidence/call-014-16db3469/network.json",
+      "sha256": "42bda1a3eb0d6d99682814d45a83821e569d440137c9077a2b7b8a4a2721b94a"
+    }
+  ],
+  "rejection_evidence": [
+    {
+      "path": "evidence/call-004-e84ef858/obs-0012.html",
+      "sha256": "481271cd9c8201dc53c5af47f52f658bb561b8482df7cad801e0b6f66a234c8e"
+    },
+    {
+      "path": "evidence/call-017-1d0e245a/obs-0021.html",
+      "sha256": "a083ad967aacfb57e430d92e0ab1b902639bfc2661472db0562f5e2b4f533ec7"
+    },
+    {
+      "path": "evidence/call-017-1d0e245a/network.json",
+      "sha256": "66d77562c1eeb5662471a282ff23a692514b587557a5fa53d89f1b752564d20f"
+    }
+  ],
+  "boundary_evidence": [
+    {
+      "path": "evidence/call-013-bec4f27e/obs-0018.html",
+      "sha256": "71e1ea39d225a51eee37804ffb03da2a45375b7f164f510417da5537ca78237a"
+    },
+    {
+      "path": "evidence/call-014-16db3469/obs-0003.html",
+      "sha256": "90938ea2396c8c330e230b37006259a1a2b71bc86f378220fa3b56174c24cb4b"
+    },
+    {
+      "path": "evidence/call-016-92eb0477/obs-0003.html",
+      "sha256": "ffafd3c92812ddad9606d5f386148ff475bebcc21f1fa4eaaa06358927cd725e"
+    },
+    {
+      "path": "evidence/call-018-ee1f9e5a/obs-0012.html",
+      "sha256": "8fb43b4ffd6344f256f87c9fa8e38c19cd7b539abc5405edb8a62a253fb5b376"
+    },
+    {
+      "path": "evidence/call-015-b56c53e9/obs-0015.html",
+      "sha256": "b408135f7e2c512af72ddd180b31dd9efebf0c18fa4df5f2305799e488d4f51f"
+    }
+  ],
+  "repeat_evidence": [
+    {
+      "path": "evidence/call-008-d9a7b977/obs-0009.html",
+      "sha256": "a10d60009e54831a5a3a43a0e9ab3c8e73b7dc5d7a4de4ff501b3f5ff2323180"
+    },
+    {
+      "path": "evidence/call-009-b1f265f4/obs-0003.html",
+      "sha256": "121abdbf52c4c75c9690c2a8c13cd67ffc68cb2cb93c95315ecca516e1cfa6bf"
+    },
+    {
+      "path": "evidence/call-009-b1f265f4/obs-0006.html",
+      "sha256": "1527652280033e6cc1a1213a8b7d1d68f4a24f60b22084c27ba2e84399756f37"
+    },
+    {
+      "path": "evidence/call-009-b1f265f4/obs-0009.html",
+      "sha256": "121abdbf52c4c75c9690c2a8c13cd67ffc68cb2cb93c95315ecca516e1cfa6bf"
+    },
+    {
+      "path": "evidence/call-012-18445869/network.json",
+      "sha256": "4515e345a5a93f64a69d1e6be1199e1aa7b78e26e42a052a9daca1a12eb62163"
+    }
+  ],
+  "combination_evidence": [
+    {
+      "path": "evidence/call-008-d9a7b977/obs-0015.html",
+      "sha256": "6bae56e38925a94a05407d54f3ac44bbb869b63cd0e2268155535da283ade787"
+    },
+    {
+      "path": "evidence/call-008-d9a7b977/obs-0018.html",
+      "sha256": "f4f41eb0020d55a4ba5e964499d463ab890e0f38ff256620f2f83c2789a0ef15"
+    },
+    {
+      "path": "evidence/call-012-18445869/network.json",
+      "sha256": "4515e345a5a93f64a69d1e6be1199e1aa7b78e26e42a052a9daca1a12eb62163"
+    },
+    {
+      "path": "evidence/call-013-bec4f27e/obs-0018.html",
+      "sha256": "71e1ea39d225a51eee37804ffb03da2a45375b7f164f510417da5537ca78237a"
+    }
+  ],
+  "failure_evidence": [
+    {
+      "path": "evidence/call-003-3e99425e/result.json",
+      "sha256": "70b6eb8c10b6e9331e11b0e843ce1ab1cc9fb39dd684d8f1c886c5d82758b412"
+    },
+    {
+      "path": "evidence/call-005-b367f802/result.json",
+      "sha256": "ca0f09ad3cbd738401cb8648d862141bfc514697faf86165c61a7a6f255ec7bf"
+    },
+    {
+      "path": "evidence/call-010-0358d125/result.json",
+      "sha256": "13374c140ec057cf4d9539a4001d01e322dbac53e0380892347f3bef60b935a3"
+    },
+    {
+      "path": "evidence/call-018-ee1f9e5a/result.json",
+      "sha256": "95b2410bd5e58ec41b79accef8b2c81f4f5137df6f0d243a52dd0653b5779058"
+    }
+  ],
+  "current_competing_hypotheses": [
+    {
+      "question": "Do membership semantics generalize?",
+      "alternatives": [
+        "Same set-like target membership elsewhere",
+        "Release/account-dependent behavior"
+      ],
+      "status": "unknown outside release84",
+      "distinguishing_experiment": "In a future authorized/reset run, baseline a different release in both lists, add once, repeat after confirmation, compare separate list and fresh count."
+    },
+    {
+      "question": "What price-zero backend behavior exists?",
+      "alternatives": [
+        "UI blocks a backend-valid zero",
+        "Both UI and backend reject zero"
+      ],
+      "status": "unknown; UI disabled only",
+      "distinguishing_experiment": "Only use a legitimate enabled rendered UI if discovered later; do not bypass disabled controls or call APIs."
+    },
+    {
+      "question": "Can positive listing creation and lifecycle succeed?",
+      "alternatives": [
+        "Valid listing creates active row",
+        "Further validation or account restrictions apply"
+      ],
+      "status": "untested",
+      "distinguishing_experiment": "In a future run, exact selected release, positive price and quantity, single Create, inspect response/list/market before any follow-up; then deactivate once and read back."
+    },
+    {
+      "question": "What happens at cart stock limits?",
+      "alternatives": [
+        "Enforced limit",
+        "Higher quantities accepted"
+      ],
+      "status": "untested beyond354 qty2",
+      "distinguishing_experiment": "Find UI-disclosed quantity/stock, baseline cart, add incrementally with persistent confirmation; stop on uncertainty."
+    }
+  ],
+  "resolved_competing_hypotheses": [
+    {
+      "question": "Membership repeated add toggles/duplicates versus stable target set?",
+      "finding": "Stable fresh membership/count for observed repeat; local counters misleading.",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-008-d9a7b977/obs-0018.html",
+          "sha256": "f4f41eb0020d55a4ba5e964499d463ab890e0f38ff256620f2f83c2789a0ef15"
+        },
+        {
+          "path": "evidence/call-009-b1f265f4/obs-0003.html",
+          "sha256": "121abdbf52c4c75c9690c2a8c13cd67ffc68cb2cb93c95315ecca516e1cfa6bf"
+        },
+        {
+          "path": "evidence/call-009-b1f265f4/obs-0009.html",
+          "sha256": "121abdbf52c4c75c9690c2a8c13cd67ffc68cb2cb93c95315ecca516e1cfa6bf"
+        }
+      ]
+    },
+    {
+      "question": "Cart repeated exact listing idempotent versus quantity increment?",
+      "finding": "Quantity1\u21922 and total1719\u21923438.",
+      "evidence_refs": [
+        {
+          "path": "evidence/call-012-18445869/network.json",
+          "sha256": "4515e345a5a93f64a69d1e6be1199e1aa7b78e26e42a052a9daca1a12eb62163"
+        }
+      ]
+    }
+  ],
+  "terminal_failure": {
+    "category": "implementation",
+    "action_classification": "unconfirmed",
+    "cause": "Helper checked uniqueness and visibility but not enabled; clicked disabled Create Listing.",
+    "response": "Preserved failure; stopped all browser submissions; final scripts add enabled-state guard.",
+    "evidence_refs": [
+      {
+        "path": "evidence/call-018-ee1f9e5a/result.json",
+        "sha256": "95b2410bd5e58ec41b79accef8b2c81f4f5137df6f0d243a52dd0653b5779058"
+      },
+      {
+        "path": "evidence/call-018-ee1f9e5a/actions.jsonl",
+        "sha256": "27dfc919a1b07e8cfa6b7dd028d2d17765a41bd96a413b80a7b45e4e8dd751be"
+      },
+      {
+        "path": "evidence/call-018-ee1f9e5a/obs-0018.html",
+        "sha256": "cacb6f6563a0aad3105411d2e5fd4ad0fba0522ee5f4fa5c50065439bb20649e"
+      }
+    ]
+  },
+  "budget_at_publication": {
+    "actions": 72,
+    "action_limit": 100,
+    "script_calls": 18,
+    "script_call_limit": 40,
+    "elapsed_seconds": 1011.731449037,
+    "stop_reason": null,
+    "learner_stop_reason": "contract_stop_after_ui_action_timeout"
+  }
+}

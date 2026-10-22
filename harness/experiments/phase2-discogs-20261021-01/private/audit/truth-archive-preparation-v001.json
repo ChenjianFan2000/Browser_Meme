@@ -1,0 +1,18 @@
+{
+  "kind": "truth_archive_tool_preparation",
+  "schema_version": 1,
+  "prepared_at_utc": "2026-10-21T06:39:44.539749+00:00",
+  "formal_archive_executed": false,
+  "formal_runtime_evidence_read": false,
+  "synthetic_tests": {
+    "groups_passed": 6,
+    "initial_test_failure": "Windows localized FileExistsError text assertion; corrected to exception-type check, full six groups rerun passed"
+  },
+  "files": {
+    "private/phase3/archive_evaluation_truth_v001.py": "52083351b2a3378fbbcd956b19b34b1caef215f6d0606aa8826c3364b9467801",
+    "private/phase3/validate_truth_archive_v001.py": "0737980d58dc8db245570d49beb8e6ec9dd5fa55af68090d7f07ee28751fecc6",
+    "private/TRUTH_ARCHIVE_V001.md": "9bb3e9eee471647e6e2cd2fa35e487e6c27dc2a192a55283e89adede33552534"
+  },
+  "frozen_inputs_modified": false,
+  "next_gate": "Root complete180 export authorization and exact complete report path; no archive completion claim now"
+}

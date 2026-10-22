@@ -1,0 +1,2 @@
+{"model": "gpt-6.1-sol", "fresh_context": true, "exit_code": 241, "timeout": true, "elapsed_seconds": 0.5648458539999979, "usage_events": [], "model_calls": null, "cost": null, "launch_channel": "standalone_codex_cli_child"}
+{"status": "passed", "timeout": true, "separate_session_descendant_alive": false, "exit_code": 241}

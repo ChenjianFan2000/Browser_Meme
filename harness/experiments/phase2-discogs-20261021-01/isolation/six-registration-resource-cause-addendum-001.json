@@ -1,0 +1,36 @@
+{
+  "kind": "registered_six_scope_and_historical_resource_stop_addendum",
+  "status": "checks_passed",
+  "observed_at_utc": "2026-10-21T08:18:29.825936+00:00",
+  "registration": {
+    "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\EXPANSION_SCHEDULE-002.json",
+    "sha256": "e5a06341c43d59afbc25dd74143cc5cf50ff4c6453b9a10b47c42ab520e2beb5"
+  },
+  "capture": {
+    "path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\private\\abc-supervisor-tool-capture-v001.json",
+    "sha256": "e0ac371db933961d4f475f010fc043a9a2c3f34b392fd2f31409238b8f4a8cb5",
+    "truncated": true
+  },
+  "verified": {
+    "active_workers": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ],
+    "max_active_workers": 6,
+    "actual_dispatcher": "harness/phase2/run_parallel_v002.py",
+    "all_management_and_admission_hashes_match": true,
+    "preserved_21_case_manifest_hashes_match": true,
+    "abc_exit1_memory_guard_tracebacks_confirmed": true
+  },
+  "qualification": [
+    "abc historical cause is now supported by truncated original terminal tool captures; not complete disk logs.",
+    "Exact stop times not established. Earlier unknown-cause records preserved unchanged.",
+    "No sustained6 capacity, full180 completion or website truth claim."
+  ],
+  "new_model_requests": 0,
+  "frozen_files_modified": false
+}

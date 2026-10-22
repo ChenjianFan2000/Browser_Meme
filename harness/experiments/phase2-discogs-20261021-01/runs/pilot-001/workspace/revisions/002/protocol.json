@@ -1,0 +1,25 @@
+{
+  "condition": "A",
+  "requested_learner_identity": "exact gpt-6.1-sol",
+  "scheduling_seed": 1729,
+  "formal_score": false,
+  "site_origin": "http://127.0.0.1:12042",
+  "fixture_inspection": "Only keys and value types printed; credential values passed privately to observed login fields.",
+  "browser_channel": "Discovered mcp__phase2__execute_script; scripts export run(h), native Playwright.",
+  "offline_channel": "Command tools used only for file reading/writing, parsing exported evidence, compilation, hashing and package validation.",
+  "prediction_process": "h.expect before every dispatched UI action; originals in actions.jsonl. No task-boundary predictions or private tasks. Final executable model synthesized after exploration.",
+  "native_action_scroll": "Runtime confirms and scrolls locators on dispatch; no unrecorded explicit scrolls.",
+  "stopping_rule": "Stopped after one disabled-button click timeout. Runtime reported stop_reason null, but learner enforced stricter contract stop.",
+  "failure_preservation": "Original failed scripts and browser exports retained; offline corrected helper is separately versioned.",
+  "checkpoint_note": "Revision001 is a retrospective snapshot of observations1\u20133. Revision002 is the final synthesized package, not a claim that models existed before the action logs.",
+  "evidence_refs": [
+    {
+      "path": "evidence/call-001-709a330b/actions.jsonl",
+      "sha256": "8bc6d942f6354ec997cc82171083c5653511e393102b727d5c59643b4c89b454"
+    },
+    {
+      "path": "evidence/call-018-ee1f9e5a/result.json",
+      "sha256": "95b2410bd5e58ec41b79accef8b2c81f4f5137df6f0d243a52dd0653b5779058"
+    }
+  ]
+}

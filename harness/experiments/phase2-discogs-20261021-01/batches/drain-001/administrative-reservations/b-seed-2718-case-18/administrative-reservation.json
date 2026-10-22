@@ -1,0 +1,10 @@
+{
+  "kind": "administrative_dispatch_reservation_not_a_case_attempt",
+  "run_id": "b-seed-2718",
+  "case_index": 18,
+  "worker": "b",
+  "created_ns": 1792566754647913400,
+  "reason": "User requested substantially higher concurrency; drain legacy controller at its existing fail-closed pending-directory check after the current case closes. No model, reset, or browser action is authorized by this marker.",
+  "reservation_path": "G:\\Browser_Meme\\harness\\experiments\\phase2-discogs-20261021-01\\evaluations\\b-seed-2718\\case-18",
+  "resume_rule": "After legacy controller exits, move this administrative-only directory into drain evidence; preserve all bytes. A new dispatcher may then launch the not-yet-attempted case under the expansion protocol."
+}

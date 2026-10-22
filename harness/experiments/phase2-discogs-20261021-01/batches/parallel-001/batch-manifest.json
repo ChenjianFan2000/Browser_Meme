@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "files": {
+    "STOP_DISPATCH": "cb009c2ce03e327caaff4b5b83daf68df2fcad42d415e0b13e26a6b48eb4430e",
+    "batch-summary.json": "2241e006d24a96c96cd2440761dd72bc465e25e36086cfe40055c817d095e79c",
+    "claims/a-seed-1729-case-13.json": "e425e8ab5cefc6c7703821eb0471ba75f3ab6f49d30a0d8e47a3e86c2eb26db8",
+    "claims/b-seed-1729-case-11.json": "7e2ff4e895b253556b6e54df55d2e99d65bec7f6a105fbf55366cab33dc3d587",
+    "claims/b-seed-2718-case-18.json": "7117089b7b3af225ff6c48ea25653cca95069dee06ea645b2ff5a180551a1370",
+    "dispatch-events.jsonl": "1a0bdb2ec99c2c05c34beef9f2ac3b43cb20acfcbb8bcf80e116cf6f1004fa51",
+    "dispatch-plan.json": "d0cdc00417517df324602503c5391c231550bcfc01891e4ada5e720f9b20daf7",
+    "logs/a-seed-1729-case-13.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/a-seed-1729-case-13.stdout.jsonl": "b6fd4c07aa37b7762830b1ebbcb1ada0b93673bb32f118151c9df6149c03f25e",
+    "logs/b-seed-1729-case-11.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/b-seed-1729-case-11.stdout.jsonl": "934f2d132d26f4575133f51870ce12ae7f08a47de63570eda7ad7622f3190839",
+    "logs/b-seed-2718-case-18.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/b-seed-2718-case-18.stdout.jsonl": "1a78207589a1a53980a1d4ba686613bc95b8f8a449804da6c0cd0d7d68bac52b",
+    "provider-observation-001.json": "ee1b0f00c72e768fa103586c7b2cd024cf13d6829e9a759bdcb9a8051165cc57"
+  }
+}

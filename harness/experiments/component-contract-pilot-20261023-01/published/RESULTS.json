@@ -1,0 +1,680 @@
+{
+  "schema": "component-contract-portable-results/v1",
+  "experiment_id": "component-contract-pilot-20261023-01",
+  "classification": "historical single-site engineering/adaptation pilot; curated derived summaries, not a raw evidence archive",
+  "source_summary_snapshot_ns": 1792731885204824504,
+  "strict_score": null,
+  "causal_representation_comparison_demonstrated": false,
+  "independent_new_ETC_validation": false,
+  "freeze_and_validation_chronology": [
+    {
+      "stage": "author_model006_freeze",
+      "model_manifest_sha256": "ecf648eff1e8d2667938ec53504180e6226b060359fca96f31740421b09dcc35",
+      "independent_validation": "not_run; prior 005 static-invariant failure remains unchanged",
+      "source_calls": 0,
+      "source_actions": 0,
+      "frozen_files_modified_for_release": false
+    },
+    {
+      "stage": "later_independent_adaptation006_acceptance",
+      "denominator": 3,
+      "completed": 1,
+      "readpoint_incomplete": 2,
+      "new_independent_strategy_sample": false,
+      "same_five_consumer005_strategy_bytes": true
+    },
+    {
+      "stage": "later_targeted007_consumer_helper_repair",
+      "denominator": 1,
+      "not_run": 1,
+      "actual_UI_actions": 0,
+      "supersedes_adaptation006_score": false
+    }
+  ],
+  "historical_versions": {
+    "fixed_firstgen001": {
+      "denominator": 3,
+      "continuous_pass": 0,
+      "engineering_completion_unconfirmed": 1,
+      "readpoint_incomplete": 2,
+      "actual_actions": 24,
+      "static_admissible": 3
+    },
+    "adaptation002": {
+      "denominator": 3,
+      "static_model_blocked_not_run": 3
+    },
+    "adaptation003": {
+      "denominator": 3,
+      "continuous_pass": 1,
+      "readpoint_incomplete": 2,
+      "actions": 25
+    },
+    "adaptation004": {
+      "denominator": 3,
+      "interface_boundary_failure": 1,
+      "shared_helper_blocked_not_run": 2,
+      "actions": 2
+    },
+    "adaptation005": {
+      "denominator": 3,
+      "static_model_invariant_blocked_not_run": 3,
+      "actions": 0
+    },
+    "adaptation006": {
+      "denominator": 3,
+      "continuous_pass": 1,
+      "readpoint_incomplete": 2,
+      "actions": 29,
+      "model006_migration_of_same_consumer005_strategy": true,
+      "task03_actual_query_refinement_and_unique_selection": true,
+      "task03_detail_ownership_consumer_predicate_failed_before_save_apply": true,
+      "task03_persistence_not_demonstrated": true
+    },
+    "fixed2_probes": {
+      "denominator": 2,
+      "algorithmic_continuous_pass": 1,
+      "semantic_expected_stop_compliance": 1,
+      "semantic_continuous_pass": 0,
+      "actions": 15
+    },
+    "targeted007": {
+      "denominator": 1,
+      "not_run": 1,
+      "actions": 0,
+      "global_deadline_admission_rejected": true,
+      "handoff_input_output_hash_conflict": true,
+      "consumer_hashes_correct": true
+    }
+  },
+  "optional_v1_01_engine2_replay": "not_run; old143 retained",
+  "adaptation006": {
+    "engine": "contracts_v3",
+    "execution_order": [
+      "consumer_01",
+      "consumer_03",
+      "consumer_02"
+    ],
+    "task_result_order": [
+      "consumer_01",
+      "consumer_02",
+      "consumer_03"
+    ],
+    "fixed_denominator": 3,
+    "executed": 3,
+    "continuous_overall_pass": 1,
+    "readpoint_incomplete": 2,
+    "not_run": 0,
+    "model_registration_sha256": "af708194068164efb6eba98cb68df873d47431914442177aa38b28ff71ac292f",
+    "all_prior_results_unchanged": true,
+    "prediction_field_count_warning": "132/132 and 83/83 are repeated field checks over prefixes, not independent tasks; prefix business checks do not establish task completion.",
+    "tasks": [
+      {
+        "task": "consumer_01",
+        "script": "consumer-v006/consumer_01.py",
+        "primary_pass": true,
+        "reason": "worker_completed",
+        "checked_actions": 11,
+        "elapsed_seconds": 88.9989087970007,
+        "source_exit_code": 0,
+        "worker_status": "completed",
+        "business_verdict": "pass",
+        "task_goal_complete": true,
+        "task_goal_status": "satisfied",
+        "business_prediction_fields": 132,
+        "business_prediction_fields_match": 132,
+        "elapsed_seconds_scope": "controller return; not added to nested worker time; excludes outer wrapper preparation",
+        "first_failure": null,
+        "cleanup": {
+          "source_cleaned": true,
+          "oracle_cleaned": true,
+          "source_owned_processes_remaining": 0,
+          "oracle_owned_processes_remaining": 0,
+          "external_recorded_identities_alive_count": 0
+        }
+      },
+      {
+        "task": "consumer_02",
+        "script": "consumer-v006/consumer_02.py",
+        "primary_pass": false,
+        "reason": "first_contract_gate_failure",
+        "checked_actions": 7,
+        "elapsed_seconds": 80.74963051399936,
+        "source_exit_code": 0,
+        "worker_status": "needs_reading",
+        "business_verdict": "pass",
+        "task_goal_complete": false,
+        "task_goal_status": "not_completed_readpoint",
+        "business_prediction_fields": 83,
+        "business_prediction_fields_match": 83,
+        "readpoint_classification": "predeclared incomplete prefix; no full duplicate/comment/persistence task success",
+        "elapsed_seconds_scope": "controller return; not added to nested worker time; excludes outer wrapper preparation",
+        "first_failure": {
+          "checkpoint": "final",
+          "layer": "no_readpoint"
+        },
+        "cleanup": {
+          "source_cleaned": true,
+          "oracle_cleaned": true,
+          "source_owned_processes_remaining": 0,
+          "oracle_owned_processes_remaining": 0,
+          "external_recorded_identities_alive_count": 0
+        }
+      },
+      {
+        "task": "consumer_03",
+        "script": "consumer-v006/consumer_03.py",
+        "primary_pass": false,
+        "reason": "first_contract_gate_failure",
+        "checked_actions": 11,
+        "elapsed_seconds": 77.92360419800025,
+        "source_exit_code": 0,
+        "worker_status": "needs_reading",
+        "business_verdict": "pass",
+        "task_goal_complete": false,
+        "task_goal_status": "not_completed_readpoint",
+        "business_prediction_fields": 132,
+        "business_prediction_fields_match": 132,
+        "readpoint_reason": "Full selected detail ownership is unconfirmed.",
+        "actual_second_query_executed": true,
+        "second_query_action": 10,
+        "selection_action": 11,
+        "save_apply_executed": false,
+        "save_apply_persistence_after_crosspage_reload_confirmed": false,
+        "actual_persistent_delta_counts": {
+          "created_posts": 0,
+          "created_comments": 0,
+          "saved_jobs_added": 0,
+          "saved_jobs_removed": 0,
+          "applications_added": 0,
+          "applications_removed": 0,
+          "alerts_changed": 0,
+          "reactions_added": 0,
+          "reactions_removed": 0
+        },
+        "ownership_attribution": "consumer isolated exact-text predicate misses compound metadata; retained actual DOM verified; no new live probe",
+        "exact_target_public_tuple_unique": true,
+        "actual_returned_rows_after_refinement": 1,
+        "elapsed_seconds_scope": "controller return; not added to nested worker time; excludes outer wrapper preparation",
+        "first_failure": {
+          "checkpoint": "final",
+          "layer": "no_readpoint"
+        },
+        "cleanup": {
+          "source_cleaned": true,
+          "oracle_cleaned": true,
+          "source_owned_processes_remaining": 0,
+          "oracle_owned_processes_remaining": 0,
+          "external_recorded_identities_alive_count": 0
+        }
+      }
+    ]
+  },
+  "targeted007": {
+    "denominator": 1,
+    "not_run": 1,
+    "actions": 0,
+    "global_deadline_admission_rejected": true,
+    "handoff_input_output_hash_conflict": true,
+    "consumer_hashes_correct": true,
+    "registered_task": "consumer_03",
+    "script": "consumer-targeted007/consumer_03.py",
+    "helper": "consumer-targeted007/helpers/driver_v5.py",
+    "unchanged_from006": [
+      "consumer_03.py",
+      "checkpoint-predictions.json",
+      "model-v006"
+    ],
+    "changed_only": "helpers/driver_v5.py: selected-detail ownership check uses the exact title and anchored compound metadata in a unique detail region",
+    "checkpoint_file_historical_phase": "adaptation005; intentionally preserved bytes; contains predictions for tasks01/02/03, but only task03 was registered for targeted007",
+    "static_validation": "AST/policy pass recorded; no real browser execution",
+    "handoff_failure": "mutable helper output was also listed as immutable input; hash conflict occurred before dispatch wrapper; time admission separately rejected before site prepare/reset/browser",
+    "frozen_action_budget": 20,
+    "frozen_wall_budget_seconds": 200,
+    "cleanup_within_wall_seconds": 45,
+    "closing_reserve_seconds": 60,
+    "required_remaining_time_seconds": 260,
+    "script_declared_wall_seconds": 300,
+    "engine_effective_wall_seconds": 200,
+    "may_claim_target03_completed": false
+  },
+  "completed_flow_example": {
+    "source_version": "adaptation003",
+    "task": "consumer_01",
+    "classification": "adaptive candidate003 consumer01 actual completed run; not first-generation success",
+    "actions": [
+      {
+        "action": 1,
+        "operation": "填写受控账号",
+        "native_method": "fill"
+      },
+      {
+        "action": 2,
+        "operation": "填写故意错误的密码",
+        "native_method": "fill"
+      },
+      {
+        "action": 3,
+        "operation": "提交登录并观察拒绝",
+        "native_method": "click"
+      },
+      {
+        "action": 4,
+        "operation": "纠正密码",
+        "native_method": "fill"
+      },
+      {
+        "action": 5,
+        "operation": "重新提交并恢复登录",
+        "native_method": "click"
+      },
+      {
+        "action": 6,
+        "operation": "打开新内容编辑器",
+        "native_method": "click"
+      },
+      {
+        "action": 7,
+        "operation": "填写未见过的新文本",
+        "native_method": "fill"
+      },
+      {
+        "action": 8,
+        "operation": "提交创建新对象",
+        "native_method": "click"
+      },
+      {
+        "action": 9,
+        "operation": "跨页访问另一页面",
+        "native_method": "click"
+      },
+      {
+        "action": 10,
+        "operation": "返回原页面",
+        "native_method": "click"
+      },
+      {
+        "action": 11,
+        "operation": "刷新并回读持久结果",
+        "native_method": "reload"
+      }
+    ],
+    "independent_business_outcome": {
+      "new_objects_created": 1,
+      "new_comments": 0,
+      "new_reactions": 0,
+      "unrequested_job_mutations": 0,
+      "authenticated_final": true,
+      "returned_and_reloaded_original_page": true,
+      "task_goal_status": "satisfied"
+    },
+    "validation": {
+      "state0_action_final_gates_pass": true,
+      "actions": 11,
+      "source_exit_code": 0,
+      "browser_oracle_cleanup_cleaned0": true,
+      "prior_business_field_matches": "132/132 repeated checks, not independent tasks",
+      "controller_returned_elapsed_seconds": 96.70622797400029,
+      "controller_elapsed_excludes_outer_wrapper_preparation": true
+    },
+    "provenance_warning": "This 11-action evidence example belongs to v003. The published v006 consumer_01 has its own successful outcome above; no v003 evidence has been relabeled as v006."
+  },
+  "physical_accounting": {
+    "controller_attempts": 14,
+    "zero_UI_infrastructure_attempts": 2,
+    "evaluation_real_UI_runs": 12,
+    "evaluation_actual_UI_actions": 95,
+    "controller_returned_elapsed_sum_seconds": 925.2226761779984,
+    "author_browser_calls": 8,
+    "author_UI_actions": 69,
+    "generic_browser_runs": 10,
+    "generic_UI_actions": 14,
+    "all_actual_UI_actions_author_generic_evaluation": 178,
+    "mixed_units_sum_as_recorded": 30,
+    "mixed_units_warning": "30 adds 8 author browser calls, 10 generic runs and 12 evaluation UI runs; these are not 30 independent trials or uniform browser sessions.",
+    "controller_attempts_scope": "14 controller attempts in the original accounting; includes 2 zero-UI infrastructure attempts; static blocks and targeted007 admission rejection remain separately recorded."
+  },
+  "controller_attempts": [
+    {
+      "accounting_ordinal": 1,
+      "group": "consumer_first001",
+      "controller_returned_elapsed_seconds": 0.054966552001133095,
+      "checked_actions": 0,
+      "actual_worker_actions": 0,
+      "worker_elapsed_seconds_nested": null,
+      "worker_status": null,
+      "source_exit_code": null,
+      "primary_pass": false,
+      "reason": "controller_preflight_error",
+      "zero_UI_infrastructure_attempt": true,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 2,
+      "group": "consumer_first001",
+      "controller_returned_elapsed_seconds": 124.84649356499904,
+      "checked_actions": 11,
+      "actual_worker_actions": 11,
+      "worker_elapsed_seconds_nested": 85.53273886100033,
+      "worker_status": "completed",
+      "source_exit_code": 143,
+      "primary_pass": false,
+      "reason": "cleanup_or_completion_unconfirmed",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 3,
+      "group": "consumer_first001",
+      "controller_returned_elapsed_seconds": 5.98522903400044,
+      "checked_actions": 0,
+      "actual_worker_actions": 0,
+      "worker_elapsed_seconds_nested": null,
+      "worker_status": null,
+      "source_exit_code": 75,
+      "primary_pass": false,
+      "reason": "missing_required_checkpoint",
+      "zero_UI_infrastructure_attempt": true,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 4,
+      "group": "consumer_first001",
+      "controller_returned_elapsed_seconds": 86.44606913899952,
+      "checked_actions": 6,
+      "actual_worker_actions": 6,
+      "worker_elapsed_seconds_nested": 77.895068971,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 5,
+      "group": "consumer_first001",
+      "controller_returned_elapsed_seconds": 49.54895486999885,
+      "checked_actions": 7,
+      "actual_worker_actions": 7,
+      "worker_elapsed_seconds_nested": 42.312037536999924,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 6,
+      "group": "consumer_adaptation003",
+      "controller_returned_elapsed_seconds": 96.70622797400029,
+      "checked_actions": 11,
+      "actual_worker_actions": 11,
+      "worker_elapsed_seconds_nested": 88.7545976069996,
+      "worker_status": "completed",
+      "source_exit_code": 0,
+      "primary_pass": true,
+      "reason": "worker_completed",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 7,
+      "group": "consumer_adaptation003",
+      "controller_returned_elapsed_seconds": 71.80296375699982,
+      "checked_actions": 7,
+      "actual_worker_actions": 7,
+      "worker_elapsed_seconds_nested": 64.58107245399879,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 8,
+      "group": "consumer_adaptation003",
+      "controller_returned_elapsed_seconds": 117.91536842499954,
+      "checked_actions": 7,
+      "actual_worker_actions": 7,
+      "worker_elapsed_seconds_nested": 86.04698659499991,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": false
+    },
+    {
+      "accounting_ordinal": 9,
+      "group": "consumer_adaptation004",
+      "controller_returned_elapsed_seconds": 16.196655214000202,
+      "checked_actions": 2,
+      "actual_worker_actions": 2,
+      "worker_elapsed_seconds_nested": 11.547257910000553,
+      "worker_status": "error",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": true,
+      "outer_wrapper_total_wall_seconds": 16.650355155999932
+    },
+    {
+      "accounting_ordinal": 10,
+      "group": "fixed_probes",
+      "controller_returned_elapsed_seconds": 59.08760856200024,
+      "checked_actions": 8,
+      "actual_worker_actions": 8,
+      "worker_elapsed_seconds_nested": 49.21688264799923,
+      "worker_status": "completed",
+      "source_exit_code": 0,
+      "primary_pass": true,
+      "reason": "worker_completed",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": true,
+      "outer_wrapper_total_wall_seconds": 59.9612650149993
+    },
+    {
+      "accounting_ordinal": 11,
+      "group": "fixed_probes",
+      "controller_returned_elapsed_seconds": 48.95999557699906,
+      "checked_actions": 7,
+      "actual_worker_actions": 7,
+      "worker_elapsed_seconds_nested": 42.34759052899972,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": true,
+      "outer_wrapper_total_wall_seconds": 49.36762854299923
+    },
+    {
+      "accounting_ordinal": 12,
+      "group": "consumer_adaptation006",
+      "controller_returned_elapsed_seconds": 88.9989087970007,
+      "checked_actions": 11,
+      "actual_worker_actions": 11,
+      "worker_elapsed_seconds_nested": 81.18780277400037,
+      "worker_status": "completed",
+      "source_exit_code": 0,
+      "primary_pass": true,
+      "reason": "worker_completed",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": true,
+      "outer_wrapper_total_wall_seconds": 89.43284764399868
+    },
+    {
+      "accounting_ordinal": 13,
+      "group": "consumer_adaptation006",
+      "controller_returned_elapsed_seconds": 77.92360419800025,
+      "checked_actions": 11,
+      "actual_worker_actions": 11,
+      "worker_elapsed_seconds_nested": 68.25644694499897,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": true,
+      "outer_wrapper_total_wall_seconds": 78.61461691600016
+    },
+    {
+      "accounting_ordinal": 14,
+      "group": "consumer_adaptation006",
+      "controller_returned_elapsed_seconds": 80.74963051399936,
+      "checked_actions": 7,
+      "actual_worker_actions": 7,
+      "worker_elapsed_seconds_nested": 65.79855971100005,
+      "worker_status": "needs_reading",
+      "source_exit_code": 0,
+      "primary_pass": false,
+      "reason": "first_contract_gate_failure",
+      "zero_UI_infrastructure_attempt": false,
+      "outer_wrapper_cost_available": true,
+      "outer_wrapper_total_wall_seconds": 81.17719911099994
+    }
+  ],
+  "generic_live_controls": {
+    "runs": 10,
+    "groups": [
+      6,
+      2,
+      2
+    ],
+    "actual_UI_actions": 14,
+    "scope": "all generic actual control versions including failed first controls; no expected failures removed",
+    "records": [
+      {
+        "group": "generic-live-controls-001",
+        "variant": "normal",
+        "actual_worker_actions": 2,
+        "controller_returned_elapsed_seconds": 12.561184260999653,
+        "primary_pass": true,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-live-controls-001",
+        "variant": "wrong_state",
+        "actual_worker_actions": 1,
+        "controller_returned_elapsed_seconds": 8.427135960999294,
+        "primary_pass": false,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-live-controls-001",
+        "variant": "unbound_slot",
+        "actual_worker_actions": 1,
+        "controller_returned_elapsed_seconds": 22.349509667999882,
+        "primary_pass": false,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-live-controls-002",
+        "variant": "normal",
+        "actual_worker_actions": 2,
+        "controller_returned_elapsed_seconds": 14.263283636999404,
+        "primary_pass": true,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-live-controls-002",
+        "variant": "wrong_state",
+        "actual_worker_actions": 1,
+        "controller_returned_elapsed_seconds": 32.19650202899902,
+        "primary_pass": false,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-live-controls-002",
+        "variant": "unbound_slot",
+        "actual_worker_actions": 1,
+        "controller_returned_elapsed_seconds": 11.017602587999136,
+        "primary_pass": false,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-v2-live-controls-001",
+        "variant": "normal",
+        "actual_worker_actions": 2,
+        "controller_returned_elapsed_seconds": 12.966135446000408,
+        "primary_pass": true,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-v2-live-controls-001",
+        "variant": "missing_child",
+        "actual_worker_actions": 1,
+        "controller_returned_elapsed_seconds": 10.628842249001536,
+        "primary_pass": false,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-v3-live-controls-001",
+        "variant": "normal",
+        "actual_worker_actions": 2,
+        "controller_returned_elapsed_seconds": 14.717540428000575,
+        "primary_pass": true,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      },
+      {
+        "group": "generic-v3-live-controls-001",
+        "variant": "missing_ax_row",
+        "actual_worker_actions": 1,
+        "controller_returned_elapsed_seconds": 11.314392076999866,
+        "primary_pass": false,
+        "expected_control_result": true,
+        "source_exit_code": 0
+      }
+    ]
+  },
+  "historical_service_closeout": {
+    "all_current_services_and_managers_stopped": true,
+    "registered_services": 4,
+    "source_summary": "all4services+all4managers stopped; registered4ports absent",
+    "nonzombie_chromium_or_crashpad_count": 0,
+    "observed_zombie_browser_processes_count": 4,
+    "historical_owners_untouched": true,
+    "unrelated_process_signals": false,
+    "current_environment_status_rechecked_for_release": false
+  },
+  "historical_controlled_fixture_literal_scan": {
+    "packages": [
+      "candidate001",
+      "candidate003",
+      "candidate004",
+      "candidate005",
+      "candidate006"
+    ],
+    "manifest_text_files_each": 9,
+    "matching_files": 0,
+    "scope": "exact controlled fixture account literal matching only; no general secret safety claim"
+  },
+  "costs": {
+    "provider_tokens": null,
+    "provider_API_monetary_charge": null,
+    "reason": "unavailable in retained safe accounting; no estimated bill",
+    "controller_elapsed_sum_is_not_total_project_cost": true
+  },
+  "scope_limits": [
+    "single-site small sample; no full-site or unseen arbitrary backend claim",
+    "source UI and independent facts confirm only registered effects; internal model state not fully proved",
+    "safe readpoint is separate from completing required goal",
+    "firstgen and adaptive/diagnostic versions remain separate",
+    "shell isolation limited; no representation causality or strict speed comparison",
+    "provider tokens/API monetary charge unavailable; nested times never added"
+  ],
+  "redaction": "Only selected safe fields retained. No source/oracle implementation, controlled credentials, fixture contents, raw browser observations, process identities, nonces, or machine-specific evidence paths are published."
+}

@@ -1,0 +1,34 @@
+{
+  "version": "evaluation-playwright-semantics-v6",
+  "parents": [
+    "evaluation-helper-settle-v5"
+  ],
+  "parent_manifest_sha256": "673787cbaff6ce485a37b1dffe3fb9de717d41b1743a3ca549df48d55d82e239",
+  "status": "frozen_collector_validated; external READY records controller validation separately",
+  "external_validation": "work/replica-pilot/playwright-semantics-v6-preflight/READY.json",
+  "changes": [
+    "Separate private Playwright DOM-derived default-mode per-frame body semantics auxiliary; full DOM/native AX remain unchanged",
+    "Joint same-lane DOM/native AX/Playwright semantics stable samples and final checkpoint; sequential non-atomic capture and unchanged bounds",
+    "Fixed Playwright 1.62.0 injected implementation; all-role same-algorithm >900 UTF-16 name guard; unsupported frame/body/URL acquisition fails closed",
+    "Trusted saved native aria_snapshot bypasses public read redaction before hash; secrets are redacted at persistence",
+    "Canonical score/safe feedback projects only explicit javascript URL executable body; business text remains exact"
+  ],
+  "default_settle_enabled": false,
+  "settle_version": "single-lane-dom-ax-playwright/v2",
+  "payload_sha256": {
+    "BROWSER_INTERFACE.md": "9d3c6ad2278f1a5277c8ff496f4e08b470c7a093e90b5363756854ae3a2cf027",
+    "SEMANTICS_ROLES.json": "734a5915704247cee13faaaf1888e77075bf4b71299a223a1b6942deba8c5a41",
+    "browser_broker.py": "c3a62fd5dfe201a1e9aebfe1d45a528eb334256c93a54aacddbf1bc346fd3c74",
+    "browser_runtime.py": "d268a58d4b880961c39cf99807806b5f02545518c355572f0b98a960d6467ebc",
+    "observation.py": "b30c9419d22403089afc52d932040b448e32ed0682fca395acf3b52c710f0997",
+    "permissions.py": "bf5ac85929e796e91a47d4932ee245a12e64ec933c49b723e96b72aa435ca8c3",
+    "playwright_semantics.py": "8bc8858175edca0f81341357a5dab83d61be632cfa7c18357d4bbf86c2facf3f",
+    "process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "script_policy.py": "46dd33fb99a57cc25f06455b5870fab2c94a72b264e14ac7b4791a3877e8f386",
+    "settle.py": "343cf9d7489fb618949d72bcebc47bd5e493b6aa051cba1bbf85b16465862474",
+    "trees.py": "3fa86f319980dda0ea193faaa24784acb1d38313ac45d15e3adbe0fcd513b8ab",
+    "unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a",
+    "unix_gateway.py": "49a022be0025b4a91dca74f18f77847f0a58b8e039511c15fbb2fcf5102c2432",
+    "worker_sandbox.py": "805fd803fe0efb0939c12de5ef88b338bce8c975fe0195bfa45eb13d0f3a50c6"
+  }
+}

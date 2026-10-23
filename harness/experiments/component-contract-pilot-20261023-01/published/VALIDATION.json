@@ -1,0 +1,37 @@
+{
+  "schema": "component-contract-release-validation/v1",
+  "scope": "this curated package only; not a repository-wide or original-private-evidence audit",
+  "byte_copy_files": 18,
+  "all_byte_copy_hashes_match": true,
+  "original_model_manifest_payload_hashes_verified": 9,
+  "portable_note_copies": 5,
+  "notes_edit_scope": "provenance preface and reference conversion only",
+  "python_ast_parse_files": 8,
+  "python_execution_performed": false,
+  "browser_execution_performed": false,
+  "sensitive_pattern_scan": {
+    "final_package_files": 28,
+    "categories": [
+      "private_key",
+      "github_classic_token",
+      "github_fine_grained_token",
+      "openai_style_key",
+      "aws_access_key_id",
+      "credential_bearing_url",
+      "machine_specific_private_evidence_path",
+      "process_identity_field"
+    ],
+    "findings": [],
+    "exact_fixture_literal_scan_performed_this_release": false,
+    "limitations": "Known token/private-key/credential-URL patterns and selected machine-identity patterns only; no secrets were read for exact matching; not exhaustive."
+  },
+  "relative_markdown_links_checked": 57,
+  "broken_relative_markdown_links": [],
+  "intentional_historical_non_link_references": [
+    "model-v006/MANIFEST.json parent-v005/MANIFEST.json is an omitted lineage artifact, not a required portable package file",
+    "frozen checkpoint phase remains adaptation005",
+    "runtime preflight records and original machine executable paths are historical environment dependencies",
+    "notes mark omitted original evidence and prior model versions explicitly; linked portable summaries are excerpts only"
+  ],
+  "new_artifacts": "curated safe summaries and handoff documentation only; no new site-specific model, locator, prediction, or consumer implementation"
+}

@@ -1,7 +1,0 @@
-{
-  "git_status": "untracked; git diff has no baseline",
-  "original_prefix_sha256": "ebabad2f3a9c1f2be1117b2a32d72e6bbc15ef54417984f0e219b265a7217b95",
-  "old_gate_sha256": "ebabad2f3a9c1f2be1117b2a32d72e6bbc15ef54417984f0e219b265a7217b95",
-  "original_prefix_byte_identical": true,
-  "scope": "all original records functions and imports unchanged; appended helper reviewed separately"
-}

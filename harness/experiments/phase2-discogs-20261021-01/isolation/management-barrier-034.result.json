@@ -1,9 +1,0 @@
-{
-  "status": "passed",
-  "checks": {
-    "real_reader_and_active_request_drained": true,
-    "real_callback_error_blocks_gateway_barrier": true,
-    "driver_boolean_must_be_exact_true_and_local_barrier_passed": true,
-    "unsafe_case_frozen_before_stop": true
-  }
-}

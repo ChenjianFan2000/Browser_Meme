@@ -1,0 +1,86 @@
+{
+  "schema": "unified-operation-spec/v4",
+  "generated_from": "components_v4.OPERATIONS",
+  "operations": {
+    "navigate": {
+      "business_change": false,
+      "records": 0,
+      "guard": "known route; protected routes require authentication"
+    },
+    "auth_success": {
+      "business_change": false,
+      "records": 0,
+      "guard": "login form and public valid account"
+    },
+    "auth_reject": {
+      "business_change": false,
+      "records": 0,
+      "guard": "login form and format-valid wrong password"
+    },
+    "search": {
+      "business_change": false,
+      "records": 0,
+      "guard": "authenticated jobs"
+    },
+    "select_job": {
+      "business_change": false,
+      "records": 0,
+      "guard": "unique bound public job identity"
+    },
+    "save": {
+      "business_change": true,
+      "records": 1,
+      "guard": "selected job and known current save state"
+    },
+    "apply": {
+      "business_change": true,
+      "records": 1,
+      "guard": "selected job and not already applied"
+    },
+    "open_composer": {
+      "business_change": false,
+      "records": 0,
+      "guard": "authenticated feed"
+    },
+    "fill_post": {
+      "business_change": false,
+      "records": 0,
+      "guard": "composer open"
+    },
+    "create_post": {
+      "business_change": true,
+      "records": 1,
+      "guard": "composer open and nonempty trimmed body"
+    },
+    "like": {
+      "business_change": true,
+      "records": 1,
+      "guard": "unique bound post and known liked/count"
+    },
+    "open_comments": {
+      "business_change": false,
+      "records": 0,
+      "guard": "unique bound post"
+    },
+    "fill_comment": {
+      "business_change": false,
+      "records": 0,
+      "guard": "comment form open"
+    },
+    "comment": {
+      "business_change": true,
+      "records": 1,
+      "guard": "comment form open and nonempty body"
+    },
+    "form_edit": {
+      "business_change": false,
+      "records": 0,
+      "guard": "current component; unauthenticated edits restricted to login"
+    },
+    "reload": {
+      "business_change": false,
+      "records": 0,
+      "guard": "known current component"
+    }
+  }
+}

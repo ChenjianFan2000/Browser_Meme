@@ -1,7 +1,0 @@
-{
-  "close_seconds": 2.0,
-  "active_after_close": 0,
-  "reader_alive": false,
-  "errors": [],
-  "committed_when_close_returned": true
-}

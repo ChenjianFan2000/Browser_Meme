@@ -1,6 +1,0 @@
-{"event": "expanded_management_entry", "worker": "c", "learning_run": "b-seed-1729", "case_index": 29, "expansion_registration_sha256": "e5a06341c43d59afbc25dd74143cc5cf50ff4c6453b9a10b47c42ab520e2beb5", "runner_sha256": "18dccac4db16a74c1fe2178d28555015ede4f12aebdf58c5cb541519d341fae3", "driver_entry_sha256": "352904b8ce1b7c4b07e9924c079ab9abe39638b6ee503753d0d4ecc6cec5fb77"}
-{"event": "case_started", "learning_run": "b-seed-1729", "case_index": 29, "case_id": "B09"}
-{"event": "case_progress", "learning_run": "b-seed-1729", "case_index": 29, "elapsed_seconds": 60, "http_events": 4, "prediction_declared": false}
-{"event": "case_progress", "learning_run": "b-seed-1729", "case_index": 29, "elapsed_seconds": 120, "http_events": 8, "prediction_declared": true}
-{"event": "case_progress", "learning_run": "b-seed-1729", "case_index": 29, "elapsed_seconds": 180, "http_events": 16, "prediction_declared": true}
-{"event": "case_finished", "learning_run": "b-seed-1729", "case_index": 29, "ui_actions": 15, "elapsed_seconds": 195}

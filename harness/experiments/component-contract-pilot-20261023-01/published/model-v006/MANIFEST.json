@@ -1,0 +1,98 @@
+{
+  "schema": "frozen-public-model-input/v6",
+  "revision": "v006",
+  "status": "FINAL_CONSUMER_INPUT_READY",
+  "parent_public": "parent-v005/MANIFEST.json",
+  "parent_manifest_sha256": "968ac19b10be379cb64bc4c1d0de3df836c48af25105aa541c11d9f37f955790",
+  "classification": "targeted offline accepted-state invariant closure006",
+  "files": [
+    {
+      "path": "CONSUMER.md",
+      "sha256": "8f21bddfaa996e9e56768510b97eb8a1fc45b0269e8406d56e87cd2abf06d074"
+    },
+    {
+      "path": "component-rulebook.md",
+      "sha256": "37a213ae8227cb7de8132367447bbb08d0b257498544de44acfd9c24a31cbf0c"
+    },
+    {
+      "path": "component-contracts.json",
+      "sha256": "061e32b229b00d3422f5289de9e8056e900d9c15d117699e13d5aac67ef4771e"
+    },
+    {
+      "path": "components_v4.py",
+      "sha256": "1b7eab24f99db62439f4b959238daf7f8f32386b5d1f9a7f08ee21515cbfde59"
+    },
+    {
+      "path": "component-model/model.py",
+      "sha256": "ef3fb25566c3b034d5abf2ee21f496fdb50ab1e464c5f18387ce74192f02f212"
+    },
+    {
+      "path": "representation.md",
+      "sha256": "5ca6062608206f54139b7a9b9d2edb3103a6378855acb2c207b1da10f40d6ccc"
+    },
+    {
+      "path": "transitions.json",
+      "sha256": "7fecd1f2fbf31056ffc9e6cb9a114981f5b26f69f93ff1d16b4c6d1d3b4f3b39"
+    },
+    {
+      "path": "knowledge-state.json",
+      "sha256": "515d937714a6e212629bde090a22d5368c83774e34f542556f4bd5ba9dfda763"
+    },
+    {
+      "path": "prediction-templates.json",
+      "sha256": "c648cdfde643c1069f3371cf13607e7578c925acaa3bfb2e0ff6e6b8822bd9db"
+    }
+  ],
+  "changed_files": [
+    "CONSUMER.md",
+    "components_v4.py"
+  ],
+  "consumer_entry": "CONSUMER.md; import/register compatible components_v4.py",
+  "required_generic": "separately frozen component-contract/v3 each-zero and same_dom_set validator",
+  "isolation": "isolation_limited",
+  "strict_score": null,
+  "source_run": "author-adaptation-006",
+  "source_calls": 0,
+  "source_actions": 0,
+  "fixed_AST_policy": "pass",
+  "structural_contract": "byte-identical to parent-v004; no new live or capture check",
+  "independent_validation": "not_run; prior 005 static-invariant failure remains unchanged",
+  "limits": [
+    "No exact external cardinality/text prediction",
+    "No stable server entity identity discovered in public card attributes",
+    "Same-content entity candidates expressible; duplicate-body business actions remain unsupported",
+    "Mutable rich public signatures are contextual locators, not persistent IDs",
+    "External reconciliation gives no prediction credit and can invalidate business delta baseline",
+    "Own UI/offline matching not independent stable live validation",
+    "No whole-page clone or strict isolation claim",
+    "Internally conflicting registry inputs reject before planning; external_update does not silently repair corrupt prior",
+    "Body-keyed alias removed on duplicate causal registration; entity-specific duplicate-body write contract remains unsupported",
+    "Fresh-body absence rejects any known body; current-view absence is not deletion proof",
+    "Finite memory sequence checks do not prove UI reachability or task success"
+  ],
+  "consumer_forbidden": [
+    "old flows",
+    "ui.py",
+    "probes",
+    "raw evidence",
+    "coverage/control answer traces",
+    "old replica code"
+  ],
+  "pure_model_regression": {
+    "scope": "finite pure-memory operation sequences, not website reachability proof",
+    "max_depth": 3,
+    "operations": 21,
+    "unique_states": 407,
+    "accepted_transitions": 1183,
+    "rejected_transitions": 1207,
+    "checks": 4807,
+    "all_passed": true,
+    "named_regression": [
+      "reported register\u2192absence blocked",
+      "every state producer on stale absence seed rejects",
+      "full login/create/register/like/comment/verify chain accepted",
+      "duplicate causal entities retained and body write blocked"
+    ]
+  },
+  "additional_inconsistent_seed_checks": 6
+}

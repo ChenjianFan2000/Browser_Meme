@@ -1,4 +1,0 @@
-{"event": "dispatch", "call": "call-001-b788804b", "script_sha256": "3b1a22d3251b0712a2082731f4069af4f5892ed694bc1f932c7988cea58a7d23", "time_ns": 1792558311940981100, "actions_before": 0}
-{"event": "result", "call": "call-001-b788804b", "actions": 2, "status": "completed", "elapsed_seconds": 4.490847088999999, "stop_reason": null}
-{"event": "dispatch", "call": "call-002-7d711acc", "script_sha256": "74aa40742bc741aaf714393c62c80c3c2a4b21199629c698678b57b2e4bdd709", "time_ns": 1792558350814390376, "actions_before": 2}
-{"event": "result", "call": "call-002-7d711acc", "actions": 0, "status": "error", "elapsed_seconds": 2.88299327499999, "stop_reason": null}

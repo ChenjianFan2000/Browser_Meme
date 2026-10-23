@@ -1,6 +1,0 @@
-{"method": "GET", "path": "/api/me/collection", "status": 0, "source": "trusted_browser_gateway", "management_received_ns": 1792571178584647500, "management_request_started_ns": 1792571178584647500, "event_phase": "dispatch"}
-{"method": "GET", "path": "/api/me/collection", "status": 200, "source": "trusted_browser_gateway", "management_received_ns": 1792571178664004300, "management_request_started_ns": 1792571178584647500, "event_phase": "response"}
-{"method": "POST", "path": "/api/me/collection/1", "status": 0, "source": "trusted_browser_gateway", "management_received_ns": 1792571271255465800, "management_request_started_ns": 1792571271255465800, "event_phase": "dispatch"}
-{"method": "POST", "path": "/api/me/collection/1", "status": 200, "source": "trusted_browser_gateway", "management_received_ns": 1792571271299049500, "management_request_started_ns": 1792571271255465800, "event_phase": "response"}
-{"method": "GET", "path": "/api/me/collection", "status": 0, "source": "trusted_browser_gateway", "management_received_ns": 1792571273367965300, "management_request_started_ns": 1792571273367965300, "event_phase": "dispatch"}
-{"method": "GET", "path": "/api/me/collection", "status": 200, "source": "trusted_browser_gateway", "management_received_ns": 1792571273424593800, "management_request_started_ns": 1792571273367965300, "event_phase": "response"}

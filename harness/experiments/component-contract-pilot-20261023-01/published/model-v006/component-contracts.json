@@ -1,0 +1,2016 @@
+{
+  "schema": "component-contract-bundle/v3",
+  "revision": "v004",
+  "contracts": {
+    "auth.login": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [],
+        "$properties": {},
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "email",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "autocomplete": "email"
+                }
+              }
+            },
+            {
+              "id": "password",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "autocomplete": "current-password"
+                }
+              }
+            },
+            {
+              "id": "submit",
+              "select": {
+                "source": "ax",
+                "role": "button",
+                "name": "Sign in"
+              }
+            }
+          ],
+          "forbidden": [],
+          "relations": [],
+          "tree": {
+            "component": "login",
+            "fields": [
+              "email",
+              "password"
+            ],
+            "submit": "Sign in"
+          }
+        },
+        "rejected": {
+          "required": [
+            {
+              "id": "email",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "autocomplete": "email"
+                }
+              }
+            },
+            {
+              "id": "password",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "autocomplete": "current-password"
+                }
+              }
+            },
+            {
+              "id": "submit",
+              "select": {
+                "source": "ax",
+                "role": "button",
+                "name": "Sign in"
+              }
+            },
+            {
+              "id": "error",
+              "select": {
+                "source": "ax",
+                "role": "StaticText",
+                "name": "Invalid email or password"
+              }
+            }
+          ],
+          "forbidden": [
+            {
+              "id": "no-feed-composer",
+              "select": {
+                "source": "ax",
+                "role": "button",
+                "name": "Start a post"
+              }
+            }
+          ],
+          "relations": [],
+          "tree": {
+            "component": "login",
+            "error": "Invalid email or password"
+          }
+        }
+      },
+      "coverage": [
+        "email",
+        "password",
+        "submit",
+        "error",
+        "no-feed-composer"
+      ]
+    },
+    "feed.ready": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [],
+        "$properties": {},
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "composer",
+              "select": {
+                "source": "ax",
+                "role": "button",
+                "name": "Start a post"
+              }
+            },
+            {
+              "id": "jobs",
+              "select": {
+                "source": "ax",
+                "role": "link",
+                "name": "Jobs"
+              }
+            }
+          ],
+          "forbidden": [
+            {
+              "id": "no-login-submit",
+              "select": {
+                "source": "ax",
+                "role": "button",
+                "name": "Sign in"
+              }
+            }
+          ],
+          "relations": [],
+          "tree": {
+            "component": "feed",
+            "compose": "Start a post",
+            "navigation": "Jobs"
+          }
+        }
+      },
+      "coverage": [
+        "composer",
+        "jobs",
+        "no-login-submit"
+      ]
+    },
+    "jobs.search": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "query",
+          "location"
+        ],
+        "$properties": {
+          "query": {
+            "$type": "string"
+          },
+          "location": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "query",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "placeholder": "Search jobs"
+                },
+                "properties": {
+                  "value": {
+                    "$param": "query"
+                  }
+                }
+              }
+            },
+            {
+              "id": "location",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "placeholder": "Location"
+                },
+                "properties": {
+                  "value": {
+                    "$param": "location"
+                  }
+                }
+              }
+            },
+            {
+              "id": "search",
+              "select": {
+                "source": "ax",
+                "role": "button",
+                "name": "Search"
+              }
+            },
+            {
+              "id": "results",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "divide-y divide-black/10"
+                }
+              }
+            },
+            {
+              "id": "rows",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {
+                  "class": {
+                    "$enum": [
+                      "w-full text-left p-3 hover:bg-black/5 ",
+                      "w-full text-left p-3 hover:bg-black/5 bg-[#e8f3ff]"
+                    ]
+                  }
+                }
+              },
+              "scope": "results",
+              "count": {
+                "min": 0
+              },
+              "each": {
+                "required": [
+                  {
+                    "id": "title",
+                    "select": {
+                      "source": "dom",
+                      "tag": "DIV",
+                      "attributes": {
+                        "class": "text-[14px] font-semibold text-[#0a66c2] truncate"
+                      }
+                    }
+                  },
+                  {
+                    "id": "title-text",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$type": "string"
+                      }
+                    },
+                    "scope": "title",
+                    "bind": {
+                      "slot": "title",
+                      "field": "text"
+                    }
+                  },
+                  {
+                    "id": "company",
+                    "select": {
+                      "source": "dom",
+                      "tag": "DIV",
+                      "attributes": {
+                        "class": "text-[13px] text-black/70 truncate"
+                      }
+                    }
+                  },
+                  {
+                    "id": "company-text",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$type": "string"
+                      }
+                    },
+                    "scope": "company",
+                    "bind": {
+                      "slot": "company",
+                      "field": "text"
+                    }
+                  },
+                  {
+                    "id": "location_mode",
+                    "select": {
+                      "source": "dom",
+                      "tag": "DIV",
+                      "attributes": {
+                        "class": "text-[12px] text-black/60 truncate"
+                      }
+                    }
+                  },
+                  {
+                    "id": "location_mode-text",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$type": "string"
+                      }
+                    },
+                    "scope": "location_mode",
+                    "bind": {
+                      "slot": "location_mode",
+                      "field": "text",
+                      "many": true
+                    },
+                    "count": {
+                      "min": 3,
+                      "max": 3
+                    }
+                  },
+                  {
+                    "id": "save",
+                    "select": {
+                      "source": "dom",
+                      "tag": "BUTTON",
+                      "attributes": {},
+                      "properties": {
+                        "disabled": false
+                      }
+                    },
+                    "has": [
+                      {
+                        "select": {
+                          "source": "dom",
+                          "tag": "#text",
+                          "text": {
+                            "$enum": [
+                              "Save",
+                              "Saved"
+                            ]
+                          }
+                        },
+                        "count": {
+                          "min": 1,
+                          "max": 1
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "save-label",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$enum": [
+                          "Save",
+                          "Saved"
+                        ]
+                      }
+                    },
+                    "scope": "save",
+                    "bind": {
+                      "slot": "save_label",
+                      "field": "text"
+                    }
+                  }
+                ],
+                "forbidden": [],
+                "relations": [
+                  {
+                    "id": "title-owned",
+                    "kind": "ancestor",
+                    "left": "title-text",
+                    "right": "title",
+                    "quantifier": "each"
+                  },
+                  {
+                    "id": "company-owned",
+                    "kind": "ancestor",
+                    "left": "company-text",
+                    "right": "company",
+                    "quantifier": "each"
+                  },
+                  {
+                    "id": "location_mode-owned",
+                    "kind": "ancestor",
+                    "left": "location_mode-text",
+                    "right": "location_mode",
+                    "quantifier": "each"
+                  }
+                ],
+                "slots": {
+                  "title": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "company": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "location_mode": {
+                    "type": "array",
+                    "items": {
+                      "$type": "string"
+                    },
+                    "required": true
+                  },
+                  "save_label": {
+                    "type": "string",
+                    "required": true
+                  }
+                }
+              }
+            },
+            {
+              "id": "ax-root",
+              "select": {
+                "source": "ax",
+                "role": "RootWebArea"
+              },
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "id": "ax-rows",
+              "select": {
+                "source": "ax",
+                "role": "button"
+              },
+              "has": [
+                {
+                  "select": {
+                    "source": "ax",
+                    "role": "button",
+                    "name": {
+                      "$enum": [
+                        "Save",
+                        "Saved"
+                      ]
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ],
+              "count": {
+                "min": 0
+              },
+              "each": {
+                "required": [
+                  {
+                    "id": "ax-save",
+                    "select": {
+                      "source": "ax",
+                      "role": "button",
+                      "name": {
+                        "$enum": [
+                          "Save",
+                          "Saved"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "slots": {},
+                "relations": [],
+                "forbidden": []
+              },
+              "scope": "ax-root"
+            }
+          ],
+          "forbidden": [],
+          "relations": [
+            {
+              "id": "row-dom-ax-bijection",
+              "kind": "same_dom_set",
+              "left": "rows",
+              "right": "ax-rows"
+            }
+          ],
+          "tree": {
+            "component": "jobs",
+            "query": {
+              "$param": "query"
+            },
+            "location": {
+              "$param": "location"
+            },
+            "results": {
+              "component": "job-results",
+              "required_container": true,
+              "repeat": {
+                "cardinality": "unknown_external 0..N",
+                "item": {
+                  "title": {
+                    "$unknown": {
+                      "type": "string"
+                    }
+                  },
+                  "company": {
+                    "$unknown": {
+                      "type": "string"
+                    }
+                  },
+                  "location_mode": {
+                    "$unknown": {
+                      "type": "array",
+                      "normalized_to": "visible string"
+                    }
+                  },
+                  "save": {
+                    "role": "button",
+                    "name": [
+                      "Save",
+                      "Saved"
+                    ]
+                  }
+                },
+                "zero_items": "child contracts not applicable; no child pass credit"
+              },
+              "dom_ax": "same underlying DOM node set, not positions"
+            }
+          }
+        }
+      },
+      "coverage": [
+        "query",
+        "location",
+        "search",
+        "results",
+        "rows",
+        "ax-root",
+        "ax-rows",
+        "row-dom-ax-bijection"
+      ]
+    },
+    "jobs.collection": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [],
+        "$properties": {},
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "results",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "divide-y divide-black/10"
+                }
+              }
+            },
+            {
+              "id": "rows",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {
+                  "class": {
+                    "$enum": [
+                      "w-full text-left p-3 hover:bg-black/5 ",
+                      "w-full text-left p-3 hover:bg-black/5 bg-[#e8f3ff]"
+                    ]
+                  }
+                }
+              },
+              "scope": "results",
+              "count": {
+                "min": 0
+              },
+              "each": {
+                "required": [
+                  {
+                    "id": "title",
+                    "select": {
+                      "source": "dom",
+                      "tag": "DIV",
+                      "attributes": {
+                        "class": "text-[14px] font-semibold text-[#0a66c2] truncate"
+                      }
+                    }
+                  },
+                  {
+                    "id": "title-text",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$type": "string"
+                      }
+                    },
+                    "scope": "title",
+                    "bind": {
+                      "slot": "title",
+                      "field": "text"
+                    }
+                  },
+                  {
+                    "id": "company",
+                    "select": {
+                      "source": "dom",
+                      "tag": "DIV",
+                      "attributes": {
+                        "class": "text-[13px] text-black/70 truncate"
+                      }
+                    }
+                  },
+                  {
+                    "id": "company-text",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$type": "string"
+                      }
+                    },
+                    "scope": "company",
+                    "bind": {
+                      "slot": "company",
+                      "field": "text"
+                    }
+                  },
+                  {
+                    "id": "location_mode",
+                    "select": {
+                      "source": "dom",
+                      "tag": "DIV",
+                      "attributes": {
+                        "class": "text-[12px] text-black/60 truncate"
+                      }
+                    }
+                  },
+                  {
+                    "id": "location_mode-text",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$type": "string"
+                      }
+                    },
+                    "scope": "location_mode",
+                    "bind": {
+                      "slot": "location_mode",
+                      "field": "text",
+                      "many": true
+                    },
+                    "count": {
+                      "min": 3,
+                      "max": 3
+                    }
+                  },
+                  {
+                    "id": "save",
+                    "select": {
+                      "source": "dom",
+                      "tag": "BUTTON",
+                      "attributes": {},
+                      "properties": {
+                        "disabled": false
+                      }
+                    },
+                    "has": [
+                      {
+                        "select": {
+                          "source": "dom",
+                          "tag": "#text",
+                          "text": {
+                            "$enum": [
+                              "Save",
+                              "Saved"
+                            ]
+                          }
+                        },
+                        "count": {
+                          "min": 1,
+                          "max": 1
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "save-label",
+                    "select": {
+                      "source": "dom",
+                      "tag": "#text",
+                      "text": {
+                        "$enum": [
+                          "Save",
+                          "Saved"
+                        ]
+                      }
+                    },
+                    "scope": "save",
+                    "bind": {
+                      "slot": "save_label",
+                      "field": "text"
+                    }
+                  }
+                ],
+                "forbidden": [],
+                "relations": [
+                  {
+                    "id": "title-owned",
+                    "kind": "ancestor",
+                    "left": "title-text",
+                    "right": "title",
+                    "quantifier": "each"
+                  },
+                  {
+                    "id": "company-owned",
+                    "kind": "ancestor",
+                    "left": "company-text",
+                    "right": "company",
+                    "quantifier": "each"
+                  },
+                  {
+                    "id": "location_mode-owned",
+                    "kind": "ancestor",
+                    "left": "location_mode-text",
+                    "right": "location_mode",
+                    "quantifier": "each"
+                  }
+                ],
+                "slots": {
+                  "title": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "company": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "location_mode": {
+                    "type": "array",
+                    "items": {
+                      "$type": "string"
+                    },
+                    "required": true
+                  },
+                  "save_label": {
+                    "type": "string",
+                    "required": true
+                  }
+                }
+              }
+            },
+            {
+              "id": "ax-root",
+              "select": {
+                "source": "ax",
+                "role": "RootWebArea"
+              },
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "id": "ax-rows",
+              "select": {
+                "source": "ax",
+                "role": "button"
+              },
+              "has": [
+                {
+                  "select": {
+                    "source": "ax",
+                    "role": "button",
+                    "name": {
+                      "$enum": [
+                        "Save",
+                        "Saved"
+                      ]
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ],
+              "count": {
+                "min": 0
+              },
+              "each": {
+                "required": [
+                  {
+                    "id": "ax-save",
+                    "select": {
+                      "source": "ax",
+                      "role": "button",
+                      "name": {
+                        "$enum": [
+                          "Save",
+                          "Saved"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "slots": {},
+                "relations": [],
+                "forbidden": []
+              },
+              "scope": "ax-root"
+            }
+          ],
+          "forbidden": [],
+          "relations": [
+            {
+              "id": "row-dom-ax-bijection",
+              "kind": "same_dom_set",
+              "left": "rows",
+              "right": "ax-rows"
+            }
+          ],
+          "tree": {
+            "component": "job-results",
+            "required_container": true,
+            "repeat": {
+              "cardinality": "unknown_external 0..N",
+              "item": {
+                "title": {
+                  "$unknown": {
+                    "type": "string"
+                  }
+                },
+                "company": {
+                  "$unknown": {
+                    "type": "string"
+                  }
+                },
+                "location_mode": {
+                  "$unknown": {
+                    "type": "array",
+                    "normalized_to": "visible string"
+                  }
+                },
+                "save": {
+                  "role": "button",
+                  "name": [
+                    "Save",
+                    "Saved"
+                  ]
+                }
+              },
+              "zero_items": "child contracts not applicable; no child pass credit"
+            },
+            "dom_ax": "same underlying DOM node set, not positions"
+          }
+        }
+      },
+      "coverage": [
+        "results",
+        "rows",
+        "ax-root",
+        "ax-rows",
+        "row-dom-ax-bijection"
+      ]
+    },
+    "jobs.detail": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "title",
+          "company",
+          "location",
+          "mode_text",
+          "save_label"
+        ],
+        "$properties": {
+          "title": {
+            "$type": "string"
+          },
+          "company": {
+            "$type": "string"
+          },
+          "location": {
+            "$type": "string"
+          },
+          "mode_text": {
+            "$type": "string"
+          },
+          "save_label": {
+            "$enum": [
+              "Save",
+              "Saved"
+            ]
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "detail",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "p-5"
+                }
+              }
+            },
+            {
+              "id": "title",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "text-[22px] font-semibold"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "title-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "title"
+                }
+              },
+              "scope": "title"
+            },
+            {
+              "id": "company",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "company"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "location-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "location"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "mode-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "mode_text"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "about",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": "About the job"
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "save",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": false
+                }
+              },
+              "scope": "detail",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "save_label"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "forbidden": [],
+          "relations": [
+            {
+              "id": "title-owned",
+              "kind": "parent",
+              "left": "title",
+              "right": "detail"
+            },
+            {
+              "id": "save-owned",
+              "kind": "ancestor",
+              "left": "save",
+              "right": "detail"
+            }
+          ],
+          "tree": {
+            "component": "job-detail",
+            "title": {
+              "$param": "title"
+            },
+            "company": {
+              "$param": "company"
+            },
+            "location": {
+              "$param": "location"
+            },
+            "work_mode": {
+              "$param": "mode_text"
+            },
+            "saved_button": {
+              "$param": "save_label"
+            }
+          }
+        }
+      },
+      "coverage": [
+        "detail",
+        "title",
+        "title-text",
+        "company",
+        "location-text",
+        "mode-text",
+        "save",
+        "about",
+        "title-owned",
+        "save-owned"
+      ]
+    },
+    "post.composer": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "body"
+        ],
+        "$properties": {
+          "body": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "open": {
+          "required": [
+            {
+              "id": "dialog",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "role": "dialog"
+                }
+              }
+            },
+            {
+              "id": "body",
+              "select": {
+                "source": "dom",
+                "tag": "TEXTAREA",
+                "attributes": {
+                  "placeholder": "What do you want to talk about?"
+                },
+                "properties": {
+                  "value": {
+                    "$param": "body"
+                  }
+                }
+              },
+              "scope": "dialog"
+            },
+            {
+              "id": "post",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": "Post"
+              },
+              "scope": "dialog"
+            },
+            {
+              "id": "cancel",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": "Cancel"
+              },
+              "scope": "dialog"
+            }
+          ],
+          "forbidden": [],
+          "relations": [
+            {
+              "id": "body-owned",
+              "kind": "ancestor",
+              "left": "body",
+              "right": "dialog"
+            }
+          ],
+          "tree": {
+            "role": "dialog",
+            "body": {
+              "$param": "body"
+            },
+            "actions": [
+              "Cancel",
+              "Post"
+            ]
+          }
+        }
+      },
+      "coverage": [
+        "dialog",
+        "body",
+        "post",
+        "cancel",
+        "body-owned"
+      ]
+    },
+    "post.body": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "body"
+        ],
+        "$properties": {
+          "body": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "present": {
+          "required": [
+            {
+              "id": "card",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "linkedin-card overflow-hidden"
+                }
+              },
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "body",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "mt-3 text-[14px] text-black/90 whitespace-pre-wrap leading-relaxed"
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "forbidden": [
+            {
+              "id": "no-composer",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "role": "dialog"
+                }
+              }
+            }
+          ],
+          "relations": [
+            {
+              "id": "body-in-card",
+              "kind": "ancestor",
+              "left": "body",
+              "right": "card"
+            }
+          ],
+          "tree": {
+            "component": "post-card",
+            "body": {
+              "$param": "body"
+            }
+          }
+        }
+      },
+      "coverage": [
+        "card",
+        "body",
+        "no-composer",
+        "body-in-card"
+      ]
+    },
+    "post.reaction": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "body",
+          "like_label",
+          "reactions_text"
+        ],
+        "$properties": {
+          "body": {
+            "$type": "string"
+          },
+          "like_label": {
+            "$enum": [
+              "Like",
+              "Liked"
+            ]
+          },
+          "reactions_text": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "card",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "linkedin-card overflow-hidden"
+                }
+              },
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "body",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "mt-3 text-[14px] text-black/90 whitespace-pre-wrap leading-relaxed"
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "like",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": false
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "like_label"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "reaction-count",
+              "select": {
+                "source": "dom",
+                "tag": "SPAN",
+                "attributes": {
+                  "class": "ml-1"
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "reactions_text"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "forbidden": [],
+          "relations": [
+            {
+              "id": "like-in-card",
+              "kind": "ancestor",
+              "left": "like",
+              "right": "card"
+            }
+          ],
+          "tree": {
+            "component": "post-card",
+            "body": {
+              "$param": "body"
+            },
+            "reaction": {
+              "button": {
+                "$param": "like_label"
+              },
+              "count": {
+                "$param": "reactions_text"
+              }
+            }
+          }
+        }
+      },
+      "coverage": [
+        "card",
+        "body",
+        "like",
+        "reaction-count",
+        "like-in-card"
+      ]
+    },
+    "post.comments": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "body",
+          "input"
+        ],
+        "$properties": {
+          "body": {
+            "$type": "string"
+          },
+          "input": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "card",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "linkedin-card overflow-hidden"
+                }
+              },
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "body",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "mt-3 text-[14px] text-black/90 whitespace-pre-wrap leading-relaxed"
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "comment-input",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "placeholder": "Add a comment…"
+                },
+                "properties": {
+                  "value": {
+                    "$param": "input"
+                  }
+                }
+              },
+              "scope": "card"
+            },
+            {
+              "id": "comment-submit",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": false
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": "Post"
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "forbidden": [],
+          "relations": [],
+          "tree": {
+            "component": "post-comments",
+            "body": {
+              "$param": "body"
+            },
+            "input": {
+              "$param": "input"
+            }
+          }
+        }
+      },
+      "coverage": [
+        "card",
+        "body",
+        "comment-input",
+        "comment-submit"
+      ]
+    },
+    "post.comment_created": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "body",
+          "comment"
+        ],
+        "$properties": {
+          "body": {
+            "$type": "string"
+          },
+          "comment": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "card",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "linkedin-card overflow-hidden"
+                }
+              },
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "body",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "mt-3 text-[14px] text-black/90 whitespace-pre-wrap leading-relaxed"
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "body"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "comment-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "comment"
+                }
+              },
+              "scope": "card"
+            },
+            {
+              "id": "cleared-input",
+              "select": {
+                "source": "dom",
+                "tag": "INPUT",
+                "attributes": {
+                  "placeholder": "Add a comment…"
+                },
+                "properties": {
+                  "value": ""
+                }
+              },
+              "scope": "card"
+            },
+            {
+              "id": "comment-submit",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": false
+                }
+              },
+              "scope": "card",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": "Post"
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "forbidden": [],
+          "relations": [],
+          "tree": {
+            "component": "post-comment",
+            "body": {
+              "$param": "body"
+            },
+            "comment": {
+              "$param": "comment"
+            },
+            "input": ""
+          }
+        }
+      },
+      "coverage": [
+        "card",
+        "body",
+        "comment-text",
+        "cleared-input",
+        "comment-submit"
+      ]
+    },
+    "jobs.applied": {
+      "schema": "component-contract/v3",
+      "parameters": {
+        "$type": "object",
+        "$required": [
+          "title",
+          "company",
+          "location",
+          "mode_text",
+          "save_label",
+          "applicants_text"
+        ],
+        "$properties": {
+          "title": {
+            "$type": "string"
+          },
+          "company": {
+            "$type": "string"
+          },
+          "location": {
+            "$type": "string"
+          },
+          "mode_text": {
+            "$type": "string"
+          },
+          "save_label": {
+            "$enum": [
+              "Save",
+              "Saved"
+            ]
+          },
+          "applicants_text": {
+            "$type": "string"
+          }
+        },
+        "$additional": false
+      },
+      "slots": {},
+      "branches": {
+        "ready": {
+          "required": [
+            {
+              "id": "detail",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "p-5"
+                }
+              }
+            },
+            {
+              "id": "title",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "text-[22px] font-semibold"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "title-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "title"
+                }
+              },
+              "scope": "title"
+            },
+            {
+              "id": "company",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "company"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "location-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "location"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "mode-text",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": {
+                  "$param": "mode_text"
+                }
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "about",
+              "select": {
+                "source": "dom",
+                "tag": "#text",
+                "text": "About the job"
+              },
+              "scope": "detail"
+            },
+            {
+              "id": "save",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": false
+                }
+              },
+              "scope": "detail",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "save_label"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "applied",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": true
+                }
+              },
+              "scope": "detail",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": "Applied"
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "applicants-meta",
+              "select": {
+                "source": "dom",
+                "tag": "DIV",
+                "attributes": {
+                  "class": "mt-1 text-[12px] text-black/60"
+                }
+              },
+              "scope": "detail",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": {
+                      "$param": "applicants_text"
+                    }
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                },
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": " applicants"
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "forbidden": [
+            {
+              "id": "no-active-apply",
+              "select": {
+                "source": "dom",
+                "tag": "BUTTON",
+                "attributes": {},
+                "properties": {
+                  "disabled": false
+                }
+              },
+              "scope": "detail",
+              "has": [
+                {
+                  "select": {
+                    "source": "dom",
+                    "tag": "#text",
+                    "text": "Apply"
+                  },
+                  "count": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "id": "title-owned",
+              "kind": "parent",
+              "left": "title",
+              "right": "detail"
+            },
+            {
+              "id": "save-owned",
+              "kind": "ancestor",
+              "left": "save",
+              "right": "detail"
+            }
+          ],
+          "tree": {
+            "component": "job-detail",
+            "title": {
+              "$param": "title"
+            },
+            "company": {
+              "$param": "company"
+            },
+            "location": {
+              "$param": "location"
+            },
+            "work_mode": {
+              "$param": "mode_text"
+            },
+            "saved_button": {
+              "$param": "save_label"
+            }
+          }
+        }
+      },
+      "coverage": [
+        "detail",
+        "title",
+        "title-text",
+        "company",
+        "location-text",
+        "mode-text",
+        "save",
+        "about",
+        "title-owned",
+        "save-owned",
+        "applied",
+        "applicants-meta",
+        "no-active-apply"
+      ]
+    }
+  },
+  "requires_features": [
+    "claim.has/v1",
+    "claim.each-zero/v3",
+    "same_dom_set/v3"
+  ]
+}

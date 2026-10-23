@@ -1,0 +1,27 @@
+{
+  "id": "learning-public-tree-v2",
+  "parent": "evaluation-helper-settle-v5",
+  "parent_file_hashes": {
+    "BROWSER_INTERFACE.md": "5d2ff51a56145580567a0cfb30f13ea94d10ae0243e80a74d56f5cd08dab251f",
+    "RUNTIME.json": "f7355106d71ef40d673de6873f64bab9d5a4681e3d32789b41fcbaf2c15ccb05",
+    "browser_broker.py": "c3a62fd5dfe201a1e9aebfe1d45a528eb334256c93a54aacddbf1bc346fd3c74",
+    "browser_runtime.py": "3708a56c18066165e1958ab74897b072bdcea1139fee7e3c783b88da3f358729",
+    "observation.py": "b30c9419d22403089afc52d932040b448e32ed0682fca395acf3b52c710f0997",
+    "permissions.py": "bf5ac85929e796e91a47d4932ee245a12e64ec933c49b723e96b72aa435ca8c3",
+    "process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "script_policy.py": "46dd33fb99a57cc25f06455b5870fab2c94a72b264e14ac7b4791a3877e8f386",
+    "settle.py": "a8474632a34f71e5b9334ce65ae210caabf2d8c2a7d3289bdc943c81c830c5c4",
+    "trees.py": "3fa86f319980dda0ea193faaa24784acb1d38313ac45d15e3adbe0fcd513b8ab",
+    "unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a",
+    "unix_gateway.py": "49a022be0025b4a91dca74f18f77847f0a58b8e039511c15fbb2fcf5102c2432",
+    "worker_sandbox.py": "805fd803fe0efb0939c12de5ef88b338bce8c975fe0195bfa45eb13d0f3a50c6"
+  },
+  "changes": [
+    "Add public canonical DOM+AX from the same existing capture",
+    "Add explicit AX executable URL security redaction to both public exports",
+    "Inherit v5 transport disconnect gate, v4 atomic barrier and caret-preserving screenshot; no change to those mechanisms"
+  ],
+  "default_settle_enabled": false,
+  "evaluation_scope_gap": "Existing v2 comparison retains executable AX URL bodies; public observations replace them. No existing results or policies changed.",
+  "validation": "External READY record is authoritative; this frozen preparation snapshot is not rewritten after validation."
+}

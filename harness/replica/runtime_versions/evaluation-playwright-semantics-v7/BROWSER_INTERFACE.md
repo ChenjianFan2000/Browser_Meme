@@ -1,0 +1,108 @@
+# Browser-only generic runtime
+
+This separately registered v6 evaluation runtime additionally captures Playwright
+1.62.0 DOM-derived default-mode ARIA snapshots for every supported same-origin
+frame's complete body. They are auxiliary private checkpoint files; existing raw
+DOM/Chromium AX and the v2 public DOM projection are unchanged. This is not native
+AX or complete assistive-technology equivalence. Default rendering omits focus,
+full relationships and some role states; full DOM/live properties, action identity
+and independent business checks remain mandatory. Names longer than 900 UTF-16
+units, unsafe URL scalar parsing, inaccessible/missing-body frames and unsupported
+captures are unconfirmed. Collection is sequential, not atomic. New v3 stability
+must explicitly select `single-lane-dom-ax-playwright/v2`; its combined signature
+includes the full DOM/AX and auxiliary semantics through final verification.
+The trusted collector calls the saved native `Locator.aria_snapshot` method;
+public read-wrapper redaction cannot alter only the final stability signature.
+Private auxiliary persistence redacts raw and JSON/YAML-escaped secret values.
+The scoring/safe-feedback canonicalizer applies one declared security projection:
+only an explicit `/url` scalar whose lstrip/case-insensitive scheme is javascript:
+becomes `javascript:[REDACTED_EXECUTABLE_URL]`. Names and business text remain
+exact. The private auxiliary retains the original executable URL value.
+The Python API has no `refs` parameter: default mode selects refs:none internally.
+
+The sole browser MCP tool is `browser.execute_script`. Write a workspace-relative
+Python file exporting `def run(h)` and pass `script_path`; optional `modules`
+are workspace-relative pure Python helper module files. Use native Playwright
+locators on `h.page`. No target-specific actions or fixed selectors are supplied.
+
+Each call creates a NEW browser, context and Page at `about:blank`. Only cookies
+and localStorage persist through private storage_state; open pages and
+sessionStorage do not. Every call must explicitly predict and navigate to
+`h.origin` or a known same-origin path before using locators. No navigation is
+performed implicitly. Ordinary missing/multiple/hidden/disabled target failures
+return `failure_category: localization` without closing the broker; revise the
+script and make another call. Permission and observation-policy denials remain
+persistently closed.
+
+- `h.origin`: the sole allowed HTTP origin. Use `h.page.goto(h.origin)` to start.
+- `h.fixture`: public experimental inputs. Treat unspecified facts as unknown.
+- `h.expect(prediction, rationale='')`: required immediately before every UI
+  action, including navigation, fill, click, keyboard, scroll, and hover.
+  `prediction` is a dict with `disposition` equal to `accepted`, `rejected`, or
+  `unknown`; record predicted UI/state effects and uncertainty as extra fields.
+- `h.confirm(locator)`: require one visible, enabled target, scroll it into view,
+  and record tag/role/name/id/text identity. Does not consume a separate action.
+- `h.observe(label='observation')`: save projected DOM, CDP accessibility tree,
+  masked screenshot, visible text, and permitted network responses. DOM removes
+  script elements and executable attributes; secret controls/tokens are redacted.
+  These public observations are projections, not a claim of complete raw DOM.
+- `h.network()`: return newly observed sanitized same-origin response records;
+  Only JSON response bodies are exported; HTML is metadata-only. JS, maps,
+  assets, arbitrary HTTP clients and source inspection are excluded.
+- `h.read_point(reason)`: save an observation and raise a controlled pause;
+  the authoritative result status is `needs_reading`, and the script stops.
+  A later broker call may resume after interpretation. Routine
+  multi-page flows can continue without a model round trip at every action.
+- `h.classify(disposition, explanation='')`: record `matches_prediction`,
+  `contradiction`, or `unconfirmed`; this is a learner claim, not independent truth.
+- `h.note(text)`: preserve a reasoning/evidence note.
+
+Every native action is wrapped with prediction, target confirmation, scroll,
+fixed waits, before/after screenshots and observations. The standard timeout is
+30 seconds, fixed post-action wait is 250 ms; all waits count toward elapsed time.
+Evidence is copied to `workspace/evidence/call-.../`; inspect it with your allowed
+workspace tools. A policy denial latches the runtime and broker closed; further
+execution is refused, including after a broker restart. Budgets are authoritative
+in the MCP `status` result. Do not interpret an `unconfirmed` result as success.
+
+Scripts may import json/re/math/statistics/collections and registered helper
+modules. They cannot open files, import OS/network modules, use eval/exec,
+reflection, arbitrary browser JavaScript, raw requests, client script bodies,
+internal runtime objects, or navigate to another origin. The AST policy is an
+interface restriction; the independent OS namespace separately enforces mounts,
+process visibility, and network isolation. Learn and write your own models only
+from the permitted public evidence. Full tree comparison and privileged resets
+belong to the coordinator and are not available through browser tools.
+
+Registered helper modules support both `import ui; ui.login(h)` (including an
+import alias) and `from ui import login; login(h)`. Attribute form is restricted
+to that immutable imported receiver and its public top-level function exports.
+Private/nested reflection and unsafe attributes remain excluded. Unsupported
+interfaces and syntax errors are pre-execution, zero-dispatch, recoverable errors;
+permission denials still latch the broker closed.
+
+Paired evaluation may opt into a separately registered stability policy. It waits
+for bounded native load/network conditions, a fresh quiet interval and consecutive
+full canonical DOM/AX equality in each lane, then verifies the persisted checkpoint.
+It never compares against the other lane to choose another capture, and never
+retries a website action. Failure is `unconfirmed`, stops the script suffix, and
+does not act as a permission denial. The independent runner watchdog also bounds
+a blocked renderer. Default learning does not enable this policy.
+
+Observation screenshots preserve the page caret state (`caret="initial"`) so capture
+does not leave empty style attributes on text controls. Secret controls remain
+masked. DOM/AX signatures retain all style attributes; no field is ignored.
+
+Coordinator checkpoints are published by atomic rename after their JSON file is
+complete, preventing concurrent readers from seeing partial checkpoint records.
+
+Browser disconnection, page crash or page closure is a distinct terminal runtime
+failure. Catching a native exception cannot reopen expect, confirm or actions.
+The broker persists this termination independently of a policy denial; ordinary
+locator and native timing errors retain their existing recovery behavior.
+
+Version evaluation-playwright-semantics-v7 raises only the allowed explicit total
+acquisition bound from 30000 to 60000 ms. Existing defaults remain unchanged
+(disabled; total 8000 ms, sample window 3000 ms). The previous registered 30000/22000 ms
+evaluation profile remains valid. A separately registered profile may choose
+60000/40000 ms; load/network/quiet, sample count/interval and scoring are unchanged.

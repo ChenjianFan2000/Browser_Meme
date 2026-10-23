@@ -1,5 +1,0 @@
-{
-  "policy_accepted": true,
-  "source": "def run(h):\n return '{0.context._options}'.format(h)\n",
-  "actual_return": "{'storageState': {'cookies': [{'value': 'COOKIE_CANARY_006'}]}}"
-}

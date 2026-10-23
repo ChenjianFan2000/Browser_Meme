@@ -30,6 +30,14 @@ __pycache__/
 .ruff_cache/
 environment/requirements/*.pending
 
+# Local experiment workspaces contain credentials, private fixtures and raw traces.
+/work/
+/harness/replica/sites/
+/harness/experiments/replica-pilot-20261022-01/
+/harness/experiments/component-contract-pilot-20261023-01/*
+!/harness/experiments/component-contract-pilot-20261023-01/README.md
+!/harness/experiments/component-contract-pilot-20261023-01/published/
+
 # Upstream credential-bearing originals remain local; see UPLOAD_NOTES.md.
 /veri_env/artifacts/source_downloads/Code2World-f01a98ffe843-source.zip
 /veri_env/artifacts/source_downloads/SelfEvolvingAgent-a82450e1b5e1-source.zip

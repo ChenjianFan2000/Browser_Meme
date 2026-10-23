@@ -1,0 +1,614 @@
+{
+  "schema": "component-contract-curated-release-manifest/v1",
+  "experiment_id": "component-contract-pilot-20261023-01",
+  "purpose": "portable historical engineering handoff; not a turnkey website replay or new independent E/T/C dataset",
+  "original_model_manifest_sha256": "ecf648eff1e8d2667938ec53504180e6226b060359fca96f31740421b09dcc35",
+  "original_model_manifest_path": "model-v006/MANIFEST.json",
+  "published_file_count_including_this_manifest": 28,
+  "manifest_self_hash_omitted_to_avoid_circularity": true,
+  "files": [
+    {
+      "path": "PURE-MODEL-CHECKS.json",
+      "sha256": "cb7651cc2f920b653524a698838c786b7d87cb17612ee52d95e334c2d083455e",
+      "bytes": 1137,
+      "role": "derived_portable_summary_or_documentation"
+    },
+    {
+      "path": "README.md",
+      "sha256": "53e557791060ef9026054b02b5b80970d2833b1b9d7d40059201198f2a35fc92",
+      "bytes": 11394,
+      "role": "derived_portable_summary_or_documentation"
+    },
+    {
+      "path": "RESULTS.json",
+      "sha256": "ed806fb47f199691248fa1c055fcc9f36f9fc351976d4c54ba3fd6e8d8900d14",
+      "bytes": 24673,
+      "role": "derived_portable_summary_or_documentation"
+    },
+    {
+      "path": "VALIDATION.json",
+      "sha256": "bcbf1db0b60497ce1dbd2f40cd6b46f93f9be42ce897f1e8ad15c2561266d2f6",
+      "bytes": 1791,
+      "role": "derived_portable_summary_or_documentation"
+    },
+    {
+      "path": "consumer-targeted007/checkpoint-predictions.json",
+      "sha256": "689db3449e3965a0b1eefbeaed63cf3ae6e5e1f9f1fb303f1b1f6654c90ba988",
+      "bytes": 6441,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-targeted-007",
+      "source_relative_file": "checkpoint-predictions.json",
+      "source_sha256": "689db3449e3965a0b1eefbeaed63cf3ae6e5e1f9f1fb303f1b1f6654c90ba988"
+    },
+    {
+      "path": "consumer-targeted007/consumer_03.py",
+      "sha256": "a6ea25efd0bb6f1f0aa3e657e0de43d033f25e1b8c34eb27501970fa137490de",
+      "bytes": 2798,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-targeted-007",
+      "source_relative_file": "consumer_03.py",
+      "source_sha256": "a6ea25efd0bb6f1f0aa3e657e0de43d033f25e1b8c34eb27501970fa137490de"
+    },
+    {
+      "path": "consumer-targeted007/helpers/driver_v5.py",
+      "sha256": "d774c58719ea14088f6fe4d4512eda338e3f35a2619545cf7127c217af3da04d",
+      "bytes": 7879,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-targeted-007",
+      "source_relative_file": "helpers/driver_v5.py",
+      "source_sha256": "d774c58719ea14088f6fe4d4512eda338e3f35a2619545cf7127c217af3da04d"
+    },
+    {
+      "path": "consumer-v006/checkpoint-predictions.json",
+      "sha256": "689db3449e3965a0b1eefbeaed63cf3ae6e5e1f9f1fb303f1b1f6654c90ba988",
+      "bytes": 6441,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-adaptation-006",
+      "source_relative_file": "checkpoint-predictions.json",
+      "source_sha256": "689db3449e3965a0b1eefbeaed63cf3ae6e5e1f9f1fb303f1b1f6654c90ba988"
+    },
+    {
+      "path": "consumer-v006/consumer_01.py",
+      "sha256": "2809a27a18639237348e2aeaac1fcbfbb2587d0a4239ad163140f5101b039f07",
+      "bytes": 816,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-adaptation-006",
+      "source_relative_file": "consumer_01.py",
+      "source_sha256": "2809a27a18639237348e2aeaac1fcbfbb2587d0a4239ad163140f5101b039f07"
+    },
+    {
+      "path": "consumer-v006/consumer_02.py",
+      "sha256": "1bc4fd1332bc6a7b8ae22aa5e25ba4f4763018ac3b1dc66aba9ac116e5c29684",
+      "bytes": 972,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-adaptation-006",
+      "source_relative_file": "consumer_02.py",
+      "source_sha256": "1bc4fd1332bc6a7b8ae22aa5e25ba4f4763018ac3b1dc66aba9ac116e5c29684"
+    },
+    {
+      "path": "consumer-v006/consumer_03.py",
+      "sha256": "a6ea25efd0bb6f1f0aa3e657e0de43d033f25e1b8c34eb27501970fa137490de",
+      "bytes": 2798,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-adaptation-006",
+      "source_relative_file": "consumer_03.py",
+      "source_sha256": "a6ea25efd0bb6f1f0aa3e657e0de43d033f25e1b8c34eb27501970fa137490de"
+    },
+    {
+      "path": "consumer-v006/helpers/driver_v5.py",
+      "sha256": "ab9ebc43f49cf4091ef26fd4bb67f1f8960cc0c7179656f0198395e81aca7540",
+      "bytes": 7288,
+      "role": "byte_identical_selected_original",
+      "source_group": "consumer-adaptation-006",
+      "source_relative_file": "helpers/driver_v5.py",
+      "source_sha256": "ab9ebc43f49cf4091ef26fd4bb67f1f8960cc0c7179656f0198395e81aca7540"
+    },
+    {
+      "path": "model-v006/CONSUMER.md",
+      "sha256": "8f21bddfaa996e9e56768510b97eb8a1fc45b0269e8406d56e87cd2abf06d074",
+      "bytes": 9541,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "CONSUMER.md",
+      "source_sha256": "8f21bddfaa996e9e56768510b97eb8a1fc45b0269e8406d56e87cd2abf06d074"
+    },
+    {
+      "path": "model-v006/MANIFEST.json",
+      "sha256": "ecf648eff1e8d2667938ec53504180e6226b060359fca96f31740421b09dcc35",
+      "bytes": 3920,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "MANIFEST.json",
+      "source_sha256": "ecf648eff1e8d2667938ec53504180e6226b060359fca96f31740421b09dcc35"
+    },
+    {
+      "path": "model-v006/component-contracts.json",
+      "sha256": "061e32b229b00d3422f5289de9e8056e900d9c15d117699e13d5aac67ef4771e",
+      "bytes": 53184,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "component-contracts.json",
+      "source_sha256": "061e32b229b00d3422f5289de9e8056e900d9c15d117699e13d5aac67ef4771e"
+    },
+    {
+      "path": "model-v006/component-model/model.py",
+      "sha256": "ef3fb25566c3b034d5abf2ee21f496fdb50ab1e464c5f18387ce74192f02f212",
+      "bytes": 302,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "component-model/model.py",
+      "source_sha256": "ef3fb25566c3b034d5abf2ee21f496fdb50ab1e464c5f18387ce74192f02f212"
+    },
+    {
+      "path": "model-v006/component-rulebook.md",
+      "sha256": "37a213ae8227cb7de8132367447bbb08d0b257498544de44acfd9c24a31cbf0c",
+      "bytes": 2096,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "component-rulebook.md",
+      "source_sha256": "37a213ae8227cb7de8132367447bbb08d0b257498544de44acfd9c24a31cbf0c"
+    },
+    {
+      "path": "model-v006/components_v4.py",
+      "sha256": "1b7eab24f99db62439f4b959238daf7f8f32386b5d1f9a7f08ee21515cbfde59",
+      "bytes": 27743,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "components_v4.py",
+      "source_sha256": "1b7eab24f99db62439f4b959238daf7f8f32386b5d1f9a7f08ee21515cbfde59"
+    },
+    {
+      "path": "model-v006/knowledge-state.json",
+      "sha256": "515d937714a6e212629bde090a22d5368c83774e34f542556f4bd5ba9dfda763",
+      "bytes": 2587,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "knowledge-state.json",
+      "source_sha256": "515d937714a6e212629bde090a22d5368c83774e34f542556f4bd5ba9dfda763"
+    },
+    {
+      "path": "model-v006/prediction-templates.json",
+      "sha256": "c648cdfde643c1069f3371cf13607e7578c925acaa3bfb2e0ff6e6b8822bd9db",
+      "bytes": 931,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "prediction-templates.json",
+      "source_sha256": "c648cdfde643c1069f3371cf13607e7578c925acaa3bfb2e0ff6e6b8822bd9db"
+    },
+    {
+      "path": "model-v006/representation.md",
+      "sha256": "5ca6062608206f54139b7a9b9d2edb3103a6378855acb2c207b1da10f40d6ccc",
+      "bytes": 1100,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "representation.md",
+      "source_sha256": "5ca6062608206f54139b7a9b9d2edb3103a6378855acb2c207b1da10f40d6ccc"
+    },
+    {
+      "path": "model-v006/transitions.json",
+      "sha256": "7fecd1f2fbf31056ffc9e6cb9a114981f5b26f69f93ff1d16b4c6d1d3b4f3b39",
+      "bytes": 2158,
+      "role": "byte_identical_selected_original",
+      "source_group": "model006_public_package",
+      "source_relative_file": "transitions.json",
+      "source_sha256": "7fecd1f2fbf31056ffc9e6cb9a114981f5b26f69f93ff1d16b4c6d1d3b4f3b39"
+    },
+    {
+      "path": "notes/METHOD-AUDIT-001.md",
+      "sha256": "838aea94b73daeb274abf8b70df99856cfb96ab856f4c4bda6d2fb686c55e367",
+      "bytes": 10555,
+      "role": "historical_public_note_with_portable_references"
+    },
+    {
+      "path": "notes/METHOD-AUDIT-003.md",
+      "sha256": "1f679a37ee3b173543549ee2b206d09ef502e5a7292d8e2448b92f7c64ac97a1",
+      "bytes": 9073,
+      "role": "historical_public_note_with_portable_references"
+    },
+    {
+      "path": "notes/METHOD-AUDIT-FINAL.md",
+      "sha256": "57f9a1ffa81b03b22552d5e23835d9112f220e94b3cff04969a71b252aba8fa5",
+      "bytes": 17696,
+      "role": "historical_public_note_with_portable_references"
+    },
+    {
+      "path": "notes/REPRESENTATION-GUIDE.md",
+      "sha256": "8b7f0beaf41f50e36b812bc29399f2e2d084f47a0d138a61d490a51cff356ff6",
+      "bytes": 49299,
+      "role": "historical_public_note_with_portable_references"
+    },
+    {
+      "path": "notes/TECHNICAL-REPORT.md",
+      "sha256": "64fde5e6b0db78d10982c0702ffe301e7541d82045815bafca4244e08464d4cf",
+      "bytes": 19495,
+      "role": "historical_public_note_with_portable_references"
+    }
+  ],
+  "selected_summary_provenance": [
+    {
+      "source_group": "round_closeout",
+      "source_file": "FINAL-ROUND-SUMMARY.json",
+      "sha256": "2cbae2a05fb94fd25d665a85240cb82cb212242bed85c351eeee786b1aa6bb2f"
+    },
+    {
+      "source_group": "round_closeout",
+      "source_file": "SAFE-PHYSICAL-ACCOUNTING.json",
+      "sha256": "efe03f78a15ffae9ccc7408c8f76243f9e78a4caaff883856465843a11ffafc1"
+    },
+    {
+      "source_group": "round_closeout",
+      "source_file": "SAFE-SERVICE-CLOSEOUT.json",
+      "sha256": "0e50acc14ce69406746ffb2237436b87b217a6f8da3420ac5122799173b2cfa2"
+    },
+    {
+      "source_group": "adaptation003_completed_example",
+      "source_file": "SAFE-FLOW-EXAMPLE.json",
+      "sha256": "0a79d5895001353dfed9ce30d153e334e56d9603f00f711aa900d79ed5f00a54"
+    },
+    {
+      "source_group": "adaptation006_fixed3",
+      "source_file": "FIXED3-SUMMARY.json",
+      "sha256": "0fdfed0f73388c868c1ad2b8dffb173e3571a6af99335e15969232ed306ff2f4"
+    },
+    {
+      "source_group": "adaptation006_consumer_01",
+      "source_file": "SAFE-OUTCOME.json",
+      "sha256": "64bceefb6cb9f29bda5f6a8325e047c5dd0d8d421046a2893fd8ae73ffebc4f6"
+    },
+    {
+      "source_group": "adaptation006_consumer_02",
+      "source_file": "SAFE-OUTCOME.json",
+      "sha256": "07406cf2a1ad7cd712ce4f7d70366212452f5e95ec874f8b7feaf919bc8793d1"
+    },
+    {
+      "source_group": "adaptation006_consumer_03",
+      "source_file": "SAFE-OUTCOME.json",
+      "sha256": "50d6a4005f21a39bfc2ef97f1976628aac2e86db318b0ac180397da9a2e11bc5"
+    },
+    {
+      "source_group": "author_model006_pure_checks",
+      "source_file": "closure-regression.json",
+      "sha256": "2df54161b72ca99c1e2c49dd660358788980bb06aa31b32764cdfb263482baf9"
+    },
+    {
+      "source_group": "author_model006_pure_checks",
+      "source_file": "additional-regression.json",
+      "sha256": "9b60e29451db721fa9dc29ccf99a883b12bd354324f486a1c479e7300d90039f"
+    }
+  ],
+  "portable_note_provenance": [
+    {
+      "source_group": "component_contract_public_research_notes",
+      "source_file": "TECHNICAL-REPORT.md",
+      "source_sha256": "a4fea00384f0f3b77df929005aff1429dc643d5381177e817e190125fd61e247",
+      "published_path": "notes/TECHNICAL-REPORT.md",
+      "edit_scope": "prepend provenance notice and rewrite handoff references only; historical content unchanged",
+      "references_rewritten": [
+        {
+          "source_reference": "PROTOCOL.md",
+          "published_reference": null
+        },
+        {
+          "source_reference": "MANIFEST.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "SAFE-FLOW-EXAMPLE.json",
+          "published_reference": "../RESULTS.json"
+        },
+        {
+          "source_reference": "TARGETED-CONSUMER-007.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "consumer-targeted-007 / RECOVERY-CLOSURE.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "FIXED3-FIRSTGEN-SUMMARY.json",
+          "published_reference": "../RESULTS.json"
+        },
+        {
+          "source_reference": "FIXED3-SUMMARY.json",
+          "published_reference": "../RESULTS.json"
+        },
+        {
+          "source_reference": "FIXED3-SUMMARY.json",
+          "published_reference": "../RESULTS.json"
+        },
+        {
+          "source_reference": "FIXED2-SUMMARY.json",
+          "published_reference": "../RESULTS.json"
+        },
+        {
+          "source_reference": "HARNESS-V3-MANIFEST-001.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "TARGETED-ADAPTATION-005.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "TARGETED-ADAPTATION-006.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-006 / component-rulebook.md",
+          "published_reference": "../model-v006/component-rulebook.md"
+        },
+        {
+          "source_reference": "model-candidate-006 / representation.md",
+          "published_reference": "../model-v006/representation.md"
+        },
+        {
+          "source_reference": "model-candidate-006 / CONSUMER.md",
+          "published_reference": "../model-v006/CONSUMER.md"
+        },
+        {
+          "source_reference": "model-candidate-006 / components_v4.py",
+          "published_reference": "../model-v006/components_v4.py"
+        },
+        {
+          "source_reference": "README.md",
+          "published_reference": "../../../../replica/contracts_v3/README.md"
+        },
+        {
+          "source_reference": "PROGRESS.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "RESULT-INDEX.json",
+          "published_reference": "../RESULTS.json"
+        }
+      ]
+    },
+    {
+      "source_group": "component_contract_public_research_notes",
+      "source_file": "REPRESENTATION-GUIDE.md",
+      "source_sha256": "ffc6e1bee7a94c252fdc9fb8ca13544a112063570f569c9643a52a2e3b74c986",
+      "published_path": "notes/REPRESENTATION-GUIDE.md",
+      "edit_scope": "prepend provenance notice and rewrite handoff references only; historical content unchanged",
+      "references_rewritten": [
+        {
+          "source_reference": "model-candidate-001 / component-rulebook.md",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-001 / model.py",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-001 / component-contracts.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-001 / transitions.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-001 / knowledge-state.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-001 / components_v1.py",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-001 / prediction-templates.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "README.md",
+          "published_reference": "../../../../replica/contracts_v1/README.md"
+        },
+        {
+          "source_reference": "construction-011 / policy-check.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / coverage.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / public-matching.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / counterexample-controls.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "HARNESS-READY-002.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "PROTOCOL.md",
+          "published_reference": null
+        },
+        {
+          "source_reference": "MANIFEST.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-003 / MANIFEST.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "README.schema.md",
+          "published_reference": "../../../../replica/contracts_v2/README.schema.md"
+        },
+        {
+          "source_reference": "HARNESS-V2-MANIFEST-001.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / v003-change-summary.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / v003-minimal.diff",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-003 / model.py",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-003 / components_v2.py",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / v003-guard-regression.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / v003-public-matching.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-011 / v003-structural-controls.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-004 / registration.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-004 / MANIFEST.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "README.schema.md",
+          "published_reference": "../../../../replica/contracts_v3/README.schema.md"
+        },
+        {
+          "source_reference": "HARNESS-V3-MANIFEST-001.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-004 / components_v4.py",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-004 / component-contracts.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "validator.py",
+          "published_reference": "../../../../replica/contracts_v3/validator.py"
+        },
+        {
+          "source_reference": "construction-012 / v004-summary.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-012 / v004-identity-evidence.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-012 / v004-public-matching.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-012 / v004-state-controls.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "construction-012 / v004-structural-controls.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-005 / MANIFEST.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-005 / components_v4.py",
+          "published_reference": null
+        },
+        {
+          "source_reference": "author-adaptation-005 / summary.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "author-adaptation-005 / registry-regression.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "author-adaptation-005 / policy-check.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "model-candidate-006 / MANIFEST.json",
+          "published_reference": "../model-v006/MANIFEST.json"
+        },
+        {
+          "source_reference": "model-candidate-006 / components_v4.py",
+          "published_reference": "../model-v006/components_v4.py"
+        },
+        {
+          "source_reference": "author-adaptation-006 / summary.json",
+          "published_reference": "../PURE-MODEL-CHECKS.json"
+        },
+        {
+          "source_reference": "author-adaptation-006 / additional-regression.json",
+          "published_reference": "../PURE-MODEL-CHECKS.json"
+        }
+      ]
+    },
+    {
+      "source_group": "component_contract_public_research_notes",
+      "source_file": "METHOD-AUDIT-001.md",
+      "source_sha256": "0d6ef98b42ac5fc25571ad4e1e6b94e89bfcc04cb300f31fb84207b004db4997",
+      "published_path": "notes/METHOD-AUDIT-001.md",
+      "edit_scope": "prepend provenance notice and rewrite handoff references only; historical content unchanged",
+      "references_rewritten": []
+    },
+    {
+      "source_group": "component_contract_public_research_notes",
+      "source_file": "METHOD-AUDIT-003.md",
+      "source_sha256": "e8c8edce50f2497c3bc1594a84fb072d2ac2fb0926cac187d6492232fc0cc46e",
+      "published_path": "notes/METHOD-AUDIT-003.md",
+      "edit_scope": "prepend provenance notice and rewrite handoff references only; historical content unchanged",
+      "references_rewritten": [
+        {
+          "source_reference": "REPRESENTATION-EXPLORATION-004.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "HARNESS-V3-MANIFEST-001.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "offline-v3-controls-001.txt",
+          "published_reference": null
+        },
+        {
+          "source_reference": "generic-v3-live-controls-001",
+          "published_reference": null
+        }
+      ]
+    },
+    {
+      "source_group": "component_contract_public_research_notes",
+      "source_file": "METHOD-AUDIT-FINAL.md",
+      "source_sha256": "a67f3a2d1b17b396f8e9c4c0341a1959f5f297ff4c3bf2b14a6651ac4bd9dd11",
+      "published_path": "notes/METHOD-AUDIT-FINAL.md",
+      "edit_scope": "prepend provenance notice and rewrite handoff references only; historical content unchanged",
+      "references_rewritten": [
+        {
+          "source_reference": "SAFE-ATTRIBUTION-model-consumption.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "SAFE-ATTRIBUTION-v2.json",
+          "published_reference": null
+        },
+        {
+          "source_reference": "CONTROLLED-REPRODUCTION-INDEX.json",
+          "published_reference": null
+        }
+      ]
+    }
+  ],
+  "provenance_policy": "Source labels and file hashes identify selected authorized safe summaries and public notes. Raw private source paths, machine/process identities, fixtures, and raw evidence are intentionally omitted. Original copied code/model files retain their frozen historical text."
+}

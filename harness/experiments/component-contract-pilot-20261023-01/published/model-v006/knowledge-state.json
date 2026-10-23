@@ -1,0 +1,80 @@
+{
+  "schema": "component-knowledge-state/v1",
+  "revision": "v004",
+  "scope": "auth/feed composition/jobs search-selection-save",
+  "known": {
+    "authentication": "public fixture credentials; rejection and corrected retry inherited",
+    "search_fields": [
+      "query",
+      "location"
+    ],
+    "job_public_identity": [
+      "title",
+      "company",
+      "location_mode"
+    ],
+    "save": "boolean relationship per selected public object",
+    "post_body": "exact input parameter",
+    "application": "one direct Apply creates application, increments public applicants; Applied disabled",
+    "post_reaction": "known liked boolean toggles and count +/-1",
+    "comment": "nonempty submission adds comment and clears form"
+  },
+  "unknown_external": {
+    "job_results": {
+      "type": "array",
+      "items": {
+        "title": "string",
+        "company": "string",
+        "location_mode": "string"
+      },
+      "constraints": [
+        "read public rows",
+        "no fixed total",
+        "identity must be unique before write"
+      ],
+      "cardinality": "0..N, predicted before action as unknown"
+    },
+    "job_total": {
+      "type": "integer",
+      "minimum": 0,
+      "predict_exact": false
+    },
+    "backend_ids": {
+      "type": "string",
+      "predict_exact": false
+    },
+    "timestamps": {
+      "type": "string",
+      "predict_exact": false
+    },
+    "application_metadata": {
+      "applied": "boolean or None until public detail read",
+      "applicants": "nonnegative integer or None"
+    }
+  },
+  "unknown_semantics": [
+    "unseen field validation branches",
+    "filter submission semantics",
+    "account menu",
+    "external apply",
+    "pagination beyond visible batch",
+    "empty comment behavior",
+    "same-body entity business action contract"
+  ],
+  "observation_policy": {
+    "continue": "known semantics plus authorized deterministic selection and unique public identity",
+    "readpoint": "selection preference missing, ambiguous identity or unmodeled semantics",
+    "stop": "contract failure/unknown, observation denial or exhausted budget"
+  },
+  "entity_representation": {
+    "handle": "local causal symbol, never DOM position/server ID/body text",
+    "observation": "set of compatible public signatures",
+    "ambiguity": "retained explicitly",
+    "external_updates": "provenance required; no prior prediction credit"
+  },
+  "normalization": {
+    "contract": "location_mode array [location, separator, mode]",
+    "native": "location_mode visible string",
+    "canonical": "same combined string plus saved bool"
+  }
+}

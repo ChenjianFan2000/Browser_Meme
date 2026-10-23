@@ -1,0 +1,168 @@
+{
+  "schema": "component-consumer-checkpoint-predictions/v5",
+  "phase": "adaptation005",
+  "same_consumer_context": true,
+  "tasks": {
+    "consumer_01": {
+      "state0": {
+        "disposition": "accepted",
+        "contract_ref": "auth.login",
+        "branch": "ready",
+        "parameters": {},
+        "unknown_slots": []
+      },
+      "final": {
+        "disposition": "accepted",
+        "contract_ref": "post.body",
+        "branch": "present",
+        "parameters": {
+          "body": "Contract consumer new data 538c28fc: persistence."
+        },
+        "unknown_slots": []
+      },
+      "planned_status": "complete_if_gates_pass",
+      "requested_endpoint_supported": true,
+      "maximum_planned_actions": 11,
+      "execution_policy": {
+        "max_actions": 20,
+        "wall_seconds": 300
+      },
+      "final_runtime_program": {
+        "module": "components_v4",
+        "function": "plan",
+        "action": "reload",
+        "component_argument": {
+          "disposition": "accepted",
+          "contract_ref": "post.body",
+          "branch": "present",
+          "parameters": {
+            "body": "Contract consumer new data 538c28fc: persistence."
+          },
+          "unknown_slots": []
+        }
+      },
+      "checks": [
+        "Public authentication rejection and absence of feed composer; no password readback",
+        "Corrected submit yields public feed",
+        "One exact post remains after Jobs/feed/reload",
+        "Typed post binding and causal entity verify reconciliation agree with predicted state"
+      ]
+    },
+    "consumer_02": {
+      "state0": {
+        "disposition": "accepted",
+        "contract_ref": "auth.login",
+        "branch": "ready",
+        "parameters": {},
+        "unknown_slots": []
+      },
+      "final": {
+        "disposition": "accepted",
+        "contract_ref": "post.reaction",
+        "branch": "ready",
+        "parameters": {
+          "body": "Contract consumer equal data 538c28fc.",
+          "like_label": "Liked",
+          "reactions_text": "1"
+        },
+        "unknown_slots": []
+      },
+      "planned_status": "needs_reading",
+      "requested_endpoint_supported": false,
+      "maximum_planned_actions": 7,
+      "execution_policy": {
+        "max_actions": 20,
+        "wall_seconds": 300
+      },
+      "final_runtime_program": {
+        "module": "components_v4",
+        "function": "plan",
+        "action": "like",
+        "parameters": {
+          "body": "Contract consumer equal data 538c28fc."
+        }
+      },
+      "read_point_before": "Second same-body creation",
+      "missing_semantics": [
+        "Create requires public absence",
+        "Registry represents multiple causal objects, but duplicate-body create/write contract remains absent"
+      ],
+      "task_endpoint_achieved": false,
+      "checks": [
+        "First creation event registered only after real action gate and public unique observation",
+        "Own Like updates both consistent registries, then typed bind/verify reconciliation checks public result"
+      ]
+    },
+    "consumer_03": {
+      "state0": {
+        "disposition": "accepted",
+        "contract_ref": "auth.login",
+        "branch": "ready",
+        "parameters": {},
+        "unknown_slots": []
+      },
+      "final": {
+        "disposition": "accepted",
+        "contract_ref": "jobs.collection",
+        "branch": "ready",
+        "parameters": {},
+        "unknown_slots": [
+          "rows.*.title",
+          "rows.*.company",
+          "rows.*.location_mode",
+          "rows.*.save_label"
+        ]
+      },
+      "planned_status": "complete_if_unique_target_found_and_gates_pass",
+      "requested_endpoint_supported": true,
+      "maximum_planned_actions": 20,
+      "execution_policy": {
+        "max_actions": 20,
+        "wall_seconds": 300
+      },
+      "query_strategy": [
+        {
+          "query": "Bioinformatics",
+          "location": "",
+          "actions": 3
+        },
+        {
+          "only_if_initial_target_matches_zero": true,
+          "query": "Bioinformatics Scientist",
+          "location": "Austin, TX",
+          "actions": 3,
+          "source": "Task-provided complete title and explicit target location; no inferred source rules"
+        }
+      ],
+      "no_match_status": "Readpoint preserves unresolved suffix; never declares whole-task impossibility",
+      "final_runtime_program": {
+        "module": "components_v4",
+        "function": "plan",
+        "action": "select_job",
+        "parameters_source": "Complete normalized public tuple re-resolved after feed/Jobs/reload and repeat of successful query",
+        "business_state_source": "Only actual plan next-state plus typed bind_rows/bind_job results"
+      },
+      "final_scope": "Independent final collection prior is universal 0..N structure. It makes no exact external mode/applicants/cardinality claim; action-specific detail/application contracts and native readback verify saved/applied persistence.",
+      "checks": [
+        "Exact title/company/location selection, complete mode tuple uniqueness and normalization",
+        "Save only if unsaved",
+        "Application metadata publicly read then typed bind before Apply-once plan",
+        "Already Applied is disabled and never repeated",
+        "Re-resolve same complete tuple and verify Saved plus disabled Applied after navigation/reload"
+      ],
+      "unknowns": [
+        "Query results and cardinality",
+        "Full work mode until public tuple observed",
+        "Applicant count and prior application flag until selected public detail read"
+      ]
+    }
+  },
+  "prediction_model": "Every native action calls frozen components_v4.plan. Effects and reset-relative counters are generated only there; no parallel state model or model execution during generation. These preregistered structural components use templates and task-known inputs, not post-observed substitutions.",
+  "feedback_application": "PUBLIC-API-FEEDBACK.json corrected consumer misuse: generic fill performs no value/body readback; public auth outcomes provide confirmation without exposing secret values.",
+  "limitations": [
+    "Task02 endpoint remains uncovered",
+    "Task03 fallback is a bounded strategy, not a prediction of target existence",
+    "Registry/model/interface/query changes coexist; later outcome cannot isolate a single cause",
+    "Independent oracle success remains unverified until evaluator runs"
+  ]
+}

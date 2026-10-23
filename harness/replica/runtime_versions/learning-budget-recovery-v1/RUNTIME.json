@@ -1,0 +1,30 @@
+{
+  "version": "learning-budget-recovery-v1",
+  "parent": "learning-public-tree-v2",
+  "parent_manifest_sha256": "9d5bd192118a4bc0705131e15897d78c2c714700742cf5b252d245e0443acd58",
+  "scope": "Sequential broker restart budget recovery; no browser/runtime action or observation policy change; not applied to existing sessions.",
+  "default_settle_enabled": false,
+  "changes": [
+    "Unique dispatch/job call reservations and monotonically advancing call ordinals",
+    "Per-call result/action-journal maximum, no duplicate charging",
+    "Persistent original time origin and fixed limits",
+    "Uncertain/incomplete recovery refuses execution and preserves original policy/runtime refusal",
+    "Confirmed management completion requires bound process cleanup receipt"
+  ],
+  "payload_sha256": {
+    "BROWSER_INTERFACE.md": "de02ff2e7e493741020569736b3a5f9968e1fb4718cfcc0568c5d206f9e97938",
+    "browser_broker.py": "1f8fa7b00f505b3f3bc8f1e24701f9e26f59a5e727501c1a9fe76ef661a67a28",
+    "browser_runtime.py": "c16a5c6f164dcc447babdd65a14ef216060b7f8f19dc9c38340b2fa326917041",
+    "budget_ledger.py": "e775d2764412ad08994d8d39b8326e436e6839b368a18167df7c3476fcef43f5",
+    "observation.py": "b30c9419d22403089afc52d932040b448e32ed0682fca395acf3b52c710f0997",
+    "permissions.py": "bf5ac85929e796e91a47d4932ee245a12e64ec933c49b723e96b72aa435ca8c3",
+    "process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "public_snapshot.py": "8563ef209acd29c33c08084c2ec559d32ba2f942308be30eb983e664aa231ff6",
+    "script_policy.py": "46dd33fb99a57cc25f06455b5870fab2c94a72b264e14ac7b4791a3877e8f386",
+    "settle.py": "a8474632a34f71e5b9334ce65ae210caabf2d8c2a7d3289bdc943c81c830c5c4",
+    "trees.py": "3fa86f319980dda0ea193faaa24784acb1d38313ac45d15e3adbe0fcd513b8ab",
+    "unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a",
+    "unix_gateway.py": "49a022be0025b4a91dca74f18f77847f0a58b8e039511c15fbb2fcf5102c2432",
+    "worker_sandbox.py": "805fd803fe0efb0939c12de5ef88b338bce8c975fe0195bfa45eb13d0f3a50c6"
+  }
+}

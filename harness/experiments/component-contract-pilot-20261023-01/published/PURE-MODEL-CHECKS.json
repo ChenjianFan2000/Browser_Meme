@@ -1,0 +1,29 @@
+{
+  "schema": "component-contract-portable-pure-checks/v1",
+  "model_manifest_sha256": "ecf648eff1e8d2667938ec53504180e6226b060359fca96f31740421b09dcc35",
+  "scope": "historical finite pure-memory regression results; not rerun during publication; no website reachability or independent task-success proof",
+  "closure": {
+    "scope": "finite pure-memory operation sequences, not website reachability proof",
+    "max_depth": 3,
+    "operations": 21,
+    "unique_states": 407,
+    "accepted_transitions": 1183,
+    "rejected_transitions": 1207,
+    "checks": 4807,
+    "all_passed": true,
+    "named_regression": [
+      "reported register→absence blocked",
+      "every state producer on stale absence seed rejects",
+      "full login/create/register/like/comment/verify chain accepted",
+      "duplicate causal entities retained and body write blocked"
+    ]
+  },
+  "additional": {
+    "shared_fact_conflict_state_producer_checks": 6,
+    "all_reject_and_preserve_input": true,
+    "fixed_AST": "pass",
+    "policy_sha256": "46dd33fb99a57cc25f06455b5870fab2c94a72b264e14ac7b4791a3877e8f386",
+    "UI_calls": 0
+  },
+  "UI_calls": 0
+}

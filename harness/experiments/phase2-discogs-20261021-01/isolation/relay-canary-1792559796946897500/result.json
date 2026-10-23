@@ -1,8 +1,0 @@
-{
-  "runtime_sha256": "1457ab5b4c5c021d724cc1eaf3f117d63018e1f8280dd00e7ab62e2bc84610e3",
-  "exit_code": 0,
-  "stdout": "{\"get_status\": 200, \"body\": \"<title>Relay fixture</title><button>Generic control</button>\", \"post_status\": 201, \"post\": {\"length\": 3, \"path\": \"/echo?a=1\"}, \"wrong_port\": \"HTTP Error 403: Destination or framing denied\"}\n",
-  "stderr": "----------------------------------------\nException occurred during processing of request from ('127.0.0.1', 36612)\nTraceback (most recent call last):\n  File \"/usr/lib/python3.12/socketserver.py\", line 692, in process_request_thread\n    self.finish_request(request, client_address)\n  File \"/usr/lib/python3.12/socketserver.py\", line 362, in finish_request\n    self.RequestHandlerClass(request, client_address, self)\n  File \"/usr/lib/python3.12/socketserver.py\", line 761, in __init__\n    self.handle()\n  File \"/opt/browser-meme/phase2-runs/runtime-1457ab5b4c5c/unix_bridge.py\", line 20, in handle\n    data = source.recv(65536)\n           ^^^^^^^^^^^^^^^^^^\nConnectionResetError: [Errno 104] Connection reset by peer\n----------------------------------------\n",
-  "trusted_event_count": 4,
-  "relay_errors": []
-}

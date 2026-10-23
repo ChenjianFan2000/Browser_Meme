@@ -1,8 +1,0 @@
-{
-  "script_policy.py": "7ec075e1afc1d54948e3cb853a2597e4a93195ecdfb87bff981230f5753d0606",
-  "unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a",
-  "browser_broker.py": "662f33c506e35e217461ca9c967e6aeb44097fec53d6a9a07efd3d145996cd92",
-  "permissions.py": "512c72931fae63cf1636b74b253372dca9226cb4ac203164765a27810ec00d5e",
-  "observation.py": "03b8ea53f20626fa85aa8802aee273dd0fd321c8e32a8865b0c247cb3fed9580",
-  "browser_runtime.py": "60e846317d29c6b131695c38d7a7d7204ec43fa3530c4fde4e6fb48cd04f0abd"
-}

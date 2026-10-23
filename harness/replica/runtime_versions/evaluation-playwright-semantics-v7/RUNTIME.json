@@ -1,0 +1,42 @@
+{
+  "version": "evaluation-playwright-semantics-v7",
+  "parents": [
+    "evaluation-playwright-semantics-v6"
+  ],
+  "parent_manifest_sha256": "7e4d07ccaf328f78b9461cd174244e60f0ba81fa0a60f702c27a9294c02c4f98",
+  "status": "frozen_payload; external READY records generic validation",
+  "external_validation": "work/replica-pilot/playwright-v7-preflight/READY.json",
+  "changes": [
+    "Only increase normalize_policy allowed total_timeout_ms maximum from 30000 to 60000; all defaults unchanged",
+    "No change to canonicalization, scoring, semantic collection, local stability algorithm, checkpoint verification or controller"
+  ],
+  "default_settle_enabled": false,
+  "settle_version": "single-lane-dom-ax-playwright/v2",
+  "default_total_timeout_ms": 8000,
+  "default_sample_window_ms": 3000,
+  "maximum_total_timeout_ms": 60000,
+  "registered_previous_evaluation_profile_ms": {
+    "total": 30000,
+    "sample": 22000
+  },
+  "proposed_separately_registered_evaluation_profile_ms": {
+    "total": 60000,
+    "sample": 40000
+  },
+  "payload_sha256": {
+    "BROWSER_INTERFACE.md": "76bee347646c234b35aac82d4bb1084267b9976df1f23c645c8b8c981550e64e",
+    "SEMANTICS_ROLES.json": "734a5915704247cee13faaaf1888e77075bf4b71299a223a1b6942deba8c5a41",
+    "browser_broker.py": "c3a62fd5dfe201a1e9aebfe1d45a528eb334256c93a54aacddbf1bc346fd3c74",
+    "browser_runtime.py": "d268a58d4b880961c39cf99807806b5f02545518c355572f0b98a960d6467ebc",
+    "observation.py": "b30c9419d22403089afc52d932040b448e32ed0682fca395acf3b52c710f0997",
+    "permissions.py": "bf5ac85929e796e91a47d4932ee245a12e64ec933c49b723e96b72aa435ca8c3",
+    "playwright_semantics.py": "8bc8858175edca0f81341357a5dab83d61be632cfa7c18357d4bbf86c2facf3f",
+    "process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "script_policy.py": "46dd33fb99a57cc25f06455b5870fab2c94a72b264e14ac7b4791a3877e8f386",
+    "settle.py": "4f26d4deb13e799db96ff818147d8476b52e4059a2affd1900e022652ce5f27a",
+    "trees.py": "3fa86f319980dda0ea193faaa24784acb1d38313ac45d15e3adbe0fcd513b8ab",
+    "unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a",
+    "unix_gateway.py": "49a022be0025b4a91dca74f18f77847f0a58b8e039511c15fbb2fcf5102c2432",
+    "worker_sandbox.py": "805fd803fe0efb0939c12de5ef88b338bce8c975fe0195bfa45eb13d0f3a50c6"
+  }
+}

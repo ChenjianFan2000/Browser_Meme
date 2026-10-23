@@ -1,0 +1,23 @@
+{
+  "version": "evaluation-helper-settle-v2",
+  "parents": [
+    "helper-safe-v1",
+    "evaluation-settle-v1"
+  ],
+  "purpose": "Explicitly selected generic paired evaluation runtime supporting public helper functions and opt-in single-lane DOM+AX stability. No target-specific code.",
+  "default_settle_enabled": false,
+  "original_payload_sha256": {
+    "BROWSER_INTERFACE.md": "dd9e6a21c86288ec6f28f499bc87b1ce2bc0d0cd9a1b0d9109a2728ff7b673e1",
+    "browser_broker.py": "517fe45ad505804947df505c9576d2c762f7ce0e5af1b65977bc6f6f8e88b73a",
+    "browser_runtime.py": "8b533b2cf1e24ba066909abeba52eda02bf0e0e9511a9f454193240a861ee287",
+    "observation.py": "b30c9419d22403089afc52d932040b448e32ed0682fca395acf3b52c710f0997",
+    "permissions.py": "bf5ac85929e796e91a47d4932ee245a12e64ec933c49b723e96b72aa435ca8c3",
+    "process_guard.py": "ea9402dffbd54d330f686001d1e9912ae4d89732997a9532825d91f02e678d59",
+    "script_policy.py": "46dd33fb99a57cc25f06455b5870fab2c94a72b264e14ac7b4791a3877e8f386",
+    "settle.py": "a8474632a34f71e5b9334ce65ae210caabf2d8c2a7d3289bdc943c81c830c5c4",
+    "trees.py": "3fa86f319980dda0ea193faaa24784acb1d38313ac45d15e3adbe0fcd513b8ab",
+    "unix_bridge.py": "84179ad0327e916964412cc854f84fd835d028e4b24f10e4fe7c1bd022d4e14a",
+    "unix_gateway.py": "49a022be0025b4a91dca74f18f77847f0a58b8e039511c15fbb2fcf5102c2432",
+    "worker_sandbox.py": "805fd803fe0efb0939c12de5ef88b338bce8c975fe0195bfa45eb13d0f3a50c6"
+  }
+}

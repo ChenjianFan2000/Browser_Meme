@@ -1,1 +1,0 @@
-{"model": "gpt-6.1-sol", "fresh_context": true, "exit_code": 0, "timeout": false, "elapsed_seconds": 1023.8193468740001, "usage_events": [{"input_tokens": 2599142, "cached_input_tokens": 2471808, "cache_write_input_tokens": 0, "output_tokens": 33682, "reasoning_output_tokens": 8366}], "model_calls": null, "cost": null, "launch_channel": "standalone_codex_cli_child"}

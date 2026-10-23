@@ -1,6 +1,0 @@
-{
-  "source": "https://registry.npmjs.org/@openai/codex/-/codex-0.163.0-linux-x64.tgz",
-  "tar_sha256": "30efc97738b975940d78b59a9bea115fa34040b732807d54ec35ae6b7528de94",
-  "binary_sha256_output": "399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215  /opt/browser-meme/tmp/phase2-isolation-audit/package/vendor/x86_64-unknown-linux-musl/bin/codex\n",
-  "version": "0.163.0"
-}

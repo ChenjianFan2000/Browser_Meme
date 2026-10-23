@@ -1,0 +1,38 @@
+{
+  "schema": "component-prediction-templates/v4",
+  "state0": {
+    "disposition": "accepted",
+    "contract_ref": "auth.login",
+    "branch": "ready",
+    "parameters": {},
+    "unknown_slots": []
+  },
+  "search_prior": {
+    "disposition": "accepted",
+    "contract_ref": "jobs.search",
+    "branch": "ready",
+    "parameters": {
+      "query": "<known input>",
+      "location": "<known input>"
+    },
+    "unknown_slots": [
+      "rows.*.title",
+      "rows.*.company",
+      "rows.*.location_mode",
+      "rows.*.save_label"
+    ]
+  },
+  "collection_prior": {
+    "disposition": "accepted",
+    "contract_ref": "jobs.collection",
+    "branch": "ready",
+    "parameters": {},
+    "unknown_slots": [
+      "rows.*.title",
+      "rows.*.company",
+      "rows.*.location_mode",
+      "rows.*.save_label"
+    ]
+  },
+  "scope": "No empty/nonempty hindsight branching; zero per-item applicability does not earn child pass credit"
+}

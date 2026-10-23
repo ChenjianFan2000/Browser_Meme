@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "design_id": "phase2-representation-20261023-01",
+  "protocol_version": "0.1",
+  "date": "2026-10-23",
+  "status": "draft_not_run",
+  "execution_enabled": false,
+  "primary_goal": "Search rulebook formats and executable representations before frozen E/T/C validation",
+  "learner": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none",
+    "provider_snapshot": null,
+    "cli_version": null,
+    "provider_sampling_seed_supported": null
+  },
+  "registration_required_before_execution": {
+    "site_image_digest": null,
+    "site_source_revision_private": null,
+    "dependency_lock_digest": null,
+    "initial_snapshot_digest": null,
+    "account_roles": null,
+    "business_scope": null,
+    "observation_policy_digest": null,
+    "isolation_validation_digest": null,
+    "oracle_version_digest": null,
+    "case_split_manifest_digest": null,
+    "stop_latch_validation_digest": null,
+    "model_response_meter_verified": null
+  },
+  "arms": {
+    "E": "raw browser experience and generic retrieval with LLM supervision",
+    "T": "E plus frozen textual rulebook",
+    "C": "T plus frozen executable behavior model with the same final LLM"
+  },
+  "text_candidates": ["F0_free_prose", "F1_rule_cards", "F2_layered_manual"],
+  "model_candidates": ["M0_local_effects", "M1_object_relations", "M2_history_hypotheses"],
+  "pair_families": [
+    "P1_different_appearance_same_registered_behavior",
+    "P2_similar_appearance_different_behavior",
+    "P3_same_current_observation_different_history",
+    "P4_same_first_step_different_later_behavior"
+  ],
+  "pair_probe_suffixes": 1,
+  "probe_max_horizon": 3,
+  "prediction_context_unit": "pair: two scenario predictions and one QxR equivalence judgement",
+  "pair_family_labels_hidden_from_predictor": true,
+  "D2_primary_selection_channel": "raw",
+  "shared_knowledge_policy": "K immutable per batch; extra business assumptions are deviations, not candidate-specific additions",
+  "serialized_state_byte_cap_per_scenario": 262144,
+  "raw_prediction_fresh_process_without_original_history": true,
+  "construction_replicates": 2,
+  "scheduling_seeds_not_provider_sampling_seeds": {
+    "pilot": [901],
+    "development": [1101, 1102],
+    "frozen_validation": [2101, 2102, 2103]
+  },
+  "stages": {
+    "P0": {
+      "independent_exploration_lineages": 1,
+      "atomic_scenarios_per_lineage": 8,
+      "combo_tasks_per_lineage": 4,
+      "arms": 3,
+      "ui_evaluation_episodes": 20,
+      "atomic_final_predictions": 24,
+      "pair_final_judgements": 12
+    },
+    "D1": {
+      "shared_development_lineages": 2,
+      "candidate_families": 3,
+      "construction_replicates": 2,
+      "pairs_per_family_per_lineage": 4,
+      "scenarios_per_lineage": 32,
+      "visibility_modes": 2,
+      "ui_evaluation_episodes": 64,
+      "scenario_final_predictions": 768,
+      "pair_final_judgements": 384
+    },
+    "D2": {
+      "shared_development_lineages": 2,
+      "candidate_families": 3,
+      "construction_replicates": 2,
+      "pairs_per_family_per_lineage": 4,
+      "scenarios_per_lineage": 32,
+      "ui_evaluation_episodes": 64,
+      "scenario_raw_predictions": 384,
+      "scenario_final_predictions": 384,
+      "pair_raw_judgements": 192,
+      "pair_final_judgements": 192
+    },
+    "D3": {
+      "shared_development_lineages": 2,
+      "combo_tasks_per_lineage": 6,
+      "conditions": ["T_selected_text", "C_shortlist_1", "C_shortlist_2"],
+      "construction_replicates": 2,
+      "ui_evaluation_episodes": 72
+    },
+    "H": {
+      "new_independent_exploration_lineages": 3,
+      "pairs_per_family_per_lineage": 3,
+      "atomic_scenarios_per_lineage": 24,
+      "combo_workflow_templates": 4,
+      "instances_per_combo_template": 3,
+      "combo_tasks_per_lineage": 12,
+      "arms": 3,
+      "atomic_truth_episodes": 72,
+      "combo_ui_episodes": 108,
+      "ui_evaluation_episodes": 180,
+      "atomic_final_predictions": 216,
+      "atomic_C_raw_predictions": 72,
+      "pair_raw_judgements": 36,
+      "pair_final_judgements": 108,
+      "statistical_scope": "small-scale frozen validation, not a powered universal ranking"
+    }
+  },
+  "planned_totals_excluding_adaptation": {
+    "ui_evaluation_episodes": 400,
+    "independent_exploration_lineages": 6,
+    "exploration_ui_action_cap_sum": 1620,
+    "excludes": ["exploration episodes", "oracle calibration", "resets", "construction", "adaptation"]
+  },
+  "budget_caps": {
+    "pilot_exploration": {"ui_actions": 120, "browser_executions": 20, "wall_seconds": 3600, "model_responses": 40},
+    "exploration": {"ui_actions": 300, "browser_executions": 40, "wall_seconds": 7200, "model_responses": 80},
+    "ledger_or_text_construction": {"ui_actions": 0, "wall_seconds": 1200, "model_responses": 12},
+    "model_construction": {"ui_actions": 0, "wall_seconds": 2400, "model_responses": 24},
+    "paired_prediction_context": {"ui_actions": 0, "wall_seconds": 300, "model_responses": 6},
+    "neutral_atomic_execution": {"ui_actions": 20, "browser_executions": 8, "wall_seconds": 300, "model_responses": 0},
+    "combo_execution": {"ui_actions": 60, "browser_executions": 20, "wall_seconds": 900, "model_responses": 20},
+    "rulebook_tokens": 8192,
+    "evidence_read_tokens_per_prediction_context": 32768,
+    "locator_timeout_seconds": 30,
+    "screenshot_timeout_seconds": 10
+  },
+  "development_selection": {
+    "utility": "macro_mean((correct - 2 * incorrect - 2 * invalid) / registered_query_count)",
+    "invalid_output_penalty": 2,
+    "tie_tolerance": 0.02,
+    "wrong_answer_weight_sensitivity": [1, 2, 4],
+    "D2_shortlist_size": 2,
+    "claim": "engineering selection within registered candidates and budgets, not global optimum"
+  },
+  "future_adaptation_separately_registered": {
+    "included_in_400": false,
+    "lineages": 3,
+    "arms": 3,
+    "change_types": ["ui_only", "business_rule", "unchanged_control"],
+    "families_per_change_type": 2,
+    "adaptation_units": 54,
+    "first_encounter_episodes": 54,
+    "transfer_and_regression_episodes": 108,
+    "total_evaluation_episodes": 162,
+    "diagnostic_ui_actions_per_unit_cap": 30,
+    "repair_model_responses_cap": 15,
+    "repair_wall_seconds_cap": 1200
+  }
+}

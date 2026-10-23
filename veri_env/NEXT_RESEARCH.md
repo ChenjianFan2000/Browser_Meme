@@ -1,5 +1,7 @@
 # 基于本轮证据的后续研究
 
+> 2026-10-23 后续设计入口：[规则书／状态表示探索协议](../harness/experiments/phase2-representation-20261023-01/PROTOCOL.md)与[新文献学习档案](../research/representation-20261023/README.md)。下文仍是本地 issue 派生实验当时的建议，不应自动作为新浏览器实验的模型、预算或已执行状态。
+
 优先方向是**可证伪假设驱动的探索，以及业务转移与界面读出的一致性修复**。单纯“让LLM写环境代码”已有WorldCoder、GIF-MCTS、PoE-World、PatchWorld等工作；本轮结果也没有显示当前代码提示天然优于Luna直接预测。VeriEnv适合继续作为可重置环境、任务和独立判定底座，不能替代行为模型学习的证据。
 
 本轮实际发现见[实验结果](EXPERIMENT_RESULTS.md)。以下是下一轮计划，不是已经完成的实验；现有冻结产物不会用这些测试失败继续修正后再冒充首次泛化。

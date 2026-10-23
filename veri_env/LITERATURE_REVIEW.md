@@ -1,5 +1,7 @@
 ﻿# 文献综述：从网页交互学习可执行、可修正世界模型
 
+> 2026-10-23 补充：[规则书与状态抽象学习档案](../research/representation-20261023/README.md)保存新一轮 15 篇原文笔记及 1 篇待查线索。WMA 勘误：100 个样本属于覆盖评估；错误类别分析为人工分析的 50 个错误预测，42% 不能解释为总体幻觉率。下文相应表述已更正；历史实验结果不变。
+
 检索日期：2026-10-20。检索范围限定在论文原文（arXiv/会议论文）、作者项目页和作者仓库；本地 `chae26a.pdf` 是 VeriEnv 论文。下面将“核心”限定为直接支持从交互证据构建或使用可预测模型、并有持续验证/更新机制的研究；网页应用相关但表示不可执行的工作列为直接背景；相邻 GUI 或通用模型生成工作用于界定边界。文中“未见代码/权重”表示截至检索日，在所查官方材料中未找到可确认的公开产物，不代表作者绝无私有实现。
 
 ## 纳入标准和研究定位
@@ -77,7 +79,7 @@ Table 1：PoE-World + Planner 在 Pong / Pong-Alt 得分分别 **−12.33±0.88 
 
 [论文](https://arxiv.org/abs/2410.13232)；[作者仓库及模型/数据](https://github.com/kyle8581/WMA-Agents)。WMA从 WebArena/Mind2Web 轨迹训练 Llama-3.1-8B-Instruct world-model adapter，输入 instruction、当前观察（无障碍树/页面）和动作，预测自然语言的“转移焦点差异”，不重建整个页面。冻结 policy 产生候选动作，world model预测后果，value LLM评分后执行；支持推理期筛选，也能持续自我修正候选动作，但未见在线更新世界模型代码模型机制。模型是神经语言模型，不是可执行状态转移程序。
 
-Table 1 WebArena：GPT-4o、最大动作5时，WMA由无 action selection 的12.8%到有筛选的16.6%（+29.7%相对提升）；GPT-4o-mini为9.4%到13.5%（+43.6%）。Table 2 对 GPT-4o-mini 的域别总体：Vanilla CoT 9.4%，WMA 13.5%；GitLab 3.1%到8.7%。该 WebArena 子集、5步上限与本轮自建微型网页不是同一评测。Table 5显示在Map ablation下完整方案22.0% vs 不训练world model 17.5%、不做transition abstraction 14.5%；具体表的样本数/子集与主榜不同，不应混算。预测错误分析用100个样本、GPT-4o judge：42%为臆造反事实元素，说明下一页语言预测易生成环境中不存在的内容。权重适配器、数据与代码公开，但训练依赖 Llama 微调；用 Luna 直接提示模拟不能算原训练复现。
+Table 1 WebArena：GPT-4o、最大动作5时，WMA由无 action selection 的12.8%到有筛选的16.6%（+29.7%相对提升）；GPT-4o-mini为9.4%到13.5%（+43.6%）。Table 2 对 GPT-4o-mini 的域别总体：Vanilla CoT 9.4%，WMA 13.5%；GitLab 3.1%到8.7%。该 WebArena 子集、5步上限与本轮自建微型网页不是同一评测。Table 5显示在Map ablation下完整方案22.0% vs 不训练world model 17.5%、不做transition abstraction 14.5%；具体表的样本数/子集与主榜不同，不应混算。原文另用100个样本进行覆盖评估；§6.2／Appendix D.2对50个错误预测作人工类别分析，其中42%为反事实想象。它提示下一页语言预测可能生成环境中不存在的内容，但42%不是总体幻觉率（2026-10-23核读勘误）。权重适配器、数据与代码公开，但训练依赖 Llama 微调；用 Luna 直接提示模拟不能算原训练复现。
 
 #### WebDreamer（arXiv:2411.06559，TMLR 2025）
 
